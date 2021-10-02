@@ -207,6 +207,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom nod enthusiastically.">>
 
+<<SetSpeaker "???">>
 <<AddParagraph "Rule #3 : Magic can only be channeled thanks to a physical medium. Living beings cannot serve as mediums.">>
 
 <<SetSpeaker "Nomnom">>
@@ -490,6 +491,7 @@
 <<set $client_name to "Yasyas">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Cannelé//">>
+/* #score */
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
@@ -502,6 +504,7 @@
 <<set $client_name to "Muffin">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Nomnom//">>
+/* #score */
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
