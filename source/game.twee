@@ -59,7 +59,8 @@ A Disco Elysium Fanwork
 <<AddParagraph "Okay...">>
 
 
-:: Falaisant /*Introduciton*/
+/* Falaisant */
+:: Falaisant
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
