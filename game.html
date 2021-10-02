@@ -620,7 +620,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;widget &quot;Foresight&quot;&gt;&gt;
 &lt;&lt;set _scene_text to (&quot;@@.foresight;&quot;+$args[2]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;AddParagraph _scene_text &gt;&gt;
-&lt;&lt;set _countdown to (&quot;@@.foresight;Time before impact:&quot;+$args[0]+&quot;@@&quot;)&gt;&gt;
+&lt;&lt;set _countdown to (&quot;@@.foresight;Time before impact: &quot;+$args[0]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;set _countdown to _countdown+(&quot;@@.Tickdown.foresight;@@&quot;)&gt;&gt;
 &lt;&lt;set _countdown to _countdown+(&quot;@@.foresight;&quot;+$args[1]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -769,9 +769,9 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;The room is small. After consideration, small is a nice way to describe the tiny cubicle.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.&quot;&gt;&gt;
 
-&lt;&lt; set $interview_left to false &gt;&gt;
-&lt;&lt; set $interview_right to false &gt;&gt;
-&lt;&lt; set $interview_wall to false &gt;&gt;
+&lt;&lt;set $interview_left to false &gt;&gt;
+&lt;&lt;set $interview_right to false &gt;&gt;
+&lt;&lt;set $interview_wall to false &gt;&gt;
 
 
 &lt;&lt;AddOption &quot;Inspect left&quot; &quot;Left&quot;&gt;&gt;
@@ -801,7 +801,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt; if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true &gt;&gt;
-  &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;
+  &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Right" tags="" position="1225,600" size="100,100">&lt;&lt; set $interview_right to true &gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The duo is elbowing their way around. They eventually manage to place a stool on the other side of the table facing the couch.&quot;&gt;&gt;
@@ -826,7 +826,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt; if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true &gt;&gt;
-  &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;
+  &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Wall" tags="" position="100,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.&quot;&gt;&gt;
 
@@ -849,7 +849,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt; if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true &gt;&gt;
-  &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;
+  &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Interview" tags="" position="225,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.&quot;&gt;&gt;
 
@@ -871,7 +871,13 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After inspection, it looks like water that smells of coffee.&quot;&gt;&gt;
 
+&lt;&lt;Foresight &quot;19.3&quot; &quot;seconds&quot; &quot;A cup is broken into several pieces that lie on the ground. The client seems angry and leave through the door. They have a huge stain on their coat.&quot; &gt;&gt;
 /* NomNom gift -&gt; sees client about to leave with a stain on his shirt */
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom picks the cup again and sets it a little farther from their guest.&quot;&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It&#39;s still a //tad bit// hot.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So you have-&quot;&gt;&gt;

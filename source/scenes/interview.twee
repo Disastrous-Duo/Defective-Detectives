@@ -14,9 +14,9 @@
 <<AddParagraph "The room is small. After consideration, small is a nice way to describe the tiny cubicle.">>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
-<< set $interview_left to false >>
-<< set $interview_right to false >>
-<< set $interview_wall to false >>
+<<set $interview_left to false >>
+<<set $interview_right to false >>
+<<set $interview_wall to false >>
 
 
 <<AddOption "Inspect left" "Left">>
@@ -50,7 +50,7 @@
 <</if>>
 
 << if $interview_right is true && $interview_left is true && $interview_wall is true >>
-  <<AddOption "Turn back to the two detectives" "Interview">
+  <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 
@@ -79,7 +79,7 @@
 <</if>>
 
 << if $interview_right is true && $interview_left is true && $interview_wall is true >>
-  <<AddOption "Turn back to the two detectives" "Interview">
+  <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 :: Wall
@@ -105,7 +105,7 @@
 <</if>>
 
 << if $interview_right is true && $interview_left is true && $interview_wall is true >>
-  <<AddOption "Turn back to the two detectives" "Interview">
+  <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 
@@ -131,7 +131,13 @@
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
 
+<<Foresight "19.3" "seconds" "A cup is broken into several pieces that lie on the ground. The client seems angry and leave through the door. They have a huge stain on their coat." >>
 /* NomNom gift -> sees client about to leave with a stain on his shirt */
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom picks the cup again and sets it a little farther from their guest.">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's still a //tad bit// hot.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>

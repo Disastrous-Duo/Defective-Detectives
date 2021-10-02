@@ -3,7 +3,7 @@
 <<widget "Foresight">>
 <<set _scene_text to ("@@.foresight;"+$args[2]+"@@")>>
 <<AddParagraph _scene_text >>
-<<set _countdown to ("@@.foresight;Time before impact:"+$args[0]+"@@")>>
+<<set _countdown to ("@@.foresight;Time before impact: "+$args[0]+"@@")>>
 <<set _countdown to _countdown+("@@.Tickdown.foresight;@@")>>
 <<set _countdown to _countdown+("@@.foresight;"+$args[1]+"@@")>>
 <<BlankSpeaker>>
