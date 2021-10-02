@@ -12,7 +12,7 @@ C&N -- DD
 }
 
 :: StoryAuthor {"position":"268,439","size":"100,100"}
-Original story by [Your Name Goes Here]
+Original story by Cannelé & Nomnom Themselves
 Twine framework by Pikalex88
 
 
@@ -26,10 +26,10 @@ A Disco Elysium Fanwork
 
 :: StoryInit {"position":"268,25","size":"100,100"}
 <<set $optionmap to new Map()>>
-<<set $yellow_speaker to ["mysterious individual", "yasyas", "muffin", "yassine maestro", "???"]>>
+<<set $yellow_speaker to ["mysterious individual", "yasyas", "muffin", "yassine maestro", "???", "client"]>>
 <<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
 <<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
-<<set $purple_speaker to ["leathery voice", "couch"]>>
+<<set $purple_speaker to ["leathery voice", "couch, cannelé & nomnom"]>>
 <<set $greentext to [""]>>
 <<set $paraAppendMode to false>>
 
@@ -38,6 +38,7 @@ A Disco Elysium Fanwork
 ::@include disco_elysium_macros.twee
 ::@include magic_macros.twee
 ::@include scenes/falaisant.twee
+::@include scenes/interview.twee
 
 :: TestLab
 <<BlankSpeaker>>
