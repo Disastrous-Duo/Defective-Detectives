@@ -620,7 +620,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;widget &quot;Foresight&quot;&gt;&gt;
 &lt;&lt;set _scene_text to (&quot;@@.foresight;&quot;+$args[2]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;AddParagraph _scene_text &gt;&gt;
-&lt;&lt;set _countdown to (&quot;@@.foresight;Time before impact:&quot;+$args[0]+&quot;@@&quot;)&gt;&gt;
+&lt;&lt;set _countdown to (&quot;@@.foresight;Time before impact: &quot;+$args[0]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;set _countdown to _countdown+(&quot;@@.Tickdown.foresight;@@&quot;)&gt;&gt;
 &lt;&lt;set _countdown to _countdown+(&quot;@@.foresight;&quot;+$args[1]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -801,7 +801,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
   &lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt; if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
+&lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Right" tags="" position="1225,600" size="100,100">&lt;&lt;set $interview_right to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -826,7 +826,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
   &lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt; if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
+&lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Wall" tags="" position="100,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.&quot;&gt;&gt;
@@ -849,7 +849,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
   &lt;&lt;AddOption &quot;Inspect Right&quot; &quot;Right&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt; if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
+&lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
     &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Interview" tags="" position="225,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.&quot;&gt;&gt;
@@ -872,7 +872,13 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After inspection, it looks like water that smells of coffee.&quot;&gt;&gt;
 
+&lt;&lt;Foresight &quot;19.3&quot; &quot;seconds&quot; &quot;A cup is broken into several pieces that lie on the ground. The client seems angry and leave through the door. They have a huge stain on their coat.&quot; &gt;&gt;
 /* NomNom gift -&gt; sees client about to leave with a stain on his shirt */
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom picks the cup again and sets it a little farther from their guest.&quot;&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It&#39;s still a //tad bit// hot.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So you have-&quot;&gt;&gt;
@@ -964,7 +970,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddOption &quot;What&#39;s wrong with this coffee ?&quot; &quot;Coffee&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt; if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
+&lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Event" tags="" position="600,725" size="100,100">&lt;&lt;set $interview_event to true&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
@@ -1027,7 +1033,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddOption &quot;What&#39;s wrong with this coffee ?&quot; &quot;Coffee&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt; if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
+&lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Coffee" tags="" position="725,725" size="100,100">&lt;&lt;set $interview_coffee to true&gt;&gt;
 
@@ -1066,7 +1072,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddOption &quot;What happened ?&quot; &quot;Event&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt; if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
+&lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Contract" tags="" position="850,725" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Do you think you can help me?&quot;&gt;&gt;
