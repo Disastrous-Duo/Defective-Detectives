@@ -50,7 +50,7 @@
 <</if>>
 
 << if $interview_right is true && $interview_left is true && $interview_wall is true >>
-  <<AddOption "Turn back to the two detectives" "Interview">
+  <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 
@@ -79,7 +79,7 @@
 <</if>>
 
 << if $interview_right is true && $interview_left is true && $interview_wall is true >>
-  <<AddOption "Turn back to the two detectives" "Interview">
+  <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 :: Wall
@@ -105,7 +105,7 @@
 <</if>>
 
 << if $interview_right is true && $interview_left is true && $interview_wall is true >>
-  <<AddOption "Turn back to the two detectives" "Interview">
+    <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 
@@ -139,12 +139,17 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Amnesia. Can you tell us everything you remember ?">>
 
-<<AddOption "Who am I ?" "Identity">>
-<<AddOption "What happened ?" "Event">>
-<<AddOption "What's wrong with this coffee ?" "Coffee">>
+<< set $interview_identity to false >>
+<< set $interview_event to false >>
+<< set $interview_coffee to false >>
+
+<<AddOption "Who am I?" "Identity">>
+<<AddOption "What happened?" "Event">>
+<<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
 :: Identity
+<< set $interview_identity to true >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>
@@ -219,13 +224,21 @@
 <<SetSpeaker "???">>
 <<AddParagraph "No, I have no idea...">>
 
-
+<<if $interview_event is false >>
 <<AddOption "What happened ?" "Event">>
+<</if>>
+
+<<if $interview_coffee is false >>
 <<AddOption "What's wrong with this coffee ?" "Coffee">>
+<</if>>
+
+<< if $interview_identity is true && $interview_event is true && $interview_coffee is true >>
+  <<AddOption "Take a deep breath" "Contract">>
+<</if>>
 
 
 :: Event
-
+<< set $interview_event to true >>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "How did you find this place?">>
 
@@ -278,10 +291,22 @@
 <<AddParagraph "----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----">>
 
 
-<<AddOption "Who am I?" "Identity">>
+<<if $interview_identity is false >>
+<<AddOption "Who am I ?" "Event">>
+<</if>>
+
+<<if $interview_coffee is false >>
 <<AddOption "What's wrong with this coffee ?" "Coffee">>
+<</if>>
+
+<< if $interview_identity is true && $interview_event is true && $interview_coffee is true >>
+  <<AddOption "Take a deep breath" "Contract">>
+<</if>>
+
 
 :: Coffee
+<< set $interview_coffee to true >>
+
 <<SetSpeaker "???">>
 <<AddParagraph "The coffee... is very special here">>
 
@@ -309,8 +334,18 @@
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom fishes in the mess of the couch and fishes a miracuously untouched muffin. They look at it longingly before handing it over.">>
 
-<<AddOption "Who am I ?" "Identity">>
+<<if $interview_identity is false >>
+<<AddOption "Who am I ?" "Event">>
+<</if>>
+
+<<if $interview_event is false >>
 <<AddOption "What happened ?" "Event">>
+<</if>>
+
+<< if $interview_identity is true && $interview_event is true && $interview_coffee is true >>
+  <<AddOption "Take a deep breath" "Contract">>
+<</if>>
+
 
 
 :: Contract
