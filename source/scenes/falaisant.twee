@@ -1,40 +1,40 @@
 /* Falaisant : Introduction of the city */
-:: Falaisant
+:: Falaisant [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
 <<AddOption "A drop of water flies over Falaisant" "Falaisant2">>
 
 
-:: Falaisant2 
+:: Falaisant2  [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//At the heart of the city, high towers dominate the skyline. White rock and marble glint under the first rays of the sun, reflecting the water flowing underneath.//">>
 
 <<AddOption "The drop rolls down the tower" "Falaisant3">>
 
 
-:: Falaisant3 
+:: Falaisant3  [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//">>
 
 <<AddOption "The drop continues its course on to the first boulevard" "Falaisant4">>
 
 
-:: Falaisant4
+:: Falaisant4 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The boulevards spread far, far until they turn into smaller streets.//">>
 
 <<AddOption "The drop bounces off the slightly uneven pavement" "Falaisant5">>
 
 
-:: Falaisant5
+:: Falaisant5 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges that jump over streams and connect the multiple layers of passageways, roads and gates.//">>
 
 <<AddOption "The drop falls from a hole in the metallic hedge of a bridge" "Falaisant6">>
 
 
-:: Falaisant6
+:: Falaisant6 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Plic.//">>
 
@@ -43,14 +43,14 @@
 <<AddOption "Lower, Lower" "Falaisant7">>
 
 
-:: Falaisant7
+:: Falaisant7 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Fog, thick and permanent, haunts streets that have gotten so cramped they are suffocating.//">>
 
 <<AddOption "The drop errs, losing itself in the midst of the ominous veil" "Falaisant8">>
 
 
-:: Falaisant8
+:: Falaisant8 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//No light nor sound seem to reach this place : everything seems frozen into an eerie silence.//">>
 <<AddParagraph "//There, unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
@@ -62,7 +62,7 @@
 <<AddOption "The drop runs down darker and darker paths" "Falaisant9">>
 
 
-:: Falaisant9
+:: Falaisant9 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
@@ -70,7 +70,7 @@
 <<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure" "Falaisant10">>
 
 
-:: Falaisant10
+:: Falaisant10 [nobr]
 <<SetSpeaker "Mysterious Individual">>
 <<AddParagraph "''yelps loudly''">>
 
@@ -85,7 +85,7 @@
 <<AddOption "Wait" "Expo">>
 
 /* Meeting */
-:: Expo
+:: Expo [nobr]
 <<SetSpeaker "Shrill Voice">>
 <<AddParagraph "I HEARD SOMETHING IT MIGHT BE-">>
 
@@ -104,7 +104,7 @@
 <<AddOption "Knock" "Expo_Knock">>
 <<AddOption "Wait" "Expo_Wait1">>
 
-:: Expo_Wait1
+:: Expo_Wait1 [nobr]
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "SHUT UP">>
 
@@ -117,7 +117,7 @@
 <<AddOption "Knock" "Expo_Knock">>
 <<AddOption "Wait" "Expo_Wait2">>
 
-:: Expo_Wait2
+:: Expo_Wait2 [nobr]
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "HAHAHAHAHAHAHA I CAN'T HEAR YOU">>
 
@@ -131,7 +131,7 @@
 <<AddOption "Wait" "Expo_Knock">>
 
 
-:: Expo_Knock
+:: Expo_Knock [nobr]
 <<SetSpeaker "Shrill Voice">>
 <<AddParagraph "SHUT UP SHUT UP SHUT UP">>
 
@@ -145,7 +145,7 @@
 <<AddOption "OUCH" "Expo_Meeting1">>
 
 
-:: Expo_Meeting1
+:: Expo_Meeting1 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Uncomfortable pause//">>
 

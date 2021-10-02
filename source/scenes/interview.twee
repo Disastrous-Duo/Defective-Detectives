@@ -1,6 +1,6 @@
 /* Interview : Exposition of the situation, meeting c&n, meeting the client, getting the first details and impressions*/
 
-:: Office
+:: Office [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The girl nods as the man stands up and dust their clothes.">>
 
@@ -24,7 +24,7 @@
 <<AddOption "Inspect the wall" "Wall">>
 
 
-:: Left
+:: Left [nobr]
 <<set $interview_left to true>>
 <<BlankSpeaker>>
 <<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
@@ -55,7 +55,7 @@
 <</if>>
 
 
-:: Right
+:: Right [nobr]
 <<set $interview_right to true>>
 <<BlankSpeaker>>
 <<AddParagraph "The duo is elbowing their way around the room. They eventually manage to place a stool on the other side of the table facing the couch.">>
@@ -83,7 +83,7 @@
   <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
-:: Wall
+:: Wall [nobr]
 <<set $interview_wall to true>>
 <<BlankSpeaker>>
 <<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.">>
@@ -112,7 +112,7 @@
 <</if>>
 
 
-:: Interview
+:: Interview [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
@@ -151,7 +151,7 @@
 <<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
-:: Identity
+:: Identity [nobr]
 <<set $interview_identity to true>>
 
 <<SetSpeaker "Cannelé">>
@@ -169,7 +169,7 @@
 <<AddOption "What about my gift ?" "Gift">>
 
 
-:: Gift
+:: Gift [nobr]
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Do you know what a gift is ?">>
@@ -177,8 +177,11 @@
 <<SetSpeaker "???">>
 <<AddParagraph "Yes, I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what ''real'' coffee looks like.">>
 
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "//The lad squints, unconvinced.//">>
+
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Yeah ? Give me the Laws Rules of Magic then.">>
+<<AddParagraph "Yeah ? Give me the Laws of Magic then.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
@@ -238,7 +241,7 @@
 <</if>>
 
 
-:: Event
+:: Event [nobr]
 <<set $interview_event to true>>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "How did you find this place?">>
@@ -264,7 +267,8 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're such a loser.">>
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
-<<AddParagraph "His coat has suspicious stains on it? @@.precog;<span class='Precog' data-value='Is it food?'></span>@@">>
+<<BlankSpeaker>>
+<<AddParagraph "@@.precog_color;His coat has suspicious stains on it? <span class='Precog' data-speed='4' data-value='Is it food?'></span>@@">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -291,7 +295,7 @@
 <<AddParagraph "So, a cat stole the only lead you had about your identity, I see.">>
 
 <<if $interview_identity is false>>
-<<AddOption "Who am I ?" "Event">>
+<<AddOption "Who am I ?" "Identity">>
 <</if>>
 
 <<if $interview_coffee is false>>
@@ -303,7 +307,7 @@
 <</if>>
 
 
-:: Coffee
+:: Coffee [nobr]
 <<set $interview_coffee to true>>
 
 <<SetSpeaker "???">>
@@ -348,7 +352,7 @@
 
 
 
-:: Contract
+:: Contract [nobr]
 
 <<SetSpeaker "???">>
 <<AddParagraph "Do you think you can help me?">>
@@ -363,7 +367,7 @@
 <<AddOption "The contract ?" "Contract1">>
 
 
-:: Contract1
+:: Contract1 [nobr]
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "If you become our client, we need to draw an official contract.">>
@@ -381,7 +385,7 @@
 
 
 
-:: Contract2
+:: Contract2 [nobr]
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 1: I do not take any responsability on what this goof right here might do">>
 
@@ -389,7 +393,7 @@
 <<AddParagraph "I sincerely despise you so much">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
+<<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog_color;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
@@ -419,7 +423,7 @@
 <<AddOption "//A heavy tension suddenly fills the room//" "Naming">>
 
 
-:: Naming
+:: Naming [nobr]
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A good name... IasIas, Iasyas... Yasyas!!!">>
 
@@ -430,7 +434,7 @@
 <<AddOption "..." "Naming0">>
 
 
-:: Naming0
+:: Naming0 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom look at each other, outraged.">>
 <<AddParagraph "The silence between them tells an entire story on its own.">>
@@ -449,7 +453,7 @@
 <<AddOption "... ..." "Naming1">>
 
 
-:: Naming1
+:: Naming1 [nobr]
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SHUT UP! It has to be Yasyas">>
 
@@ -464,7 +468,7 @@
 
 <<AddOption "Do I really have to choose, can't I just take a random name" "Naming2">>
 
-:: Naming2
+:: Naming2 [nobr]
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "PICK ONE">>
 
@@ -487,7 +491,7 @@
 <<AddOption "I'll go with Muffin" "Muffin">>
 
 
-:: Yasyas
+:: Yasyas [nobr]
 <<set $client_name to "Yasyas">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Cannelé//">>
@@ -500,7 +504,7 @@
 <<AddOption "I-I didn't even sign the contract..." "Investigation1">>
 
 
-:: Muffin
+:: Muffin [nobr]
 <<set $client_name to "Muffin">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Nomnom//">>
