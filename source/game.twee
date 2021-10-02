@@ -76,16 +76,16 @@ A Disco Elysium Fanwork
 
 :: Falaisant3 
 <<BlankSpeaker>>
-<<AddParagraph "//Wide boulevards, lined with various trees and colourful bouquets, shoot out from the central plaza, drawing a huge star on the city’s layout.//">>
+<<AddParagraph "//Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//">>
 
-<<AddOption "It continues its course on to the first boulevard" "Falaisant4">>
+<<AddOption "The drop continues its course on to the first boulevard" "Falaisant4">>
 
 
 :: Falaisant4
 <<BlankSpeaker>>
 <<AddParagraph "//The boulevards spread far, far until they turn into smaller streets.//">>
 
-<<AddOption "It continues its course on to the first boulevard" "Falaisant5">>
+<<AddOption "The drop bounces off the slightly uneven pavement" "Falaisant5">>
 
 
 :: Falaisant5
@@ -108,19 +108,19 @@ A Disco Elysium Fanwork
 <<BlankSpeaker>>
 <<AddParagraph "//Fog, thick and permanent, haunts streets that have gotten so cramped they are suffocating.//">>
 
-<<AddOption "The drop runs down darker and darker pathways" "Falaisant8">>
+<<AddOption "The drop errs, losing itself in the midst of the ominous veil" "Falaisant8">>
 
 
 :: Falaisant8
 <<BlankSpeaker>>
-<<AddParagraph "//No light nor sound seem to reach this place : everything is frozen into an eerie silence.//">>
+<<AddParagraph "//No light nor sound seem to reach this place : everything seems frozen into an eerie silence.//">>
 <<AddParagraph "//There, unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
 
 <<BlankSpeaker>>
 <<AddParagraph "//The atmosphere is heavy, disquieting.//">>
 
 
-<<AddOption "The atmosphere is heavy, disquieting" "Falaisant9">>
+<<AddOption "The drop runs down darker and darker paths" "Falaisant9">>
 
 
 :: Falaisant9
@@ -128,7 +128,7 @@ A Disco Elysium Fanwork
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
 
-<<AddOption "The  drop looms over the edge of the roof before falling on the shadowed figure" "Falaisant10">>
+<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure" "Falaisant10">>
 
 
 :: Falaisant10
@@ -137,6 +137,10 @@ A Disco Elysium Fanwork
 
 <<BlankSpeaker>>
 <<AddParagraph "9:37am - 288 Harmony Street, Falaisant">>
+
+<<BlankSpeaker>>
+<<AddParagraph "''BANG''">>
+
 
 <<AddOption "Knock" "Expo1">>
 <<AddOption "Wait" "Expo1">>
