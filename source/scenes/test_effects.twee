@@ -1,0 +1,18 @@
+:: TestLab
+<<SetSpeaker "Nomnom">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Mmh... That's a pretty mirror.">>
+<<BlankSpeaker>>
+<<AddParagraph "//Suddenly, the image blurs.//">>
+<<SetSpeaker "Mirror">>
+<<Foresight "6 minutes 30 seconds " " milliseconds" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<Foresight "6.7" " minutes" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "FUCK!">>
+
+:: TestLab2
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Time to blow this thing up">>
+<<BlankSpeaker>>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph  "I think my power just gave me this @@.precog_color;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>

@@ -176,7 +176,7 @@ a.macro-linkreplace {
   --precog-color: #c6496b;
 }
 
-.precog {
+.precog_color {
   color: var(--precog-color);
 }
 

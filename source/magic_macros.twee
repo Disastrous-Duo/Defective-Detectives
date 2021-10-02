@@ -22,7 +22,7 @@
 :: Precog [Widget widget]
 <<nobr>>
 <<widget "Precog">>
-<<set _scene_text to ("@@.precog;<span class='Precog' data-value='"+$args[0]+"'></span>@@")>>
+<<set _scene_text to ("@@.precog_color;<span class='Precog' data data-value='"+$args[0]+"'></span>@@")>>
 <<AddParagraph _scene_text >>
 <</widget>>
 <</nobr>>
@@ -30,7 +30,7 @@
 :: PrecogRandom [Widget widget]
 <<nobr>>
 <<widget "PrecogRandom">>
-<<set _scene_text to ("@@.precog;<span class='PrecogRandom' data-value='"+$args[0]+"'></span>@@")>>
+<<set _scene_text to ("@@.precog_color;<span class='PrecogRandom' data-value='"+$args[0]+"'></span>@@")>>
 <<AddParagraph _scene_text >>
 <</widget>>
 <</nobr>>

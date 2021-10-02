@@ -7,7 +7,7 @@ C&N -- DD
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "Contract",
+	"start": "Falaisant",
 	"zoom": 0.6
 }
 
@@ -39,24 +39,3 @@ A Disco Elysium Fanwork
 ::@include magic_macros.twee
 ::@include scenes/falaisant.twee
 ::@include scenes/interview.twee
-
-::StoryMenu
-<input type="button" value="AAAAAAAA" />
-
-:: TestLab
-<<SetSpeaker "Nomnom">>
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Mmh... That's a pretty mirror.">>
-<<BlankSpeaker>>
-<<AddParagraph "//Suddenly, the image blurs.//">>
-<<SetSpeaker "Mirror">>
-<<Foresight "6 minutes 30 seconds " " milliseconds" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
-<<Foresight "6.7" " minutes" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "FUCK!">>
-
-:: TestLab2
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Time to blow this thing up">>
-<<BlankSpeaker>>
-<<Precog "Secret password">>

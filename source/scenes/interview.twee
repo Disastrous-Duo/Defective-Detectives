@@ -1,6 +1,6 @@
 /* Interview : Exposition of the situation, meeting c&n, meeting the client, getting the first details and impressions*/
 
-:: Office
+:: Office [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The girl nods as the man stands up and dusts his clothes.">>
 
@@ -24,7 +24,7 @@
 <<AddOption "Inspect the wall" "Wall">>
 
 
-:: Left
+:: Left [nobr]
 <<set $interview_left to true>>
 <<BlankSpeaker>>
 <<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
@@ -55,7 +55,7 @@
 <</if>>
 
 
-:: Right
+:: Right [nobr]
 <<set $interview_right to true>>
 <<BlankSpeaker>>
 <<AddParagraph "The duo is elbowing their way around. They eventually manage to place a stool on the other side of the table facing the couch.">>
@@ -83,7 +83,7 @@
   <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
-:: Wall
+:: Wall [nobr]
 <<set $interview_wall to true>>
 <<BlankSpeaker>>
 <<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.">>
@@ -111,7 +111,7 @@
 <</if>>
 
 
-:: Interview
+:: Interview [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
@@ -156,7 +156,7 @@
 <<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
-:: Identity
+:: Identity [nobr]
 <<set $interview_identity to true>>
 
 <<SetSpeaker "Cannelé">>
@@ -174,7 +174,7 @@
 <<AddOption "What about my gift ?" "Gift">>
 
 
-:: Gift
+:: Gift [nobr]
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Do you know what a gift is ?">>
@@ -245,7 +245,7 @@
 <</if>>
 
 
-:: Event
+:: Event [nobr]
 <<set $interview_event to true>>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "How did you find this place?">>
@@ -312,7 +312,7 @@
 <</if>>
 
 
-:: Coffee
+:: Coffee [nobr]
 <<set $interview_coffee to true>>
 
 <<SetSpeaker "???">>
@@ -356,7 +356,7 @@
 
 
 
-:: Contract
+:: Contract [nobr]
 
 <<SetSpeaker "???">>
 <<AddParagraph "Do you think you can help me?">>
@@ -371,7 +371,7 @@
 <<AddOption "The contract ?" "Contract1">>
 
 
-:: Contract1
+:: Contract1 [nobr]
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "If you become our client, we need to draw an official contract.">>
@@ -389,7 +389,7 @@
 
 
 
-:: Contract2
+:: Contract2 [nobr]
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 1: I do not take any responsability on what this goof right here might do">>
 
@@ -427,7 +427,7 @@
 <<AddOption "//A heavy tension suddenly fills the room//" "Naming">>
 
 
-:: Naming
+:: Naming [nobr]
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "YasYas!!!">>
 
@@ -438,7 +438,7 @@
 <<AddOption "..." "Naming0">>
 
 
-:: Naming0
+:: Naming0 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom look at each other, outraged.">>
 <<AddParagraph "The silence between them tells an entire story on its own.">>
@@ -453,7 +453,7 @@
 <<AddOption "... ..." "Naming1">>
 
 
-:: Naming1
+:: Naming1 [nobr]
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SHUT UP! It has to be Yasyas">>
 
@@ -468,7 +468,7 @@
 
 <<AddOption "Do I really have to choose, can't I just take a random name" "Naming2">>
 
-:: Naming2
+:: Naming2 [nobr]
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "PICK ONE">>
 
@@ -491,7 +491,7 @@
 <<AddOption "I'll go with Muffin" "Muffin">>
 
 
-:: Yasyas
+:: Yasyas [nobr]
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Cannelé//">>
 
@@ -502,7 +502,7 @@
 <<AddOption "I-I didn't even sign the contract..." "Investigation1">>
 
 
-:: Muffin
+:: Muffin [nobr]
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Nomnom//">>
 
