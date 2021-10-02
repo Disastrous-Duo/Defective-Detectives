@@ -40,13 +40,22 @@ A Disco Elysium Fanwork
 ::@include scenes/falaisant.twee
 ::@include scenes/interview.twee
 
+
+
 :: TestLab
-<<BlankSpeaker>>
+<<SetSpeaker "Nomnom">>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Mmh... That's a pretty mirror.">>
 <<BlankSpeaker>>
 <<AddParagraph "//Suddenly, the image blurs.//">>
 <<SetSpeaker "Mirror">>
-<<Foresight "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<Foresight "6 minutes 30 seconds " " milliseconds" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<Foresight "6.7" " minutes" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "FUCK!">>
+
+:: TestLab2
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Time to blow this thing up">>
+<<BlankSpeaker>>
+<<Precog "Secret password">>
