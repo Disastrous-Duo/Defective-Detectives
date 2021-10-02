@@ -71,7 +71,7 @@
 
 
 :: Falaisant10
-<<SetSpeaker - "Mysterious Individual">>
+<<SetSpeaker "Mysterious Individual">>
 <<AddParagraph "''yelps loudly''">>
 
 <<BlankSpeaker>>
@@ -149,7 +149,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//Uncomfortable pause//">>
 
-<<AddParagraph "//It's a young lady who has opened the door. From behind her, you can see a curious man sprawled on the floor.//">>
+<<AddParagraph "//It's a young lady who has opened the door. Behind them, a curious man sprawled on the floor.//">>
 
 <<SetSpeaker "?">>
 <<AddParagraph "Welcome to my detective agency, how can I help?">>
@@ -158,7 +158,7 @@
 <<AddParagraph "Welcome to MY agency, who is this?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "//The two individuals glare at each other, and they seem like they're about to start arguing again.//">>
+<<AddParagraph "//The two individuals glare at each other: they're about to start arguing again.//">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's an excellent question... Who am I?">>
