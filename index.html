@@ -540,6 +540,10 @@ _skillname +
 &lt;&lt;set $currentspeaker to (&quot;@@.purple_speaker.speaker;&quot; +
 _skillname +
 &quot;@@&quot;)&gt;&gt;
+&lt;&lt;elseif $leather_speaker.includes(_skillname)&gt;&gt;
+&lt;&lt;set $currentspeaker to (&quot;@@.leather_speaker.speaker;&quot; +
+_skillname +
+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if _skillresult&gt;&gt;
 &lt;&lt;set $currentspeaker += _skillresult&gt;&gt;
