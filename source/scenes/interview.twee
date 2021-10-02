@@ -177,8 +177,11 @@
 <<SetSpeaker "???">>
 <<AddParagraph "Yes, I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what ''real'' coffee looks like.">>
 
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "//The lad squints, unconvinced.//">>
+
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Yeah ? Give me the Laws Rules of Magic then.">>
+<<AddParagraph "Yeah ? Give me the Laws of Magic then.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
@@ -263,7 +266,8 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're such a loser.">>
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
-<<AddParagraph "His coat has suspicious stains on it? @@.precog;<span class='Precog' data-value='Is it food?'></span>@@">>
+<<BlankSpeaker>>
+<<AddParagraph "@@.precog_color;His coat has suspicious stains on it? <span class='Precog' data-speed='4' data-value='Is it food?'></span>@@">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -290,7 +294,7 @@
 <<AddParagraph "So, a cat stole the only lead you had about your identity, I see.">>
 
 <<if $interview_identity is false>>
-<<AddOption "Who am I ?" "Event">>
+<<AddOption "Who am I ?" "Identity">>
 <</if>>
 
 <<if $interview_coffee is false>>
@@ -388,7 +392,7 @@
 <<AddParagraph "I sincerely despise you so much">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
+<<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog_color;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
