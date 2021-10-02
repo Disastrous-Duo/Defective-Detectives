@@ -14,9 +14,9 @@
 <<AddParagraph "The room is small. After consideration, small is a nice way to describe the tiny cubicle.">>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
-<< set $interview_left to false >>
-<< set $interview_right to false >>
-<< set $interview_wall to false >>
+<<set $interview_left to false>>
+<<set $interview_right to false>>
+<<set $interview_wall to false>>
 
 
 <<AddOption "Inspect left" "Left">>
@@ -26,7 +26,7 @@
 
 :: Left
 <<BlankSpeaker>>
-<< set $interview_left to true >>
+<<set $interview_left to true>>
 <<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
 
 <<BlankSpeaker>>
@@ -42,20 +42,20 @@
 <<SetSpeaker "Leathery Voice">>
 <<AddParagraph "//sigh//">>
 
-<<if $interview_right is false >>
+<<if $interview_right is false>>
   <<AddOption "Inspect right" "Right">>
 <</if>>
-<<if $interview_wall is false >>
+<<if $interview_wall is false>>
   <<AddOption "Inspect the wall" "Wall">>
 <</if>>
 
-<< if $interview_right is true && $interview_left is true && $interview_wall is true >>
+<< if $interview_right is true && $interview_left is true && $interview_wall is true>>
   <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
 
 :: Right
-<< set $interview_right to true >>
+<<set $interview_right to true>>
 <<BlankSpeaker>>
 <<AddParagraph "The duo is elbowing their way around. They eventually manage to place a stool on the other side of the table facing the couch.">>
 
@@ -71,14 +71,14 @@
 <<BlankSpeaker>>
 <<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
-<<if $interview_left is false >>
+<<if $interview_left is false>>
   <<AddOption "Inspect left" "Left">>
 <</if>>
-<<if $interview_wall is false >>
+<<if $interview_wall is false>>
   <<AddOption "Inspect the wall" "Wall">>
 <</if>>
 
-<< if $interview_right is true && $interview_left is true && $interview_wall is true >>
+<< if $interview_right is true && $interview_left is true && $interview_wall is true>>
   <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
@@ -97,14 +97,14 @@
 
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet.">>
 
-<<if $interview_left is false >>
+<<if $interview_left is false>>
   <<AddOption "Inspect left" "Left">>
 <</if>>
-<<if $interview_right is false >>
+<<if $interview_right is false>>
   <<AddOption "Inspect Right" "Right">>
 <</if>>
 
-<< if $interview_right is true && $interview_left is true && $interview_wall is true >>
+<< if $interview_right is true && $interview_left is true && $interview_wall is true>>
     <<AddOption "Turn back to the two detectives" "Interview">>
 <</if>>
 
@@ -139,9 +139,9 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Amnesia. Can you tell us everything you remember ?">>
 
-<< set $interview_identity to false >>
-<< set $interview_event to false >>
-<< set $interview_coffee to false >>
+<<set $interview_identity to false>>
+<<set $interview_event to false>>
+<<set $interview_coffee to false>>
 
 <<AddOption "Who am I?" "Identity">>
 <<AddOption "What happened?" "Event">>
@@ -149,7 +149,7 @@
 
 
 :: Identity
-<< set $interview_identity to true >>
+<<set $interview_identity to true>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>
@@ -224,21 +224,21 @@
 <<SetSpeaker "???">>
 <<AddParagraph "No, I have no idea...">>
 
-<<if $interview_event is false >>
+<<if $interview_event is false>>
 <<AddOption "What happened ?" "Event">>
 <</if>>
 
-<<if $interview_coffee is false >>
+<<if $interview_coffee is false>>
 <<AddOption "What's wrong with this coffee ?" "Coffee">>
 <</if>>
 
-<< if $interview_identity is true && $interview_event is true && $interview_coffee is true >>
+<< if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
   <<AddOption "Take a deep breath" "Contract">>
 <</if>>
 
 
 :: Event
-<< set $interview_event to true >>
+<<set $interview_event to true>>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "How did you find this place?">>
 
@@ -291,21 +291,21 @@
 <<AddParagraph "----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----">>
 
 
-<<if $interview_identity is false >>
+<<if $interview_identity is false>>
 <<AddOption "Who am I ?" "Event">>
 <</if>>
 
-<<if $interview_coffee is false >>
+<<if $interview_coffee is false>>
 <<AddOption "What's wrong with this coffee ?" "Coffee">>
 <</if>>
 
-<< if $interview_identity is true && $interview_event is true && $interview_coffee is true >>
+<< if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
   <<AddOption "Take a deep breath" "Contract">>
 <</if>>
 
 
 :: Coffee
-<< set $interview_coffee to true >>
+<<set $interview_coffee to true>>
 
 <<SetSpeaker "???">>
 <<AddParagraph "The coffee... is very special here">>
@@ -334,15 +334,15 @@
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom fishes in the mess of the couch and fishes a miracuously untouched muffin. They look at it longingly before handing it over.">>
 
-<<if $interview_identity is false >>
+<<if $interview_identity is false>>
 <<AddOption "Who am I ?" "Event">>
 <</if>>
 
-<<if $interview_event is false >>
+<<if $interview_event is false>>
 <<AddOption "What happened ?" "Event">>
 <</if>>
 
-<< if $interview_identity is true && $interview_event is true && $interview_coffee is true >>
+<< if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
   <<AddOption "Take a deep breath" "Contract">>
 <</if>>
 
