@@ -3,7 +3,7 @@
 :: PassageHeader {"position":"407,27","size":"100,100"}
 <<set $paragraphs to []>>
 <<if $lastoption>>
-@@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
+@@.speaker.pastchoice;>>>@@ @@.pastchoice; $lastoption@@
 
 <</if>>
 
