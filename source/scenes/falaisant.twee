@@ -56,8 +56,8 @@
 <<AddParagraph "//There, unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
 
 <<BlankSpeaker>>
-<<AddParagraph "//The atmosphere is heavy, disquieting.//">>
-
+<<AddParagraph "//The atmosphere is heavy...//">>
+<<AddParagraph "//Disquieting.//">>
 
 <<AddOption "The drop runs down darker and darker paths" "Falaisant9">>
 
@@ -161,6 +161,7 @@
 <<AddParagraph "//The two individuals glare at each other: they're about to start arguing again.//">>
 
 <<SetSpeaker "???">>
+<<AddParagraph "That's...">>
 <<AddParagraph "That's an excellent question... Who am I?">>
 
 <<AddOption "..." "Office">>
