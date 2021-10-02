@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="34" creator="Tweego" creator-version="2.1.1" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
+	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="68" creator="Tweego" creator-version="2.1.1" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -581,7 +581,7 @@ if (paragraphs.length &gt; 1) {
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="StoryAuthor" tags="" position="268,439" size="100,100">Original story by Cannelé &amp; Nomnom Themselves
 Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="StorySubtitle" tags="" position="392,432" size="100,100">A Disco Elysium Fanwork</tw-passagedata><tw-passagedata pid="18" name="StoryShare" tags="" position="526,432" size="100,100">[[&quot;@ampepers on Twitter&quot;|https://twitter.com/ampepers]]
 [[&quot;Repo with the source code&quot;|https://github.com/apepers/DiscoElysiumTwineMacros/]]</tw-passagedata><tw-passagedata pid="19" name="StoryInit" tags="" position="268,25" size="100,100">&lt;&lt;set $optionmap to new Map()&gt;&gt;
-&lt;&lt;set $yellow_speaker to [&quot;mysterious individual&quot;,&quot;???&quot;, &quot;client&quot;, &quot;yasyas&quot;, &quot;muffin&quot;, &quot;yassine maestro&quot;]&gt;&gt;
+&lt;&lt;set $yellow_speaker to [&quot;mysterious individual&quot;, &quot;client&quot;, &quot;yasyas&quot;, &quot;muffin&quot;, &quot;yassine maestro&quot;, &quot;???&quot;]&gt;&gt;
 &lt;&lt;set $blue_speaker to [&quot;nomnom&quot;, &quot;shrill voice&quot;, &quot;??&quot;]&gt;&gt;
 &lt;&lt;set $red_speaker to [&quot;cannelé&quot;, &quot;somehow shriller voice&quot;, &quot;?&quot;]&gt;&gt;
 &lt;&lt;set $purple_speaker to [&quot;cannelé &amp; nomnom&quot;]&gt;&gt;
@@ -1012,6 +1012,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé and Nomnom nod enthusiastically.&quot;&gt;&gt;
 
+&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Rule #3 : Magic can only be channeled thanks to a physical medium. Living beings cannot serve as mediums.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
@@ -1253,6 +1254,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddOption &quot;I&#39;ll go with Muffin&quot; &quot;Muffin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Yasyas" tags="nobr" position="600,850" size="100,100">&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Three point for Cannelé//&quot;&gt;&gt;
+/* #score */
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE&quot;&gt;&gt;
@@ -1261,14 +1263,637 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Muffin" tags="nobr" position="725,850" size="100,100">&lt;&lt;set $client_name to &quot;Muffin&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Three point for Nomnom//&quot;&gt;&gt;
+/* #score */
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I think you&#39;re neat, Muffin. You&#39;re a great person.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now let&#39;s go! It&#39;s time to retrace your steps and go find your memories.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="LeftPath" tags="" position="850,850" size="100,100">&lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Five point for Nomnom//&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="RightPath" tags="" position="975,850" size="100,100">&lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Five point for Cannelé//&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="TestLab" tags="" position="1100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="market_RightPath" tags="" position="850,850" size="100,100">&lt;&lt;set $market_path to &quot;right&quot;&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Five point for Nomnom//&quot;&gt;&gt;
+/* #score */
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;MAGIC IS ON MY SIDE!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;THIS IS A SCAM??? THIS IS NOT MAGIC THIS IS A HATE CRIME AGAINST ME!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The pair of detectives is back to arguing as they heads toward the right path.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded.&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="market_LeftPath" tags="" position="975,850" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Five point for Cannelé//&quot;&gt;&gt;
+/* #score */
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;THE MAGIC COIN HAS SPOKEN, WE ARE GOING LEFT!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;??? I WANT TO BE REFUNDED THIS IS FAKE.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The pair of detectives is back to arguing as they heads toward the left path.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded.&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="market_Hobo" tags="" position="1100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Hobo&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//*wink*//&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;And is this really the right way to the market?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;At that, Cannelé and Nomnom turn around but the Hobo is nowhere to be seen.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;??&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;???&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;What just happened?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The cat smiles its wide, troubling smile and turns around, before disappearing behind a corner.&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Did I just dream this whole thing?&quot; &quot;market_WTF&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="market_WTF" tags="" position="1225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;But the coin....&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;... Is right here?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;HEY WHY WOULD &#39;&#39;YOU&#39;&#39; GET TO KEEP THE MAGIC COIN?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;BECAUSE?? I CAN&#39;T ENTRUST IT TO A COMPLETE IMBECILE?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;DID YOU LOOK INTO A MIRROR RECENTLY?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;I...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I will keep the coin.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;...&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;This sounds almost... reasonable.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé shudders.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I know...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Let&#39;s do this, coin keeper!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//This is probably a mistake//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//But if this can buy me precious seconds of quiet...//&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;I&#39;ll do it!!!&quot; &quot;market_Gasp&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="market_Gasp" tags="" position="100,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé and Nomnom are surprised by your sudden burst of energy.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;That&#39;s the spirit!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;Now, let&#39;s go!&quot;&gt;&gt;
+
+&lt;&lt;if $market_path === &quot;left&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Take the left path&quot; &quot;market_LeftPath&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_path === &quot;right&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Take the right path&quot; &quot;market_RightPath&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="market_PoliceOfficer" tags="" position="225,975" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;That&#39;s the officer! The one I talked to this morning!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;HEY! YOU!! WE HAVE QUESTIONS TO ASK!!!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The police officer turns around and his eyes widen&quot;&gt;&gt;
+
+
+/* His entire behavior changed, he is on his guard. He recognized $client_name and doesn&#39;t want to engage conversation. */
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Have you ever seen this guy right here?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Police Officer&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Um, no I don&#39;t think I have had the pleasure.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;Sir?? We met this morning! You told me your grandma was sick and you couldn&#39;t help me!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Oh no! Officer is your grandma feeling better now?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The tag on his uniform states: Pöl aufHißer&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Pöl aufHißer&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Yes? Yes! Granny Michelle is doing amazing!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Thank you for your concern&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé pats his shoulder.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Then, all is good, all is good. Now are you sure-&quot;&gt;&gt;
+
+
+&lt;&lt;SetSpeaker &quot;Pöl aufHißer&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;AH!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;OH!!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Officer aufHißer turns around. There is nothing, but an empty street.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Pöl aufHißer&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;My superior! My boss is calling for me!! Apologies genlepeople, but I have to go!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The street is still empty, no boss to be see, but Officer aufHißer runs as if the landlord was at his heels.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;Well that was...&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Not very police-y of him&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;AGAB, guys. AGAB.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom sighs and roll their eyes, exasperated.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;All guards are bastards.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;For once, Cannelé nods in agreement.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Truly. A bunch of incompetent and irresponsible douchebags.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//SO... they CAN agree... on anti-governmental claims? An alliance against a common enemy?//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//That&#39;s... a good start.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//I guess?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Following the running officer, the group reaches a marketplace.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It&#39;s crowded, the vendors are busy with their stands.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Under a tent on the left, a group of people seem to be playing a card game.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;A group of policemen is gathered on the other side of the market. They seem a tad anxious.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I&#39;ll start asking the people over there.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Then, in order to stay as humanely far from you as possible, I&#39;ll go ask that bunch there.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Let&#39;s meet here in an hour.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom looks over to the card players, and sighs.&quot;&gt;&gt;
+/* #NOMNOM */
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Don&#39;t, just... Don&#39;t do this.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom turns away from Cannelé and whispers.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;If you go with that idiot, just... be careful, ok?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Ugh, this is a recipe for disaster.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom mumbles as they leave. Cannelé is already on their way to the table.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Does this mean... Detective Nomnom //knows// something bad is going to happen...//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//But they won&#39;t do... anything... to prevent it?//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//I can&#39;t remember you but... &#39;&#39;Mommy, help me.&#39;&#39;//&quot;&gt;&gt;
+
+&lt;&lt;set $market_vendors to false&gt;&gt;
+&lt;&lt;set $market_gamblers to false&gt;&gt;
+&lt;&lt;set $market_police to false&gt;&gt;
+
+&lt;&lt;AddOption &quot;Follow Nomnom&quot; &quot;market_Vendors&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Run after Cannelé&quot; &quot;market_Gamblers&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Snoop around the police officers&quot; &quot;market_Police&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="market_Vendors" tags="" position="350,975" size="100,100">&lt;&lt;set $market_vendors to true&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;They&#39;re mostly old ladies.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;My plan is simple&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Trying to appeal to them and get free stuff.&quot;&gt;&gt;
+
+
+&lt;&lt;if $market_gamblers is false&gt;&gt;
+&lt;&lt;AddOption &quot;Find Cannelé&quot; &quot;market_Gamblers&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_police is false&gt;&gt;
+&lt;&lt;AddOption &quot;Sneak close to the group of officers&quot; &quot;market_Police&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
+  &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="market_Gamblers" tags="" position="475,975" size="100,100">&lt;&lt;set $market_gamblers to true&gt;&gt;
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé strolls over the table where seven people are sitting.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;There is money on the table.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé&#39;s eyes glint dangerously.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Good day everyone, what&#39;s on the table today?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé takes a seat. The gesture is natural, practiced.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler A&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Detective! Haven&#39;t seen you in a while!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler B&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;At least a good three days, it&#39;s been! YOu even came here with a friend.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé looks over anxiously.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hahaha, what are you all talking about, I have never been here in my &#39;&#39;life&#39;&#39;&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The entire table laughs as the sense of malaise deepens.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;Detective? What are you doing?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Oh nothing, just a good old game of Hanged Pokerfaced Maid&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;One of the ladies at the table hand over the worn out deck of cards to Cannelé, who starts shuffling.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Wanna try your hand? Be careful, I&#39;m really good at this, I might ruin you.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;No, I&#39;m, uh, good but ? Detective? What happened to the investigation?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler C&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;PLACE YOUR BETS!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;FEELING LUCKY TODAY, I&#39;M BETTING IT ALL&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//&#39;&#39;This&#39;&#39; was what Detective Nomnom had warned me about...//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//And they let me get stuck into this hellish situation??//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//This can&#39;t get any worse.//&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Everyone cheers as Cannelé reaches into their pockets.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé keeps fumbling around.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé turns around.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I have a teeny &#39;&#39;tiny&#39;&#39; favor to ask you.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Could you lend me the Hoboolean Coin?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Fuck. It just got worse.//&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I promise I&#39;ll give it back soon, with interest!!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;DETECTIVE??&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Please, please, please, I&#39;ll give you 1% of my winnings. Pretty please?&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Relunctanly hand over the coin&quot; &quot;market_GamblingCoin&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Vigorously refuse&quot; &quot;market_NoCoin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="market_GamblingCoin" tags="" position="600,975" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;I know I am going to regret this...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//... but I am also morbidly curious about this Hanged Pokerfaced Maid game.//&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;...&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="market_NoCoin" tags="" position="725,975" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;DETECTIVE!! I can&#39;t give you the coin??&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//It&#39;s the only thing protecting my peace of mind when you are with Nomnom!!//&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannele&#39;s expression turns extremely serious. Their voice is now but a whisper.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I swear, this is for the investigation.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I have a great feeling about this.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;So... Please?&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Very, &#39;&#39;extremely&#39;&#39;, __absolutely__ relunctanctly hand over the coin.&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="market_Gambling" tags="" position="850,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;This might look like a simple 50cts coins&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;But it was actually enchanted by a very powerful magic-user from the Towers.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé greedily grabs the coin and as they make to place it on the table.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I can guarantee, trust me!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Have I ever mislead any of you?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Everyone decides to ignore this last quip.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler A&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Right! Whose turn is it? Who won the last game?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler B&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Wasn&#39;t it you?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler C&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Naaah, I&#39;m pretty sure it was-&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Wait.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Who won yesterday&#39;s game?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé snatches the coin back.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler A&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Yesterday&#39;s game....&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Don&#39;t leave me hanging like this, who was it?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler B&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Maybe we didn&#39;t play yesterday?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler C&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Must be it.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;They all shrug it off, laughing about old age and the likes.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Then, they turn to Cannelé expectantly.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler D&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Then let&#39;s have the Detective start today, it&#39;s been a while since we&#39;ve seen them.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler B&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Sounds fair!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler A&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Bet your fancy coin, Detective!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Gambler C&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I do need some truth in my life, a truth coin is exactly what I need!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé suddenly stands up.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I just rememered!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I am in the middle of work&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;With my //client.//&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Oh, NOW they remember me...//&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Gotta bail, I&#39;ll be back tomorrow!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé drags you far from the gambling tables.&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Well that was close...&quot; &quot;market_GamblingEnd&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="market_GamblingEnd" tags="" position="975,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I know right?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Those geezers, they think I&#39;m not used to their tactics by now...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;But I&#39;m detective! I won&#39;t fall in their traps!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;What do you mean...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Traps...&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;When they start acting up on their age and being all forgetful&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I know they&#39;re out to scam me!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé shakes their head, confidence overflowing&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Tut tut, tut! I won&#39;t fall for it.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Conversation with this person is absolutely impossible.//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//I think I&#39;m having a headache.//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//For now, let&#39;s just get away from this gambling freak.//&quot;&gt;&gt;
+
+
+&lt;&lt;if $market_vendors is false&gt;&gt;
+&lt;&lt;AddOption &quot;Find Nomnom&quot; &quot;market_Vendors&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_police is false&gt;&gt;
+&lt;&lt;AddOption &quot;Sneak close to the group of officers&quot; &quot;market_Police&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
+  &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_Police" tags="" position="1100,975" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The conversation can be heard more clearly.&quot;&gt;&gt;
+
+
+&lt;&lt;SetSpeaker &quot;Police Officer A&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The whole district&#39;s been in havoc since yesterday.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Police Officer B&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;There&#39;s been a problem with the doses, why does it keep happening...&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Police Officer C&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The investigation is almost over, soon we can go back up.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;During the entire exchange, a familiar officer has been looking around. His gaze stop suddenly.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Pöl aufHißer&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;YOU! WHAT DO YOU THINK YOU&#39;RE DOING?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I BETTER NOT SEE YOU AROUND ANYMORE!!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Shit! Time to scram!//&quot;&gt;&gt;
+
+&lt;&lt;if $market_vendors is false&gt;&gt;
+&lt;&lt;AddOption &quot;Find Nomnom&quot; &quot;market_Vendors&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_gamblers is false&gt;&gt;
+&lt;&lt;AddOption &quot;Find Cannelé&quot; &quot;market_Gamblers&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
+  &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="market_Addict" tags="" position="1225,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;An hour afterr splitting up, everyone meets at the entrance of the market.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The three of them are sat at a wobbling table, outside a small bistrot.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Waiter&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;What can I bring you?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;I&#39;ll have a cup of t-&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;3 cups of Spicy Cocoa.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;//What does everyone have against tea??//&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;And a plate of biscuits, please.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;No, make that one croissant&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;BITCH?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Waiter&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Should I bring 3 cups od Spicy Cocoa, a plate of biscuits and a croissant?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;This would&#39;ve been the best solution but...&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;As if we could afford that??&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Do we look like royalty to you maybe, Sir??&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;We will only have 3 cups of cocoa, please&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The waiter nods with a relieved smile and hurries back inside.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;As they prepare to go over what they discovered at the market, they hear a sound.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;????&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hey!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hey! You!&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;No one pays attention to the yells.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;????&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The group of three weird people at the table!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I&#39;m talking to you&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Suddenly, a person appears in front of the table.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The stranger is tall, very tall and wearing clothes too slightly too small for them.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Their smile is sheepish and their eyes are red and puffy.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;????&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Hi, my name is Richie and-&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie bends down and lowers their voice.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It might sound weird but I saw y&#39;all go around the market asking questions.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Very brave of you to do that right un der th enose of the cops.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie&#39;s looks around once, twice and bends down again.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;So?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;So ?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;What are you on, man?&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;I am so confused right now.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Did you find any info on the Fleur d&#39;Ames??&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The market&#39;s been in shambles since yesterday. Me and my friends are getting desperate there..&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;So? Did you manage to get any? Care to share with a new pal?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé and Nomnom look at each other, then at the strange individual.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;What the fuck is this?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie is surprised.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I think he is a complete nutcase?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Why would we have any Fleur d&#39;Ame?? That shit&#39;s rare.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie starts sweating.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;And expensive as fuck.&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie starts to panic.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;And government controlled??&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie lets out a scream.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;FORGET IT! MY MISTAKE&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie takes a step back&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Just...&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie takes another step back&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;You&#39;ve never seen me, OK?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie stops, for a moment.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Richie&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;We&#39;re pals right?&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Richie doesn&#39;t wait for an answer, and runs away.&quot;&gt;&gt;
+
+/* cannelé */</tw-passagedata><tw-passagedata pid="81" name="TestLab" tags="" position="100,1100" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Mmh... That&#39;s a pretty mirror.&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -1277,7 +1902,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;Foresight &quot;6 minutes 30 seconds &quot; &quot; milliseconds&quot; &quot;Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.&quot;&gt;&gt;
 &lt;&lt;Foresight &quot;6.7&quot; &quot; minutes&quot; &quot;Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;FUCK!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="TestLab2" tags="" position="1225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;FUCK!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="TestLab2" tags="" position="225,1100" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Time to blow this thing up&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
