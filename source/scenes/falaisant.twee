@@ -98,6 +98,9 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "I SAID IT FIRST SO SHUT UP SHUT UP">>
 
+<<SetSpeaker "Leathery Voice">>
+<<AddParagraph "//What a beautiful morning//">>
+
 <<AddOption "Knock" "Expo_Knock">>
 <<AddOption "Wait" "Expo_Wait1">>
 
