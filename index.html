@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="33" creator="Tweego" creator-version="2.1.1" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
+	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="57" creator="Tweego" creator-version="2.1.1" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -377,7 +377,7 @@ window.randomStr = function(length)
 {
   for(var s=''; s.length < length;)
 	{
-		s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.charAt(Math.random()*62|0);
+		s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*'.charAt(Math.random()*62|0);
 	}
   return s;
 }
@@ -777,8 +777,8 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 
 &lt;&lt;AddOption &quot;Inspect left&quot; &quot;Left&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Inspect right&quot; &quot;Right&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Left" tags="" position="1100,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;set $interview_left to true&gt;&gt;
+&lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Left" tags="" position="1100,600" size="100,100">&lt;&lt;set $interview_left to true&gt;&gt;
+&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The beat-up couch thrones in the room : it must take half the space of the booth&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -787,8 +787,9 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;It looks a little ridiculous but oddly fitting in the strange office.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;MY TOE&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;MY TOE!&quot;&gt;&gt;
 
+&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Among the rubbish cluttering it lay blankets, newspapers and a half-eaten croissant.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Leathery Voice&quot;&gt;&gt;
@@ -828,14 +829,15 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;Interview&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Wall" tags="" position="100,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Wall" tags="" position="100,725" size="100,100">&lt;&lt;set $interview_wall to true&gt;&gt;
+&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Pleasen refrain from touching the board, it&#39;s quite-&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Please refrain from touching the board, it&#39;s quite-&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Unstable. That board is unstable. So is Cannelé, beware&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Unstable. That board is unstable. So is Cannelé, beware.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;&#39;&#39;WHAM&#39;&#39;&quot;&gt;&gt;
@@ -896,7 +898,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What&#39;s your name? Occupation? Monthly salary?&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;-----The client&#39;s looks old, around 25 years old-----&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;-----The client&#39;s looks old, around 25 years old&quot;&gt;&gt;
 
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -914,7 +916,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Yeah ? Give me the Laws Rules of Magic then.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;----- He looks confident in his knowledge, remembers basic cultural elements -----&quot;&gt;&gt;
+&lt;&lt;Precog &quot;He looks confident in his knowledge, remembers basic cultural elements &quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Yeah ? Give me the first 5 multiplication tables then.&quot;&gt;&gt;
@@ -997,13 +999,13 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You&#39;re such a loser.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So you are looking for help to regain memory, is that right?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;His coat has suspicious stains on it? @@.precog;&lt;span class=&#39;Precog&#39; data-value=&#39;Is it food?&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;That&#39;s right! When I came to, I couldn&#39;t remember anything. The only clue I had was my wallet, but a- it&#39;s a bit embarassing...&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Yes? What happened to your wallet?&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;----- His coat has suspicious stains on it? Is it food ? -----&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A cat stole it... and sneaked away.&quot;&gt;&gt;
@@ -1022,7 +1024,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So, a cat stole the only lead you had about your identity, I see.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;On his coat are embroidered the initials Y. M. @@.precog;&lt;span class=&#39;PrecogRandom&#39; data-value=&#39;They were sewn by hand, must be his own.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
 
 
 &lt;&lt;if $interview_identity is false&gt;&gt;
@@ -1038,7 +1040,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Coffee" tags="" position="725,725" size="100,100">&lt;&lt;set $interview_coffee to true&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;The coffee... is very special here&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;The coffee... is very special here.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom&#39;s expression freezes as they try to maintain a polite smile.&quot;&gt;&gt;
@@ -1050,7 +1052,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;//gulps//&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Can I offer you a pstry to go with this &#39;&#39;delicious&#39;&#39; cup of coffee? They&#39;re fresh from yesterday.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Can I offer you a pastry to go with this &#39;&#39;delicious&#39;&#39; cup of coffee? They&#39;re fresh from yesterday.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Oh! Is Yesterday a bakery-&quot;&gt;&gt;
@@ -1103,7 +1105,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;I sincerely despire you so much&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;----- His clothes seem to be good quality, he is clean shaven and look like he has a job, or at least a reasonable source of income -----&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;His clothes seem to be good quality, he is clean shaven and @@.precog;&lt;span class=&#39;Precog&#39; data-value=&#39;looks like he has a job, or at least a reasonable source of income.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
