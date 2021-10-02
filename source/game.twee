@@ -7,11 +7,7 @@ C&N -- DD
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-<<<<<<< HEAD
-	"start": "TestLab",
-=======
 	"start": "Falaisant",
->>>>>>> 023d849b9daa1adca82c0c246e3f647821a0ee59
 	"zoom": 0.6
 }
 
@@ -40,37 +36,16 @@ A Disco Elysium Fanwork
 ::@include script.twee
 ::@include stylesheet.twee
 ::@include disco_elysium_macros.twee
-<<<<<<< HEAD
 ::@include magic_macros.twee
-=======
 ::@include scenes/falaisant.twee
->>>>>>> 023d849b9daa1adca82c0c246e3f647821a0ee59
 
 :: TestLab
 <<BlankSpeaker>>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Mmh... That's a pretty mirror.">>
 <<BlankSpeaker>>
-<<<<<<< HEAD
 <<AddParagraph "//Suddenly, the image blurs.//">>
 <<SetSpeaker "Mirror">>
 <<Foresight "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "FUCK!">>
-=======
-<<AddParagraph "A set of text with no speaker">>
-
-<<SetSpeaker "A nobody">>
-<<AddParagraph "hey! Why am I described like that?">>
-
-<<AddOption "Tell the stranger to shut up." "Intro2">>
-
-:: Intro2
-
-<<SetSpeaker "A nobody">>
-<<AddParagraph "Okay...">>
-
-
-
-
->>>>>>> 023d849b9daa1adca82c0c246e3f647821a0ee59
