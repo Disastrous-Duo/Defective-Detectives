@@ -173,7 +173,14 @@ a.macro-linkreplace {
 
 :root {
   --foresight-color: #6cc6ce;
+  --precog-color: #c6496b;
 }
+
+.precog {
+  color: var(--precog-color);
+}
+
+
 
 .foresight {
   color: var(--foresight-color);

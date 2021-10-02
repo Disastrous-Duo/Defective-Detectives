@@ -27,3 +27,137 @@ $(document).on("keyup", function (e) {
     }
   }
 });
+
+
+// Custom for C&N
+
+const foresight_timer_freq = 20;
+const precog_timer_freq = 20;
+const precog_tries = 8; // number of tries before getting a right letter
+const precog_random_tries = 4; // it's faster, because you can't read it as well
+
+
+window.forceDigits = function(number, digits)
+{
+	var base = number+"";
+	for(var i = base.length; i < digits; i++)
+	{
+		base = "0"+base;
+	}
+	return base;
+}
+
+window.randomStr = function(length)
+{
+  for(var s=''; s.length < length;)
+	{
+		s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.charAt(Math.random()*62|0);
+	}
+  return s;
+}
+
+
+window.updateForesightTimer = function() // Update a timer countdown, mainly used in foresight
+{
+	 var all_ftimers = document.getElementsByClassName("Tickdown");
+	 for(var i = 0; i < all_ftimers.length; i++)
+	 {
+		 var ftimer = all_ftimers[i];
+		 var millis = new Date().getMilliseconds();
+		 ftimer.innerHTML = window.forceDigits(millis,3);
+	 }
+}
+
+window.replaceAt = function(str, index, replacement) {
+    return str.substr(0, index) + replacement + str.substr(index + replacement.length);
+}
+
+window.updatePrecogTimer = function()
+{
+	 var all_decoders = document.getElementsByClassName("Precog");
+	 for(var i = 0; i < all_decoders.length; i++)
+	 {
+
+
+		 var decoder = all_decoders[i];
+		 var true_value = decoder.dataset.value;
+
+		 var slot = decoder.dataset.slot*1 || 0;
+		 var tries = decoder.dataset.tries*1 || 0;
+
+		 if(true_value == decoder.innerHTML)break;
+
+		 if(slot  == 0 && tries == 0) // first step, randomize the content, but with the same size
+		 {
+			 decoder.innerHTML = randomStr(true_value.length);
+		 }
+
+		 var actual_value = decoder.innerHTML;
+
+		 // Another try
+		 tries +=1;
+		 if(tries%precog_tries == 0)
+		 {
+			 tries = 0;
+			 actual_value = window.replaceAt(actual_value, slot, true_value[slot]);
+			 //slot = (slot+1009)%actual_value.length; // Trick with a prime number, that makes the slot tick in a semi random order
+			 // Doesn't work for texts bigger than 1009 characters, but that won't happen, right ;)
+			 slot = slot+1 //in case of emergency, break the comment
+		 }
+		 else
+		 {
+			 actual_value = window.replaceAt(actual_value,slot,randomStr(1));
+		 }
+
+		 decoder.innerHTML = actual_value;
+		 decoder.dataset.slot = slot;
+		 decoder.dataset.tries = tries;
+	 }
+}
+
+window.updatePrecogRandomTimer = function()
+{
+	 var all_decoders = document.getElementsByClassName("PrecogRandom");
+	 for(var i = 0; i < all_decoders.length; i++)
+	 {
+
+
+		 var decoder = all_decoders[i];
+		 var true_value = decoder.dataset.value;
+
+		 var slot = decoder.dataset.slot*1 || 0;
+		 var tries = decoder.dataset.tries*1 || 0;
+
+		 if(true_value == decoder.innerHTML)break;
+
+		 if(slot  == 0 && tries == 0) // first step, randomize the content, but with the same size
+		 {
+			 decoder.innerHTML = randomStr(true_value.length);
+		 }
+
+		 var actual_value = decoder.innerHTML;
+
+		 // Another try
+		 tries +=1;
+		 if(tries%precog_random_tries == 0)
+		 {
+			 tries = 0;
+			 actual_value = window.replaceAt(actual_value, slot, true_value[slot]);
+			 slot = (slot+1009)%actual_value.length; // Trick with a prime number, that makes the slot tick in a semi random order
+			 // Doesn't work for texts bigger than 1009 characters, but that won't happen, right ;)
+			 //slot = slot+1 //in case of emergency, break the comment
+		 }
+		 else
+		 {
+			 actual_value = window.replaceAt(actual_value,slot,randomStr(1));
+		 }
+
+		 decoder.innerHTML = actual_value;
+		 decoder.dataset.slot = slot;
+		 decoder.dataset.tries = tries;
+	 }
+}
+
+window.setInterval(window.updateForesightTimer, foresight_timer_freq);
+window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+window.setInterval(window.updatePrecogRandomTimer, precog_timer_freq);
