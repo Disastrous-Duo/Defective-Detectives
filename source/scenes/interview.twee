@@ -37,12 +37,8 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "MY TOE!">>
 
-<<<<<<< Updated upstream
 <<BlankSpeaker>>
-<<AddParagraph "Among the rubbish cluttering it lay blankets, newspapers and a half-eaten croissant.">>
-=======
-<<AddParagraph "Among the rubbish cluttering it, lay blankets, newspapers and a half-eaten croissant.">>
->>>>>>> Stashed changes
+<<AddParagraph "Among the rubbish cluttering it emerge a couple blankets, newspapers and a half-eaten croissant.">>
 
 <<SetSpeaker "Leathery Voice">>
 <<AddParagraph "//sigh//">>
@@ -183,10 +179,6 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Yeah ? Give me the Laws Rules of Magic then.">>
-<<<<<<< Updated upstream
-<<Precog "He looks confident in his knowledge, remembers basic cultural elements ">>
-=======
->>>>>>> Stashed changes
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
@@ -296,11 +288,6 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So, a cat stole the only lead you had about your identity, I see.">>
-<<<<<<< Updated upstream
-<<AddParagraph "On his coat are embroidered the initials Y. M. @@.precog;<span class='PrecogRandom' data-value='They were sewn by hand, must be his own.'></span>@@">>
-
-=======
->>>>>>> Stashed changes
 
 <<if $interview_identity is false>>
 <<AddOption "Who am I ?" "Event">>

@@ -1,7 +1,11 @@
 :: LeftPath
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Five point for Nomnom//">>
 
 
 
 
 
 :: RightPath
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Five point for Cannelé//">>
