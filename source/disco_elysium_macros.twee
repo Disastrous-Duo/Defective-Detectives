@@ -68,6 +68,10 @@ _skillname +
 <<set $currentspeaker to ("@@.purple_speaker.speaker;" +
 _skillname +
 "@@")>>
+<<elseif $leather_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.leather_speaker.speaker;" +
+_skillname +
+"@@")>>
 <</if>>
 <<if _skillresult>>
 <<set $currentspeaker += _skillresult>>
@@ -98,6 +102,8 @@ $args[0] -
     <<set $currentspeaker to ("@@.red_speaker.speaker;" + $args[0] + "@@")>>
   <<elseif $purple_speaker.includes(_speaker_name)>>
     <<set $currentspeaker to ("@@.purple_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $leather_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.leather_speaker.speaker;" + $args[0] + "@@")>>
   <<else>>
     <<set $currentspeaker to ("@@.speaker;"+$args[0]+"@@")>>
 <</if>>

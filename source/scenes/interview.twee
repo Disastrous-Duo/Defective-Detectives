@@ -2,13 +2,13 @@
 
 :: Office [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "The girl nods as the man stands up and dusts his clothes.">>
+<<AddParagraph "The girl nods as the man stands up and dust their clothes.">>
 
 <<SetSpeaker "?">>
 <<AddParagraph "Please, come in. I am Cannelé and this is-">>
 
 <<SetSpeaker "??">>
-<<AddParagraph "Nomnom. At your service, dear client of MINE.">>
+<<AddParagraph "Nomnom. The only real detective here.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The room is small. After consideration, small is a nice way to describe the tiny cubicle.">>
@@ -38,7 +38,7 @@
 <<AddParagraph "MY TOE!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Among the rubbish cluttering it lay blankets, newspapers and a half-eaten croissant.">>
+<<AddParagraph "Among the rubbish cluttering it emerge a couple blankets, newspapers and a half-eaten croissant.">>
 
 <<SetSpeaker "Leathery Voice">>
 <<AddParagraph "//sigh//">>
@@ -58,7 +58,7 @@
 :: Right [nobr]
 <<set $interview_right to true>>
 <<BlankSpeaker>>
-<<AddParagraph "The duo is elbowing their way around. They eventually manage to place a stool on the other side of the table facing the couch.">>
+<<AddParagraph "The duo is elbowing their way around the room. They eventually manage to place a stool on the other side of the table facing the couch.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Will you stop getting in my way??">>
@@ -86,10 +86,12 @@
 :: Wall [nobr]
 <<set $interview_wall to true>>
 <<BlankSpeaker>>
-<<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.">>
+<<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Please refrain from touching the board, it's quite-">>
+
+<<AddParagraph "A portion of the board is hidden under a dirty, white sheet.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
@@ -97,7 +99,6 @@
 <<BlankSpeaker>>
 <<AddParagraph "''WHAM''">>
 
-<<AddParagraph "A portion of the board is hidden under a dirty, white sheet.">>
 
 <<if $interview_left is false>>
   <<AddOption "Inspect left" "Left">>
@@ -122,30 +123,24 @@
 <<AddParagraph "Oh, uh, gladly. I would love a cup of-">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Excellent ! I make the best coffee around the block !">>
+<<AddParagraph "Excellent! I make the best coffee around the block.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "-tea. But coffee would be great too, I guess.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom stands up and make their way to the sink. They hum as they prepare two cups of coffee.">>
-<<AddParagraph "They bring a cup over, placing it on the table.">>
+<<AddParagraph "They bring the cups over, ignoring Cannelé, and place one on the table.">>
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
 
-<<Foresight "19.3" "seconds" "A cup is broken into several pieces that lie on the ground. The client seems angry and leave through the door. They have a huge stain on their coat." >>
 /* NomNom gift -> sees client about to leave with a stain on his shirt */
-
-<<BlankSpeaker>>
-<<AddParagraph "Nomnom picks the cup again and sets it a little farther from their guest.">>
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "It's still a //tad bit// hot.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Amnesia. Can you tell us everything you remember ?">>
+<<AddParagraph "Amnesia. Can you tell us everything you remember?">>
 
 <<set $interview_identity to false>>
 <<set $interview_event to false>>
@@ -180,17 +175,16 @@
 <<AddParagraph "Do you know what a gift is ?">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Yes, I lost my memories but I am not //that// confused. I know my multiplication tables, what coffee looks like and the three laws of magic.">>
+<<AddParagraph "Yes, I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what ''real'' coffee looks like.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Yeah ? Give me the Laws Rules of Magic then.">>
-<<Precog "He looks confident in his knowledge, remembers basic cultural elements ">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "They look at each other in confusion for a second.">>
+<<AddParagraph "They look at each other in confusion.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I meant the Laws of Magic.">>
@@ -201,10 +195,8 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we absolutely know what we are doing.">>
 
-
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
-
 
 <<SetSpeaker "???">>
 <<AddParagraph "If you insist...">>
@@ -221,7 +213,7 @@
 <<AddParagraph "AH! See, I was rig-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé suddenly elbows Nomnom in the stomach and they keels over in pain. Cannelé's smile is so stiff it looks almost menacing.">>
+<<AddParagraph "Cannelé suddenly elbows Nomnom in the stomach and they keel over in pain. Cannelé's smile is so stiff it looks menacing.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Excellent! And do you know what your own gift is- ''yelp''">>
@@ -255,15 +247,15 @@
 <<AddParagraph "I tried to go to the police but they couldn't help... That's when I found the flyer.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The flyer reads: ''AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//. __Will Help__ you find anything you ==misplaced== lost. Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__">>
-<<AddParagraph "It's barely legible, and mostly just confusing.">>
+<<AddParagraph "The flyer on the table reads: ''AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//. __Will Help__ you find anything you ==misplaced== lost. Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__">>
+<<AddParagraph "It's barely legible and mostly just confusing.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "I was quite desperate you see...">>
 
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "SEE! I KNEW THE FLYERS WOULD BE A GREAT IDEA !">>
+<<AddParagraph "SEE! I KNEW HANDING OUT FLYERS WOULD BE A GREAT IDEA!">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Kay whatever.">>
@@ -289,15 +281,13 @@
 <<AddParagraph "???">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Do you have any other personal item that might help identify you?.">>
+<<AddParagraph "Do you have any other personal item that might help identify you?">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Nothing. I looked into all my pockets, but I have nothing...">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So, a cat stole the only lead you had about your identity, I see.">>
-<<AddParagraph "On his coat are embroidered the initials Y. M. @@.precog;<span class='PrecogRandom' data-value='They were sewn by hand, must be his own.'></span>@@">>
-
 
 <<if $interview_identity is false>>
 <<AddOption "Who am I ?" "Event">>
@@ -325,7 +315,7 @@
 <<AddParagraph "Is there any issue with the way I make coffee ?">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//gulps//">>
+<<AddParagraph "//*gulps*//">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Can I offer you a pastry to go with this ''delicious'' cup of coffee? They're fresh from yesterday.">>
@@ -334,7 +324,8 @@
 <<AddParagraph "Oh! Is Yesterday a bakery-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "A heavy silence greets the question. This is not a safe topic.">>
+<<AddParagraph "A heavy silence greets the question.">>"
+<<AddParagraph "This is not a safe topic.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Y-yes please.">>
@@ -375,7 +366,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "If you become our client, we need to draw an official contract.">>
-<<AddParagraph "I am not a swindler-">>
+<<AddParagraph "After all, I am not a swindler-">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "''COUGH''">>
@@ -394,7 +385,7 @@
 <<AddParagraph "Clause 1: I do not take any responsability on what this goof right here might do">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "I sincerely despire you so much">>
+<<AddParagraph "I sincerely despise you so much">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
@@ -408,7 +399,7 @@
 <<AddParagraph "Any Questions? No? Perfect!.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé signs the document they just drafted.">>
+<<AddParagraph "Cannelé signs the contract.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Seems fair to me.">>
@@ -416,9 +407,9 @@
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom signs the contract.">>
 
-
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Now we just need something to call you.">>
+<<AddParagraph "----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or alias?">>
@@ -429,10 +420,10 @@
 
 :: Naming [nobr]
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "YasYas!!!">>
+<<AddParagraph "A good name... IasIas, Iasyas... Yasyas!!!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Muffin!!!">>
+<<AddParagraph "It has to be Muffin!!!">>
 
 
 <<AddOption "..." "Naming0">>
@@ -446,9 +437,13 @@
 <<AddParagraph "This ridiculous situation has happened before...">>
 
 <<BlankSpeaker>>
+<<AddParagraph "Cannelé........">>
+<<AddParagraph "Nomnom..............">>
+
+<<BlankSpeaker>>
 <<AddParagraph "This piece of knowledge is terrifying.">>
 <<AddParagraph "More terrifying than the dark alleys, more terrifying than the tiny, messy office.">>
-<<AddParagraph "Perhaps more terrifying than the memory loss itself...">>
+<<AddParagraph "Perhaps even more terrifying than the memory loss itself...">>
 
 <<AddOption "... ..." "Naming1">>
 
@@ -492,6 +487,7 @@
 
 
 :: Yasyas [nobr]
+<<set $client_name to "Yasyas">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Cannelé//">>
 
@@ -503,6 +499,7 @@
 
 
 :: Muffin [nobr]
+<<set $client_name to "Muffin">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three point for Nomnom//">>
 
