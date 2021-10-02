@@ -39,7 +39,8 @@ A Disco Elysium Fanwork
 ::@include magic_macros.twee
 ::@include scenes/falaisant.twee
 
-
+::StoryMenu
+<input type="button" value="AAAAAAAA" />
 
 :: TestLab
 <<SetSpeaker "Nomnom">>
