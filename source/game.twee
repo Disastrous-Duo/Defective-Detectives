@@ -7,7 +7,7 @@ C&N -- DD
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "Contract",
+	"start": "Falaisant",
 	"zoom": 0.6
 }
 
@@ -29,7 +29,8 @@ A Disco Elysium Fanwork
 <<set $yellow_speaker to ["mysterious individual", "yasyas", "muffin", "yassine maestro", "???", "client"]>>
 <<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
 <<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
-<<set $purple_speaker to ["leathery voice", "couch, cannelé & nomnom"]>>
+<<set $purple_speaker to ["cannelé & nomnom"]>>
+<<set $leather_speaker to ["leathery voice", "couch"]>>
 <<set $greentext to [""]>>
 <<set $paraAppendMode to false>>
 

@@ -65,6 +65,10 @@ a:active {
   color: #e4b934;
 }
 
+.leather_speaker {
+  color: #B9935A
+}
+
 .speaker {
   text-transform: uppercase;
   margin-left: -1.5em;
