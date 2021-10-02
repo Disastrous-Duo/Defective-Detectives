@@ -158,6 +158,6 @@
 <<AddParagraph "//The two individuals glare at each other, and they seem like they're about to start arguing again.//">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "That's an excellent question.">>
+<<AddParagraph "That's an excellent question... Who am I?">>
 
 <<AddOption "..." "Interview">>
