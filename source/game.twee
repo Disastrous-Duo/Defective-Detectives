@@ -36,29 +36,16 @@ A Disco Elysium Fanwork
 ::@include script.twee
 ::@include stylesheet.twee
 ::@include disco_elysium_macros.twee
+::@include magic_macros.twee
 ::@include scenes/falaisant.twee
 
-:: Intro [nobr] {"position":"1100,50","size":"100,100"}
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "My name's in blue!">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Mine's prettier!">>
-
+:: TestLab
 <<BlankSpeaker>>
-<<AddParagraph "A set of text with no speaker">>
-
-<<SetSpeaker "A nobody">>
-<<AddParagraph "hey! Why am I described like that?">>
-
-<<AddOption "Tell the stranger to shut up." "Intro2">>
-
-:: Intro2
-
-<<SetSpeaker "A nobody">>
-<<AddParagraph "Okay...">>
-
-
-
-
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Mmh... That's a pretty mirror.">>
+<<BlankSpeaker>>
+<<AddParagraph "//Suddenly, the image blurs.//">>
+<<SetSpeaker "Mirror">>
+<<Foresight "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "FUCK!">>

@@ -168,3 +168,53 @@ a.macro-linkreplace {
   60% {opacity: 1; left: 50%}
   100% {opacity: 0; left: 80%}
 }
+
+/* Custom to C&N */
+
+:root {
+  --foresight-color: #6cc6ce;
+}
+
+.foresight {
+  color: var(--foresight-color);
+  text-shadow: 0px 0px 10px var(--foresight-color);
+  filter: blur(10px) brightness(0);
+  animation: flicker 1.8s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes flicker {
+  0% {
+    filter:  brightness(0);
+  }
+  3% {
+    filter:  brightness(0);
+  }
+  6% {
+    filter:  brightness(1);
+  }
+  7% {
+    filter:  brightness(1);
+  }
+  8% {
+    filter:  brightness(0);
+  }
+  9% {
+    filter:  brightness(1);
+  }
+  10% {
+    filter:  brightness(0);
+  }
+  20% {
+    filter:  brightness(1);
+  }
+  50% {
+    filter:  brightness(1);
+  }
+  /*99% {
+    filter:  brightness(0);
+  }*/
+  100% {
+    filter:  brightness(1);
+  }
+}

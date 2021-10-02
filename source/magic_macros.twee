@@ -1,0 +1,7 @@
+:: Foresight [Widget widget]
+<<nobr>>
+<<widget "Foresight">>
+<<set _scene_text to ("@@.foresight;"+$args[0]+"@@")>>
+<<AddParagraph _scene_text >>
+<</widget>>
+<</nobr>>
