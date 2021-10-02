@@ -14,6 +14,11 @@
 <<AddParagraph "The room is small. After consideration, small is a nice way to describe the tiny cubicle.">>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
+<< set $interview_left to false >>
+<< set $interview_right to false >>
+<< set $interview_wall to false >>
+
+
 <<AddOption "Inspect left" "Left">>
 <<AddOption "Inspect right" "Right">>
 <<AddOption "Inspect the wall" "Wall">>
@@ -21,6 +26,7 @@
 
 :: Left
 <<BlankSpeaker>>
+<< set $interview_left to true >>
 <<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
 
 <<BlankSpeaker>>
@@ -36,11 +42,20 @@
 <<SetSpeaker "Leathery Voice">>
 <<AddParagraph "//sigh//">>
 
-<<AddOption "Inspect right" "Right">>
-<<AddOption "Inspect the wall" "Wall">>
+<<if $interview_right is false >>
+  <<AddOption "Inspect right" "Right">>
+<</if>>
+<<if $interview_wall is false >>
+  <<AddOption "Inspect the wall" "Wall">>
+<</if>>
+
+<< if $interview_right is true && $interview_left is true && $interview_wall is true >>
+  <<AddOption "Turn back to the two detectives" "Interview">
+<</if>>
 
 
 :: Right
+<< set $interview_right to true >>
 <<BlankSpeaker>>
 <<AddParagraph "The duo is elbowing their way around. They eventually manage to place a stool on the other side of the table facing the couch.">>
 
@@ -56,13 +71,20 @@
 <<BlankSpeaker>>
 <<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
-<<AddOption "Inspect left" "Left">>
-<<AddOption "Inspect the wall" "Wall">>
+<<if $interview_left is false >>
+  <<AddOption "Inspect left" "Left">>
+<</if>>
+<<if $interview_wall is false >>
+  <<AddOption "Inspect the wall" "Wall">>
+<</if>>
 
+<< if $interview_right is true && $interview_left is true && $interview_wall is true >>
+  <<AddOption "Turn back to the two detectives" "Interview">
+<</if>>
 
 :: Wall
 <<BlankSpeaker>>
-<<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.">> 
+<<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Pleasen refrain from touching the board, it's quite-">>
@@ -75,14 +97,21 @@
 
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet.">>
 
-<<AddOption "Inspect left" "Left">>
-<<AddOption "Inspect right" "Right">>
-/* variable : inspectedOffice : true when all three areas have be */
+<<if $interview_left is false >>
+  <<AddOption "Inspect left" "Left">>
+<</if>>
+<<if $interview_right is false >>
+  <<AddOption "Inspect Right" "Right">>
+<</if>>
+
+<< if $interview_right is true && $interview_left is true && $interview_wall is true >>
+  <<AddOption "Turn back to the two detectives" "Interview">
+<</if>>
 
 
 :: Interview
 <<BlankSpeaker>>
-<<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">> 
+<<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Have a sit. Would you like a drink?">>
@@ -97,7 +126,7 @@
 <<AddParagraph "-tea. But coffee would be great too, I guess.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom stands up and make their way to the sink. They hum as they prepare two cups of coffee.">> 
+<<AddParagraph "Nomnom stands up and make their way to the sink. They hum as they prepare two cups of coffee.">>
 <<AddParagraph "They bring a cup over, placing it on the table.">>
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
@@ -148,7 +177,7 @@
 <<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "They look at each other in confusion for a second.">> 
+<<AddParagraph "They look at each other in confusion for a second.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I meant the Laws of Magic.">>
@@ -171,7 +200,7 @@
 <<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé and Nomnom nod enthusiastically.">> 
+<<AddParagraph "Cannelé and Nomnom nod enthusiastically.">>
 
 <<AddParagraph "Rule #3 : Magic can only be channeled thanks to a physical medium. Living beings cannot serve as mediums.">>
 
@@ -179,7 +208,7 @@
 <<AddParagraph "AH! See, I was rig-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé suddenly elbows Nomnom in the stomach and they keels over in pain. Cannelé's smile is so stiff it looks almost menacing.">> 
+<<AddParagraph "Cannelé suddenly elbows Nomnom in the stomach and they keels over in pain. Cannelé's smile is so stiff it looks almost menacing.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Excellent! And do you know what your own gift is- ''yelp''">>
@@ -312,12 +341,12 @@
 <<BlankSpeaker>>
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
 
-<<AddOption "//Am I really... leaving my fate in the hands of those two??//" "Contract3">>
-<<AddOption "//But somehow... I feel like they might be trustworthy...//" "Contract3">>
+<<AddOption "//Am I really... leaving my fate in the hands of those two??//" "Contract2">>
+<<AddOption "//But somehow... I feel like they might be trustworthy...//" "Contract2">>
 
 
 
-:: Contract1
+:: Contract2
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 1: I do not take any responsability on what this goof right here might do">>
 
