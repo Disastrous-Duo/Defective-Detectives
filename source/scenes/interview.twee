@@ -25,8 +25,8 @@
 
 
 :: Left
-<<BlankSpeaker>>
 <<set $interview_left to true>>
+<<BlankSpeaker>>
 <<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
 
 <<BlankSpeaker>>
@@ -35,8 +35,9 @@
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "MY TOE">>
+<<AddParagraph "MY TOE!">>
 
+<<BlankSpeaker>>
 <<AddParagraph "Among the rubbish cluttering it lay blankets, newspapers and a half-eaten croissant.">>
 
 <<SetSpeaker "Leathery Voice">>
@@ -83,14 +84,15 @@
 <</if>>
 
 :: Wall
+<<set $interview_wall to true>>
 <<BlankSpeaker>>
 <<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes hangs on the wall.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Pleasen refrain from touching the board, it's quite-">>
+<<AddParagraph "Please refrain from touching the board, it's quite-">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware">>
+<<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "''WHAM''">>
@@ -159,7 +161,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>
-<<AddParagraph "-----The client's looks old, around 25 years old-----">>
+<<AddParagraph "-----The client's looks old, around 25 years old">>
 
 
 <<SetSpeaker "???">>
@@ -182,7 +184,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Yeah ? Give me the Laws Rules of Magic then.">>
-<<AddParagraph "----- He looks confident in his knowledge, remembers basic cultural elements -----">>
+<<Precog "He looks confident in his knowledge, remembers basic cultural elements ">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
@@ -269,13 +271,13 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're such a loser.">>
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
+<<AddParagraph "His coat has suspicious stains on it? @@.precog;<span class='Precog' data-value='Is it food?'></span>@@">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yes? What happened to your wallet?">>
-<<AddParagraph "----- His coat has suspicious stains on it? Is it food ? -----">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "A cat stole it... and sneaked away.">>
@@ -294,7 +296,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So, a cat stole the only lead you had about your identity, I see.">>
-<<AddParagraph "----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----">>
+<<AddParagraph "On his coat are embroidered the initials Y. M. @@.precog;<span class='PrecogRandom' data-value='They were sewn by hand, must be his own.'></span>@@">>
 
 
 <<if $interview_identity is false>>
@@ -314,7 +316,7 @@
 <<set $interview_coffee to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph "The coffee... is very special here">>
+<<AddParagraph "The coffee... is very special here.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's expression freezes as they try to maintain a polite smile.">>
@@ -326,7 +328,7 @@
 <<AddParagraph "//gulps//">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Can I offer you a pstry to go with this ''delicious'' cup of coffee? They're fresh from yesterday.">>
+<<AddParagraph "Can I offer you a pastry to go with this ''delicious'' cup of coffee? They're fresh from yesterday.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh! Is Yesterday a bakery-">>
@@ -395,7 +397,7 @@
 <<AddParagraph "I sincerely despire you so much">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "----- His clothes seem to be good quality, he is clean shaven and look like he has a job, or at least a reasonable source of income -----">>
+<<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>

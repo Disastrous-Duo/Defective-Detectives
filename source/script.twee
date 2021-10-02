@@ -51,7 +51,7 @@ window.randomStr = function(length)
 {
   for(var s=''; s.length < length;)
 	{
-		s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.charAt(Math.random()*62|0);
+		s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*'.charAt(Math.random()*62|0);
 	}
   return s;
 }
