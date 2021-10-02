@@ -1,5 +1,5 @@
 :: StoryTitle
-YourStoryTitleHere
+C&N -- DD
 
 
 :: StoryData
@@ -11,26 +11,49 @@ YourStoryTitleHere
 	"zoom": 0.6
 }
 
+:: StoryAuthor {"position":"268,439","size":"100,100"}
+Original story by [Your Name Goes Here]
+Twine framework by Pikalex88
+
+
+:: StorySubtitle {"position":"392,432","size":"100,100"}
+A Disco Elysium Fanwork
+
+
+:: StoryShare {"position":"526,432","size":"100,100"}
+[["@ampepers on Twitter"|https://twitter.com/ampepers]]
+[["Repo with the source code"|https://github.com/apepers/DiscoElysiumTwineMacros/]]
 
 :: StoryInit {"position":"268,25","size":"100,100"}
 <<set $optionmap to new Map()>>
-<<set $motorics to ["composure", "hand/eye coordination", "interfacing", "reaction speed", "savoir faire", "perception", "perception (smell)", "perception (sight)", "perception (taste)", "perception (touch)", "perception (hearing)"]>>
-<<set $intellect to ["conceptualization", "drama", "encyclopedia", "logic", "rhetoric", "visual calculus"]>>
-<<set $fysique to ["electrochemistry", "endurance", "half light", "pain threshold", "physical instrument", "shivers"]>>
-<<set $psyche to ["authority", "empathy", "esprit de corps", "inland empire", "suggestion", "volition"]>>
-<<set $greentext to []>>
+<<set $yellow_speaker to [""]>>
+<<set $blue_speaker to ["nomnom"]>>
+<<set $red_speaker to ["cannelé"]>>
+<<set $purple_speaker to [""]>>
+<<set $greentext to [""]>>
 <<set $paraAppendMode to false>>
 
+::@include script.twee
+::@include stylesheet.twee
+::@include disco_elysium_macros.twee
 
 :: Intro [nobr] {"position":"1100,50","size":"100,100"}
+
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "God, Cannelé. Just WHERE the fuck are we?!">>
+<<AddParagraph "My name's in blue!">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "«God, Cannelé» -- yep, that's me.">>
+<<AddParagraph "Mine's prettier!">>
 
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "God, Cannelé. Just WHERE the fuck are we?!">>
+<<BlankSpeaker>>
+<<AddParagraph "A set of text with no speaker">>
 
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Wow, okay. Thanks Magic, I will not say that, then.">>
+<<SetSpeaker "A nobody">>
+<<AddParagraph "hey! Why am I described like that?">>
+
+<<AddOption "Tell the stranger to shut up." "Intro2">>
+
+:: Intro2
+
+<<SetSpeaker "A nobody">>
+<<AddParagraph "Okay...">>
