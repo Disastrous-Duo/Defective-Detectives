@@ -104,4 +104,12 @@
 <<AddParagraph "You're just saying that something happened at the docks that would make the //entire// port come to a halt, preventing the dock workers to unload the ships' wares late at night, putting every meal deliverers out of job?" >>
 
 <<SetSpeaker "Nomnom" >>
-<<AddParagraph "Hey, stop doing the sassy smartass bit!" >>
+<<AddParagraph "Hey, drop the sassy smartass act!" >>
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph "What are you ..." >>
+
+/*Goes into immature territory*/
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I know which..." >>
