@@ -149,7 +149,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//Uncomfortable pause//">>
 
-<<AddParagraph "//It's a young lady who has opened the door. Behind them, a curious man sprawled on the floor.//">>
+<<AddParagraph "//It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor.//">>
 
 <<SetSpeaker "?">>
 <<AddParagraph "Welcome to my detective agency, how can I help?">>
@@ -163,4 +163,8 @@
 <<SetSpeaker "???">>
 <<AddParagraph "That's an excellent question... Who am I?">>
 
-<<AddOption "..." "Interview">>
+<<AddOption "..." "Office">>
+
+/* Title Screen */
+/* Cannelé & Nomnom - Defective Detective */
+/* Pilot */
