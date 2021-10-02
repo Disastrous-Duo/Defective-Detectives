@@ -7,7 +7,7 @@ C&N -- DD
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "Intro",
+	"start": "Falaisant",
 	"zoom": 0.6
 }
 
@@ -57,3 +57,86 @@ A Disco Elysium Fanwork
 
 <<SetSpeaker "A nobody">>
 <<AddParagraph "Okay...">>
+
+
+:: Falaisant /*Introduciton*/
+<<BlankSpeaker>>
+<<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
+
+<<AddOption "A drop of water flies over Falaisant" "Falaisant2">>
+
+
+:: Falaisant2 
+<<BlankSpeaker>>
+<<AddParagraph "//At the heart of the city, high towers dominate the skyline. White rock and marble glint under the first rays of the sun, reflecting the water flowing underneath.//">>
+
+<<AddOption "The drop rolls down the tower" "Falaisant3">>
+
+
+:: Falaisant3 
+<<BlankSpeaker>>
+<<AddParagraph "//Wide boulevards, lined with various trees and colourful bouquets, shoot out from the central plaza, drawing a huge star on the city’s layout.//">>
+
+<<AddOption "It continues its course on to the first boulevard" "Falaisant4">>
+
+
+:: Falaisant4
+<<BlankSpeaker>>
+<<AddParagraph "//The boulevards spread far, far until they turn into smaller streets.//">>
+
+<<AddOption "It continues its course on to the first boulevard" "Falaisant5">>
+
+
+:: Falaisant5
+<<BlankSpeaker>>
+<<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges that jump over streams and connect the multiple layers of passageways, roads and gates.//">>
+
+<<AddOption "The drop falls from a hole in the metallic hedge of a bridge" "Falaisant6">>
+
+
+:: Falaisant6
+<<BlankSpeaker>>
+<<AddParagraph "//Plic.//">>
+
+<<AddParagraph "//Ploc.//">>
+
+<<AddOption "Lower, Lower" "Falaisant7">>
+
+
+:: Falaisant7
+<<BlankSpeaker>>
+<<AddParagraph "//Fog, thick and permanent, haunts streets that have gotten so cramped they are suffocating.//">>
+
+<<AddOption "The drop runs down darker and darker pathways" "Falaisant8">>
+
+
+:: Falaisant8
+<<BlankSpeaker>>
+<<AddParagraph "//No light nor sound seem to reach this place : everything is frozen into an eerie silence.//">>
+<<AddParagraph "//There, unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "//The atmosphere is heavy, disquieting.//">>
+
+
+<<AddOption "The atmosphere is heavy, disquieting" "Falaisant9">>
+
+
+:: Falaisant9
+<<BlankSpeaker>>
+<<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
+<<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
+
+<<AddOption "The  drop looms over the edge of the roof before falling on the shadowed figure" "Falaisant10">>
+
+
+:: Falaisant10
+<<SetSpeaker - "Mysterious Individual">>
+<<AddParagraph "''yelps loudly''">>
+
+<<BlankSpeaker>>
+<<AddParagraph "9:37am - 288 Harmony Street, Falaisant">>
+
+<<AddOption "Knock" "Expo1">>
+<<AddOption "Wait" "Expo1">>
+
