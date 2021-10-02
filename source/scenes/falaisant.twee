@@ -1,4 +1,4 @@
-/* Falaisant */
+/* Falaisant : Introduction of the city */
 :: Falaisant
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
@@ -81,5 +81,83 @@
 <<AddParagraph "''BANG''">>
 
 
-<<AddOption "Knock" "Expo1">>
-<<AddOption "Wait" "Expo1">>
+<<AddOption "Knock" "Expo">>
+<<AddOption "Wait" "Expo">>
+
+/* Meeting */
+:: Expo
+<<SetSpeaker "Shrill Voice">>
+<<AddParagraph "I HEARD SOMETHING IT MIGHT BE-">>
+
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "WILL YOU SHUT UP">>
+
+<<SetSpeaker "Shrill Voice">>
+<<AddParagraph "NO YOU SHUT UP">>
+
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "I SAID IT FIRST SO SHUT UP SHUT UP">>
+
+<<AddOption "Knock" "Expo_Knock">>
+<<AddOption "Wait" "Expo_Wait1">>
+
+:: Expo_Wait1
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "SHUT UP">>
+
+<<SetSpeaker "Shrill Voice">>
+<<AddParagraph "NO YOU SHUT UP">>
+
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "NO, NO YOU SHUT UP">>
+
+<<AddOption "Knock" "Expo_Knock">>
+<<AddOption "Wait" "Expo_Wait2">>
+
+:: Expo_Wait2
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "HAHAHAHAHAHAHA I CAN'T HEAR YOU">>
+
+<<SetSpeaker "Shrill Voice">>
+<<AddParagraph "WILL YOU EVER SHUT. UP.">>
+
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "ILL SHUT UP WHEN YOU STOP BEING ANNOYING.">>
+
+<<AddOption "Knock" "Expo_Knock">>
+<<AddOption "Wait" "Expo_Knock">>
+
+
+:: Expo_Knock
+<<SetSpeaker "Shrill Voice">>
+<<AddParagraph "SHUT UP SHUT UP SHUT UP">>
+
+<<SetSpeaker "Somehow Shriller Voice">>
+<<AddParagraph "AAAAAAAGH ! SHUT UP OR I SWEAR I WILL MURDER-">>
+
+<<BlankSpeaker>>
+<<AddParagraph "''BANG''">>
+<<AddParagraph "//The door violently slams open//">>
+
+<<AddOption "OUCH" "Expo_Meeting1">>
+
+
+:: Expo_Meeting1
+<<BlankSpeaker>>
+<<AddParagraph "//Uncomfortable pause//">>
+
+<<AddParagraph "//It's a young lady who has opened the door. From behind her, you can see a curious man sprawled on the floor.//">>
+
+<<SetSpeaker "?">>
+<<AddParagraph "Welcome to my detective agency, how can I help?">>
+
+<<SetSpeaker "??">>
+<<AddParagraph "Welcome to MY agency, who is this?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "//The two individuals glare at each other, and they seem like they're about to start arguing again.//">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "That's an excellent question.">>
+
+<<AddOption "..." "Interview">>
