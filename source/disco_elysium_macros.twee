@@ -68,6 +68,10 @@ _skillname +
 <<set $currentspeaker to ("@@.purple_speaker.speaker;" +
 _skillname +
 "@@")>>
+<<elseif $leather_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.leather_speaker.speaker;" +
+_skillname +
+"@@")>>
 <</if>>
 <<if _skillresult>>
 <<set $currentspeaker += _skillresult>>
