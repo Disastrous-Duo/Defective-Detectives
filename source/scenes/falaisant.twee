@@ -72,7 +72,7 @@
 
 :: Falaisant10 [nobr]
 <<SetSpeaker "Mysterious Individual">>
-<<AddParagraph "''yelps loudly''">>
+<<AddParagraph "''*yelps loudly*''">>
 
 <<BlankSpeaker>>
 <<AddParagraph "9:37am - 288 Harmony Street, Falaisant">>
@@ -163,7 +163,7 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's...">>
-<<AddParagraph "That's an excellent question...">>
+<<AddParagraph "... An excellent question.">>
 <<AddParagraph "Who am I?">>
 
 

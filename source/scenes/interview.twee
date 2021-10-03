@@ -11,7 +11,8 @@
 <<AddParagraph "Nomnom. The only real detective here.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The room is small. After consideration, small is a nice way to describe the tiny cubicle.">>
+<<AddParagraph "The room is small.">>
+<<AddParagraph "After consideration, small is a nice way to describe the tiny cubicle.">>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
 <<set $interview_left to false>>
@@ -38,7 +39,7 @@
 <<AddParagraph "MY TOE!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Among the rubbish cluttering it emerge a couple blankets, newspapers and a half-eaten croissant.">>
+<<AddParagraph "From the rubbish cluttering it, emerge a couple blankets, newspapers and a half-eaten croissant.">>
 
 <<SetSpeaker "Leathery Voice">>
 <<AddParagraph "//sigh//">>
@@ -91,7 +92,8 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Please refrain from touching the board, it's quite-">>
 
-<<AddParagraph "A portion of the board is hidden under a dirty, white sheet.">>
+<<BlankSpeaker>>
+<<AddParagraph "A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
@@ -126,7 +128,7 @@
 <<AddParagraph "Excellent! I make the best coffee around the block.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "-tea. But coffee would be great too, I guess.">>
+<<AddParagraph "tea. But coffee would be great too, I guess.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom stands up and make their way to the sink. They hum as they prepare two cups of coffee.">>
@@ -322,7 +324,7 @@
 <<AddParagraph "Is there any issue with the way I make coffee ?">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//*gulps*//">>
+<<AddParagraph "''*gulps*''">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Can I offer you a pastry to go with this ''delicious'' cup of coffee? They're fresh from yesterday.">>
@@ -338,7 +340,7 @@
 <<AddParagraph "Y-yes please.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom fishes in the mess of the couch and fishes a miracuously untouched muffin. They look at it longingly before handing it over.">>
+<<AddParagraph "Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin. The Dectective looks at it longingly before handing it over.">>
 
 <<if $interview_identity is false>>
 <<AddOption "Who am I ?" "Event">>
@@ -393,7 +395,7 @@
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
 <<AddParagraph "Who are you?">>
 <<AddParagraph "What's your gift?">>
-<<AddParagraph "And what happened to you.">>
+<<AddParagraph "And what happened to you?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
@@ -403,7 +405,7 @@
 <<AddParagraph "I sincerely despise you so much.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='1' data-value='He looks like he has the means to take care of his appearance. <span class='Precog' data-speed='4' data-random='0' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
+<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='0' data-value='He looks like he has the means to take care of his appearance.'> </span> <span class='Precog' data-speed='3' data-random='0' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
@@ -411,7 +413,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 3: In addition to the payment, you will treat us to a meal once the case is closed.">>
-<<AddParagraph "Any Questions? No? Perfect!">>
+<<AddParagraph "Any Questions?">>
 <<AddParagraph "No?">>
 <<AddParagraph "Perfect!">>
 
