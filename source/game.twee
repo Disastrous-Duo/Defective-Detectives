@@ -33,6 +33,7 @@ A Disco Elysium Fanwork
 <<set $leather_speaker to ["leathery voice", "couch"]>>
 <<set $greentext to [""]>>
 <<set $paraAppendMode to false>>
+<<set $client_name to "Yasyas">>
 
 ::@include script.twee
 ::@include stylesheet.twee

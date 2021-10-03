@@ -1,6 +1,5 @@
 :: market_Tails [nobr]
 <<set $market_path to "right">>
-<<set $client_name to "yasyas">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Five point for Nomnom//">>
 /* #score */
