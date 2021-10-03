@@ -2,7 +2,7 @@
 
 This README won't help you.
 
-This would be contrary to the concept of the game itself.
+This would be go against to the concept of the game itself.
 
 Good luck.
 
