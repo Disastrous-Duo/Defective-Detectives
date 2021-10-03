@@ -219,14 +219,14 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé rolls their eyes.">>
 
-<<BlankSpeaker>>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "The Hoboolean Coin is a sham!!">>
-<<AddParagraph "This entire worl is against me.">>
+<<AddParagraph "This entire world is against me.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Quit your whining and just enjoy the walk">>
 
-<<BlankSpeaker>>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "Yeah, I'll enjoy ''RUINING YOUR GODDAMN LIFE''">>
 
 <<SetSpeaker $client_name>>
@@ -237,8 +237,8 @@
 <<AddParagraph "Cannelé and Nomnom keep arguing until they reach the extremity of the plaza.">>
 <<AddParagraph "In the centre of the area, a big fountain is adorned with statues">>
 <<AddParagraph "A marble plate states the name of the place">>
-<<AddParagraph "Harry Youlost Plaza">>
-<<AddParagraph "Two streets, one continuing straight ahead and the other veering left.">>
+<<AddParagraph "''Harry Youlost Plaza''">>
+<<AddParagraph "Two streets emerge from the plaza: one going straight ahead and the other veering left.">>
 
 <<AddParagraph "The two detectives turn around, expectantly.">>
 
@@ -283,7 +283,7 @@
 <<SetSpeaker $client_name>>
 <<AddParagraph "Ok, I will just flip this one myself or this is never going to end.">>
 <<AddParagraph "Both of you, tell me a number.">>
-<<AddParagraph "//The lowest number gets Face//.">>
+<<AddParagraph "//The lowest number gets Faces.//">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "753">>
@@ -312,8 +312,8 @@
 <<AddParagraph "It danses around, flicking between the fancy T and F before falling down.">>
 
 
-<<AddOption "Faces" "market_Faces1">>
-<<AddOption "Tails" "market_Tails1">>
+<<AddOption "Faces" "market_Faces">>
+<<AddOption "Tails" "market_Tails">>
 
 
 :: market_Faces [nobr]
@@ -344,7 +344,7 @@
 <<AddOption "Tails" "market_CrossN1">>
 
 
-:: market_Faces [nobr]
+:: market_Tails [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The Hoboolean coin lands on Tails.">>
 
