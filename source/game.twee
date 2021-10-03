@@ -7,7 +7,7 @@ C&N -- DD
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "market_LeftPath",
+	"start": "market_PoliceOfficer",
 	"zoom": 0.6
 }
 
@@ -41,3 +41,4 @@ A Disco Elysium Fanwork
 ::@include scenes/falaisant.twee
 ::@include scenes/interview.twee
 ::@include scenes/direction_duel.twee
+::@include scenes/market.twee
