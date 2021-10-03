@@ -36,7 +36,6 @@
 <<AddOption "Is this really mag-" "market_Hobo">>
 
 :: market_Hobo [nobr]
-<<set $client_name to "yasyas">>
 <<SetSpeaker "Hobo">>
 <<AddParagraph "//*wink*//">>
 
