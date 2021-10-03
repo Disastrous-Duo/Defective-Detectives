@@ -78,7 +78,7 @@
 <<AddParagraph "9:37am - 288 Harmony Street, Falaisant">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''BANG''">>
+<<AddParagraph "''*BANG*''">>
 
 
 <<AddOption "Knock" "Expo">>
@@ -140,10 +140,10 @@
 <<AddParagraph "AAAAAAAGH ! SHUT UP OR I SWEAR I WILL MURDER-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''BANG''">>
+<<AddParagraph "''*BAM*''">>
 <<AddParagraph "//The door violently slams open//">>
 
-<<AddOption "OUCH" "Expo_Meeting1">>
+<<AddOption "''*OUCH*''" "Expo_Meeting1">>
 
 
 :: Expo_Meeting1 [nobr]

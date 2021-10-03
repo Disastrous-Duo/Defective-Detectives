@@ -31,7 +31,7 @@
 <<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''BANG''">>
+<<AddParagraph "''*BANG*''">>
 
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
 
@@ -99,7 +99,7 @@
 <<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''WHAM''">>
+<<AddParagraph "''*WHAM*''">>
 
 
 <<if $interview_left is false>>
@@ -399,7 +399,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
-<<AddParagraph "Clause 1: I do not take any responsability on what this maniac right here might do.">>
+<<AddParagraph "Clause 1: I do not take any responsability on whatever this maniac right here might do.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
