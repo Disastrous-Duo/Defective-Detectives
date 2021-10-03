@@ -133,8 +133,8 @@
 
 
 
-:: market_PoliceOfficer
-
+:: market_PoliceOfficer [nobr]
+<<set $client_name to "Muffin">> /*Nananana*/
 <<SetSpeaker $client_name>>
 <<AddParagraph "That's the officer! The one I talked to this morning!">>
 
@@ -297,7 +297,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Good day everyone, what's on the table today?">>
-
+/*Todo: "...money?"*/
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé takes a seat. The gesture is natural, practiced.">>
 
@@ -530,10 +530,10 @@
 <<SetSpeaker "Police Officers">>
 <<AddParagraph ".... Fleurs d'Ame... Marché....">>
 
-<<AddOption "Go closer" "market_Police2">>
+<<AddOption "Go closer" "market_Police1">>
 
 
-:: market_Police
+:: market_Police1
 <<set $market_police to true>>
 
 <<BlankSpeaker>>
@@ -663,6 +663,7 @@
 
 <<SetSpeaker "Richie">>
 <<AddParagraph "Did you find any info on the Fleur d'Ames??">>
+/*Flurries?  The Âmoc-Havoc? .. THE FLEUR d'ÂMES*/
 <<AddParagraph "The market's been in shambles since yesterday. Me and my friends are getting desperate there..">>
 <<AddParagraph "So? Did you manage to get any? Care to share with a new pal?">>
 
