@@ -989,11 +989,11 @@
 :: market_Addict [nobr]
 
 <<BlankSpeaker>>
-<<AddParagraph "An hour afterr splitting up, everyone meets at the entrance of the market.">>
-<<AddParagraph "The three of them are sat at a wobbling table, outside a small bistrot.">>
+<<AddParagraph "An hour after splitting up, everyone meets at the entrance of the market.">>
+<<AddParagraph "The three of them are sitting at a wobbling table, outside a small bistrot.">>
 
 <<SetSpeaker "Waiter">>
-<<AddParagraph "What can I bring you?">>
+<<AddParagraph "What can I get you?">>
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "I'll have a cup of t-">>
