@@ -154,10 +154,11 @@
 :: Identity [nobr]
 <<set $interview_identity to true>>
 
+<<BlankSpeaker>>
+<<AddParagraph  "@@.precog_color;The client looks old, <span class='Precog' data-speed='3' data-random='1' data-value='around 25 years old.'></span>@@" >>
+
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>
-<<AddParagraph "-----The client's looks old, around 25 years old">>
-
 
 <<SetSpeaker "???">>
 <<AddParagraph "I can't remember anything. It's all... foggy in my mind. Like it's all there but I can't //remember//.">>
@@ -267,8 +268,9 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're such a loser.">>
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
+
 <<BlankSpeaker>>
-<<AddParagraph "@@.precog_color;His coat has suspicious stains on it? <span class='Precog' data-speed='4' data-value='Is it food?'></span>@@">>
+<<AddParagraph "@@.precog_color;His coat has suspicious stains on it. <span class='Precog' data-speed='4' data-value='Is it food?'></span>@@">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -386,14 +388,22 @@
 
 
 :: Contract2 [nobr]
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Clause 1: I do not take any responsability on what this goof right here might do">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "I sincerely despise you so much">>
+<<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
+<<AddParagraph "Who are you?">>
+<<AddParagraph "What's your gift?">>
+<<AddParagraph "And what happened to you.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "His clothes seem to be good quality, he is clean shaven and @@.precog_color;<span class='Precog' data-value='looks like he has a job, or at least a reasonable source of income.'></span>@@">>
+<<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
+<<AddParagraph "Clause 1: I do not take any responsability on what this maniac right here might do.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I sincerely despise you so much.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='1' data-value='He looks like he has the means to take care of his appearance. <span class='Precog' data-speed='4' data-random='0' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
@@ -401,7 +411,9 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 3: In addition to the payment, you will treat us to a meal once the case is closed.">>
-<<AddParagraph "Any Questions? No? Perfect!.">>
+<<AddParagraph "Any Questions? No? Perfect!">>
+<<AddParagraph "No?">>
+<<AddParagraph "Perfect!">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé signs the contract.">>
@@ -410,14 +422,16 @@
 <<AddParagraph "Seems fair to me.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom signs the contract.">>
+<<AddParagraph "Nomnom shrugs and signs the contract.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Now we just need something to call you.">>
-<<AddParagraph "----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----">>
+
+<<BlankSpeaker>>
+<<AddParagraph  "@@.precog_color;On his coat are embroidered the initials Y. M. <span class='Precog' data-speed='2' data-random='1' data-value='They were sewn by hand, '></span> <span class='Precog' data-speed='4' data-random='1' data-value='must be his own.'></span>@@" >>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Any name? Or alias?">>
+<<AddParagraph "Any name? Or an alias?">>
 
 
 <<AddOption "//A heavy tension suddenly fills the room//" "Naming">>
@@ -450,10 +464,16 @@
 <<AddParagraph "More terrifying than the dark alleys, more terrifying than the tiny, messy office.">>
 <<AddParagraph "Perhaps even more terrifying than the memory loss itself...">>
 
-<<AddOption "... ..." "Naming1">>
+<<AddOption "You feel an urge to drink coffee" "Naming1">>
 
 
 :: Naming1 [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "''*COUGH*''">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The now empty cup on the table shakes as Cannelé violently slams their fist on the table.">>
+
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SHUT UP! It has to be Yasyas">>
 
