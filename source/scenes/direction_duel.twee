@@ -22,19 +22,20 @@
 
 
 ::Investigation1 [nobr]
-<h2>Chapter 1 - The Hoboolean Coin</h2> /*#type*/
+<h2>Chapter 1 - The Hoboolean Coin</h2><br/> /*#type*/
 
 <<BlankSpeaker>>
-<<AddParagraph "The door closes behind the two detectives and their slightly reluctant client. The group leaves Harmony Street and makes its way into the fog-clenched neighbourhood.">>
+<<AddParagraph "The door closes behind the two detectives and their slightly reluctant client. The group leaves Harmony Street, and makes its way into the fog-clenched neighbourhood.">>
 
 <<SetSpeaker "Cannelé" >>
 <<AddParagraph "Alright then. The game is afoot, as they say!">>
 
 <<SetSpeaker "Nomnom" >>
-<<AddParagraph "Uh? Why would they say that?">>
+<<AddParagraph "...Uh? Why would they say that?">>
 
-<<SetSpeaker "Cannelé" >>
-<<AddParagraph "//The young lady chooses to conveniently ignore that question, and turn her attention to the third party member.//">>
+<<BlankSpeaker>>
+<<AddParagraph "//The young lady chooses to conveniently ignore that question, and turn their attention to the third party member.//">>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "The first step, dear client, is to retrace yours.">>
 
 <<SetSpeaker "Nomnom" >>
@@ -47,7 +48,7 @@
 <<AddParagraph "^^Is it because you can be //''ahead''// of it?^^">>
 
 <<SetSpeaker "Cannelé" >>
-<<AddParagraph "And we'll do it in no time! -- All because you were lucky enough to hire the best detective agency of this town.">>
+<<AddParagraph "And we'll do it in no time! -- All because you were lucky enough to hire the //best// detective agency in this side of the city.">>
 
 <<SetSpeaker "Nomnom" >>
 <<AddParagraph "I got it! It's because you can //boot// a game!">>
@@ -56,8 +57,13 @@
 <<AddParagraph "...Please ignore them." >>
 
 <<AddOption "Ignore Nomnom." "Investigation1_2">>
-<<AddOption "Flash them a furtive smile" "Investigation1_2">>
+<<AddOption "Flash them a furtive smile" "Investigation1_smile">>
 
+::Investigation1_smile [nobr]
+<<SetSpeaker "Far away voice">>
+<<AddParagraph "One point for Nomnom.">>
+/*Point*/
+<<AddOption "Turn your head again" "Investigation1_2">>
 
 ::Investigation1_2 [nobr]
 <<BlankSpeaker>>
@@ -65,7 +71,9 @@
 
 <<SetSpeaker "Cannelé" >>
 <<AddParagraph "So. We simply have to take the path you most likely took when you came to us." >>
-<<AddParagraph "//They pause to study each alley, then pick the one to their right.//" >>
+<<BlankSpeaker>>
+<<AddParagraph "//Cannelé pause to study each alley, then pick the one to their right.//" >>
+<<SetSpeaker "Cannelé" >>
 <<AddParagraph "Let's go this way." >>
 
 <<SetSpeaker $client_name >>
@@ -101,18 +109,73 @@
 <<AddParagraph "//Cannelé grins.//">>
 
 <<SetSpeaker "Cannelé" >>
-<<AddParagraph "You're just saying that something happened at the docks that would make the //entire// port come to a halt, preventing the dock workers to unload the ships' wares late at night, putting every meal deliverers out of job?" >>
+<<AddParagraph "You're just saying that something happened at the docks that would make the //entire// port come to a halt...">>
+<<AddParagraph "...preventing the dock workers to unload the ships' wares late at night..."">>
+<<AddParagraph "...putting every meal deliverers out of job..."">>
+<<set _temp_text to ("...and make this street safe to travel for "+$client_name+" here?") >>
+<<AddParagraph _temp_text>>
 
 <<SetSpeaker "Nomnom" >>
 <<AddParagraph "Hey, drop the sassy smartass act!" >>
 
 <<SetSpeaker "Cannelé" >>
-<<AddParagraph "What are you ..." >>
+<<AddParagraph "Or what? You're going to use your grey cells against me?" >>
 
-/*Goes into immature territory*/
+<<AddOption "I know which way I..." "Investigation1_3" >>
+
+::Investigation1_3 [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "To their client's demise, the two detectives are arguing so loud that they can't hear him.">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "I know which..." >>
+<<AddParagraph "//This is exhausting...//">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Alright -- You know what, let's settle this." >>
+
+<<BlankSpeaker>>
+<<set _temp_text to ("Cannelé and Nomnom turn to "+$client_name+".") >>
+<<AddParagraph _temp_text>>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Ah, they're finally going to listen to m-//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "The rules are simple. We're each going to take our own path..." >>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "...and the first of us who retraces your steps wins this round." >>
+
+<<SetSpeaker "Cannelé">>
+<<set _temp_text to ($client_name+", you need to follow us closely, okay?") >>
+<<AddParagraph _temp_text>>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Wouldn't it be simpler if we-" >>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "GO!" >>
+
+<<AddOption "Please wait for m-" "DirectionDuel_1">>
+
+::DirectionDuel_1 [nobr]
+
+<<BlankSpeaker>>
+<<set _temp_text to ("The client's plaints are left unheard, as he realizes that the desastrous duo has already started it's...") >>
+<<AddParagraph _temp_text>>
+<<AddParagraph "<h2 class='duel_left'>DIRECTION</h2><br/><h2 class='duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+
+/*<<AddParagraph "If he doesn't want to lose his hirees, he must make haste and follow them." >>*/
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "If I don't want to lose his hirees, he must make haste and follow them." >>
+
+<<AddOption "Run after Nomnom" >>
+<<AddOption "Run after Cannelé" >>
+
+
+
 
 
 /*MArket: Nomnom sees a cat sneaking away with a fish. Reflections about how that's just the law of nature -- realization that

@@ -1,4 +1,4 @@
-:: TestLab
+:: Test_Foresight
 <<SetSpeaker "Nomnom">>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Mmh... That's a pretty mirror.">>
@@ -10,9 +10,17 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "FUCK!">>
 
-:: TestLab2
+:: Test_Precog
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Time to blow this thing up">>
 <<BlankSpeaker>>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph  "I think my power just gave me this @@.precog_color_color;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>
+
+:: Test_Typewriter
+<<SetSpeaker "Typewriter">>
+<<AddParagraph  "@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@" >>
+
+:: Test_Shake
+<<SetSpeaker "Yasyas">>
+<<AddParagraph  "@@.shake;Oh God, I'm@@" >>
