@@ -84,6 +84,7 @@
 <<AddOption "Knock" "Expo">>
 <<AddOption "Wait" "Expo">>
 
+
 /* Meeting */
 :: Expo [nobr]
 <<SetSpeaker "Shrill Voice">>
@@ -162,7 +163,9 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's...">>
-<<AddParagraph "That's an excellent question... Who am I?">>
+<<AddParagraph "That's an excellent question...">>
+<<AddParagraph "Who am I?">>
+
 
 <<AddOption "..." "Office">>
 
