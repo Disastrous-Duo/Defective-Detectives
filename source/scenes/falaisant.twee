@@ -72,17 +72,18 @@
 
 :: Falaisant10 [nobr]
 <<SetSpeaker "Mysterious Individual">>
-<<AddParagraph "''yelps loudly''">>
+<<AddParagraph "''*yelps loudly*''">>
 
 <<BlankSpeaker>>
 <<AddParagraph "9:37am - 288 Harmony Street, Falaisant">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''BANG''">>
+<<AddParagraph "''*BANG*''">>
 
 
 <<AddOption "Knock" "Expo">>
 <<AddOption "Wait" "Expo">>
+
 
 /* Meeting */
 :: Expo [nobr]
@@ -139,10 +140,10 @@
 <<AddParagraph "AAAAAAAGH ! SHUT UP OR I SWEAR I WILL MURDER-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''BANG''">>
+<<AddParagraph "''*BAM*''">>
 <<AddParagraph "//The door violently slams open//">>
 
-<<AddOption "OUCH" "Expo_Meeting1">>
+<<AddOption "''*OUCH*''" "Expo_Meeting1">>
 
 
 :: Expo_Meeting1 [nobr]
@@ -162,7 +163,9 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's...">>
-<<AddParagraph "That's an excellent question... Who am I?">>
+<<AddParagraph "... An excellent question.">>
+<<AddParagraph "Who am I?">>
+
 
 <<AddOption "..." "Office">>
 

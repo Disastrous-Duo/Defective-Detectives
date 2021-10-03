@@ -15,6 +15,7 @@
 <<AddParagraph "Time to blow this thing up">>
 <<BlankSpeaker>>
 <<SetSpeaker "Cannelé">>
+<<<<<<< HEAD
 <<AddParagraph  "I think my power just gave me this @@.precog_color_color;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>
 
 :: Test_Typewriter
@@ -24,3 +25,6 @@
 :: Test_Shake
 <<SetSpeaker "Yasyas">>
 <<AddParagraph  "@@.shake;Oh God, I'm@@" >>
+=======
+<<AddParagraph  "I think my power just gave me this @@.precog_color_color;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>
+>>>>>>> eb709ea32cf6fb326744d45bcff80cb67a499b0d
