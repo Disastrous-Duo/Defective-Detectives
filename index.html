@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="68" creator="Tweego" creator-version="2.1.1" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
+	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="35" creator="Tweego" creator-version="2.1.1" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -977,10 +977,11 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddOption &quot;What happened?&quot; &quot;Event&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;What&#39;s wrong with this coffee?&quot; &quot;Coffee&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Identity" tags="nobr" position="600,725" size="100,100">&lt;&lt;set $interview_identity to true&gt;&gt;
 
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.precog_color;The client looks old, &lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;around 25 years old.&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;
+
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What&#39;s your name? Occupation? Monthly salary?&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;-----The client&#39;s looks old, around 25 years old&quot;&gt;&gt;
-
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I can&#39;t remember anything. It&#39;s all... foggy in my mind. Like it&#39;s all there but I can&#39;t //remember//.&quot;&gt;&gt;
@@ -1081,8 +1082,9 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You&#39;re such a loser.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So you are looking for help to regain memory, is that right?&quot;&gt;&gt;
+
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;@@.precog_color;His coat has suspicious stains on it? &lt;span class=&#39;Precog&#39; data-speed=&#39;4&#39; data-value=&#39;Is it food?&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;@@.precog_color;His coat has suspicious stains on it. &lt;span class=&#39;Precog&#39; data-speed=&#39;4&#39; data-value=&#39;Is it food?&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;That&#39;s right! When I came to, I couldn&#39;t remember anything. The only clue I had was my wallet, but a- it&#39;s a bit embarassing...&quot;&gt;&gt;
@@ -1180,14 +1182,21 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddParagraph &quot;This statement, that should be reassuring, sounds like a threat.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;//Am I really... leaving my fate in the hands of those two??//&quot; &quot;Contract2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;//But somehow... I feel like they might be trustworthy...//&quot; &quot;Contract2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Contract2" tags="nobr" position="100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Clause 1: I do not take any responsability on what this goof right here might do&quot;&gt;&gt;
-
-&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;I sincerely despise you so much&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//But somehow... I feel like they might be trustworthy...//&quot; &quot;Contract2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Contract2" tags="nobr" position="100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;We hereby commit to finding out the answer to three questions for you:&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Who are you?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;What&#39;s your gift?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;And what happened to you.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;His clothes seem to be good quality, he is clean shaven and @@.precog_color;&lt;span class=&#39;Precog&#39; data-value=&#39;looks like he has a job, or at least a reasonable source of income.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;In exchange, the client - you - will have to respect three conditions:&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Clause 1: I do not take any responsability on what this maniac right here might do.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;I sincerely despise you so much.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.precog_color;His clothes seem to be good quality and he he is clean shaven. &lt;span class=&#39;Precog&#39; data-speed=&#39;1&#39; data-random=&#39;1&#39; data-value=&#39;He looks like he has the means to take care of his appearance. &lt;span class=&#39;Precog&#39; data-speed=&#39;4&#39; data-random=&#39;0&#39; data-value=&#39;This means it is highly likely he has a job, or at least a stable source of income.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1195,7 +1204,9 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Clause 3: In addition to the payment, you will treat us to a meal once the case is closed.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Any Questions? No? Perfect!.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Any Questions? No? Perfect!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;No?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Perfect!&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé signs the contract.&quot;&gt;&gt;
@@ -1204,14 +1215,16 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddParagraph &quot;Seems fair to me.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;Nomnom signs the contract.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom shrugs and signs the contract.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now we just need something to call you.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;----- On his coat are embroidered the initials Y. M. They were sewn by hand, must be his own. -----&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.precog_color;On his coat are embroidered the initials Y. M. &lt;span class=&#39;Precog&#39; data-speed=&#39;2&#39; data-random=&#39;1&#39; data-value=&#39;They were sewn by hand, &#39;&gt;&lt;/span&gt; &lt;span class=&#39;Precog&#39; data-speed=&#39;4&#39; data-random=&#39;1&#39; data-value=&#39;must be his own.&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Any name? Or alias?&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Any name? Or an alias?&quot;&gt;&gt;
 
 
 &lt;&lt;AddOption &quot;//A heavy tension suddenly fills the room//&quot; &quot;Naming&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Naming" tags="nobr" position="225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -1236,7 +1249,13 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddParagraph &quot;More terrifying than the dark alleys, more terrifying than the tiny, messy office.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Perhaps even more terrifying than the memory loss itself...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;... ...&quot; &quot;Naming1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Naming1" tags="nobr" position="475,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;You feel an urge to drink coffee&quot; &quot;Naming1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Naming1" tags="nobr" position="475,850" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;&#39;&#39;*COUGH*&#39;&#39;&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The now empty cup on the table shakes as Cannelé violently slams their fist on the table.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;SHUT UP! It has to be Yasyas&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
