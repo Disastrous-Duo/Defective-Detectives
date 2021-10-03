@@ -1307,22 +1307,31 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddParagraph &quot;I think you&#39;re neat, Muffin. You&#39;re a great person.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now let&#39;s go! It&#39;s time to retrace your steps and go find your memories.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="market_Tails" tags="nobr" position="975,850" size="100,100">&lt;&lt;set $market_path to &quot;right&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="market_Tails" tags="nobr" position="975,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
+
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Five point for Nomnom//&quot;&gt;&gt;
-/* #score */
-
-&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;TRUTH IS ON MY SIDE!&quot;&gt;&gt;
-
-&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;THIS IS A SCAM??? THIS IS NOT MAGIC THIS IS A HATE CRIME AGAINST ME??&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;The Detectives are back to arguing as they head toward the path on the right.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded at the chaotic pair.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé starts dancing, victorious.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="market_Heads" tags="nobr" position="1100,850" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;VICTORY AT LAST!!!&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;THIS ISN&#39;T OVER YET&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddParagraph &quot;This means that Cannelé picks Tails in the next throw.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Here goes...&quot;&gt;&gt;
+
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The Hoboolean coin is thrown in the air.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
+
+&lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossN2&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="market_Heads" tags="nobr" position="1100,850" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Five point for Cannelé//&quot;&gt;&gt;
 /* #score */
@@ -1495,14 +1504,14 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé rolls their eyes.&quot;&gt;&gt;
 
-&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean Coin is a sham!!&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;This entire worl is against me.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;This entire world is against me.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Quit your whining and just enjoy the walk&quot;&gt;&gt;
 
-&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Yeah, I&#39;ll enjoy &#39;&#39;RUINING YOUR GODDAMN LIFE&#39;&#39;&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
@@ -1513,8 +1522,8 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddParagraph &quot;Cannelé and Nomnom keep arguing until they reach the extremity of the plaza.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;In the centre of the area, a big fountain is adorned with statues&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A marble plate states the name of the place&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Harry Youlost Plaza&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;Two streets, one continuing straight ahead and the other veering left.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;&#39;&#39;Harry Youlost Plaza&#39;&#39;&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Two streets emerge from the plaza: one going straight ahead and the other veering left.&quot;&gt;&gt;
 
 &lt;&lt;AddParagraph &quot;The two detectives turn around, expectantly.&quot;&gt;&gt;
 
@@ -1550,7 +1559,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;Ok, I will just flip this one myself or this is never going to end.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Both of you, tell me a number.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//The lowest number gets Face//.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//The lowest number gets Faces.//&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;753&quot;&gt;&gt;
@@ -1579,32 +1588,32 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="35" name="Falai
 &lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;Faces&quot; &quot;market_Faces1&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_Tails1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="market_Faces" tags="nobr" position="975,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Faces&quot; &quot;market_Faces&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_Tails&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="market_Faces" tags="nobr" position="975,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//One point for Nomnom//&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;Cannelé starts dancing, victorious.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Nomnom lets escape a shout of victory.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;VICTORY AT LAST!!!&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;THIS COIN HATES ME??? LET&#39;S HAVE A REMATCH&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;THIS ISN&#39;T OVER YET&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;YOU SORE LOSER!! I WAS CHOSEN BY THE HOBOOLEAN!!&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
-&lt;&lt;AddParagraph &quot;This means that Cannelé picks Tails in the next throw.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;This means that Nomnom picks Tails in the next throw.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Here goes...&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin is thrown in the air.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossN2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_CrossC1" tags="nobr" position="1100,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossC1&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossN1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_CrossC1" tags="nobr" position="1100,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
