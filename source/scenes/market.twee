@@ -4,15 +4,15 @@
 <<AddParagraph "//Five point for Nomnom//">>
 /* #score */
 
-<<SetSpeaker "Cannelé">>
+<<SetSpeaker "Nomnom">>
 <<AddParagraph "TRUTH IS ON MY SIDE!">>
 
-<<SetSpeaker "Nomnom">>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "THIS IS A SCAM??? THIS IS NOT MAGIC THIS IS A HATE CRIME AGAINST ME??">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The Detectives are back to arguing as they head toward the path on the right.">>
-<<AddParagraph "The Hobo is smiling, a bit dumbfounded at the pair.">>
+<<AddParagraph "The Hobo is smiling, a bit dumbfounded at the chaotic pair.">>
 
 <<AddOption "Is this really mag-" "market_Hobo">>
 
@@ -31,7 +31,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "The Detectives are back to arguing as they head toward the path on the left.">>
-<<AddParagraph "The Hobo is smiling, a bit dumbfounded at the pair.">>
+<<AddParagraph "The Hobo is smiling, a bit dumbfounded at the chaotic pair.">>
 
 <<AddOption "Is this really mag-" "market_Hobo">>
 
