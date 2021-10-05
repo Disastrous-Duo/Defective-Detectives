@@ -1,7 +1,7 @@
 :: market_Tails [nobr]
 <<set $market_path to "right">>
 <<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//Five point for Nomnom//">>
+<<AddParagraph "//Five points for Nomnom//">>
 /* #score */
 
 <<SetSpeaker "Nomnom">>
@@ -20,7 +20,7 @@
 :: market_Heads [nobr]
 <<set $market_path to "left">>
 <<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//Five point for Cannelé//">>
+<<AddParagraph "//Five points for Cannelé//">>
 /* #score */
 
 <<SetSpeaker "Cannelé">>
@@ -875,6 +875,9 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Gotta bail, I'll be back tomorrow!">>
 
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Cannelé//">>
+
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé drags you far from the gambling tables.">>
 
@@ -907,7 +910,10 @@
 <<AddParagraph "Well, technically-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé has arleady stalked off.">>
+<<AddParagraph "Cannelé has already stalked off.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Minus one point for Cannelé//">>
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "//Conversation with this person is absolutely impossible.//">>
@@ -1052,6 +1058,9 @@
 
 <<SetSpeaker "????">>
 <<AddParagraph "Hi, my name is Richie and-">>
+
+<<AddParagraph  "@@.precog_color;The man's clothes are tattered, <span class='Precog' data-speed='1' data-random='0' data-value='as if he had been wearing the same outfit for a long time :'> </span> this Richie probably <span class='Precog' data-speed='4' data-random='1' data-value='rich.'></span>@@">>
+
 
 <<BlankSpeaker>>
 <<AddParagraph "Richie bends down and lowers their voice.">>

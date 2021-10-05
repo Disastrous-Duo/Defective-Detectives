@@ -11,8 +11,9 @@
 <<AddParagraph "Nomnom. The only real detective here.">>
 
 <<BlankSpeaker>>
+<<AddParagraph "After stepping inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
-<<AddParagraph "After consideration, small is a nice way to describe the tiny cubicle.">>
+<<AddParagraph "After consideration, small is a nice way to describe the //tiny// cubicle.">>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
 <<set $interview_left to false>>
@@ -20,8 +21,8 @@
 <<set $interview_wall to false>>
 
 
-<<AddOption "Inspect left" "Left">>
-<<AddOption "Inspect right" "Right">>
+<<AddOption "Inspect couch on the left" "Left">>
+<<AddOption "Inspect sink on the right" "Right">>
 <<AddOption "Inspect the wall" "Wall">>
 
 
@@ -45,7 +46,7 @@
 <<AddParagraph "//sigh//">>
 
 <<if $interview_right is false>>
-  <<AddOption "Inspect right" "Right">>
+  <<AddOption "Inspect sink on the right" "Right">>
 <</if>>
 <<if $interview_wall is false>>
   <<AddOption "Inspect the wall" "Wall">>
@@ -74,7 +75,7 @@
 <<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
 <<if $interview_left is false>>
-  <<AddOption "Inspect left" "Left">>
+  <<AddOption "Inspect couch on the left" "Left">>
 <</if>>
 <<if $interview_wall is false>>
   <<AddOption "Inspect the wall" "Wall">>
@@ -103,10 +104,10 @@
 
 
 <<if $interview_left is false>>
-  <<AddOption "Inspect left" "Left">>
+  <<AddOption "Inspect couch on the left" "Left">>
 <</if>>
 <<if $interview_right is false>>
-  <<AddOption "Inspect Right" "Right">>
+  <<AddOption "Inspect sink on the right" "Right">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
@@ -405,7 +406,7 @@
 <<AddParagraph "I sincerely despise you so much.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='0' data-value='He looks like he has the means to take care of his appearance.'> </span> <span class='Precog' data-speed='3' data-random='0' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
+<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='0' data-value='He looks like he has the means to take care of his appearance.'> </span> <span class='Precog' data-speed='1' data-random='1' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
@@ -430,7 +431,7 @@
 <<AddParagraph "Now we just need something to call you.">>
 
 <<BlankSpeaker>>
-<<AddParagraph  "@@.precog_color;On his coat are embroidered the initials Y. M. <span class='Precog' data-speed='2' data-random='1' data-value='They were sewn by hand, '></span> <span class='Precog' data-speed='4' data-random='1' data-value='must be his own.'></span>@@" >>
+<<AddParagraph  "@@.precog_color;On his coat are embroidered the initials Y. M. <span class='Precog' data-speed='2' data-random='1' data-value='They were sewn by hand, '></span> <span class='Precog' data-speed='3' data-random='1' data-value='must be his own.'></span>@@" >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
@@ -488,7 +489,7 @@
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "WHICH ONE DO YOU PREFER ?">>
 
-<<AddOption "Do I really have to choose, can't I just take a random name" "Naming2">>
+<<AddOption "I could pick anything, literally anything else but those two... names" "Naming2">>
 
 :: Naming2 [nobr]
 <<SetSpeaker "Cannelé & Nomnom">>
@@ -516,7 +517,7 @@
 :: Yasyas [nobr]
 <<set $client_name to "Yasyas">>
 <<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//Three point for Cannelé//">>
+<<AddParagraph "//Three points for Cannelé//">>
 /* #score */
 
 <<SetSpeaker "Cannelé">>
@@ -529,7 +530,7 @@
 :: Muffin [nobr]
 <<set $client_name to "Muffin">>
 <<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//Three point for Nomnom//">>
+<<AddParagraph "//Three points for Nomnom//">>
 /* #score */
 
 <<SetSpeaker "Nomnom">>
