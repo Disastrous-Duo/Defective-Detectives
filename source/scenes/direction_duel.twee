@@ -171,8 +171,8 @@
 <<SetSpeaker $client_name>>
 <<AddParagraph "If I don't want to lose his hirees, he must make haste and follow them." >>
 
-<<AddOption "Run after Nomnom" >>
-<<AddOption "Run after Cannelé" >>
+<<AddOption "Run after Nomnom" "market_Tails_0">>
+<<AddOption "Run after Cannelé" "market_Faces_0">>
 
 
 

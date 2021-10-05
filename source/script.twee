@@ -35,7 +35,7 @@ $(document).on("keyup", function (e) {
 // Custom for C&N
 
 const foresight_timer_freq = 20;
-const precog_timer_freq = 20;
+const precog_timer_freq = 5;
 const precog_tries = 8; // number of tries before getting a right letter
 const precog_random_tries = 4; // it's faster, because you can't read it as well
 

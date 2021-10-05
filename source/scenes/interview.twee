@@ -405,7 +405,7 @@
 <<AddParagraph "I sincerely despise you so much.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='0' data-value='He looks like he has the means to take care of his appearance.'> </span> <span class='Precog' data-speed='3' data-random='0' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
+<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='0' data-value='He looks like he has the means to take care of his appearance.'> </span> <span class='Precog' data-speed='1' data-random='1' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
