@@ -75,7 +75,7 @@
 <<AddParagraph "''*yelps loudly*''">>
 
 <<BlankSpeaker>>
-<<AddParagraph "9:37am - 288 Harmony Street, Falaisant">>
+<<AddParagraph "@@.typewriter;8:37am - 288 Harmony Street, Falaisant@@">>
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>

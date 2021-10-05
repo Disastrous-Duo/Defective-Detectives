@@ -298,6 +298,8 @@ h2 /*For chapter titles and Duels*/
   animation-delay: 0s;
   animation-timing-function: ease-in-out;
   color: var(--precog-color);
+
+ text-shadow: -1px 1px 0 white;
 }
 
 @keyframes SlideLeft {
@@ -316,6 +318,7 @@ h2 /*For chapter titles and Duels*/
   animation-delay: 0s;
   animation-timing-function: ease-in-out;
   color: var(--foresight-color);
+ text-shadow: -1px 1px 0 white;
 }
 
 @keyframes SlideRight {
@@ -374,22 +377,18 @@ h2 /*For chapter titles and Duels*/
 }
 
 
-/*Typewriter effect in progess, to tweak a bit*/
-.typewriter {
+
+.typewriter  { /*Potential source of issues: 50% was chosen so it can't overflow. Might need to be tweaked depending on text use or mobile screen*/
   display:inline-flex;
-}
-.typewriter  {
   word-break: break-all;
   height: 1.2em;
-  width:0%;
+  width:50%;
   overflow: hidden;
-  animation:t 4s linear infinite alternate;
+  animation:typewriter 4s linear;
 }
-.typewriter :before {
-  content:attr("className");
-}
-@keyframes t{
-  90%,100% {width:100%}
+@keyframes typewriter{
+  0%{width:0%}
+  100% {width:50%}
 }
 
 
@@ -744,7 +743,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="17" name="Stor
 &lt;&lt;AddParagraph &quot;We&#39;re going to follow your trail, up to where you lost your memories.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot; &gt;&gt;
-&lt;&lt;AddParagraph &quot;^^Is it because you can be //&#39;&#39;ahead&#39;&#39;// of it?^^&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;^^So the game is //&#39;&#39;a foot&#39;&#39;// but you can also be //&#39;&#39;ahead&#39;&#39;// of it?^^&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot; &gt;&gt;
 &lt;&lt;AddParagraph &quot;And we&#39;ll do it in no time! -- All because you were lucky enough to hire the //best// detective agency in this side of the city.&quot;&gt;&gt;
@@ -904,7 +903,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;&#39;&#39;*yelps loudly*&#39;&#39;&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;9:37am - 288 Harmony Street, Falaisant&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;@@.typewriter;8:37am - 288 Harmony Street, Falaisant@@&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;&#39;&#39;*BANG*&#39;&#39;&quot;&gt;&gt;
@@ -2571,7 +2570,9 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Test_Typewriter" tags="" position="850,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
 &lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Test_Shake" tags="" position="975,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Test_Title_Duel" tags="" position="1100,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;Brace yourselves for the...&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;&lt;h2 class=&#39;duel_left&#39;&gt;DIRECTION&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 class=&#39;duel_right&#39;&gt;&amp;nbsp;DUEL&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot; &gt;&gt;
 
 /*Mini changement pour tester git*/</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">

@@ -25,4 +25,9 @@
 <<SetSpeaker "Yasyas">>
 <<AddParagraph  "@@.shake;Oh God, I'm@@" >>
 
+::Test_Title_Duel
+<<BlankSpeaker>>
+<<AddParagraph "Brace yourselves for the...">>
+<<AddParagraph "<h2 class='duel_left'>DIRECTION</h2><br/><br/><h2 class='duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+
 /*Mini changement pour tester git*/

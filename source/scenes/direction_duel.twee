@@ -45,7 +45,7 @@
 <<AddParagraph "We're going to follow your trail, up to where you lost your memories.">>
 
 <<SetSpeaker "Nomnom" >>
-<<AddParagraph "^^Is it because you can be //''ahead''// of it?^^">>
+<<AddParagraph "^^So the game is //''a foot''// but you can also be //''ahead''// of it?^^">>
 
 <<SetSpeaker "Cannelé" >>
 <<AddParagraph "And we'll do it in no time! -- All because you were lucky enough to hire the //best// detective agency in this side of the city.">>

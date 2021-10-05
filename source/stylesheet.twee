@@ -197,6 +197,8 @@ h2 /*For chapter titles and Duels*/
   animation-delay: 0s;
   animation-timing-function: ease-in-out;
   color: var(--precog-color);
+
+ text-shadow: -1px 1px 0 white;
 }
 
 @keyframes SlideLeft {
@@ -215,6 +217,7 @@ h2 /*For chapter titles and Duels*/
   animation-delay: 0s;
   animation-timing-function: ease-in-out;
   color: var(--foresight-color);
+ text-shadow: -1px 1px 0 white;
 }
 
 @keyframes SlideRight {
@@ -273,22 +276,18 @@ h2 /*For chapter titles and Duels*/
 }
 
 
-/*Typewriter effect in progess, to tweak a bit*/
-.typewriter {
+
+.typewriter  { /*Potential source of issues: 50% was chosen so it can't overflow. Might need to be tweaked depending on text use or mobile screen*/
   display:inline-flex;
-}
-.typewriter  {
   word-break: break-all;
   height: 1.2em;
-  width:0%;
+  width:50%;
   overflow: hidden;
-  animation:t 4s linear infinite alternate;
+  animation:typewriter 4s linear;
 }
-.typewriter :before {
-  content:attr("className");
-}
-@keyframes t{
-  90%,100% {width:100%}
+@keyframes typewriter{
+  0%{width:0%}
+  100% {width:50%}
 }
 
 
