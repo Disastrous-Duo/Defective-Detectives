@@ -1,4 +1,4 @@
-:: market_Tails [nobr]
+:: market_Tails_0 [nobr]
 <<set $market_path to "right">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Five points for Nomnom//">>
@@ -17,7 +17,7 @@
 <<AddOption "Is this really mag-" "market_Hobo">>
 
 
-:: market_Heads [nobr]
+:: market_Faces_0 [nobr]
 <<set $market_path to "left">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Five points for Cannelé//">>
