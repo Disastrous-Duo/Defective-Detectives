@@ -994,8 +994,9 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Nomnom. The only real detective here.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph &quot;After stepping inside, one thing becomes glaringly obvious.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The room is small.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;After consideration, small is a nice way to describe the tiny cubicle.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;After consideration, small is a nice way to describe the //tiny// cubicle.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.&quot;&gt;&gt;
 
 &lt;&lt;set $interview_left to false&gt;&gt;
@@ -1003,8 +1004,8 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;set $interview_wall to false&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;Inspect left&quot; &quot;Left&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Inspect right&quot; &quot;Right&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Inspect couch on the left&quot; &quot;Left&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Inspect sink on the right&quot; &quot;Right&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Left" tags="nobr" position="475,725" size="100,100">&lt;&lt;set $interview_left to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The beat-up couch thrones in the room : it must take half the space of the booth&quot;&gt;&gt;
@@ -1024,7 +1025,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//sigh//&quot;&gt;&gt;
 
 &lt;&lt;if $interview_right is false&gt;&gt;
-  &lt;&lt;AddOption &quot;Inspect right&quot; &quot;Right&quot;&gt;&gt;
+  &lt;&lt;AddOption &quot;Inspect sink on the right&quot; &quot;Right&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $interview_wall is false&gt;&gt;
   &lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;
@@ -1049,7 +1050,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;This semblant of a kitchen is really intriguing.&quot;&gt;&gt;
 
 &lt;&lt;if $interview_left is false&gt;&gt;
-  &lt;&lt;AddOption &quot;Inspect left&quot; &quot;Left&quot;&gt;&gt;
+  &lt;&lt;AddOption &quot;Inspect couch on the left&quot; &quot;Left&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $interview_wall is false&gt;&gt;
   &lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;
@@ -1075,10 +1076,10 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 &lt;&lt;if $interview_left is false&gt;&gt;
-  &lt;&lt;AddOption &quot;Inspect left&quot; &quot;Left&quot;&gt;&gt;
+  &lt;&lt;AddOption &quot;Inspect couch on the left&quot; &quot;Left&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $interview_right is false&gt;&gt;
-  &lt;&lt;AddOption &quot;Inspect Right&quot; &quot;Right&quot;&gt;&gt;
+  &lt;&lt;AddOption &quot;Inspect sink on the right&quot; &quot;Right&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
@@ -1339,7 +1340,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I sincerely despise you so much.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.precog_color;His clothes seem to be good quality and he he is clean shaven. &lt;span class=&#39;Precog&#39; data-speed=&#39;1&#39; data-random=&#39;0&#39; data-value=&#39;He looks like he has the means to take care of his appearance.&#39;&gt; &lt;/span&gt; &lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;0&#39; data-value=&#39;This means it is highly likely he has a job, or at least a stable source of income.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.precog_color;His clothes seem to be good quality and he he is clean shaven. &lt;span class=&#39;Precog&#39; data-speed=&#39;1&#39; data-random=&#39;0&#39; data-value=&#39;He looks like he has the means to take care of his appearance.&#39;&gt; &lt;/span&gt; &lt;span class=&#39;Precog&#39; data-speed=&#39;1&#39; data-random=&#39;1&#39; data-value=&#39;This means it is highly likely he has a job, or at least a stable source of income.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1364,7 +1365,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Now we just need something to call you.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.precog_color;On his coat are embroidered the initials Y. M. &lt;span class=&#39;Precog&#39; data-speed=&#39;2&#39; data-random=&#39;1&#39; data-value=&#39;They were sewn by hand, &#39;&gt;&lt;/span&gt; &lt;span class=&#39;Precog&#39; data-speed=&#39;4&#39; data-random=&#39;1&#39; data-value=&#39;must be his own.&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.precog_color;On his coat are embroidered the initials Y. M. &lt;span class=&#39;Precog&#39; data-speed=&#39;2&#39; data-random=&#39;1&#39; data-value=&#39;They were sewn by hand, &#39;&gt;&lt;/span&gt; &lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;must be his own.&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Any name? Or an alias?&quot;&gt;&gt;
@@ -1410,7 +1411,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;WHICH ONE DO YOU PREFER ?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Do I really have to choose, can&#39;t I just take a random name&quot; &quot;Naming2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Naming2" tags="nobr" position="975,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I could pick anything, literally anything else but those two... names&quot; &quot;Naming2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Naming2" tags="nobr" position="975,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;PICK ONE&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1431,7 +1432,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddOption &quot;I&#39;ll go with Yasyas&quot; &quot;Yasyas&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;I&#39;ll go with Muffin&quot; &quot;Muffin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Yasyas" tags="nobr" position="1100,850" size="100,100">&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Three point for Cannelé//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Three points for Cannelé//&quot;&gt;&gt;
 /* #score */
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -1440,7 +1441,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Muffin" tags="nobr" position="1225,850" size="100,100">&lt;&lt;set $client_name to &quot;Muffin&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Three point for Nomnom//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Three points for Nomnom//&quot;&gt;&gt;
 /* #score */
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
@@ -1473,7 +1474,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossN2&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="market_Heads" tags="nobr" position="225,975" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;//Five point for Cannelé//&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Five points for Cannelé//&quot;&gt;&gt;
 /* #score */
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -2190,6 +2191,9 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Gotta bail, I&#39;ll be back tomorrow!&quot;&gt;&gt;
 
+&lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
+
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé drags you far from the gambling tables.&quot;&gt;&gt;
 
@@ -2217,7 +2221,10 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Well, technically-&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph &quot;Cannelé has arleady stalked off.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Cannelé has already stalked off.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;//Minus one point for Cannelé//&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Conversation with this person is absolutely impossible.//&quot;&gt;&gt;
@@ -2349,6 +2356,9 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;SetSpeaker &quot;????&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Hi, my name is Richie and-&quot;&gt;&gt;
+
+&lt;&lt;AddParagraph  &quot;@@.precog_color;The man&#39;s clothes are tattered, &lt;span class=&#39;Precog&#39; data-speed=&#39;1&#39; data-random=&#39;0&#39; data-value=&#39;as if he had been wearing the same outfit for a long time :&#39;&gt; &lt;/span&gt; this Richie probably &lt;span class=&#39;Precog&#39; data-speed=&#39;4&#39; data-random=&#39;1&#39; data-value=&#39;rich.&#39;&gt;&lt;/span&gt;@@&quot;&gt;&gt;
+
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Richie bends down and lowers their voice.&quot;&gt;&gt;
