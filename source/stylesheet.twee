@@ -315,3 +315,70 @@ h2 /*For chapter titles and Duels*/
 	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
 	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
+.slotmachine
+{
+  position: relative;
+  height: 1em;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.slot {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:5;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot2 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:10;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot3 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:15;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot4 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:20;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot5 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:25;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+
+@keyframes slot{
+0%  { top: 0; text-shadow: var(--precog-color) 0 0 2px;color: transparent }
+33% { top: -1em; text-shadow: var(--precog-color) 0 0 2px; color: transparent}
+66% { top: -2em; text-shadow: var(--precog-color) 0 0 2px;color: transparent}
+100% { top: -3em; text-shadow: var(--precog-color) 0 0 2px; color: transparent}
+}

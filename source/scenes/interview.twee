@@ -138,6 +138,12 @@
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
 
 /* NomNom gift -> sees client about to leave with a stain on his shirt */
+<<Foresight "13.9" "seconds" "Pieces of a broken cup, lying on the ground. The client is leaving through the door, a huge stain on his coat. He looks angry." >>
+
+<<AddParagraph "Nomnom picks up the coffee cup again, and puts it slightly farther on the table.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's still a //tad bit// hot.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>

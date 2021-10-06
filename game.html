@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="38" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
+	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="107" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -415,6 +415,73 @@ h2 /*For chapter titles and Duels*/
 	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
 	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
 	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+.slotmachine
+{
+  position: relative;
+  height: 1em;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.slot {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:5;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot2 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:10;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot3 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:15;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot4 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:20;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+.slot5 {
+  color: var(--precog-color);
+  position: relative;
+
+  animation:slot 0.25s;
+  animation-iteration-count:25;
+  animation-delay:0s;
+  animation-timing-function: ease;
+}
+
+
+@keyframes slot{
+0%  { top: 0; text-shadow: var(--precog-color) 0 0 2px;color: transparent }
+33% { top: -1em; text-shadow: var(--precog-color) 0 0 2px; color: transparent}
+66% { top: -2em; text-shadow: var(--precog-color) 0 0 2px;color: transparent}
+100% { top: -3em; text-shadow: var(--precog-color) 0 0 2px; color: transparent}
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.saves.autoload = "prompt";
 
 
@@ -1105,6 +1172,12 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;After inspection, it looks like water that smells of coffee.&quot;&gt;&gt;
 
 /* NomNom gift -&gt; sees client about to leave with a stain on his shirt */
+&lt;&lt;Foresight &quot;13.9&quot; &quot;seconds&quot; &quot;Pieces of a broken cup, lying on the ground. The client is leaving through the door, a huge stain on his coat. He looks angry.&quot; &gt;&gt;
+
+&lt;&lt;AddParagraph &quot;Nomnom picks up the coffee cup again, and puts it slightly farther on the table.&quot;&gt;&gt;
+
+&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It&#39;s still a //tad bit// hot.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So you have-&quot;&gt;&gt;
@@ -2568,9 +2641,15 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Time to blow this thing up&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Test_Typewriter" tags="" position="850,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Test_Shake" tags="" position="975,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Test_Title_Duel" tags="" position="1100,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Test_Slotmachine" tags="" position="850,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Alright, time to crack this power up.&quot;&gt;&gt;
+&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;There&#39;s something on his coat. Is it &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;food&lt;br/&gt;bloo&lt;br/&gt;???&lt;br&gt;oil@@&lt;/span&gt; ?&quot; &gt;&gt;
+&lt;&lt;AddParagraph  &quot;Now, a multiple length deduction.&quot; &gt;&gt;
+&lt;&lt;AddParagraph  &quot;The man&#39;s clothes are tattered, as if he had been &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;wearing the same outfit for a long time&lt;br/&gt;fighting with chicken ?! damn Richie&lt;br/&gt;eating a loooot of lasagna@@&lt;/span&gt;. This Richie probably &lt;span class=&#39;slotmachine&#39;&gt;@@.slot2; isn&#39;t rich&lt;br/&gt; is aguard&lt;br/&gt; agiant@@.&lt;/span&gt;&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Test_Typewriter" tags="" position="975,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Test_Shake" tags="" position="1100,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Test_Title_Duel" tags="" position="1225,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Brace yourselves for the...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;&lt;h2 class=&#39;duel_left&#39;&gt;DIRECTION&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 class=&#39;duel_right&#39;&gt;&amp;nbsp;DUEL&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot; &gt;&gt;
 
