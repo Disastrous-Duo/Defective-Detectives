@@ -268,7 +268,7 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  "@@.precog_color;The client looks old, <span class='Precog' data-speed='3' data-random='1' data-value='around 25 years old.'></span>@@" >>
+<<AddParagraph  `"@@.precog_color;The client looks old, "+slot('around 25 years old')+".@@"` >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>

@@ -24,7 +24,7 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph  "There's something on his coat. Is it <span class='slotmachine'>@@.slot;food<br/>bloo<br/>???<br>oil@@</span> ?" >>
 <<AddParagraph  "Now, a multiple length deduction." >>
-<<AddParagraph  "The man's clothes are tattered, as if he had been <span class='slotmachine'>@@.slot;wearing the same outfit for a long time<br/>fighting with chicken ?! damn Richie<br/>eating a loooot of lasagna@@</span>. This Richie probably <span class='slotmachine'>@@.slot2; isn't rich<br/> is aguard<br/> agiant@@.</span>" >>
+<<AddParagraph  `"The man's clothes are tattered, as if he had been "+slot("wearing the same outfit for a long time")+". This Richie probably "+slot("isn't rich",2)+"."` >>
 
 
 :: Test_Typewriter
@@ -33,11 +33,13 @@
 
 :: Test_Shake
 <<SetSpeaker "Yasyas">>
-<<AddParagraph  "@@.shake;Oh God, I'm@@" >>
+<<AddParagraph  "Oh God, I'm @@.shake;shaking@@!" >>
 
 ::Test_Title_Duel
 <<BlankSpeaker>>
 <<AddParagraph "Brace yourselves for the...">>
 <<AddParagraph "<h2 class='duel_left'>DIRECTION</h2><br/><br/><h2 class='duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
 
-/*Mini changement pour tester git*/
+::Test_Tooltip
+<<BlankSpeaker>>
+<<AddParagraph `"Yes, my name is "+tooltip("Cannelé","A little cake.")+", but its pronounced like "+tooltip("Cannelé","A little annoying.")`>>

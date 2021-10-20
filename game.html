@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="53" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
+	<!-- UUID://B1E46906-738D-4617-BD15-CEF422C96FD8// --><tw-storydata name="C&amp;N -- DD" startnode="39" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="B1E46906-738D-4617-BD15-CEF422C96FD8" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=David+Libre:400,700,400italic,700italic);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
 html {
@@ -426,7 +426,7 @@ h2 /*For chapter titles and Duels*/
   display: inline-flex;
 }
 
-.slot {
+.slot1 {
   color: var(--precog-color);
   position: relative;
 
@@ -482,6 +482,38 @@ h2 /*For chapter titles and Duels*/
 33% { top: -1em; text-shadow: var(--precog-color) 0 0 2px; color: transparent}
 66% { top: -2em; text-shadow: var(--precog-color) 0 0 2px;color: transparent}
 100% { top: -3em; text-shadow: var(--precog-color) 0 0 2px; color: transparent}
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
+  cursor:help;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  border: solid 1px white;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  display:block;
+  visibility: visible;
+  bottom: 105%;
+  width:200%;
+  margin-left:-50%;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Keyboard" */
 Config.saves.autoload = "prompt";
 
@@ -542,10 +574,10 @@ window.forceDigits = function(number, digits)
 	return base;
 }
 
-window.randomStr = function(length)
+window.randomStr = function(length, alphabet)
 {
-	//var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*";
-	var alphabet = "█░▒▓╬▄▀¶abcdexyzopqrstuv";
+	var alphabet = alphabet || "abcdefghijklmnopqrstuvwxyz";
+	//var alphabet = "█░▒▓╬▄▀¶abcdexyzopqrstuv";
   for(var s=''; s.length < length;)
 	{
 		//s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*'.charAt(Math.random()*62|0);
@@ -625,6 +657,28 @@ window.updatePrecogTimer = function()
 
 window.setInterval(window.updateForesightTimer, foresight_timer_freq);
 window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+
+
+window.tooltip = function(displayed_text, tooltip)
+{
+	return `<span class="tooltip">${displayed_text}<span class='tooltiptext'>${tooltip}</span></span>`;
+}
+
+window.slot = function(right_answer, duration)
+{
+	var duration = duration*1 || 1; // Max 5 !
+	var options = [right_answer];
+
+	for(var i=0; i < 3;i++) // 3 other options, as defined in the css animation frames
+	{
+		// *0.7 because for a non monospace font, random strings have a chance to be longer than the first one
+		options.push(window.randomStr(right_answer.length*0.7));
+	}
+
+	return `<span class='slotmachine'>@@.slot${duration};${options.join("<br/>")}@@</span>`;
+
+
+}
 /* twine-user-script #3: "shortcut.min.js" */
 window.shortcut={all_shortcuts:{},add:function(e,g,a){var c={type:"keydown",propagate:!1,disable_in_input:!1,target:document,keycode:!1};if(a)for(var f in c)"undefined"==typeof a[f]&&(a[f]=c[f]);else a=c;c=a.target;"string"==typeof a.target&&(c=document.getElementById(a.target));e=e.toLowerCase();f=function(b){b=b||window.event;if(a.disable_in_input){var d;b.target?d=b.target:b.srcElement&&(d=b.srcElement);3==d.nodeType&&(d=d.parentNode);if("INPUT"==d.tagName||"TEXTAREA"==d.tagName)return}b.keyCode?code= b.keyCode:b.which&&(code=b.which);d=String.fromCharCode(code).toLowerCase();188==code&&(d=",");190==code&&(d=".");var c=e.split("+"),h=0,f={"`":"~",1:"!",2:"@",3:"#",4:"$",5:"%",6:"^",7:"&",8:"*",9:"(",0:")","-":"_","=":"+",";":":","'":'"',",":"<",".":">","/":"?","\\":"|"},w={esc:27,escape:27,tab:9,space:32,"return":13,enter:13,backspace:8,scrolllock:145,scroll_lock:145,scroll:145,capslock:20,caps_lock:20,caps:20,numlock:144,num_lock:144,num:144,pause:19,"break":19,insert:45,home:36,"delete":46,end:35, pageup:33,page_up:33,pu:33,pagedown:34,page_down:34,pd:34,left:37,up:38,right:39,down:40,f1:112,f2:113,f3:114,f4:115,f5:116,f6:117,f7:118,f8:119,f9:120,f10:121,f11:122,f12:123},m=!1,n=!1,p=!1,q=!1,r=!1,t=!1,u=!1,v=!1;b.ctrlKey&&(q=!0);b.shiftKey&&(n=!0);b.altKey&&(t=!0);b.metaKey&&(v=!0);for(var l=0;k=c[l],l<c.length;l++)"ctrl"==k||"control"==k?(h++,p=!0):"shift"==k?(h++,m=!0):"alt"==k?(h++,r=!0):"meta"==k?(h++,u=!0):1<k.length?w[k]==code&&h++:a.keycode?a.keycode==code&&h++:d==k?h++:f[d]&&b.shiftKey&& (d=f[d],d==k&&h++);if(h==c.length&&q==p&&n==m&&t==r&&v==u&&(g(b),!a.propagate))return b.cancelBubble=!0,b.returnValue=!1,b.stopPropagation&&(b.stopPropagation(),b.preventDefault()),!1};this.all_shortcuts[e]={callback:f,target:c,event:a.type};c.addEventListener?c.addEventListener(a.type,f,!1):c.attachEvent?c.attachEvent("on"+a.type,f):c["on"+a.type]=f},remove:function(e){e=e.toLowerCase();var g=this.all_shortcuts[e];delete this.all_shortcuts[e];if(g){e=g.event;var a=g.target,g=g.callback;a.detachEvent? a.detachEvent("on"+e,g):a.removeEventListener?a.removeEventListener(e,g,!1):a["on"+e]=!1}}};
 /************************************/</script><tw-passagedata pid="1" name="PassageHeader" tags="" position="407,27" size="100,100">&lt;&lt;set $paragraphs to []&gt;&gt;
@@ -753,7 +807,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 &lt;&lt;set $leather_speaker to [&quot;leathery voice&quot;, &quot;couch&quot;]&gt;&gt;
 &lt;&lt;set $greentext to [&quot;&quot;]&gt;&gt;
 &lt;&lt;set $paraAppendMode to false&gt;&gt;
-&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt; /*TODO: Remove this line before release*/</tw-passagedata><tw-passagedata pid="18" name="@include scripts/shortcut.min.twee" tags="" position="975,225" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="@include scripts/keyboard.twee" tags="" position="1100,225" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="@include scripts/magic_effects.twee" tags="" position="1225,225" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="@include stylesheet.twee" tags="" position="100,350" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="@include disco_elysium_macros.twee" tags="" position="225,350" size="100,100"></tw-passagedata><tw-passagedata pid="23" name="@include magic_macros.twee" tags="" position="350,350" size="100,100"></tw-passagedata><tw-passagedata pid="24" name="@include scenes/falaisant.twee" tags="" position="475,350" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="@include scenes/interview.twee" tags="" position="600,350" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="@include scenes/direction_duel.twee" tags="" position="725,350" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="@include scenes/market.twee" tags="" position="850,350" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Foresight" tags="Widget widget" position="975,350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt; /*TODO: Remove this line before release*/</tw-passagedata><tw-passagedata pid="18" name="@include scripts/shortcut.min.twee" tags="" position="975,225" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="@include scripts/keyboard.twee" tags="" position="1100,225" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="@include scripts/magic_effects.twee" tags="" position="1225,225" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="@include stylesheet.twee" tags="" position="100,350" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="@include disco_elysium_macros.twee" tags="" position="225,350" size="100,100"></tw-passagedata><tw-passagedata pid="23" name="@include magic_macros.twee" tags="" position="350,350" size="100,100"></tw-passagedata><tw-passagedata pid="24" name="@include scenes/falaisant.twee" tags="" position="475,350" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="@include scenes/interview.twee" tags="" position="600,350" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="@include scenes/direction_duel.twee" tags="" position="725,350" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="@include scenes/market.twee" tags="" position="850,350" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="@include scenes/test_effects.twee" tags="" position="975,350" size="100,100"></tw-passagedata><tw-passagedata pid="29" name="Foresight" tags="Widget widget" position="1100,350" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;Foresight&quot;&gt;&gt;
 &lt;&lt;set _scene_text to (&quot;@@.foresight;&quot;+$args[2]+&quot;@@&quot;)&gt;&gt;
 &lt;&lt;AddParagraph _scene_text &gt;&gt;
@@ -763,7 +817,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph _countdown &gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Tickdown" tags="Widget widget" position="1100,350" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Tickdown" tags="Widget widget" position="1225,350" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;Tickdown&quot;&gt;&gt;
 &lt;&lt;set _scene_text to (&#39;@@.Tickdown;@@&#39;)&gt;&gt;
 &lt;&lt;AddParagraph _scene_text &gt;&gt;
@@ -772,17 +826,17 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 
 
 
-/* rarely used this way. Most often its done inline */</tw-passagedata><tw-passagedata pid="30" name="Precog" tags="Widget widget" position="1225,350" size="100,100">&lt;&lt;nobr&gt;&gt;
+/* rarely used this way. Most often its done inline */</tw-passagedata><tw-passagedata pid="31" name="Precog" tags="Widget widget" position="100,475" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;Precog&quot;&gt;&gt;
 &lt;&lt;set _scene_text to (&quot;@@.precog_color_color;&lt;span class=&#39;Precog&#39; data data-value=&#39;&quot;+$args[0]+&quot;&#39;&gt;&lt;/span&gt;@@&quot;)&gt;&gt;
 &lt;&lt;AddParagraph _scene_text &gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="PrecogRandom" tags="Widget widget" position="100,475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="PrecogRandom" tags="Widget widget" position="225,475" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;widget &quot;PrecogRandom&quot;&gt;&gt;
 &lt;&lt;set _scene_text to (&quot;@@.precog_color_color;&lt;span class=&#39;PrecogRandom&#39; data-value=&#39;&quot;+$args[0]+&quot;&#39;&gt;&lt;/span&gt;@@&quot;)&gt;&gt;
 &lt;&lt;AddParagraph _scene_text &gt;&gt;
 &lt;&lt;/widget&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Squelette_DeductionDuel" tags="" position="225,475" size="100,100">/*
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Squelette_DeductionDuel" tags="" position="350,475" size="100,100">/*
 
 1. C&amp;N start to compete with each other to be the one directing,
   YM tells them the right route but they don&#39;t listen
@@ -799,7 +853,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 
 3. Receive the coin and use it to find the market
 
-*/</tw-passagedata><tw-passagedata pid="33" name="Investigation1" tags="nobr" position="350,475" size="100,100">&lt;h2&gt;Chapter 1 - The Hoboolean Coin&lt;/h2&gt;&lt;br/&gt; /*#type*/
+*/</tw-passagedata><tw-passagedata pid="34" name="Investigation1" tags="nobr" position="475,475" size="100,100">&lt;h2&gt;Chapter 1 - The Hoboolean Coin&lt;/h2&gt;&lt;br/&gt; /*#type*/
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The door closes behind the two detectives and their slightly reluctant client. The group leaves Harmony Street, and makes its way into the fog-clenched neighbourhood.&quot;&gt;&gt;
@@ -834,10 +888,10 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 &lt;&lt;AddParagraph &quot;...Please ignore them.&quot; &gt;&gt;
 
 &lt;&lt;AddOption &quot;Ignore Nomnom.&quot; &quot;Investigation1_2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Flash them a furtive smile&quot; &quot;Investigation1_smile&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Investigation1_smile" tags="nobr" position="475,475" size="100,100">&lt;&lt;SetSpeaker &quot;Far away voice&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Flash them a furtive smile&quot; &quot;Investigation1_smile&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Investigation1_smile" tags="nobr" position="600,475" size="100,100">&lt;&lt;SetSpeaker &quot;Far away voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;One point for Nomnom.&quot;&gt;&gt;
 /*Point*/
-&lt;&lt;AddOption &quot;Turn your head again&quot; &quot;Investigation1_2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Investigation1_2" tags="nobr" position="600,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Turn your head again&quot; &quot;Investigation1_2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Investigation1_2" tags="nobr" position="725,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The trio arrives at the corner of an empty crossroad.&quot; &gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot; &gt;&gt;
@@ -892,7 +946,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 &lt;&lt;SetSpeaker &quot;Cannelé&quot; &gt;&gt;
 &lt;&lt;AddParagraph &quot;Or what? You&#39;re going to use your grey cells against me?&quot; &gt;&gt;
 
-&lt;&lt;AddOption &quot;I know which way I...&quot; &quot;Investigation1_3&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Investigation1_3" tags="nobr" position="725,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;I know which way I...&quot; &quot;Investigation1_3&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Investigation1_3" tags="nobr" position="850,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;To their client&#39;s demise, the two detectives are arguing so loud that they can&#39;t hear him.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
@@ -924,7 +978,7 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 &lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;GO!&quot; &gt;&gt;
 
-&lt;&lt;AddOption &quot;Please wait for m-&quot; &quot;DirectionDuel_1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="DirectionDuel_1" tags="nobr" position="850,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Please wait for m-&quot; &quot;DirectionDuel_1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="DirectionDuel_1" tags="nobr" position="975,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;set _temp_text to (&quot;The client&#39;s plaints are left unheard, as he realizes that the desastrous duo has already started it&#39;s...&quot;) &gt;&gt;
 &lt;&lt;AddParagraph _temp_text&gt;&gt;
 &lt;&lt;AddParagraph &quot;&lt;h2 class=&#39;duel_left&#39;&gt;DIRECTION&lt;/h2&gt;&lt;br/&gt;&lt;h2 class=&#39;duel_right&#39;&gt;&amp;nbsp;DUEL&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot; &gt;&gt;
@@ -943,30 +997,30 @@ Twine framework by Pikalex88</tw-passagedata><tw-passagedata pid="15" name="Stor
 
 /*MArket: Nomnom sees a cat sneaking away with a fish. Reflections about how that&#39;s just the law of nature -- realization that
 a fish lives in water and a cat on land. So how do cats hunt fishes? in the wild? They goota ask this question to
-the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falaisant" tags="nobr" position="975,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="39" name="Falaisant" tags="nobr" position="1100,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//A majestic waterfall looms over the blue City of Falaisant.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;A drop of water flies over Falaisant&quot; &quot;Falaisant2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Falaisant2" tags="nobr" position="1100,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;A drop of water flies over Falaisant&quot; &quot;Falaisant2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Falaisant2" tags="nobr" position="1225,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//At the heart of the city, high towers dominate the skyline. White rock and marble glint under the first rays of the sun, reflecting the water flowing underneath.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop rolls down the tower&quot; &quot;Falaisant3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Falaisant3" tags="nobr" position="1225,475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;The drop rolls down the tower&quot; &quot;Falaisant3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Falaisant3" tags="nobr" position="100,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop continues its course on to the first boulevard&quot; &quot;Falaisant4&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Falaisant4" tags="nobr" position="100,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;The drop continues its course on to the first boulevard&quot; &quot;Falaisant4&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Falaisant4" tags="nobr" position="225,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//The boulevards spread far, far until they turn into smaller streets.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop bounces off the slightly uneven pavement&quot; &quot;Falaisant5&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Falaisant5" tags="nobr" position="225,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;The drop bounces off the slightly uneven pavement&quot; &quot;Falaisant5&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Falaisant5" tags="nobr" position="350,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges that jump over streams and connect the multiple layers of passageways, roads and gates.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop falls from a hole in the metallic hedge of a bridge&quot; &quot;Falaisant6&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Falaisant6" tags="nobr" position="350,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;The drop falls from a hole in the metallic hedge of a bridge&quot; &quot;Falaisant6&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Falaisant6" tags="nobr" position="475,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Plic.//&quot;&gt;&gt;
 
 &lt;&lt;AddParagraph &quot;//Ploc.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Lower, Lower&quot; &quot;Falaisant7&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Falaisant7" tags="nobr" position="475,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Lower, Lower&quot; &quot;Falaisant7&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Falaisant7" tags="nobr" position="600,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Fog, thick and permanent, haunts streets that have gotten so cramped they are suffocating.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop errs, losing itself in the midst of the ominous veil&quot; &quot;Falaisant8&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Falaisant8" tags="nobr" position="600,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;The drop errs, losing itself in the midst of the ominous veil&quot; &quot;Falaisant8&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Falaisant8" tags="nobr" position="725,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//No light nor sound seem to reach this place : everything seems frozen into an eerie silence.//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//There, unpaved alleys twist and turn into a tortuous, unwelcoming maze.//&quot;&gt;&gt;
 
@@ -974,11 +1028,11 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//The atmosphere is heavy...//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Disquieting.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop runs down darker and darker paths&quot; &quot;Falaisant9&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Falaisant9" tags="nobr" position="725,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;The drop runs down darker and darker paths&quot; &quot;Falaisant9&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Falaisant9" tags="nobr" position="850,600" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//The shabby sign on the shabbier building reads: “Agence Cannelé &amp; Nomnom, Detectives”.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The drop looms over the edge of the roof before falling on the shadowed figure&quot; &quot;Falaisant10&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Falaisant10" tags="nobr" position="850,600" size="100,100">&lt;&lt;SetSpeaker &quot;Mysterious Individual&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;The drop looms over the edge of the roof before falling on the shadowed figure&quot; &quot;Falaisant10&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Falaisant10" tags="nobr" position="975,600" size="100,100">&lt;&lt;SetSpeaker &quot;Mysterious Individual&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;&#39;&#39;*yelps loudly*&#39;&#39;&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -992,7 +1046,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddOption &quot;Wait&quot; &quot;Expo&quot;&gt;&gt;
 
 
-/* Meeting */</tw-passagedata><tw-passagedata pid="48" name="Expo" tags="nobr" position="975,600" size="100,100">&lt;&lt;SetSpeaker &quot;Shrill Voice&quot;&gt;&gt;
+/* Meeting */</tw-passagedata><tw-passagedata pid="49" name="Expo" tags="nobr" position="1100,600" size="100,100">&lt;&lt;SetSpeaker &quot;Shrill Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I HEARD SOMETHING IT MIGHT BE-&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Somehow Shriller Voice&quot;&gt;&gt;
@@ -1008,7 +1062,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//What a beautiful morning//&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Knock&quot; &quot;Expo_Knock&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Wait&quot; &quot;Expo_Wait1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Expo_Wait1" tags="nobr" position="1100,600" size="100,100">&lt;&lt;SetSpeaker &quot;Somehow Shriller Voice&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Wait&quot; &quot;Expo_Wait1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Expo_Wait1" tags="nobr" position="1225,600" size="100,100">&lt;&lt;SetSpeaker &quot;Somehow Shriller Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;SHUT UP&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Shrill Voice&quot;&gt;&gt;
@@ -1018,7 +1072,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;NO, NO YOU SHUT UP&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Knock&quot; &quot;Expo_Knock&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Wait&quot; &quot;Expo_Wait2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Expo_Wait2" tags="nobr" position="1225,600" size="100,100">&lt;&lt;SetSpeaker &quot;Somehow Shriller Voice&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Wait&quot; &quot;Expo_Wait2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Expo_Wait2" tags="nobr" position="100,725" size="100,100">&lt;&lt;SetSpeaker &quot;Somehow Shriller Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;HAHAHAHAHAHAHA I CAN&#39;T HEAR YOU&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Shrill Voice&quot;&gt;&gt;
@@ -1028,7 +1082,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;ILL SHUT UP WHEN YOU STOP BEING ANNOYING.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Knock&quot; &quot;Expo_Knock&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Wait&quot; &quot;Expo_Knock&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Expo_Knock" tags="nobr" position="100,725" size="100,100">&lt;&lt;SetSpeaker &quot;Shrill Voice&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Wait&quot; &quot;Expo_Knock&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Expo_Knock" tags="nobr" position="225,725" size="100,100">&lt;&lt;SetSpeaker &quot;Shrill Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;SHUT UP SHUT UP SHUT UP&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Somehow Shriller Voice&quot;&gt;&gt;
@@ -1038,7 +1092,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;&#39;&#39;*BAM*&#39;&#39;&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//The door violently slams open//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;&#39;&#39;*OUCH*&#39;&#39;&quot; &quot;Expo_Meeting1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Expo_Meeting1" tags="nobr" position="225,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;&#39;&#39;*OUCH*&#39;&#39;&quot; &quot;Expo_Meeting1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Expo_Meeting1" tags="nobr" position="350,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Uncomfortable pause//&quot;&gt;&gt;
 
 &lt;&lt;AddParagraph &quot;//It&#39;s a young lady who has opened the door. Behind them, a curious man is sprawled on the floor.//&quot;&gt;&gt;
@@ -1062,7 +1116,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 /* Title Screen */
 /* Cannelé &amp; Nomnom - Defective Detective */
-/* Pilot */</tw-passagedata><tw-passagedata pid="53" name="Office" tags="nobr" position="350,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+/* Pilot */</tw-passagedata><tw-passagedata pid="54" name="Office" tags="nobr" position="475,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The girl nods as the man stands up and dust their clothes.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;?&quot;&gt;&gt;
@@ -1071,12 +1125,12 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;??&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom. The only real detective here.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Enter&quot; &quot;interviewInside&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="interviewInside" tags="nobr" position="475,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Enter&quot; &quot;interviewInside&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="interviewInside" tags="nobr" position="600,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;After stepping inside, one thing becomes glaringly obvious.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The room is small.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After consideration, small is a nice way to describe the //tiny// cubicle.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Look around&quot; &quot;interviewInspect&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="interviewInspect" tags="nobr" position="600,725" size="100,100">&lt;&lt;AddParagraph &quot;To the left, an old couch is crumbling under a pile of mess.&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Look around&quot; &quot;interviewInspect&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="interviewInspect" tags="nobr" position="725,725" size="100,100">&lt;&lt;AddParagraph &quot;To the left, an old couch is crumbling under a pile of mess.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;On the other side, a sink and some cups. &quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;In front of you, the wall is scattered with papers.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.&quot;&gt;&gt;
@@ -1088,7 +1142,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;Inspect couch on the left&quot; &quot;Left&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Inspect sink on the right&quot; &quot;Right&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Left" tags="nobr" position="725,725" size="100,100">&lt;&lt;set $interview_left to true&gt;&gt;
+&lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Left" tags="nobr" position="850,725" size="100,100">&lt;&lt;set $interview_left to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The beat-up couch thrones in the room : it must take half the space of the booth&quot;&gt;&gt;
 
@@ -1115,7 +1169,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;interviewTwoDetectives&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Right" tags="nobr" position="850,725" size="100,100">&lt;&lt;set $interview_right to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Right" tags="nobr" position="975,725" size="100,100">&lt;&lt;set $interview_right to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The duo is elbowing their way around the room. They eventually manage to place a stool on the other side of the table facing the couch.&quot;&gt;&gt;
 
@@ -1140,7 +1194,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;interviewTwoDetectives&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Wall" tags="nobr" position="975,725" size="100,100">&lt;&lt;set $interview_wall to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Wall" tags="nobr" position="1100,725" size="100,100">&lt;&lt;set $interview_wall to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.&quot;&gt;&gt;
 
@@ -1166,7 +1220,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
     &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;interviewTwoDetectives&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="interviewTwoDetectives" tags="nobr" position="1100,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="interviewTwoDetectives" tags="nobr" position="1225,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The two detectives are staring back, blankly.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Almost... expecting.&quot;&gt;&gt;
 
@@ -1187,7 +1241,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 &lt;&lt;AddOption &quot;Observe Nomnom&quot; &quot;interviewNomnom&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Study Cannelé&quot; &quot;interviewCannelé&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="interviewCannelé" tags="nobr" position="1225,725" size="100,100">&lt;&lt;set $interview_cannele to true&gt;&gt;
+&lt;&lt;AddOption &quot;Study Cannelé&quot; &quot;interviewCannelé&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="interviewCannelé" tags="nobr" position="100,850" size="100,100">&lt;&lt;set $interview_cannele to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Their skin is deep brown and their round face is framed by a tangle of soft, black curls that reach the middle of their back.&quot;&gt;&gt;
@@ -1208,7 +1262,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
     &lt;&lt;AddOption &quot;Somehow, they look like they’re coming from nobility. *Fallen* nobility...&quot; &quot;interviewNomnom&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice...&quot; &quot;interviewNomnom&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;Why... are they standing on the couch...&quot; &quot;interviewNomnom&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="interviewNomnom" tags="nobr" position="100,850" size="100,100">&lt;&lt;set $interview_nomnom to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="interviewNomnom" tags="nobr" position="225,850" size="100,100">&lt;&lt;set $interview_nomnom to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;if $interview_cannele is true&gt;&gt;
   &lt;&lt;AddParagraph &quot;Nomnom seems significantly taller than Cannelé (Nonobstant the couch).&quot;&gt;&gt;
@@ -1236,7 +1290,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
     &lt;&lt;AddOption &quot;I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…&quot; &quot;interviewCannelé&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;I am trying to guess something about this person’s investigation skills but nothing comes to mind… &quot; &quot;interviewCannelé&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;I can’t help it, but this left shoe really intrigues me...&quot; &quot;interviewCannelé&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Interview" tags="nobr" position="225,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Interview" tags="nobr" position="350,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -1286,10 +1340,10 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;Who am I?&quot; &quot;Identity&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;What happened?&quot; &quot;Event&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;What&#39;s wrong with this coffee?&quot; &quot;Coffee&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Identity" tags="nobr" position="350,850" size="100,100">&lt;&lt;set $interview_identity to true&gt;&gt;
+&lt;&lt;AddOption &quot;What&#39;s wrong with this coffee?&quot; &quot;Coffee&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Identity" tags="nobr" position="475,850" size="100,100">&lt;&lt;set $interview_identity to true&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.precog_color;The client looks old, &lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;around 25 years old.&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;
+&lt;&lt;AddParagraph  `&quot;@@.precog_color;The client looks old, &quot;+slot(&#39;around 25 years old&#39;)+&quot;.@@&quot;` &gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What&#39;s your name? Occupation? Monthly salary?&quot;&gt;&gt;
@@ -1301,7 +1355,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What about your gift?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;What about my gift ?&quot; &quot;Gift&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Gift" tags="nobr" position="475,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;What about my gift ?&quot; &quot;Gift&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Gift" tags="nobr" position="600,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Do you know what a gift is ?&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1368,7 +1422,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Event" tags="nobr" position="600,850" size="100,100">&lt;&lt;set $interview_event to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Event" tags="nobr" position="725,850" size="100,100">&lt;&lt;set $interview_event to true&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;How did you find this place?&quot;&gt;&gt;
 
@@ -1431,7 +1485,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Coffee" tags="nobr" position="725,850" size="100,100">&lt;&lt;set $interview_coffee to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Coffee" tags="nobr" position="850,850" size="100,100">&lt;&lt;set $interview_coffee to true&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The coffee... is very special here.&quot;&gt;&gt;
@@ -1471,7 +1525,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Contract" tags="nobr" position="850,850" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Contract" tags="nobr" position="975,850" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Do you think you can help me?&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -1481,7 +1535,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Of course! We are professionals.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now let us discuss the terms of the contract&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The contract ?&quot; &quot;Contract1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Contract1" tags="nobr" position="975,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;The contract ?&quot; &quot;Contract1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Contract1" tags="nobr" position="1100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;If you become our client, we need to draw an official contract.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After all, I am not a swindler-&quot;&gt;&gt;
 
@@ -1493,7 +1547,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;This statement, that should be reassuring, sounds like a threat.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;//Am I really... leaving my fate in the hands of those two??//&quot; &quot;Contract2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;//But somehow... I feel like they might be trustworthy...//&quot; &quot;Contract2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Contract2" tags="nobr" position="1100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//But somehow... I feel like they might be trustworthy...//&quot; &quot;Contract2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Contract2" tags="nobr" position="1225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;We hereby commit to finding out the answer to three questions for you:&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Who are you?&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What&#39;s your gift?&quot;&gt;&gt;
@@ -1541,7 +1595,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Any name? Or an alias?&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;//A heavy tension suddenly fills the room//&quot; &quot;interviewDeepThought&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="interviewDeepThought" tags="nobr" position="1225,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;//A heavy tension suddenly fills the room//&quot; &quot;interviewDeepThought&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="interviewDeepThought" tags="nobr" position="100,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Both detectives are suddenly quiet, lost in deep thoughts.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Inspiration?&quot;&gt;&gt;
@@ -1582,17 +1636,17 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;It&#39;s a muff-&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;//I am getting concerned ...//&quot; &quot;interviewA-HA&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="interviewA-HA" tags="nobr" position="100,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//I am getting concerned ...//&quot; &quot;interviewA-HA&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="interviewA-HA" tags="nobr" position="225,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé &amp; Nomnom: &#39;&#39;A-HA!&#39;&#39;&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;//&#39;&#39;VERY&#39;&#39; concerned...&#39;&#39;//&quot; &quot;Naming&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Naming" tags="nobr" position="225,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//&#39;&#39;VERY&#39;&#39; concerned...&#39;&#39;//&quot; &quot;Naming&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Naming" tags="nobr" position="350,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU ARE NOW YASYAS!!!&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOUR NAME IS MUFFIN!!!&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;...&quot; &quot;Naming0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Naming0" tags="nobr" position="350,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;Naming0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Naming0" tags="nobr" position="475,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé and Nomnom look at each other, outraged.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The silence between them tells an entire story on its own.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You can feel it.&quot;&gt;&gt;
@@ -1608,7 +1662,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;More terrifying than the dark alleys, more terrifying than the tiny, messy office.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Perhaps even more terrifying than the memory loss itself...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;You feel an urge to drink coffee&quot; &quot;Naming1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Naming1" tags="nobr" position="475,975" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;You feel an urge to drink coffee&quot; &quot;Naming1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Naming1" tags="nobr" position="600,975" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;&#39;&#39;*COUGH*&#39;&#39;&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -1626,7 +1680,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;WHICH ONE DO YOU PREFER ?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I could pick anything, literally anything but those two... names&quot; &quot;Naming2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Naming2" tags="nobr" position="600,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I could pick anything, literally anything but those two... names&quot; &quot;Naming2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Naming2" tags="nobr" position="725,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;PICK ONE&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1645,7 +1699,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//A situation I can&#39;t escape//&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;I&#39;ll go with Yasyas&quot; &quot;Yasyas&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;I&#39;ll go with Muffin&quot; &quot;Muffin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Yasyas" tags="nobr" position="725,975" size="100,100">&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I&#39;ll go with Muffin&quot; &quot;Muffin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Yasyas" tags="nobr" position="850,975" size="100,100">&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Three points for Cannelé//&quot;&gt;&gt;
 /* #score */
@@ -1654,7 +1708,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Let&#39;s go Yasyas, time to retrace your steps and go find your memories!&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Muffin" tags="nobr" position="850,975" size="100,100">&lt;&lt;set $client_name to &quot;Muffin&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="Muffin" tags="nobr" position="975,975" size="100,100">&lt;&lt;set $client_name to &quot;Muffin&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Three points for Nomnom//&quot;&gt;&gt;
 /* #score */
@@ -1663,7 +1717,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I think you&#39;re neat, Muffin. You&#39;re a great person.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now let&#39;s go! It&#39;s time to retrace your steps and go find your memories.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="market_Tails_0" tags="nobr" position="975,975" size="100,100">&lt;&lt;set $market_path to &quot;right&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_Tails_0" tags="nobr" position="1100,975" size="100,100">&lt;&lt;set $market_path to &quot;right&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Five points for Nomnom//&quot;&gt;&gt;
 /* #score */
@@ -1678,7 +1732,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;The Detectives are back to arguing as they head toward the path on the right.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded at the chaotic pair.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_Faces_0" tags="nobr" position="1100,975" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="market_Faces_0" tags="nobr" position="1225,975" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Five points for Cannelé//&quot;&gt;&gt;
 /* #score */
@@ -1693,7 +1747,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;The Detectives are back to arguing as they head toward the path on the left.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded at the chaotic pair.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="market_Hobo" tags="nobr" position="1225,975" size="100,100">&lt;&lt;SetSpeaker &quot;Hobo&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="market_Hobo" tags="nobr" position="100,1100" size="100,100">&lt;&lt;SetSpeaker &quot;Hobo&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//*wink*//&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
@@ -1715,7 +1769,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The cat smiles its wide, troubling smile, turns around and disappears.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Did I just dream this whole thing?&quot; &quot;market_WTF&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="market_WTF" tags="nobr" position="100,1100" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Did I just dream this whole thing?&quot; &quot;market_WTF&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="market_WTF" tags="nobr" position="225,1100" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But the Hoboolean Coin....&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -1734,7 +1788,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Take a deep breath.&quot; &quot;market_CoinGuardian&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="market_CoinGuardian" tags="nobr" position="225,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Take a deep breath.&quot; &quot;market_CoinGuardian&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="market_CoinGuardian" tags="nobr" position="350,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I will keep the coin.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
@@ -1754,7 +1808,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//This is probably a mistake//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//But if this can buy me precious seconds of quiet...//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I&#39;ll do it!!!&quot; &quot;market_Gasp&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="market_Gasp" tags="nobr" position="350,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;I&#39;ll do it!!!&quot; &quot;market_Gasp&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="market_Gasp" tags="nobr" position="475,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé and Nomnom are surprised by this sudden burst of energy.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
@@ -1769,7 +1823,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_path === &quot;right&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Take the right path&quot; &quot;market_RightPath&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="market_LeftPath" tags="nobr" position="475,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="market_LeftPath" tags="nobr" position="600,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The path on the left takes a sharp turn.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The street is indeed narrow, but it is well-lit and the pavement is even.&quot;&gt;&gt;
 
@@ -1835,7 +1889,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A &#39;&#39;dangerous&#39;&#39; criminal...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="market_RightPath" tags="nobr" position="600,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="market_RightPath" tags="nobr" position="725,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The group takes the path on the right.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom is humming enthusiastically while Cannelé sulks.&quot;&gt;&gt;
 
@@ -1875,7 +1929,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;The two detectives turn around, expectantly.&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;Take the Hoboolean Coin out.&quot; &quot;market_Crossroads&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="market_Crossroads" tags="nobr" position="725,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Take the Hoboolean Coin out.&quot; &quot;market_Crossroads&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="market_Crossroads" tags="nobr" position="850,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;//I am terrified of the fact that I can communicate with them now.//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So? Who is Faces, who is Tails?&quot;&gt;&gt;
 
@@ -1890,7 +1944,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//This can&#39;t be happening to me.//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//My karma truly is fucked..//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Sigh&quot; &quot;market_Crossroads2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="market_Crossroads2" tags="nobr" position="850,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Sigh&quot; &quot;market_Crossroads2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="market_Crossroads2" tags="nobr" position="975,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;Should we just...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Flip a coin to decide who gets Tails?&quot;&gt;&gt;
 
@@ -1936,7 +1990,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_Faces&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_Tails&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="market_Faces" tags="nobr" position="975,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_Tails&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="market_Faces" tags="nobr" position="1100,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
@@ -1960,7 +2014,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossC1&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossN1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="market_Tails" tags="nobr" position="1100,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossN1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="market_Tails" tags="nobr" position="1225,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
@@ -1984,31 +2038,31 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossN2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="market_CrossC1" tags="nobr" position="1225,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="market_CrossC1" tags="nobr" position="100,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="market_CrossC2" tags="nobr" position="100,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="market_CrossC2" tags="nobr" position="225,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="market_CrossN1" tags="nobr" position="225,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="market_CrossN1" tags="nobr" position="350,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Nomnom//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="market_CrossN2" tags="nobr" position="350,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="market_CrossN2" tags="nobr" position="475,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Nomnom//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="market_CrossLeft" tags="nobr" position="475,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="market_CrossLeft" tags="nobr" position="600,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The path takes you on the left, and merge with another road.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After a couple more turns, a sign says:&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -2019,7 +2073,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Cannelé is grinning obnoxiously.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The other two decide to ignore them.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossMarket&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="market_CrossAhead" tags="nobr" position="600,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossMarket&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="market_CrossAhead" tags="nobr" position="725,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The group continues straight ahead.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -2033,7 +2087,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//SIGH//&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossLost1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="market_CrossLost1" tags="nobr" position="725,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossLost1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="market_CrossLost1" tags="nobr" position="850,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The road turns right&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Then left.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;It loops.&quot;&gt;&gt;
@@ -2046,7 +2100,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I KNOW WHERE THIS LEADS OK?&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;How long... Have you guys been in this city?&quot; &quot;market_CrossLost2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="market_CrossLost2" tags="nobr" position="850,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;How long... Have you guys been in this city?&quot; &quot;market_CrossLost2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="market_CrossLost2" tags="nobr" position="975,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;How do we keep getting lost??&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;In the CITY CENTRE???&quot;&gt;&gt;
 
@@ -2062,7 +2116,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom confidently takes a turn.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;This can&#39;t be...&quot; &quot;market_CrossLost3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="market_CrossLost3" tags="nobr" position="975,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;This can&#39;t be...&quot; &quot;market_CrossLost3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="market_CrossLost3" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;This...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;This is the Harry Youlost Plaza...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Again.&quot;&gt;&gt;
@@ -2079,7 +2133,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;My time to shine!&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Follow Cannelé on the path veering left&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="market_CrossMarket" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Follow Cannelé on the path veering left&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="market_CrossMarket" tags="nobr" position="1225,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;After what seems like forever, the group eventually arrives close to a big, open market.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Right at the entrance, a man is fumbling around.&quot;&gt;&gt;
 
@@ -2099,7 +2153,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A &#39;&#39;dangerous&#39;&#39; criminal...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="market_PoliceOfficer" tags="nobr" position="1225,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="market_PoliceOfficer" tags="nobr" position="100,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;That&#39;s the police officer! The one I talked to this morning!&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -2231,7 +2285,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;Follow Nomnom&quot; &quot;market_Vendors&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Run after Cannelé&quot; &quot;market_Gamblers&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Snoop around the police officers&quot; &quot;market_Police&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="market_Vendors" tags="nobr" position="100,1350" size="100,100">&lt;&lt;set $market_vendors to true&gt;&gt;
+&lt;&lt;AddOption &quot;Snoop around the police officers&quot; &quot;market_Police&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="market_Vendors" tags="nobr" position="225,1350" size="100,100">&lt;&lt;set $market_vendors to true&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;They&#39;re mostly old ladies.&quot;&gt;&gt;
@@ -2250,7 +2304,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
   &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="market_Gamblers" tags="nobr" position="225,1350" size="100,100">&lt;&lt;set $market_gamblers to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="market_Gamblers" tags="nobr" position="350,1350" size="100,100">&lt;&lt;set $market_gamblers to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé strolls over the table where four people are sitting.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;There is money on the table.&quot;&gt;&gt;
@@ -2335,11 +2389,11 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Pretty please?&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Reluctanly hand over the coin&quot; &quot;market_GamblingCoin&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Vigorously refuse&quot; &quot;market_NoCoin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="market_GamblingCoin" tags="nobr" position="350,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Vigorously refuse&quot; &quot;market_NoCoin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="market_GamblingCoin" tags="nobr" position="475,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I know I am going to regret this...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//... but I am also morbidly curious about this Hanged Poker-faced Maid game.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="market_NoCoin" tags="nobr" position="475,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="market_NoCoin" tags="nobr" position="600,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;DETECTIVE!! I can&#39;t give you the coin??&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//It&#39;s the only thing protecting my peace of mind when you are with Nomnom!!//&quot;&gt;&gt;
 
@@ -2351,7 +2405,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I have a great feeling about this.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So... Please?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Very, &#39;&#39;extremely&#39;&#39;, __absolutely__ relunctanctly hand over the coin.&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="market_Gambling" tags="nobr" position="600,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Very, &#39;&#39;extremely&#39;&#39;, __absolutely__ relunctanctly hand over the coin.&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="market_Gambling" tags="nobr" position="725,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;This might look like a simple 50cts coins...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But it was actually enchanted by a very powerful magic-user from the Towers who gave it to me as a reward for my absolutely &#39;&#39;brilliant&#39;&#39; investigation skills.&quot;&gt;&gt;
 
@@ -2427,7 +2481,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé drags you far from the gambling tables.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Well that was close...&quot; &quot;market_GamblingEnd&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="market_GamblingEnd" tags="nobr" position="725,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Well that was close...&quot; &quot;market_GamblingEnd&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="market_GamblingEnd" tags="nobr" position="850,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I know right?&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Those geezers, they think I&#39;m not used to their tactics by now...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But I&#39;m detective! I won&#39;t fall for their schemes!&quot;&gt;&gt;
@@ -2472,7 +2526,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
   &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="market_Police" tags="nobr" position="850,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="market_Police" tags="nobr" position="975,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;On the opposite side of the market, policemen are huddled together.&quot;&gt;&gt;
@@ -2487,7 +2541,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Police Officers&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;.... Fleurs d&#39;Ame... Marché....&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Go closer&quot; &quot;market_Police1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="market_Police1" tags="nobr" position="975,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
+&lt;&lt;AddOption &quot;Go closer&quot; &quot;market_Police1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="market_Police1" tags="nobr" position="1100,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The conversation can be heard more clearly.&quot;&gt;&gt;
@@ -2522,7 +2576,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
   &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="market_Addict" tags="nobr" position="1100,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="market_Addict" tags="nobr" position="1225,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;An hour after splitting up, everyone meets at the entrance of the market.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The three of them are sitting at a wobbling table, outside a small bistrot.&quot;&gt;&gt;
 
@@ -2697,7 +2751,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 /* cannelé */
 
-&lt;&lt;AddOption &quot;Did this person just mistake us for illegal Fleur dealers?&quot; &quot;market_Debrief&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="market_Debrief" tags="nobr" position="1225,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Did this person just mistake us for illegal Fleur dealers?&quot; &quot;market_Debrief&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="market_Debrief" tags="nobr" position="100,1475" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I mean...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You two might look shady enough...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But me???&quot;&gt;&gt;
@@ -2771,7 +2825,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 /* #NOMNOM */
-/* GIFT + ESCAPE */</tw-passagedata><tw-passagedata pid="111" name="resolutionBackAgency" tags="nobr" position="100,1475" size="100,100"></tw-passagedata><tw-passagedata pid="112" name="Test_Foresight" tags="" position="225,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+/* GIFT + ESCAPE */</tw-passagedata><tw-passagedata pid="112" name="resolutionBackAgency" tags="nobr" position="225,1475" size="100,100"></tw-passagedata><tw-passagedata pid="113" name="Test_Foresight" tags="" position="350,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Mmh... That&#39;s a pretty mirror.&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -2780,23 +2834,22 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;Foresight &quot;6 minutes 30 seconds &quot; &quot; milliseconds&quot; &quot;Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.&quot;&gt;&gt;
 &lt;&lt;Foresight &quot;6.7&quot; &quot; minutes&quot; &quot;Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;FUCK!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Test_Precog" tags="" position="350,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;FUCK!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Test_Precog" tags="" position="475,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Time to blow this thing up&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Test_Slotmachine" tags="" position="475,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Test_Slotmachine" tags="" position="600,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Alright, time to crack this power up.&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph  &quot;There&#39;s something on his coat. Is it &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;food&lt;br/&gt;bloo&lt;br/&gt;???&lt;br&gt;oil@@&lt;/span&gt; ?&quot; &gt;&gt;
 &lt;&lt;AddParagraph  &quot;Now, a multiple length deduction.&quot; &gt;&gt;
-&lt;&lt;AddParagraph  &quot;The man&#39;s clothes are tattered, as if he had been &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;wearing the same outfit for a long time&lt;br/&gt;fighting with chicken ?! damn Richie&lt;br/&gt;eating a loooot of lasagna@@&lt;/span&gt;. This Richie probably &lt;span class=&#39;slotmachine&#39;&gt;@@.slot2; isn&#39;t rich&lt;br/&gt; is aguard&lt;br/&gt; agiant@@.&lt;/span&gt;&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Test_Typewriter" tags="" position="600,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Test_Shake" tags="" position="725,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="Test_Title_Duel" tags="" position="850,1475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph  `&quot;The man&#39;s clothes are tattered, as if he had been &quot;+slot(&quot;wearing the same outfit for a long time&quot;)+&quot;. This Richie probably &quot;+slot(&quot;isn&#39;t rich&quot;,2)+&quot;.&quot;` &gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Test_Typewriter" tags="" position="725,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="Test_Shake" tags="" position="850,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;Oh God, I&#39;m @@.shake;shaking@@!&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Test_Title_Duel" tags="" position="975,1475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Brace yourselves for the...&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;&lt;h2 class=&#39;duel_left&#39;&gt;DIRECTION&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 class=&#39;duel_right&#39;&gt;&amp;nbsp;DUEL&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot; &gt;&gt;
-
-/*Mini changement pour tester git*/</tw-passagedata></tw-storydata>
+&lt;&lt;AddParagraph &quot;&lt;h2 class=&#39;duel_left&#39;&gt;DIRECTION&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 class=&#39;duel_right&#39;&gt;&amp;nbsp;DUEL&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="Test_Tooltip" tags="" position="1100,1475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph `&quot;Yes, my name is &quot;+tooltip(&quot;Cannelé&quot;,&quot;A little cake.&quot;)+&quot;, but its pronounced like &quot;+tooltip(&quot;Cannelé&quot;,&quot;A little annoying.&quot;)`&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="\\s"===e?"\\S":e.replace(/^\[/,"[^"),r="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",n=r.replace("\\-",""),a=function(){return"("+r+"+)\\(([^\\)\\|\\n]+)\\):|("+r+"+):([^;\\|\\n]+);|((?:\\."+r+"+)+);|((?:#"+r+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:t,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:r,anyLetterStrict:n,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){!function(e){if(e&&e.prototype&&null==e.prototype.firstElementChild){var t=Node.ELEMENT_NODE;Object.defineProperty(e.prototype,"firstElementChild",{get:function(){for(var e=this.childNodes,r=0;r<e.length;++r){var n=e[r];if(n.nodeType===t)return n}return null}})}}(window.Node||window.Element)}(),function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=e&&function(){try{var e=document.createElement("audio").play();return e.catch(function(){}),e instanceof Promise}catch(e){}return!1}(),r=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),n=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),i=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),o=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),s=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,audioPromise:t,fileAPI:r,geolocation:n,mutationObserver:a,performance:i,touch:o,transitionEndEvent:s})}(),Visibility=function(){function e(){return Boolean(r&&document[r.hiddenProperty])}function t(){return r&&document[r.stateProperty]||"visible"}var r=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return null}();return Object.freeze(Object.defineProperties({},{isHidden:{value:e},state:{value:t},hiddenProperty:{value:r.hiddenProperty},stateProperty:{value:r.stateProperty},changeEvent:{value:r.changeEvent}}))}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){return r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){switch(n.nodeName.toUpperCase()){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){var n=jQuery(document.createElement("div")),a=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return a.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){a.hasClass("enabled")?(a.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(a.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(n),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(n),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(n),n.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var n=_slicedToArray(e,2),a=n[0],i=n[1];return r(a,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))

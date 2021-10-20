@@ -17,10 +17,10 @@ window.forceDigits = function(number, digits)
 	return base;
 }
 
-window.randomStr = function(length)
+window.randomStr = function(length, alphabet)
 {
-	//var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*";
-	var alphabet = "█░▒▓╬▄▀¶abcdexyzopqrstuv";
+	var alphabet = alphabet || "abcdefghijklmnopqrstuvwxyz";
+	//var alphabet = "█░▒▓╬▄▀¶abcdexyzopqrstuv";
   for(var s=''; s.length < length;)
 	{
 		//s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*'.charAt(Math.random()*62|0);
@@ -100,3 +100,25 @@ window.updatePrecogTimer = function()
 
 window.setInterval(window.updateForesightTimer, foresight_timer_freq);
 window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+
+
+window.tooltip = function(displayed_text, tooltip)
+{
+	return `<span class="tooltip">${displayed_text}<span class='tooltiptext'>${tooltip}</span></span>`;
+}
+
+window.slot = function(right_answer, duration)
+{
+	var duration = duration*1 || 1; // Max 5 !
+	var options = [right_answer];
+
+	for(var i=0; i < 3;i++) // 3 other options, as defined in the css animation frames
+	{
+		// *0.7 because for a non monospace font, random strings have a chance to be longer than the first one
+		options.push(window.randomStr(right_answer.length*0.7));
+	}
+
+	return `<span class='slotmachine'>@@.slot${duration};${options.join("<br/>")}@@</span>`;
+
+
+}
