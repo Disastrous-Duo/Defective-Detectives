@@ -656,7 +656,7 @@
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "WHICH ONE DO YOU PREFER ?">>
 
-<<AddOption "I could pick anything, literally anything else but those two... names" "Naming2">>
+<<AddOption "I could pick anything, literally anything but those two... names" "Naming2">>
 
 :: Naming2 [nobr]
 <<SetSpeaker "Cannelé & Nomnom">>
