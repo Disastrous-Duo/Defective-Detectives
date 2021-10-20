@@ -218,15 +218,20 @@
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
 
-/* NomNom gift -> sees client about to leave with a stain on his shirt */
+<<Foresight "19.3" "seconds" "A cup is broken into several pieces that lie on the ground. The client seems angry and leave through the door. They have a huge stain on their coat." >>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom picks the cup again and sets it a little farther from their guest.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's still a //tad bit// hot.">>
+
 <<Foresight "13.9" "seconds" "Pieces of a broken cup, lying on the ground. The client is leaving through the door, a huge stain on his coat. He looks angry." >>
 
 <<AddParagraph "Nomnom picks up the coffee cup again, and puts it slightly farther on the table.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It's still a //tad bit// hot.">>
-
-
+<<AddParagraph "It's still a ''tad bit'' hot.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>
