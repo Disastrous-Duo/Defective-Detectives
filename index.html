@@ -1059,7 +1059,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;??&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom. The only real detective here.&quot;&gt;&gt;
 
-&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Enter&quot; &quot;interviewInside&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="interviewInside" tags="nobr" position="475,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;After stepping inside, one thing becomes glaringly obvious.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The room is small.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After consideration, small is a nice way to describe the //tiny// cubicle.&quot;&gt;&gt;
@@ -1072,7 +1072,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;Inspect couch on the left&quot; &quot;Left&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Inspect sink on the right&quot; &quot;Right&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="Left" tags="nobr" position="475,725" size="100,100">&lt;&lt;set $interview_left to true&gt;&gt;
+&lt;&lt;AddOption &quot;Inspect the wall&quot; &quot;Wall&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Left" tags="nobr" position="600,725" size="100,100">&lt;&lt;set $interview_left to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The beat-up couch thrones in the room : it must take half the space of the booth&quot;&gt;&gt;
 
@@ -1099,7 +1099,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;interviewTwoDetectives&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Right" tags="nobr" position="600,725" size="100,100">&lt;&lt;set $interview_right to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Right" tags="nobr" position="725,725" size="100,100">&lt;&lt;set $interview_right to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The duo is elbowing their way around the room. They eventually manage to place a stool on the other side of the table facing the couch.&quot;&gt;&gt;
 
@@ -1124,7 +1124,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
   &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;interviewTwoDetectives&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Wall" tags="nobr" position="725,725" size="100,100">&lt;&lt;set $interview_wall to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Wall" tags="nobr" position="850,725" size="100,100">&lt;&lt;set $interview_wall to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.&quot;&gt;&gt;
 
@@ -1150,7 +1150,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_right is true &amp;&amp; $interview_left is true &amp;&amp; $interview_wall is true&gt;&gt;
     &lt;&lt;AddOption &quot;Turn back to the two detectives&quot; &quot;interviewTwoDetectives&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="interviewTwoDetectives" tags="nobr" position="850,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="interviewTwoDetectives" tags="nobr" position="975,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The two detectives are staring back, blankly.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Almost... expecting.&quot;&gt;&gt;
 
@@ -1158,7 +1158,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;So uhm, Nomme Nomme and? Cannelé? Cannelé like the mini cake?&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;It&#39;s pronounced &#39;&#39;non-non&#39;, Nomnom.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;It&#39;s pronounced &#39;&#39;non-non&#39;&#39;, Nomnom.&quot;&gt;&gt; 
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé just grumbles in response.&quot;&gt;&gt;
@@ -1169,13 +1169,14 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 &lt;&lt;AddOption &quot;Observe Nomnom&quot; &quot;interviewNomnom&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Study Cannelé&quot; &quot;interviewCannelé&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="interviewCannelé" tags="nobr" position="975,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Study Cannelé&quot; &quot;interviewCannelé&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="interviewCannelé" tags="nobr" position="1100,725" size="100,100">&lt;&lt;set $interview_cannele to true&gt;&gt;
+&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Their skin is deep brown and their round face is framed by a tangle of soft, black curls that reach the middle of their back.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.&quot;&gt;&gt;
 
-&lt;&lt;AddParagraph &quot;Black ink swirls on Cannelé’s hands, drawing complex patterns on their skin before disappearing behind dark fabric.&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;What truly stands out is Cannelé’s clothing.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;Black ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;However, what truly stands out is Cannelé’s clothing.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A stark contrast with the pitiful state of the cramped office.&quot;&gt;&gt;
 
@@ -1189,7 +1190,8 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
     &lt;&lt;AddOption &quot;Somehow, they look like they’re coming from nobility. *Fallen* nobility...&quot; &quot;interviewNomnom&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice...&quot; &quot;interviewNomnom&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;Why... are they standing on the couch...&quot; &quot;interviewNomnom&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="interviewNomnom" tags="nobr" position="1100,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="interviewNomnom" tags="nobr" position="1225,725" size="100,100">&lt;&lt;set $interview_nomnom to true&gt;&gt;
+&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;if $interview_cannele is true&gt;&gt;
   &lt;&lt;AddParagraph &quot;Nomnom seems significantly taller than Cannelé (Nonobstant the couch).&quot;&gt;&gt;
 
@@ -1216,7 +1218,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
     &lt;&lt;AddOption &quot;I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…&quot; &quot;interviewCannelé&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;I am trying to guess something about this person’s investigation skills but nothing comes to mind… &quot; &quot;interviewCannelé&quot;&gt;&gt;
     &lt;&lt;AddOption &quot;I can’t help it, but this left shoe really intrigues me...&quot; &quot;interviewCannelé&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="Interview" tags="nobr" position="1225,725" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Interview" tags="nobr" position="100,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -1264,7 +1266,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;Who am I?&quot; &quot;Identity&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;What happened?&quot; &quot;Event&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;What&#39;s wrong with this coffee?&quot; &quot;Coffee&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Identity" tags="nobr" position="100,850" size="100,100">&lt;&lt;set $interview_identity to true&gt;&gt;
+&lt;&lt;AddOption &quot;What&#39;s wrong with this coffee?&quot; &quot;Coffee&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Identity" tags="nobr" position="225,850" size="100,100">&lt;&lt;set $interview_identity to true&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph  &quot;@@.precog_color;The client looks old, &lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;around 25 years old.&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;
@@ -1279,7 +1281,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What about your gift?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;What about my gift ?&quot; &quot;Gift&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Gift" tags="nobr" position="225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;What about my gift ?&quot; &quot;Gift&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Gift" tags="nobr" position="350,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Do you know what a gift is ?&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1346,7 +1348,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Event" tags="nobr" position="350,850" size="100,100">&lt;&lt;set $interview_event to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Event" tags="nobr" position="475,850" size="100,100">&lt;&lt;set $interview_event to true&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;How did you find this place?&quot;&gt;&gt;
 
@@ -1409,7 +1411,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Coffee" tags="nobr" position="475,850" size="100,100">&lt;&lt;set $interview_coffee to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Coffee" tags="nobr" position="600,850" size="100,100">&lt;&lt;set $interview_coffee to true&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The coffee... is very special here.&quot;&gt;&gt;
@@ -1449,7 +1451,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $interview_identity is true &amp;&amp; $interview_event is true &amp;&amp; $interview_coffee is true&gt;&gt;
   &lt;&lt;AddOption &quot;Take a deep breath&quot; &quot;Contract&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Contract" tags="nobr" position="600,850" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Contract" tags="nobr" position="725,850" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Do you think you can help me?&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -1459,7 +1461,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Of course! We are professionals.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now let us discuss the terms of the contract&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;The contract ?&quot; &quot;Contract1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Contract1" tags="nobr" position="725,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;The contract ?&quot; &quot;Contract1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Contract1" tags="nobr" position="850,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;If you become our client, we need to draw an official contract.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After all, I am not a swindler-&quot;&gt;&gt;
 
@@ -1471,7 +1473,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;This statement, that should be reassuring, sounds like a threat.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;//Am I really... leaving my fate in the hands of those two??//&quot; &quot;Contract2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;//But somehow... I feel like they might be trustworthy...//&quot; &quot;Contract2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Contract2" tags="nobr" position="850,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//But somehow... I feel like they might be trustworthy...//&quot; &quot;Contract2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Contract2" tags="nobr" position="975,850" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;We hereby commit to finding out the answer to three questions for you:&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Who are you?&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;What&#39;s your gift?&quot;&gt;&gt;
@@ -1516,7 +1518,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Any name? Or an alias?&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;//A heavy tension suddenly fills the room//&quot; &quot;interviewDeepThought&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="interviewDeepThought" tags="nobr" position="975,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;//A heavy tension suddenly fills the room//&quot; &quot;interviewDeepThought&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="interviewDeepThought" tags="nobr" position="1100,850" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Both detectives are suddenly quiet, lost in deep thoughts.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Inspiration?&quot;&gt;&gt;
@@ -1552,17 +1554,17 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;It&#39;s a muff-&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;//I am getting concerned ...//&quot; &quot;interviewA-HA&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="interviewA" tags="nobr" position="1100,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//I am getting concerned ...//&quot; &quot;interviewA-HA&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="interviewA" tags="nobr" position="1225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé &amp; Nomnom: &#39;&#39;A-HA!&#39;&#39;&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;//&#39;&#39;VERY&#39;&#39; concerned...&#39;&#39;//&quot; &quot;Naming&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Naming" tags="nobr" position="1225,850" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;//&#39;&#39;VERY&#39;&#39; concerned...&#39;&#39;//&quot; &quot;Naming&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Naming" tags="nobr" position="100,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOU ARE NOW YASYAS!!!&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;YOUR NAME IS MUFFIN!!!&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;...&quot; &quot;Naming0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Naming0" tags="nobr" position="100,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;Naming0&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Naming0" tags="nobr" position="225,975" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé and Nomnom look at each other, outraged.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The silence between them tells an entire story on its own.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You can feel it.&quot;&gt;&gt;
@@ -1578,7 +1580,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;More terrifying than the dark alleys, more terrifying than the tiny, messy office.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Perhaps even more terrifying than the memory loss itself...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;You feel an urge to drink coffee&quot; &quot;Naming1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Naming1" tags="nobr" position="225,975" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;You feel an urge to drink coffee&quot; &quot;Naming1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Naming1" tags="nobr" position="350,975" size="100,100">&lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;&#39;&#39;*COUGH*&#39;&#39;&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -1596,7 +1598,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;WHICH ONE DO YOU PREFER ?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I could pick anything, literally anything else but those two... names&quot; &quot;Naming2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Naming2" tags="nobr" position="350,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I could pick anything, literally anything else but those two... names&quot; &quot;Naming2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Naming2" tags="nobr" position="475,975" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;PICK ONE&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;???&quot;&gt;&gt;
@@ -1615,7 +1617,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//A situation I can&#39;t escape//&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;I&#39;ll go with Yasyas&quot; &quot;Yasyas&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;I&#39;ll go with Muffin&quot; &quot;Muffin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Yasyas" tags="nobr" position="475,975" size="100,100">&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I&#39;ll go with Muffin&quot; &quot;Muffin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Yasyas" tags="nobr" position="600,975" size="100,100">&lt;&lt;set $client_name to &quot;Yasyas&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Three points for Cannelé//&quot;&gt;&gt;
 /* #score */
@@ -1624,7 +1626,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Let&#39;s go Yasyas, time to retrace your steps and go find your memories!&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Muffin" tags="nobr" position="600,975" size="100,100">&lt;&lt;set $client_name to &quot;Muffin&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Muffin" tags="nobr" position="725,975" size="100,100">&lt;&lt;set $client_name to &quot;Muffin&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Three points for Nomnom//&quot;&gt;&gt;
 /* #score */
@@ -1633,7 +1635,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I think you&#39;re neat, Muffin. You&#39;re a great person.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Now let&#39;s go! It&#39;s time to retrace your steps and go find your memories.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="market_Tails_0" tags="nobr" position="725,975" size="100,100">&lt;&lt;set $market_path to &quot;right&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;I-I didn&#39;t even sign the contract...&quot; &quot;Investigation1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="market_Tails_0" tags="nobr" position="850,975" size="100,100">&lt;&lt;set $market_path to &quot;right&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Five points for Nomnom//&quot;&gt;&gt;
 /* #score */
@@ -1648,7 +1650,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;The Detectives are back to arguing as they head toward the path on the right.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded at the chaotic pair.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="market_Faces_0" tags="nobr" position="850,975" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="market_Faces_0" tags="nobr" position="975,975" size="100,100">&lt;&lt;set $market_path to &quot;left&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//Five points for Cannelé//&quot;&gt;&gt;
 /* #score */
@@ -1663,7 +1665,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;The Detectives are back to arguing as they head toward the path on the left.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hobo is smiling, a bit dumbfounded at the chaotic pair.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="market_Hobo" tags="nobr" position="975,975" size="100,100">&lt;&lt;SetSpeaker &quot;Hobo&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Is this really mag-&quot; &quot;market_Hobo&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_Hobo" tags="nobr" position="1100,975" size="100,100">&lt;&lt;SetSpeaker &quot;Hobo&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//*wink*//&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
@@ -1685,7 +1687,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The cat smiles its wide, troubling smile, turns around and disappears.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Did I just dream this whole thing?&quot; &quot;market_WTF&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="market_WTF" tags="nobr" position="1100,975" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Did I just dream this whole thing?&quot; &quot;market_WTF&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="market_WTF" tags="nobr" position="1225,975" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But the Hoboolean Coin....&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -1704,7 +1706,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Take a deep breath.&quot; &quot;market_CoinGuardian&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="market_CoinGuardian" tags="nobr" position="1225,975" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Take a deep breath.&quot; &quot;market_CoinGuardian&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="market_CoinGuardian" tags="nobr" position="100,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I will keep the coin.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé &amp; Nomnom&quot;&gt;&gt;
@@ -1724,7 +1726,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//This is probably a mistake//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//But if this can buy me precious seconds of quiet...//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;I&#39;ll do it!!!&quot; &quot;market_Gasp&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="market_Gasp" tags="nobr" position="100,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;I&#39;ll do it!!!&quot; &quot;market_Gasp&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="market_Gasp" tags="nobr" position="225,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé and Nomnom are surprised by this sudden burst of energy.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
@@ -1739,7 +1741,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_path === &quot;right&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Take the right path&quot; &quot;market_RightPath&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="market_LeftPath" tags="nobr" position="225,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="market_LeftPath" tags="nobr" position="350,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The path on the left takes a sharp turn.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The street is indeed narrow, but it is well-lit and the pavement is even.&quot;&gt;&gt;
 
@@ -1805,7 +1807,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A &#39;&#39;dangerous&#39;&#39; criminal...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="market_RightPath" tags="nobr" position="350,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="market_RightPath" tags="nobr" position="475,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The group takes the path on the right.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom is humming enthusiastically while Cannelé sulks.&quot;&gt;&gt;
 
@@ -1845,7 +1847,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;The two detectives turn around, expectantly.&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;Take the Hoboolean Coin out.&quot; &quot;market_Crossroads&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="market_Crossroads" tags="nobr" position="475,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Take the Hoboolean Coin out.&quot; &quot;market_Crossroads&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="market_Crossroads" tags="nobr" position="600,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;//I am terrified of the fact that I can communicate with them now.//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So? Who is Faces, who is Tails?&quot;&gt;&gt;
 
@@ -1860,7 +1862,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//This can&#39;t be happening to me.//&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//My karma truly is fucked..//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Sigh&quot; &quot;market_Crossroads2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="market_Crossroads2" tags="nobr" position="600,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Sigh&quot; &quot;market_Crossroads2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="market_Crossroads2" tags="nobr" position="725,1100" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;Should we just...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Flip a coin to decide who gets Tails?&quot;&gt;&gt;
 
@@ -1906,7 +1908,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_Faces&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_Tails&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="market_Faces" tags="nobr" position="725,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_Tails&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="market_Faces" tags="nobr" position="850,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
@@ -1930,7 +1932,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossC1&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossN1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="market_Tails" tags="nobr" position="850,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossN1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="market_Tails" tags="nobr" position="975,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
@@ -1954,31 +1956,31 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;It danses around, flicking between the fancy T and F before falling down.&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Faces&quot; &quot;market_CrossN2&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="market_CrossC1" tags="nobr" position="975,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Tails&quot; &quot;market_CrossC2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="market_CrossC1" tags="nobr" position="1100,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="market_CrossC2" tags="nobr" position="1100,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="market_CrossC2" tags="nobr" position="1225,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Cannelé//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="market_CrossN1" tags="nobr" position="1225,1100" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="market_CrossN1" tags="nobr" position="100,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Tails.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Nomnom//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="market_CrossN2" tags="nobr" position="100,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="market_CrossN2" tags="nobr" position="225,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The Hoboolean coin lands on Faces.&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Faraway Voice&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//One point for Nomnom//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="market_CrossLeft" tags="nobr" position="225,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_CrossAhead&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="market_CrossLeft" tags="nobr" position="350,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The path takes you on the left, and merge with another road.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;After a couple more turns, a sign says:&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -1989,7 +1991,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Cannelé is grinning obnoxiously.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The other two decide to ignore them.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossMarket&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="market_CrossAhead" tags="nobr" position="350,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossMarket&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="market_CrossAhead" tags="nobr" position="475,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The group continues straight ahead.&quot;&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -2003,7 +2005,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;//SIGH//&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossLost1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="market_CrossLost1" tags="nobr" position="475,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;//I hope we will get there soon...//&quot; &quot;market_CrossLost1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="market_CrossLost1" tags="nobr" position="600,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The road turns right&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Then left.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;It loops.&quot;&gt;&gt;
@@ -2016,7 +2018,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I KNOW WHERE THIS LEADS OK?&quot;&gt;&gt;
 
 
-&lt;&lt;AddOption &quot;How long... Have you guys been in this city?&quot; &quot;market_CrossLost2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="market_CrossLost2" tags="nobr" position="600,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;How long... Have you guys been in this city?&quot; &quot;market_CrossLost2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="market_CrossLost2" tags="nobr" position="725,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;How do we keep getting lost??&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;In the CITY CENTRE???&quot;&gt;&gt;
 
@@ -2032,7 +2034,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Nomnom confidently takes a turn.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;This can&#39;t be...&quot; &quot;market_CrossLost3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="market_CrossLost3" tags="nobr" position="725,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;This can&#39;t be...&quot; &quot;market_CrossLost3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="market_CrossLost3" tags="nobr" position="850,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;This...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;This is the Harry Youlost Plaza...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Again.&quot;&gt;&gt;
@@ -2049,7 +2051,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;My time to shine!&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Follow Cannelé on the path veering left&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="market_CrossMarket" tags="nobr" position="850,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddOption &quot;Follow Cannelé on the path veering left&quot; &quot;market_CrossLeft&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="market_CrossMarket" tags="nobr" position="975,1225" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;After what seems like forever, the group eventually arrives close to a big, open market.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Right at the entrance, a man is fumbling around.&quot;&gt;&gt;
 
@@ -2069,7 +2071,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;A &#39;&#39;dangerous&#39;&#39; criminal...&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="market_PoliceOfficer" tags="nobr" position="975,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Wait... I recognize that man!!!&quot; &quot;market_PoliceOfficer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="market_PoliceOfficer" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;That&#39;s the police officer! The one I talked to this morning!&quot;&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
@@ -2201,7 +2203,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;AddOption &quot;Follow Nomnom&quot; &quot;market_Vendors&quot;&gt;&gt;
 &lt;&lt;AddOption &quot;Run after Cannelé&quot; &quot;market_Gamblers&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Snoop around the police officers&quot; &quot;market_Police&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="market_Vendors" tags="nobr" position="1100,1225" size="100,100">&lt;&lt;set $market_vendors to true&gt;&gt;
+&lt;&lt;AddOption &quot;Snoop around the police officers&quot; &quot;market_Police&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="market_Vendors" tags="nobr" position="1225,1225" size="100,100">&lt;&lt;set $market_vendors to true&gt;&gt;
 
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;They&#39;re mostly old ladies.&quot;&gt;&gt;
@@ -2220,7 +2222,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
   &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="market_Gamblers" tags="nobr" position="1225,1225" size="100,100">&lt;&lt;set $market_gamblers to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="market_Gamblers" tags="nobr" position="100,1350" size="100,100">&lt;&lt;set $market_gamblers to true&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé strolls over the table where four people are sitting.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;There is money on the table.&quot;&gt;&gt;
@@ -2305,11 +2307,11 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;Pretty please?&quot;&gt;&gt;
 
 &lt;&lt;AddOption &quot;Reluctanly hand over the coin&quot; &quot;market_GamblingCoin&quot;&gt;&gt;
-&lt;&lt;AddOption &quot;Vigorously refuse&quot; &quot;market_NoCoin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="market_GamblingCoin" tags="nobr" position="100,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Vigorously refuse&quot; &quot;market_NoCoin&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="market_GamblingCoin" tags="nobr" position="225,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I know I am going to regret this...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//... but I am also morbidly curious about this Hanged Poker-faced Maid game.//&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;...&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="market_NoCoin" tags="nobr" position="225,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;...&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="market_NoCoin" tags="nobr" position="350,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;DETECTIVE!! I can&#39;t give you the coin??&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;//It&#39;s the only thing protecting my peace of mind when you are with Nomnom!!//&quot;&gt;&gt;
 
@@ -2321,7 +2323,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;AddParagraph &quot;I have a great feeling about this.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;So... Please?&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Very, &#39;&#39;extremely&#39;&#39;, __absolutely__ relunctanctly hand over the coin.&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="market_Gambling" tags="nobr" position="350,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Very, &#39;&#39;extremely&#39;&#39;, __absolutely__ relunctanctly hand over the coin.&quot; &quot;market_Gambling&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="market_Gambling" tags="nobr" position="475,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;This might look like a simple 50cts coins...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But it was actually enchanted by a very powerful magic-user from the Towers who gave it to me as a reward for my absolutely &#39;&#39;brilliant&#39;&#39; investigation skills.&quot;&gt;&gt;
 
@@ -2397,7 +2399,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Cannelé drags you far from the gambling tables.&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Well that was close...&quot; &quot;market_GamblingEnd&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="market_GamblingEnd" tags="nobr" position="475,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddOption &quot;Well that was close...&quot; &quot;market_GamblingEnd&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="market_GamblingEnd" tags="nobr" position="600,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;I know right?&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Those geezers, they think I&#39;m not used to their tactics by now...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But I&#39;m detective! I won&#39;t fall for their schemes!&quot;&gt;&gt;
@@ -2442,7 +2444,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
   &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="market_Police" tags="nobr" position="600,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="market_Police" tags="nobr" position="725,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;On the opposite side of the market, policemen are huddled together.&quot;&gt;&gt;
@@ -2457,7 +2459,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;SetSpeaker &quot;Police Officers&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;.... Fleurs d&#39;Ame... Marché....&quot;&gt;&gt;
 
-&lt;&lt;AddOption &quot;Go closer&quot; &quot;market_Police1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="market_Police1" tags="nobr" position="725,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
+&lt;&lt;AddOption &quot;Go closer&quot; &quot;market_Police1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="market_Police1" tags="nobr" position="850,1350" size="100,100">&lt;&lt;set $market_police to true&gt;&gt;
 
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;The conversation can be heard more clearly.&quot;&gt;&gt;
@@ -2492,7 +2494,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 &lt;&lt;if $market_vendors is true &amp;&amp; $market_gamblers is true &amp;&amp; $market_police is true&gt;&gt;
   &lt;&lt;AddOption &quot;Regroup&quot; &quot;market_Addict&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="market_Addict" tags="nobr" position="850,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="market_Addict" tags="nobr" position="975,1350" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;An hour after splitting up, everyone meets at the entrance of the market.&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;The three of them are sitting at a wobbling table, outside a small bistrot.&quot;&gt;&gt;
 
@@ -2667,7 +2669,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 /* cannelé */
 
-&lt;&lt;AddOption &quot;Did this person just mistake us for illegal Fleur dealers?&quot; &quot;market_Debrief&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="market_Debrief" tags="nobr" position="975,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
+&lt;&lt;AddOption &quot;Did this person just mistake us for illegal Fleur dealers?&quot; &quot;market_Debrief&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="market_Debrief" tags="nobr" position="1100,1350" size="100,100">&lt;&lt;SetSpeaker $client_name&gt;&gt;
 &lt;&lt;AddParagraph &quot;I mean...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;You two might look shady enough...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;But me???&quot;&gt;&gt;
@@ -2741,7 +2743,7 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 
 
 /* #NOMNOM */
-/* GIFT + ESCAPE */</tw-passagedata><tw-passagedata pid="109" name="resolutionBackAgency" tags="nobr" position="1100,1350" size="100,100"></tw-passagedata><tw-passagedata pid="110" name="Test_Foresight" tags="" position="1225,1350" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
+/* GIFT + ESCAPE */</tw-passagedata><tw-passagedata pid="110" name="resolutionBackAgency" tags="nobr" position="1225,1350" size="100,100"></tw-passagedata><tw-passagedata pid="111" name="Test_Foresight" tags="" position="100,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Mmh... That&#39;s a pretty mirror.&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
@@ -2750,19 +2752,19 @@ the fisherwomen --- FLASH*/</tw-passagedata><tw-passagedata pid="38" name="Falai
 &lt;&lt;Foresight &quot;6 minutes 30 seconds &quot; &quot; milliseconds&quot; &quot;Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.&quot;&gt;&gt;
 &lt;&lt;Foresight &quot;6.7&quot; &quot; minutes&quot; &quot;Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.&quot;&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Nomnom&quot;&gt;&gt;
-&lt;&lt;AddParagraph &quot;FUCK!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Test_Precog" tags="" position="100,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph &quot;FUCK!&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Test_Precog" tags="" position="225,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Time to blow this thing up&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="Test_Slotmachine" tags="" position="225,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;I think my power just gave me this @@.precog_color;&lt;span class=&#39;Precog&#39; data-speed=&#39;3&#39; data-random=&#39;1&#39; data-value=&#39;Long information but super worth it, definitely&#39;&gt;&lt;/span&gt;@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Test_Slotmachine" tags="" position="350,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;Alright, time to crack this power up.&quot;&gt;&gt;
 &lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;SetSpeaker &quot;Cannelé&quot;&gt;&gt;
 &lt;&lt;AddParagraph  &quot;There&#39;s something on his coat. Is it &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;food&lt;br/&gt;bloo&lt;br/&gt;???&lt;br&gt;oil@@&lt;/span&gt; ?&quot; &gt;&gt;
 &lt;&lt;AddParagraph  &quot;Now, a multiple length deduction.&quot; &gt;&gt;
-&lt;&lt;AddParagraph  &quot;The man&#39;s clothes are tattered, as if he had been &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;wearing the same outfit for a long time&lt;br/&gt;fighting with chicken ?! damn Richie&lt;br/&gt;eating a loooot of lasagna@@&lt;/span&gt;. This Richie probably &lt;span class=&#39;slotmachine&#39;&gt;@@.slot2; isn&#39;t rich&lt;br/&gt; is aguard&lt;br/&gt; agiant@@.&lt;/span&gt;&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="113" name="Test_Typewriter" tags="" position="350,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Test_Shake" tags="" position="475,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
-&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Test_Title_Duel" tags="" position="600,1475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
+&lt;&lt;AddParagraph  &quot;The man&#39;s clothes are tattered, as if he had been &lt;span class=&#39;slotmachine&#39;&gt;@@.slot;wearing the same outfit for a long time&lt;br/&gt;fighting with chicken ?! damn Richie&lt;br/&gt;eating a loooot of lasagna@@&lt;/span&gt;. This Richie probably &lt;span class=&#39;slotmachine&#39;&gt;@@.slot2; isn&#39;t rich&lt;br/&gt; is aguard&lt;br/&gt; agiant@@.&lt;/span&gt;&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Test_Typewriter" tags="" position="475,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Typewriter&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Test_Shake" tags="" position="600,1475" size="100,100">&lt;&lt;SetSpeaker &quot;Yasyas&quot;&gt;&gt;
+&lt;&lt;AddParagraph  &quot;@@.shake;Oh God, I&#39;m@@&quot; &gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Test_Title_Duel" tags="" position="725,1475" size="100,100">&lt;&lt;BlankSpeaker&gt;&gt;
 &lt;&lt;AddParagraph &quot;Brace yourselves for the...&quot;&gt;&gt;
 &lt;&lt;AddParagraph &quot;&lt;h2 class=&#39;duel_left&#39;&gt;DIRECTION&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 class=&#39;duel_right&#39;&gt;&amp;nbsp;DUEL&lt;/h2&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&quot; &gt;&gt;
 
