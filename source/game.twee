@@ -35,7 +35,10 @@ A Disco Elysium Fanwork
 <<set $paraAppendMode to false>>
 <<set $client_name to "Yasyas">> /*TODO: Remove this line before release*/
 
-::@include script.twee
+::@include scripts/shortcut.min.twee
+::@include scripts/keyboard.twee
+::@include scripts/magic_effects.twee
+
 ::@include stylesheet.twee
 ::@include disco_elysium_macros.twee
 ::@include magic_macros.twee
