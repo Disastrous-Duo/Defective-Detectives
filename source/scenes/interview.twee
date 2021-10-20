@@ -538,6 +538,9 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Now we just need something to call you.">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "???">>
+
 <<BlankSpeaker>>
 <<AddParagraph  "@@.precog_color;On his coat are embroidered the initials Y. M. <span class='Precog' data-speed='2' data-random='1' data-value='They were sewn by hand, '></span> <span class='Precog' data-speed='3' data-random='1' data-value='must be his own.'></span>@@" >>
 
@@ -562,7 +565,7 @@
 <<AddParagraph "A chair?">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "an alias !">>
+<<AddParagraph "An alias !">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "The sink...">>
@@ -589,7 +592,7 @@
 <<AddOption "//I am getting concerned ...//" "interviewA-HA">>
 
 
-:: interviewA [nobr]
+:: interviewA-HA [nobr]
 
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "Cannelé & Nomnom: ''A-HA!''">>
