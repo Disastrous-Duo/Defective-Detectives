@@ -10,6 +10,11 @@
 <<SetSpeaker "??">>
 <<AddParagraph "Nomnom. The only real detective here.">>
 
+<<AddOption "Enter" "interviewInside">>
+
+
+:: interviewInside [nobr]
+
 <<BlankSpeaker>>
 <<AddParagraph "After stepping inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
@@ -125,7 +130,7 @@
 <<AddParagraph "So uhm, Nomme Nomme and? Cannelé? Cannelé like the mini cake?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It's pronounced ''non-non', Nomnom.">>
+<<AddParagraph "It's pronounced ''non-non'', Nomnom.">> 
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
@@ -140,14 +145,14 @@
 
 
 :: interviewCannelé [nobr]
-
+<<set $interview_cannele to true>>
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.">>
 <<AddParagraph "Their skin is deep brown and their round face is framed by a tangle of soft, black curls that reach the middle of their back.">>
 <<AddParagraph "Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.">>
 
-<<AddParagraph "Black ink swirls on Cannelé’s hands, drawing complex patterns on their skin before disappearing behind dark fabric.">>
-<<AddParagraph "What truly stands out is Cannelé’s clothing.">>
+<<AddParagraph "Black ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
+<<AddParagraph "However, what truly stands out is Cannelé’s clothing.">>
 <<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...">>
 <<AddParagraph "A stark contrast with the pitiful state of the cramped office.">>
 
@@ -165,7 +170,7 @@
 
 
 :: interviewNomnom [nobr]
-
+<<set $interview_nomnom to true>>
 <<BlankSpeaker>>
 <<if $interview_cannele is true>>
   <<AddParagraph "Nomnom seems significantly taller than Cannelé (Nonobstant the couch).">>
