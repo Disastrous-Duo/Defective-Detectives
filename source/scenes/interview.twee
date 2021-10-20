@@ -19,7 +19,14 @@
 <<AddParagraph "After stepping inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
 <<AddParagraph "After consideration, small is a nice way to describe the //tiny// cubicle.">>
-<<AddParagraph "To the left, an old couch is crumbling under a pile of mess. On the other side, a sink and some cups. In front of you, the wall is scattered with papers. A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
+
+<<AddOption "Look around" "interviewInspect">>
+
+:: interviewInspect [nobr]
+<<AddParagraph "To the left, an old couch is crumbling under a pile of mess.">>
+<<AddParagraph "On the other side, a sink and some cups. ">>
+<<AddParagraph "In front of you, the wall is scattered with papers.">>
+<<AddParagraph "A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
 <<set $interview_left to false>>
 <<set $interview_right to false>>
@@ -48,7 +55,7 @@
 <<AddParagraph "From the rubbish cluttering it, emerge a couple blankets, newspapers and a half-eaten croissant.">>
 
 <<SetSpeaker "Leathery Voice">>
-<<AddParagraph "//sigh//">>
+<<AddParagraph "//It hurts..//">>
 
 <<if $interview_right is false>>
   <<AddOption "Inspect sink on the right" "Right">>
@@ -135,6 +142,8 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "A-ah, I see.">>
 
 <<set $interview_nomnom to false>>
 <<set $interview_cannele to false>>
@@ -154,7 +163,7 @@
 <<AddParagraph "Black ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
 <<AddParagraph "However, what truly stands out is Cannelé’s clothing.">>
 <<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...">>
-<<AddParagraph "A stark contrast with the pitiful state of the cramped office.">>
+<<AddParagraph "It creates a ''stark'' contrast with the pitiful state of the cramped office.">>
 
 
 <<if $interview_nomnom is true>>
@@ -236,7 +245,7 @@
 <<AddParagraph "Nomnom picks up the coffee cup again, and puts it slightly farther on the table.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It's still a ''tad bit'' hot.">>
+<<AddParagraph "Better.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>
