@@ -581,6 +581,11 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "The couch...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ee-yas?">>
+
+<<SetSpeaker "Nomnom">>
 <<AddParagraph "Wait, what's that...">>
 
 <<SetSpeaker "Cannelé">>
