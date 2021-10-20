@@ -53,7 +53,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-  <<AddOption "Turn back to the two detectives" "Interview">>
+  <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
 <</if>>
 
 
@@ -82,7 +82,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-  <<AddOption "Turn back to the two detectives" "Interview">>
+  <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
 <</if>>
 
 :: Wall [nobr]
@@ -111,7 +111,88 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Turn back to the two detectives" "Interview">>
+    <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
+<</if>>
+
+
+
+:: interviewTwoDetectives [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The two detectives are staring back, blankly.">>
+<<AddParagraph "Almost... expecting.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "So uhm, Nomme Nomme and? Cannelé? Cannelé like the mini cake?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's pronounced ''non-non', Nomnom.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé just grumbles in response.">>
+
+
+<<set $interview_nomnom to false>>
+<<set $interview_cannele to false>>
+
+
+<<AddOption "Observe Nomnom" "interviewNomnom">>
+<<AddOption "Study Cannelé" "interviewCannelé">>
+
+
+:: interviewCannelé [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.">>
+<<AddParagraph "Their skin is deep brown and their round face is framed by a tangle of soft, black curls that reach the middle of their back.">>
+<<AddParagraph "Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.">>
+
+<<AddParagraph "Black ink swirls on Cannelé’s hands, drawing complex patterns on their skin before disappearing behind dark fabric.">>
+<<AddParagraph "What truly stands out is Cannelé’s clothing.">>
+<<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...">>
+<<AddParagraph "A stark contrast with the pitiful state of the cramped office.">>
+
+
+<<if $interview_nomnom is true>>
+  <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "Interview">>
+  <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "Interview">>
+  <<AddOption "Why... are they standing on the couch..." "Interview">>
+
+  <<else>>
+    <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "interviewNomnom">>
+    <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "interviewNomnom">>
+    <<AddOption "Why... are they standing on the couch..." "interviewNomnom">>
+<</if>>
+
+
+:: interviewNomnom [nobr]
+
+<<BlankSpeaker>>
+<<if $interview_cannele is true>>
+  <<AddParagraph "Nomnom seems significantly taller than Cannelé (Nonobstant the couch).">>
+
+  <<else>>
+      <<AddParagraph "Nomnom seems significantly taller than Cannelé.">>
+<</if>>
+
+<<AddParagraph "It might be just an impression given by their hair, though.">>
+
+<<AddParagraph "Reminiscent of a black cloud rising towards the sky, Nomnom’s hair sculpt their head into a roughly pineconed shape.">>
+
+<<AddParagraph "Their navy blue trench coat contrasts their warm tan skin nicely. Even though their shoes are of rather good quality, they also seem to be worn-out in unusual places.">>
+
+<<AddParagraph "If one had to guess, they’d probably say that the left one is a bit more //aerodynamic// than the other.">>
+<<AddParagraph "But why…?">>
+
+
+<<if $interview_cannele is true>>
+  <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "Interview">>
+  <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "Interview">>
+  <<AddOption "I can’t help it, but this left shoe really intrigues me..." "Interview">>
+
+  <<else>>
+    <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "interviewCannelé">>
+    <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "interviewCannelé">>
+    <<AddOption "I can’t help it, but this left shoe really intrigues me..." "interviewCannelé">>
 <</if>>
 
 
@@ -120,7 +201,7 @@
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Have a sit. Would you like a drink?">>
+<<AddParagraph "Please, have a sit. Would you like a drink?">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh, uh, gladly. I would love a cup of-">>
@@ -144,6 +225,8 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "It's still a //tad bit// hot.">>
+
+
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>
@@ -443,15 +526,65 @@
 <<AddParagraph "Any name? Or an alias?">>
 
 
-<<AddOption "//A heavy tension suddenly fills the room//" "Naming">>
+<<AddOption "//A heavy tension suddenly fills the room//" "interviewDeepThought">>
+
+
+:: interviewDeepThought [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
+<<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
+<<AddParagraph "Inspiration?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Name">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "A chair?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "an alias !">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The sink...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ali ?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Oh no ew, dirty">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Iasias...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The couch...">>
+<<AddParagraph "Wait, what's that...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Yas ! Yas?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's a muff-">>
+
+<<AddOption "//I am getting concerned ...//" "interviewA-HA">>
+
+
+:: interviewA [nobr]
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "Cannelé & Nomnom: ''A-HA!''">>
+
+<<AddOption "//''VERY'' concerned...''//" "Naming">>
+
 
 
 :: Naming [nobr]
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "A good name... IasIas, Iasyas... Yasyas!!!">>
+<<AddParagraph "YOU ARE NOW YASYAS!!!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It has to be Muffin!!!">>
+<<AddParagraph "YOUR NAME IS MUFFIN!!!">>
 
 
 <<AddOption "..." "Naming0">>
@@ -461,12 +594,13 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom look at each other, outraged.">>
 <<AddParagraph "The silence between them tells an entire story on its own.">>
+<<AddParagraph "You can feel it.">>
 <<AddParagraph "This...">>
 <<AddParagraph "This ridiculous situation has happened before...">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé........">>
-<<AddParagraph "Nomnom..............">>
+<<AddParagraph "Nomnom...................">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This piece of knowledge is terrifying.">>
