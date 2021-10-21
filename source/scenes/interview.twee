@@ -120,7 +120,7 @@
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Have a sit. Would you like a drink?">>
+<<AddParagraph "Please, have a sit. Would you like a drink?">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh, uh, gladly. I would love a cup of-">>
