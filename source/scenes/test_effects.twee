@@ -43,3 +43,16 @@
 ::Test_Tooltip
 <<BlankSpeaker>>
 <<AddParagraph `"Yes, my name is "+tooltip("Cannelé","A little cake.")+", but its pronounced like "+tooltip("Cannelé","A little annoying.")`>>
+
+::Test_Audio
+<<BlankSpeaker>>
+<<AddParagraph "Music can only be started if triggered by player interaction">>
+<<AddOption "Wow, ok." "Test_Audio2">>
+
+::Test_Audio2
+<<audio "intro"  volume 0 fadein>>
+<<AddOption "Okay, now go in a fade out!" "Test_Audio3">>
+
+::Test_Audio3
+<<audio "intro"  volume 1 fadeout>>
+<<AddParagraph "Damn, that was cool." >>

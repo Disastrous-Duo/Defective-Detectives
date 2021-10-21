@@ -1,5 +1,13 @@
+
+:: Start
+<<BlankSpeaker>>
+<<AddOption "START GAME" "Falaisant">>
+
+
+
 /* Falaisant : Introduction of the city */
 :: Falaisant [nobr]
+<<audio "intro"  volume 0 fadein>>
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
@@ -64,6 +72,7 @@
 
 :: Falaisant9 [nobr]
 <<BlankSpeaker>>
+<<audio "intro"  volume 1 fadeout>>
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
 
