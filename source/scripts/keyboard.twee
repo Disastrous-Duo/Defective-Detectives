@@ -22,7 +22,7 @@ $(document).on("keyup", function (e) {
     $("#ContinueBtn").click();
   }
 
-	// NUMBERS
+	// NUMBERS 
   if ((e.keyCode >= 49 && e.keyCode <= 57) && (document.getElementById("OptionList"))) {
     var list = document.getElementById("OptionList");
     var childIndex = e.keyCode - 49; // 0 for '1', 1 for '2', etc

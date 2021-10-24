@@ -56,7 +56,7 @@
 <<AddParagraph "What just happened?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The cat smiles its wide, troubling smile, turns around and disappears.">>
+<<AddParagraph "Philibert the Cat draws a wide, troubling smile, turns around and disappears.">>
 
 <<AddOption "Did I just dream this whole thing?" "market_WTF">>
 
@@ -582,7 +582,7 @@
 <<AddParagraph "My superior! My boss is calling for me!! Apologies gentlefolks, duty calls!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The street is still empty, no boss to be see, but Officer aufHißer runs as if the landlord was at his heels.">>
+<<AddParagraph "The street is still empty, no boss to be see, but Officer aufHißer runs as if the landlord itself was at his heels.">>
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "Well that was...">>
@@ -634,7 +634,7 @@
 <<AddParagraph "Don't, just... Don't do this.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom turns away from Cannelé and whispers.">>
+<<AddParagraph `"Nomnom turns away from Cannelé and whispers to "+$client_name+"."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "If you go with that idiot, just... be careful, ok?">>
@@ -658,28 +658,6 @@
 <<AddOption "Run after Cannelé" "market_Gamblers">>
 <<AddOption "Snoop around the police officers" "market_Police">>
 
-
-:: market_Vendors [nobr]
-<<set $market_vendors to true>>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "They're mostly old ladies.">>
-<<AddParagraph "My plan is simple">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Trying to appeal to them and get free stuff.">>
-
-<<if $market_gamblers is false>>
-<<AddOption "Find Cannelé" "market_Gamblers">>
-<</if>>
-
-<<if $market_police is false>>
-<<AddOption "Sneak close to the group of officers" "market_Police">>
-<</if>>
-
-<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
-  <<AddOption "Regroup" "market_Addict">>
-<</if>>
 
 
 

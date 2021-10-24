@@ -1,0 +1,46 @@
+/*
+
+Note pour Younès only:
+- stand is held by two married elderly women named both with name beginning by "Jo"
+
+( subtly exposes that gender norms are not the ones from IRL)
+
+- One of them is nice with Nomnom and tells him that "People with matching names make great couples"
+==> a foreshadowing for Jayde and Nomnom whose original name is Jameel
++ it allows a Jo&Jo stand pun
+
+
+
+
+Stand Name: The World... of Cheese
+Stand User: Jo
+
+
+[1] [2] [3]
+
+[4] [5] [6]
+
+*/
+
+
+:: market_Vendors [nobr]
+<<set $market_vendors to true>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "They're mostly old ladies.">>
+<<AddParagraph "My plan is simple">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Trying to appeal to them and get free stuff.">>
+
+<<if $market_gamblers is false>>
+<<AddOption "Find Cannelé" "market_Gamblers">>
+<</if>>
+
+<<if $market_police is false>>
+<<AddOption "Sneak close to the group of officers" "market_Police">>
+<</if>>
+
+<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
+  <<AddOption "Regroup" "market_Addict">>
+<</if>>

@@ -94,7 +94,9 @@ $args[0] -
 <<nobr>>
 <<widget "SetSpeaker">>
 <<set _speaker_name to ($args[0].toLowerCase())>>
-  <<if $yellow_speaker.includes(_speaker_name)>>
+  <<if _speaker_name == "cannelé & nomnom">>
+    <<set $currentspeaker to ("<span class='speaker'>@@.red_speaker;Cannelé@@ & @@.blue_speaker;Nomnom@@</span>")>>
+  <<elseif $yellow_speaker.includes(_speaker_name)>>
     <<set $currentspeaker to ("@@.yellow_speaker.speaker;" + $args[0] + "@@")>>
   <<elseif $blue_speaker.includes(_speaker_name)>>
     <<set $currentspeaker to ("@@.blue_speaker.speaker;" + $args[0] + "@@")>>
