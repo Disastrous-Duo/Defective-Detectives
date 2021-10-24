@@ -1,0 +1,157 @@
+
+:: draft
+/*
+
+Note pour Younès only:
+- stand is held by two married elderly women named both with name beginning by "Jo"
+( subtly exposes that gender norms are not the ones from IRL)
+- One of them is nice with Nomnom and tells him that "People with matching names make great couples"
+==> a foreshadowing for Jayde and Nomnom whose original name is Jameel
++ it allows a Jo&Jo stand pun
+
+
+
+Stands that sell wares, various good from overseas.
+
+> Yasyas, my dear fellow, I am going to tell the secret of how to conduct a fruitful investigation.
+> Oh, I'd love to.
+> The secret is to scan every stand and look for the person that seems the most nice/agreable...
+> Right. So she can answer our quest-
+> ...so we can snatch free food samples.
+> I dont know what I expected
+Nomnom points at stand at the far end of the market.
+A round old lady seems to be laughing her heart out with a client.
+> I've found our target!
+
+
+
+
+Stand Name: The World... of Cheese
+
+()
+Stand's Seller: Jocelaine
+Stand's vendor
+
+Joséphine
+
+
+[1] [2] [3]
+
+[4] [5] [6]
+
+[3] = World of cheese
+[6] = Police investigating.
+[2] = J
+
+in front of the stand, another one
+
+
+Jocelaine! I hope you're not giving free sample to customers again. Cheese doesn't grow on trees, you know?
+Gives them a napkin.
+Jocelaine! i hope you're not giving free napkins again! Paper doesn't grow on tree, you know?
+Yassine: I'm pretty sure that it does...
+
+[6]
+
+Ribbons. White and red strap.
+N: Those colors. Is this a... Candy cane shop?
+Y: I think it's a...
+N: Or maybe a barber?
+Y: I think it's a police investigation scene, Nomnom.
+N: What makes you say that?
+Y: The officer who's looking at you.
+
+
+*/
+
+
+:: market_Vendors [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom is carefully observing the market's stands. Most of them sell culinary goods, often imported from overseas.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph `"Hey, "+$client_name+". Would you like to know the secret on how to conduct a fruitful investigation?"`>>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Oh. I'd love to.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The first step, my dear fellow, is to observe every person and choose the one that seems the most friendly.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Right. So we can ask them some questi-">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "...so we can snatch free food samples, exactly.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "//I... don't know what I expected//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom points to a stand, at the far end of the market.">>
+<<AddParagraph "Leaning on the counter, a round elder lady is speaking with a client.">>
+<<AddParagraph "She seems to be laughing her heart out.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I've found our target!">>
+
+<<AddOption "Follow Nomnom, who is already rushing there." market_Vendors_2>>
+
+:: market_Vendors_2
+<<BlankSpeaker>>
+<<AddOption "The detective does not go straight to the lady's stand, but hides behind a nearby empty one.">>
+<<AddOption "Their client hesists a bit, but finally join them.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "...Why are we here?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's the only empty stand in the whole market. But we're lucky: we have a great view of our target from here.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "I mean, why are we //hiding//?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "So we can learn more about the target, of course.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Of course.">>
+
+<<BlankSpeaker>>
+<<AddOption "Still hidden, Nomnom slides their head out to take a peak at the old lady.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The target is a woman keeping a stand. Her age ranges between... I'd say 60 and 200 years old.">>
+<<AddParagraph "Stand Name: «The World... of Cheese!»">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "That explains the quite strong fragrance emanating from there.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Uh? You can smell it from there? Your nose is quite-">>
+
+<<SetSpeaker "">>
+<<AddParagraph "Jocelaine! Are you giving free ">>
+
+
+:: market_Vendors_old [nobr]
+<<set $market_vendors to true>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "They're mostly old ladies.">>
+<<AddParagraph "My plan is simple">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Trying to appeal to them and get free stuff.">>
+
+<<if $market_gamblers is false>>
+<<AddOption "Find Cannelé" "market_Gamblers">>
+<</if>>
+
+<<if $market_police is false>>
+<<AddOption "Sneak close to the group of officers" "market_Police">>
+<</if>>
+
+<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
+  <<AddOption "Regroup" "market_Addict">>
+<</if>>
