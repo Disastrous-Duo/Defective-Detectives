@@ -53,6 +53,12 @@ Yassine: I'm pretty sure that it does...
 
 [6]
 
+
+A stand encircled with red and white stripped tape.
+A man in red uniform is standing of it.
+Looks like a wooden soldier.
+Marche au pas.
+
 Ribbons. White and red strap.
 N: Those colors. Is this a... Candy cane shop?
 Y: I think it's a...
@@ -82,14 +88,14 @@ Y: The officer who's looking at you.
 <<AddParagraph "Right. So we can ask them some questi-">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "...so we can snatch free food samples, exactly.">>
+<<AddParagraph "--so we can snatch free food samples, exactly.">>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "//I... don't know what I expected//">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom points to a stand, at the far end of the market.">>
-<<AddParagraph "Leaning on the counter, a round elder lady is speaking with a client.">>
+<<AddParagraph "Leaning on the counter, a round lady is speaking with a client.">>
 <<AddParagraph "She seems to be laughing her heart out.">>
 
 <<SetSpeaker "Nomnom">>
@@ -97,13 +103,13 @@ Y: The officer who's looking at you.
 
 <<AddOption "Follow Nomnom, who is already rushing there." market_Vendors_2>>
 
-:: market_Vendors_2
+:: market_Vendors_2 [nobr]
 <<BlankSpeaker>>
-<<AddOption "The detective does not go straight to the lady's stand, but hides behind a nearby empty one.">>
-<<AddOption "Their client hesists a bit, but finally join them.">>
+<<AddParagraph "The detective does not go straight to the lady's stand, but hides behind a nearby empty one.">>
+<<AddParagraph "Their client hesitates a bit, but finally joins them.">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "...Why are we here?">>
+<<AddParagraph "...Why did we come here?">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "It's the only empty stand in the whole market. But we're lucky: we have a great view of our target from here.">>
@@ -118,20 +124,110 @@ Y: The officer who's looking at you.
 <<AddParagraph "Of course.">>
 
 <<BlankSpeaker>>
-<<AddOption "Still hidden, Nomnom slides their head out to take a peak at the old lady.">>
+<<AddParagraph "Still hidden, Nomnom slides their head out to take a peak at the vendor.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "The target is a woman keeping a stand. Her age ranges between... I'd say 60 and 200 years old.">>
-<<AddParagraph "Stand Name: «The World... of Cheese!»">>
+<<AddParagraph "The target is a woman keeping a stand. Her age ranges between... I'd say 45 and 110 years old.">>
+<<AddParagraph "''Stand Name'': « //The World... of Cheese!// »">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "That explains the quite strong fragrance emanating from there.">>
+<<AddParagraph "That explains the quite strong @@.shake;fragrance@@ emanating from there.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Uh? You can smell it from there? Your nose is quite-">>
 
-<<SetSpeaker "">>
-<<AddParagraph "Jocelaine! Are you giving free ">>
+<<AddOption "They are interrupted by a voice coming from behind the vendor's stand." "market_Vendors_3">>
+
+:: market_Vendors_3 [nobr]
+<<SetSpeaker "Voice">>
+<<AddParagraph "Jocelaine! Do you have some spare change? ">>
+
+<<SetSpeaker "Target">>
+<<AddParagraph "Yes honey, just a sec!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Héhé. Perfect.">>
+<<AddParagraph "''Target Name'': « //Jocelaine// »">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom licks the tip of their hand and quickly readjusts their hair with it.">>
+<<AddParagraph "(It's not very effective.)">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Alright, follow my lead.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "And how exactly should I do that, detective?">>
+
+<<AddOption "Nomnom is already heading to Jocelaine's stand." "market_Vendors_4">>
+
+:: market_Vendors_4 [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "Jocelaine is a round lady, wearing a fushia apron and a big smile on her face.">>
+
+<<SetSpeaker "Jocelaine" >>
+<<AddParagraph "Good morning!">>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph "Good morning, Jo! How are you doing?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Jocelaine smiles morphes into a confused face." >>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Do I know y...">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom starts mimicking a sad face. Her smile quickly resurfaces." >>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "I'm doing fantastic, thank you!!">>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph "Excellent! Got any new cheese today?">>
+
+<<BlankSpeaker>>
+<<AddParagraph `"Nomnom gestures to "+$client_name+", asking him to come closer."` >>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "He-hello!" >>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph `"My friend "+$client_name+", is new to the city and I'd like to show him some of the best food we have here."` >>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Ri-right. As they say." >>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph `"Oh Monsieur "+$client_name+", Welcome to Falaisant! I hope you're going to love it here."`>>
+<<AddParagraph `"My name's Jocelaine. My friends call me Joss, and my past lovers call me Jo."`>>
+<<AddParagraph "I'll let you decide how you want to call me hahaha!" >>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "^^oh shit.^^" >>
+
+<<SetSpeaker "Voice">>
+<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes? Take care of them! They don't grow on trees you know." >>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "And this voice coming from the stand behind me is my wife, Joséphine." >>
+
+<<BlankSpeaker>>
+<<AddParagraph `"Jocelaine is still laughing. Nomnom seems busy removing unwanted mental images from their head. This leaves only "+$client_name+" to do the talking."`>>
+
+<<AddOption "Ask about Jocelaine & Joséphine" "Joceline_wife">>
+<<AddOption "Ask about the cheese" "Jocelaine_cheese" >>
+
+:: Jocelaine_cheese
+
+:: Jocelaine_wife
+// *jo*ecelaine and *jo*séphine uh? matching names
+// secret to happy, lasting relationships is matching names!
+// Muffin looks at *No*mnom. far away in the market, *Ca*nnelé sneezes.
+// You know what Miss Jocelaine? I think I believe you.
+
+:: Joecelaine_sugar
 
 
 :: market_Vendors_old [nobr]

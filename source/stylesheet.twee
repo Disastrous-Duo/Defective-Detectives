@@ -67,6 +67,11 @@ a:active {
   color: #e4b934;
 }
 
+.fushia_speaker
+{
+  color: #FF0080;
+}
+
 .leather_speaker {
   color: #6e5334;
 }

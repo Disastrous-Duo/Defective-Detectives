@@ -29,8 +29,9 @@ A Disco Elysium Fanwork
 <<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???"]>>
 <<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
 <<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
-<<set $purple_speaker to ["cannelé & nomnom"]>>
+<<set $purple_speaker to ["voice", "joséphina"]>>
 <<set $leather_speaker to ["leathery voice", "couch"]>>
+<<set $fushia_speaker to ["target","jocelaine"]>>
 <<set $greentext to [""]>>
 <<set $paraAppendMode to false>>
 <<set $client_name to "Yasyas">> /*TODO: Remove this line before release*/
