@@ -106,6 +106,8 @@ $args[0] -
     <<set $currentspeaker to ("@@.purple_speaker.speaker;" + $args[0] + "@@")>>
   <<elseif $leather_speaker.includes(_speaker_name)>>
     <<set $currentspeaker to ("@@.leather_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $fushia_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.fushia_speaker.speaker;" + $args[0] + "@@")>>
   <<else>>
     <<set $currentspeaker to ("@@.speaker;"+$args[0]+"@@")>>
 <</if>>
