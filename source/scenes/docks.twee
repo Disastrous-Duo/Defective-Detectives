@@ -1,0 +1,61 @@
+:: docks [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "When the group eventually stops running, they are panting, out of breath.">>
+<<AddParagraph "They also quickly come to realize that they're absolutely lost.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "We are absolutely lost.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//It wouldn't be the first time today...//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Most importantly.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I LOST MY SHOE?!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "No, WE HAVE A GUN!">>
+
+<<AddOption "This situation... scares me" "aGunAndNoShoe">>
+
+
+:: aGunAndNoShoe [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They all stare at each other, then at the gun in Cannelé's hand and finally at Nomnom's bare left foot.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "How is it that things just keep getting worse">>
+<<AddParagraph "//And I keep regretting hiring these... detectives...//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "To be fair, that's entirely Nomnom's fault.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "WHAT ? YOU WERE GOING TO GET SHOT BY A POLICE OFFICER I SAVED YOUR ASS AND THAT'S WHAT I GET?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Well, maybe you're lying who knows...">>
+
+<<BlankSpeaker>>
+<<AddParagraph "This is going to escalate.">>
+<<AddParagraph "A loud cough interrupts the arguing pair.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I would like to remind you two that :">>
+<<AddParagraph "1. We are lost.">>
+<<AddParagraph "2. Cannelé, give me the gun.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Surprised by the suddenly commanding tone, Cannelé hands over the weapon to the probably most reasonable person in the group.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "3? WE. ARE. LOST.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom look down, chastised.">>
+
+<<AddOption "What should we do, now?" "aGunAndNoShoe">>
+
+:: 
