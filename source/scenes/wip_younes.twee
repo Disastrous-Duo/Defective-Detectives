@@ -154,7 +154,7 @@ Y: The officer who's looking at you.
 <<AddParagraph "(It's not very effective.)">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Alright, follow my lead.">>
+<<AddParagraph "I have everything I need. Follow my lead.">>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "And how exactly should I do that, detective?">>
@@ -173,16 +173,19 @@ Y: The officer who's looking at you.
 <<AddParagraph "Good morning, Jo! How are you doing?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Jocelaine smiles morphes into a confused face." >>
+<<AddParagraph "Jocelaine's smile morphes into a confused face." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "Do I know y...">>
+<<AddParagraph "Excuse me, do I know y...">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom starts mimicking a sad face. Her smile quickly resurfaces." >>
+<<AddParagraph "Nomnom starts mimicking a sad face. Her smile instantly resurfaces." >>
 
 <<SetSpeaker "Jocelaine">>
 <<AddParagraph "I'm doing fantastic, thank you!!">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Nomnom//">>
 
 <<SetSpeaker "Nomnom" >>
 <<AddParagraph "Excellent! Got any new cheese today?">>
@@ -200,32 +203,75 @@ Y: The officer who's looking at you.
 <<AddParagraph "Ri-right. As they say." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph `"Oh Monsieur "+$client_name+", Welcome to Falaisant! I hope you're going to love it here."`>>
+<<AddParagraph `"Oh Monsieur "+$client_name+", welcome to Falaisant! I hope you're going to love it here."`>>
 <<AddParagraph `"My name's Jocelaine. My friends call me Joss, and my past lovers call me Jo."`>>
 <<AddParagraph "I'll let you decide how you want to call me hahaha!" >>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "^^oh shit.^^" >>
+<<AddParagraph "^^oh no^^" >>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Minus one point for Nomnom//">>
 
 <<SetSpeaker "Voice">>
-<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes? Take care of them! They don't grow on trees you know." >>
+<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes? Take care of them! They don't grow on trees, you know." >>
 
 <<SetSpeaker "Jocelaine">>
 <<AddParagraph "And this voice coming from the stand behind me is my wife, Joséphine." >>
 
 <<BlankSpeaker>>
-<<AddParagraph `"Jocelaine is still laughing. Nomnom seems busy removing unwanted mental images from their head. This leaves only "+$client_name+" to do the talking."`>>
+<<AddParagraph `"Jocelaine is still laughing. Nomnom seems busy removing unwanted mental pictures from their head. This leaves only "+$client_name+" to do the talking."`>>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Uhm. S-so..." >>
 
 <<AddOption "Ask about Jocelaine & Joséphine" "Joceline_wife">>
 <<AddOption "Ask about the cheese" "Jocelaine_cheese" >>
 
-:: Jocelaine_cheese
+:: Jocelaine_cheese [nobr]
 
-:: Jocelaine_wife
+:: Jocelaine_wife [nobr]
 // joecelaine and joséphine uh? matching names
 // secret to happy, lasting relationships is matching names!
 // Muffin: Cannelé
 // Nomnom
+
+> Your name is ''Jo''celaine and your wife's is ''Jo''séphine. That's...
+Jocelaine draws a big smile.
+> ...amusing.
+
+> Right! I'm so glad you noticed.
+> We've been married for quite some time now, and one thing I've learned is that...
+
+Jocelaine leans on the counter, about to confide.
+
+//> ...the secret to happy, lasting relationships is *matching names*.
+//> ...matching names make happy, lasting relationships.
+
+Jocelaine se redresse.
+
+And that doesn't just apply to romance! Even food pairings work well when the ingredients start with the same sounds. For example...
+
+She tries to think of an example.
+
+> ''Coco''nut and ''Coco''a?
+> Good one! I was thinking of ''Br''ead and ''Br''oth.
+> There's also ''Chick''en & ''Chick''peas.
+> ''O''lives and ''O''melette.
+> ''Ch''erries and ''Ch''ocolate.
+> ''To''fu & ''To''ast
+> ''Yo''ghurt and ''Yo''lk!
+
+Both Jocelaine and $client_name look at Nomnom, in disgust.
+
+> To be frank, I'm not sure it would be very tasty.
+> Uh? But I heard they were both rich in broteine?
+
+
+> And not just
+
+
+> There's
 
 :: Joecelaine_sugar
 
