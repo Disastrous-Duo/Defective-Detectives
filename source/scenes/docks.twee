@@ -44,18 +44,56 @@
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "I would like to remind you two that :">>
-<<AddParagraph "1. We are lost.">>
+<<AddParagraph "1. We are lost">>
+<<AddParagraph "''Because'' of you.">>
 <<AddParagraph "2. Cannelé, give me the gun.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Surprised by the suddenly commanding tone, Cannelé hands over the weapon to the probably most reasonable person in the group.">>
+<<AddParagraph "Surprised by the suddenly commanding tone, Cannelé hands over the weapon to the probably only sensible person in the group.">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "3? WE. ARE. LOST.">>
+<<AddParagraph "3. WE. ARE. LOST.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom look down, chastised.">>
 
-<<AddOption "What should we do, now?" "aGunAndNoShoe">>
+<<SetSpeaker $client_name>>
+<<AddParagraph "//This feels... nice//">>
 
-:: 
+<<AddOption "What should we do, now?" "docksWhatNext">>
+
+
+:: docksWhatNext [nobr]
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Let's find our way back">>
+<<AddParagraph "But let's avoid the marketplace, shall we?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom mutters, mimicking Cannelé.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Gneugneugneu let's avoid the marketplace, what are you a //genius//?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The group pauses and take a look around them.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Isn't this Falaisant's harbor?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I mean...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Probably?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They're right by the city's docks.">>
+<<AddParagraph "Moored to the quay, a ship seems to take all the space in the marina.">>
+<<AddParagraph "On the wharf, a crowd is lined up, waiting. Some angry shouts resound. They have probably been standing there for a while.">>
+<<AddParagraph "Half hidden behind a dark corner of the pier, wooden creates are piled up in a messy jumble. They feel somehow... familiar.">>
+
+
+<<set $interview_identity to false>>
+<<set $interview_event to false>>
+<<set $interview_coffee to false>>
