@@ -154,7 +154,7 @@ Y: The officer who's looking at you.
 <<AddParagraph "(It's not very effective.)">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Alright, follow my lead.">>
+<<AddParagraph "I have everything I need. Follow my lead.">>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "And how exactly should I do that, detective?">>
@@ -170,19 +170,22 @@ Y: The officer who's looking at you.
 <<AddParagraph "Good morning!">>
 
 <<SetSpeaker "Nomnom" >>
-<<AddParagraph "Good morning, Jo! How are you doing?">>
+<<AddParagraph "Good morning, ''Jo''. How are you doing?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Jocelaine smiles morphes into a confused face." >>
+<<AddParagraph "Jocelaine's smile morphes into a confused face." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "Do I know y...">>
+<<AddParagraph "Excuse me, uhm, do I know y...">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom starts mimicking a sad face. Her smile quickly resurfaces." >>
+<<AddParagraph "Nomnom starts mimicking a sad expression. Her smile instantly resurfaces." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "I'm doing fantastic, thank you!!">>
+<<AddParagraph "I mean... I'm doing fantastic, thank you!!">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Nomnom//">>
 
 <<SetSpeaker "Nomnom" >>
 <<AddParagraph "Excellent! Got any new cheese today?">>
@@ -200,32 +203,118 @@ Y: The officer who's looking at you.
 <<AddParagraph "Ri-right. As they say." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph `"Oh Monsieur "+$client_name+", Welcome to Falaisant! I hope you're going to love it here."`>>
-<<AddParagraph `"My name's Jocelaine. My friends call me Joss, and my past lovers call me Jo."`>>
-<<AddParagraph "I'll let you decide how you want to call me hahaha!" >>
+<<AddParagraph `"Oh Monsieur "+$client_name+", welcome to Falaisant! I hope you're going to love it here."`>>
+<<AddParagraph `"My name's Jocelaine. My friends call me Joss, and my past lovers call me ''Jo''."`>>
+<<AddParagraph "I'll let you decide how you want to call me. Ha ha ha!" >>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "^^oh shit.^^" >>
+<<AddParagraph "^^oh no what have I done^^" >>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Minus one point for Nomnom//">>
 
 <<SetSpeaker "Voice">>
-<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes? Take care of them! They don't grow on trees you know." >>
+<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes? Take care of them! They don't grow on trees, you know." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "And this voice coming from the stand behind me is my wife, Joséphine." >>
+<<AddParagraph "..aaand this voice coming from the stand behind me is my wife, Joséphine." >>
 
 <<BlankSpeaker>>
-<<AddParagraph `"Jocelaine is still laughing. Nomnom seems busy removing unwanted mental images from their head. This leaves only "+$client_name+" to do the talking."`>>
+<<AddParagraph `"Jocelaine is still laughing. Nomnom seems busy removing unwanted mental pictures from their head. This leaves only "+$client_name+" to do the talking."`>>
 
-<<AddOption "Ask about Jocelaine & Joséphine" "Joceline_wife">>
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Uhm. S-so..." >>
+
+<<AddOption "Ask about Jocelaine & Joséphine" "Jocelaine_wife">>
 <<AddOption "Ask about the cheese" "Jocelaine_cheese" >>
 
-:: Jocelaine_cheese
+:: Jocelaine_cheese [nobr]
 
-:: Jocelaine_wife
-// *jo*ecelaine and *jo*séphine uh? matching names
-// secret to happy, lasting relationships is matching names!
-// Muffin looks at *No*mnom. far away in the market, *Ca*nnelé sneezes.
-// You know what Miss Jocelaine? I think I believe you.
+
+
+
+:: Jocelaine_wife [nobr]
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "Your name is ''Jo''celaine and your wife's is ''Jo''séphine. That's..." >>
+
+<<BlankSpeaker>>
+<<AddParagraph "Jocelaine draws a big smile.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "...amusing." >>
+
+<<SetSpeaker `"Jocelaine"`>>
+<<AddParagraph `"Right?! I'm so glad you noticed."` >>
+<<AddParagraph `"We've been married for quite some time now, and one thing I've learned is that..."` >>
+
+<<BlankSpeaker>>
+<<AddParagraph "Jocelaine leans on the counter, about to confide." >>
+
+<<SetSpeaker `"Jocelaine"`>>
+<<AddParagraph `"...matching names make happy, lasting relationships."` >>
+
+<<AddParagraph "Not only for romance! Even food pairings go well together when the ingredients start with the same sounds. Like..." >>
+
+
+<<BlankSpeaker>>
+<<AddParagraph "She tries to think of an example." >>
+
+<<AddOption "''Coco''nut and ''Coco''a?" "Jocelaine_wife_2">>
+<<AddOption "''Ch''erries and ''Ch''ocolate?" "Jocelaine_wife_2">>
+
+:: Jocelaine_wife_2 [nobr]
+
+<<AddParagraph "Good one! I was thinking of ''Br''ead and ''Br''oth.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "You're right. There's also...">>
+<<AddOption "''To''fu & ''To''ast" "Jocelaine_wife_3">>
+<<AddOption "''Mu''shroom and ''Mu''stard" "Jocelaine_wife_3">>
+
+::Jocelaine_wife_3  [nobr]
+<<SetSpeaker `"Jocelaine"`>>
+<<AddParagraph "Hmm, sounds delicious." >>
+<<AddParagraph "''O''lives and ''O''melette!">>
+
+<<AddOption "''Bee''f & ''Bee''t!" "Jocelaine_wife_4">>
+<<AddOption "''Ra''men & ''Ra''dish!" "Jocelaine_wife_4">>
+
+::Jocelaine_wife_4  [nobr]
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Yes!">>
+<<AddParagraph "''Chick''en & ''Chick''peas!">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "''Yo''ghurt and ''Yo''lk!">>
+
+<<BlankSpeaker>>
+<<AddParagraph `"Both Jocelaine and "+$client_name+" look at Nomnom, in disgust."`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "What? Yoghurt and yolk are both liquid, and full of protein. Pretty good pairing to me.">>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "//Nomnom baffles me sometimes.//">>
+<<AddOption "Suddenly, a realization." "Jocelaine_wife_5">>
+
+
+:: Jocelaine_wife_5 [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph  "« //@@.blue_speaker;Nom@@nom.// »">>
+<<AddParagraph  "« //@@.red_speaker;Ca@@nnelé.// »">>
+<<AddParagraph  "« //Matching names make happy relationships.// »" >>
+
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "...">>
+<<AddParagraph "You know what Jocelaine? You are right. Frighteningly right.">>
+
+<<SetSpeaker `"Jocelaine"`>>
+<<AddParagraph "Ha ha ha! Of course I am.">>
+<<AddParagraph "Now, what can I do for you?">>
+
+<<AddOption "Ask about the cheese" "Jocelaine_cheese" >>
+
+
 
 :: Joecelaine_sugar
 
