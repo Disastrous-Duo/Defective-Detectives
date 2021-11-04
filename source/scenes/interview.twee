@@ -291,8 +291,8 @@
 <<SetSpeaker "???">>
 <<AddParagraph "Yes, I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what ''real'' coffee looks like.">>
 
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "//The lad squints, unconvinced.//">>
+<<BlankSpeaker>>
+<<AddParagraph "//Nomnom squints, unconvinced.//">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Yeah ? Give me the Laws of Magic then.">>
@@ -337,7 +337,7 @@
 <<AddParagraph "Excellent! And do you know what your own gift is- ''yelp''">>
 
 <<BlankSpeaker>>
-<<AddParagraph "They glare at each other. This is going to be long.">>
+<<AddParagraph "The detectives glare at each other. This is going to be long.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "No, I have no idea...">>
@@ -407,7 +407,7 @@
 <<AddParagraph "Nothing. I looked into all my pockets, but I have nothing...">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "So, a cat stole the only lead you had about your identity, I see.">>
+<<AddParagraph "So, a cat stole the only lead you had about your identity. I see.">>
 
 <<if $interview_identity is false>>
 <<AddOption "Who am I ?" "Identity">>
@@ -602,7 +602,7 @@
 :: interviewA-HA [nobr]
 
 <<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "Cannelé & Nomnom: ''A-HA!''">>
+<<AddParagraph "''A-HA!''">>
 
 <<AddOption "//''VERY'' concerned...''//" "Naming">>
 
@@ -654,11 +654,16 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "LOOK AT YASYAS HE OBVIOUSLY LIKES MY PICK BETTER?? NO ONE WANTS TO BE CALLED MUFFIN">>
+<<AddParagraph "I HEARD IT MEANS COOCHIE IN SOME STREET SLANG TOO!!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "W-WHAT? AT LEAST IT ''MEANS'' SOMETHING, NOT LIKE... YASYAS???">>
 
 <<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "ANYWAY">>
 <<AddParagraph "WHICH ONE DO YOU PREFER ?">>
 
-<<AddOption "I could pick anything, literally anything but those two... names" "Naming2">>
+<<AddOption "I could pick anything, literally anything but those two... words" "Naming2">>
 
 
 :: Naming2 [nobr]
