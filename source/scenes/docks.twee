@@ -10,7 +10,7 @@
 <<AddParagraph "//It wouldn't be the first time today...//">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Most importantly.">>
+<<AddParagraph "More importantly.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I LOST MY SHOE?!">>
@@ -30,7 +30,7 @@
 <<AddParagraph "//And I keep regretting hiring these... detectives...//">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "To be fair, that's entirely Nomnom's fault.">>
+<<AddParagraph "To be fair, it is entirely Nomnom's fault.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "WHAT ? YOU WERE GOING TO GET SHOT BY A POLICE OFFICER I SAVED YOUR ASS AND THAT'S WHAT I GET?">>
@@ -45,7 +45,7 @@
 <<SetSpeaker $client_name>>
 <<AddParagraph "I would like to remind you two that :">>
 <<AddParagraph "1. We are lost">>
-<<AddParagraph "''Because'' of you.">>
+<<AddParagraph "''Because of you.''">>
 <<AddParagraph "2. Cannelé, give me the gun.">>
 
 <<BlankSpeaker>>
@@ -108,7 +108,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "The vessel was imposing, 300 people could line up and barely meet both ends.">>
 <<AddParagraph "The reddish hull, the wide decks and the three masts paint a striking picture in the busy pier.">>
-<<AddParagraph "Delicate letters, carved in the wood, read //The Spying Glass//.">>
+<<AddParagraph "Delicate letters, carved in the wood, read //The Barking Glass//.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Okay, it's just a boat. Next.">>
@@ -436,10 +436,10 @@
 <<AddParagraph "SILENCE!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The merchant's awkward but amused smile is jumping between those three unusual customers.">>
+<<AddParagraph "The merchant wears an awkward but amused expression as their attention jumps between the three unusual customers.">>
 
 <<SetSpeaker "Street Vendor">>
-<<AddParagraph "Three Cannelés, is it? Be careful, this is the original recipe, it was cooked with wine.">>
+<<AddParagraph "Three Cannelés, is it? Be careful, this is the original recipe, it was cooked with a little bit of rum.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Excellent!">>
@@ -460,10 +460,10 @@
 
 
 <<SetSpeaker "Street Vendor">>
-<<AddParagraph "Thank you! Till next timen young'uns!">>
+<<AddParagraph "Thank you! Till next time young'uns!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The seller leaves, happy.">>
+<<AddParagraph "The seller leaves, happy about this deal.">>
 <<AddParagraph "Nomnom distributes the cakes, not ignoring their fellow detective ''for once''.">>
 <<AddParagraph "By then, Cannelé is positively seething.">>
 
@@ -483,11 +483,11 @@
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "This is... really good.">>
-<<AddParagraph "The sweetness blends very well with the bitter taste of the wine.">>
+<<AddParagraph "The sweetness blends very well with the bitter taste of the rum.">>
 <<AddParagraph "The crispy caramelized shell contrasts nicely with the chewy inside.">>
+<<AddParagraph "The alcohol is a bit unexpected but it's subtle and luscious...">>
 <<AddParagraph "This..">>
 <<AddParagraph "Is delicious...">>
-<<AddParagraph "The alcohol is a bit unexpected but it's nice...">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Told you it was good...">>
@@ -499,7 +499,7 @@
 <<AddParagraph "Cannelé stares back, sticks out their tongue.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "DIE YOU OLD LOSER.">>
+<<AddParagraph "DIE, YOU OLD LOSER.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "HUDEHOIFHOIQDHOZIMDJ">>
@@ -583,8 +583,6 @@
 <</if>>
 
 
-
-
 :: docksCrates [nobr]
 <<set $docksCrates to true>>
 <<SetSpeaker "Cannelé">>
@@ -595,11 +593,12 @@
 <<AddParagraph "A putrid scent of piss, beer, vomit and many more unindentifiable odors fills the air.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "AH! You are WEAK Cannelé! I know it mus tbe there !!">>
+<<AddParagraph "AH! You are WEAK Cannelé! THIS IS WHY YOU MAKE SUCH A POOR DETECTIVE!">>
+<<AddParagraph "Something is in there, I can feel it in my bones.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom turns around">>
-<<AddParagraph `"What about you, " + $client_name + "? Are you as weak as the spoiled princess over there?"`>>
+<<AddParagraph `"What about you, " + $client_name + "? Are you as //delicate// as the spoiled princess over there?"`>>
 
 <<AddOption "Bear with the smell and follow Nomnom" "docksCratesNomnom">>
 <<AddOption "Give up and stick with Cannelé" "docksNoCrates">>
@@ -616,18 +615,18 @@
 <<AddParagraph "I've pieced it all together... I CAN READ THE SIGNS OF THE UNIVERSE!">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "Oh, so I ''am'' going to regret this...">>
+<<AddParagraph "Oh, so I ''am'' going to regret this.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Don't those crates remind you of something...">>
-<<AddParagraph "Or...">>
+<<AddParagraph "Or">>
 <<AddParagraph "Someone ?!">>
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "AH!!">>
 
 <<AddOption "It does!" "docksCratesYes">>
-<<AddOption "Doesn't ring a bell" "docksCratesNo">>
+<<AddOption "You really ARE crazy!" "docksCratesNo">>
 
 :: docksCratesYes [nobr]
 <<SetSpeaker $client_name>>
@@ -644,7 +643,7 @@
 <<AddParagraph "Has to be!">>
 <<AddParagraph "Any great detective does ''not'' believe in coincidences.">>
 
-<<AddOption "Nothing has made sense, so this could actually... work?" "docksCratesSummon1">>
+<<AddOption "Nothing has made sense so far, so this could actually... work?" "docksCratesSummon1">>
 <<AddOption "I'm just going to... leave you alone now, ok?" "docksNoCrates">>
 
 :: docksCratesNo [nobr]
@@ -664,7 +663,7 @@
 <<AddParagraph "THE HOBOOLEAN MASTER!">>
 <<AddParagraph "He must be there...">>
 
-<<AddOption "Nothing has made sense, so this could actually... work?" "docksCratesSummon1">>
+<<AddOption "Nothing has made sense so far, so this could actually... work?" "docksCratesSummon1">>
 <<AddOption "I'm just going to... leave you alone now, ok?" "docksNoCrates">>
 
 
@@ -685,7 +684,7 @@
 <<AddParagraph "WHISPERING HOBO, I SUMMON THEE.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Nothing, is what's hidden. Nomnom is just a third rate detective">>
+<<AddParagraph "Nothing, is what's hidden. Nomnom is just a third rate detective diagnosed with first rate delusion.">>
 
 <<AddOption "It's... hard to disagree..." "docksCratesEnd">>
 
@@ -705,7 +704,7 @@
 <<AddParagraph "SHOW YOURSELF!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom then stops and leans forward and whispers.">>
+<<AddParagraph "Nomnom then stops shouting, leans forward and whispers.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Now, say it with me.">>
@@ -721,7 +720,7 @@
 <<AddParagraph "SHOW YOURSELF!">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "WHISPERING uhhh HOBO! PLEASE APPEAR">>
+<<AddParagraph "WHISPERING uhhh HOBO! PLEASE APPEAR...?">>
 <<AddParagraph "//Or I'll faint because of this smell...//">>
 
 <<SetSpeaker "Nomnom">>
@@ -737,7 +736,7 @@
 <<AddParagraph "WHISPERING HOBO, ANSWER YOUR LOYAL DISCIPLE.">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "PLEASE DO">>
+<<AddParagraph "PLEASE DO!!">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I BESTOW THIS HALF EATEN MOZARELLA SANDWICH AS AN OFFERING.">>
@@ -752,13 +751,14 @@
 :: docksCratesSummon4 [nobr]
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom searches in their pockets and fish out a candle and a match.">>
-<<AddParagraph "They light it, and start muttering some obscure psalms">>
+<<AddParagraph "Nomnom searches their pockets and somehow fishes out a candle and a match.">>
+<<AddParagraph "They light the candle and start muttering some obscure psalms">>
 
 <<AddOption "Wait what ?" "docksCratesSummon5">>
 <<AddOption "I have to leave. Now." "docksNoCrates">>
 
-docksCratesSummon5 [nobr]
+
+:: docksCratesSummon5 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom suddenly trips and loses their balance as they fall over.">>
 <<AddParagraph "A disgusting sound can be heard and the disgusting smell gets impossibly more intense.">>
