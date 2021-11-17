@@ -171,8 +171,20 @@
 <<SetSpeaker $client_name>>
 <<AddParagraph "If I don't want to lose his hirees, he must make haste and follow them." >>
 
-<<AddOption "Run after Nomnom" "market_Tails_0">>
-<<AddOption "Run after Cannelé" "market_Faces_0">>
+<<AddOption "Run after Nomnom" "Pause">>
+<<AddOption "Run after Cannelé" "Pause">>
+
+
+:: Pause [nobr]
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What are you looking at?" >>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Scram!!!!" >>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I am ''so'' sorry about them.">>
 
 
 
