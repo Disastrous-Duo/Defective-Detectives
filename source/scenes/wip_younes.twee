@@ -66,6 +66,15 @@ N: Or maybe a barber?
 Y: I think it's a police investigation scene, Nomnom.
 N: What makes you say that?
 Y: The officer who's looking at you.
+_____________
+
+
+Cheese
+N:Did you see a cat??
+Cheese -> Mouse -> Cat
+J: looking for mices, other shop.
+Restaurant, but dirty/sketchy. Strangely popular tho.
+J: Not sure you can't snoop around there, but *points*
 
 
 */
@@ -214,7 +223,8 @@ Y: The officer who's looking at you.
 <<AddParagraph "//Minus one point for Nomnom//">>
 
 <<SetSpeaker "Voice">>
-<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes? Take care of them! They don't grow on trees, you know." >>
+<<AddParagraph "Jocelaine! Are you still embarassing the clients with your jokes?">>
+<<AddParagraph "Take care of them! They don't grow on trees, you know." >>
 
 <<SetSpeaker "Jocelaine">>
 <<AddParagraph "..aaand this voice coming from the stand behind me is my wife, Joséphine." >>
@@ -229,13 +239,66 @@ Y: The officer who's looking at you.
 <<AddOption "Ask about the cheese" "Jocelaine_cheese" >>
 
 :: Jocelaine_cheese [nobr]
+<<set $jocelaine_cheese to true>>
 
+<<SetSpeaker `$client_name`>>
+<<AddParagraph "So. Nomnom told me that you sell the best cheese this side of Falaisant.">>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Sure I do!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Can we taste some?">>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Well...">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Jocelaine quickly glances left, then right.">>
+<<AddParagraph "She leans on the counter, and whispers.">>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Be discrete, okay?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Jocelaine puts a small plate in front of them.">>
+<<AddParagraph "She then places small pieces of cheese on it.">>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Quick!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom extends their hand to reach the plate.">>
+<<AddParagraph "Before they do, a voice erupts from behind the stand.">>
+
+<<SetSpeaker "Joséphine">>
+<<AddParagraph "Jocelaine! I hope you're not giving free samples to customers again.">>
+<<AddParagraph "Cheese doesn't grow on trees, you know?">>
+
+<<SetSpeaker "Jocelaine">>
+<<AddParagraph "Just a little, honey! I'm building customer loyalty.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "''*nom*''... ''*nom*''...">>
+
+<<AddOption "Nomnom seems pretty loyal." "Jocelaine_cheese_2">>
+
+:: Jocelaine_cheese_2 [nobr]
+
+- You ''*nom*'' weren't kidding ''*nom*'' this cheese is ''*nom*'' excellent!
+- Of course it is, ha ha ha!
+- Let's see.
+Yassine takes a piece of cheese.
+
+-
 
 
 
 :: Jocelaine_wife [nobr]
+<<set $jocelaine_wife to true>>
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "Your name is ''Jo''celaine and your wife's is ''Jo''séphine. That's..." >>
+<<AddParagraph "Your name is ''Jo''celaine and your wife's is ''Jo''séphine.">>
+<<AddParagraph "That's..." >>
 
 <<BlankSpeaker>>
 <<AddParagraph "Jocelaine draws a big smile.">>
@@ -253,7 +316,8 @@ Y: The officer who's looking at you.
 <<SetSpeaker `"Jocelaine"`>>
 <<AddParagraph `"...matching names make happy, lasting relationships."` >>
 
-<<AddParagraph "Not only for romance! Even food pairings go well together when the ingredients start with the same sounds. Like..." >>
+<<AddParagraph "And not only for romance!">>
+<<AddParagraph "Even food pairings taste better when their ingredients start with the same sounds. Like..." >>
 
 
 <<BlankSpeaker>>
@@ -290,7 +354,8 @@ Y: The officer who's looking at you.
 <<AddParagraph `"Both Jocelaine and "+$client_name+" look at Nomnom, in disgust."`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "What? Yoghurt and yolk are both liquid, and full of protein. Pretty good pairing to me.">>
+<<AddParagraph "What? Yoghurt and yolk are both liquid, and full of protein.">>
+<<AddParagraph "Pretty good pairing to me.">>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "//Nomnom baffles me sometimes.//">>
@@ -306,7 +371,8 @@ Y: The officer who's looking at you.
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "...">>
-<<AddParagraph "You know what Jocelaine? You are right. Frighteningly right.">>
+<<AddParagraph "You know what Ms. Jocelaine? You are right.">>
+<<AddParagraph "Frighteningly right.">>
 
 <<SetSpeaker `"Jocelaine"`>>
 <<AddParagraph "Ha ha ha! Of course I am.">>
