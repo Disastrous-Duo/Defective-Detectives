@@ -582,7 +582,11 @@
 <<AddParagraph "My superior! My boss is calling for me!! Apologies gentlefolks, duty calls!">>
 
 <<BlankSpeaker>>
+<<<<<<< HEAD
 <<AddParagraph "The street is still empty, no boss to be see, but Officer aufHißer runs as if the landlord itself was at his heels.">>
+=======
+<<AddParagraph "The street is still empty, no boss to be seen, but Officer aufHißer runs as if his landlord was at his heels.">>
+>>>>>>> dev-lo
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "Well that was...">>
@@ -702,7 +706,7 @@
 <<AddParagraph "Detective? What are you doing?">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Oh nothing, just a good old game of Hanged Poker-faced Maid">>
+<<AddParagraph "Oh nothing, just a good old game of Hanged Poker-faced Maid!">>
 
 <<BlankSpeaker>>
 <<AddParagraph "One of the ladies at the table hand over the worn out deck of cards to Cannelé, who starts shuffling.">>
@@ -998,7 +1002,7 @@
 <<AddParagraph "BITCH?">>
 
 <<SetSpeaker "Waiter">>
-<<AddParagraph "Should I bring 3 cups od Spicy Cocoa, a plate of biscuits and a croissant?">>
+<<AddParagraph "Should I bring 3 cups of Spicy Cocoa, a plate of biscuits and a croissant?">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This would've been the best solution but...">>
@@ -1037,6 +1041,7 @@
 <<SetSpeaker "????">>
 <<AddParagraph "Hi, my name is Richie and-">>
 
+<<BlankSpeaker>>
 <<AddParagraph  "@@.precog_color;The man's clothes are tattered, <span class='Precog' data-speed='1' data-random='0' data-value='as if he had been wearing the same outfit for a long time :'> </span> this Richie probably <span class='Precog' data-speed='4' data-random='1' data-value='rich.'></span>@@">>
 
 
@@ -1045,7 +1050,7 @@
 
 <<SetSpeaker "Richie">>
 <<AddParagraph "It might sound weird but I saw y'all go around the market asking questions.">>
-<<AddParagraph "Very brave of you to do that right un der th enose of the cops.">>
+<<AddParagraph "Very brave of you to do that right under the nose of those cops.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Richie's looks around once, twice and bends down again.">>
@@ -1073,8 +1078,7 @@
 
 <<SetSpeaker "Richie">>
 <<AddParagraph "No? I mean the Fleurries!">>
-
-<<AddParagraph "The The Âmoc-Havoc?, the gifty-pennies, the ....">>
+<<AddParagraph "The The Âmoc-Havoc, the gifty-pennies, the shickshacks?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "?">>
