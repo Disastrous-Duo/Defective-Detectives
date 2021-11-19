@@ -230,7 +230,9 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "..aaand this voice coming from the stand behind me is my wife, Joséphine." >>
 
 <<BlankSpeaker>>
-<<AddParagraph `"Jocelaine is still laughing. Nomnom seems busy removing unwanted mental pictures from their head. This leaves only "+$client_name+" to do the talking."`>>
+<<AddParagraph `"Jocelaine is still laughing.">>
+<<AddParagraph "Nomnom seems busy removing unwanted mental pictures from their head.">>
+<<AddParagraph "This leaves only "+$client_name+" to do the talking."`>>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "Uhm. S-so..." >>
@@ -258,7 +260,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "She leans on the counter, and whispers.">>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "Be discrete, okay?">>
+<<AddParagraph "Be discreet, okay?">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Jocelaine puts a small plate in front of them.">>
@@ -281,16 +283,44 @@ J: Not sure you can't snoop around there, but *points*
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "''*nom*''... ''*nom*''...">>
 
-<<AddOption "Nomnom seems pretty loyal." "Jocelaine_cheese_2">>
+<<AddOption "Nomnom seems pretty loyal already." "Jocelaine_cheese_2">>
 
 :: Jocelaine_cheese_2 [nobr]
 
 - You ''*nom*'' weren't kidding ''*nom*'' this cheese is ''*nom*'' excellent!
 - Of course it is, ha ha ha!
 - Let's see.
-Yassine takes a piece of cheese.
+Yassine takes a piece of cheese and puts it in his mouth.
 
--
+- Hmmm. Crumbly, ivory, and a strong salty flavor.
+- Is it a Bleu?
+- ''**nom**''... ''**nom**''...
+- Ha ha, no!
+- Wait. An [acidic] after-taste, that takes your whole mouth?
+- ...it's *Roquefort*!
+- Yes!!
+- You do know your cheeses well, Monsieur $client_name.
+
+$client_name blushes a little. This compliment visibly touched him.
+Well... Thank you.
+
+Nomnom puts their hand on their client's shoulders.
+- Yeah, good job!
+- Maybe you're a cheese producer, or something?
+- Haha, yeah maybe.
+When they remove it, a visible cheese stain stays on the coat.
+
+"Madame Jocelaine, can I borrow a tissue?"
+
+<<AddParagraph "Jocelaine quickly glances left, then right.">>
+
+She slowly hands a paper towel to $client_name.
+_do it quick please_
+$client_name extends their hand to reach for the towel.
+Before they do, a voice erupts from behind he counter
+
+Jocelaine! I hope you're not giving free napkins again!
+Paper doesn't grow on tree, you know?
 
 
 
@@ -371,7 +401,7 @@ Yassine takes a piece of cheese.
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "...">>
-<<AddParagraph "You know what Ms. Jocelaine? You are right.">>
+<<AddParagraph "You know what Madame Jocelaine? You are right.">>
 <<AddParagraph "Frighteningly right.">>
 
 <<SetSpeaker `"Jocelaine"`>>
@@ -382,7 +412,7 @@ Yassine takes a piece of cheese.
 
 
 
-:: Joecelaine_sugar
+:: Jocelaine_sugar
 
 
 :: market_Vendors_old [nobr]
