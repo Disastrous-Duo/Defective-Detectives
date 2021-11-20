@@ -1,0 +1,52 @@
+:: Scoreboard [script]
+
+
+
+let flipper = (id) => `<div class="flipper" id="${id}">
+      <div class="gear"></div>
+      <div class="gear"></div>
+      <div class="top">
+        <div class="flipper_text">0</div>
+      </div>
+      <div class="bottom">
+        <div class="flipper_text">0</div>
+      </div>
+    </div>`;
+
+
+
+
+$(`<div class="clock">${flipper("score-cannelé")} ${flipper("score-nomnom")}</div>`).insertAfter("#story-author");
+
+/* delete previous elements ?
+
+why does it not lag on the codepen ?
+*/
+window.flipNumber = function(el, newnumber) {
+
+  var thistop = el.find(".top").clone();
+  var thisbottom = el.find(".bottom").clone();
+  thistop.addClass("new");
+  thisbottom.addClass("new");
+  thisbottom.find(".flipper_text").text(newnumber);
+  el.find(".top").after(thistop);
+  el.find(".top.new").append(thisbottom);
+  el.addClass("flipping");
+  el.find(".top:not(.new)").find(".flipper_text").text(newnumber);
+  setTimeout(function () {
+    el.find(".bottom:not(.new)").find(".flipper_text").text(newnumber);
+  }, 500);
+}
+
+// function setTime() {
+//
+//   setInterval(function()
+//   {
+//     flipNumber($("#score-nomnom"),randint(0,9));
+//     flipNumber($("#score-cannelé"),randint(0,9));
+//   },1000);
+// }
+//
+// $(function () {
+//   setTime();
+// });

@@ -7,6 +7,13 @@ const precog_tries = 8; // number of tries before getting a right letter
 const precog_random_tries = 4; // it's faster, because you can't read it as well
 
 
+window.randint  = function(min, max)
+{
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 window.forceDigits = function(number, digits)
 {
 	var base = number+"";

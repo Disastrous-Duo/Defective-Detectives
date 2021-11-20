@@ -1,0 +1,39 @@
+:: Foresight [Widget widget]
+<<nobr>>
+<<widget "Foresight">>
+<<set _scene_text to ("@@.foresight;"+$args[2]+"@@")>>
+<<AddParagraph _scene_text >>
+<<set _countdown to ("@@.foresight;Time before impact: "+$args[0]+"@@")>>
+<<set _countdown to _countdown+("@@.Tickdown.foresight;@@")>>
+<<set _countdown to _countdown+("@@.foresight;"+$args[1]+"@@")>>
+<<BlankSpeaker>>
+<<AddParagraph _countdown >>
+<</widget>>
+<</nobr>>
+
+:: Tickdown [Widget widget]
+<<nobr>>
+<<widget "Tickdown">>
+<<set _scene_text to ('@@.Tickdown;@@')>>
+<<AddParagraph _scene_text >>
+<</widget>>
+<</nobr>>
+
+
+
+/* rarely used this way. Most often its done inline */
+:: Precog [Widget widget]
+<<nobr>>
+<<widget "Precog">>
+<<set _scene_text to ("@@.precog_color_color;<span class='Precog' data data-value='"+$args[0]+"'></span>@@")>>
+<<AddParagraph _scene_text >>
+<</widget>>
+<</nobr>>
+
+:: PrecogRandom [Widget widget]
+<<nobr>>
+<<widget "PrecogRandom">>
+<<set _scene_text to ("@@.precog_color_color;<span class='PrecogRandom' data-value='"+$args[0]+"'></span>@@")>>
+<<AddParagraph _scene_text >>
+<</widget>>
+<</nobr>>

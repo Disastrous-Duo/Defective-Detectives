@@ -29,7 +29,7 @@ A Disco Elysium Fanwork
 <<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???"]>>
 <<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
 <<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
-<<set $purple_speaker to ["voice", "soséphine"]>>
+<<set $purple_speaker to ["voice", "joséphine"]>>
 <<set $leather_speaker to ["leathery voice", "couch"]>>
 <<set $fushia_speaker to ["target","jocelaine"]>>
 <<set $greentext to [""]>>
@@ -39,16 +39,22 @@ A Disco Elysium Fanwork
 // Music must be added here
 <<cacheaudio "intro" "source/media/a_place_of_mystery.mp3">>
 
+::@include template_base.twee
+::@include styles/magic_choices.twee
+
 ::@include scripts/shortcut.min.twee
 ::@include scripts/keyboard.twee
 ::@include scripts/magic_effects.twee
+::@include scripts/scoreboard.twee
 
-::@include stylesheet.twee
-::@include disco_elysium_macros.twee
-::@include magic_macros.twee
+
+::@include macros/disco_elysium_macros.twee
+::@include macros/magic_macros.twee
+
 ::@include scenes/falaisant.twee
 ::@include scenes/interview.twee
 ::@include scenes/direction_duel.twee
 ::@include scenes/market.twee
+::@include scenes/cheese_stand.twee
+
 ::@include scenes/test_effects.twee
-::@include scenes/wip_younes.twee
