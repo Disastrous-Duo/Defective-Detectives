@@ -176,6 +176,18 @@
 
 
 :: Pause [nobr]
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What are you looking at?" >>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Scram!!!!" >>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I am ''so'' sorry about them.">>
+
+
+:: Pause [nobr]
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "What are you looking at?" >>
 
