@@ -340,7 +340,7 @@
 <<AddParagraph "Cannelé and Nomnom nod enthusiastically.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Rule #3 : Magic can only be channeled thanks to a physical medium. Living beings cannot serve as mediums.">>
+<<AddParagraph "Rule #3 : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "AH! See, I was rig-">>
