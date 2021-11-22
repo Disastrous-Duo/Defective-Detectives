@@ -282,7 +282,7 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  "The client looks old, <span class='slotmachine'>@@.slot;around 25 years old<br/>bloo<br/>???<br>oil@@</span>." >>
+<<AddParagraph  `"The client looks terribly old, "+slot("around 25 years old", 1)+"."` >>
 
 
 <<SetSpeaker "Cannelé">>
@@ -398,7 +398,7 @@
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
 
 <<BlankSpeaker>>
-<<AddParagraph  "There are suspicious stains on his coat. <span class='slotmachine'>@@.slot;Is it food<br/>bloo<br/>???<br>oil@@</span> ?" >>
+<<AddParagraph  `"There are suspicious stains on his coat. "+slot("Is it food", 1)+"?"` >>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -530,8 +530,10 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
 
+<<BlankSpeaker>>
+<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven. "+slot("He looks like he has the means to take care of his appearance.",1)+". This means it is highly likely that "+slot("he has a job, or at least a stable source of income.",2)+"."` >>
+
 <<SetSpeaker "Cannelé">>
-<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven. "+slot("He looks like he has the means to take care of his appearance.")+". This means it is highly likely that "+slot("he has a job, or at least a stable source of income.",2)+"."` >>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
@@ -559,7 +561,7 @@
 <<AddParagraph "???">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand")+ ", " + slot("must be his own",2)+"."` >>
+<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 1)+ ", " + slot("must be his own",2)+"."` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>

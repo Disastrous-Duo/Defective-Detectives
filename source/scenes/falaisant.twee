@@ -30,7 +30,7 @@
 
 :: Falaisant4 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//The boulevard spreads far, far until it divides into smaller streets.//">>
+<<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
 
 <<AddOption "The drop bounces off the slightly uneven pavement" "Falaisant5">>
 
