@@ -582,11 +582,7 @@
 <<AddParagraph "My superior! My boss is calling for me!! Apologies gentlefolks, duty calls!">>
 
 <<BlankSpeaker>>
-<<<<<<< HEAD
-<<AddParagraph "The street is still empty, no boss to be see, but Officer aufHißer runs as if the landlord itself was at his heels.">>
-=======
 <<AddParagraph "The street is still empty, no boss to be seen, but Officer aufHißer runs as if his landlord was at his heels.">>
->>>>>>> dev-lo
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "Well that was...">>
@@ -1078,7 +1074,7 @@
 
 <<SetSpeaker "Richie">>
 <<AddParagraph "No? I mean the Fleurries!">>
-<<AddParagraph "The The Âmoc-Havoc, the gifty-pennies, the shickshacks?">>
+<<AddParagraph "The Âmoc-Havoc, the gifty-pennies, the shickshacks, the florus-pocus?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "?">>
@@ -1094,7 +1090,7 @@
 
 <<SetSpeaker "Richie">>
 <<AddParagraph "THE FLEURS D'AME! I MEAN THE FLEURS D'AME!">>
-<<AddParagraph "The market's been in shambles since yesterday. Me and my friends are getting desperate there..">>
+<<AddParagraph "The market's been in shambles since yesterday. Me and my friends are getting desperate there...">>
 <<AddParagraph "So? Did you manage to get any? Care to share with a new pal?">>
 
 <<BlankSpeaker>>

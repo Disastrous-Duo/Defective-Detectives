@@ -34,7 +34,11 @@
 
 
 <<AddOption "Inspect couch on the left" "Left">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "Inspect sink on the right" "Right">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "Inspect the wall" "Wall">>
 
 
@@ -168,12 +172,20 @@
 
 <<if $interview_nomnom is true>>
   <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "Why... are they standing on the couch..." "Interview">>
 
   <<else>>
     <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "interviewNomnom">>
+    <<BlankSpeaker>>
+    <<AddParagraph "">>
     <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "interviewNomnom">>
+    <<BlankSpeaker>>
+    <<AddParagraph "">>
     <<AddOption "Why... are they standing on the couch..." "interviewNomnom">>
 <</if>>
 
@@ -200,12 +212,20 @@
 
 <<if $interview_cannele is true>>
   <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "I can’t help it, but this left shoe really intrigues me..." "Interview">>
 
   <<else>>
     <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "interviewCannelé">>
+    <<BlankSpeaker>>
+  <<AddParagraph "">>
     <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "interviewCannelé">>
+    <<BlankSpeaker>>
+  <<AddParagraph "">>
     <<AddOption "I can’t help it, but this left shoe really intrigues me..." "interviewCannelé">>
 <</if>>
 
@@ -260,7 +280,11 @@
 <<set $interview_coffee to false>>
 
 <<AddOption "Who am I?" "Identity">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "What happened?" "Event">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
@@ -628,8 +652,8 @@
 <<AddParagraph "This ridiculous situation has happened before...">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé........">>
-<<AddParagraph "Nomnom...................">>
+<<AddParagraph "Cannelé........ Muffin (??) .............">>
+<<AddParagraph "Nomnom................... Yasyas (???) ...........">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This piece of knowledge is terrifying.">>
