@@ -174,13 +174,13 @@
 }
 
 
-#score-cannelé
+#scoreboard-Cannelé
 {
 
   margin-left:25px;
 }
 
-#score-nomnom
+#scoreboard-Nomnom
 {
   margin-left:66px;
 }

@@ -34,6 +34,8 @@ A Disco Elysium Fanwork
 <<set $fushia_speaker to ["target","jocelaine"]>>
 <<set $greentext to [""]>>
 <<set $paraAppendMode to false>>
+
+<<set $scoreboard to {"Cannelé":0,"Nomnom":0}>>
 <<set $client_name to "Yasyas">> /*TODO: Remove this line before release*/
 
 // Music must be added here

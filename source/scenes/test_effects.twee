@@ -56,3 +56,17 @@
 ::Test_Audio3
 <<audio "intro"  volume 1 fadeout>>
 <<AddParagraph "Damn, that was cool." >>
+
+::Test_Score
+
+<<BlankSpeaker>>
+<<AddParagraph "Let's see...">>
+<<AddParagraph "Who do you want to give points to?">>
+<<AddOption "Cannelé" "Test_Score_Cannelé">>
+<<AddOption "Nomnom" "Test_Score_Nomnom">>
+
+::Test_Score_Nomnom
+<<AddScore "Nomnom" 3>>
+
+::Test_Score_Cannelé
+<<AddScore "Cannelé" 3>>

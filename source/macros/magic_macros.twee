@@ -15,13 +15,20 @@
 <<nobr>>
 <<widget "Tickdown">>
 <<set _scene_text to ('@@.Tickdown;@@')>>
-<<AddParagraph _scene_text >>
+<<AddParagraph _scene_text>>
 <</widget>>
 <</nobr>>
 
+:: AddScore [Widget widget]
+<<widget "AddScore">>
+<<set _name to $args[0]>>
+<<set _score to $args[1]>>
+<<run $scoreboard[_name] += _score>>
+<<run window.flipNumber($("#scoreboard-"+$args[0]), $scoreboard[_name]) >>
+<</widget>>
 
 
-/* rarely used this way. Most often its done inline */
+
 :: Precog [Widget widget]
 <<nobr>>
 <<widget "Precog">>
