@@ -196,6 +196,8 @@
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "I am so sorry about this..." >>
+<<AddParagraph "Also, before you leave, we would love to hear your feedback about this demo, please fill this form https://forms.gle/3WQSZeU3TyNV14AD9 to help us make this demo better !" >>
+
 
 
 
