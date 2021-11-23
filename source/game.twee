@@ -40,7 +40,7 @@
 // Music must be added here
 <<cacheaudio "intro" "source/media/a_place_of_mystery.mp3">>
 
-::@include styles/template_base.twee
+::@include template_base.twee
 ::@include styles/magic_choices.twee
 
 ::@include scripts/shortcut.min.twee
