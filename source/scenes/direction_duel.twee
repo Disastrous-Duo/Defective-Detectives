@@ -120,7 +120,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're just saying that something happened at the docks that would make the //entire// port come to a halt...">>
-<<AddParagraph "...preventing dock workers to unload the ships late at night..."">>
+<<AddParagraph "...preventing dock workers to unload the ships late at night...">>
 <<AddParagraph "...putting every meal deliverers out of job..."">>
 <<AddParagraph `"...and make this street safe to travel for "+$client_name+" here?"`>>
 
