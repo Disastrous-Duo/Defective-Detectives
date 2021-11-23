@@ -1,5 +1,0 @@
-:: Startup Script [script]
-
-// /!\ will be executed before the template fully loads
-
-document.title = "CANNELÉ & NOMNOM - DEFECTIVE DETECTIVES";
