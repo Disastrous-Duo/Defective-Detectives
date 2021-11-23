@@ -682,7 +682,7 @@
 
 :: Naming1 [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph  "@@.shake;''*COUGH*''@@!" >>
+<<AddParagraph  "@@.shake;''*COUGH*''@@" >>
 
 <<BlankSpeaker>>
 <<AddParagraph "The now empty cup on the table shakes as Cannelé violently slams their fist on the table.">>
