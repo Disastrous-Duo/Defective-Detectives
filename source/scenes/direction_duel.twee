@@ -21,13 +21,13 @@
 
 
 
-::InvestigationTitle [nobr]
+:: InvestigationTitle [nobr]
 <h2>Chapter 1 - The Hoboolean Coin</h2><br/> /*#type*/
 
 <<AddOption "Reluctantly follow" "Investigation1">>
 
 
-::Investigation1
+::Investigation1 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "">>
 <<AddParagraph "The door closes behind the two detectives and their slightly reluctant client.">>
