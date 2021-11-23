@@ -1,0 +1,167 @@
+
+
+:: PassageHeader {"position":"407,27","size":"100,100"}
+<<set $paragraphs to []>>
+<<if $lastoption>>
+@@.speaker.pastchoice;>>>@@ @@.pastchoice; $lastoption@@
+
+<</if>>
+
+
+:: PassageFooter {"position":"547,28","size":"100,100"}
+<<DisplayParagraphs>>\
+
+
+:: DisplayOptions [nobr] {"position":"546,144","size":"100,100"}
+<ol id="OptionList">
+<<for _optiontext, _optionpassage range $optionmap>>
+  <<capture _optionpassage, _optiontext>>
+    <li>
+      <<link _optiontext _optionpassage>><<set $lastoption to _optiontext>><</link>>
+    </li>
+  <</capture>>
+<</for>>
+</ol>
+<<set $optionmap to new Map()>>
+
+:: SkillSuccess [Widget widget]
+<<nobr>>
+<<widget "SkillSuccess">>
+<div id="SuccessImg" class="CheckOverlay"></div>
+<div id="CheckSuccess" class="CheckText">CHECK SUCCESS</div>
+<<SetSpeaker "">>
+<<AddParagraph "//Green flashes at the edges of your vision - a success.//">>
+<</widget>>
+<</nobr>>
+
+:: SkillFailure [Widget widget]
+<<nobr>>
+<<widget "SkillFailure">>
+<div id="FailureImg" class="CheckOverlay"></div>
+<div id="CheckFailure" class="CheckText">CHECK FAILURE</div>
+<<SetSpeaker "">>
+<<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
+<</widget>>
+<</nobr>>
+
+:: PassiveSkill [Widget widget] {"position":"403,146","size":"100,100"}
+<<nobr>>
+<<widget "PassiveSkill">>
+<<set _skillname to ($args[0].toLowerCase())>>
+<<set _skillresult to "">>
+<<if $args[1]>>
+<<set _skillresult to ("[" + $args[1] + ": " + $args[2] + "]")>>
+<</if>>
+<<if $yellow_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.yellow_speaker.speaker;" +
+_skillname +
+"@@")>>
+<<elseif $blue_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.blue_speaker.speaker;" +
+_skillname +
+"@@")>>
+<<elseif $red_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.red_speaker.speaker;" +
+_skillname +
+"@@")>>
+<<elseif $purple_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.purple_speaker.speaker;" +
+_skillname +
+"@@")>>
+<<elseif $leather_speaker.includes(_skillname)>>
+<<set $currentspeaker to ("@@.leather_speaker.speaker;" +
+_skillname +
+"@@")>>
+<</if>>
+<<if _skillresult>>
+<<set $currentspeaker += _skillresult>>
+<</if>>
+<<set $currentspeaker += " - ">>
+<</widget>>
+<</nobr>>
+
+:: Speaker [widget] {"position":"272,152","size":"100,100"}
+<<nobr>>
+<<widget "speaker">>
+@@.speaker;
+$args[0] -
+@@
+<</widget>>
+<</nobr>>
+
+
+:: SetSpeaker [widget] {"position":"272,152","size":"100,100"}
+<<nobr>>
+<<widget "SetSpeaker">>
+<<set _speaker_name to ($args[0].toLowerCase())>>
+  <<if _speaker_name == "cannelé & nomnom">>
+    <<set $currentspeaker to ("<span class='speaker'>@@.red_speaker;Cannelé@@ & @@.blue_speaker;Nomnom@@</span>")>>
+  <<elseif $yellow_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.yellow_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $blue_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.blue_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $red_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.red_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $purple_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.purple_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $leather_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.leather_speaker.speaker;" + $args[0] + "@@")>>
+  <<elseif $fushia_speaker.includes(_speaker_name)>>
+    <<set $currentspeaker to ("@@.fushia_speaker.speaker;" + $args[0] + "@@")>>
+  <<else>>
+    <<set $currentspeaker to ("@@.speaker;"+$args[0]+"@@")>>
+<</if>>
+<<set $currentspeaker += " - ">>
+<</widget>>
+<</nobr>>
+
+
+:: AddOption [widget] {"position":"273,265","size":"100,100"}
+\<<widget "AddOption">>\<<run $optionmap.set($args[0], $args[1])>>\<</widget>>\
+
+
+:: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
+<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>\
+<<run $paragraphs.deleteAt(0)>>\
+<span class="paragraph"><<print _paragraph>></span>
+<<if $paragraphs.length > 0>>
+<<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+<<else>>\
+<<include DisplayOptions>>
+<</if>>
+<<timed 0.5s>><<script>>
+var paragraphs = document.getElementsByClassName('paragraph');
+if (paragraphs.length > 1) {
+	paragraphs[paragraphs.length-2].classList.add("dim");
+}
+<</script>><</timed>>\
+<</widget>>
+
+
+:: BlankSpeaker [widget] {"position":"1225,100","size":"100,100"}
+<<widget "BlankSpeaker">><<set $currentspeaker to "">><</widget>>
+
+
+:: AddParagraph [widget] {"position":"546,268","size":"100,100"}
+<<nobr>>
+<<widget "AddParagraph">>
+<<set _para to "">>
+<<if $paraAppendMode is true>>
+<<for _text range $greentext>>
+<<set _para to (_para + _text + "<br /><br />")>>
+<</for>>
+<<set $greentext to []>>
+<<set $paraAppendMode to false>>
+<</if>>
+<<set _para to (_para + $currentspeaker + $args[0])>>
+<<run $paragraphs.push(_para)>>
+<</widget>>
+<</nobr>>
+
+:: GreenTextWidgets [widget] {"position":"400,600","size":"100,100"}
+<<nobr>>
+<<widget "GenericNote">>
+<<run $greentext.push("@@.green;" + $args[0] + "@@")>>
+<<set $paraAppendMode to true>>
+<</widget>>
+<</nobr>>
