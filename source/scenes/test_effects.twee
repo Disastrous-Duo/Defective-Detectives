@@ -1,0 +1,72 @@
+:: Test_Foresight
+<<SetSpeaker "Nomnom">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Mmh... That's a pretty mirror.">>
+<<BlankSpeaker>>
+<<AddParagraph "//Suddenly, the image blurs.//">>
+<<SetSpeaker "Mirror">>
+<<Foresight "6 minutes 30 seconds " " milliseconds" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<Foresight "6.7" " minutes" "Cannelé lies on the ground. Blood spills from her throat. A guard stands next to her.">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "FUCK!">>
+
+:: Test_Precog
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Time to blow this thing up">>
+<<BlankSpeaker>>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph  "I think my power just gave me this @@.precog_color;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>
+
+:: Test_Slotmachine
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Alright, time to crack this power up.">>
+<<BlankSpeaker>>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph  "There's something on his coat. Is it <span class='slotmachine'>@@.slot;food<br/>bloo<br/>???<br>oil@@</span> ?" >>
+<<AddParagraph  "Now, a multiple length deduction." >>
+<<AddParagraph  `"The man's clothes are tattered, as if he had been "+slot("wearing the same outfit for a long time")+". This Richie probably "+slot("isn't rich",2)+"."` >>
+
+
+:: Test_Typewriter
+<<SetSpeaker "Typewriter">>
+<<AddParagraph  "@@.typewriter;9h37 Falaisant -- 288 Harmony Street@@" >>
+
+:: Test_Shake
+<<SetSpeaker "Yasyas">>
+<<AddParagraph  "Oh God, I'm @@.shake;shaking@@!" >>
+
+::Test_Title_Duel
+<<BlankSpeaker>>
+<<AddParagraph "Brace yourselves for the...">>
+<<AddParagraph "<h2 class='duel_left'>DIRECTION</h2><br/><br/><h2 class='duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+
+::Test_Tooltip
+<<BlankSpeaker>>
+<<AddParagraph `"Yes, my name is "+tooltip("Cannelé","A little cake.")+", but its pronounced like "+tooltip("Cannelé","A little annoying.")`>>
+
+::Test_Audio
+<<BlankSpeaker>>
+<<AddParagraph "Music can only be started if triggered by player interaction">>
+<<AddOption "Wow, ok." "Test_Audio2">>
+
+::Test_Audio2
+<<audio "intro"  volume 0 fadein>>
+<<AddOption "Okay, now go in a fade out!" "Test_Audio3">>
+
+::Test_Audio3
+<<audio "intro"  volume 1 fadeout>>
+<<AddParagraph "Damn, that was cool." >>
+
+::Test_Score
+
+<<BlankSpeaker>>
+<<AddParagraph "Let's see...">>
+<<AddParagraph "Who do you want to give points to?">>
+<<AddOption "Cannelé" "Test_Score_Cannelé">>
+<<AddOption "Nomnom" "Test_Score_Nomnom">>
+
+::Test_Score_Nomnom
+<<AddScore "Nomnom" 3>>
+
+::Test_Score_Cannelé
+<<AddScore "Cannelé" 3>>
