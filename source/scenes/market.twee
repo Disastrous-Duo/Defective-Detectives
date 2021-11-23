@@ -2,7 +2,7 @@
 <<set $market_path to "right">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Five points for Nomnom//">>
-/* #score */
+<<AddScore "Nomnom" 5>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "TRUTH IS ON MY SIDE!">>
@@ -21,7 +21,7 @@
 <<set $market_path to "left">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Five points for Cannelé//">>
-/* #score */
+<<AddScore "Cannelé" 5>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "THE VENERATED HOBOOLEAN COIN HAS SPOKEN, WE ARE GOING LEFT!">>

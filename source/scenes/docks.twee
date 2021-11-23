@@ -123,6 +123,7 @@
 :: docksCannelé [nobr]
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three points for Cannelé//">>
+<<AddScore "Cannelé" 3>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "She is beautiful...">>

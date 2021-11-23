@@ -693,7 +693,7 @@
 <<set $client_name to "Yasyas">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three points for Cannelé//">>
-/* #score */
+<<AddScore "Cannelé" 3>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
@@ -706,7 +706,7 @@
 <<set $client_name to "Muffin">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three points for Nomnom//">>
-/* #score */
+<<AddScore "Nomnom" 3>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>

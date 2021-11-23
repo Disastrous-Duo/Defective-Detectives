@@ -62,7 +62,7 @@
 ::Investigation1_smile [nobr]
 <<SetSpeaker "Far away voice">>
 <<AddParagraph "One point for Nomnom.">>
-/*Point*/
+/*Point + add one for Cannelé*/
 <<AddOption "Turn your head again" "Investigation1_2">>
 
 ::Investigation1_2 [nobr]
@@ -86,7 +86,8 @@
 <<AddParagraph "Why //wouldn't// he?" >>
 
 <<SetSpeaker "Nomnom" >>
-<<AddParagraph "This path is not lit at all at night. Nobody walks there, unless they want to collide with a broken street light." >>
+<<AddParagraph "This path is not lit at all at night.">>
+<<AddParagraph "Nobody walks there, unless they want to collide with a broken street light." >>
 <<AddParagraph "I would say he came from the left." >>
 
 <<SetSpeaker $client_name >>
@@ -100,7 +101,8 @@
 <<AddParagraph "Yeah, but-" >>
 
 <<SetSpeaker "Cannelé" >>
-<<AddParagraph "Unless you're saying that this street was actually empty? The day before the market opens and every boat is unloading their merchandise?" >>
+<<AddParagraph "Unless you're saying that this street was actually empty?">>
+<<AddParagraph "The day before the market opens and every boat is unloading their merchandise?" >>
 
 <<SetSpeaker "Nomnom" >>
 <<AddParagraph "I'm just saying that-" >>
@@ -162,9 +164,8 @@
 ::DirectionDuel_1 [nobr]
 
 <<BlankSpeaker>>
-<<set _temp_text to ("The client's plaints are left unheard, as he realizes that the desastrous duo has already started it's...") >>
-<<AddParagraph _temp_text>>
-<<AddParagraph "<h2 class='duel_left'>DIRECTION</h2><br/><h2 class='duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<AddParagraph"The client's plaints are left unheard, as he realizes that the desastrous duo has already started their...">>
+<<AddParagraph "<h2 class='duel_title duel_left'>DIRECTION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
 
 /*<<AddParagraph "If he doesn't want to lose his hirees, he must make haste and follow them." >>*/
 
@@ -185,17 +186,6 @@
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "I am ''so'' sorry about them.">>
-
-
-:: Pause [nobr]
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "What are you looking at?" >>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Scram!">>
-
-<<SetSpeaker $client_name>>
-<<AddParagraph "I am so sorry about this..." >>
 
 
 
