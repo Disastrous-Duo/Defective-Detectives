@@ -1216,7 +1216,7 @@
 <<AddParagraph "If we make the best coffee in town, then this has to be the best cup of cocoa you can get around!">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "''COUGH COUGH COUGH''">>
+<<AddParagraph "''*COUGH COUGH COUGH*''">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "So? Where were we?">>

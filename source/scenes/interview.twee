@@ -531,7 +531,9 @@
 <<AddParagraph "I sincerely despise you so much.">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven. "+slot("He looks like he has the means to take care of his appearance.",1)+". This means it is highly likely that "+slot("he has a job, or at least a stable source of income.",2)+"."` >>
+<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven."`>>
+<<AddParagraph `"He looks like he has the means "+slot("to take care of his appearance",1)+"."`>>
+<<AddParagraph `"This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+"."` >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
@@ -541,7 +543,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 3: In addition to the payment, you will treat us to a meal once the case is closed.">>
-<<AddParagraph "Any Questions?">>
+<<AddParagraph "Any questions?">>
 <<AddParagraph "No?">>
 <<AddParagraph "Perfect!">>
 
@@ -561,7 +563,7 @@
 <<AddParagraph "???">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 1)+ ", " + slot("must be his own",2)+"."` >>
+<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+"."` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
@@ -578,7 +580,7 @@
 <<AddParagraph "Inspiration?">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Name">>
+<<AddParagraph "A name...">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "A chair?">>
@@ -674,7 +676,7 @@
 <<AddParagraph "I HEARD IT MEANS COOCHIE IN SOME STREET SLANG TOO!!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "W-WHAT? AT LEAST IT ''MEANS'' SOMETHING, NOT LIKE... YASYAS???">>
+<<AddParagraph "W-WHAT? AT LEAST IT //MEANS// SOMETHING, NOT LIKE... YASYAS???">>
 
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "ANYWAY">>
@@ -707,10 +709,10 @@
 
 
 :: Yasyas [nobr]
-<<set $client_name to "Yasyas">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three points for Cannelé//">>
 <<AddScore "Cannelé" 3>>
+<<set $client_name to "Yasyas">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
@@ -720,10 +722,10 @@
 
 
 :: Muffin [nobr]
-<<set $client_name to "Muffin">>
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//Three points for Nomnom//">>
 <<AddScore "Nomnom" 3>>
+<<set $client_name to "Muffin">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
