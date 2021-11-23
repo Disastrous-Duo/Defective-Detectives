@@ -34,7 +34,11 @@
 
 
 <<AddOption "Inspect couch on the left" "Left">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "Inspect sink on the right" "Right">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "Inspect the wall" "Wall">>
 
 
@@ -168,12 +172,20 @@
 
 <<if $interview_nomnom is true>>
   <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "Why... are they standing on the couch..." "Interview">>
 
   <<else>>
     <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "interviewNomnom">>
+    <<BlankSpeaker>>
+    <<AddParagraph "">>
     <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "interviewNomnom">>
+    <<BlankSpeaker>>
+    <<AddParagraph "">>
     <<AddOption "Why... are they standing on the couch..." "interviewNomnom">>
 <</if>>
 
@@ -200,12 +212,20 @@
 
 <<if $interview_cannele is true>>
   <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "Interview">>
+  <<BlankSpeaker>>
+  <<AddParagraph "">>
   <<AddOption "I can’t help it, but this left shoe really intrigues me..." "Interview">>
 
   <<else>>
     <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "interviewCannelé">>
+    <<BlankSpeaker>>
+  <<AddParagraph "">>
     <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "interviewCannelé">>
+    <<BlankSpeaker>>
+  <<AddParagraph "">>
     <<AddOption "I can’t help it, but this left shoe really intrigues me..." "interviewCannelé">>
 <</if>>
 
@@ -232,16 +252,6 @@
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
 
-/*
-<<Foresight "19.3" "seconds" "A cup is broken into several pieces that lie on the ground. The client seems angry and leave through the door. They have a huge stain on their coat." >>
-
-<<BlankSpeaker>>
-<<AddParagraph "Nomnom picks the cup again and sets it a little farther from their guest.">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Better.">>
-*/
-
 <<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is leaving through the door, a huge stain on his coat. He looks angry." >>
 
 <<AddParagraph "Nomnom picks up the coffee cup again, and puts it slightly farther on the table.">>
@@ -260,7 +270,11 @@
 <<set $interview_coffee to false>>
 
 <<AddOption "Who am I?" "Identity">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "What happened?" "Event">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
@@ -268,7 +282,8 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;The client looks old, "+slot('around 25 years old')+".@@"` >>
+<<AddParagraph  `"The client looks terribly old, "+slot("around 25 years old", 1)+"."` >>
+
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>
@@ -310,7 +325,7 @@
 <<AddParagraph "This is really not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we absolutely know what we are doing.">>
+<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -325,7 +340,7 @@
 <<AddParagraph "Cannelé and Nomnom nod enthusiastically.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Rule #3 : Magic can only be channeled thanks to a physical medium. Living beings cannot serve as mediums.">>
+<<AddParagraph "Rule #3 : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "AH! See, I was rig-">>
@@ -376,14 +391,14 @@
 <<AddParagraph "SEE! I KNEW HANDING OUT FLYERS WOULD BE A GREAT IDEA!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Kay whatever.">>
+<<AddParagraph "Whatever, pretty sure it was my idea.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're such a loser.">>
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "@@.precog_color;His coat has suspicious stains on it. <span class='Precog' data-speed='4' data-value='Is it food?'></span>@@">>
+<<AddParagraph  `"There are suspicious stains on his coat. "+slot("Is it food", 1)+"?"` >>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -515,8 +530,10 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
 
+<<BlankSpeaker>>
+<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven. "+slot("He looks like he has the means to take care of his appearance.",1)+". This means it is highly likely that "+slot("he has a job, or at least a stable source of income.",2)+"."` >>
+
 <<SetSpeaker "Cannelé">>
-<<AddParagraph  "@@.precog_color;His clothes seem to be good quality and he he is clean shaven. <span class='Precog' data-speed='1' data-random='0' data-value='He looks like he has the means to take care of his appearance.'> </span> <span class='Precog' data-speed='1' data-random='1' data-value='This means it is highly likely he has a job, or at least a stable source of income.'></span>@@">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
 
 <<SetSpeaker "???">>
@@ -544,7 +561,7 @@
 <<AddParagraph "???">>
 
 <<BlankSpeaker>>
-<<AddParagraph  "@@.precog_color;On his coat are embroidered the initials Y. M. <span class='Precog' data-speed='2' data-random='1' data-value='They were sewn by hand, '></span> <span class='Precog' data-speed='3' data-random='1' data-value='must be his own.'></span>@@" >>
+<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 1)+ ", " + slot("must be his own",2)+"."` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
@@ -628,8 +645,8 @@
 <<AddParagraph "This ridiculous situation has happened before...">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé........">>
-<<AddParagraph "Nomnom...................">>
+<<AddParagraph "Cannelé........ Muffin (??) .............">>
+<<AddParagraph "Nomnom................... Yasyas (???) ...........">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This piece of knowledge is terrifying.">>

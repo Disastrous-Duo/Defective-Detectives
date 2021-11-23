@@ -30,14 +30,14 @@
 
 :: Falaisant4 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//The boulevards spread far, far until they turn into smaller streets.//">>
+<<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
 
 <<AddOption "The drop bounces off the slightly uneven pavement" "Falaisant5">>
 
 
 :: Falaisant5 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges that jump over streams and connect the multiple layers of passageways, roads and gates.//">>
+<<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges : they jump over streams of water as they connect multiple layers of passageways, roads and gates.//">>
 
 <<AddOption "The drop falls from a hole in the metallic hedge of a bridge" "Falaisant6">>
 
@@ -53,15 +53,15 @@
 
 :: Falaisant7 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//Fog, thick and permanent, haunts streets that have gotten so cramped they are suffocating.//">>
+<<AddParagraph "//Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//">>
 
-<<AddOption "The drop errs, losing itself in the midst of the ominous veil" "Falaisant8">>
+<<AddOption "The drop errs, losing itself in the ominous veil" "Falaisant8">>
 
 
 :: Falaisant8 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//No light nor sound seem to reach this place : everything seems frozen into an eerie silence.//">>
-<<AddParagraph "//There, unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
+<<AddParagraph "//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//">>
+<<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
 
 <<BlankSpeaker>>
 <<AddParagraph "//The atmosphere is heavy...//">>
@@ -72,7 +72,6 @@
 
 :: Falaisant9 [nobr]
 <<BlankSpeaker>>
-<<audio "intro"  volume 1 fadeout>>
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
 
@@ -80,6 +79,7 @@
 
 
 :: Falaisant10 [nobr]
+<<audio "intro"  volume 1 fadeout>>
 <<SetSpeaker "Mysterious Individual">>
 <<AddParagraph "''*yelps loudly*''">>
 
