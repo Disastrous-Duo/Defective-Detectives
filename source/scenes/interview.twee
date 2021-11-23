@@ -354,6 +354,7 @@
 
 
 :: laws [nobr]
+<<SetSpeaker "???">>
 <<AddParagraph "Rule #1 : Magic is a universal gift, that can be activated after eating a Fleur d'Ame.">>
 <<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
 
