@@ -2,7 +2,7 @@
 
 
 
-
+// Defines HTML element for the number flipper
 let genInnerFlipper = (value) =>
 `
 <div class="gear"></div>
@@ -19,13 +19,13 @@ let genFlipper = (id,value) => `<div class="flipper" id="${id}">${genInnerFlippe
 
 
 
-
+// Creates the two flippers for Cannelé and Nomnom
 $(`<div class="clock">${genFlipper("scoreboard-Cannelé")} ${genFlipper("scoreboard-Nomnom")}</div>`).insertAfter("#story-author");
 
-/* delete previous elements ?
 
-why does it not lag on the codepen ?
-*/
+
+
+// Flips a given flipper to a specific value (/!\ will be ugly if more than 1 character)
 window.flipNumber = function(el, newnumber) {
 
 
@@ -46,16 +46,3 @@ setTimeout(function ()
   el.find(".bottom:not(.new)").find(".flipper_text").text(newnumber);
 }, 500);
 }
-
-// function setTime() {
-//
-//   setInterval(function()
-//   {
-//     flipNumber($("#score-nomnom"),randint(0,9));
-//     flipNumber($("#score-cannelé"),randint(0,9));
-//   },1000);
-// }
-//
-// $(function () {
-//   setTime();
-// });

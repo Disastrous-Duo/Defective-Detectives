@@ -188,3 +188,45 @@ a.macro-linkreplace {
   60% {opacity: 1; left: 50%}
   100% {opacity: 0; left: 80%}
 }
+
+/*  CUSTOMISED */
+:root {
+  --cannelé-color: #c6496b;
+  --nomnom-color: #6cc6ce;
+}
+
+
+/*Story title, in the nav bar*/
+
+
+#story-title
+{
+  font-size:2em;
+}
+
+#story-title::before
+{
+  content: "CANNELÉ";
+  font-size:0.8em;
+  display:block;
+  color: var(--cannelé-color);
+}
+
+#story-title::after
+{
+  content: "NOMNOM";
+  font-size:0.8em;
+  display:block;
+  color: var(--nomnom-color);
+}
+
+#story-subtitle
+{
+  margin-top:10px;
+  font-size:1.2em;
+}
+
+#story-author
+{
+  margin-bottom:25px;
+}

@@ -1,5 +1,12 @@
 :: StoryTitle
-C&N -- DD
+&
+
+:: StoryAuthor {"position":"268,439","size":"100,100"}
+[Alpha Demo V0.0]
+
+
+:: StorySubtitle {"position":"392,432","size":"100,100"}
+~ DEFECTIVE DETECTIVES ~
 
 
 :: StoryData
@@ -11,18 +18,10 @@ C&N -- DD
 	"zoom": 0.6
 }
 
-:: StoryAuthor {"position":"268,439","size":"100,100"}
-Original story by Cannelé & Nomnom Themselves
-Twine framework by Pikalex88
-
-
-:: StorySubtitle {"position":"392,432","size":"100,100"}
-A Disco Elysium Fanwork
-
 
 :: StoryShare {"position":"526,432","size":"100,100"}
-[["@ampepers on Twitter"|https://twitter.com/ampepers]]
-[["Repo with the source code"|https://github.com/apepers/DiscoElysiumTwineMacros/]]
+[["text"|links]]
+[["not"|yet!]]
 
 :: StoryInit {"position":"268,25","size":"100,100"}
 <<set $optionmap to new Map()>>
@@ -41,7 +40,7 @@ A Disco Elysium Fanwork
 // Music must be added here
 <<cacheaudio "intro" "source/media/a_place_of_mystery.mp3">>
 
-::@include template_base.twee
+::@include styles/template_base.twee
 ::@include styles/magic_choices.twee
 
 ::@include scripts/shortcut.min.twee
