@@ -1,0 +1,46 @@
+:: Foresight [Widget widget]
+<<nobr>>
+<<widget "Foresight">>
+<<set _scene_text to ("@@.foresight;"+$args[2]+"@@")>>
+<<AddParagraph _scene_text >>
+<<set _countdown to ("@@.foresight;Time before impact: "+$args[0]+"@@")>>
+<<set _countdown to _countdown+("@@.Tickdown.foresight;@@")>>
+<<set _countdown to _countdown+("@@.foresight;"+$args[1]+"@@")>>
+<<BlankSpeaker>>
+<<AddParagraph _countdown >>
+<</widget>>
+<</nobr>>
+
+:: Tickdown [Widget widget]
+<<nobr>>
+<<widget "Tickdown">>
+<<set _scene_text to ('@@.Tickdown;@@')>>
+<<AddParagraph _scene_text>>
+<</widget>>
+<</nobr>>
+
+:: AddScore [Widget widget]
+<<widget "AddScore">>
+<<set _name to $args[0]>>
+<<set _score to $args[1]>>
+<<run $scoreboard[_name] += _score>>
+<<run window.flipNumber($("#scoreboard-"+$args[0]), $scoreboard[_name]) >>
+<</widget>>
+
+
+
+:: Precog [Widget widget]
+<<nobr>>
+<<widget "Precog">>
+<<set _scene_text to ("@@.precog_color_color;<span class='Precog' data data-value='"+$args[0]+"'></span>@@")>>
+<<AddParagraph _scene_text >>
+<</widget>>
+<</nobr>>
+
+:: PrecogRandom [Widget widget]
+<<nobr>>
+<<widget "PrecogRandom">>
+<<set _scene_text to ("@@.precog_color_color;<span class='PrecogRandom' data-value='"+$args[0]+"'></span>@@")>>
+<<AddParagraph _scene_text >>
+<</widget>>
+<</nobr>>

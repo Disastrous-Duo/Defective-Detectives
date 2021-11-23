@@ -1,0 +1,131 @@
+:: Magic Visual Effects [script]
+// Custom for C&N
+
+const foresight_timer_freq = 20;
+const precog_timer_freq = 5;
+const precog_tries = 8; // number of tries before getting a right letter
+const precog_random_tries = 4; // it's faster, because you can't read it as well
+
+
+window.randint  = function(min, max)
+{
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+window.forceDigits = function(number, digits)
+{
+	var base = number+"";
+	for(var i = base.length; i < digits; i++)
+	{
+		base = "0"+base;
+	}
+	return base;
+}
+
+window.randomStr = function(length, alphabet)
+{
+	var alphabet = alphabet || "abcdefghijklmnopqrstuvwxyz";
+	//var alphabet = "█░▒▓╬▄▀¶abcdexyzopqrstuv";
+  for(var s=''; s.length < length;)
+	{
+		//s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*'.charAt(Math.random()*62|0);
+		s += alphabet.charAt(Math.random()*alphabet.length|0);
+
+	}
+  return s;
+}
+
+
+window.updateForesightTimer = function() // Update a timer countdown, mainly used in foresight
+{
+	 var all_ftimers = document.getElementsByClassName("Tickdown");
+	 for(var i = 0; i < all_ftimers.length; i++)
+	 {
+		 var ftimer = all_ftimers[i];
+		 var millis = new Date().getMilliseconds();
+		 ftimer.innerHTML = window.forceDigits(millis,3);
+	 }
+}
+
+window.replaceAt = function(str, index, replacement) {
+    return str.substr(0, index) + replacement + str.substr(index + replacement.length);
+}
+
+window.updatePrecogTimer = function()
+{
+	 var all_decoders = document.getElementsByClassName("Precog");
+	 for(var i = 0; i < all_decoders.length; i++)
+	 {
+
+
+		 var decoder = all_decoders[i];
+		 var true_value = decoder.dataset.value;
+
+		 var slot = decoder.dataset.slot*1 || 0;
+		 var tries = decoder.dataset.tries*1 || 0;
+		 var speed = decoder.dataset.speed*1 || precog_timer_freq;
+		 var type = decoder.dataset.random*1;
+
+		 if(true_value == decoder.innerHTML)continue;
+
+		 if(slot  == 0 && tries == 0) // first step, randomize the content, but with the same size
+		 {
+			 decoder.innerHTML = randomStr(true_value.length);
+		 }
+
+		 var actual_value = decoder.innerHTML;
+
+		 // Another try
+		 tries +=1;
+		 if(tries%speed == 0)
+		 {
+			 tries = 0;
+			 actual_value = window.replaceAt(actual_value, slot, true_value[slot]);
+			 if(!type)
+			 {
+			 	slot = slot+1 //in case of emergency, break the comment
+				}
+				else
+				{
+					slot = (slot+1009)%actual_value.length;
+					// // Trick with a prime number, that makes the slot tick in a semi random order
+					// Doesn't work for texts bigger than 1009 characters, but that won't happen, right ;)
+				}
+		 }
+		 else
+		 {
+			 actual_value = window.replaceAt(actual_value,slot,randomStr(1));
+		 }
+
+		 decoder.innerHTML = actual_value;
+		 decoder.dataset.slot = slot;
+		 decoder.dataset.tries = tries;
+	 }
+}
+
+window.setInterval(window.updateForesightTimer, foresight_timer_freq);
+window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+
+
+window.tooltip = function(displayed_text, tooltip)
+{
+	return `<span class="tooltip">${displayed_text}<span class='tooltiptext'>${tooltip}</span></span>`;
+}
+
+window.slot = function(right_answer, duration)
+{
+	var duration = duration*1 || 1; // Max 5 !
+	var options = [right_answer];
+
+	for(var i=0; i < 3;i++) // 3 other options, as defined in the css animation frames
+	{
+		// *0.7 because for a non monospace font, random strings have a chance to be longer than the first one
+		options.push(window.randomStr(right_answer.length*0.7));
+	}
+
+	return `<span class='slotmachine'>@@.slot${duration};${options.join("<br/>")}@@</span>`;
+
+
+}
