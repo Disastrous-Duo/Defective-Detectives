@@ -21,9 +21,13 @@
 
 
 
-:: Investigation1 [nobr]
+::InvestigationTitle [nobr]
 <h2 class="typewriter">Chapter 1 - The Hoboolean Coin</h2><br/>
 
+<<AddOption "Reluctantly follow" "Investigation1">>
+
+
+::Investigation1 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "">>
 <<AddParagraph "The door closes behind the two detectives and their slightly reluctant client.">>
@@ -103,7 +107,7 @@
 <<AddParagraph "Hmm... Excuse me but...">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "This is dumb.">>"
+<<AddParagraph "This is dumb.">>
 <<AddParagraph "The left alley is the one used by the couriers who deliver late-night food to the dock workers.">>
 <<AddParagraph "Nobody walks there unless they want to get run over by a person travelling at the //speed of three horses//.">>
 
@@ -121,7 +125,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You're just saying that something happened at the docks that would make the //entire// port come to a halt...">>
-<<AddParagraph "...preventing dock workers to unload the ships late at night...">>
+<<AddParagraph "...preventing dock workers to unload the ships late at night..."">>
 <<AddParagraph "...putting every meal deliverers out of job..."">>
 <<AddParagraph `"...and make this street safe to travel for "+$client_name+" here?"`>>
 

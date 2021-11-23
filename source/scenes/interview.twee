@@ -481,7 +481,7 @@
 <<AddParagraph "Oh! Is Yesterday a bakery-">>
 
 <<BlankSpeaker>>
-<<AddParagraph "A heavy silence greets the question.">>"
+<<AddParagraph "A heavy silence greets the question.">>
 <<AddParagraph "This is not a safe topic.">>
 
 <<SetSpeaker "???">>
