@@ -579,7 +579,7 @@
 <<AddParagraph "Nomnom shrugs and signs the contract.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Hmmm... Those " +"@@color:gold;???@@" +" are kind of annoying me.">>
+<<AddParagraph "Hmmm... Those @@color:gold;???@@ are kind of annoying me.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "???">>
