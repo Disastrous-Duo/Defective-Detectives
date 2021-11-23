@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "David Libre";
-  src: url("./fonts/DavidLibre-Regular.ttf") format("truetype");
+  src: url("https://github.com/Defective-Detectives/Disastrous-Duo/blob/master/fonts/DavidLibre-Regular.ttf?raw=true") format("truetype");
 }
 
 @font-face {
