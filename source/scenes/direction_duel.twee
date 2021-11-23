@@ -65,6 +65,13 @@
 <<AddOption "Ignore Nomnom." "Investigation1_ignore">>
 <<AddOption "Flash them a furtive smile" "Investigation1_smile">>
 
+
+::Investigation1_ignore [nobr]
+<<SetSpeaker "Far away voice">>
+<<AddParagraph "One point for Cannelé.">>
+<<AddScore "Cannelé" 1>>
+<<AddOption "Focus on the road " "Investigation1_2">>
+
 :: Investigation1_smile [nobr]
 <<SetSpeaker "Far away voice">>
 <<AddParagraph "One point for Nomnom.">>
