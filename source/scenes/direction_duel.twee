@@ -21,14 +21,9 @@
 
 
 
-:: InvestigationTitle [nobr]
+:: Investigation1 [nobr]
 <h2 class="typewriter">Chapter 1 - The Hoboolean Coin</h2><br/>
 
-<<AddOption "Reluctantly follow" "Investigation1">>
-
-
-::Investigation1 [nobr]
-<<BlankSpeaker>>
 <<AddParagraph "">>
 <<AddParagraph "The door closes behind the two detectives and their slightly reluctant client.">>
 <<AddParagraph "The group leaves Harmony Street, and makes its way into the fog-clenched neighbourhood.">>

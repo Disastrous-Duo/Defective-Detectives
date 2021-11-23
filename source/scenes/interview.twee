@@ -740,7 +740,7 @@
 <<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
 <<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
 
-<<AddOption "I-I didn't even sign the contract..." "InvestigationTitle">>
+<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
 
 
 :: Muffin [nobr]
@@ -753,4 +753,4 @@
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
 
-<<AddOption "I-I didn't even sign the contract..." "InvestigationTitle">>
+<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
