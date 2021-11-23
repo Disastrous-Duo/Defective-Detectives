@@ -11,7 +11,27 @@
 <<AddParagraph "Nomnom. The only real detective here.">>
 
 <<AddOption "Enter" "interviewInside">>
+<<AddOption "Take a step back" "interviewOutside">>
 
+
+:: interviewOutside [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The girl's smile widens as they grab your arm.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Please, come in.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "You don't have a choice : their grip is strong and maybe a little desperate">>
+<<AddParagraph "A terrifying growling suddenly resounds.">>
+
+<<AddParagraph "It sounds hellish and you realize that it's Cannelé's stomach.">>
+<<AddParagraph "Probably Nomnom's as well.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "...">>
+
+<<AddOption "Enter" "interviewInside">>
 
 :: interviewInside [nobr]
 
@@ -330,9 +350,10 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
 
-<<SetSpeaker "???">>
-<<AddParagraph "If you insist...">>
+<<AddOption "If you insist..." "laws">>
 
+
+:: laws [nobr]
 <<AddParagraph "Rule #1 : Magic is a universal gift, that can be activated after eating a Fleur d'Ame.">>
 <<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
 
@@ -629,10 +650,10 @@
 
 :: Naming [nobr]
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "YOU ARE NOW YASYAS!!!">>
+<<AddParagraph "YASYAS, I CHOOSE YOU!!!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "YOUR NAME IS MUFFIN!!!">>
+<<AddParagraph "YOUR NAME SHALL BE MUFFIN!!!">>
 
 
 <<AddOption "..." "Naming0">>
@@ -731,4 +752,4 @@
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
 
-<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
+<<AddOption "I-I didn't even sign the contract..." "InvestigationTitle">>

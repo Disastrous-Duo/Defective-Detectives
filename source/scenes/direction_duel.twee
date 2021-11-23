@@ -21,9 +21,13 @@
 
 
 
-::Investigation1 [nobr]
-<h2 class="typewriter" >Chapter 1 - The Hoboolean Coin</h2><br/>
+::InvestigationTitle [nobr]
+<h2>Chapter 1 - The Hoboolean Coin</h2><br/> /*#type*/
 
+<<AddOption "Reluctantly follow" "Investigation1">>
+
+
+::Investigation1
 <<BlankSpeaker>>
 <<AddParagraph "">>
 <<AddParagraph "The door closes behind the two detectives and their slightly reluctant client.">>
@@ -61,20 +65,13 @@
 <<AddOption "Ignore Nomnom." "Investigation1_ignore">>
 <<AddOption "Flash them a furtive smile" "Investigation1_smile">>
 
-
-::Investigation1_ignore [nobr]
-<<SetSpeaker "Far away voice">>
-<<AddParagraph "One point for Cannelé.">>
-<<AddScore "Cannelé" 1>>
-<<AddOption "Focus on the road " "Investigation1_2">>
-
-::Investigation1_smile [nobr]
+:: Investigation1_smile [nobr]
 <<SetSpeaker "Far away voice">>
 <<AddParagraph "One point for Nomnom.">>
 <<AddScore "Nomnom" 1>>
 <<AddOption "Turn your head again" "Investigation1_2">>
 
-::Investigation1_2 [nobr]
+:: Investigation1_2 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The trio arrives at the corner of an empty crossroad." >>
 
