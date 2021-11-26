@@ -147,8 +147,6 @@
 
 <<set $interview_nomnom to false>>
 <<set $interview_cannele to false>>
-
-
 <<AddOption "Observe Nomnom" "interviewNomnom">>
 <<AddOption "Study Cannelé" "interviewCannelé">>
 
