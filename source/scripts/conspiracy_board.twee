@@ -1,0 +1,251 @@
+:: Conspiracy Board [script]
+
+let genButton = (name, functionName) => `<input type="button" value="${name}" onclick="${functionName}();" />`;
+
+let html_conspiracy_board =
+`
+<div id="conspiracy_board_overlay">
+<canvas id="cvs_conspiracy_board"></canvas>
+</div>
+`;
+
+
+// Creates debug buttons
+$(genButton("Toggle Board","toggle_board")).insertAfter("#story-author");
+$(html_conspiracy_board).insertBefore("#passages");
+
+window.conspiracy_board_toggled = false;
+
+
+window.toggle_board = function()
+{
+  window.conspiracy_board_toggled = !window.conspiracy_board_toggled;
+  if(window.conspiracy_board_toggled)
+  {
+    $("#conspiracy_board_overlay").removeClass("conspiracy_board_up");
+    $("#conspiracy_board_overlay").addClass("conspiracy_board_down");
+  }
+  else
+  {
+    $("#conspiracy_board_overlay").removeClass("conspiracy_board_down");
+    $("#conspiracy_board_overlay").addClass("conspiracy_board_up");
+  }
+};
+
+
+
+
+////////////////////
+
+
+window.notesList = [
+  {txt:"Note numéro 1", x:120, y:50},
+  {txt:"Note numéro 2", x:100, y:180},
+  {txt:"Note numéro 3", x:300, y:100},
+  {txt:"Note numéro 4", x:300, y:300}
+
+];
+
+window.linesList = [
+  {start:1,end:2}
+];
+
+window.created_pins = []; // will be filled, and store line elements
+
+
+window.init_conspiracy_board = function()
+{
+  // Sets canvas to fill all the overlay
+  var html_canvas = document.getElementById("cvs_conspiracy_board");
+  var parent = document.getElementById("conspiracy_board_overlay");
+  html_canvas.width = parent.offsetWidth;
+  html_canvas.height = parent.offsetHeight;
+
+var canvas = this.__canvas = new fabric.Canvas('cvs_conspiracy_board', { selection: false,
+preserveObjectStacking: true // important to prevent object from changing layers when selected or moved
+});
+
+fabric.Object.prototype.originX = fabric.Object.prototype.originY = 'center';
+
+var settings = {};
+settings.noteWidth = 100;
+settings.noteHeight = 100;
+settings.notePadding = 6;
+
+
+/*
+  lines are directed: they begin at a specific note, and enf at another
+  when moving a note, they must update the lines if they're at the end of a line
+  or a at their start
+
+*/
+
+function makeNote(external_id, text, left, top, pin)
+{
+  var rect = new fabric.Rect({
+    left: left,
+    top: top,
+    width:settings.noteWidth,
+    height:settings.noteHeight,
+    fill: '#FEFF9C',
+    angle:3,
+  });
+
+  var textObject = new fabric.Textbox(text, {
+   left: left+settings.notePadding/2,
+   top: top+settings.notePadding/2,
+   width:settings.noteWidth-settings.notePadding/2,
+   fontFamily:"Caveat",
+   fontSize: 18,
+   fill: '#000000'
+  });
+
+var group = new fabric.Group([rect, textObject],
+  {
+    external_id:external_id,
+    object_type:"note",
+    left: left,
+    top: top,
+    width:settings.noteWidth,
+    height:settings.noteHeight,
+    pin:pin,
+
+  });
+
+  group.hasControls = group.hasBorders = false;
+
+  return group;
+}
+
+function makeLine(start_pin_id, end_pin_id)
+{
+
+  var start_pin = created_pins[start_pin_id];
+  var end_pin = created_pins[end_pin_id];
+
+  var line = new fabric.Line([start_pin.left, start_pin.top,end_pin.left, end_pin.top], {
+    start_pin_id:start_pin_id,
+    end_pin_id:end_pin_id,
+    object_type:'line',
+    fill: 'red',
+    stroke: 'red',
+    strokeWidth: 5,
+    selectable: false,
+    evented: true,
+  });
+
+    line.hasControls = line.hasBorders = false;
+
+
+    start_pin.addLine(start_pin, line, "start");
+    end_pin.addLine(end_pin, line, "end");
+
+      return line;
+}
+
+function makePin(external_id, x, y)
+{
+  var pin = new fabric.Circle({
+      left: x,
+      top: y,
+      object_type:'pin',
+      strokeWidth: 5,
+      radius: 12,
+      fill: '#fff',
+      stroke: '#666',
+      lines_start:[],
+      lines_end:[],
+    });
+
+    pin.movePin = function(pin,x,y)
+    {
+      pin.set({left:x, top:y});
+      for(i in pin.lines_start)
+      {
+        pin.lines_start[i].set({x1:x,y1:y})
+      }
+      for(i in pin.lines_end)
+      {
+        pin.lines_end[i].set({x2:x,y2:y})
+      }
+    }
+
+    pin.addLine = function(pin, line, edge_type)
+    {
+      if(edge_type == "start")
+      {
+        pin.lines_start.push(line);
+      }else if(edge_type == "end")
+      {
+        pin.lines_end.push(line);
+      }
+
+    }
+
+
+    pin.hasControls = pin.hasBorders = false;
+  return pin;
+}
+
+
+// for(var j = 0; j < linesList.length; j++)
+// {
+//   var line = linesList[j];
+//   var created_line = makeLine(j, notesList[line.start].x, notesList[line.start].y-settings.noteHeight/2, notesList[line.end].x, notesList[line.end].y-settings.noteHeight/2);
+//
+//   created_lines.push(created_line);
+// }
+
+  // Create notes and remember their pins
+  for(var i = 0; i < notesList.length; i++)
+  {
+    var note = notesList[i];
+    var pin = makePin(i, note.x, note.y-settings.noteHeight/2);
+    var note = makeNote(i, note.txt, note.x, note.y, pin);
+
+    //created_notes.push(note);
+    created_pins.push(pin);
+
+    canvas.add(note);
+
+    //Ad pins later, for z order
+    //canvas.add(pin);
+  }
+
+  // Create lines
+  for(var i = 0; i < linesList.length;i++)
+  {
+    var start_pin_id = linesList[i].start;
+    var end_pin_id = linesList[i].end;
+    var line = makeLine(start_pin_id, end_pin_id);
+
+    canvas.add(line);
+  }
+
+
+  // Add pins
+  for(var i = 0; i < created_pins.length; i++)
+  {
+    canvas.add(created_pins[i]);
+  }
+
+
+canvas.on('object:moving', function(e) {
+  var p = e.target
+  if(p.object_type == 'note')
+  {
+    p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
+
+    // Updates data external strucure about post-its
+    // Coordinates change
+    window.notesList[p.external_id].x = p.left;
+    window.notesList[p.external_id].y = p.top;
+
+  }
+
+canvas.renderAll();
+
+});
+
+
+}

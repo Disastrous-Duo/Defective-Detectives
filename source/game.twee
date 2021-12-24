@@ -43,10 +43,13 @@
 ::@include template_base.twee
 ::@include styles/magic_choices.twee
 
+::@include scripts/script_loader.twee
+
 ::@include scripts/shortcut.min.twee
 ::@include scripts/keyboard.twee
 ::@include scripts/magic_effects.twee
 ::@include scripts/scoreboard.twee
+::@include scripts/conspiracy_board.twee
 
 
 ::@include macros/disco_elysium_macros.twee

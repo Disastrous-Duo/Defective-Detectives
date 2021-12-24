@@ -34,11 +34,7 @@
 
 
 <<AddOption "Inspect couch on the left" "Left">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
 <<AddOption "Inspect sink on the right" "Right">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
 <<AddOption "Inspect the wall" "Wall">>
 
 

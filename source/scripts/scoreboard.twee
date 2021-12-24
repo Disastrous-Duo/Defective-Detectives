@@ -28,7 +28,7 @@ $(`<div class="clock">${genFlipper("scoreboard-Cannelé")} ${genFlipper("scorebo
 // Flips a given flipper to a specific value (/!\ will be ugly if more than 1 character)
 window.flipNumber = function(el, newnumber) {
 
-
+alert(el);
   el.removeClass("flipping");
   $(".flipper .new").remove();
 
@@ -45,4 +45,4 @@ setTimeout(function ()
 {
   el.find(".bottom:not(.new)").find(".flipper_text").text(newnumber);
 }, 500);
-}
+};

@@ -1,0 +1,53 @@
+:: script loader [script]
+
+/*
+	External script loading module.
+*/
+(function () {
+
+	window.requestScriptLoad = function (options) {
+		if (options == null || typeof options !== 'object' || !options.src) {
+			return;
+		}
+
+		var
+			opts   = Object.assign({ parent : document.head }, options),
+			script = document.createElement('script');
+
+		function onLoadOnce(evt) {
+			opts.onload.call(evt.target, evt);
+			script.removeEventListener('load', onLoadOnce);
+		}
+
+		script.id   = opts.id;
+		script.src  = opts.src;
+		script.type = 'text/javascript';
+
+		if (typeof opts.onload === 'function') {
+			script.addEventListener('load', onLoadOnce, false);
+		}
+
+		opts.parent.appendChild(script);
+	};
+})();
+
+/*
+	Load your external scripts here.
+*/
+// Example of loading `moment.min.js` locally.
+requestScriptLoad({
+	id     : 'fabric-js',
+	src    : './source/scripts/fabric.js.txt',
+	onload : function (evt) {
+    window.init_conspiracy_board();
+		/* library is loaded, do something */
+	}
+});
+// Example of loading `moment.min.js` from a CDN.
+// requestScriptLoad({
+// 	id     : 'lib-moment-js',
+// 	src    : 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js',
+// 	onload : function (evt) {
+// 		/* library is loaded, do something */
+// 	}
+// });

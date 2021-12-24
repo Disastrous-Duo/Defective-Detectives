@@ -1,0 +1,50 @@
+:: Conspiracy Board Style [stylesheet]
+@font-face {
+  font-family: "Caveat";
+  src: url("./fonts/Caveat-Regular.ttf") format("truetype");
+}
+
+#conspiracy_board_overlay
+{
+  position: absolute; /* Sit on top of the page content */
+  width: 60%; /* Full width (cover the whole page) */
+  height: 90%; /* Full height (cover the whole page) */
+
+  top:5%; /*Start hidden*/
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+
+
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+
+}
+
+.conspiracy_board_down
+{
+  top:5%;
+  animation: conspiracy_board_down 1s ease-out;
+}
+
+@keyframes conspiracy_board_down
+{
+  0% {top:-100%;}
+  100% { top:5%; }
+}
+
+.conspiracy_board_up
+{
+  top:-100%;
+  animation: conspiracy_board_up 1s ease-out;
+}
+
+@keyframes conspiracy_board_up
+{
+  0% {top:5%;}
+  100% { top:-100%; }
+}
+
+#cvs_conspiracy_board
+{
+  border:solid 5px black;
+}
