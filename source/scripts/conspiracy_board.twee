@@ -1,5 +1,8 @@
 :: Conspiracy Board [script]
 
+
+// Creates the HTML element
+
 let genButton = (name, functionName) => `<input type="button" value="${name}" onclick="${functionName}();" />`;
 
 let html_conspiracy_board =
@@ -14,7 +17,7 @@ let html_conspiracy_board =
 $(genButton("Toggle Board","toggle_board")).insertAfter("#story-author");
 $(html_conspiracy_board).insertBefore("#passages");
 
-window.conspiracy_board_toggled = false;
+window.conspiracy_board_toggled = true;
 
 
 window.toggle_board = function()
@@ -38,20 +41,22 @@ window.toggle_board = function()
 ////////////////////
 
 
+// Temporary data for debug purposes
+
 window.notesList = [
-  {txt:"Note numéro 1", x:120, y:50},
-  {txt:"Note numéro 2", x:100, y:180},
-  {txt:"Note numéro 3", x:300, y:100},
-  {txt:"Note numéro 4", x:300, y:300}
+  {txt:"Wallet stolen by a cat", x:120, y:150},
+  {txt:"Cats bring items to Katty", x:100, y:380},
+  {txt:"Who has the wallet?", x:300, y:100},
+  {txt:"Who is the client?", x:360, y:300}
 
 ];
 
 window.linesList = [
-  {start:1,end:2}
+  //{start:1,end:2}
 ];
 
 window.created_pins = []; // will be filled, and store line elements
-
+window.reticule = {};
 
 window.init_conspiracy_board = function()
 {
@@ -96,7 +101,7 @@ function makeNote(external_id, text, left, top, pin)
    top: top+settings.notePadding/2,
    width:settings.noteWidth-settings.notePadding/2,
    fontFamily:"Caveat",
-   fontSize: 18,
+   fontSize: 19,
    fill: '#000000'
   });
 
@@ -129,9 +134,14 @@ function makeLine(start_pin_id, end_pin_id)
     object_type:'line',
     fill: 'red',
     stroke: 'red',
-    strokeWidth: 5,
+    strokeWidth: 4,
+    normalColor:'red',
+    darkColor:'#680000',
+    perPixelTargetFind:true,
+    targetFindTolerance:10,
     selectable: false,
     evented: true,
+    hoverCursor:"pointer",
   });
 
     line.hasControls = line.hasBorders = false;
@@ -140,12 +150,13 @@ function makeLine(start_pin_id, end_pin_id)
     start_pin.addLine(start_pin, line, "start");
     end_pin.addLine(end_pin, line, "end");
 
-      return line;
+    return line;
 }
 
 function makePin(external_id, x, y)
 {
   var pin = new fabric.Circle({
+    external_id:external_id,
       left: x,
       top: y,
       object_type:'pin',
@@ -155,19 +166,27 @@ function makePin(external_id, x, y)
       stroke: '#666',
       lines_start:[],
       lines_end:[],
+      hoverCursor:'pointer',
+      selectable: false,
+      evented: true,
     });
 
     pin.movePin = function(pin,x,y)
     {
-      pin.set({left:x, top:y});
+
       for(i in pin.lines_start)
       {
-        pin.lines_start[i].set({x1:x,y1:y})
+        pin.lines_start[i].set({x1:x,y1:y});
+        pin.lines_start[i].setCoords();
       }
       for(i in pin.lines_end)
       {
-        pin.lines_end[i].set({x2:x,y2:y})
+        pin.lines_end[i].set({x2:x,y2:y});
+        pin.lines_end[i].setCoords();
       }
+
+      pin.set({left:x, top:y});
+      pin.setCoords();
     }
 
     pin.addLine = function(pin, line, edge_type)
@@ -182,20 +201,90 @@ function makePin(external_id, x, y)
 
     }
 
+    pin.on('click',function(e)
+  {
+    alert("click");
+  });
+
 
     pin.hasControls = pin.hasBorders = false;
   return pin;
 }
 
 
-// for(var j = 0; j < linesList.length; j++)
-// {
-//   var line = linesList[j];
-//   var created_line = makeLine(j, notesList[line.start].x, notesList[line.start].y-settings.noteHeight/2, notesList[line.end].x, notesList[line.end].y-settings.noteHeight/2);
-//
-//   created_lines.push(created_line);
-// }
+function makeReticule()
+{
 
+    var line = new fabric.Line([0,0,0,0], {
+      object_type:'line',
+      stroke: 'red',
+      strokeDashArray: [5, 5],
+      strokeWidth: 5,
+      selectable: false,
+      evented:false,
+      opacity:0,
+    });
+
+    var visor = new fabric.Circle({
+        left: 0,
+        top: 0,
+        object_type:'visor',
+        strokeWidth: 5,
+        radius: 12,
+        stroke: 'red',
+        fill:'transparent',
+        selectable: false,
+        evented:false,
+        opacity:0,
+      });
+
+
+    var reticule =
+      {
+        start_pin:null,
+        visor:visor,
+        line:line,
+        active:false,
+      };
+
+      reticule.moveVisor = function(reticule, x, y)
+      {
+        reticule.visor.set({left:x, top:y});
+        reticule.visor.setCoords();
+        reticule.line.set({x2:x, y2:y});
+        reticule.line.setCoords();
+      }
+
+      reticule.addToCanvas = function(canvas, reticule)
+      {
+        canvas.add(reticule.line);
+        canvas.add(reticule.visor);
+      }
+
+      reticule.hide = function(reticule)
+      {
+        reticule.visor.opacity = 0;
+        reticule.line.opacity = 0;
+        reticule.active = false;
+      }
+
+      reticule.show = function(reticule)
+      {
+        reticule.visor.opacity = 1;
+        reticule.line.opacity = 1;
+        reticule.active = true;
+      }
+
+      reticule.startFromPin = function(reticule, start_pin)
+      {
+        reticule.start_pin = start_pin;
+        reticule.line.set({x1:start_pin.left, y1:start_pin.top});
+        reticule.line.setCoords();
+        reticule.moveVisor(reticule, start_pin.left, start_pin.top);
+      }
+
+      return reticule;
+}
   // Create notes and remember their pins
   for(var i = 0; i < notesList.length; i++)
   {
@@ -229,23 +318,159 @@ function makePin(external_id, x, y)
     canvas.add(created_pins[i]);
   }
 
+  //Add reticule
 
-canvas.on('object:moving', function(e) {
-  var p = e.target
-  if(p.object_type == 'note')
+  window.reticule = makeReticule();
+  var reticule = window.reticule;
+  //reticule.startFromPin(created_pins[2]);
+  //reticule.show(reticule);
+  window.reticule.addToCanvas(canvas, window.reticule);
+
+
+canvas.on('object:moving', function(e)
+{
+  var p = e.target;
+  if(p && p.object_type == 'note')
   {
     p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
-
     // Updates data external strucure about post-its
     // Coordinates change
     window.notesList[p.external_id].x = p.left;
     window.notesList[p.external_id].y = p.top;
 
+    canvas.renderAll();
   }
 
-canvas.renderAll();
+
 
 });
 
+
+// Move reticule
+canvas.on('mouse:move', function(e)
+{
+
+  if(window.reticule.active)
+  {
+    window.reticule.moveVisor(window.reticule, e.pointer.x, e.pointer.y);
+    canvas.renderAll();
+  }
+
+});
+
+
+canvas.on('mouse:down', function(e)
+{
+  var p = e.target;
+  if(p && p.object_type == 'pin')
+  {
+
+    // Start reticule line if not already active
+    if(!window.reticule.active)
+    {
+      window.reticule.startFromPin(window.reticule, p);
+      window.reticule.show(window.reticule);
+    }
+    else // Create new line
+    {
+      var start_pin_id = window.reticule.start_pin.external_id;
+      var end_pin_id = p.external_id;
+
+      // Checks: do not add a line that already exists
+      // start and end should be different
+
+      var existence_check = true;
+      for(var i in linesList)
+      {
+        var a = linesList[i].start;
+        var b = linesList[i].end;
+        if( (a == start_pin_id && b == end_pin_id) || ((b == start_pin_id && a == end_pin_id)) )
+        {
+          existence_check = false;
+        }
+      }
+
+      if(existence_check && start_pin_id != end_pin_id)
+      {
+        linesList.push({start:start_pin_id, end:end_pin_id});
+
+        var line = makeLine(start_pin_id, end_pin_id);
+        canvas.add(line);
+        window.reticule.hide(reticule);
+        resortAllElements(canvas);
+      }
+
+    }
+  }
+  else if (p && p.object_type == "line")
+  {
+      // Remove line from data structure and canvas
+
+    var remove_index = null;
+    for(var i =0; i < linesList.length; i++)
+    {
+      var a = linesList[i].start;
+      var b = linesList[i].end;
+      if( (a == p.start_pin_id && b == p.end_pin_id) || ((b == p.start_pin_id && a == p.end_pin_id)) )
+      {
+        remove_index = i;
+      }
+    }
+    if(remove_index !== null)
+    {
+      window.linesList.splice(remove_index, 1);
+    }
+    else
+    {
+      console.log("line_error", p.start_pin_id, p.end_pin_id)
+    }
+
+    canvas.remove(p);
+
+  }
+
+  // Cancel reticule if click in empty space
+  else if(!p && window.reticule.active)
+  {
+    window.reticule.hide(reticule);
+    resortAllElements(canvas);
+  }
+
+
+});
+
+// Line color hovering
+canvas.on('mouse:over',function(e)
+{
+  var p = e.target;
+  if(p && p.object_type == "line")
+  {
+    p.set({stroke:p.darkColor});
+    canvas.renderAll();
+  }
+})
+
+canvas.on('mouse:out',function(e)
+{
+  var p = e.target;
+  if(p && p.object_type == "line")
+  {
+    p.set({stroke:p.normalColor});
+    canvas.renderAll();
+  }
+})
+
+
+// Sort z index: keep the one for notes and lines, then reticule line, then pins, then reticule visor
+function resortAllElements(canvas)
+{
+  canvas.bringToFront(window.reticule.line);
+  for(var j in created_pins)
+  {
+    canvas.bringToFront(created_pins[j]);
+  }
+  canvas.bringToFront(window.reticule.visor);
+}
+  canvas.renderAll();
 
 }
