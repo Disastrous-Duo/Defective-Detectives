@@ -14,7 +14,6 @@
 
 
 :: interviewInside [nobr]
-
 <<BlankSpeaker>>
 <<AddParagraph "After stepping inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
@@ -23,6 +22,7 @@
 <<AddOption "Look around" "interviewInspect">>
 
 :: interviewInspect [nobr]
+<<BlankSpeaker>>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess.">>
 <<AddParagraph "On the other side, a sink and some cups. ">>
 <<AddParagraph "In front of you, the wall is scattered with papers.">>
