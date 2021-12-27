@@ -449,7 +449,6 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I meant the Laws of Magic.">>
 
-
 /*yassine remembers it's important but has no clue so he is stressed out.*/
 <<SetSpeaker "???">>
 <<AddParagraph "//Wait, what// were //the Laws of magic again?//">>
