@@ -104,7 +104,7 @@
 <<AddParagraph "Nomnom makes a broad gesture towards the pitiful state of the office.">>
 <<AddParagraph "Cannelé's smile is a bit appologetic.">>
 
-<<SetSpeaker "Nomnom">>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "We were not really expecting anyone so we didn't bother cleaning up...">>
 <<AddParagraph "But don't worry, it'll only take a minute.">>
 
@@ -208,13 +208,13 @@
 
 :: canneleCouch [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé is standing proud on the sofa.">>
-<<AddParagraph "They rest their elbow on the top of Nomnom's head as the latter tries to swat the arm away.">>
-<<AddParagraph "When they catch your confused expression, Cannéle smiles and hops once on the couch.">>
+<<AddParagraph "Cannelé is standing proudly on the sofa.">>
+<<AddParagraph "They are resting their elbow on the top of Nomnom's head as the latter tries to swat the arm away.">>
+<<AddParagraph "When they catch your confused expression, Cannelé smiles and hops once on the couch.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I think I get what's happening here.//">>
-<<AddParagraph "//They have this constant petty rivalry-siblings fight going on...//">>
+<<AddParagraph "//Both of them have this constant petty rivalry-siblings fight going on...//">>
 <<AddParagraph "//And Cannelé is ''rather small'' compared to Nomnom, who is ''rather tall''//">>
 <<AddParagraph "//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//">>
 <<AddParagraph "//It's suprisingly...//">>
@@ -322,6 +322,8 @@
 
 
 :: interviewSpeak [nobr]
+<<set $interview_speak to true>>
+
 <<SetSpeaker "???">>
 <<AddParagraph "So uhm, Nomme Nomme and? Cannelé, right? Cannelé like the mini cake?">>
 
@@ -335,7 +337,7 @@
 <<AddParagraph "What are you grumbling for?">>
 <<AddParagraph "Cannelé's a great name">>
 
-<<SetSpeaker "Nomnom">>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "It's literally shit and I hate you, ''Nomnom''">>
 
 <<BlankSpeaker>>
@@ -484,13 +486,15 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "This is ''really'' not necessary.">>
-<<AddParagraph "//I missed the timing to back out and come clean...//">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I missed the timing to back out and come clean...//">>
 
 <<SetSpeaker "???">>
 <<AddOption "Erm..." "law1">>

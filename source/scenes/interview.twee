@@ -24,7 +24,7 @@
 :: interviewInspect [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess.">>
-<<AddParagraph "On the other side, a sink and some cups. ">>
+<<AddParagraph "On the other side, a sink and some cups.">>
 <<AddParagraph "In front of you, the wall is scattered with papers.">>
 <<AddParagraph "A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
 
