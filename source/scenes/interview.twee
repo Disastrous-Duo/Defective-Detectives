@@ -50,7 +50,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "The room is in such a messy and pitiful state that there is nowhere to sit.">>
-<<AddParagraph "All the space seems to be cluttered with various objects, papers and rubbish.">>
+<<AddParagraph "All the space is engulfed under various objects, papers and rubbish.">>
 <<AddParagraph "The detectives have started to clean up...">>
 <<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but walk on each other's feet.">>
 <<AddParagraph "Unable to sit or even move one inch without stumbling on a random item, you decide to observe the scene.">>
@@ -145,7 +145,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "The room is in such a messy and pitiful state that there is nowhere to sit.">>
-<<AddParagraph "All the space seems to be cluttered with various objects, papers and rubbish.">>
+<<AddParagraph "All the space is engulfed under various objects, papers and rubbish.">>
 <<AddParagraph "The detectives have started to clean up...">>
 <<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but walk on each other's feet.">>
 <<AddParagraph "Unable to sit or even move one inch without stumbling on a random item, you decide to observe the scene.">>
@@ -264,8 +264,8 @@
 <<AddParagraph "Before your eyes, the dump had slowly transformed into an actual, proper office.">>
 <<AddParagraph "You barely even recognize the place.">>
 <<AddParagraph "The rubbish had mysteriously disappeared, hidden in a dark corner.">>
-<<AddParagraph "The couch had been - partly - excavated and an uncomfortable looking stool had been placed before you.">>
-<<AddParagraph "Your need to flee the place has slightly decreased.">>
+<<AddParagraph "The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.">>
+<<AddParagraph "Your need to flee the place is still there but it has slightly decreased.">>
 
 <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
 
@@ -410,6 +410,8 @@
 <<AddParagraph "//At first, I thought it looked like a bird’s nest//">>
 <<AddParagraph "//But it’s more of an artistic chaos, I guess…//">>
 <<AddParagraph "//Can he actually hide things in it?//">>
+<<AddParagraph "//Note to self: investigate the dimensional power of Nomnom's hair.//">>
+
 
 <<AddOption "Look at Nomnom again" "interviewNomnom">>
 
