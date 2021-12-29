@@ -2,9 +2,11 @@
 <h2 class="typewriter">Chapter 1 - Who Am I?</h2><br/>
 
 <<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddParagraph "Once inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
 <<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
+<<AddParagraph "">>
 
 
 <<AddOption "Talk to the detectives" "talkDetective">>
@@ -289,6 +291,9 @@
 <<AddParagraph "//Compared to the rest of their clothes.//">>
 <<AddParagraph "//It looks warm and cozy too...//">>
 <<AddParagraph "//Maybe I can ask them what brand this is.//">>
+<<AddParagraph "//Later.//">>
+<<AddParagraph "//For now, let's try and get some more answers.//">>
+
 
 <<AddOption "Look at Nomnom again" "interviewNomnom">>
 
@@ -338,7 +343,7 @@
 <<AddParagraph "Cannelé's a great name">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "It's literally shit and I hate you, ''Nomnom''">>
+<<AddParagraph "It's literally shit and I hate you, //''Nomnom''//">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This time, the argument seems really inconsequential and terribly pointless.">>
