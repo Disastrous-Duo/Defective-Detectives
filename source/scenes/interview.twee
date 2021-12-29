@@ -11,7 +11,7 @@
 
 <<AddOption "Talk to the detectives" "talkDetective">>
 <<AddOption "Look around" "interviewInspect">>
-<<AddOption "Wait for the detectives to talk you through this" "waitDetectives">>
+<<AddOption "Wait for the detectives' directions" "waitDetectives">>
 
 :: talkDetective [nobr]
 <<SetSpeaker "???">>
@@ -51,8 +51,8 @@
 <<BlankSpeaker>>
 <<AddParagraph "The room is in such a messy and pitiful state that there is nowhere to sit.">>
 <<AddParagraph "All the space is engulfed under various objects, papers and rubbish.">>
-<<AddParagraph "The detectives have started to clean up...">>
-<<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but walk on each other's feet.">>
+<<AddParagraph "The detectives have started cleaning up...">>
+<<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.">>
 <<AddParagraph "Unable to sit or even move one inch without stumbling on a random item, you decide to observe the scene.">>
 
 <<AddOption "Look around" "interviewInspect">>
@@ -146,8 +146,8 @@
 <<BlankSpeaker>>
 <<AddParagraph "The room is in such a messy and pitiful state that there is nowhere to sit.">>
 <<AddParagraph "All the space is engulfed under various objects, papers and rubbish.">>
-<<AddParagraph "The detectives have started to clean up...">>
-<<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but walk on each other's feet.">>
+<<AddParagraph "The detectives have started cleaning up...">>
+<<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.">>
 <<AddParagraph "Unable to sit or even move one inch without stumbling on a random item, you decide to observe the scene.">>
 
 <<AddOption "Look around" "interviewInspect">>
