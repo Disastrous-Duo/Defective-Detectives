@@ -70,3 +70,6 @@
 
 ::Test_Score_Cannelé
 <<AddScore "Cannelé" 3>>
+
+::Test_AddNote
+<<AddScore "Cannelé" 3>>

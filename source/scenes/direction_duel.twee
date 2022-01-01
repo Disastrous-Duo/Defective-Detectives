@@ -184,26 +184,14 @@
 
 :: Pause [nobr]
 
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "What are you looking at?" >>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Scram!!!!" >>
-
-<<SetSpeaker $client_name>>
-<<AddParagraph "I am ''so'' sorry about them.">>
-
-
-:: Pause [nobr]
-
 <<BlankSpeaker>>
 <<AddParagraph "Everyone freezes and looks directly at you.">>
 <<AddParagraph "You, the //player// behind the screen.">>
 
-<<SetSpeaker "Nomnom">>
+<<SetSpeaker "Cannelé">>
 <<AddParagraph "Hey, what are you looking at?" >>
 
-<<SetSpeaker "Cannelé">>
+<<SetSpeaker "Nomnom">>
 <<AddParagraph "Scram!">>
 
 <<SetSpeaker $client_name>>

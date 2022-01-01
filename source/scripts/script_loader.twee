@@ -43,7 +43,7 @@ requestScriptLoad({
 		// /!\ those are loaded before the handwritten font
 		// Not the right font on first start-up ==> need to fix that
 
-		let boards_id = ["conspiracy_board","conspiracy_board_bis"];
+		let boards_id = ["conspiracy_board"];
 		boards_id.map(id => window[id].init_board())
 
 	}
