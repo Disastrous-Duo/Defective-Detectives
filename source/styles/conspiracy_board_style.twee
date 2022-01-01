@@ -4,7 +4,7 @@
   src: url("./fonts/Caveat-Regular.ttf") format("truetype");
 }
 
-#conspiracy_board_overlay
+.boards_overlay
 {
   position: absolute; /* Sit on top of the page content */
   width: 60%; /* Full width (cover the whole page) */
@@ -17,7 +17,6 @@
 
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
-
 }
 
 .conspiracy_board_down

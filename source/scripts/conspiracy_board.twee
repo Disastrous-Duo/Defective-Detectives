@@ -1,37 +1,47 @@
 :: Conspiracy Board [script]
 
+(function(){ // self-containing function for scope purpose
 
-// Creates the HTML element
+// To create a new board,
+//1.copy-paste this file, change the Twine scene name
+//2.change the this_board name variable
+//3. call window[this_board] init function at startup
 
+let this_board = "conspiracy_board_bis"
+window[this_board] = {};
+
+
+
+// Creates the HTML elements for the board
 let genButton = (name, functionName) => `<input type="button" value="${name}" onclick="${functionName}();" />`;
 
 let html_conspiracy_board =
 `
-<div id="conspiracy_board_overlay">
-<canvas id="cvs_conspiracy_board"></canvas>
+<div id="${this_board+"_overlay"}" class="boards_overlay">
+<canvas id="${this_board+"_cvs"}"></canvas>
 </div>
 `;
 
 
 // Creates debug buttons
-$(genButton("Toggle Board","toggle_board")).insertAfter("#story-author");
+$(genButton("Toggle Board","window['"+this_board+"'].toggle_board")).insertAfter("#story-author");
 $(html_conspiracy_board).insertBefore("#passages");
 
-window.conspiracy_board_toggled = true;
+window[this_board].conspiracy_board_toggled = true;
 
 
-window.toggle_board = function()
+window[this_board].toggle_board = function()
 {
-  window.conspiracy_board_toggled = !window.conspiracy_board_toggled;
-  if(window.conspiracy_board_toggled)
+  window[this_board].conspiracy_board_toggled = !window[this_board].conspiracy_board_toggled;
+  if(window[this_board].conspiracy_board_toggled)
   {
-    $("#conspiracy_board_overlay").removeClass("conspiracy_board_up");
-    $("#conspiracy_board_overlay").addClass("conspiracy_board_down");
+    $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_up");
+    $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_down");
   }
   else
   {
-    $("#conspiracy_board_overlay").removeClass("conspiracy_board_down");
-    $("#conspiracy_board_overlay").addClass("conspiracy_board_up");
+    $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_down");
+    $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_up");
   }
 };
 
@@ -43,7 +53,7 @@ window.toggle_board = function()
 
 // Temporary data for debug purposes
 
-window.notesList = [
+window[this_board].notesList = [
   {txt:"Wallet stolen by a cat", x:120, y:150},
   {txt:"Cats bring items to Katty", x:100, y:380},
   {txt:"Who has the wallet?", x:300, y:100},
@@ -51,22 +61,22 @@ window.notesList = [
 
 ];
 
-window.linesList = [
+window[this_board].linesList = [
   //{start:1,end:2}
 ];
 
-window.created_pins = []; // will be filled, and store line elements
-window.reticule = {};
+window[this_board].created_pins = []; // will be filled, and store line elements
+window[this_board].reticule = {};
 
-window.init_conspiracy_board = function()
+window[this_board].init_board = function()
 {
   // Sets canvas to fill all the overlay
-  var html_canvas = document.getElementById("cvs_conspiracy_board");
-  var parent = document.getElementById("conspiracy_board_overlay");
+  var html_canvas = document.getElementById(`${this_board+"_cvs"}`);
+  var parent = document.getElementById(`${this_board+"_overlay"}`);
   html_canvas.width = parent.offsetWidth;
   html_canvas.height = parent.offsetHeight;
 
-var canvas = this.__canvas = new fabric.Canvas('cvs_conspiracy_board', { selection: false,
+var canvas = this.__canvas = new fabric.Canvas(`${this_board+"_cvs"}`, { selection: false,
 preserveObjectStacking: true // important to prevent object from changing layers when selected or moved
 });
 
@@ -125,8 +135,8 @@ var group = new fabric.Group([rect, textObject],
 function makeLine(start_pin_id, end_pin_id)
 {
 
-  var start_pin = created_pins[start_pin_id];
-  var end_pin = created_pins[end_pin_id];
+  var start_pin = window[this_board].created_pins[start_pin_id];
+  var end_pin = window[this_board].created_pins[end_pin_id];
 
   var line = new fabric.Line([start_pin.left, start_pin.top,end_pin.left, end_pin.top], {
     start_pin_id:start_pin_id,
@@ -286,14 +296,14 @@ function makeReticule()
       return reticule;
 }
   // Create notes and remember their pins
-  for(var i = 0; i < notesList.length; i++)
+  for(var i = 0; i < window[this_board].notesList.length; i++)
   {
-    var note = notesList[i];
+    var note = window[this_board].notesList[i];
     var pin = makePin(i, note.x, note.y-settings.noteHeight/2);
     var note = makeNote(i, note.txt, note.x, note.y, pin);
 
     //created_notes.push(note);
-    created_pins.push(pin);
+    window[this_board].created_pins.push(pin);
 
     canvas.add(note);
 
@@ -302,10 +312,10 @@ function makeReticule()
   }
 
   // Create lines
-  for(var i = 0; i < linesList.length;i++)
+  for(var i = 0; i < window[this_board].linesList.length;i++)
   {
-    var start_pin_id = linesList[i].start;
-    var end_pin_id = linesList[i].end;
+    var start_pin_id = window[this_board].linesList[i].start;
+    var end_pin_id = window[this_board].linesList[i].end;
     var line = makeLine(start_pin_id, end_pin_id);
 
     canvas.add(line);
@@ -313,18 +323,18 @@ function makeReticule()
 
 
   // Add pins
-  for(var i = 0; i < created_pins.length; i++)
+  for(var i = 0; i < window[this_board].created_pins.length; i++)
   {
-    canvas.add(created_pins[i]);
+    canvas.add(window[this_board].created_pins[i]);
   }
 
   //Add reticule
 
-  window.reticule = makeReticule();
-  var reticule = window.reticule;
+  window[this_board].reticule = makeReticule();
+  var reticule = window[this_board].reticule;
   //reticule.startFromPin(created_pins[2]);
   //reticule.show(reticule);
-  window.reticule.addToCanvas(canvas, window.reticule);
+  window[this_board].reticule.addToCanvas(canvas, window[this_board].reticule);
 
 
 canvas.on('object:moving', function(e)
@@ -335,8 +345,8 @@ canvas.on('object:moving', function(e)
     p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
     // Updates data external strucure about post-its
     // Coordinates change
-    window.notesList[p.external_id].x = p.left;
-    window.notesList[p.external_id].y = p.top;
+    window[this_board].notesList[p.external_id].x = p.left;
+    window[this_board].notesList[p.external_id].y = p.top;
 
     canvas.renderAll();
   }
@@ -350,9 +360,9 @@ canvas.on('object:moving', function(e)
 canvas.on('mouse:move', function(e)
 {
 
-  if(window.reticule.active)
+  if(window[this_board].reticule.active)
   {
-    window.reticule.moveVisor(window.reticule, e.pointer.x, e.pointer.y);
+    window[this_board].reticule.moveVisor(window[this_board].reticule, e.pointer.x, e.pointer.y);
     canvas.renderAll();
   }
 
@@ -366,24 +376,24 @@ canvas.on('mouse:down', function(e)
   {
 
     // Start reticule line if not already active
-    if(!window.reticule.active)
+    if(!window[this_board].reticule.active)
     {
-      window.reticule.startFromPin(window.reticule, p);
-      window.reticule.show(window.reticule);
+      window[this_board].reticule.startFromPin(window[this_board].reticule, p);
+      window[this_board].reticule.show(window[this_board].reticule);
     }
     else // Create new line
     {
-      var start_pin_id = window.reticule.start_pin.external_id;
+      var start_pin_id = window[this_board].reticule.start_pin.external_id;
       var end_pin_id = p.external_id;
 
       // Checks: do not add a line that already exists
       // start and end should be different
 
       var existence_check = true;
-      for(var i in linesList)
+      for(var i in window[this_board].linesList)
       {
-        var a = linesList[i].start;
-        var b = linesList[i].end;
+        var a = window[this_board].linesList[i].start;
+        var b = window[this_board].linesList[i].end;
         if( (a == start_pin_id && b == end_pin_id) || ((b == start_pin_id && a == end_pin_id)) )
         {
           existence_check = false;
@@ -392,11 +402,11 @@ canvas.on('mouse:down', function(e)
 
       if(existence_check && start_pin_id != end_pin_id)
       {
-        linesList.push({start:start_pin_id, end:end_pin_id});
+        window[this_board].linesList.push({start:start_pin_id, end:end_pin_id});
 
         var line = makeLine(start_pin_id, end_pin_id);
         canvas.add(line);
-        window.reticule.hide(reticule);
+        window[this_board].reticule.hide(reticule);
         resortAllElements(canvas);
       }
 
@@ -407,10 +417,10 @@ canvas.on('mouse:down', function(e)
       // Remove line from data structure and canvas
 
     var remove_index = null;
-    for(var i =0; i < linesList.length; i++)
+    for(var i =0; i < window[this_board].linesList.length; i++)
     {
-      var a = linesList[i].start;
-      var b = linesList[i].end;
+      var a = window[this_board].linesList[i].start;
+      var b = window[this_board].linesList[i].end;
       if( (a == p.start_pin_id && b == p.end_pin_id) || ((b == p.start_pin_id && a == p.end_pin_id)) )
       {
         remove_index = i;
@@ -418,7 +428,7 @@ canvas.on('mouse:down', function(e)
     }
     if(remove_index !== null)
     {
-      window.linesList.splice(remove_index, 1);
+      window[this_board].linesList.splice(remove_index, 1);
     }
     else
     {
@@ -430,9 +440,9 @@ canvas.on('mouse:down', function(e)
   }
 
   // Cancel reticule if click in empty space
-  else if(!p && window.reticule.active)
+  else if(!p && window[this_board].reticule.active)
   {
-    window.reticule.hide(reticule);
+    window[this_board].reticule.hide(reticule);
     resortAllElements(canvas);
   }
 
@@ -464,13 +474,15 @@ canvas.on('mouse:out',function(e)
 // Sort z index: keep the one for notes and lines, then reticule line, then pins, then reticule visor
 function resortAllElements(canvas)
 {
-  canvas.bringToFront(window.reticule.line);
-  for(var j in created_pins)
+  canvas.bringToFront(window[this_board].reticule.line);
+  for(var j in window[this_board].created_pins)
   {
-    canvas.bringToFront(created_pins[j]);
+    canvas.bringToFront(window[this_board].created_pins[j]);
   }
-  canvas.bringToFront(window.reticule.visor);
+  canvas.bringToFront(window[this_board].reticule.visor);
 }
   canvas.renderAll();
 
 }
+
+})();

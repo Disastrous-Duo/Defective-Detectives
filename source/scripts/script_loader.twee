@@ -39,8 +39,13 @@ requestScriptLoad({
 	id     : 'fabric-js',
 	src    : './source/scripts/fabric.js.txt',
 	onload : function (evt) {
-    window.init_conspiracy_board();
-		/* library is loaded, do something */
+
+		// /!\ those are loaded before the handwritten font
+		// Not the right font on first start-up ==> need to fix that
+
+		let boards_id = ["conspiracy_board","conspiracy_board_bis"];
+		boards_id.map(id => window[id].init_board())
+
 	}
 });
 // Example of loading `moment.min.js` from a CDN.
