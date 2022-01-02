@@ -27,7 +27,7 @@ let html_conspiracy_board =
 $(genButton("Toggle Board","window['"+this_board+"'].toggle_board")).insertAfter("#story-author");
 $(html_conspiracy_board).insertBefore("#passages");
 
-window[this_board].conspiracy_board_toggled = true;
+window[this_board].conspiracy_board_toggled = false;
 
 
 window[this_board].toggle_board = function()

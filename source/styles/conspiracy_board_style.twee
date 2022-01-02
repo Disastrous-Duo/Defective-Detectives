@@ -10,7 +10,7 @@
   width: 60%; /* Full width (cover the whole page) */
   height: 90%; /* Full height (cover the whole page) */
 
-  top:5%; /*Start hidden*/
+  top:-100%; /*Start hidden with -100%, visible with 5%*/
   background-color: rgba(0,0,0,1); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 
