@@ -73,9 +73,14 @@
 
 ::Test_AddNote [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "The client struggles to open the jammed drawer, and a bunch of items fall.">>
-<<AddParagraph `"A notepad, a cookie, a cheap lipstick, a "+note("sticky note","Hello there!")+", a loaded dice..."`>>
-<<AddParagraph "The client is stuck in a time loop, so he can test it multiple times.">>
-<<AddParagraph "The client struggles to open the jammed drawer, and a bunch of items fall.">>
-<<AddParagraph `"A notepad, a cookie, a cheap lipstick, a "+note("sticky note","Hello there!")+", a loaded dice..."`>>
-<<AddParagraph `"A notepad a "+note("sticky note","Hello there!")+", a loaded dice..."`>>
+<<AddParagraph "The two detectives walk in circles around the coffee table, thinking out loud.">>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Let's recap.">>
+<<AddParagraph `"Our client's wallet was "+note("stolen","Wallet stolen by a cat")+" by a cat."`>>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph `"Yep. Then, we followed a "+note("cat","Cats bring items to Katty")+" who brought my shoe to Katty."`>>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph `"Katty said she didn't ask him to, but the cat did it by himself."`>>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph `"But the cat's fur was full of magical sparkles."`>>
+<<AddParagraph `"Meaning, someone's "+note("gift","Who can control cats?")+" was at work."`>>

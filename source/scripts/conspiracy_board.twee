@@ -54,9 +54,6 @@ window[this_board].toggle_board = function()
 // Temporary data for debug purposes
 
 window[this_board].notesList = [
-  {txt:"Wallet stolen by a cat", x:120, y:150},
-  {txt:"Cats bring items to Katty", x:100, y:380},
-  {txt:"Who has the wallet?", x:300, y:100},
   {txt:"Who is the client?", x:360, y:300}
 
 ];
