@@ -129,3 +129,65 @@ window.slot = function(right_answer, duration)
 
 
 }
+
+
+window.note = function(displayed_text, note_data)
+{
+  // checking if the note is already in the board
+  var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
+
+  if(notes_txt.indexOf(displayed_text) > -1)
+  {
+    return displayed_text;
+  }
+
+	return `<span class="clickable_note" data-note='${note_data}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+}
+
+window.clickOnNote = function(e,link)
+{
+  $(link).removeClass("clickable_note");
+  var note = $("<span class='sticky_note_effect'>!</span>")[0];
+
+  // Settings
+  var postit_size = 30;
+  var duration = 1000;
+  var interval = 10;
+
+  var startX = e.clientX-postit_size/2;
+  var startY = e.clientY-postit_size/2;
+  var endY = -postit_size;
+  var delta_y = endY - startY;
+
+  if(Math.abs(delta_y) <= 200) // Speed correction, so it's not too long when the note is close to the top border of the screen
+  {
+    duration = 750;
+  }
+
+
+  note.style.top = startY+"px";
+  note.style.left = startX+"px";
+
+  var t = 0;
+  setInterval(function()
+  {
+    t += interval/duration;
+    var scaled_delta_y = window.easeInBack(t)*delta_y;
+    note.style.top = (startY+scaled_delta_y)+"px";
+  },interval);
+
+  $(link).append(note);
+
+
+  console.log(link);
+  console.log(link.dataset);
+  console.log(link.dataset.note);
+  window['conspiracy_board'].add_note(link.dataset.note);
+}
+
+window.easeInBack = function(t) // t from 0 to 1
+  {
+    const c1 = 1.70158;
+    const c3 = c1 + 1;
+    return c3 * t * t * t - c1 * t * t;
+  }

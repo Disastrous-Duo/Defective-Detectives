@@ -76,7 +76,7 @@ window[this_board].init_board = function()
   html_canvas.width = parent.offsetWidth;
   html_canvas.height = parent.offsetHeight;
 
-var canvas = this.__canvas = new fabric.Canvas(`${this_board+"_cvs"}`, { selection: false,
+var canvas = this.canvas = new fabric.Canvas(`${this_board+"_cvs"}`, { selection: false,
 preserveObjectStacking: true // important to prevent object from changing layers when selected or moved
 });
 
@@ -222,6 +222,42 @@ function makePin(external_id, x, y)
 }
 
 
+window[this_board].add_note = function(note_txt)
+{
+
+  // Do not add a note with the exact same text
+  var notes_txt = window[this_board].notesList.map(note => note.txt);
+  if(notes_txt.indexOf(note_txt) > -1)
+  {
+    return false;
+  }
+
+  // randomzie position if doesn't have one or find empty space?
+  var x = window.randint(0, canvas.width-settings.noteWidth);
+  var y = window.randint(0, canvas.height-settings.noteHeight);
+  var note = {txt:note_txt,x:x, y:y};
+
+  var id = window[this_board].notesList.length;
+    // id should be the current length of notesList, to add at the end
+  createNote(id, note, canvas);
+  window[this_board].notesList.push(note);
+  // add note to note list
+  resortAllElements(canvas);
+}
+
+
+function createNote(i, note, canvas)
+{
+  var pin = makePin(i, note.x, note.y-settings.noteHeight/2);
+  var note = makeNote(i, note.txt, note.x, note.y, pin);
+
+  //created_notes.push(note);
+  window[this_board].created_pins.push(pin);
+
+  canvas.add(note);
+  canvas.add(pin);
+}
+
 function makeReticule()
 {
 
@@ -295,20 +331,12 @@ function makeReticule()
 
       return reticule;
 }
-  // Create notes and remember their pins
+  // Create notes, remember their pins, add them
   for(var i = 0; i < window[this_board].notesList.length; i++)
   {
     var note = window[this_board].notesList[i];
-    var pin = makePin(i, note.x, note.y-settings.noteHeight/2);
-    var note = makeNote(i, note.txt, note.x, note.y, pin);
+    createNote(i, note, canvas)
 
-    //created_notes.push(note);
-    window[this_board].created_pins.push(pin);
-
-    canvas.add(note);
-
-    //Ad pins later, for z order
-    //canvas.add(pin);
   }
 
   // Create lines
@@ -319,13 +347,6 @@ function makeReticule()
     var line = makeLine(start_pin_id, end_pin_id);
 
     canvas.add(line);
-  }
-
-
-  // Add pins
-  for(var i = 0; i < window[this_board].created_pins.length; i++)
-  {
-    canvas.add(window[this_board].created_pins[i]);
   }
 
   //Add reticule

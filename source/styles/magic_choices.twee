@@ -247,6 +247,8 @@ h2 /*For chapter titles and Duels*/
   margin-left:-50%;
 }
 
+
+/* Flashback effect */
 .flashback {
   animation: flashback 0.8s ease-in-out;
   animation-delay: 0s;
@@ -256,8 +258,59 @@ h2 /*For chapter titles and Duels*/
   0% {
     opacity:0;
     filter: blur(10px);
+
+  }
+  20% {
+
+    top:0%;
   }
   100% {
     opacity:1;
+    top:50%;
   }
+}
+
+/* Collectable notes */
+
+.clickable_note
+{
+  cursor:pointer;
+  color:#FEFF9C;
+  font-weight: bold;
+  text-decoration:underline;
+}
+
+.sticky_note_effect
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  cursor:none;
+  color:var(--bgcolor);
+  font-size:24px;
+  z-index:-1;
+  width:30px;
+  height:30px;
+  background-color:#FEFF9C;
+  animation:sticky_note_blur 1s, sticky_note_rotate 1s linear 1s;
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes sticky_note_blur {
+  0% {
+    opacity:0;
+    filter: blur(10px);
+
+  }
+  20% {
+    opacity:1;
+  }
+}
+
+@keyframes sticky_note_rotate {
+  100%
+  { transform:rotate(360deg);}
 }
