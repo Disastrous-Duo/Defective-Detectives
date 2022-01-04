@@ -73,14 +73,15 @@
 
 ::Test_AddNote [nobr]
 <<BlankSpeaker>>
+<<AddParagraph `"Our client's wallet was "+note("stolen",{txt:"Cute cat", type:"picture", src:"note_cat.png"})+" by a cat."`>>
 <<AddParagraph "The two detectives walk in circles around the coffee table, thinking out loud.">>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Let's recap.">>
-<<AddParagraph `"Our client's wallet was "+note("stolen","Wallet stolen by a cat")+" by a cat."`>>
+<<AddParagraph `"Our client's wallet was "+note("stolen",{txt:"Wallet stolen by a cat", type:"hint"})+" by a cat."`>>
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"Yep. Then, we followed a "+note("cat","Cats bring items to Katty")+" who brought my shoe to Katty."`>>
+<<AddParagraph `"Yep. Then, we followed a "+note("cat",{txt:"Cats bring items to Katty", type:"hint"})+" who brought my shoe to Katty."`>>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `"Katty said she didn't ask him to, but the cat did it by himself."`>>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `"But the cat's fur was full of magical sparkles."`>>
-<<AddParagraph `"Meaning, someone's "+note("gift","Who can control cats?")+" was at work."`>>
+<<AddParagraph `"Meaning, someone's "+note("gift",{txt:"Who can control cats?", type:"question"})+" was at work."`>>

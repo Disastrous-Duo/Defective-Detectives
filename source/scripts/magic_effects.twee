@@ -141,11 +141,12 @@ window.note = function(displayed_text, note_data)
     return displayed_text;
   }
 
-	return `<span class="clickable_note" data-note='${note_data}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+	return `<span class="clickable_note" data-note='${JSON.stringify(note_data)}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
 }
 
 window.clickOnNote = function(e,link)
 {
+
   $(link).removeClass("clickable_note");
   var note = $("<span class='sticky_note_effect'>!</span>")[0];
 
@@ -178,11 +179,7 @@ window.clickOnNote = function(e,link)
 
   $(link).append(note);
 
-
-  console.log(link);
-  console.log(link.dataset);
-  console.log(link.dataset.note);
-  window['conspiracy_board'].add_note(link.dataset.note);
+  window['conspiracy_board'].add_note(JSON.parse(link.dataset.note));
 }
 
 window.easeInBack = function(t) // t from 0 to 1
