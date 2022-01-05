@@ -1,5 +1,5 @@
-
-:: Start
+//title screen
+:: Start 
 <<BlankSpeaker>>
 <<AddOption "START GAME" "Falaisant">>
 
@@ -88,6 +88,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
+<<AddParagraph "Something has happened behind that door.">>
 
 
 <<AddOption "Knock" "Expo">>
@@ -97,16 +98,16 @@
 /* Meeting */
 :: Expo [nobr]
 <<SetSpeaker "Shrill Voice">>
-<<AddParagraph "I HEARD SOMETHING IT MIGHT BE-">>
+<<AddParagraph "I heard something, it might be-">>
 
 <<SetSpeaker "Somehow Shriller Voice">>
-<<AddParagraph "WILL YOU SHUT UP">>
+<<AddParagraph "Oh, shut up">>
 
 <<SetSpeaker "Shrill Voice">>
-<<AddParagraph "NO YOU SHUT UP">>
+<<AddParagraph "No, YOU shut up">>
 
 <<SetSpeaker "Somehow Shriller Voice">>
-<<AddParagraph "I SAID IT FIRST SO SHUT UP SHUT UP">>
+<<AddParagraph "I said it first, YOU SHUT UP, shut up">>
 
 <<SetSpeaker "Leathery Voice">>
 <<AddParagraph "//What a beautiful morning//">>
@@ -116,13 +117,13 @@
 
 :: Expo_Wait1 [nobr]
 <<SetSpeaker "Somehow Shriller Voice">>
-<<AddParagraph "SHUT UP">>
+<<AddParagraph "Shut up!!!!">>
 
 <<SetSpeaker "Shrill Voice">>
-<<AddParagraph "NO YOU SHUT UP">>
+<<AddParagraph "UGH, Shut UP">>
 
 <<SetSpeaker "Somehow Shriller Voice">>
-<<AddParagraph "NO, NO YOU SHUT UP">>
+<<AddParagraph "NO, NO, you shut up.">>
 
 <<AddOption "Knock" "Expo_Knock">>
 <<AddOption "Wait" "Expo_Wait2">>
@@ -157,9 +158,12 @@
 
 :: Expo_Meeting1 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//Uncomfortable pause//">>
-
 <<AddParagraph "//It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor.//">>
+<<AddParagraph "//There's an uncomfortable pause as everyone stares in a surprised silence.//">>
+<<AddParagraph "...">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The girl smiles widely as the man stands up and dusts their clothes.">>
 
 <<SetSpeaker "?">>
 <<AddParagraph "Welcome to my detective agency, how can I help?">>
@@ -173,11 +177,5 @@
 <<SetSpeaker "???">>
 <<AddParagraph "That's...">>
 <<AddParagraph "... An excellent question.">>
-<<AddParagraph "Who am I?">>
 
-
-<<AddOption "..." "Office">>
-
-/* Title Screen */
-/* Cannelé & Nomnom - Defective Detective */
-/* Pilot */
+<<AddOption "..." "newOffice">>
