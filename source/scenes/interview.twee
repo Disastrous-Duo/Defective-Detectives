@@ -215,6 +215,7 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Why do you HAVE to be a pain in my-">>
 
+/* assuming -> jeu de mot */
 <<BlankSpeaker>>
 <<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
@@ -267,6 +268,36 @@
 <<AddParagraph "The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.">>
 <<AddParagraph "Your need to flee the place is still there but it has slightly decreased.">>
 
+<<AddOption "''BANG''" "conspiracyBoard">>
+
+:: conspiracyBoard [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The conspiracy board has fallen over in a huge commotion.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "AGAIN?!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I told you it was unstable...">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They both sigh and start to crouch and pick up the scattered documents.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "There is one piece missing...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I think I saw it under the table?">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Are you looking for this post-it?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Perfect! You can just click on it and stick it on the board by tugging the board right on top of the screen.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I got it!//">>
+
 <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
 
 
@@ -274,15 +305,13 @@
 <<BlankSpeaker>>
 <<AddParagraph "The two detectives are staring back, blankly.">>
 
-
 <<set $interview_nomnom to false>>
 <<set $interview_cannele to false>>
 <<set $interview_speak to false>>
 
 <<AddOption "Observe Nomnom" "interviewNomnom">>
 <<AddOption "Study Cannelé" "interviewCannelé">>
-<<AddOption "Attempt communication" "interviewSpeak">>
-<<AddOption "Skip" "Interview">>
+<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 
 
 :: interviewCannelé [nobr]
@@ -321,11 +350,8 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication" "interviewSpeak">>
+<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 <</if>>
-
-<<AddOption "Skip" "Interview">>
-
 
 
 :: canneleClothes [nobr]
@@ -343,11 +369,8 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication" "interviewSpeak">>
+<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 <</if>>
-
-<<AddOption "Skip" "Interview">>
-
 
 
 :: canneleCouch [nobr]
@@ -372,11 +395,8 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication" "interviewSpeak">>
+  <<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 <</if>>
-
-<<AddOption "Skip" "Interview">>
-
 
 
 :: interviewNomnom [nobr]
@@ -420,10 +440,9 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication" "interviewSpeak">>
+<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 <</if>>
 
-<<AddOption "Skip" "Interview">>
 
 
 :: nomnomCoat [nobr]
@@ -446,10 +465,8 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication" "interviewSpeak">>
+<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 <</if>>
-
-<<AddOption "Skip" "Interview">>
 
 
 :: nomnomLeftShoe [nobr]
@@ -464,10 +481,8 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication" "interviewSpeak">>
+<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
 <</if>>
-
-<<AddOption "Skip" "Interview">>
 
 
 :: interviewSpeak [nobr]
@@ -496,14 +511,6 @@
 <<AddParagraph "A-ah, I see.">>
 <<AddParagraph "//They remind me of siblings...//">>
 <<AddParagraph "//A pair of ''extremely annoying'' siblings.//">>
-
-
-<<if $interview_nomnom is false>>
-  <<AddOption "Observe Nomnom" "interviewNomnom">>
-<</if>>
-<<if $interview_cannele is false>>
-  <<AddOption "Study Cannelé" "interviewCannelé">>
-<</if>>
 
 <<AddOption "Bring the topic back to what matters to you : your amnesia." "Interview">>
 
@@ -600,9 +607,9 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I meant the Laws of Magic.">>
 
-/*yassine remembers it's important but has no clue so he is stressed out.*/
 <<SetSpeaker "???">>
 <<AddParagraph "//Wait, what// were //the Laws of magic again?//">>
+<<AddParagraph "//The name is so familiar but it's like looking into an empty drawer, I can't remember them.//">>
 <<AddParagraph "//This looks super important too...//">>
 <<AddParagraph "This is really not necessary.">>
 
@@ -649,7 +656,6 @@
 <<AddOption "Erm..." "law1">>
 
 
-
 :: law1 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//Okay, me//">>
@@ -665,9 +671,10 @@
 <<AddParagraph "//I have to think.//">>
 
 
-<<AddOption "Rule #1 : Magic is a gift from the Gods that dwell in the erm river and it allows humans to produce water after they consume Pop-Pop Algae." "law2">>
-<<AddOption "Rule #1 : Magic is a universal gift (?) that can be activated after eating a Fleur d'Ame." "law2">>
-<<AddOption "Rule #1 : Magic was granted to us by aliens! I know it!! Also, I am a little scared right now, what if they're the ones who caused my memory loss?" "law2">>
+<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their Gifts to us?" "law2">>
+<<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "law2">>
+<<AddOption "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "law2">>
+
 
 :: law2 [nobr]
 <<SetSpeaker "???">>
@@ -675,9 +682,9 @@
 <<AddParagraph "//Let's keep going.//">>
 <<AddParagraph "//I need to be logical//">>
 
-<<AddOption "Rule #2 : Magic is pretty uh, magical. Yes, I'd even say ''very'' magical. Trust me." "law3">>
-<<AddOption "Rule #2 : Magic can only be wielded by those who were deemed worthy by the river Gods." "law3">>
-<<AddOption "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity." "law3">>
+<<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "law3">>
+<<AddOption "River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners..." "law3">>
+<<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "law3">>
 
 
 :: law3 [nobr]
@@ -686,12 +693,56 @@
 <<AddParagraph "//Just one more...//">>
 <<AddParagraph "//And I will have found all Three Laws of Magic!//">>
 
-<<AddOption "Rule #3 : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums." "laws">>
-<<AddOption "Rule #3 : Magic must never be used to commit crimes, as it would be the worst betrayal of the divine laws." "laws">>
-<<AddOption "Rule #3 : Magic is super important dude, like actually super important" "laws">>
+<<AddOption "I mean someone - Lavoisomeone- said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "laws">>
+<<AddOption "Symbiotes must eat right? And if it's magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "laws">>
+<<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "laws">>
+
+:: restitution
+Rule #1 : Magic comes from the River Spirits who lend their Gifts to humans.
+Rule #2 : When a human comes of age, they form an exclusive pact with their own Spirit.
+Rule #3 : The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.
+
+Rule #1 : Magic is a type of energy ruled by physical equations that humans can understand and manipulate.
+Rule #2 : To harness this Magic, humans have developped specific organs - "Gifts" - that process the energy.
+Rule #3 : Nothing is created, nothing is destroyed, everything is transformed.
+
+Rule #1 : Magic is a symbiote organism living inside humans.
+Rule #2 : Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abili.
+Rule #3 : To use the symbiote's Gift, you have to feed it special nutrients.
+
+> choix 1: ca me paraît cohérent
+> choix 2: je vais peut être rééssayer
+
+:: Gods [nobr]
+ptdr quoi
+well ur not entirely wrong, this is an old myth actually that the  first settlers of falaisant made up.
+It is true that spirit and personality do influence your gift and shape it.
+but the rest is complete bullshit dude, some people out there can throw fireball at ur ass it's not just water
+
+
+:: physical [nobr]
+ptdr quoi
+well ur not entirely wrong, magic IS energy that's around us and we humans act as prims to this magic..
+but the rest is complete bullshit dude (u can create matter and this organ thing is just creepy)
+
+:: symbiotic [nobr]
+ptdr quoi
+well ur not entirely wrong, i mean we do need to consume fleur d'âme in order to make magic blablabla
+but the rest is completely fucking crazy
+
+> choix 1: mais du coup c'est quoi?
+> choix 2:
+> choix 3:
+
+:: bullshit [nobr]
+> c&N se foutent de sa gueule "mais ptdr c'est pas cohérent"
 
 
 :: laws [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "Okay, here I go.">>
+<<AddParagraph "Rule ">>
+
 
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "LMFAO what.">>
@@ -843,7 +894,6 @@
 
 
 :: Contract1 [nobr]
-
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "If you become our client, we need to draw an official contract.">>
 <<AddParagraph "After all, I am not a swindler-">>
@@ -864,9 +914,9 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph "Who are you?">>
-<<AddParagraph "What's your gift?">>
-<<AddParagraph "And what happened to you?">>
+<<AddParagraph "Mystery 1: Who are you?">>
+<<AddParagraph "Mystery 2: What's your gift?">>
+<<AddParagraph "Mystery 3: And what happened to you?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
@@ -914,19 +964,31 @@
 <<AddParagraph "Any name? Or an alias?">>
 
 
-/*a reprendre à partir de la*/
-
-<<AddOption "option" "interviewDeepThought">>
-/*option 2
-option 3*/
+<<AddOption "Not really?" "noName">>
+<<AddOption "I can come up with one! [Enter Name]" "enterName">>
+<<AddOption "If I say no, what's gonna happen?" "ifNoName">>
 
 
-:: interviewDeepThought [nobr]
+:: enterName[nobr]
+/* enter name box 5 letters */
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "This is a shit name.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Haven't seen a name as bad since 'Cannelé', dude what the heck.">>
+<<AddParagraph "Ok, time for me to shine!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I think NOT, you SUCK at namegiving.">>
+<<AddParagraph "I'm gonna take care of this">>
+/* continue scene to interviewDeepThought instead of copy paste*/
 
 <<BlankSpeaker>>
 <<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
 <<AddParagraph "Inspiration?">>
+
+<<AddParagraph "<h2 class='duel_title duel_left'>Designation</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A name...">>
@@ -965,19 +1027,122 @@ option 3*/
 <<AddParagraph "It's a muff-">>
 
 <<AddOption "//I am getting concerned ...//" "interviewA-HA">>
-/*option 2
-option 3*/
+
+
+:: ifNoName [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They both smile at you, an almost business-like smile.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "We wouldn't call you 'No',it's a terrible name.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Plus, it's already taken. You can take 'Yes', though.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "That's not what I meant but okay...">>
+<<AddParagraph "The answer is no, I do not have a name.">>
+
+/* continue scene to interviewDeepThought instead of copy paste*/
+
+<<BlankSpeaker>>
+<<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
+<<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
+<<AddParagraph "Inspiration?">>
+
+<<AddParagraph "<h2 class='duel_title duel_left'>Designation</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "A name...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "A chair?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "An alias !">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The sink...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ali ?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Oh no ew, dirty">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Iasias...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The couch...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ee-yas?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Wait, what's that...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Yas ! Yas?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's a muff-">>
+
+<<AddOption "//I am getting concerned ...//" "interviewA-HA">>
+
+
+:: interviewDeepThought [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
+<<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
+<<AddParagraph "Inspiration?">>
+
+<<AddParagraph "<h2 class='duel_title duel_left'>Designation</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "A name...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "A chair?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "An alias !">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The sink...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ali ?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Oh no ew, dirty">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Iasias...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The couch...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ee-yas?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Wait, what's that...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Yas ! Yas?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's a muff-">>
+
+<<AddOption "//I am getting concerned ...//" "interviewA-HA">>
 
 
 :: interviewA-HA [nobr]
-
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "''A-HA!''">>
 
 <<AddOption "//''VERY'' concerned...''//" "Naming">>
-/*option 2
-option 3*/
-
 
 
 :: Naming [nobr]
@@ -987,33 +1152,29 @@ option 3*/
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "YOUR NAME SHALL BE MUFFIN!!!">>
 
-
-<<AddOption "..." "Naming0">>
-
-
-:: Naming0 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom look at each other, outraged.">>
 <<AddParagraph "The silence between them tells an entire story on its own.">>
-<<AddParagraph "You can feel it.">>
-<<AddParagraph "This...">>
-<<AddParagraph "This ridiculous situation has happened before...">>
 
-<<BlankSpeaker>>
-<<AddParagraph "Cannelé........ Muffin (??) .............">>
-<<AddParagraph "Nomnom................... Yasyas (???) ...........">>
+<<SetSpeaker "???">>
+<<AddParagraph "//I can feel it.//">>
+<<AddParagraph "//This...//">>
+<<AddParagraph "//This ridiculous situation has happened before...//">>
+<<AddParagraph "//Cannelé........ Muffin (??) .............//">>
+<<AddParagraph "//Nomnom................... Yasyas (???) ...........//">>
+<<AddParagraph "//This piece of knowledge is terrifying.//">>
+<<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
+<<AddParagraph "//Perhaps even more terrifying than the memory loss itself...//">>
 
-<<BlankSpeaker>>
-<<AddParagraph "This piece of knowledge is terrifying.">>
-<<AddParagraph "More terrifying than the dark alleys, more terrifying than the tiny, messy office.">>
-<<AddParagraph "Perhaps even more terrifying than the memory loss itself...">>
-
-<<AddOption "You feel an urge to drink coffee" "Naming1">>
-/*option 2
-option 3*/
+<<AddOption "//I can't believe this is happening to me.//" "Naming1">>
+<<AddOption "//Is it too late to leave?//" "Naming1">>
+<<AddOption "//I don't even know what to say to that.//" "Naming1">>
 
 
 :: Naming1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "Almost by reflex, you reach for the cup of coffee and take a sip, trying to get your mind away from the ridiculous situation unfolding before your eyes.">>
+
 <<SetSpeaker "???">>
 <<AddParagraph  "@@.shake;''*COUGH*''@@" >>
 
@@ -1037,9 +1198,9 @@ option 3*/
 <<AddParagraph "ANYWAY">>
 <<AddParagraph "WHICH ONE DO YOU PREFER ?">>
 
+<<AddOption "Really... Then uh, Yasyas?" "Yasyas">>
+<<AddOption "Errr if I really don't have a choice I'll just choose Muffin" "Muffin">>
 <<AddOption "I could pick anything, literally anything but those two... words" "Naming2">>
-/*option 2
-option 3*/
 
 
 :: Naming2 [nobr]
@@ -1062,9 +1223,8 @@ option 3*/
 <<AddParagraph "//A situation I can't escape//">>
 
 <<AddOption "I'll go with Yasyas" "Yasyas">>
-<<AddOption "I'll go with Muffin" "Muffin">>
+<<AddOption "Muffin it is, I guess..." "Muffin">>
 
-/*jusqu'ici  3*/
 
 :: Yasyas [nobr]
 <<SetSpeaker "Faraway Voice">>
