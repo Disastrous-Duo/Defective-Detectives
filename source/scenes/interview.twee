@@ -694,7 +694,7 @@
 <<AddParagraph "//And I will have found all Three Laws of Magic!//">>
 
 <<AddOption "I mean someone - Lavoisomeone- said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "laws">>
-<<AddOption "Symbiotes must eat right? And if it's magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "laws">>
+<<AddOption "Symbiotes must eat right to use their Gift? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "laws">>
 <<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "laws">>
 
 :: restitution
@@ -710,8 +710,9 @@ Rule #1 : Magic is a symbiote organism living inside humans.
 Rule #2 : Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abili.
 Rule #3 : To use the symbiote's Gift, you have to feed it special nutrients.
 
-> choix 1: ca me paraît cohérent
-> choix 2: je vais peut être rééssayer
+<<AddOption "Hum, maybe I should think about this again..." "law1">>
+<<AddOption "Ok, this is looking good!" "laws">>
+
 
 :: Gods [nobr]
 ptdr quoi
