@@ -561,7 +561,7 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"The client looks terribly old, "+slot("around 25 years old", 1)+"."` >>
+<<AddParagraph  `"@@.precog_color;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
 
 
 <<SetSpeaker "Cannelé">>
@@ -743,7 +743,7 @@
 
 /*tout en couleur + lumière*/
 <<BlankSpeaker>>
-<<AddParagraph  `"There are suspicious stains on his coat. "+slot("Is it food", 1)+"?"` >>
+<<AddParagraph  `"@@.precog_color;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -876,9 +876,9 @@
 <<AddParagraph "I sincerely despise you so much.">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven."`>>
-<<AddParagraph `"He looks like he has the means "+slot("to take care of his appearance",1)+"."`>>
-<<AddParagraph `"This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+"."` >>
+<<AddParagraph  `"@@.precog_color;His clothes seem to be good quality and he he is clean shaven.@@"`>>
+<<AddParagraph `"@@.precog_color;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
+<<AddParagraph `"@@.precog_color;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
@@ -908,7 +908,7 @@
 <<AddParagraph "???">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+"."` >>
+<<AddParagraph  `"@@.precog_color;On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>

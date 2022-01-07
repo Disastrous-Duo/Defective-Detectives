@@ -85,3 +85,9 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `"But the cat's fur was full of magical sparkles."`>>
 <<AddParagraph `"Meaning, someone's "+note("gift",{txt:"Who can control cats?", type:"question"})+" was at work."`>>
+
+
+::Test_NoteTooltip [nobr]
+<<BlankSpeaker>>
+<<AddParagraph `"Our client's wallet was "+tooltip(note("stolen",{txt:"Cute cat", type:"picture", src:"note_cat.png"}),"That's a tooltip!")+" by a cat."`>>
+<<AddParagraph `"Our client's wallet was "+tooltip(note("stolen",{txt:"Cute cat", type:"picture", src:"note_cat.png"}),"That's a post-it!")+" by a cat."`>>
