@@ -289,11 +289,20 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I think I saw it under the table?">>
 
+<<BlankSpeaker>>
+<<AddParagraph "They continue rummaging through the mess of documents.">>
+<<AddParagraph "You see a blue paper sticking out from under the coffee table.">>
+
 <<SetSpeaker "???">>
 <<AddParagraph "Are you looking for this post-it?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Perfect! You can just click on it and stick it on the board by tugging the board right on top of the screen.">>
+<<AddParagraph "Perfect! That's the one!">>
+<<AddParagraph "You can just click on it!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "And stick it right back on the board by tugging the handle right on top of the screen.">>
+
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I got it!//">>
@@ -620,7 +629,7 @@
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
 
 <<SetSpeaker "???">>
-<<AddOption "If you insist..." "law1">>
+<<AddOption "If you insist..." "theory1">>
 
 :: giftNo [nobr]
 <<SetSpeaker "Cannelé">>
@@ -653,10 +662,10 @@
 <<AddParagraph "//I missed the timing to back out and come clean...//">>
 
 <<SetSpeaker "???">>
-<<AddOption "Erm..." "law1">>
+<<AddOption "Erm..." "theory1">>
 
 
-:: law1 [nobr]
+:: theory1 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//Okay, me//">>
 <<AddParagraph "//Take a deep breath//">>
@@ -671,97 +680,359 @@
 <<AddParagraph "//I have to think.//">>
 
 
-<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their Gifts to us?" "law2">>
-<<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "law2">>
-<<AddOption "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "law2">>
+<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their Gifts to us?" "theory2">>
+<<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "theory2">>
+<<AddOption "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "theory2">>
 
 
-:: law2 [nobr]
+:: theory2 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//That sounds plausible, maybe!//">>
 <<AddParagraph "//Let's keep going.//">>
 <<AddParagraph "//I need to be logical//">>
 
-<<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "law3">>
-<<AddOption "River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners..." "law3">>
-<<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "law3">>
+<<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
+<<AddOption "River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners..." "theory3">>
+<<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
 
 
-:: law3 [nobr]
+:: theory3 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//I might actually be onto something?//">>
 <<AddParagraph "//Just one more...//">>
-<<AddParagraph "//And I will have found all Three Laws of Magic!//">>
+<<AddParagraph "//And I will have crafted  a complete and logical reasoning!//">>
 
-<<AddOption "I mean someone - Lavoisomeone- said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "laws">>
-<<AddOption "Symbiotes must eat right to use their Gift? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "laws">>
-<<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "laws">>
+<<AddOption "I mean someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
+<<AddOption "Symbiotes must eat right to use their Gift? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
+<<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution">>
 
-:: restitution
-Rule #1 : Magic comes from the River Spirits who lend their Gifts to humans.
-Rule #2 : When a human comes of age, they form an exclusive pact with their own Spirit.
-Rule #3 : The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.
+:: restitution [nobr]
+<<SetSpeaker "Rule #1">>
+<<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
 
-Rule #1 : Magic is a type of energy ruled by physical equations that humans can understand and manipulate.
-Rule #2 : To harness this Magic, humans have developped specific organs - "Gifts" - that process the energy.
-Rule #3 : Nothing is created, nothing is destroyed, everything is transformed.
+<<SetSpeaker "Rule #2">>
+<<AddParagraph "When a human comes of age, they form an exclusive pact with their own Spirit.">>
 
-Rule #1 : Magic is a symbiote organism living inside humans.
-Rule #2 : Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abili.
-Rule #3 : To use the symbiote's Gift, you have to feed it special nutrients.
+<<SetSpeaker "Rule #3">>
+<<AddParagraph "The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.">>
+
+
+<<SetSpeaker "Rule #1">>
+<<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+<<SetSpeaker "Rule #2">>
+<<AddParagraph "To harness this Magic, humans have developped specific organs - 'Gifts' - that process the energy.">>
+
+<<SetSpeaker "Rule #3">>
+<<AddParagraph "Nothing is created, nothing is destroyed, everything is transformed.">>
+
+
+<<SetSpeaker "Rule #1">>
+<<AddParagraph "Magic is a symbiote organism living inside humans.">>
+
+<<SetSpeaker "Rule #2">>
+<<AddParagraph "Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abilities.">>
+
+<<SetSpeaker "Rule #3">>
+<<AddParagraph "To use the symbiote's Gift, you have to feed it special nutrients.">>
+
+<<set $result to "RiverSpirits">>
 
 <<AddOption "Hum, maybe I should think about this again..." "law1">>
-<<AddOption "Ok, this is looking good!" "laws">>
+<<AddOption "Ok, this is looking good!" "stateRules">>
 
 
-:: Gods [nobr]
-ptdr quoi
-well ur not entirely wrong, this is an old myth actually that the  first settlers of falaisant made up.
-It is true that spirit and personality do influence your gift and shape it.
-but the rest is complete bullshit dude, some people out there can throw fireball at ur ass it's not just water
+:: stateRules [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "You enunciate the rules you came up with clearly, with made up confidence but now it feels real.">>
+<<AddParagraph "You got this.">>
 
-:: physical [nobr]
-ptdr quoi
-well ur not entirely wrong, magic IS energy that's around us and we humans act as prims to this magic..
-but the rest is complete bullshit dude (u can create matter and this organ thing is just creepy)
-
-:: symbiotic [nobr]
-ptdr quoi
-well ur not entirely wrong, i mean we do need to consume fleur d'âme in order to make magic blablabla
-but the rest is completely fucking crazy
-
-> choix 1: mais du coup c'est quoi?
-> choix 2:
-> choix 3:
-
-:: bullshit [nobr]
-> c&N se foutent de sa gueule "mais ptdr c'est pas cohérent"
-
-
-:: laws [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph "Okay, here I go.">>
-<<AddParagraph "Rule ">>
+<<AddParagraph "//This makes sense!//">>
 
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomno don't say anything.">>
+<<AddParagraph "Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.">>
+<<AddParagraph "Cannelé hasn't moved: they're looking as you finish stating the third rule.">>
+
+<<AddParagraph "...">>
 
 <<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "LMFAO what.">>
-<<AddParagraph "We gotta find a way to make fun of you so hard you'll cry.">>
+<<AddParagraph "BWAHAHAHAHAHAHA">>
 
-/*asked the player what was their gift: have the player choose their own gift? keep it that way?
 <<SetSpeaker "???">>
-<<AddParagraph "No, I have no idea...">>*/
+<<AddParagraph "//...//">>
+
+
+<<AddOption "//I thought it was pretty good?//" "riverSpirits">>
+<<AddOption "//Am I that far off??//" "riverSpirits">>
+<<AddOption "//I hate them so much...//" "riverSpirits">>
+
+
+:: riverSpirits [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "This was terrible but like...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "In a good, terrible way?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What was this all even about?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "River Spirits lending their powers to human is the First Myth that the first settlers who discovered the continent came up with.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "And it is true that personality, mind and spirit do influence the way your Gift is shaped...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "But the rest? Complete bullshit.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Some people out there can throw fireballs at your ass, so it's really not that tied to water and the River.">>
+<<AddParagraph "And we don't date magical spirits in exchange of Magic, no.">>
+<<AddParagraph "That's kinda...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "''REALLY'' creepy...">>
+<<AddParagraph "Sorry to disappoint... I guess?">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//What is this feeling...//">>
+
+<<AddOption "//Annoyance?//" "realLaws">>
+<<AddOption "//Amusement?//" "realLaws">>
+<<AddOption "//Indifference.//" "realLaws">>
+
+
+:: physical [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "This was terrible but like...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "In a good, terrible way?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What was this all even about?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "Magic is energy around us and we humans tap into it to manifest our Gift...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "But we act more as a prism and we sure as hell don't have freaky magical organs.">>
+<<AddParagraph "I mean, what the fuck was that even??">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "You have a very... fertile imagination.">>
+<<AddParagraph "Also matter can be created, Lavoisier is a quack.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Someone read my mind once and that's just not explainable by your Laws of Physics...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "At least, nothing was said about Equivalent Exchange.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "That would've been so lame...">>
+<<AddParagraph "This is real life not some sort of fictional universe??">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Youngsters this day, they've lost all sense of reality...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ok, stop here grandpa, your 27 years old bones are creaking.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//What is this feeling...//">>
+
+<<AddOption "//Annoyance?//" "realLaws">>
+<<AddOption "//Amusement?//" "realLaws">>
+<<AddOption "//Indifference.//" "realLaws">>
+
+
+:: symbiotic [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "This was terrible but like...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "In a good, terrible way?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What was this all even about?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "We do need to consume some special ingredient to use our Gifts...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Fleur D'Âme">>
+<<AddParagraph "Very rare, very expensive, very hard to get by.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Its distribution is basically controlled by the Governement...">>
+<<AddParagraph "But it was a good... guess? From your part!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "The rest of your theory?">>
+<<AddParagraph "I diagnose it with bullshit.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I don't have anyone else living in my body...">>
+<<AddParagraph "There have been cases of people communicating with their Gifts...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "But it's rare and certainly not a rule.">>
+<<AddParagraph "But wow, you really come up with crazy shit, uh?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I wouldn't say crazy shit, more like... crazy... crazy.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//What is this feeling...//">>
+
+<<AddOption "//Annoyance?//" "realLaws">>
+<<AddOption "//Amusement?//" "realLaws">>
+<<AddOption "//Indifference.//" "realLaws">>
+
+
+:: bullshit [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "This was terrible, like...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Literally ''nothing'' you've said makes sense?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "A piece of advice;">>
+<<AddParagraph "Amnesia 101: if you're not sure, just don't say it.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Because when you say it, you end up in this situation.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Sounding like the perfect mix between ridiculous, psychotic and a little pathetic.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Kind of like a crazy conspirationist!">>
+<<AddParagraph "It's fine, it happens to all of us.">>
+<<AddParagraph "Just use this as advice.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "But hey, thanks for the entertainment!">>
+
+
+<<SetSpeaker "???">>
+<<AddParagraph "//What is this feeling...//">>
+
+<<AddOption "//Annoyance?//" "realLaws">>
+<<AddOption "//Amusement?//" "realLaws">>
+<<AddOption "//Indifference.//" "realLaws">>
+
+
+
+:: realLaws [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "OK then.">>
+<<AddParagraph "What ARE the Three Laws of Magic?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom look at each other.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Rule #1 : Magic is a universal gift that can be activated after eating a Fleur d'Âme.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Rule #3 : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//Hmmm... Better note those down.//">>
+
+<<AddOption "Before we continue, I have some questions about those Laws" "questionsLaws">>
 
 <<if $interview_event is false>>
-<<AddOption "What happened ?" "Event">>
+<<AddOption "About what happened to me..." "Event">>
 <</if>>
 
 <<if $interview_coffee is false>>
-<<AddOption "What's wrong with this coffee ?" "Coffee">>
+<<AddOption "What's wrong with this coffee?" "Coffee">>
 <</if>>
 
-<<if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
-  <<AddOption "Take a deep breath" "Contract">>
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath [Continue]" "Contract">>
+<</if>>
+
+:: questionsLaws [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Go ahead!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "We shall indulge you.">>
+
+<<AddOption "About that first Law..." "law1">>
+<<AddOption "About that second Law..." "law2">>
+<<AddOption "About that third Law..." "law3">>
+
+:: law1 [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "mini explanation">>
+
+<<AddOption "About that second Law..." "law2">>
+<<AddOption "About that third Law..." "law3">>
+<<AddOption "That's it" "lawsDone">>
+
+
+:: law2 [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "mini explanation">>
+
+<<AddOption "About that first Law..." "law1">>
+<<AddOption "About that third Law..." "law3">>
+<<AddOption "That's it" "lawsDone">>
+
+
+:: law3 [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "mini explanation">>
+
+<<AddOption "About that first Law..." "law1">>
+<<AddOption "About that second Law..." "law2">>
+<<AddOption "That's it" "lawsDone">>
+
+
+
+:: lawsDone [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "Thank you, I think I'm good.">>
+<<AddParagraph "Now...">>
+
+
+<<if $interview_event is false>>
+<<AddOption "About what happened to me..." "Event">>
+<</if>>
+
+<<if $interview_coffee is false>>
+<<AddOption "What's wrong with this coffee?" "Coffee">>
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath [Continue]" "Contract">>
 <</if>>
 
 
@@ -828,8 +1099,8 @@ but the rest is completely fucking crazy
 <<AddOption "What's wrong with this coffee ?" "Coffee">>
 <</if>>
 
-<<if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
-  <<AddOption "Take a deep breath" "Contract">>
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath [Continue]" "Contract">>
 <</if>>
 
 
@@ -869,13 +1140,12 @@ but the rest is completely fucking crazy
 <</if>>
 
 <<if $interview_event is false>>
-<<AddOption "What happened ?" "Event">>
+<<AddOption "What happened?" "Event">>
 <</if>>
 
-<<if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
-  <<AddOption "Take a deep breath" "Contract">>
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath [Continue]" "Contract">>
 <</if>>
-
 
 
 :: Contract [nobr]
