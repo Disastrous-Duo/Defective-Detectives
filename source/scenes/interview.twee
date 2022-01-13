@@ -6,7 +6,6 @@
 <<AddParagraph "Once inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
 <<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
-<<AddParagraph "">>
 
 
 <<AddOption "Talk to the detectives" "talkDetective">>
@@ -293,6 +292,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They continue rummaging through the mess of documents.">>
+/*TODO: if it's blue, the link needs to be blue too!*/
 <<AddParagraph "You see a blue paper sticking out from under the coffee table.">>
 
 <<SetSpeaker "???">>
@@ -323,7 +323,7 @@
 
 <<AddOption "Observe Nomnom" "interviewNomnom">>
 <<AddOption "Study Cannelé" "interviewCannelé">>
-<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 
 
 :: interviewCannelé [nobr]
@@ -362,7 +362,7 @@
 <</if>>
 
 <<if $interview_speak is false>>
-<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 <</if>>
 
 
@@ -381,7 +381,7 @@
 <</if>>
 
 <<if $interview_speak is false>>
-<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 <</if>>
 
 
@@ -407,7 +407,7 @@
 <</if>>
 
 <<if $interview_speak is false>>
-  <<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+  <<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 <</if>>
 
 
@@ -452,7 +452,7 @@
 <</if>>
 
 <<if $interview_speak is false>>
-<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 <</if>>
 
 
@@ -477,7 +477,7 @@
 <</if>>
 
 <<if $interview_speak is false>>
-<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 <</if>>
 
 
@@ -493,7 +493,7 @@
 <</if>>
 
 <<if $interview_speak is false>>
-<<AddOption "Attempt communication [Skip]" "interviewSpeak">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 <</if>>
 
 
@@ -504,6 +504,7 @@
 <<AddParagraph `"So uhm, Nomme Nomme and? Cannelé, right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
+/*TODO: put italics here*/
 <<AddParagraph `"It's pronounced ''non-non'', "+tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'")+ "?"`>>
 
 <<BlankSpeaker>>
@@ -511,6 +512,7 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "What are you grumbling for?">>
+/*TODO: dots*/
 <<AddParagraph "Cannelé's a great name">>
 
 <<SetSpeaker "Cannelé">>
@@ -550,12 +552,12 @@
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
 
 /*appear once fast then disappear and normal effect*/
-<<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is leaving through the door, a huge stain on his coat. He looks angry." >>
+<<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is shouting in pain, a huge stain on his pants." >>
 
-<<AddParagraph "Nomnom picks up the coffee cup again, and puts it slightly farther on the table.">>
+<<AddParagraph "Nomnom quickly picks up the coffee cup again, and puts it slightly farther on the table.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It's still a //tad bit// hot.">>
+<<AddParagraph "You should wait a bit before drinking it. It's still a //tad bit// hot.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>
@@ -568,11 +570,7 @@
 <<set $interview_coffee to false>>
 
 <<AddOption "Who am I?" "Identity">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
 <<AddOption "What happened?" "Event">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
 <<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
@@ -580,7 +578,7 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"The client looks terribly old, "+slot("around 25 years old", 1)+"."` >>
+<<AddParagraph  `"@@.precog_color;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
 
 
 <<SetSpeaker "Cannelé">>
@@ -591,7 +589,7 @@
 <<AddParagraph "I have no idea where I am or where I live, I am completely lost.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "What about your gift?">>
+<<AddParagraph "What about your magical gift?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Do you even remember what a gift is?">>
@@ -680,7 +678,9 @@
 <<AddParagraph "//I have a feeling that this is very important.//">>
 <<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
 
-<<AddParagraph "//I have to think.//">>
+<<AddParagraph "//I just have to think.//">>
+<<BlankSpeaker>>
+<<AddParagraph "''First, where does that Magic comes from?''">>
 
 
 <<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their Gifts to us?" "theory2">>
@@ -692,23 +692,34 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//That sounds plausible, maybe!//">>
 <<AddParagraph "//Let's keep going.//">>
-<<AddParagraph "//I need to be logical//">>
+/*<<AddParagraph "//I need to be logical//">>*/
 
-<<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
-<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners "+tooltip("...","Lovers? Soulmates??")` "theory3">>
+<<AddParagraph "//I just need to be coherent. If Magic comes from there...//">>
+<<BlankSpeaker>>
+<<AddParagraph "''How can humans use it?''">>
+
+<<AddOption "If humans can't do Magic themselves, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
+/*TODO: visual bug fix if you put 'Partners' out of the tooltip, it breaks. Add a minimal width to the tooltip*/
+<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates??")` "theory3">>
 <<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
 
 
 :: theory3 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//I might actually be onto something?//">>
-<<AddParagraph "//Just one more...//">>
-<<AddParagraph "//And I will have crafted  a complete and logical reasoning!//">>
+<<AddParagraph "//Just one more detail...//">>
+<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
 
-<<AddOption "I mean someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
-<<AddOption "Symbiotes must eat right to use their Gift? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
-<<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution">>
+/*I find that bold italis text is not visible enough. I can try to look into that*/
+<<AddParagraph "//They're called ''Laws'', so there must be some kind of restrictions...//">>
+<<BlankSpeaker>>
+<<AddParagraph "''To do Magic, which rules must humans follow?''">>
 
+<<AddOption "I mean someone - Lavoisomeone - said it before it before right?<br/>'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
+<<AddOption "Symbiotes must eat right to use their Gift?<br/>And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
+<<AddOption "If we're talking about a relationship between someone and some magical Spirit...<br/>It means that we must be nice to them, right?" "restitution">>
+
+/*TODO: add a recap*/
 :: restitution [nobr]
 <<SetSpeaker "Rule #1">>
 <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
@@ -742,7 +753,7 @@
 <<set $result to "RiverSpirits">>
 
 <<AddOption "Hum, maybe I should think about this again..." "law1">>
-<<AddOption "Ok, this is looking good!" "stateRules">>
+<<AddOption "Ok, this is looking good! [Confirm.]" "stateRules">>
 
 
 :: stateRules [nobr]
@@ -754,10 +765,11 @@
 <<AddParagraph "//This makes sense!//">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé and Nomno don't say anything.">>
+<<AddParagraph "Cannelé and Nomnom don't say anything.">>
 <<AddParagraph "Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.">>
 <<AddParagraph "Cannelé hasn't moved: they're looking as you finish stating the third rule.">>
 
+/*TODO: Yassine says the end of his third rule. then, a longer ... ... ..., */
 <<AddParagraph "...">>
 
 <<SetSpeaker "Cannelé & Nomnom">>
@@ -782,6 +794,7 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "In a good, terrible way?">>
 
+/*TODO: Detect if Gifts was said 3 times with 3 different meanings.*/
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What was this all even about?">>
 
@@ -829,6 +842,7 @@
 <<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
 <<AddParagraph "Magic is energy around us and we humans tap into it to manifest our Gift...">>
 
+/*TODO: is "prism" often used this way? other word like catalyst?*/
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "But we act more as a prism and we sure as hell don't have freaky magical organs.">>
 <<AddParagraph "I mean, what the fuck was that even??">>
@@ -878,6 +892,7 @@
 <<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
 <<AddParagraph "We do need to consume some special ingredient to use our Gifts...">>
 
+/*TODO: tooltip Literally: //Flower from the Soul//  */
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Fleur D'Âme">>
 <<AddParagraph "Very rare, very expensive, very hard to get by.">>
@@ -978,7 +993,7 @@
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
-  <<AddOption "Take a deep breath [Continue]" "Contract">>
+  <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
 
 :: questionsLaws [nobr]
@@ -998,7 +1013,7 @@
 
 <<AddOption "About that second Law..." "law2">>
 <<AddOption "About that third Law..." "law3">>
-<<AddOption "That's it" "lawsDone">>
+<<AddOption "That's it." "lawsDone">>
 
 
 :: law2 [nobr]
@@ -1007,7 +1022,7 @@
 
 <<AddOption "About that first Law..." "law1">>
 <<AddOption "About that third Law..." "law3">>
-<<AddOption "That's it" "lawsDone">>
+<<AddOption "That's it." "lawsDone">>
 
 
 :: law3 [nobr]
@@ -1016,7 +1031,7 @@
 
 <<AddOption "About that first Law..." "law1">>
 <<AddOption "About that second Law..." "law2">>
-<<AddOption "That's it" "lawsDone">>
+<<AddOption "That's it." "lawsDone">>
 
 
 
@@ -1035,7 +1050,7 @@
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
-  <<AddOption "Take a deep breath [Continue]" "Contract">>
+  <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
 
 
@@ -1068,7 +1083,7 @@
 
 /*tout en couleur + lumière*/
 <<BlankSpeaker>>
-<<AddParagraph  `"There are suspicious stains on his coat. "+slot("Is it food", 1)+"?"` >>
+<<AddParagraph  `"@@.precog_color;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -1103,7 +1118,7 @@
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
-  <<AddOption "Take a deep breath [Continue]" "Contract">>
+  <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
 
 
@@ -1147,7 +1162,7 @@
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
-  <<AddOption "Take a deep breath [Continue]" "Contract">>
+  <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
 
 
@@ -1172,7 +1187,7 @@
 <<AddParagraph "After all, I am not a swindler-">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "''COUGH''">>
+<<AddParagraph "''*COUGH*''">>
 <<AddParagraph "''WE'' are proper detectives.">>
 
 <<BlankSpeaker>>
@@ -1198,6 +1213,8 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
 
+
+/*Precog colors and lighting*/
 <<BlankSpeaker>>
 <<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven."`>>
 <<AddParagraph `"He looks like he has the means "+slot("to take care of his appearance",1)+"."`>>
@@ -1230,6 +1247,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph "???">>
 
+/*TODO: Add "Mr." */
 <<BlankSpeaker>>
 <<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+"."` >>
 
