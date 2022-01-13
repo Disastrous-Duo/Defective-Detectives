@@ -671,19 +671,16 @@
 :: theory1 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//Okay, me//">>
-<<AddParagraph "//Take a deep breath//">>
-
+<<AddParagraph "//I gotta do this, I have to find these Laws and show them!//">>
 <<AddParagraph "//I am pretty sure they are called the ''Three'' Laws of Magic.//">>
 <<AddParagraph "//I'll just try and remember something...//">>
-<<AddParagraph "//Anything that could help.//">>
-
 <<AddParagraph "//I have a feeling that this is very important.//">>
 <<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
 
 <<AddParagraph "//I have to think.//">>
+<<AddParagraph "//First, what could be the cause of magic...//">>
 
-
-<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their Gifts to us?" "theory2">>
+<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their ''Gifts'' to us?" "theory2">>
 <<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "theory2">>
 <<AddOption "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "theory2">>
 
@@ -693,20 +690,25 @@
 <<AddParagraph "//That sounds plausible, maybe!//">>
 <<AddParagraph "//Let's keep going.//">>
 <<AddParagraph "//I need to be logical//">>
+<<AddParagraph "//Second, let's think about how it could work...//">>
+
 
 <<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
 <<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates?? More???")` "theory3">>
-<<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
+<<AddOption "Let's stay down to earth... what about biological evolution? ''Gifts'' like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
 
 
 :: theory3 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//I might actually be onto something?//">>
 <<AddParagraph "//Just one more...//">>
-<<AddParagraph "//And I will have crafted  a complete and logical reasoning!//">>
+<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
 
-<<AddOption "I mean someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
-<<AddOption "Symbiotes must eat right to use their Gift? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
+<<AddParagraph "//Lastly, I should finish with limitations of some sort...//">>
+
+
+<<AddOption "Someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
+<<AddOption "Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
 <<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution">>
 
 :: restitution [nobr]
@@ -1182,6 +1184,7 @@
 
 <<AddOption "//Am I really... leaving my fate in the hands of those two??//" "Contract2">>
 <<AddOption "//But somehow... I feel like they might be trustworthy...//" "Contract2">>
+
 /*/>> consequence ? a reflechir yassine's feelings : does he feel confident, his burden has been lightened; jle sens pas, mais j'ai personne d'autre vers qui me tourner.
 */
 
