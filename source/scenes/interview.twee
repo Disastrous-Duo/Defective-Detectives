@@ -158,7 +158,7 @@
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess.">>
 <<AddParagraph "On the other side, a sink and some cups. ">>
 <<AddParagraph "In front of you, the wall is scattered with papers.">>
-<<AddParagraph "A small door on the side reads : "+tooltip("//Petit Coin//","The washroom, the toilet, the WC, the loo; you get it.")+". It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
+<<AddParagraph `"A small door on the side reads : "+tooltip("//Petit Coin//","The washroom, the toilet, the WC, the loo; you get it.")+". It must be the toilet : you are not sure you want to explore this particular area of the run-down office."`>>
 
 <<set $interview_left to false>>
 <<set $interview_right to false>>
@@ -242,10 +242,12 @@
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.">>
 
 <<SetSpeaker "Nomnom">>
+/*TODO: add Nomnom's magic effect, as a prophecy that will happen*/
 <<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
 
 <<BlankSpeaker>>
-<<AddParagraph tooltip("''*WHAM*''","Divine Retribution")>>
+
+<<AddParagraph `tooltip("''*WHAM*''","Divine Retribution")`>>
 
 
 <<if $interview_left is false>>
@@ -262,7 +264,7 @@
 
 :: endCleaning [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "Before your eyes, the dump had slowly transformed into an "+tooltip("actual, proper office.","As actual and proper as it can be...")>>
+<<AddParagraph `"Before your eyes, the dump had slowly transformed into an "+tooltip("actual, proper office.","As actual and proper as it can be...")`>>
 <<AddParagraph "You barely even recognize the place.">>
 <<AddParagraph "The rubbish had mysteriously disappeared, hidden in a dark corner.">>
 <<AddParagraph "The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.">>
@@ -421,7 +423,7 @@
 
 <<AddParagraph "It might be just an impression given by their hair, though.">>
 
-<<AddParagraph "Reminiscent of a black cloud rising towards the sky, Nomnom’s hair sculpt their head into a roughly "+tooltip("pineconed shape","Have you ever seen a pinecone? Focus, picture it and you got it.")+ ".">>
+<<AddParagraph `"Reminiscent of a black cloud rising towards the sky, Nomnom’s hair sculpt their head into a roughly "+tooltip("pineconed shape","Have you ever seen a pinecone? Focus, picture it and you got it.")+ "."`>>
 
 <<AddParagraph "Their navy blue trench coat contrasts their warm tan skin nicely. Even though their shoes are of rather good quality, they also seem to be worn-out in unusual places.">>
 
@@ -499,10 +501,10 @@
 <<set $interview_speak to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph "So uhm, Nomme Nomme and? Cannelé, right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?">>
+<<AddParagraph `"So uhm, Nomme Nomme and? Cannelé, right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It's pronounced ''non-non'', "+tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'")+ "?">>
+<<AddParagraph `"It's pronounced ''non-non'', "+tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'")+ "?"`>>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
@@ -693,7 +695,7 @@
 <<AddParagraph "//I need to be logical//">>
 
 <<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
-<<AddOption "River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners "+tooltip("...","Lovers? Soulmates??") "theory3">>
+<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners "+tooltip("...","Lovers? Soulmates??")` "theory3">>
 <<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
 
 
@@ -1158,7 +1160,7 @@
 <<AddParagraph "Cannelé's smile widens.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Of course! We are "+tooltip("professionals","On the broader sense of the definition.")+".">>
+<<AddParagraph `"Of course! We are "+tooltip("professionals","On the broader sense of the definition.")+"."`>>
 <<AddParagraph "Now let us discuss the terms of the contract">>
 
 <<AddOption "The contract?" "Contract1">>
