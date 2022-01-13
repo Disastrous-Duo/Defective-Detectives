@@ -296,7 +296,7 @@
 <<AddParagraph "You see a blue paper sticking out from under the coffee table.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Are you looking for this post-it?">>
+<<AddParagraph `"Are you looking for this "+note("post-it",{txt:"How does this thing work?", type:"question"})+"?"`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Perfect! That's the one!">>
@@ -484,7 +484,7 @@
 :: nomnomLeftShoe [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//This shoe...//">>
-<<AddParagraph "//I can't help but have a ''bad feeling'' about this shoe.//">>
+<<AddParagraph `"//I can't help but have a ''bad feeling'' about this  //"+note("//shoe//",{txt:"Aerodynamic left shoe", type:"hint"})+"//.//"`>>
 
 <<AddOption "Look at Nomnom again" "interviewNomnom">>
 
@@ -501,23 +501,23 @@
 <<set $interview_speak to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph `"So uhm, Nomme Nomme and? Cannelé, right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
+<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and? "+ note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"It's pronounced ''non-non'', "+tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'")+ "?"`>>
+<<AddParagraph `"It's pronounced ''non-non'', "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally 'name-name'...", type:"hint"})"+ "?"`>>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "What are you grumbling for?">>
-<<AddParagraph "Cannelé's a great name">>
+<<AddParagraph `note("Cannelé",{txt:"Cannelé... the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"hint"})+"'s a great name!"`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "It's literally shit and I hate you, //''Nomnom''//">>
 
 <<BlankSpeaker>>
-<<AddParagraph "This time, the argument seems really inconsequential and terribly pointless.">>
+<<AddParagraph "The argument seems inconsequential and terribly pointless.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "A-ah, I see.">>
@@ -695,7 +695,7 @@
 <<AddParagraph "//I need to be logical//">>
 
 <<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
-<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? Partners "+tooltip("...","Lovers? Soulmates??")` "theory3">>
+<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates?? More???")` "theory3">>
 <<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
 
 
@@ -879,12 +879,14 @@
 <<AddParagraph "We do need to consume some special ingredient to use our Gifts...">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Fleur D'Âme">>
-<<AddParagraph "Very rare, very expensive, very hard to get by.">>
+<<AddParagraph "">>
+<<AddParagraph `tooltip("Fleur D'Âme","Literally: 'A Flower from the Soul'")+"."`>>
+<<AddParagraph "Very rare, very expensive, very hard to come across.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Its distribution is basically controlled by the Governement...">>
-<<AddParagraph "But it was a good... guess? From your part!">>
+<<AddParagraph "Anyway!">>
+<<AddParagraph "It was a good... guess?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "The rest of your theory?">>
@@ -1433,9 +1435,9 @@
 <<AddParagraph "//I can feel it.//">>
 <<AddParagraph "//This...//">>
 <<AddParagraph "//This ridiculous situation has happened before...//">>
-<<AddParagraph "//Cannelé........ Muffin (??) .............//">>
-<<AddParagraph "//Nomnom................... Yasyas (???) ...........//">>
-<<AddParagraph "//This piece of knowledge is terrifying.//">>
+<<AddParagraph `"//Cannelé........ " + note("Muffin (??)",{txt:"Muffin... This isn't a name, it's a pastry...", type:"hint"}) + " .............//"`>>
+<<AddParagraph `"//Nomnom................... "+ note("Yasyas (???)",{txt:"This is nothing at all not even a word? This comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes...", type:"hint"})+ " ...........//"`>>
+<<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"Terrifying naming conventions... History repeats itself?", type:"question"})`>>
 <<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
 <<AddParagraph "//Perhaps even more terrifying than the memory loss itself...//">>
 
@@ -1446,7 +1448,9 @@
 
 :: Naming1 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "Almost by reflex, you reach for the cup of coffee and take a sip, trying to get your mind away from the ridiculous situation unfolding before your eyes.">>
+<<AddParagraph "You need to get your mind away from this madness.">>
+<<AddParagraph "By reflex, you reach for the cup of coffee and take a sip.">>
+
 
 <<SetSpeaker "???">>
 <<AddParagraph  "@@.shake;''*COUGH*''@@" >>
