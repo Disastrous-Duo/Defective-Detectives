@@ -85,3 +85,14 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `"But the cat's fur was full of magical sparkles."`>>
 <<AddParagraph `"Meaning, someone's "+note("gift",{txt:"Who can control cats?", type:"question"})+" was at work."`>>
+
+
+::Test_AddOptionVariables [nobr]
+<<BlankSpeaker>>
+<<AddParagraph `"Quelles sont tes couleur préférées?"`>>
+<<AddOptionVariables "Celles du ciel." "Test_AddOptionVariables_Resultat" `{"couleur1":"bleu", "couleur2":"blanc"}` >>
+
+<<AddOptionVariables "Celles de la forêt." "Test_AddOptionVariables_Resultat" `{"couleur1":"vert", "couleur2":"marron"}`>>
+
+::Test_AddOptionVariables_Resultat [nobr]
+<<AddParagraph "Hmm... Donc $couleur1 et $couleur2.">>

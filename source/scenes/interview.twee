@@ -674,13 +674,18 @@
 <<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
 
 
-<<AddParagraph "//I just have to think.//">>
-<<BlankSpeaker>>
-<<AddParagraph "''First, where does that Magic comes from?''">>
 
+
+/*** SUGGESTION ****/
+/* A */
 <<AddParagraph "//I have to think.//">>
 <<AddParagraph "//First, what could be the cause of magic...//">>
 
+/* B
+<<AddParagraph "//I just have to think.//">>
+<<BlankSpeaker>>
+<<AddParagraph "''First, where does this Magic comes from?''">>
+*/
 
 <<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their ''Gifts'' to us?" "theory2">>
 <<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "theory2">>
@@ -691,23 +696,20 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//That sounds plausible, maybe!//">>
 <<AddParagraph "//Let's keep going.//">>
-<<<<<<< HEAD
-/*<<AddParagraph "//I need to be logical//">>*/
 
-<<AddParagraph "//I just need to be coherent. If Magic comes from there...//">>
-<<BlankSpeaker>>
-<<AddParagraph "''How can humans use it?''">>
 
-<<AddOption "If humans can't do Magic themselves, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
-/*TODO: visual bug fix if you put 'Partners' out of the tooltip, it breaks. Add a minimal width to the tooltip*/
-<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates??")` "theory3">>
-<<AddOption "Let's stay down to earth... what about biological evolution? Gifts like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
 
-/*=====================*/
+/*** SUGGESTION ****/
 
+/* A */
 <<AddParagraph "//I need to be logical//">>
 <<AddParagraph "//Second, let's think about how it could work...//">>
 
+/* B
+<<AddParagraph "//I just need to be coherent. If Magic comes from there...//">>
+<<BlankSpeaker>>
+<<AddParagraph "''How can humans use it?''">>
+*/
 
 <<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
 <<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates?? More???")` "theory3">>
@@ -717,29 +719,25 @@
 :: theory3 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//I might actually be onto something?//">>
-<<<<<<< HEAD
+
+/*** SUGGESTION ****/
+
+/* A */
+<<AddParagraph "//Just one more...//">>
+<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
+<<AddParagraph "//Lastly, I should finish with limitations of some sort...//">>
+
+/* B
 <<AddParagraph "//Just one more detail...//">>
 <<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
-
-/*I find that bold italis text is not visible enough. I can try to look into that*/
 <<AddParagraph "//They're called ''Laws'', so there must be some kind of restrictions...//">>
 <<BlankSpeaker>>
 <<AddParagraph "''To do Magic, which rules must humans follow?''">>
-=======
-<<AddParagraph "//Just one more...//">>
-<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
-
-<<AddParagraph "//Lastly, I should finish with limitations of some sort...//">>
-
+*/
 
 <<AddOption "Someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
 <<AddOption "Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
 <<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution">>
->>>>>>> 39065bac579ac897340b03b8d76482f781634825
-
-<<AddOption "I mean someone - Lavoisomeone - said it before it before right?<br/>'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
-<<AddOption "Symbiotes must eat right to use their Gift?<br/>And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
-<<AddOption "If we're talking about a relationship between someone and some magical Spirit...<br/>It means that we must be nice to them, right?" "restitution">>
 
 /*TODO: add a recap*/
 :: restitution [nobr]
