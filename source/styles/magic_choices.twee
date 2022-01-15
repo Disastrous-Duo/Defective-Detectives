@@ -108,6 +108,28 @@ h2 /*For chapter titles and Duels*/
 }
 
 
+.rainbow {
+  animation: rainbow_rotate 4s linear 0s infinite;
+}
+
+@keyframes rainbow_rotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+}
+
 
 .typewriter  { /*Potential source of issues: 50% was chosen so it can't overflow. Might need to be tweaked depending on text use or mobile screen*/
   display:inline-flex;
@@ -222,6 +244,7 @@ h2 /*For chapter titles and Duels*/
   display: inline-block;
   border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
   cursor:help;
+  opacity:1 !important ;
 }
 
 /* Tooltip text */
@@ -236,6 +259,7 @@ h2 /*For chapter titles and Duels*/
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+  opacity:1 !important ;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -245,6 +269,9 @@ h2 /*For chapter titles and Duels*/
   bottom: 105%;
   width:200%;
   margin-left:-50%;
+  min-width: 150px;
+  padding:2px;
+  opacity:1 !important ;
 }
 
 
