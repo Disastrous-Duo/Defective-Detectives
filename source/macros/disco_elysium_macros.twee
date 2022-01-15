@@ -14,67 +14,49 @@
 
 :: DisplayOptions [nobr] {"position":"546,144","size":"100,100"}
 <ol id="OptionList">
-<<for _optiontext, _optionpassage range $optionmap>>
-  <<capture _optionpassage, _optiontext>>
+<<for _optiontext, _optiondata range $optionmap>>
+  <<capture _optiondata, _optiontext>>
     <li>
-      <<link _optiontext _optionpassage>><<set $lastoption to _optiontext>><</link>>
+    <<link _optiontext _optiondata["passageName"]>>
+      <<set $lastoption to _optiontext>>
+
+      <<for _variableName, _value range _optiondata["variables"]>>
+      <<capture _optiondata, _optiontext>>
+        <<set State.variables[_variableName] = _value>>
+      <</capture>>
+      <</for>>
+
+    <</link>>
     </li>
   <</capture>>
 <</for>>
 </ol>
 <<set $optionmap to new Map()>>
 
-:: SkillSuccess [Widget widget]
-<<nobr>>
-<<widget "SkillSuccess">>
-<div id="SuccessImg" class="CheckOverlay"></div>
-<div id="CheckSuccess" class="CheckText">CHECK SUCCESS</div>
-<<SetSpeaker "">>
-<<AddParagraph "//Green flashes at the edges of your vision - a success.//">>
-<</widget>>
-<</nobr>>
-
-:: SkillFailure [Widget widget]
-<<nobr>>
-<<widget "SkillFailure">>
-<div id="FailureImg" class="CheckOverlay"></div>
-<div id="CheckFailure" class="CheckText">CHECK FAILURE</div>
-<<SetSpeaker "">>
-<<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
-<</widget>>
-<</nobr>>
-
 :: PassiveSkill [Widget widget] {"position":"403,146","size":"100,100"}
 <<nobr>>
 <<widget "PassiveSkill">>
-<<set _skillname to ($args[0].toLowerCase())>>
-<<set _skillresult to "">>
-<<if $args[1]>>
-<<set _skillresult to ("[" + $args[1] + ": " + $args[2] + "]")>>
-<</if>>
-<<if $yellow_speaker.includes(_skillname)>>
+<<set _speakername to ($args[0].toLowerCase())>>
+<<if $yellow_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.yellow_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $blue_speaker.includes(_skillname)>>
+<<elseif $blue_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.blue_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $red_speaker.includes(_skillname)>>
+<<elseif $red_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.red_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $purple_speaker.includes(_skillname)>>
+<<elseif $purple_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.purple_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $leather_speaker.includes(_skillname)>>
+<<elseif $leather_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.leather_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<</if>>
-<<if _skillresult>>
-<<set $currentspeaker += _skillresult>>
 <</if>>
 <<set $currentspeaker += " - ">>
 <</widget>>
@@ -117,8 +99,10 @@ $args[0] -
 
 
 :: AddOption [widget] {"position":"273,265","size":"100,100"}
-\<<widget "AddOption">>\<<run $optionmap.set($args[0], $args[1])>>\<</widget>>\
+\<<widget "AddOption">>\<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{}})>>\<</widget>>\
 
+:: AddOptionVariables [widget] {"position":"573,265","size":"100,100"}
+\<<widget "AddOptionVariables">>\<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2]})>>\<</widget>>\
 
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
 <<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>\

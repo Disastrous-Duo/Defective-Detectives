@@ -87,7 +87,19 @@
 <<AddParagraph `"Meaning, someone's "+note("gift",{txt:"Who can control cats?", type:"question"})+" was at work."`>>
 
 
+
 ::Test_NoteTooltip [nobr]
 <<BlankSpeaker>>
 <<AddParagraph `"Our client's wallet was "+tooltip(note("stolen",{txt:"Cute cat", type:"picture", src:"note_cat.png"}),"That's a tooltip!")+" by a cat."`>>
 <<AddParagraph `"Our client's wallet was "+tooltip(note("stolen",{txt:"Cute cat", type:"picture", src:"note_cat.png"}),"That's a post-it!")+" by a cat."`>>
+
+
+::Test_AddOptionVariables [nobr]
+<<BlankSpeaker>>
+<<AddParagraph `"Quelles sont tes couleur préférées?"`>>
+<<AddOptionVariables "Celles du ciel." "Test_AddOptionVariables_Resultat" `{"couleur1":"bleu", "couleur2":"blanc"}` >>
+
+<<AddOptionVariables "Celles de la forêt." "Test_AddOptionVariables_Resultat" `{"couleur1":"vert", "couleur2":"marron"}`>>
+
+::Test_AddOptionVariables_Resultat [nobr]
+<<AddParagraph "Hmm... Donc $couleur1 et $couleur2.">>

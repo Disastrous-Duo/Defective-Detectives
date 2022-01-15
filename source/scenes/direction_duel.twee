@@ -183,7 +183,6 @@
 
 
 :: Pause [nobr]
-
 <<BlankSpeaker>>
 <<AddParagraph "Everyone freezes and looks directly at you.">>
 <<AddParagraph "You, the //player// behind the screen.">>
@@ -197,8 +196,6 @@
 <<SetSpeaker $client_name>>
 <<AddParagraph "I am so sorry about this..." >>
 <<AddParagraph "Also, before you leave, we would love to hear your feedback about this demo, please fill this form https://forms.gle/3WQSZeU3TyNV14AD9 to help us make this game better !" >>
-
-
 
 
 /*MArket: Nomnom sees a cat sneaking away with a fish. Reflections about how that's just the law of nature -- realization that

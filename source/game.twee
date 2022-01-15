@@ -14,7 +14,7 @@
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "Test_NoteTooltip",
+	"start": "Start",
 	"zoom": 0.6
 }
 
@@ -25,7 +25,7 @@
 
 :: StoryInit {"position":"268,25","size":"100,100"}
 <<set $optionmap to new Map()>>
-<<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???"]>>
+<<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???", "Rule #1", "Rule #2", "Rule #3"]>>
 <<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
 <<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
 <<set $purple_speaker to ["voice", "joséphine"]>>
