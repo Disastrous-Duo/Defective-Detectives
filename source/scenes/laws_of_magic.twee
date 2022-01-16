@@ -30,7 +30,7 @@
 <<AddParagraph "//I missed the timing to back out and come clean...//">>
 
 <<SetSpeaker "???">>
-<<AddOption "Erm..." "theory1">>
+<<AddOption "«Erm...»" "theory1">>
 
 
 :: theory1 [nobr]
@@ -43,22 +43,14 @@
 <<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
 
 
-
-
-/*** SUGGESTION ****/
-/* A */
-/* <<AddParagraph "//I have to think.//">>
-<<AddParagraph "//First, what could be the cause of magic...//">> */
-
-/* B */
 <<AddParagraph "//I just have to think.//">>
 <<BlankSpeaker>>
-<<AddParagraph "''First, where does this Magic comes from?''">>
+<<AddParagraph "//''First, where does this Magic comes from?''//">>
 
 
-<<AddOptionVariables "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their ''Gifts'' to us?" "theory2" `{"rule1":"river_spirits","said_gift1":1}`>>
-<<AddOptionVariables "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "theory2" `{"rule1":"physics"}`>>
-<<AddOptionVariables "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "theory2" `{"rule1":"symbiotic"}`>>
+<<AddOptionVariables "//The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their ''Gifts'' to us?//" "theory2" `{"rule1":"river_spirits","said_gift1":1}`>>
+<<AddOptionVariables "//Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!//" "theory2" `{"rule1":"physics"}`>>
+<<AddOptionVariables "//Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?//" "theory2" `{"rule1":"symbiotic"}`>>
 
 <<set $said_gift1 = 0>>
 <<set $said_gift2 = 0>>
@@ -71,45 +63,30 @@
 
 
 
-/*** SUGGESTION ****/
-
-/* A */
-/* <<AddParagraph "//I need to be logical//">>
-<<AddParagraph "//Second, let's think about how it could work...//">> */
-
-/* B */
 <<AddParagraph "//I just need to stay coherent. If Magic comes from there...//">>
 <<BlankSpeaker>>
-<<AddParagraph "''How can humans use it?''">>
+<<AddParagraph "//''How can humans use it?''//">>
 
 
-<<AddOptionVariables "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3" `{"rule2":"physics"}`>>
-<<AddOptionVariables `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates?? More???")` "theory3" `{"rule2":"river_spirits"}`>>
-<<AddOptionVariables "Let's stay down to earth... what about biological evolution? ''Gifts'' like magical organs to manipulate the Laws of physics, maybe?" "theory3" `{"rule2":"physics","said_gift2":1}`>>
+<<AddOptionVariables "//If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?//" "theory3" `{"rule2":"physics"}`>>
+<<AddOptionVariables `"//River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? //"+tooltip("//Partners...//","Lovers? Soulmates?? More???")` "theory3" `{"rule2":"river_spirits"}`>>
+<<AddOptionVariables "//Let's stay down to earth... what about biological evolution? ''Gifts'' like magical organs to manipulate the Laws of physics, maybe?//" "theory3" `{"rule2":"physics","said_gift2":1}`>>
 
 
 :: theory3 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//I might actually be onto something?//">>
 
-/*** SUGGESTION ****/
-
-/* A */
-/* <<AddParagraph "//Just one more...//">>
-<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
-<<AddParagraph "//Lastly, I should finish with limitations of some sort...//">> */
-
-/* B */
 <<AddParagraph "//Just one more detail...//">>
 <<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
 <<AddParagraph "//They're called ''Laws'', so there must be some kind of restrictions...//">>
 <<BlankSpeaker>>
-<<AddParagraph "''To do Magic, which rules must humans follow?''">>
+<<AddParagraph "//''To do Magic, which rules must humans follow?''//">>
 
 
-<<AddOptionVariables "Someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution" `{"rule3":"physics"}`>>
-<<AddOptionVariables "Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution" `{"rule3":"symbiotic","said_gift3":1}`>>
-<<AddOptionVariables "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution" `{"rule3":"river_spirits"}`>>
+<<AddOptionVariables "//Someone famous said it before right? 'Nothing is created, nothing is destroyed, everything is transformed.//" "restitution" `{"rule3":"physics"}`>>
+<<AddOptionVariables "//Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?//" "restitution" `{"rule3":"symbiotic","said_gift3":1}`>>
+<<AddOptionVariables "//If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?//" "restitution" `{"rule3":"river_spirits"}`>>
 
 :: restitution [nobr]
 
@@ -153,8 +130,8 @@
   <<set $rules_result to "Results_Bullshit">>
 <</if>>
 
-<<AddOption "Hum, maybe I should think about this again. (Retry.)" "theory1">>
-<<AddOption "Ok, this is looking good! (Confirm.)" "stateRules">>
+<<AddOption "//Hum, maybe I should think about this again.// (Retry.)" "theory1">>
+<<AddOption "//Ok, this is looking good!// (Confirm.)" "stateRules">>
 
 
 :: stateRules [nobr]
@@ -169,11 +146,7 @@
 <<AddParagraph "Cannelé and Nomnom don't say anything.">>
 <<AddParagraph "Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.">>
 
-/****SUGGESTION***/
-/* A */
-/*<<AddParagraph "Cannelé hasn't moved: they're looking as you finish stating the third rule.">>*/
 
-/* B */
 <<AddParagraph "Cannelé hasn't moved: they're nodding as you finish stating the third rule.">>
 
 <<SetSpeaker "???">>
@@ -237,7 +210,7 @@
 <<AddParagraph "That's kinda...">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé's mind wander for a bit.'">>
+<<AddParagraph "Cannelé's mind wander for a bit.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "...//REALLY// creepy.">>
@@ -248,9 +221,11 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling...//">>
 
-<<AddOption "//Annoyance?//" "realLaws">>
-<<AddOption "//Amusement?//" "realLaws">>
-<<AddOption "//Indifference.//" "realLaws">>
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+
+
 
 
 :: Results_Physics [nobr]
@@ -276,7 +251,6 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "You have a very... fertile imagination.">>
-<<AddParagraph "Also matter can be created, Lavoisier is a quack.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Someone read my mind once and that's just not explainable by your Laws of Physics...">>
@@ -297,9 +271,9 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling...//">>
 
-<<AddOption "//Annoyance?//" "realLaws">>
-<<AddOption "//Amusement?//" "realLaws">>
-<<AddOption "//Indifference.//" "realLaws">>
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 :: Results_Symbiotic [nobr]
@@ -318,7 +292,6 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
 <<AddParagraph "We do need to consume some special ingredient to use our Gifts...">>
-
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "">>
@@ -348,9 +321,9 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling...//">>
 
-<<AddOption "//Annoyance?//" "realLaws">>
-<<AddOption "//Amusement?//" "realLaws">>
-<<AddOption "//Indifference.//" "realLaws">>
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 :: Results_Bullshit [nobr]
@@ -387,11 +360,10 @@ avec celui pour décrire des comportements négatifs -- et psychotic, c'est des 
 J'arrive pas à le retrouver mais j'ai cet article à la place: https://themighty.com/2020/12/stop-misusing-word-psychotic-dangerous/
 */
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Sounding like the perfect mix between ridiculous, psychotic and a little pathetic.">>
+<<AddParagraph "Sounding like the perfect mix between ridiculous, unhinged and a little pathetic.">>
 
 <<SetSpeaker "Nomnom">>
-/** SUGGESTION **/
-/*<<AddParagraph "Kind of like a crazy conspirationist!">>*/
+
 <<AddParagraph "Kind of like a conspiracy theorist!">>
 <<AddParagraph "It's fine, it happens to all of us.">>
 <<AddParagraph "Just use this as advice.">>
@@ -403,14 +375,51 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling...//">>
 
-<<AddOption "//Annoyance?//" "realLaws">>
-<<AddOption "//Amusement?//" "realLaws">>
-<<AddOption "//Indifference.//" "realLaws">>
-
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 :: realLaws [nobr]
+<<BlankSpeaker>>
+
+<<AddParagraph "The two detectives are still smiling, after laughing at you for a good five minutes.">>
+
+<<if $feelingYasMuff is "annoyance">>
+  <<BlankSpeaker>>
+  <<AddParagraph "Part of you is relieved they're not arguing with each other, but...">>
+
+  <<SetSpeaker "???">>
+  <<AddParagraph "//Why do //I// have to go through this?//">>
+
+  <<BlankSpeaker>>
+  <<AddParagraph "You clench your teeth, trying to rein back the irritation.">>
+  <<AddParagraph "For now, ''they're'' the ones who have the information you need.">>
+  <<AddParagraph "You can curse them out later.">>
+  <<AddParagraph "This thought comforts you a little.">>
+<</if>>
+
+<<if $feelingYasMuff is "amusement">>
+  <<BlankSpeaker>>
+  <<AddParagraph "It makes you smile in turn.">>
+
+  <<SetSpeaker "???">>
+  <<AddParagraph "//They're not entirely wrong...//">>
+  <<AddParagraph "//It ''was'' a bit ridiculous!//">>
+  <<AddParagraph "//I didn't think I'd be able to laugh in this situation.//">>
+  <<AddParagraph "//I think I feel a little... lighter.//">>
+<</if>>
+
+<<if $feelingYasMuff is "indifference">>
+  <<BlankSpeaker>>
+  <<AddParagraph "The two detectives are still smiling.">>
+  <<AddParagraph "You want them to stop and tell you what's going on.">>
+  <<AddParagraph "You don't want to play games and entertain strangers with your memory loss.">>
+  <<AddParagraph "You want answers.">>
+<</if>>
+
 <<SetSpeaker "???">>
+<<AddParagraph "//Now, what I want to know is...//">>
 <<AddParagraph "OK then.">>
 <<AddParagraph "What ARE the Three Laws of Magic?">>
 
@@ -418,8 +427,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "Cannelé and Nomnom exchange a glance.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"Rule #1 : Magic is a universal gift that can be activated after eating a "
-tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
+<<AddParagraph `"Rule #1 : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
@@ -430,19 +438,56 @@ tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
 <<SetSpeaker "???">>
 <<AddParagraph "//Hmmm... Better note those down.//">>
 
-<<AddOption "Before we continue, I have some questions about those Laws" "questionsLaws">>
+<<AddOption "«Can I ask you about your gifts?»" "cnGifts">>
+<<AddOption "«Before we continue, I have some questions about those Laws...»" "questionsLaws">>
+<<AddOption "«Got it» (Continue.)" "backToInterview">>
+
+
+
+:: cnGifts [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Another silence greets the question.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I guess awkward silences are something I must used to, I feel like it's going to keep happening with those two.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Listen. I get that you don't remember much, but there are some things you can't just do.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Yeah, what's ''wrong'' with you?">>
+<<AddParagraph "A Gift is personal, intimate you can't just ask strangers.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "We might tell you if we grow closer but now is a little... embarrassing.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Oh, sorry?">>
+<<AddParagraph "You asked about mine before so I figured it was ok...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "It's not the same! We were trying to help you.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It was definitely not out of any form of misplaced curiosity.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "...">>
+
+<<AddOption "«Nevermind, then... I have some questions about the Laws, though.»" "questionsLaws">>
 
 <<if $interview_event is false>>
-<<AddOption "About what happened to me..." "Event">>
+<<AddOption "«About what happened to me...»" "Event">>
 <</if>>
 
 <<if $interview_coffee is false>>
-<<AddOption "What's wrong with this coffee?" "Coffee">>
+<<AddOption "«What's wrong with this coffee?»" "Coffee">>
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
   <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
+
 
 :: questionsLaws [nobr]
 <<SetSpeaker "Nomnom">>
@@ -451,35 +496,169 @@ tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "We shall indulge you.">>
 
-<<AddOption "About that first Law..." "law1">>
-<<AddOption "About that second Law..." "law2">>
-<<AddOption "About that third Law..." "law3">>
+<<set $firstlaw to false>>
+<<set $secondlaw to false>>
+<<set $thirdlaw to false>>
+
+<<AddOption "«About that first Law...»" "law1">>
+<<AddOption "«About that second Law...»" "law2">>
+<<AddOption "«About that third Law...»" "law3">>
 
 :: law1 [nobr]
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "mini explanation about law 1">>
+<<set $firstlaw to true>>
 
-<<AddOption "About that second Law..." "law2">>
-<<AddOption "About that third Law..." "law3">>
-<<AddOption "That's it." "lawsDone">>
+<<SetSpeaker "???">>
+<<AddParagraph "So, does that mean that everyone can do Magic?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Hmmm...">>
+<<AddParagraph "Yes.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "...And no.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Everyone has the  //potential// to do Magic.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "But not everyone has access to Fleur d’Âme.">>
+<<AddParagraph "Imagine what life would be like if absolutely every citizen could become huge like a giant or turn everyone into spaghetti.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "^^Yeah like, every restaurant would go bankrupt.^^">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "To prevent that, the Government only gives Fleur d’Âme to people that…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé pauses to do air quotes with their hands.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "//'Put their Magic at the service of the City'//">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "I see.">>
+
+
+<<if $secondlaw is false>>
+  <<AddOption "«About that second Law...»" "law2">>
+<</if>>
+
+<<if $thirdlaw is false>>
+<<AddOption "«About that third Law...»" "law3">>
+<</if>>
+
+<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
 
 
 :: law2 [nobr]
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "mini explanation about law 2">>
+<<set $secondlaw to true>>
 
-<<AddOption "About that first Law..." "law1">>
-<<AddOption "About that third Law..." "law3">>
-<<AddOption "That's it." "lawsDone">>
+<<SetSpeaker "???">>
+<<AddParagraph "You said that magic reflects your personality – what do you mean by that?">>
+<<AddParagraph "If you like bread, would you be able to make pastries appear?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "^^I wish.^^">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé grins.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "The second one is less like a law and more like a rule of thumb.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Nobody knows exactly how it works, but some people draw a parallel between what your magic can do and the way you think, or the kind of tasks you’d be good at.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "There’s even a test going around that can tell you what your ideal job would be, based on your magical abilities.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Oh. What did it tell you?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé's grin fades.'">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "''Tax Collector.''">>
+<<AddParagraph "The test is a sham.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "R-Right. Sounds like it is.">>
+
+
+<<if $firstlaw is false>>
+  <<AddOption "«About that first Law...»" "law1">>
+<</if>>
+
+<<if $thirdlaw is false>>
+<<AddOption "«About that third Law...»" "law3">>
+<</if>>
+<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
 
 
 :: law3 [nobr]
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "mini explanation about law 3">>
+<<set $thirdlaw to true>>
 
-<<AddOption "About that first Law..." "law1">>
-<<AddOption "About that second Law..." "law2">>
-<<AddOption "That's it." "lawsDone">>
+<<SetSpeaker "???">>
+<<AddParagraph "What counts as a “physical medium” exactly?">>
+<<AddParagraph "If magic can’t be channelled through living beings, does it mean we are immune to magic?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Not really.">>
+<<AddParagraph "It’s more like… How to say it…">>
+
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Hmmm... We can take a concrete example.">>
+<<AddParagraph "Let's say you have the power to turn people into small insects.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "That's not very nice!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "//If// you have the power to turn people into insects.">>
+<<AddParagraph "How would you activate your power?">>
+
+
+<<SetSpeaker "???">>
+<<AddParagraph "Hypothetically speaking...">>
+<<AddParagraph "Couldn't I just wish for it in my head?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Wrong!">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "But why?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "You can't just activate magic through sheer will.">>
+<<AddParagraph "It needs to be carried via something material.">>
+<<AddParagraph "A power could, for instance, turn someone into bees whenever they eat honey; honey being the medium.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Or... memorize an entire book, just by touching it.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Or... bring wooden toys to life - in which case wood is the acting medium.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Thing is, there always need to be something material about your magic.">>
+<<AddParagraph "And that thing, can be anything //but// a living being.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Alright, I think understand.">>
+
+
+<<if $firstlaw is false>>
+  <<AddOption "«About that first Law...»" "law1">>
+<</if>>
+
+<<if $secondlaw is false>>
+  <<AddOption "«About that second Law...»" "law2">>
+<</if>>
+
+<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
 
 
 
@@ -490,13 +669,31 @@ tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
 
 
 <<if $interview_event is false>>
-<<AddOption "About what happened to me..." "Event">>
+<<AddOption "«About what happened to me...»" "Event">>
 <</if>>
 
 <<if $interview_coffee is false>>
-<<AddOption "What's wrong with this coffee?" "Coffee">>
+<<AddOption "«What's wrong with this coffee?»" "Coffee">>
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
   <<AddOption "Take a deep breath (Continue.)" "Contract">>
+<</if>>
+
+
+:: backToInterview [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "Ok, all the magic thing looks clearer now, thanks.">>
+<<AddParagraph "Now...">>
+
+<<if $interview_event is false>>
+<<AddOption "«About what happened to me...»" "Event">>
+<</if>>
+
+<<if $interview_coffee is false>>
+<<AddOption "«What's wrong with this coffee?»" "Coffee">>
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath» (Continue.)" "Contract">>
 <</if>>

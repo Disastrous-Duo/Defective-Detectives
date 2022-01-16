@@ -8,9 +8,9 @@
 <<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
 
 
-<<AddOption "Talk to the detectives" "talkDetective">>
-<<AddOption "Look around" "interviewInspect">>
-<<AddOption "Wait for the detectives' directions" "waitDetectives">>
+<<AddOption "Talk to the detectives." "talkDetective">>
+<<AddOption "Look around." "interviewInspect">>
+<<AddOption "Wait for the detectives' directions." "waitDetectives">>
 
 :: talkDetective [nobr]
 <<SetSpeaker "???">>
@@ -95,9 +95,9 @@
 <<AddParagraph "Until you can't take it anymore.">>
 
 
-<<AddOption "Hum..." "nextWaitDetectives">>
-<<AddOption "Excuse me??" "nextWaitDetectives">>
-<<AddOption "What are you waiting for..." "nextWaitDetectives">>
+<<AddOption "«Hum...»" "nextWaitDetectives">>
+<<AddOption "«Excuse me??»" "nextWaitDetectives">>
+<<AddOption "«What are you waiting for...»" "nextWaitDetectives">>
 
 
 :: nextWaitDetectives [nobr]
@@ -164,9 +164,9 @@
 <<set $interview_wall to false>>
 
 
-<<AddOption "Inspect couch on the left" "Left">>
-<<AddOption "Inspect sink on the right" "Right">>
-<<AddOption "Inspect the wall" "Wall">>
+<<AddOption "Inspect couch on the left." "Left">>
+<<AddOption "Inspect sink on the right." "Right">>
+<<AddOption "Inspect the wall." "Wall">>
 
 
 :: Left [nobr]
@@ -189,10 +189,10 @@
 <<AddParagraph "//It hurts..//">>
 
 <<if $interview_right is false>>
-  <<AddOption "Inspect sink on the right" "Right">>
+  <<AddOption "Inspect sink on the right." "Right">>
 <</if>>
 <<if $interview_wall is false>>
-  <<AddOption "Inspect the wall" "Wall">>
+  <<AddOption "Inspect the wall." "Wall">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
@@ -219,10 +219,10 @@
 <<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
 <<if $interview_left is false>>
-  <<AddOption "Inspect couch on the left" "Left">>
+  <<AddOption "Inspect couch on the left." "Left">>
 <</if>>
 <<if $interview_wall is false>>
-  <<AddOption "Inspect the wall" "Wall">>
+  <<AddOption "Inspect the wall." "Wall">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
@@ -250,10 +250,10 @@
 
 
 <<if $interview_left is false>>
-  <<AddOption "Inspect couch on the left" "Left">>
+  <<AddOption "Inspect couch on the left." "Left">>
 <</if>>
 <<if $interview_right is false>>
-  <<AddOption "Inspect sink on the right" "Right">>
+  <<AddOption "Inspect sink on the right." "Right">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
@@ -269,7 +269,7 @@
 <<AddParagraph "The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.">>
 <<AddParagraph "Your need to flee the place is still there but it has slightly decreased.">>
 
-<<AddOption "''BANG''" "conspiracyBoard">>
+<<AddOption "''*BANG*''" "conspiracyBoard">>
 
 :: conspiracyBoard [nobr]
 <<BlankSpeaker>>
@@ -310,7 +310,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//I got it!//">>
 
-<<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
+<<AddOption "Turn back to the two detectives." "interviewTwoDetectives">>
 
 
 :: interviewTwoDetectives [nobr]
@@ -321,8 +321,8 @@
 <<set $interview_cannele to false>>
 <<set $interview_speak to false>>
 
-<<AddOption "Observe Nomnom" "interviewNomnom">>
-<<AddOption "Study Cannelé" "interviewCannelé">>
+<<AddOption "Observe Nomnom." "interviewNomnom">>
+<<AddOption "Study Cannelé." "interviewCannelé">>
 <<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 
 
@@ -338,9 +338,9 @@
 <<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...">>
 <<AddParagraph "It creates a ''stark'' contrast with the pitiful state of the cramped office.">>
 
-<<AddOption "Their attitude..." "canneleAttitude">>
-<<AddOption "Their clothes..." "canneleClothes">>
-<<AddOption "Why are they standing on the couch..." "canneleCouch">>
+<<AddOption "//Their attitude...//" "canneleAttitude">>
+<<AddOption "//Their clothes...//" "canneleClothes">>
+<<AddOption "//Why are they standing on the couch...//" "canneleCouch">>
 
 
 :: canneleAttitude [nobr]
@@ -355,10 +355,10 @@
 <<AddParagraph "//''Fallen'' nobility...//">>
 
 
-<<AddOption "Look at Cannelé again" "interviewCannelé">>
+<<AddOption "Look at Cannelé again." "interviewCannelé">>
 
 <<if $interview_nomnom is false>>
-<<AddOption "Turn to Nomnom" "interviewNomnom">>
+<<AddOption "Turn to Nomnom." "interviewNomnom">>
 <</if>>
 
 <<if $interview_speak is false>>
@@ -374,10 +374,10 @@
 <<AddParagraph "//Do I even *have* a choice...//">>
 
 
-<<AddOption "Look at Cannelé again" "interviewCannelé">>
+<<AddOption "Look at Cannelé again." "interviewCannelé">>
 
 <<if $interview_nomnom is false>>
-<<AddOption "Turn to Nomnom" "interviewNomnom">>
+<<AddOption "Turn to Nomnom." "interviewNomnom">>
 <</if>>
 
 <<if $interview_speak is false>>
@@ -400,10 +400,10 @@
 <<AddParagraph "//Ineffective.//">>
 
 
-<<AddOption "Look at Cannelé again" "interviewCannelé">>
+<<AddOption "Look at Cannelé again." "interviewCannelé">>
 
 <<if $interview_nomnom is false>>
-<<AddOption "Turn to Nomnom" "interviewNomnom">>
+<<AddOption "Turn to Nomnom." "interviewNomnom">>
 <</if>>
 
 <<if $interview_speak is false>>
@@ -431,9 +431,9 @@
 <<AddParagraph "But why…?">>
 
 
-<<AddOption "Their hair..." "nomnomHair">>
-<<AddOption "Their coat..." "nomnomCoat">>
-<<AddOption "I can’t help it, but this left shoe really intrigues me..." "nomnomLeftShoe">>
+<<AddOption "//Their hair...//" "nomnomHair">>
+<<AddOption "//Their coat...//" "nomnomCoat">>
+<<AddOption "//I can’t help it, but this left shoe really intrigues me...//" "nomnomLeftShoe">>
 
 
 :: nomnomHair [nobr]
@@ -445,10 +445,10 @@
 <<AddParagraph "//Note to self: investigate the dimensional power of Nomnom's hair.//">>
 
 
-<<AddOption "Look at Nomnom again" "interviewNomnom">>
+<<AddOption "Look at Nomnom again." "interviewNomnom">>
 
 <<if $interview_cannele is false>>
-<<AddOption "Turn to Cannelé" "interviewCannelé">>
+<<AddOption "Turn to Cannelé." "interviewCannelé">>
 <</if>>
 
 <<if $interview_speak is false>>
@@ -470,10 +470,10 @@
 <<AddParagraph "//For now, let's try and get some more answers.//">>
 
 
-<<AddOption "Look at Nomnom again" "interviewNomnom">>
+<<AddOption "Look at Nomnom again." "interviewNomnom">>
 
 <<if $interview_cannele is false>>
-<<AddOption "Turn to Cannelé" "interviewCannelé">>
+<<AddOption "Turn to Cannelé." "interviewCannelé">>
 <</if>>
 
 <<if $interview_speak is false>>
@@ -486,10 +486,10 @@
 <<AddParagraph "//This shoe...//">>
 <<AddParagraph `"//I can't help but have a ''bad feeling'' about this  //"+note("//shoe//",{txt:"Aerodynamic left shoe", type:"hint"})+"//.//"`>>
 
-<<AddOption "Look at Nomnom again" "interviewNomnom">>
+<<AddOption "Look at Nomnom again." "interviewNomnom">>
 
 <<if $interview_cannele is false>>
-<<AddOption "Turn to Cannelé" "interviewCannelé">>
+<<AddOption "Turn to Cannelé." "interviewCannelé">>
 <</if>>
 
 <<if $interview_speak is false>>
@@ -501,10 +501,10 @@
 <<set $interview_speak to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and? "+ note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
+<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and... "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"It's pronounced ''non-non'', "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally 'name-name'...", type:"hint"})"+ "?"`>>
+<<AddParagraph `"It's pronounced ''non-non'', "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally 'name-name'...", type:"hint"})+ "?"`>>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
@@ -567,9 +567,9 @@
 <<set $interview_event to false>>
 <<set $interview_coffee to false>>
 
-<<AddOption "Who am I?" "Identity">>
-<<AddOption "What happened?" "Event">>
-<<AddOption "What's wrong with this coffee?" "Coffee">>
+<<AddOption "«Who am I?»" "Identity">>
+<<AddOption "«What happened?»" "Event">>
+<<AddOption "«What's wrong with this coffee?»" "Coffee">>
 
 
 :: Identity [nobr]
@@ -592,8 +592,8 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Do you even remember what a gift is?">>
 
-<<AddOption "Of course, I do" "giftYes">>
-<<AddOption "A what now?" "giftNo">>
+<<AddOption "«Of course, I do»" "giftYes">>
+<<AddOption "«A what now?»" "giftNo">>
 
 
 :: giftYes [nobr]
@@ -628,7 +628,7 @@
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
 
 <<SetSpeaker "???">>
-<<AddOption "If you insist..." "theory1">>
+<<AddOption "«If you insist...»" "theory1">>
 
 
 
@@ -636,7 +636,6 @@
 <<set $interview_event to true>>
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "How did you find this place?">>
-
 
 <<SetSpeaker "???">>
 <<AddParagraph "I tried to go to the police but they couldn't help... That's when I found the flyer.">>
@@ -688,11 +687,11 @@
 <<AddParagraph "So, a cat stole the only lead you had about your identity. I see.">>
 
 <<if $interview_identity is false>>
-<<AddOption "Who am I ?" "Identity">>
+<<AddOption "«Who am I?»" "Identity">>
 <</if>>
 
 <<if $interview_coffee is false>>
-<<AddOption "What's wrong with this coffee ?" "Coffee">>
+<<AddOption "«What's wrong with this coffee?»" "Coffee">>
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
@@ -732,11 +731,11 @@
 <<AddParagraph "Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin. The Dectective looks at it longingly before handing it over.">>
 
 <<if $interview_identity is false>>
-<<AddOption "Who am I ?" "Event">>
+<<AddOption "«Who am I?»" "Event">>
 <</if>>
 
 <<if $interview_event is false>>
-<<AddOption "What happened?" "Event">>
+<<AddOption "«What happened?»" "Event">>
 <</if>>
 
 <<if $interview_identity is true && $interview_event is true>>
@@ -771,13 +770,34 @@
 <<BlankSpeaker>>
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
 
-<<AddOption "//Am I really... leaving my fate in the hands of those two??//" "Contract2">>
-<<AddOption "//But somehow... I feel like they might be trustworthy...//" "Contract2">>
+<<AddOptionVariables "///Am I really... leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
+<<AddOptionVariables "//But somehow... I feel like they might be trustworthy...//" "Contract2" `{"trust":true}`>>
+
 
 /*/>> consequence ? a reflechir yassine's feelings : does he feel confident, his burden has been lightened; jle sens pas, mais j'ai personne d'autre vers qui me tourner.
 */
 
 :: Contract2 [nobr]
+
+<<if $trust is false>>
+  <<SetSpeaker "???">>
+  <<AddParagraph "//They still look a little suspicious to me...//">>
+  <<AddParagraph "//And annoying.//">>
+  <<AddParagraph "//But at this point, I have no other choice but to rely on them.//">>
+  <<AddParagraph "//So I'll just bear with it for now.//">>
+<</if>>
+
+<<if $trust is true>>
+  <<SetSpeaker "???">>
+  <<AddParagraph "//I don't know exactly what it is...//">>
+  <<AddParagraph "//But ''something'' tells me I can trust them.//">>
+  <<AddParagraph "//These people... they'll help me.//">>
+
+  <<BlankSpeaker>>
+  <<AddParagraph "You feel it, faintly.">>
+  <<AddParagraph "The weight that had been carrying the whole morning - ever since you woke up with no recollections of your own identity - has lightened, a little.">>
+  <<AddParagraph "What you are feeling right now, is hope; and it's all thanks to the two detectives sat in front of you.">>
+<</if>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
@@ -791,7 +811,6 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
-
 
 /*Precog colors and lighting*/
 <<BlankSpeaker>>
@@ -820,6 +839,12 @@
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom shrugs and signs the contract.">>
 
+<<if $trust is true>>
+  <<SetSpeaker "???">>
+  <<AddParagraph "//Scratch that monologue about trust and worries being lifted.//">>
+  <<AddParagraph "//They're out to scam me!!!//">>
+<</if>>
+
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Hmmm... Those @@color:gold;???@@ are kind of annoying me.">>
 
@@ -834,9 +859,9 @@
 <<AddParagraph "Any name? Or an alias?">>
 
 
-<<AddOption "Not really?" "noName">>
-<<AddOption "I can come up with one! [Enter Name]" "enterName">>
-<<AddOption "If I say no, what's gonna happen?" "ifNoName">>
+<<AddOption "«Not really?»" "noName">>
+<<AddOption "«I can come up with one!» [Enter Name]" "enterName">>
+<<AddOption "«If I say no, what's gonna happen?»" "ifNoName">>
 
 
 :: enterName[nobr]
@@ -1070,9 +1095,9 @@
 <<AddParagraph "ANYWAY">>
 <<AddParagraph "WHICH ONE DO YOU PREFER ?">>
 
-<<AddOption "Really... Then uh, Yasyas?" "Yasyas">>
-<<AddOption "Errr if I really don't have a choice I'll just choose Muffin" "Muffin">>
-<<AddOption "I could pick anything, literally anything but those two... words" "Naming2">>
+<<AddOption "«Really... Then uh, Yasyas?»" "Yasyas">>
+<<AddOption "«Errr if I really don't have a choice I'll just choose Muffin»" "Muffin">>
+<<AddOption "«I could pick anything, literally anything but those two... words»" "Naming2">>
 
 
 :: Naming2 [nobr]
@@ -1094,8 +1119,8 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//A situation I can't escape//">>
 
-<<AddOption "I'll go with Yasyas" "Yasyas">>
-<<AddOption "Muffin it is, I guess..." "Muffin">>
+<<AddOption "«I'll go with Yasyas»" "Yasyas">>
+<<AddOption "«Muffin it is, I guess...»" "Muffin">>
 
 
 :: Yasyas [nobr]
@@ -1108,7 +1133,7 @@
 <<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
 <<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
 
-<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
+<<AddOption "«I-I didn't even sign the contract...»" "Investigation1">>
 
 
 :: Muffin [nobr]
@@ -1121,4 +1146,4 @@
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
 
-<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
+<<AddOption "«I-I didn't even sign the contract...»" "Investigation1">>
