@@ -1,38 +1,4 @@
 
-:: giftNo [nobr]
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Okay so basically, a ''Gift'' is what we call a person's magical ability.">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "They are ruled by Three Laws.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "//Wait, the Three Laws of Magic... this kind of rings a bell.//">>
-<<AddParagraph "//This looks super important too...//">>
-<<AddParagraph "Y-yeah, I think I remember something like that.">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Let's check what you remember then!">>
-
-<<BlankSpeaker>>
-<<AddParagraph "You start sweating now: this is not going to end well for you.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "This is ''really'' not necessary.">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "//I missed the timing to back out and come clean...//">>
-
-<<SetSpeaker "???">>
-<<AddOption "«Erm...»" "theory1">>
-
-
 :: theory1 [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//Okay, me//">>
