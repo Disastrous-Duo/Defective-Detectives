@@ -15,7 +15,7 @@
 <<AddParagraph "Time to blow this thing up">>
 <<BlankSpeaker>>
 <<SetSpeaker "Cannelé">>
-<<AddParagraph  "I think my power just gave me this @@.precog_color;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>
+<<AddParagraph  "I think my power just gave me this @@.precog;<span class='Precog' data-speed='3' data-random='1' data-value='Long information but super worth it, definitely'></span>@@" >>
 
 :: Test_Slotmachine [nobr]
 <<SetSpeaker "Cannelé">>

@@ -1038,7 +1038,7 @@
 <<AddParagraph "Hi, my name is Richie and-">>
 
 <<BlankSpeaker>>
-<<AddParagraph  "@@.precog_color;The man's clothes are tattered, <span class='Precog' data-speed='1' data-random='0' data-value='as if he had been wearing the same outfit for a long time :'> </span> this Richie probably <span class='Precog' data-speed='4' data-random='1' data-value='rich.'></span>@@">>
+<<AddParagraph  "@@.precog;The man's clothes are tattered, <span class='Precog' data-speed='1' data-random='0' data-value='as if he had been wearing the same outfit for a long time :'> </span> this Richie probably <span class='Precog' data-speed='4' data-random='1' data-value='rich.'></span>@@">>
 
 
 <<BlankSpeaker>>

@@ -347,7 +347,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 
 
 :: realLaws [nobr]
-<<BlankSpeaker>>
+/* <<BlankSpeaker>>
 
 <<AddParagraph "The two detectives are still smiling, after laughing at you for a good five minutes.">>
 
@@ -389,11 +389,11 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "OK then.">>
 <<AddParagraph "What ARE the Three Laws of Magic?">>
 
-<<BlankSpeaker>>
+<<BlankSpeaker>> */
 <<AddParagraph "Cannelé and Nomnom exchange a glance.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"Rule #1 : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
+<<AddParagraph `"Rule #1 : Magic is a universal gift that can be activated "+tooltip("@@.github;after eating a Fleur d'Âme@@","Literally: 'Flower from the Soul'")+"."`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>

@@ -576,7 +576,7 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
+<<AddParagraph  `"@@.precog;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
 
 
 <<SetSpeaker "Cannelé">>
@@ -844,7 +844,7 @@
 
 /*tout en couleur + lumière*/
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
+<<AddParagraph  `"@@.precog;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -994,9 +994,9 @@
 
 /*Precog colors and lighting*/
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;His clothes seem to be good quality and he is clean shaven.@@"`>>
-<<AddParagraph `"@@.precog_color;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
-<<AddParagraph `"@@.precog_color;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
+<<AddParagraph  `"@@.precog;His clothes seem to be good quality and he is clean shaven.@@"`>>
+<<AddParagraph `"@@.precog;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
+<<AddParagraph `"@@.precog;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
@@ -1033,7 +1033,7 @@
 
 /*TODO: Add "Mr." */
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;On his coat are embroidered the initials "+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
+<<AddParagraph  `"@@.precog;On his coat are embroidered the initials "+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
@@ -1062,7 +1062,7 @@
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
 <<AddParagraph "Inspiration?">>
 
-<<AddParagraph "<h2 class='duel_title duel_left'>Designation</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<AddParagraph "<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A name...">>
