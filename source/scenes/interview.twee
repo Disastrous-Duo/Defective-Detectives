@@ -592,7 +592,7 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Do you even remember what a gift is?">>
 
-<<AddOption "«Of course, I do»" "giftYes">>
+<<AddOption "«Of course, I do» (Bluff.)" "giftYes">>
 <<AddOption "«A what now?»" "giftNo">>
 
 
@@ -629,6 +629,190 @@
 
 <<SetSpeaker "???">>
 <<AddOption "«If you insist...»" "theory1">>
+
+
+:: giftNo [nobr]
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Okay so basically, a ''Gift'' is what we call a person's magical ability.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "They are ruled by Three Laws.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//Wait, the Three Laws of Magic... this kind of rings a bell.//">>
+<<AddParagraph "//This looks super important too...//">>
+<<AddParagraph "Y-yeah, I think I remember something like that.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Let's check what you remember then!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "You start sweating now: this is not going to end well for you.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "This is ''really'' not necessary.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I missed the timing to back out and come clean...//">>
+
+<<SetSpeaker "???">>
+<<AddOption "«Erm...»" "theory1">>
+
+
+:: theory1 [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//Okay, me.//">>
+<<AddParagraph "//I gotta do this...//">>
+<<AddParagraph "//I have to find these Laws and show them!//">>
+
+<<AddParagraph "//I am pretty sure they are called the ''Three'' Laws of Magic.//">>
+<<AddParagraph "//I'll just try and remember something...//">>
+<<AddParagraph "//I have a feeling that this is very important.//">>
+<<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
+
+<<AddParagraph "//I have to think.//">>
+<<AddParagraph "//First, what could be the cause of magic...//">>
+
+<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their ''Gifts'' to us?" "theory2">>
+<<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "theory2">>
+<<AddOption "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "theory2">>
+
+
+:: theory2 [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//That sounds plausible, maybe!//">>
+<<AddParagraph "//Let's keep going.//">>
+<<AddParagraph "//I need to be logical//">>
+<<AddParagraph "//Second, let's think about how it could work...//">>
+
+
+<<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
+<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates?? More???")` "theory3">>
+<<AddOption "Let's stay down to earth... what about biological evolution? ''Gifts'' like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
+
+
+:: theory3 [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//I might actually be onto something?//">>
+<<AddParagraph "//Just one more...//">>
+<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
+
+<<AddParagraph "//Lastly, I should finish with limitations of some sort...//">>
+
+
+<<AddOption "Someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
+<<AddOption "Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
+<<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution">>
+
+:: restitution [nobr]
+<<SetSpeaker "Rule #1">>
+<<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
+
+<<SetSpeaker "Rule #2">>
+<<AddParagraph "When a human comes of age, they form an exclusive pact with their own Spirit.">>
+
+<<SetSpeaker "Rule #3">>
+<<AddParagraph "The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.">>
+
+
+<<SetSpeaker "Rule #1">>
+<<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+<<SetSpeaker "Rule #2">>
+<<AddParagraph "To harness this Magic, humans have developped specific organs - 'Gifts' - that process the energy.">>
+
+<<SetSpeaker "Rule #3">>
+<<AddParagraph "Nothing is created, nothing is destroyed, everything is transformed.">>
+
+
+<<SetSpeaker "Rule #1">>
+<<AddParagraph "Magic is a symbiote organism living inside humans.">>
+
+<<SetSpeaker "Rule #2">>
+<<AddParagraph "Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abilities.">>
+
+<<SetSpeaker "Rule #3">>
+<<AddParagraph "To use the symbiote's Gift, you have to feed it special nutrients.">>
+
+<<set $result to "RiverSpirits">>
+
+<<AddOption "Hum, maybe I should think about this again..." "theory1">>
+<<AddOption "Ok, this is looking good!" "stateRules">>
+
+
+:: stateRules [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "You enunciate the rules you came up with clearly.">>
+<<AddParagraph "The confidence, that used to be pretend, now it feels real.">>
+
+<<AddParagraph "You got this.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//This makes sense!//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom  don't say anything.">>
+<<AddParagraph "Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.">>
+<<AddParagraph "Cannelé hasn't moved: they're looking as you finish stating the third rule.">>
+
+<<AddParagraph "...">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "BWAHAHAHAHAHAHA">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//...//">>
+
+
+<<AddOption "//I thought it was pretty good?//" "riverSpirits">>
+<<AddOption "//Am I that far off??//" "riverSpirits">>
+<<AddOption "//I hate them so much...//" "riverSpirits">>
+
+
+:: riverSpirits [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "This was terrible but like...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "In a good, terrible way?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What was this all even about?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "River Spirits lending their powers to human is the myth that the first settlers who discovered the continent came up with.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "And it is true that personality, mind and spirit do influence the way your Gift is shaped...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "But the rest? Complete bullshit.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Some people out there can throw fireballs at your ass, so it's really not that tied to water and the River.">>
+<<AddParagraph "And we don't date magical spirits in exchange of Magic, no.">>
+<<AddParagraph "That's kinda...">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "''REALLY'' creepy...">>
+<<AddParagraph "Sorry to disappoint... I guess?">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//What is this feeling...//">>
+
+<<AddOption "//Annoyance?//" "realLaws">>
+<<AddOption "//Amusement?//" "realLaws">>
+<<AddOption "//Indifference.//" "realLaws">>
 
 
 
@@ -752,7 +936,7 @@
 <<AddParagraph "Cannelé's smile widens.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Of course! We are "+tooltip("professionals","On the broader sense of the definition.")+"."`>>
+<<AddParagraph `"Of course! We are "+tooltip("professionals","In the broader sense of the definition.")+"."`>>
 <<AddParagraph "Now let us discuss the terms of the contract">>
 
 <<AddOption "The contract?" "Contract1">>
@@ -770,12 +954,8 @@
 <<BlankSpeaker>>
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
 
-<<AddOptionVariables "///Am I really... leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
+<<AddOptionVariables "//Am I really... leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
 <<AddOptionVariables "//But somehow... I feel like they might be trustworthy...//" "Contract2" `{"trust":true}`>>
-
-
-/*/>> consequence ? a reflechir yassine's feelings : does he feel confident, his burden has been lightened; jle sens pas, mais j'ai personne d'autre vers qui me tourner.
-*/
 
 :: Contract2 [nobr]
 
@@ -814,7 +994,7 @@
 
 /*Precog colors and lighting*/
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;His clothes seem to be good quality and he he is clean shaven.@@"`>>
+<<AddParagraph  `"@@.precog_color;His clothes seem to be good quality and he is clean shaven.@@"`>>
 <<AddParagraph `"@@.precog_color;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
 <<AddParagraph `"@@.precog_color;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
 
@@ -841,7 +1021,7 @@
 
 <<if $trust is true>>
   <<SetSpeaker "???">>
-  <<AddParagraph "//Scratch that monologue about trust and worries being lifted.//">>
+  <<AddParagraph "//Scratch that monologue about trust and hope and worries being lifted.//">>
   <<AddParagraph "//They're out to scam me!!!//">>
 <</if>>
 
@@ -853,14 +1033,13 @@
 
 /*TODO: Add "Mr." */
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog_color;On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
+<<AddParagraph  `"@@.precog_color;On his coat are embroidered the initials "+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
 
-
 <<AddOption "«Not really?»" "noName">>
-<<AddOption "«I can come up with one!» [Enter Name]" "enterName">>
+<<AddOption "«I can come up with one!» (Enter Name.)" "enterName">>
 <<AddOption "«If I say no, what's gonna happen?»" "ifNoName">>
 
 
@@ -939,7 +1118,6 @@
 <<AddParagraph "The answer is no, I do not have a name.">>
 
 /* continue scene to interviewDeepThought instead of copy paste*/
-
 <<BlankSpeaker>>
 <<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
@@ -1055,8 +1233,8 @@
 <<AddParagraph "//I can feel it.//">>
 <<AddParagraph "//This...//">>
 <<AddParagraph "//This ridiculous situation has happened before...//">>
-<<AddParagraph `"//Cannelé........ " + note("Muffin (??)",{txt:"Muffin... This isn't a name, it's a pastry...", type:"hint"}) + " .............//"`>>
-<<AddParagraph `"//Nomnom................... "+ note("Yasyas (???)",{txt:"This is nothing at all not even a word? This comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes...", type:"hint"})+ " ...........//"`>>
+<<AddParagraph `"//Cannelé........ "+note("Muffin (??)",{txt:"Muffin... This isn't a name, it's a pastry...", type:"hint"})+" .............//"`>>
+<<AddParagraph `"//Nomnom................... "+ note("Yasyas (???)",{txt:"This is nothing at all not even a word? This comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes...", type:"hint"})+" ...........//"`>>
 <<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"Terrifying naming conventions... History repeats itself?", type:"question"})`>>
 <<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
 <<AddParagraph "//Perhaps even more terrifying than the memory loss itself...//">>

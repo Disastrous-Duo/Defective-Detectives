@@ -189,7 +189,7 @@
 
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
-<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 
@@ -239,7 +239,7 @@
 
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
-<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 :: Results_Symbiotic [nobr]
@@ -289,7 +289,7 @@
 
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
-<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 :: Results_Bullshit [nobr]
@@ -411,18 +411,19 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 
 
 :: cnGifts [nobr]
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Another silence greets the question.">>
+<<BlankSpeaker>>
+<<AddParagraph "A silence greets the question.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//I guess awkward silences are something I must used to, I feel like it's going to keep happening with those two.">>
+<<AddParagraph "//I guess awkward silences are something I must get used to...">>
+<<AddParagraph "//I feel like it's going to keep happening with those two.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Listen. I get that you don't remember much, but there are some things you can't just do.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Yeah, what's ''wrong'' with you?">>
-<<AddParagraph "A Gift is personal, intimate you can't just ask strangers.">>
+<<AddParagraph "Yeah, what's //wrong// with you?">>
+<<AddParagraph "A Gift is personal, intimate - you can't just ask strangers.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We might tell you if we grow closer but now is a little... embarrassing.">>
@@ -543,7 +544,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "Oh. What did it tell you?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé's grin fades.'">>
+<<AddParagraph "Cannelé's grin fades.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "''Tax Collector.''">>
@@ -600,20 +601,20 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You can't just activate magic through sheer will.">>
 <<AddParagraph "It needs to be carried via something material.">>
-<<AddParagraph "A power could, for instance, turn someone into bees whenever they eat honey; honey being the medium.">>
+<<AddParagraph "A power could, for instance, turn someone into bees whenever they eat honey; honey being the ''medium''.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Or... memorize an entire book, just by touching it.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Or... bring wooden toys to life - in which case wood is the acting medium.">>
+<<AddParagraph "Or... bring wooden toys to life - in which case wood being the acting medium.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Thing is, there always need to be something material about your magic.">>
 <<AddParagraph "And that thing, can be anything //but// a living being.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Alright, I think understand.">>
+<<AddParagraph "Alright, I think I understand.">>
 
 
 <<if $firstlaw is false>>
