@@ -80,11 +80,11 @@
 <<AddParagraph "They look...">>
 <<AddParagraph "Lost.">>
 <<AddParagraph "Utterly so.">>
-<<AddParagraph "As if they were expecting ''the client'' to know what to do.">>
+<<AddParagraph "As if they were expecting //the client// to know what to do.">>
 <<AddParagraph "Ah.">>
 <<AddParagraph "They're looking slightly desperate now.">>
 <<AddParagraph "The atmosphere is awkward.">>
-<<AddParagraph "''Terribly'' awkward.">>
+<<AddParagraph "//Terribly// awkward.">>
 <<AddParagraph "Another moment passes in silence.">>
 <<AddParagraph "It's endless.">>
 <<AddParagraph "Each second...">>
@@ -211,10 +211,15 @@
 <<BlankSpeaker>>
 <<AddParagraph "Behind the stool, the sink is filled with three cups. Next to it, a water boiler sits on an open cupboard that's almost empty.">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "//This kitchen is almost //desolate//... somehow this is not very re-//">>
+
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Why do you HAVE to be a pain in my-">>
 
-/* assuming -> jeu de mot */
+<<SetSpeaker "???">>
+<<AddParagraph "//-assuring.//">>
+
 <<BlankSpeaker>>
 <<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
@@ -242,7 +247,7 @@
 
 <<SetSpeaker "Nomnom">>
 /*TODO: add Nomnom's magic effect, as a prophecy that will happen*/
-<<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
+<<AddParagraph "Unstable. That board is @@color:blue;unstable@@. So is Cannelé, beware.">>
 
 <<BlankSpeaker>>
 
@@ -279,7 +284,7 @@
 <<AddParagraph "AGAIN?!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "I told you it was unstable...">>
+<<AddParagraph "I warned you it was @@color:blue;unstable@@...">>
 
 <<BlankSpeaker>>
 <<AddParagraph "They both sigh and start to crouch and pick up the scattered documents.">>
@@ -336,7 +341,7 @@
 <<AddParagraph "Black ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
 <<AddParagraph "However, what truly stands out is Cannelé’s clothing.">>
 <<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...">>
-<<AddParagraph "It creates a ''stark'' contrast with the pitiful state of the cramped office.">>
+<<AddParagraph "It creates a //stark// contrast with the pitiful state of the cramped office.">>
 
 <<AddOption "//Their attitude...//" "canneleAttitude">>
 <<AddOption "//Their clothes...//" "canneleClothes">>
@@ -352,7 +357,7 @@
 <<AddParagraph "You contemplate the expensive clothes, the smug grin and the total lack of common sense.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//''Fallen'' nobility...//">>
+<<AddParagraph "Fallen //nobility...//">>
 
 
 <<AddOption "Look at Cannelé again." "interviewCannelé">>
@@ -394,7 +399,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//I think I get what's happening here.//">>
 <<AddParagraph "//Both of them have this constant petty rivalry-siblings fight going on...//">>
-<<AddParagraph "//And Cannelé is ''rather small'' compared to Nomnom, who is ''rather tall''//">>
+<<AddParagraph "//And Cannelé is //rather small// compared to Nomnom, who is// rather tall.">>
 <<AddParagraph "//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//">>
 <<AddParagraph "//It's suprisingly...//">>
 <<AddParagraph "//Ineffective.//">>
@@ -484,7 +489,7 @@
 :: nomnomLeftShoe [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "//This shoe...//">>
-<<AddParagraph `"//I can't help but have a ''bad feeling'' about this  //"+note("//shoe//",{txt:"Aerodynamic left shoe", type:"hint"})+"//.//"`>>
+<<AddParagraph `"//I can't help but have a //bad feeling// about this  //"+note("//shoe//",{txt:"Aerodynamic left shoe", type:"hint"})+"//.//"`>>
 
 <<AddOption "Look at Nomnom again." "interviewNomnom">>
 
@@ -504,7 +509,7 @@
 <<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and... "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"It's pronounced ''non-non'', "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like 'non' which means 'no'"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally 'name-name'...", type:"hint"})+ "?"`>>
+<<AddParagraph `"It's pronounced //non-non//, "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like “non” which means “no”"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name”...", type:"hint"})+ "?"`>>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
@@ -522,7 +527,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph "A-ah, I see.">>
 <<AddParagraph "//They remind me of siblings...//">>
-<<AddParagraph "//A pair of ''extremely annoying'' siblings.//">>
+<<AddParagraph "//A pair of //extremely annoying// siblings.//">>
 
 <<AddOption "Bring the topic back to what matters to you : your amnesia." "Interview">>
 
@@ -548,6 +553,9 @@
 <<AddParagraph "They bring the cups over, ignoring Cannelé, and place one on the table.">>
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
+<<AddParagraph "You think you see the surface of the liquid @@color:blue;glow@@ blue for a second.">>
+<<AddParagraph "Then; it's gone.">>
+
 
 /*appear once fast then disappear and normal effect*/
 <<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is shouting in pain, a huge stain on his pants." >>
@@ -566,6 +574,7 @@
 <<set $interview_identity to false>>
 <<set $interview_event to false>>
 <<set $interview_coffee to false>>
+<<set $firstgiftcannele to false>>
 
 <<AddOption "«Who am I?»" "Identity">>
 <<AddOption "«What happened?»" "Event">>
@@ -576,6 +585,11 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
+<<if $firstgiftcannele is false>>
+  <<AddParagraph  "From the corner of your eyes, you see @@color:red;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
+  <<set $firstgiftcannele to true>>
+<</if>>
 <<AddParagraph  `"@@.precog_color;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
 
 
@@ -598,7 +612,7 @@
 
 :: giftYes [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph "I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what ''real'' coffee looks like.">>
+<<AddParagraph "I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what //real// coffee looks like.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "//Nomnom squints, unconvinced.//">>
@@ -622,7 +636,7 @@
 <<AddParagraph "This is really not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
+<<AddParagraph "Do not worry, you are //not// our first case of amnesia, we //absolutely// know what we are doing.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -650,10 +664,10 @@
 <<AddParagraph "You start sweating now: this is not going to end well for you.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "This is ''really'' not necessary.">>
+<<AddParagraph "This is //really// not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
+<<AddParagraph "Do not worry, you are //not// our first case of amnesia, we //absolutely// know what we are doing.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -663,157 +677,6 @@
 
 <<SetSpeaker "???">>
 <<AddOption "«Erm...»" "theory1">>
-
-
-:: theory1 [nobr]
-<<SetSpeaker "???">>
-<<AddParagraph "//Okay, me.//">>
-<<AddParagraph "//I gotta do this...//">>
-<<AddParagraph "//I have to find these Laws and show them!//">>
-
-<<AddParagraph "//I am pretty sure they are called the ''Three'' Laws of Magic.//">>
-<<AddParagraph "//I'll just try and remember something...//">>
-<<AddParagraph "//I have a feeling that this is very important.//">>
-<<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
-
-<<AddParagraph "//I have to think.//">>
-<<AddParagraph "//First, what could be the cause of magic...//">>
-
-<<AddOption "The river is super important... There are Spirits that dwell here, Spirits with Magic... Maybe they can lend their ''Gifts'' to us?" "theory2">>
-<<AddOption "Magic is probably based on physical phenomena and logical equations... This means that knowledge must be the key to Magic!" "theory2">>
-<<AddOption "Humans probably can't do magic... What if a symbiotic being lived inside us and gave us their powers?" "theory2">>
-
-
-:: theory2 [nobr]
-<<SetSpeaker "???">>
-<<AddParagraph "//That sounds plausible, maybe!//">>
-<<AddParagraph "//Let's keep going.//">>
-<<AddParagraph "//I need to be logical//">>
-<<AddParagraph "//Second, let's think about how it could work...//">>
-
-
-<<AddOption "If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?" "theory3">>
-<<AddOption `"River Spirits must have their own agency and values and personality... if it resonates with someone then they can become pals? Friends? "+tooltip("Partners...","Lovers? Soulmates?? More???")` "theory3">>
-<<AddOption "Let's stay down to earth... what about biological evolution? ''Gifts'' like magical organs to manipulate the Laws of physics, maybe?" "theory3">>
-
-
-:: theory3 [nobr]
-<<SetSpeaker "???">>
-<<AddParagraph "//I might actually be onto something?//">>
-<<AddParagraph "//Just one more...//">>
-<<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
-
-<<AddParagraph "//Lastly, I should finish with limitations of some sort...//">>
-
-
-<<AddOption "Someone - Lavoisomeone - said it before it before right? 'Nothing is created, nothing is destroyed, everything is transformed.'" "restitution">>
-<<AddOption "Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?" "restitution">>
-<<AddOption "If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?" "restitution">>
-
-:: restitution [nobr]
-<<SetSpeaker "Rule #1">>
-<<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
-
-<<SetSpeaker "Rule #2">>
-<<AddParagraph "When a human comes of age, they form an exclusive pact with their own Spirit.">>
-
-<<SetSpeaker "Rule #3">>
-<<AddParagraph "The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.">>
-
-
-<<SetSpeaker "Rule #1">>
-<<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
-
-<<SetSpeaker "Rule #2">>
-<<AddParagraph "To harness this Magic, humans have developped specific organs - 'Gifts' - that process the energy.">>
-
-<<SetSpeaker "Rule #3">>
-<<AddParagraph "Nothing is created, nothing is destroyed, everything is transformed.">>
-
-
-<<SetSpeaker "Rule #1">>
-<<AddParagraph "Magic is a symbiote organism living inside humans.">>
-
-<<SetSpeaker "Rule #2">>
-<<AddParagraph "Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abilities.">>
-
-<<SetSpeaker "Rule #3">>
-<<AddParagraph "To use the symbiote's Gift, you have to feed it special nutrients.">>
-
-<<set $result to "RiverSpirits">>
-
-<<AddOption "Hum, maybe I should think about this again..." "theory1">>
-<<AddOption "Ok, this is looking good!" "stateRules">>
-
-
-:: stateRules [nobr]
-<<BlankSpeaker>>
-<<AddParagraph "You enunciate the rules you came up with clearly.">>
-<<AddParagraph "The confidence, that used to be pretend, now it feels real.">>
-
-<<AddParagraph "You got this.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "//This makes sense!//">>
-
-<<BlankSpeaker>>
-<<AddParagraph "Cannelé and Nomnom  don't say anything.">>
-<<AddParagraph "Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.">>
-<<AddParagraph "Cannelé hasn't moved: they're looking as you finish stating the third rule.">>
-
-<<AddParagraph "...">>
-
-<<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "BWAHAHAHAHAHAHA">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "//...//">>
-
-
-<<AddOption "//I thought it was pretty good?//" "riverSpirits">>
-<<AddOption "//Am I that far off??//" "riverSpirits">>
-<<AddOption "//I hate them so much...//" "riverSpirits">>
-
-
-:: riverSpirits [nobr]
-<<BlankSpeaker>>
-<<AddParagraph "They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "This was terrible but like...">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "In a good, terrible way?">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "What was this all even about?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
-<<AddParagraph "River Spirits lending their powers to human is the myth that the first settlers who discovered the continent came up with.">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "And it is true that personality, mind and spirit do influence the way your Gift is shaped...">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "But the rest? Complete bullshit.">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Some people out there can throw fireballs at your ass, so it's really not that tied to water and the River.">>
-<<AddParagraph "And we don't date magical spirits in exchange of Magic, no.">>
-<<AddParagraph "That's kinda...">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "''REALLY'' creepy...">>
-<<AddParagraph "Sorry to disappoint... I guess?">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "//What is this feeling...//">>
-
-<<AddOption "//Annoyance?//" "realLaws">>
-<<AddOption "//Amusement?//" "realLaws">>
-<<AddOption "//Indifference.//" "realLaws">>
-
 
 
 :: Event [nobr]
@@ -831,7 +694,6 @@
 <<SetSpeaker "???">>
 <<AddParagraph "I was quite desperate you see...">>
 
-
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SEE! I KNEW HANDING OUT FLYERS WOULD BE A GREAT IDEA!">>
 
@@ -844,6 +706,11 @@
 
 /*tout en couleur + lumière*/
 <<BlankSpeaker>>
+<<if $firstgiftcannele is false>>
+  <<AddParagraph  "From the corner of your eyes, you see @@color:red;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
+  <<set $firstgiftcannele to true>>
+<</if>>
 <<AddParagraph  `"@@.precog_color;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
 
 <<SetSpeaker "???">>
@@ -899,7 +766,7 @@
 <<AddParagraph "''*gulps*''">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Can I offer you a pastry to go with this ''delicious'' cup of coffee? They're fresh from yesterday.">>
+<<AddParagraph "Can I offer you a pastry to go with this //delicious// cup of coffee? They're fresh from yesterday.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh! Is Yesterday a bakery?">>
@@ -949,7 +816,7 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "''*COUGH*''">>
-<<AddParagraph "''WE'' are proper detectives.">>
+<<AddParagraph "//WE// are proper detectives.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
@@ -970,7 +837,7 @@
 <<if $trust is true>>
   <<SetSpeaker "???">>
   <<AddParagraph "//I don't know exactly what it is...//">>
-  <<AddParagraph "//But ''something'' tells me I can trust them.//">>
+  <<AddParagraph "//But //something// tells me I can trust them.//">>
   <<AddParagraph "//These people... they'll help me.//">>
 
   <<BlankSpeaker>>
@@ -981,9 +848,9 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph "Mystery 1: Who are you?">>
-<<AddParagraph "Mystery 2: What's your gift?">>
-<<AddParagraph "Mystery 3: And what happened to you?">>
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"Who are //you//", type:"question"})`>>
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"What's your //Gift//", type:"question"})`>>
+<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"What //happened// to you?", type:"question"})`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
@@ -1049,7 +916,7 @@
 <<AddParagraph "This is a shit name.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Haven't seen a name as bad since 'Cannelé', dude what the heck.">>
+<<AddParagraph "Haven't seen a name as bad since “Cannelé”, dude what the heck.">>
 <<AddParagraph "Ok, time for me to shine!">>
 
 <<SetSpeaker "Nomnom">>
@@ -1108,10 +975,12 @@
 <<AddParagraph "They both smile at you, an almost business-like smile.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "We wouldn't call you 'No',it's a terrible name.">>
+<<AddParagraph "We wouldn't call you “No”,it's a terrible name.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Plus, it's already taken. You can take 'Yes', though.">>
+<<AddParagraph "Plus, it's already taken.">>
+<<AddParagraph "You can take “Yes”, though.">>
+
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's not what I meant but okay...">>
@@ -1213,9 +1082,9 @@
 
 :: interviewA-HA [nobr]
 <<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "''A-HA!''">>
+<<AddParagraph "''//A-HA!//''">>
 
-<<AddOption "//''VERY'' concerned...''//" "Naming">>
+<<AddOption "VERY //concerned...//" "Naming">>
 
 
 :: Naming [nobr]
