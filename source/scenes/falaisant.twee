@@ -1,9 +1,7 @@
 //title screen
-:: Start 
+:: Start
 <<BlankSpeaker>>
 <<AddOption "START GAME" "Falaisant">>
-
-
 
 /* Falaisant : Introduction of the city */
 :: Falaisant [nobr]
@@ -11,75 +9,190 @@
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
-<<AddOption "A drop of water flies over Falaisant" "Falaisant2">>
+<<AddOption "A drop of water flies over Falaisant." "Falaisant2">>
 
 
 :: Falaisant2  [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//At the heart of the city, high towers dominate the skyline. White rock and marble glint under the first rays of the sun, reflecting the water flowing underneath.//">>
 
-<<AddOption "The drop rolls down the tower" "Falaisant3">>
+<<AddOption "The drop rolls down the tower." "Falaisant3">>
 
 
 :: Falaisant3  [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//">>
+<<AddParagraph "//Two of them stretch out behind the tower; the three others unfold in the distance.//">>
 
-<<AddOption "The drop continues its course on to the first boulevard" "Falaisant4">>
+<<AddOption "A faint pull takes the drop down the first boulevard." "Falaisantfirstblvd">>
+<<AddOption "The drop continues its course down the second boulevard." "Falaisantsecondblvd">>
+<<AddOption "The drop rolls, slowly making its way down the third boulevard." "Falaisantthirdblvd">>
 
 
-:: Falaisant4 [nobr]
+/* FIRST PATH */
+:: Falaisantfirstblvd [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
 
-<<AddOption "The drop bounces off the slightly uneven pavement" "Falaisant5">>
+<<AddOption "//The drop bounces off the slightly uneven pavement.//" "Falaisant1_5">>
 
 
-:: Falaisant5 [nobr]
+:: Falaisant1_5 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges : they jump over streams of water as they connect multiple layers of passageways, roads and gates.//">>
+<<AddParagraph "//Soon, big boats appear, moored to a wharf.//">>
+<<AddParagraph "//Containers are stacked on the side as the sunlight casts its early light on busy dockhands.//">>
 
-<<AddOption "The drop falls from a hole in the metallic hedge of a bridge" "Falaisant6">>
+<<AddOption "The drop follows the movement of the merchandise." "Falaisant1_6">>
+<<AddOption "The drop takes a sharp turn in a dark alley." "Falaisant2_7">>
 
-
-:: Falaisant6 [nobr]
+:: Falaisant1_6 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//Plic.//">>
+<<AddParagraph "//Boxes are carried to an empty marketplace.//">>
+<<AddParagraph "//All the workers stop before a group of officers; they seem stuck.//">>
+<<AddParagraph "//On the other side of the place, a mysterious figure in a long, dark coat is making their way out of the market.//">>
 
-<<AddParagraph "//Ploc.//">>
+<<AddOption "The drop glides, chasing after the curious individual." "Falaisant1_7_1">>
+<<AddOption "The drop takes another turn, rolling past the suspicious silhouette." "Falaisant1_7_2">>
 
-<<AddOption "Lower, Lower" "Falaisant7">>
+:: Falaisant1_7_1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//The figure is walking at a rapid pace.//">>
+<<AddParagraph "//They're stumbling and stopping often, as if lost in the chaos of alleys.//">>
+
+<<AddOption "The drop keeps up; left, right, left again... before crashing onto somethig... paper?" "Falaisant1_8">>
 
 
-:: Falaisant7 [nobr]
+:: Falaisant1_7_2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//At the west exit stands a big metallic bridge, with ornate handrails and details.//">>
+
+<<AddOption "The drop falls from a hole in the hedge." "Falaisant2_6">>
+
+
+:: Falaisant1_8 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//It's a flyer.//">>
+<<AddParagraph "//The individual crouches to pick it up.//">>
+<<AddParagraph "//They shake the paper slightly, to get rid of the humidity that was clinging to it.//">>
+
+<<AddOption "The drop is sent flying, high, high." "Falaisant1_9">>
+
+:: Falaisant1_9 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//">>
-
-<<AddOption "The drop errs, losing itself in the ominous veil" "Falaisant8">>
-
-
-:: Falaisant8 [nobr]
-<<BlankSpeaker>>
 <<AddParagraph "//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//">>
+<<AddParagraph "//Only the curious personnage is walking, cutting through the misty veil with hesitant steps.//">>
 <<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
-
-<<BlankSpeaker>>
 <<AddParagraph "//The atmosphere is heavy...//">>
 <<AddParagraph "//Disquieting.//">>
 
-<<AddOption "The drop runs down darker and darker paths" "Falaisant9">>
+<<AddOption "The drop runs down darker and darker paths, following the silhouette." "Falaisant2_9">>
 
 
-:: Falaisant9 [nobr]
+:: Falaisant1_10 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//In the darkest corner of the decrepit block, the dark figure stops in front of a locked door.//">>
+<<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
+
+<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure." "Falaisant10">>
+
+
+/* SECOND PATH */
+:: Falaisantsecondblvd [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
+
+<<AddOption "The drop bounces off the slightly uneven pavement." "Falaisant2_5">>
+
+:: Falaisant2_5 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges : they jump over streams of water as they connect multiple layers of passageways, roads and gates.//">>
+
+<<AddOption "The drop falls from a hole in the metallic hedge of a bridge." "Falaisant2_6">>
+
+
+:: Falaisant2_6 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//Plic.//">>
+<<AddParagraph "//Ploc.//">>
+
+<<AddOption "Lower, Lower..." "Falaisant2_7">>
+
+
+:: Falaisant2_7 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//">>
+
+<<AddOption "The drop errs, losing itself in the ominous veil." "Falaisant2_8">>
+
+
+:: Falaisant2_8 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//">>
+<<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
+<<AddParagraph "//The atmosphere is heavy...//">>
+<<AddParagraph "//Disquieting.//">>
+
+<<AddOption "The drop runs down darker and darker paths." "Falaisant2_9">>
+
+
+:: Falaisant2_9 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
 
-<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure" "Falaisant10">>
+<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure." "Falaisant10">>
+
+
+/* THIRD PATH */
+:: Falaisantthirdblvd [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
+
+<<AddOption "The drop bounces off the slightly uneven pavement." "Falaisant3_5">>
+
+
+:: Falaisant3_5 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//The paved streets lead to a big park.//">>
+<<AddParagraph "//Trees line up, dividing green grass fields, trodden paths and sculpted fountains.//">>
+
+<<AddOption "The drop is drawn to the biggest fountain." "Falaisant3_6_1">>
+<<AddOption "The drop rolls past the rows of trees." "Falaisant3_6_2">>
+
+:: Falaisant3_6_1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//The fountain is magnificient.//">>
+<<AddParagraph "//Marble chiseled with care, it looks timeless.//">>
+<<AddParagraph "//A small path leads away, near a bridge that joins the other part of the park.//">>
+<<AddParagraph "//Under the bridge, the city is organized in layers, each one deeper than the other.//">>
+
+<<AddOption "The drop crosses the bridge and falls through the hedge." "Falaisant2_6">>
+
+: Falaisant3_6_2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//The trees show the way out of the wide park.//">>
+<<AddParagraph "//On the other side of gilded gates, a slope plunges down into the depths of the city.//">>
+
+<<AddOption "The drop glides drifts down the avenue." "Falaisant3_8">>
+
+
+:: Falaisant3_8 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "//Its course is halted when it drifts on a piece of paper.//">>
+<<AddParagraph "//A few moments later, a dark figure appears from a corner.//">>
+<<AddParagraph "//Their pace is hurried and shaky - indecisive.//">>
+<<AddParagraph "//They crouch to pick up the flyer.//">>
+<<AddParagraph "//They shake the paper slightly, to get rid of the humidity that was clinging to it.//">>
+
+<<AddOption "The drop is sent flying, high, high." "Falaisant1_9">>
 
 
 :: Falaisant10 [nobr]
 <<audio "intro"  volume 1 fadeout>>
+<<BlankSpeaker>>
+<<AddParagraph "Now, you just became something else.">>
+
 <<SetSpeaker "Mysterious Individual">>
 <<AddParagraph "''*yelps loudly*''">>
 
