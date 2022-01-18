@@ -106,7 +106,9 @@ window.updatePrecogTimer = function()
 }
 
 window.setInterval(window.updateForesightTimer, foresight_timer_freq);
-window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+
+//Not used anymore
+// window.setInterval(window.updatePrecogTimer, precog_timer_freq);
 
 
 window.tooltip = function(displayed_text, tooltip)
