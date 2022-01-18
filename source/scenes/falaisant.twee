@@ -9,7 +9,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
-<<AddOption "A drop of water flies over Falaisant." "Falaisant2">>
+<<AddOption "A drop of water freefalls, breaking off; wandering." "Falaisant2">>
 
 
 :: Falaisant2  [nobr]
@@ -169,7 +169,7 @@
 
 <<AddOption "The drop crosses the bridge and falls through the hedge." "Falaisant2_6">>
 
-: Falaisant3_6_2 [nobr]
+:: Falaisant3_6_2 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The trees show the way out of the wide park.//">>
 <<AddParagraph "//On the other side of gilded gates, a slope plunges down into the depths of the city.//">>
@@ -191,10 +191,10 @@
 :: Falaisant10 [nobr]
 <<audio "intro"  volume 1 fadeout>>
 <<BlankSpeaker>>
-<<AddParagraph "Now, you just became something else.">>
+<<AddParagraph "In this instant, something has just shifted in your universe.">>
 
-<<SetSpeaker "Mysterious Individual">>
-<<AddParagraph "''*yelps loudly*''">>
+<<SetSpeaker "???">>
+<<AddParagraph "''*YELP*''">>
 
 <<BlankSpeaker>>
 <<AddParagraph "@@.typewriter;8:37am - 288 Harmony Street, Falaisant@@">>
