@@ -3,7 +3,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//Okay, me//">>
 <<AddParagraph "//I gotta do this, I have to find these Laws and show them!//">>
-<<AddParagraph "//I am pretty sure they are called the ''Three'' Laws of Magic.//">>
+<<AddParagraph "//I am pretty sure they are called the //Three// Laws of Magic.//">>
 <<AddParagraph "//I'll just try and remember something...//">>
 <<AddParagraph "//I have a feeling that this is very important.//">>
 <<AddParagraph "//If I can crack this, it might help me remember who I am!//">>
@@ -45,12 +45,12 @@
 
 <<AddParagraph "//Just one more detail...//">>
 <<AddParagraph "//And I will have crafted a complete and logical reasoning!//">>
-<<AddParagraph "//They're called ''Laws'', so there must be some kind of restrictions...//">>
+<<AddParagraph "//They're called //Laws//, so there must be some kind of restrictions...//">>
 <<BlankSpeaker>>
 <<AddParagraph "//''To do Magic, which rules must humans follow?''//">>
 
 
-<<AddOptionVariables "//Someone famous said it before right? 'Nothing is created, nothing is destroyed, everything is transformed.//" "restitution" `{"rule3":"physics"}`>>
+<<AddOptionVariables "//Someone famous said it before right? “Nothing is created, nothing is destroyed, everything is transformed.”//" "restitution" `{"rule3":"physics"}`>>
 <<AddOptionVariables "//Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?//" "restitution" `{"rule3":"symbiotic","said_gift3":1}`>>
 <<AddOptionVariables "//If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?//" "restitution" `{"rule3":"river_spirits"}`>>
 
@@ -59,7 +59,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph "Alright, let's recap what I got.">>
 
-<<SetSpeaker "Rule #1">>
+<<SetSpeaker "Law #1">>
 <<if $rule1 == "river_spirits">>
   <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
 <<elseif $rule1 == "physics">>
@@ -68,16 +68,16 @@
   <<AddParagraph "Magic is a symbiote organism living inside humans.">>
 <</if>>
 
-<<SetSpeaker "Rule #2">>
+<<SetSpeaker "Law #2">>
 <<if $rule2 == "river_spirits">>
   <<AddParagraph "When a human comes of age, they form an exclusive pact with their own Spirit.">>
 <<elseif $rule2 == "physics">>
-  <<AddParagraph "To harness this Magic, humans have developped specific organs - 'Gifts' - that process the energy.">>
+  <<AddParagraph "To harness this Magic, humans have developped specific organs - ''Gifts'' - that process the energy.">>
 <<else>>
   <<AddParagraph "Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abilities.">>
 <</if>>
 
-<<SetSpeaker "Rule #3">>
+<<SetSpeaker "Law #3">>
 <<if $rule3 == "river_spirits">>
   <<AddParagraph "The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.">>
 <<elseif $rule3 == "physics">>
@@ -161,7 +161,7 @@
 <<AddParagraph "What was this all even about?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "Well, it's not like you're //entirely// wrong...">>
 <<AddParagraph "River Spirits lending their powers to human is the First Myth that the first settlers who discovered the continent came up with.">>
 
 <<SetSpeaker "Cannelé">>
@@ -208,7 +208,7 @@
 <<AddParagraph "What was this all even about?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "Well, it's not like you're //entirely// wrong...">>
 <<AddParagraph "Magic is a form of energy all around us and we humans tap into it to manifest our ''Gift''...">>
 
 <<SetSpeaker "Cannelé">>
@@ -256,12 +256,12 @@
 <<AddParagraph "What was this all even about?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Well, it's not like you're ''entirely'' wrong...">>
+<<AddParagraph "Well, it's not like you're //entirely// wrong...">>
 <<AddParagraph "We do need to consume some special ingredient to use our Gifts...">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "">>
-<<AddParagraph `tooltip("Fleur d'Âme","Literally: 'Flower from the Soul'")+"."`>>
+<<AddParagraph `tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
 <<AddParagraph "Very rare, very expensive, very hard to come across.">>
 
 <<SetSpeaker "Nomnom">>
@@ -360,7 +360,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 
   <<BlankSpeaker>>
   <<AddParagraph "You clench your teeth, trying to rein back the irritation.">>
-  <<AddParagraph "For now, ''they're'' the ones who have the information you need.">>
+  <<AddParagraph "For now, //they're// the ones who have the information you need.">>
   <<AddParagraph "You can curse them out later.">>
   <<AddParagraph "This thought comforts you a little.">>
 <</if>>
@@ -371,14 +371,13 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 
   <<SetSpeaker "???">>
   <<AddParagraph "//They're not entirely wrong...//">>
-  <<AddParagraph "//It ''was'' a bit ridiculous!//">>
+  <<AddParagraph "//It //was// a bit ridiculous!//">>
   <<AddParagraph "//I didn't think I'd be able to laugh in this situation.//">>
   <<AddParagraph "//I think I feel a little... lighter.//">>
 <</if>>
 
 <<if $feelingYasMuff is "indifference">>
   <<BlankSpeaker>>
-  <<AddParagraph "The two detectives are still smiling.">>
   <<AddParagraph "You want them to stop and tell you what's going on.">>
   <<AddParagraph "You don't want to play games and entertain strangers with your memory loss.">>
   <<AddParagraph "You want answers.">>
@@ -393,13 +392,17 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "Cannelé and Nomnom exchange a glance.">>
 
 <<SetSpeaker "Nomnom">>
+<<<<<<< HEAD
 <<AddParagraph `"Rule #1 : Magic is a universal gift that can be activated "+tooltip("@@.github;after eating a Fleur d'Âme@@","Literally: 'Flower from the Soul'")+"."`>>
+=======
+<<AddParagraph `note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme.","Literally: “Flower from the Soul”"), type:"hint"})+" : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
+>>>>>>> dev-lo
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
+<<AddParagraph `note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."), type:"hint"})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Rule #3 : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.">>
+<<AddParagraph `note("Law #3",{txt:"Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."), type:"hint"})+" : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."`>>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//Hmmm... Better note those down.//">>
@@ -485,7 +488,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "...And no.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Everyone has the  //potential// to do Magic.">>
+<<AddParagraph "Everyone has the //potential// to do Magic.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "But not everyone has access to Fleur d’Âme.">>
@@ -607,7 +610,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "Or... memorize an entire book, just by touching it.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Or... bring wooden toys to life - in which case wood being the acting medium.">>
+<<AddParagraph "Or... bring wooden toys to life - in which case wood being the acting ''medium''.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Thing is, there always need to be something material about your magic.">>
@@ -626,7 +629,6 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <</if>>
 
 <<AddOption "«That's it» (Change Topic.)" "lawsDone">>
-
 
 
 :: lawsDone [nobr]
