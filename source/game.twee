@@ -50,6 +50,8 @@
 ::@include scripts/magic_effects.twee
 ::@include scripts/scoreboard.twee
 ::@include scripts/conspiracy_board.twee
+::@include scripts/tutorial_board.twee
+::@include scripts/pull_cord.twee
 
 
 ::@include macros/disco_elysium_macros.twee

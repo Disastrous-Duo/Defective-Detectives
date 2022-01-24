@@ -1,0 +1,315 @@
+:: Pull Cord [script]
+
+//Source: from https://codepen.io/jhereg00/pen/LNdXWq
+
+function init_pull_cord()
+{ // self-containing function for scope purpose
+
+
+
+  // Creates HTML elements for the cord
+
+  let canvas_width = 50;
+  let canvas_height = 100;
+
+  let html_pull_cord =
+  `
+    <input type="checkbox" id="pullcord_input">
+    <label for="pullcord_input" class="pull-string">
+      <canvas id="pullcord_canvas" width="${canvas_width}" height="${canvas_height}"></canvas>
+    </label>
+  `;
+
+  $(html_pull_cord).insertBefore("#passages");
+
+
+  /**
+   *  simulate a pull string thingy
+   *  not self contained, so only does one on the page, but that could be updated
+   */
+
+  // some settings
+  const BEAD_COUNT = 15;
+  const BEAD_SIZE = 2; // radius for beads
+  const LAST_BEAD_SIZE = 5; // radius for last bead
+  const BEAD_DIST = (canvas_height*0.90) / (BEAD_COUNT + 2); // how far apart beads should be. 400 is canvas size, so we're just dividing it
+  const INITIAL_X_MOMENTUM = -6; // x speed / second of bottom bead when the click happens
+  const GRAVITY = 9; // downward acceleration / second
+  const X_FRICTION = .01; // constant decrease in x acceleration / second
+
+  const MAX_SPEED_X = 4;
+  const MAX_SPEED_Y = MAX_SPEED_X;
+
+  const COL_A =  "#f2f2f2";
+  const COL_B =  "#f2f2f2";
+  //
+  const COL_C = "#f2f2f2"; // Gradient Bead ?
+  const COL_D = "#f2f2f2"; // Bead interior
+
+  const COL_BIG_1 = "#ccad00";
+  const COL_BIG_2 = "#ccad00";
+
+  const COL_E = "#f2f2f2"; // Upper thread color, outside of screen
+  const COL_F = "#f2f2f2"; // Thread color, between beads
+  const COL_G = "#f2f2f2"; //?
+
+  // const COL_A = "red" || "#4a5425";
+  // const COL_B = '#ccad00' || "#172023";
+  // const COL_C = "blue" || "#f4db97";
+  // const COL_D = "#f2f2f2" || "rgba(195, 229, 228, 0)"; // Bead interior
+
+  // helpers
+  function pythag (x1, y1, x2, y2) {
+    return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  }
+  function getAngle (x1, y1, x2, y2) {
+    return Math.atan((y2 - y1) / (x2 - x1));
+  }
+
+  // setup canvas
+  var canvas = pullcord_canvas;
+  var ctx = canvas.getContext('2d');
+  var running = true;
+  var lit = pullcord_input.checked;
+
+  // beads
+  class Bead {
+    constructor (initialX, initialY, size) {
+      this.x = initialX;
+      this.y = initialY;
+      this.speedX = 0;
+      this.speedY = 0;
+      this.size = size;
+      this.parent = {
+        x: canvas.width / 2,
+        y: 0
+      }
+    }
+
+    draw() {
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.y - this.size);
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+
+      var grd = ctx.createRadialGradient(this.x, this.y, this.size, this.x - this.size / 2, this.y - this.size / 4, this.size * .75);
+
+      if(this.size != LAST_BEAD_SIZE)
+      {
+          grd.addColorStop(1, COL_A);
+          grd.addColorStop(0, COL_B);
+      }
+      else
+      {
+        grd.addColorStop(1, COL_BIG_1);
+        grd.addColorStop(0, COL_BIG_1);
+      }
+
+        ctx.fillStyle = grd;
+      // }
+      ctx.fillStyle = grd;
+      ctx.fill();
+      var highlight = ctx.createRadialGradient(this.x, this.y, this.size, this.x + this.size / 3, this.y + this.size / 6, this.size);
+
+      if(this.size != LAST_BEAD_SIZE)
+      {
+          highlight.addColorStop(1, COL_C);
+          highlight.addColorStop(0, COL_D);
+      }
+      else
+      {
+        highlight.addColorStop(1, COL_BIG_2);
+        highlight.addColorStop(0, COL_BIG_2);
+      }
+
+      ctx.fillStyle = highlight;
+      ctx.fill();
+      ctx.restore();
+
+//
+
+    }
+
+    drawLine() {
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(this.parent.x, this.parent.y);
+      ctx.lineTo(this.x, this.y);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    setParent(parentBead) {
+      this.parent = parentBead;
+    }
+
+    setPosition(x,y)
+    {
+
+      if(x< 0 + LAST_BEAD_SIZE)
+      {
+        x = LAST_BEAD_SIZE;
+      }
+      if(x > canvas_width-LAST_BEAD_SIZE)
+      {
+        x = canvas_width-LAST_BEAD_SIZE;
+      }
+
+      this.x = x;
+      this.y = y;
+    }
+
+    addPosition(x,y)
+    {
+      this.setPosition(this.x+x, this.y+y);
+    }
+
+    setSpeed(x,y) {
+      // Set speed, but with a max amplitude
+      this.speedX = Math.min(Math.abs(x), MAX_SPEED_X)*Math.sign(x);
+      this.speedY = Math.min(Math.abs(y), MAX_SPEED_Y)*Math.sign(y);
+    }
+
+    addMomentum(x,y) {
+      this.setSpeed(this.speedX+x, this.speedY+y);
+    }
+
+    updateMomentum(deltaTime) {
+      // gravity
+      this.addMomentum(0,GRAVITY * deltaTime / 1000);
+      if (Math.abs(this.speedX < this.speedX - X_FRICTION * deltaTime / 1000))
+      {
+        this.speedX = 0;
+      }
+      else
+      {
+        if(this.speedX > 0)
+        {
+          this.addMomentum( - X_FRICTION * deltaTime / 1000, 0);
+        }
+        else
+        {
+          this.addMomentum( + X_FRICTION * deltaTime / 1000, 0);
+        }
+      }
+
+    }
+
+    move() {
+      this.addPosition(this.speedX, this.speedY);
+    }
+
+    positionBasedOnParent() {
+      // check distance from parent
+      if (this.parent) {
+        let d = pythag(this.x, this.y, this.parent.x, this.parent.y);
+        if (d > BEAD_DIST) {
+          let a = getAngle(this.x, this.y, this.parent.x, this.parent.y);
+          let dx = Math.cos(a) * (d - BEAD_DIST);
+          let dy = Math.sin(a) * (d - BEAD_DIST);
+          if (this.x > this.parent.x) {
+            dx *= -1;
+            dy *= -1;
+          }
+          //console.log(d, (a * 180 / Math.PI), dx, dy);
+
+          if (this.parent instanceof Bead) {
+
+            this.addPosition(dx / 2, dy / 2);
+            this.addMomentum(dx / 2, dy / 2);
+
+            this.parent.addPosition(-dx / 2, -dy / 2);
+            this.parent.addMomentum(-dx / 2, -dy / 2);
+          }
+          else {
+
+            this.addPosition(dx, dy);
+            this.addMomentum(dx, dy);
+          }
+        }
+      }
+    }
+  }
+
+
+  // Initialize cord and events
+  var beads = [];
+  for (let i = 0; i < BEAD_COUNT; i++) {
+    let is_last = i == BEAD_COUNT-1;
+    let size = is_last ? LAST_BEAD_SIZE : BEAD_SIZE;
+
+    beads.push( new Bead(canvas.width / 2, -10, size));
+    if (i > 0)
+      beads[i].setParent(beads[i - 1]);
+  }
+
+  // the loop for animation
+  var lastTime = new Date().getTime();
+  (function loop () {
+
+    let now = new Date().getTime();
+    let deltaTime = now - lastTime;
+    if (running) {
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (beads[0].parent.y !== 0) {
+        ctx.strokeStyle =  COL_E;
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2, 0);
+        ctx.lineTo(canvas.width / 2, beads[0].parent.y);
+        ctx.stroke();
+      }
+
+      ctx.strokeStyle = COL_F;
+      ctx.fillStyle = COL_G;
+      // split into 2 so we can double down on positioning constraints
+      beads.forEach(function (bead) {
+        //console.log(bead);
+        bead.updateMomentum(deltaTime);
+        bead.move();
+        bead.positionBasedOnParent();
+      });
+      for (let i = 0; i < 20; i++) {
+        beads.forEach(function (bead) {
+          bead.positionBasedOnParent();
+        });
+      }
+      beads.forEach(function (bead) {
+        bead.drawLine();
+      });
+      beads.forEach(function (bead) {
+        bead.draw();
+      });
+    }
+
+    lastTime = now;
+    requestAnimationFrame(loop);
+  })();
+
+  canvas.addEventListener('mouseup', function () {
+    beads[BEAD_COUNT - 1].addMomentum(INITIAL_X_MOMENTUM, 0);
+    // beads[0].addMomentum(0, GRAVITY * -4);
+    beads[0].parent.y = 0;
+    running = true;
+  });
+  canvas.addEventListener('mousedown', function () {
+    beads[0].parent.y = BEAD_DIST * 2;
+    running = true;
+  });
+
+  canvas.addEventListener('click', function (e) {
+    window["tutorial_board"].toggle_board();
+  });
+
+  // // turn off when document not visible
+  // document.addEventListener('visibilitychange', function () {
+  //   lastTime = new Date().getTime();
+  //   running = !document.hidden;
+  // });
+
+
+
+};
+
+init_pull_cord();

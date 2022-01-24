@@ -1,0 +1,34 @@
+:: Pull Cord Style [stylesheet]
+
+#pullcord_input {
+
+  left: -9999px;
+  visibility: hidden;
+}
+
+.pull-string {
+
+  position:fixed;
+  z-index:3;
+  top:0%;
+  transform: transform: translate(-10%,50%);
+  display: block;
+  text-align: left;
+  pointer-events:none;
+
+}
+
+#pullcord_canvas {
+  /* border: solid 1px white; */
+  outline: none;
+  position:relative;
+  left:-70%;
+  display:inline-block;
+  cursor: pointer;
+  pointer-events:auto;
+}
+
+#pullcord_canvas:hover
+{
+  filter: brightness(75%);
+}

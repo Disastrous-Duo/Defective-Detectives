@@ -17,6 +17,9 @@
 
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;
+
+  border: solid 4px white;
+
 }
 
 .conspiracy_board_down
