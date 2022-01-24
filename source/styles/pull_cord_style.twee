@@ -24,11 +24,17 @@
   position:relative;
   left:-70%;
   display:inline-block;
-  cursor: pointer;
   pointer-events:auto;
 }
 
-#pullcord_canvas:hover
+.pullcord_enabled:hover
+{
+  cursor: pointer;
+  filter: brightness(75%);
+}
+
+.pullcord_disabled
 {
   filter: brightness(75%);
+  cursor: not-allowed;
 }

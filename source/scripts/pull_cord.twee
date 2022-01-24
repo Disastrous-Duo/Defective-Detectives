@@ -2,7 +2,12 @@
 
 //Source: from https://codepen.io/jhereg00/pen/LNdXWq
 
-function init_pull_cord()
+window.pullcord = {};
+
+window.pullcord.is_pulsing = false;
+window.pullcord.enabled = true;
+
+window.pullcord.init =  function()
 { // self-containing function for scope purpose
 
 
@@ -10,7 +15,7 @@ function init_pull_cord()
   // Creates HTML elements for the cord
 
   let canvas_width = 50;
-  let canvas_height = 100;
+  let canvas_height = 120;
 
   let html_pull_cord =
   `
@@ -40,6 +45,9 @@ function init_pull_cord()
   const MAX_SPEED_X = 4;
   const MAX_SPEED_Y = MAX_SPEED_X;
 
+  const START_Y = -BEAD_SIZE*8;
+  const PULLED_Y = -BEAD_SIZE;
+
   const COL_A =  "#f2f2f2";
   const COL_B =  "#f2f2f2";
   //
@@ -48,6 +56,7 @@ function init_pull_cord()
 
   const COL_BIG_1 = "#ccad00";
   const COL_BIG_2 = "#ccad00";
+  const COL_BIG_DISABLED = "grey";
 
   const COL_E = "#f2f2f2"; // Upper thread color, outside of screen
   const COL_F = "#f2f2f2"; // Thread color, between beads
@@ -57,6 +66,16 @@ function init_pull_cord()
   // const COL_B = '#ccad00' || "#172023";
   // const COL_C = "blue" || "#f4db97";
   // const COL_D = "#f2f2f2" || "rgba(195, 229, 228, 0)"; // Bead interior
+
+
+
+  var pulsing_timer = 0;
+
+  const pulsing_frequency = 20;
+  const pulsing_width = 3;
+
+  const two_pi = Math.PI * 2;
+  const pulsing_radius = 8;
 
   // helpers
   function pythag (x1, y1, x2, y2) {
@@ -82,7 +101,7 @@ function init_pull_cord()
       this.size = size;
       this.parent = {
         x: canvas.width / 2,
-        y: 0
+        y: START_Y
       }
     }
 
@@ -90,7 +109,7 @@ function init_pull_cord()
       ctx.save();
       ctx.beginPath();
       ctx.moveTo(this.x, this.y - this.size);
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+      ctx.arc(this.x, this.y, this.size, 0, two_pi, false);
 
       var grd = ctx.createRadialGradient(this.x, this.y, this.size, this.x - this.size / 2, this.y - this.size / 4, this.size * .75);
 
@@ -101,8 +120,16 @@ function init_pull_cord()
       }
       else
       {
-        grd.addColorStop(1, COL_BIG_1);
-        grd.addColorStop(0, COL_BIG_1);
+        if(window.pullcord.enabled)
+        {
+          grd.addColorStop(1, COL_BIG_1);
+          grd.addColorStop(0, COL_BIG_1);
+        }
+        else
+        {
+          grd.addColorStop(1, COL_BIG_DISABLED);
+          grd.addColorStop(0, COL_BIG_DISABLED);
+        }
       }
 
         ctx.fillStyle = grd;
@@ -118,12 +145,44 @@ function init_pull_cord()
       }
       else
       {
-        highlight.addColorStop(1, COL_BIG_2);
-        highlight.addColorStop(0, COL_BIG_2);
+        if(window.pullcord.enabled)
+        {
+          highlight.addColorStop(1, COL_BIG_2);
+          highlight.addColorStop(0, COL_BIG_2);
+        }
+        else
+        {
+          highlight.addColorStop(1, COL_BIG_DISABLED);
+          highlight.addColorStop(0, COL_BIG_DISABLED);
+        }
       }
 
       ctx.fillStyle = highlight;
       ctx.fill();
+
+      if(window.pullcord.is_pulsing && this.size == LAST_BEAD_SIZE)
+      {
+
+        pulsing_timer++;
+        if(pulsing_timer/pulsing_frequency > two_pi)
+        {
+          pulsing_timer = 0;
+        }
+
+        ctx.strokeStyle = COL_BIG_1;
+        ctx.globalAlpha = (1+Math.cos(pulsing_timer/pulsing_frequency))/2;
+
+        var r = pulsing_radius*(1+Math.sin(pulsing_timer/pulsing_frequency))
+
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, r, 0, two_pi, false);
+
+        ctx.lineWidth = pulsing_width;
+        ctx.stroke();
+      }
+
+
+      ctx.closePath(); // Actually useful? idk
       ctx.restore();
 
 //
@@ -171,6 +230,7 @@ function init_pull_cord()
     }
 
     addMomentum(x,y) {
+
       this.setSpeed(this.speedX+x, this.speedY+y);
     }
 
@@ -238,7 +298,7 @@ function init_pull_cord()
     let is_last = i == BEAD_COUNT-1;
     let size = is_last ? LAST_BEAD_SIZE : BEAD_SIZE;
 
-    beads.push( new Bead(canvas.width / 2, -10, size));
+    beads.push( new Bead(canvas.width / 2, START_Y-20, size));
     if (i > 0)
       beads[i].setParent(beads[i - 1]);
   }
@@ -253,7 +313,7 @@ function init_pull_cord()
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      if (beads[0].parent.y !== 0) {
+      if (beads[0].parent.y !== START_Y) {
         ctx.strokeStyle =  COL_E;
         ctx.beginPath();
         ctx.moveTo(canvas.width / 2, 0);
@@ -288,19 +348,36 @@ function init_pull_cord()
   })();
 
   canvas.addEventListener('mouseup', function () {
+
+    if(!window.pullcord.enabled)return false;
+
+
     beads[BEAD_COUNT - 1].addMomentum(INITIAL_X_MOMENTUM, 0);
     // beads[0].addMomentum(0, GRAVITY * -4);
-    beads[0].parent.y = 0;
+    beads[0].parent.y = START_Y;
     running = true;
   });
   canvas.addEventListener('mousedown', function () {
-    beads[0].parent.y = BEAD_DIST * 2;
+
+    if(!window.pullcord.enabled)return false;
+
+    beads[0].parent.y = PULLED_Y;
     running = true;
   });
 
   canvas.addEventListener('click', function (e) {
+
+    if(!window.pullcord.enabled)return false;
+
     window["tutorial_board"].toggle_board();
   });
+
+
+  window.pullcord.enable(window.pullcord.enabled);
+
+
+  //FUN FACT: if you keep it commented, the chain will do a little bum each time you switch between tabs.
+  // I'll keep it.
 
   // // turn off when document not visible
   // document.addEventListener('visibilitychange', function () {
@@ -309,7 +386,23 @@ function init_pull_cord()
   // });
 
 
-
 };
 
-init_pull_cord();
+window.pullcord.enable = function(enabled)
+{
+  window.pullcord.enabled = enabled;
+
+  if(enabled)
+  {
+    $("#pullcord_canvas").addClass("pullcord_enabled");
+    $("#pullcord_canvas").removeClass("pullcord_disabled");
+  }
+  else
+  {
+    $("#pullcord_canvas").addClass("pullcord_disabled");
+    $("#pullcord_canvas").removeClass("pullcord_enabled");
+  }
+
+}
+
+window.pullcord.init();
