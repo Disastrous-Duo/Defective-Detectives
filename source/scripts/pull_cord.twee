@@ -376,7 +376,7 @@ window.pullcord.init =  function()
   window.pullcord.enable(window.pullcord.enabled);
 
 
-  //FUN FACT: if you keep it commented, the chain will do a little bum each time you switch between tabs.
+  //FUN FACT: if you keep it commented, the chain will do a little bump each time you switch between tabs.
   // I'll keep it.
 
   // // turn off when document not visible

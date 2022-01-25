@@ -2,7 +2,7 @@
 
 // /!\ will be executed before the template fully loads
 
-document.title = "CANNELÉ & NOMNOM - DEFECTIVE DETECTIVES";
+document.title = "CANNELÉ & NOMNOM - DEFECTIVE AGENCY";
 
 // Preload images
   var media_prefix = "./source/media/";

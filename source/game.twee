@@ -6,7 +6,7 @@
 
 
 :: StorySubtitle {"position":"392,432","size":"100,100"}
-~ DEFECTIVE DETECTIVES ~
+~ DEFECTIVE AGENCY ~
 
 
 :: StoryData
@@ -43,9 +43,10 @@
 ::@include template_base.twee
 ::@include styles/magic_choices.twee
 
+::@include scripts/font_face_observer.twee
 ::@include scripts/script_loader.twee
-
 ::@include scripts/shortcut.min.twee
+
 ::@include scripts/keyboard.twee
 ::@include scripts/magic_effects.twee
 ::@include scripts/scoreboard.twee

@@ -143,7 +143,7 @@ var h = Math.round(parent.offsetHeight/2);
       left: left+settings.notePadding/2,
       top: top+settings.notePadding/2,
      width:settings.noteWidth-settings.notePadding/2,
-     fontFamily:"Caveat",
+     fontFamily:"Caveat-Regular",
      fontSize: fontSize,
      angle:3,
      fill: '#000000'
@@ -182,7 +182,7 @@ var h = Math.round(parent.offsetHeight/2);
      top: top+settings.noteHeight/2+settings.pinRadius-fontSize-2,
      width:settings.noteWidth-settings.notePadding/2,
      textAlign:"center",
-     fontFamily:"Caveat",
+     fontFamily:"Caveat-Regular",
      fontSize: fontSize,
      fill: '#000000'
     });

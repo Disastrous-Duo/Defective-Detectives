@@ -3,9 +3,7 @@
 /*
 	External script loading module.
 */
-(function () {
-
-	window.requestScriptLoad = function (options) {
+window.requestScriptLoad = function (options) {
 		if (options == null || typeof options !== 'object' || !options.src) {
 			return;
 		}
@@ -29,25 +27,34 @@
 
 		opts.parent.appendChild(script);
 	};
-})();
+
+function loadFont(font, callback) {
+var myfont = new FontFaceObserver(font)
+myfont.load()
+	.then(callback).catch(function(e) {
+		console.log('font loading failed ' + font);
+		console.log(e);
+	});
+}
+
 
 /*
 	Load your external scripts here.
 */
 // Example of loading `moment.min.js` locally.
+/*
 requestScriptLoad({
 	id     : 'fabric-js',
 	src    : './source/scripts/fabric.js.txt',
 	onload : function (evt) {
 
-		// /!\ those are loaded before the handwritten font
-		// Not the right font on first start-up ==> need to fix that
-
-		let boards_id = ["conspiracy_board","tutorial_board"];
-		boards_id.map(id => window[id].init_board())
+		// will be called when the script is loaded
 
 	}
 });
+*/
+
+
 // Example of loading `moment.min.js` from a CDN.
 // requestScriptLoad({
 // 	id     : 'lib-moment-js',
@@ -56,3 +63,24 @@ requestScriptLoad({
 // 		/* library is loaded, do something */
 // 	}
 // });
+
+
+
+requestScriptLoad({
+	id     : 'fabric-js',
+	src    : './source/scripts/fabric.js.txt',
+	onload : function (evt) {
+
+		// Load the handwritten font on notes before laoding boards
+		loadFont("Caveat-Regular", load_boards);
+
+
+	}
+});
+
+
+function load_boards()
+{
+	let boards_id = ["conspiracy_board","tutorial_board"];
+	boards_id.map(id => window[id].init_board())
+}

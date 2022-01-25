@@ -1,6 +1,6 @@
 :: Conspiracy Board Style [stylesheet]
 @font-face {
-  font-family: "Caveat";
+  font-family: "Caveat-Regular";
   src: url("./fonts/Caveat-Regular.ttf") format("truetype");
 }
 
@@ -19,6 +19,7 @@
   animation-fill-mode: forwards;
 
   border: solid 4px white;
+  font-famiy:"Caveat-Regular";
 
 }
 
