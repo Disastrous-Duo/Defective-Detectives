@@ -22,6 +22,13 @@ body, tw-story
   color: #d2d3cd;
   height: 100%;
   overflow-x:hidden; /*Added for C&N -- remove if it breaks things too much*/
+
+  /*Added so you can't select text in an ugly way*/
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+
 }
 
 tw-hook
@@ -121,6 +128,13 @@ a.macro-linkreplace {
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: -1.5em;
   display: block;
+}
+
+a.macro-linkreplace.disabled_continue {
+  opacity:0.2;
+  filter:grayscale(70%);
+  pointer-events: none;
+  cursor:not-allowed;
 }
 
 

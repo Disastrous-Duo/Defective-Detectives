@@ -441,6 +441,7 @@ window.pullcord.setTutorialPhase = function(phase)
     case 2:
     window.pullcord.enable(true);
     window.pullcord.is_pulsing = true;
+    $("#tutorial_board_cvs").addClass("tutorial_board_done");
     break;
 
     case 3:

@@ -47,7 +47,12 @@
   100% { top:-100%; }
 }
 
-#cvs_conspiracy_board
+/* #cvs_conspiracy_board
 {
   border:solid 5px black;
+} */
+
+.tutorial_board_done
+{
+  
 }

@@ -38,6 +38,9 @@ window.randomStr = function(length, alphabet)
 }
 
 
+// Could be replaced by an interval linked to each displayed text, and destroyed
+// when the text disappears -- but ti's pretty okay for now
+
 window.updateForesightTimer = function() // Update a timer countdown, mainly used in foresight
 {
 	 var all_ftimers = document.getElementsByClassName("Tickdown");
@@ -53,6 +56,7 @@ window.replaceAt = function(str, index, replacement) {
     return str.substr(0, index) + replacement + str.substr(index + replacement.length);
 }
 
+// Unused effect
 window.updatePrecogTimer = function()
 {
 	 var all_decoders = document.getElementsByClassName("Precog");
@@ -180,11 +184,22 @@ window.clickOnNote = function(e,link)
   note.style.left = startX+"px";
 
   var t = 0;
-  setInterval(function()
+  var position_interval = setInterval(function()
   {
+
     t += interval/duration;
     var scaled_delta_y = window.easeInBack(t)*delta_y;
     note.style.top = (startY+scaled_delta_y)+"px";
+
+    //Self-destructs when outside
+
+    if(parseInt(note.style.top) < -100)
+    {
+      clearInterval(position_interval);
+      $(note).remove(); // Not sure it's actually removed but the important part is to clear the timer interval
+    }
+
+
   },interval);
 
   $(link).append(note);
@@ -207,4 +222,15 @@ window.easeInBack = function(t) // t from 0 to 1
     const c1 = 1.70158;
     const c3 = c1 + 1;
     return c3 * t * t * t - c1 * t * t;
+  }
+
+
+  window.hideContinue = function()
+  {
+    $("#ContinueBtn").parent().addClass("disabled_continue");
+  }
+
+  window.reshowContinue = function()
+  {
+    $("#ContinueBtn").parent().removeClass("disabled_continue");
   }
