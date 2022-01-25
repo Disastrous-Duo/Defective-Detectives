@@ -754,8 +754,7 @@ var h = Math.round(parent.offsetHeight/2);
     if(unique_hints.join("").indexOf("12345") != -1)
     {
       // all hints are connected!
-      window.pullcord.enable(true);
-      window.pullcord.is_pulsing = true;
+      window.pullcord.setTutorialPhase(2);
     }
 
   }

@@ -284,7 +284,7 @@
 <<AddParagraph "AGAIN?!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "I warned you it was @@color:blue;unstable@@...">>
+<<AddParagraph "I warned you it was @@.foresight;unstable@@...">>
 
 <<BlankSpeaker>>
 <<AddParagraph "They both sigh and start to crouch and pick up the scattered documents.">>
@@ -297,11 +297,11 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They continue rummaging through the mess of documents.">>
-/*TODO: if it's blue, the link needs to be blue too!*/
-<<AddParagraph "You see a blue paper sticking out from under the coffee table.">>
+/*SUGGESTION: "colored" instead of "blue", because the links are not blue. I could make this one blue, but then, I wouldn't be sure that players get that the blue and yellow links are the same thing. Also, I don't wont to put blue text other than Nomnom's gift -- it would be confusing.*/
+<<AddParagraph "You see a colored paper sticking out from under the coffee table.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph `"Are you looking for this "+note("post-it",{txt:"How does this thing work?", type:"question"})+"?"`>>
+<<AddParagraph `"Are you looking for this "+note("post-it",{type:"tuto-board-trigger"})+"?"`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Perfect! That's the one!">>

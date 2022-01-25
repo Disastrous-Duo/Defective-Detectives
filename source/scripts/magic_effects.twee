@@ -135,15 +135,23 @@ window.slot = function(right_answer, duration)
 
 window.note = function(displayed_text, note_data)
 {
-  // checking if the note is already in the board
-  var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
 
-  if(notes_txt.indexOf(displayed_text) > -1)
+  if(note_data.type == "tuto-board-trigger") // special note for the tuto trigger
   {
-    return displayed_text;
+    return `<span class="clickable_note tuto_clickable_note" data-note='${JSON.stringify(note_data)}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`
   }
+  else
+  {
+    // checking if the note is already in the board
+    var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
 
-	return `<span class="clickable_note" data-note='${JSON.stringify(note_data)}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+    if(notes_txt.indexOf(displayed_text) > -1)
+    {
+      return displayed_text;
+    }
+
+    return `<span class="clickable_note" data-note='${JSON.stringify(note_data)}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+  }
 }
 
 window.clickOnNote = function(e,link)
@@ -181,7 +189,17 @@ window.clickOnNote = function(e,link)
 
   $(link).append(note);
 
-  window['conspiracy_board'].add_note(JSON.parse(link.dataset.note));
+  var note_data = JSON.parse(link.dataset.note);
+
+  if(note_data.type == "tuto-board-trigger")
+  {
+    window.pullcord.setTutorialPhase(0);
+    return true;  // Do not add a post-it for the tuto
+  }
+
+  window['conspiracy_board'].add_note(note_data);
+
+
 }
 
 window.easeInBack = function(t) // t from 0 to 1

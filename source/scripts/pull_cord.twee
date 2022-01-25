@@ -6,6 +6,7 @@ window.pullcord = {};
 
 window.pullcord.is_pulsing = false;
 window.pullcord.enabled = true;
+window.pullcord.tutorial_phase = 0;
 
 window.pullcord.init =  function()
 { // self-containing function for scope purpose
@@ -369,7 +370,22 @@ window.pullcord.init =  function()
 
     if(!window.pullcord.enabled)return false;
 
-    window["tutorial_board"].toggle_board();
+    switch(window.pullcord.tutorial_phase)
+    {
+      case 0:
+        window["tutorial_board"].toggle_board();
+        window.pullcord.setTutorialPhase(1);
+      break;
+      case 2:
+        window["tutorial_board"].toggle_board();
+        window.pullcord.setTutorialPhase(3);
+      break;
+
+      case 3:
+        window["conspiracy_board"].toggle_board();
+      break;
+    }
+
   });
 
 
@@ -405,4 +421,33 @@ window.pullcord.enable = function(enabled)
 
 }
 
-window.pullcord.init();
+window.pullcord.setTutorialPhase = function(phase)
+{
+  window.pullcord.tutorial_phase = phase;
+
+  switch(phase)
+  {
+    case 0:
+    window.pullcord.enable(true);
+    window.pullcord.is_pulsing = true;
+    window.pullcord.init();
+    break;
+
+    case 1:
+    window.pullcord.enable(false);
+    window.pullcord.is_pulsing = false;
+    break;
+
+    case 2:
+    window.pullcord.enable(true);
+    window.pullcord.is_pulsing = true;
+    break;
+
+    case 3:
+    window.pullcord.enable(true);
+    window.pullcord.is_pulsing = false;
+    break;
+
+  }
+
+};

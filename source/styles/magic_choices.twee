@@ -366,5 +366,9 @@ h2 /*For chapter titles and Duels*/
 
 @keyframes sticky_note_rotate {
   100%
-  { transform:rotate(360deg);}
+  {
+    transform:rotate(360deg);
+    webkit-transform:rotate(360deg);
+
+  }
 }
