@@ -224,13 +224,11 @@ window.easeInBack = function(t) // t from 0 to 1
     return c3 * t * t * t - c1 * t * t;
   }
 
-
-  window.hideContinue = function()
-  {
-    $("#ContinueBtn").parent().addClass("disabled_continue");
-  }
-
-  window.reshowContinue = function()
-  {
-    $("#ContinueBtn").parent().removeClass("disabled_continue");
-  }
+// When the Continue button has been disabled via a scene
+// using the DisableContinueButton macro
+// can be re-enabled, through external JS
+window.renableContinueButton = function()
+{
+  $("#FakeContinueBtn").remove();
+  $("#ContinueBtn").removeClass("hideContinueBtn");
+}

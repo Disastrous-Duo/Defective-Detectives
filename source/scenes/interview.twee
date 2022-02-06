@@ -311,6 +311,7 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "And stick it right back on the board by tugging the handle right on top of the screen.">>
 
+<<DisableContinueButton>>
 /* tuto */
 
 <<SetSpeaker "???">>

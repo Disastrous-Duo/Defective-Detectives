@@ -104,21 +104,35 @@ $args[0] -
 :: AddOptionVariables [widget] {"position":"573,265","size":"100,100"}
 \<<widget "AddOptionVariables">>\<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2]})>>\<</widget>>\
 
+/*
+  do a check on content of paragraph (or even next paragraph)
+  if matches the special disable command => disable the continue button
+*/
+
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
 <<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>\
 <<run $paragraphs.deleteAt(0)>>\
 <span class="paragraph"><<print _paragraph>></span>
-<<if $paragraphs.length > 0>>
-<<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+<<if $paragraphs.length > 0>>\
+  <<if $paragraphs[0].indexOf("$DisableContinueButton$") != -1>>\
+  <<run $paragraphs.deleteAt(0)>>
+    <<link "@@#FakeContinueBtn;CONTINUE ➤@@">><</link>>\
+    <<linkreplace "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+  <<else>>
+    <<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+  <</if>>
+
 <<else>>\
-<<include DisplayOptions>>
+  <<include DisplayOptions>>
 <</if>>
-<<timed 0.5s>><<script>>
-var paragraphs = document.getElementsByClassName('paragraph');
-if (paragraphs.length > 1) {
-	paragraphs[paragraphs.length-2].classList.add("dim");
-}
-<</script>><</timed>>\
+<<timed 0.5s>>
+  <<script>>
+    var displayed_paragraphs = document.getElementsByClassName('paragraph');
+    if (displayed_paragraphs.length > 1) {
+    	displayed_paragraphs[displayed_paragraphs.length-2].classList.add("dim");
+    }
+  <</script>>
+<</timed>>\
 <</widget>>
 
 
@@ -139,6 +153,13 @@ if (paragraphs.length > 1) {
 <</if>>
 <<set _para to (_para + $currentspeaker + $args[0])>>
 <<run $paragraphs.push(_para)>>
+<</widget>>
+<</nobr>>
+
+:: DisableContinueButton [widget] {"position":"546,368","size":"100,100"}
+<<nobr>>
+<<widget "DisableContinueButton">>
+  <<AddParagraph "$DisableContinueButton$">>
 <</widget>>
 <</nobr>>
 

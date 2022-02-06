@@ -447,6 +447,7 @@ window.pullcord.setTutorialPhase = function(phase)
     case 3:
     window.pullcord.enable(true);
     window.pullcord.is_pulsing = false;
+    window.renableContinueButton();
     break;
 
   }

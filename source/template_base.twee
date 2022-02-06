@@ -119,7 +119,19 @@ span.continueblock {
   display: none;
 }
 
-a.macro-linkreplace {
+/* a.macro-linkreplace {
+  background-color: #90280f;
+  color: white;
+  padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: -1.5em;
+  display: block;
+} */
+
+/*TEESSST*/
+#ContinueBtn {
   background-color: #90280f;
   color: white;
   padding: 15px;
@@ -130,13 +142,25 @@ a.macro-linkreplace {
   display: block;
 }
 
-a.macro-linkreplace.disabled_continue {
+
+#FakeContinueBtn {
+  background-color: #90280f;
+  color: white;
+  padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: -1.5em;
+  display: block;
   opacity:0.2;
   filter:grayscale(70%);
-  pointer-events: none;
-  cursor:not-allowed;
+  cursor:auto;
 }
 
+#ContinueBtn.hideContinueBtn
+{
+  display:none;
+}
 
 .green {
   color: #98b48b;
