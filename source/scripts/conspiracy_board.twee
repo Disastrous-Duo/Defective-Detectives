@@ -55,18 +55,22 @@ window[this_board].toggle_board = function()
 
 // Temporary data for debug purposes
 
-window[this_board].notesList = [
-  {txt:"Who is the client?", x:360, y:300, type:"question"},
-  {src:"note_nom.png", txt:"Nomnom", x:460, y:300, type:"picture"},
-  {src:"note_can.png", txt:"Cannelé",x:460, y:300, type:"picture"}
+// sizes for the canvas that is about to be resized
+var parent = document.getElementById(`${this_board+"_overlay"}`);
+var w = Math.round(parent.offsetWidth/2);
+var h = Math.round(parent.offsetHeight/2);
 
-];
+  window[this_board].notesList = [
+  ];
 
   window[this_board].linesList = [
     //{start:1,end:2}
   ];
 
-  window[this_board].created_pins = []; // will be filled, and store line elements
+  // Will be filled with created elements, useful for visually sorting them
+  window[this_board].created_pins = [];
+  window[this_board].created_notes = [];
+  window[this_board].created_lines = [];
   window[this_board].reticule = {};
 
   window[this_board].init_board = function()
@@ -87,16 +91,23 @@ window[this_board].notesList = [
   settings.maxDezoom = 0.5;
   settings.noteWidth = 120;
   settings.noteHeight = 120;
-  settings.notePadding = 6;
+  settings.notePadding = 12;
   settings.pinRadius = 12;
   settings.fontSize = 18;
   settings.maxPanX = canvas.getWidth()/settings.maxDezoom;
   settings.maxPanY = canvas.getHeight()/settings.maxDezoom;
+  settings.gridspacing = 150;
+  settings.gridOffset = 30;
   settings.noteColors = {
     "hint":"#FEFF9C",
     "question":"#6DCFF6",
     "picture":"white",
+    "instruction":"white",
+    "front-hint":"#FEFF9C",
   };
+
+  settings.lineColor = "red";
+  settings.gridColor = "#281918";
 
 
   /*
@@ -114,15 +125,19 @@ window[this_board].notesList = [
       width:settings.noteWidth,
       height:settings.noteHeight,
       fill: settings.noteColors[type],
-      angle:3,
+      angle:6,
+      stroke:"black",
+      strokeWidth: 1,
     });
 
     var textObject = new fabric.Textbox(text, {
-      left: left+settings.notePadding/2,
-      top: top+settings.notePadding/2,
+      left: left,
+      top: top,
      width:settings.noteWidth-settings.notePadding/2,
      fontFamily:"Caveat-Regular",
      fontSize: fontSize,
+     textAlign:"center",
+     angle:3,
      fill: '#000000'
     });
 
@@ -130,6 +145,7 @@ window[this_board].notesList = [
     {
       external_id:external_id,
       object_type:"note",
+      note_type:type,
       left: left,
       top: top,
       width:settings.noteWidth,
@@ -199,10 +215,10 @@ window[this_board].notesList = [
       start_pin_id:start_pin_id,
       end_pin_id:end_pin_id,
       object_type:'line',
-      fill: 'red',
-      stroke: 'red',
+      fill: settings.lineColor,
+      stroke: settings.lineColor,
       strokeWidth: 4,
-      normalColor:'red',
+      normalColor:settings.lineColor,
       darkColor:'#680000',
       perPixelTargetFind:true,
       targetFindTolerance:10,
@@ -273,6 +289,24 @@ window[this_board].notesList = [
     return pin;
   }
 
+  function makeGridline(start_X, start_Y, end_X, end_Y)
+  {
+
+    var line = new fabric.Line([start_X, start_Y, end_X, end_Y], {
+      object_type:'gridline',
+      fill: settings.gridColor,
+      stroke: settings.gridColor,
+      strokeDashArray: [5, 10],
+      strokeWidth: 2,
+      selectable: false,
+      evented: false
+    });
+
+      line.hasControls = line.hasBorders = false;
+
+      return line;
+  }
+
 
   window[this_board].add_note = function(note_data)
   {
@@ -312,8 +346,9 @@ window[this_board].notesList = [
       var note = makeNote(i, note_data.txt, note_data.x, note_data.y, pin, note_data.type, note_data.fontSize);
     }
 
-
+    window[this_board].created_notes.push(note);
     window[this_board].created_pins.push(pin);
+
 
     canvas.add(note);
     canvas.add(pin);
@@ -324,7 +359,7 @@ window[this_board].notesList = [
 
       var line = new fabric.Line([0,0,0,0], {
         object_type:'line',
-        stroke: 'red',
+        stroke: settings.lineColor,
         strokeDashArray: [5, 5],
         strokeWidth: 5,
         selectable: false,
@@ -338,7 +373,7 @@ window[this_board].notesList = [
           object_type:'visor',
           strokeWidth: 5,
           radius: 12,
-          stroke: 'red',
+          stroke: settings.lineColor,
           fill:'transparent',
           selectable: false,
           evented:false,
@@ -394,18 +429,19 @@ window[this_board].notesList = [
   }
 
 
-    /// Creates temporary rect
-    // var rect = new fabric.Rect({
-    //     left: canvas.getWidth()/2,
-    //     top: canvas.getHeight()/2,
-    //     width:canvas.getWidth(),
-    //     height:canvas.getHeight(),
-    //     stroke:"red",
-    //     strokeWidth:4,
-    //     selectable:false,
-    //     evented:false
-    //   });
-    //   canvas.add(rect);
+    //Create Gridlines
+
+    for(var y = 0; y < settings.maxPanY/settings.gridspacing; y++)
+    {
+      var gridline = makeGridline(0,y*settings.gridspacing+settings.gridOffset, settings.maxPanX, y*settings.gridspacing+settings.gridOffset);
+      canvas.add(gridline);
+    }
+
+    for(var x = 0; x < settings.maxPanX/settings.gridspacing; x++)
+    {
+      var gridline = makeGridline(x*settings.gridspacing+settings.gridOffset,0, x*settings.gridspacing+settings.gridOffset,  settings.maxPanY);
+      canvas.add(gridline);
+    }
 
     // Create notes, remember their pins, add them
     for(var i = 0; i < window[this_board].notesList.length; i++)
@@ -428,6 +464,7 @@ window[this_board].notesList = [
       var end_pin_id = window[this_board].linesList[i].end;
       var line = makeLine(start_pin_id, end_pin_id);
 
+      window[this_board].created_lines.push(line);
       canvas.add(line);
     }
 
@@ -435,14 +472,27 @@ window[this_board].notesList = [
 
     window[this_board].reticule = makeReticule();
     var reticule = window[this_board].reticule;
-    //reticule.startFromPin(created_pins[2]);
-    //reticule.show(reticule);
     window[this_board].reticule.addToCanvas(canvas, window[this_board].reticule);
 
+    resortAllElements(canvas);
 
   canvas.on('object:moving', function(e)
   {
     var p = e.target;
+
+    if(p.left < p.width || p.left > settings.maxPanX - p.width)
+    {
+      p.left = Math.min(Math.max(p.width, p.left), settings.maxPanX - p.width);
+      p.setCoords();
+    }
+
+    if(p.top < p.height || p.top > settings.maxPanY - p.height)
+    {
+      p.top = Math.min(Math.max(p.height, p.top), settings.maxPanY - p.height);
+      p.setCoords();
+    }
+
+
     if(p && p.object_type == 'note')
     {
       p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
@@ -512,9 +562,13 @@ window[this_board].notesList = [
           window[this_board].linesList.push({start:start_pin_id, end:end_pin_id});
 
           var line = makeLine(start_pin_id, end_pin_id);
+          window[this_board].created_lines.push(line);
           canvas.add(line);
           window[this_board].reticule.hide(reticule);
           resortAllElements(canvas);
+
+          madeLineEvent(start_pin_id, end_pin_id);
+
         }
 
       }
@@ -581,15 +635,30 @@ window[this_board].notesList = [
   // Sort z index: keep the one for notes and lines, then reticule line, then pins, then reticule visor
   function resortAllElements(canvas)
   {
-    canvas.bringToFront(window[this_board].reticule.line);
-    for(var j in window[this_board].created_pins)
-    {
-      canvas.bringToFront(window[this_board].created_pins[j]);
-    }
-    canvas.bringToFront(window[this_board].reticule.visor);
-  }
 
-  canvas.renderAll();
+      canvas.bringToFront(window[this_board].reticule.line);
+      for(var j in window[this_board].created_pins)
+      {
+        canvas.bringToFront(window[this_board].created_pins[j]);
+      }
+
+
+      // Bring front notes to front
+      for(var j in window[this_board].created_notes)
+      {
+        var note = window[this_board].created_notes[j];
+        if(note.note_type.indexOf("front") != -1)
+        {
+          canvas.bringToFront(note);
+          canvas.bringToFront(note.pin);
+        }
+      }
+
+
+      canvas.bringToFront(window[this_board].reticule.visor);
+
+  }
+    canvas.renderAll();
 
 
 
@@ -666,6 +735,13 @@ window[this_board].notesList = [
       this.setViewportTransform(this.viewportTransform);
       this.isDragging = false;
     });
+
+
+  function madeLineEvent(start, end)
+  {
+    // Empty event for now
+
+  }
 
   };
 

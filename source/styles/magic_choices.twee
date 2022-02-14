@@ -7,6 +7,7 @@
   --client-color:gold;
   --text-color:#d2d3cd;
   --github-color:#6A2D95;
+  --post-it:#FEFF9C;
 }
 
 
@@ -329,7 +330,7 @@ h2 /*For chapter titles and Duels*/
 .clickable_note
 {
   cursor:pointer;
-  color:#FEFF9C;
+  color:var(--post-it);
   font-weight: bold;
   text-decoration:underline;
 }
@@ -346,7 +347,7 @@ h2 /*For chapter titles and Duels*/
   z-index:-1;
   width:30px;
   height:30px;
-  background-color:#FEFF9C;
+  background-color:var(--post-it);
   animation:sticky_note_blur 1s, sticky_note_rotate 1s linear 1s;
   -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
   animation-fill-mode: forwards;

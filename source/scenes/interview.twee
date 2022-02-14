@@ -858,8 +858,8 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"Who are //you//", type:"question"})`>>
-<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"What's your //Gift//", type:"question"})`>>
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"Who are //you//?", type:"question"})`>>
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"What is your //Gift//?", type:"question"})`>>
 <<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"What //happened// to you?", type:"question"})`>>
 
 <<SetSpeaker "Cannelé">>
@@ -1156,7 +1156,6 @@
 <<AddOption "«Errr if I really don't have a choice I'll just choose Muffin»" "Muffin">>
 <<AddOption "«I could pick anything, literally anything but those two... words»" "Naming2">>
 
-
 :: Naming2 [nobr]
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "PICK ONE">>
@@ -1178,7 +1177,27 @@
 
 <<AddOption "«I'll go with Yasyas»" "Yasyas">>
 <<AddOption "«Muffin it is, I guess...»" "Muffin">>
+<<AddOption "«Could I have a temporary pseudonym instead?»  (Choose a custom name.)" "CustomName">>
 
+
+:: CustomName [nobr]
+What about...
+<<WordInput 5 "custom_name"  "CustomName_3">>
+
+
+:: CustomName_2 [nobr]
+What about...
+<<textbox "$custom_name" "_ _ _ _ _" "CustomName_3" autofocus>>
+<<AddOption "(Confirm.)" "CustomName_3">>
+
+:: CustomName_3 [nobr]
+<<SetSpeaker "Cannelé">>
+<<AddParagraph `'mdr $custom_name'`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "lol nope">>
+
+<<AddOption "«Fuck them.»" >>
 
 :: Yasyas [nobr]
 <<SetSpeaker "Faraway Voice">>

@@ -142,15 +142,16 @@ window.note = function(displayed_text, note_data)
 
   if(note_data.type == "tuto-board-trigger") // special note for the tuto trigger
   {
-    return `<span class="clickable_note tuto_clickable_note" data-note='${JSON.stringify(note_data)}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`
+    return `<span class="clickable_note tuto_clickable_note" data-note="${JSON.stringify(note_data)}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
   }
   else
   {
     // checking if the note is already in the board
     var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
 
-    if(notes_txt.indexOf(displayed_text) > -1)
+    if(notes_txt.indexOf(note_data.txt) > -1)
     {
+      alert("COUCOU")
       return displayed_text;
     }
 

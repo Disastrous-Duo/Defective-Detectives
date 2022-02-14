@@ -61,7 +61,7 @@ var h = Math.round(parent.offsetHeight/2);
 
   window[this_board].notesList = [
     {txt:"**MYSTERY**\nHow to use the conspiracy board?", x:w, y:h, type:"question"},
-    {txt:"HINT 1/5\n\nThis one is done", x:w/2-10, y:h*2/3+10, type:"hint"},
+    {txt:"HINT 1/5\n\n\n", x:w/2-10, y:h*2/3+10, type:"hint"},
     {txt:"HINT 2/5\nClick a pin, then click another to connect them", x:w*3/2, y:h*2/3, type:"hint"},
 
     {txt:"HINT 3/5\nMove notes by dragging them", x:  w/2+10 , y: h*6/4-10   +10, type:"front-hint"},
@@ -100,7 +100,7 @@ var h = Math.round(parent.offsetHeight/2);
   settings.maxDezoom = 0.5;
   settings.noteWidth = 120;
   settings.noteHeight = 120;
-  settings.notePadding = 6;
+  settings.notePadding = 10;
   settings.pinRadius = 12;
   settings.fontSize = 18;
   settings.maxPanX = canvas.getWidth()/settings.maxDezoom;
@@ -140,11 +140,12 @@ var h = Math.round(parent.offsetHeight/2);
     });
 
     var textObject = new fabric.Textbox(text, {
-      left: left+settings.notePadding/2,
-      top: top+settings.notePadding/2,
+      left: left,
+      top: top,
      width:settings.noteWidth-settings.notePadding/2,
      fontFamily:"Caveat-Regular",
      fontSize: fontSize,
+     textAlign:"center",
      angle:3,
      fill: '#000000'
     });
@@ -477,6 +478,7 @@ var h = Math.round(parent.offsetHeight/2);
     }
 
     //Add reticule
+
     window[this_board].reticule = makeReticule();
     var reticule = window[this_board].reticule;
     window[this_board].reticule.addToCanvas(canvas, window[this_board].reticule);
