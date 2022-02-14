@@ -246,8 +246,7 @@
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.">>
 
 <<SetSpeaker "Nomnom">>
-/*TODO: add Nomnom's magic effect, as a prophecy that will happen*/
-<<AddParagraph "Unstable. That board is @@color:blue;unstable@@. So is Cannelé, beware.">>
+<<AddParagraph "Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.">>
 
 <<BlankSpeaker>>
 
@@ -297,7 +296,6 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They continue rummaging through the mess of documents.">>
-/*SUGGESTION: "colored" instead of "blue", because the links are not blue. I could make this one blue, but then, I wouldn't be sure that players get that the blue and yellow links are the same thing. Also, I don't wont to put blue text other than Nomnom's gift -- it would be confusing.*/
 <<AddParagraph "You see a colored paper sticking out from under the coffee table.">>
 
 
@@ -555,7 +553,7 @@
 <<AddParagraph "They bring the cups over, ignoring Cannelé, and place one on the table.">>
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
-<<AddParagraph "You think you see the surface of the liquid @@color:blue;glow@@ blue for a second.">>
+<<AddParagraph "You think you see the surface of the liquid @@.foresight;glow@@ blue for a second.">>
 <<AddParagraph "Then; it's gone.">>
 
 
@@ -587,16 +585,12 @@
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<<<<<< HEAD
-<<AddParagraph  `"@@.precog;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
-=======
 <<if $firstgiftcannele is false>>
-  <<AddParagraph  "From the corner of your eyes, you see @@color:red;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "From the corner of your eyes, you see @@.precog;something@@ moving on Cannelé's arm." >>
   <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
   <<set $firstgiftcannele to true>>
 <</if>>
-<<AddParagraph  `"@@.precog_color;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
->>>>>>> dev-lo
+<<AddParagraph  `"@@.precog;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
 
 
 <<SetSpeaker "Cannelé">>
@@ -710,18 +704,13 @@
 <<AddParagraph "You're such a loser.">>
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
 
-/*tout en couleur + lumière*/
 <<BlankSpeaker>>
-<<<<<<< HEAD
-<<AddParagraph  `"@@.precog;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
-=======
 <<if $firstgiftcannele is false>>
-  <<AddParagraph  "From the corner of your eyes, you see @@color:red;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "From the corner of your eyes, you see @@precog;something@@ moving on Cannelé's arm." >>
   <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
   <<set $firstgiftcannele to true>>
 <</if>>
-<<AddParagraph  `"@@.precog_color;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
->>>>>>> dev-lo
+<<AddParagraph  `"@@.precog;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
@@ -916,18 +905,20 @@
 <<AddParagraph "Any name? Or an alias?">>
 
 <<AddOption "«Not really?»" "noName">>
-<<AddOption "«I can come up with one!» (Enter Name.)" "enterName">>
+<<AddOption "«I can come up with one!»" "enterName">>
 <<AddOption "«If I say no, what's gonna happen?»" "ifNoName">>
 
 
 :: enterName[nobr]
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Please. We're professionals.">>
-<<AddParagraph "Let us do our job."">>
+<<AddParagraph "Let us do our job.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//So I have no say in...//">>
 <<AddParagraph "//Choosing my own name.//">>
+<<AddParagraph "//Why did they even ask me then...//">>
+
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé stretches their neck and cracks their knuckles.">>
@@ -1052,7 +1043,7 @@
 <<AddOption "//I am getting concerned ...//" "interviewA-HA">>
 
 
-:: interviewDeepThought [nobr]
+:: noName [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>

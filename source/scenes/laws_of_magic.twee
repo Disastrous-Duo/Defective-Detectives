@@ -320,11 +320,6 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Because when you say it, you end up in this situation.">>
 
-/*SUGGESTION: Peut-être pas garder le mot "psychotic".
-J'avais vu un guide d'écriture qui disait de pas trop confondre le vocabulaire médical
-avec celui pour décrire des comportements négatifs -- et psychotic, c'est des vraies maladies.
-J'arrive pas à le retrouver mais j'ai cet article à la place: https://themighty.com/2020/12/stop-misusing-word-psychotic-dangerous/
-*/
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Sounding like the perfect mix between ridiculous, unhinged and a little pathetic.">>
 
@@ -343,12 +338,11 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
-<<AddOptionVariables "///Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
 
 
 :: realLaws [nobr]
-/* <<BlankSpeaker>>
-
+<<BlankSpeaker>>
 <<AddParagraph "The two detectives are still smiling, after laughing at you for a good five minutes.">>
 
 <<if $feelingYasMuff is "annoyance">>
@@ -392,11 +386,7 @@ J'arrive pas à le retrouver mais j'ai cet article à la place: https://themight
 <<AddParagraph "Cannelé and Nomnom exchange a glance.">>
 
 <<SetSpeaker "Nomnom">>
-<<<<<<< HEAD
-<<AddParagraph `"Rule #1 : Magic is a universal gift that can be activated "+tooltip("@@.github;after eating a Fleur d'Âme@@","Literally: 'Flower from the Soul'")+"."`>>
-=======
 <<AddParagraph `note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme.","Literally: “Flower from the Soul”"), type:"hint"})+" : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
->>>>>>> dev-lo
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."), type:"hint"})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
