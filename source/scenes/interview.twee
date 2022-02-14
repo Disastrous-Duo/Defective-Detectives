@@ -921,20 +921,29 @@
 
 
 :: enterName[nobr]
-/* enter name box 5 letters */
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "This is a shit name.">>
+<<AddParagraph "Please. We're professionals.">>
+<<AddParagraph "Let us do our job."">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//So I have no say in...//">>
+<<AddParagraph "//Choosing my own name.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé stretches their neck and cracks their knuckles.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Haven't seen a name as bad since “Cannelé”, dude what the heck.">>
 <<AddParagraph "Ok, time for me to shine!">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I think NOT, you SUCK at namegiving.">>
-<<AddParagraph "I'm gonna take care of this">>
-/* continue scene to interviewDeepThought instead of copy paste*/
+<<AddParagraph "I'm going to take care of this">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "I have a terrible feeling about this.">>
 
 <<BlankSpeaker>>
+<<AddParagraph "No reply comes.">>
 <<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
 <<AddParagraph "Inspiration?">>
@@ -1125,9 +1134,8 @@
 
 :: Naming1 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "You need to get your mind away from this madness.">>
+<<AddParagraph "You need to take your mind away from the madness unfolding before you.">>
 <<AddParagraph "By reflex, you reach for the cup of coffee and take a sip.">>
-
 
 <<SetSpeaker "???">>
 <<AddParagraph  "@@.shake;''*COUGH*''@@" >>
@@ -1154,14 +1162,62 @@
 
 <<AddOption "«Really... Then uh, Yasyas?»" "Yasyas">>
 <<AddOption "«Errr if I really don't have a choice I'll just choose Muffin»" "Muffin">>
-<<AddOption "«I could pick anything, literally anything but those two... words»" "Naming2">>
+<<AddOption "«I could pick anything, literally anything but those two... words» (Choose a custom name.)" "CustomName">>
+
+
+
+:: CustomName [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//Finally!//">>
+<<AddParagraph "//How about...//">>
+<<WordInput 5 "custom_name"  "CustomName2">>
+
+
+:: CustomName2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The detectives fall silent.">>
+<<AddParagraph "You catch yourself holding your breath, waiting for their reaction.">>
+<<AddParagraph "You don't know what to expect...">>
+<<AddParagraph "But certainly not seeing them explode into loud, obnoxious laughter in your face.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé regains their composure first, muffling one last giggle">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Did you really come up with...">>
+<<AddParagraph `$custom_name + "??"`>>
+<<AddParagraph "Haven't seen a name as bad since 'Cannelé', dude what the HECK.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "This is like...">>
+<<BlankSpeaker>>
+<<AddParagraph "A chuckle escapes from their mouth.">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Really, //really// bad.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "You consider the name you had picked, " + `'$custom_name'`>>
+<<AddParagraph "Then think about the names THEY had come up with, 'Yasyas' and 'Muffin'.">>
+<<AddParagraph "And you feel rage boiling in the pit of your stomach...">>
+<<AddParagraph "That soon transforms into weariness.">>
+
+<<AddOption "«I am so done with this.»" "Naming2" >>
+<<AddOption "«Let's get this over with.»" "Naming2" >>
+
+
 
 :: Naming2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom have stopped bickering now.">>
+<<AddParagraph "They're staring straight at you.">>
+
 <<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "PICK ONE">>
+<<AddParagraph "You must pick one.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//sigh//">>
+
+<<AddParagraph "Their tone lightens, going back to the uncomfortable commercial tone they had used when they'd first greeted you.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Muffin is a cool sounding name right! It suits you very much">>
@@ -1175,41 +1231,8 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//A situation I can't escape//">>
 
-<<AddOption "«I'll go with Yasyas»" "Yasyas">>
 <<AddOption "«Muffin it is, I guess...»" "Muffin">>
-<<AddOption "«Could I have a temporary pseudonym instead?»  (Choose a custom name.)" "CustomName">>
-
-
-:: CustomName [nobr]
-What about...
-<<WordInput 5 "custom_name"  "CustomName_3">>
-
-
-:: CustomName_2 [nobr]
-What about...
-<<textbox "$custom_name" "_ _ _ _ _" "CustomName_3" autofocus>>
-<<AddOption "(Confirm.)" "CustomName_3">>
-
-:: CustomName_3 [nobr]
-<<SetSpeaker "Cannelé">>
-<<AddParagraph `'mdr $custom_name'`>>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "lol nope">>
-
-<<AddOption "«Fuck them.»" >>
-
-:: Yasyas [nobr]
-<<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//Three points for Cannelé//">>
-<<AddScore "Cannelé" 3>>
-<<set $client_name to "Yasyas">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
-<<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
-
-<<AddOption "«I-I didn't even sign the contract...»" "Investigation1">>
+<<AddOption "«I'll just go with Yasyas»" "Yasyas">>
 
 
 :: Muffin [nobr]
@@ -1221,5 +1244,18 @@ What about...
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
+
+<<AddOption "«I-I didn't even sign the contract...»" "Investigation1">>
+
+
+:: Yasyas [nobr]
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Three points for Cannelé//">>
+<<AddScore "Cannelé" 3>>
+<<set $client_name to "Yasyas">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
+<<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
 
 <<AddOption "«I-I didn't even sign the contract...»" "Investigation1">>
