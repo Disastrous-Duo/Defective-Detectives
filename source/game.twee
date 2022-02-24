@@ -54,6 +54,8 @@
 ::@include scripts/tutorial_board.twee
 ::@include scripts/pull_cord.twee
 
+::@include scripts/startup.twee
+
 
 ::@include macros/disco_elysium_macros.twee
 ::@include macros/magic_macros.twee

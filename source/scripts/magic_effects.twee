@@ -140,9 +140,11 @@ window.slot = function(right_answer, duration)
 window.note = function(displayed_text, note_data)
 {
 
+  var serialized_note_data = encodeURI(JSON.stringify(note_data));
+
   if(note_data.type == "tuto-board-trigger") // special note for the tuto trigger
   {
-    return `<span class="clickable_note tuto_clickable_note" data-note="${JSON.stringify(note_data)}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
+    return `<span class="clickable_note tuto_clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
   }
   else
   {
@@ -151,11 +153,10 @@ window.note = function(displayed_text, note_data)
 
     if(notes_txt.indexOf(note_data.txt) > -1)
     {
-      alert("COUCOU")
       return displayed_text;
     }
 
-    return `<span class="clickable_note" data-note='${JSON.stringify(note_data)}' onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+    return `<span class="clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
   }
 }
 
@@ -205,7 +206,7 @@ window.clickOnNote = function(e,link)
 
   $(link).append(note);
 
-  var note_data = JSON.parse(link.dataset.note);
+  var note_data = JSON.parse(decodeURI(link.dataset.note));
 
   if(note_data.type == "tuto-board-trigger")
   {
@@ -232,4 +233,16 @@ window.renableContinueButton = function()
 {
   $("#FakeContinueBtn").remove();
   $("#ContinueBtn").removeClass("hideContinueBtn");
+}
+
+window.scrollSmoothToBottom = function () {
+
+  // setTimeout(function()
+  // {
+   var div = document.getElementById("story");
+   $('#story').animate({
+      scrollTop: div.scrollHeight, /*- div.clientHeight*/
+      behavior: 'smooth',
+   }, 400);
+ // },);
 }

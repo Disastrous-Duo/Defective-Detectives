@@ -15,9 +15,9 @@ Stands that sell wares, various good from overseas.
 
 > Yasyas, my dear fellow, I am going to tell the secret of how to conduct a fruitful investigation.
 > Oh, I'd love to.
-> The secret is to scan every stand and look for the person that seems the most nice/agreable...
+> The secret is to scan every stand and look for the person that seems the most nice/agreable…
 > Right. So she can answer our quest-
-> ...so we can snatch free food samples.
+> …so we can snatch free food samples.
 > I dont know what I expected
 Nomnom points at stand at the far end of the market.
 A round old lady seems to be laughing her heart out with a client.
@@ -26,7 +26,7 @@ A round old lady seems to be laughing her heart out with a client.
 
 
 
-Stand Name: The World... of Cheese
+Stand Name: The World… of Cheese
 
 ()
 Stand's Seller: Jocelaine
@@ -49,7 +49,7 @@ in front of the stand, another one
 Jocelaine! I hope you're not giving free sample to customers again. Cheese doesn't grow on trees, you know?
 Gives them a napkin.
 Jocelaine! i hope you're not giving free napkins again! Paper doesn't grow on tree, you know?
-Yassine: I'm pretty sure that it does...
+Yassine: I'm pretty sure that it does…
 
 [6]
 
@@ -60,8 +60,8 @@ Looks like a wooden soldier.
 Marche au pas.
 
 Ribbons. White and red strap.
-N: Those colors. Is this a... Candy cane shop?
-Y: I think it's a...
+N: Those colors. Is this a… Candy cane shop?
+Y: I think it's a…
 N: Or maybe a barber?
 Y: I think it's a police investigation scene, Nomnom.
 N: What makes you say that?
@@ -100,7 +100,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "--so we can snatch free food samples, exactly.">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "//I... don't know what I expected//">>
+<<AddParagraph "//I… don't know what I expected//">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom points to a stand, at the far end of the market.">>
@@ -118,7 +118,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Their client hesitates a bit, but finally joins them.">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "...Why did we come here?">>
+<<AddParagraph "…Why did we come here?">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "It's the only empty stand in the whole market. But we're lucky: we have a great view of our target from here.">>
@@ -136,8 +136,8 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Still hidden, Nomnom slides their head out to take a peak at the vendor.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "The target is a woman keeping a stand. Her age ranges between... I'd say 45 and 110 years old.">>
-<<AddParagraph "''Stand Name'': « //The World... of Cheese!// »">>
+<<AddParagraph "The target is a woman keeping a stand. Her age ranges between… I'd say 45 and 110 years old.">>
+<<AddParagraph "''Stand Name'': « //The World… of Cheese!// »">>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "That explains the quite strong @@.shake;fragrance@@ emanating from there.">>
@@ -185,13 +185,13 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Jocelaine's smile morphes into a confused face." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "Excuse me, uhm, do I know y...">>
+<<AddParagraph "Excuse me, uhm, do I know y…">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom starts mimicking a sad expression. Her smile instantly resurfaces." >>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "I mean... I'm doing fantastic, thank you!!">>
+<<AddParagraph "I mean… I'm doing fantastic, thank you!!">>
 
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//One point for Nomnom//">>
@@ -235,7 +235,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "This leaves only "+$client_name+" to do the talking."`>>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "Uhm. S-so..." >>
+<<AddParagraph "Uhm. S-so…" >>
 
 <<AddOption "Ask about Jocelaine & Joséphine" "Jocelaine_wife">>
 <<AddOption "Ask about the cheese" "Jocelaine_cheese" >>
@@ -253,7 +253,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Can we taste some?">>
 
 <<SetSpeaker "Jocelaine">>
-<<AddParagraph "Well...">>
+<<AddParagraph "Well…">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Jocelaine quickly glances left, then right.">>
@@ -281,7 +281,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Just a little, honey! I'm building customer loyalty.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "''... *nom*''... ''*nom*''...">>
+<<AddParagraph "''… *nom*''… ''*nom*''…">>
 
 <<AddOption "Nomnom seems pretty loyal already." "Jocelaine_cheese_2">>
 
@@ -304,14 +304,14 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Is it a Bleu?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "''... *nom*''... ''*nom*''...">>
+<<AddParagraph "''… *nom*''… ''*nom*''…">>
 
 <<SetSpeaker "Jocelaine">>
 <<AddParagraph "Ha ha, no!">>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "Wait. An @@.shake;acidic@@ after-taste, that takes your whole mouth?">>
-<<AddParagraph "...it's a //Roquefort//!">>
+<<AddParagraph "…it's a //Roquefort//!">>
 
 <<SetSpeaker "Jocelaine">>
 <<AddParagraph "Yes!!">>
@@ -321,7 +321,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph `$client_name+" blushes a little. This compliment visibly touched him."`>>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "Well... Thank you.">>
+<<AddParagraph "Well… Thank you.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom pats their client's shoulders.">>
@@ -336,7 +336,7 @@ J: Not sure you can't snoop around there, but *points*
 <<BlankSpeaker>>
 <<AddParagraph "When Nomnom removes their hand, a visible cheese stain stays on the coat.">>
 
-<<AddOption "....Madame Jocelaine, can I borrow a tissue?" "Jocelaine_cheese_3">>
+<<AddOption "……Madame Jocelaine, can I borrow a tissue?" "Jocelaine_cheese_3">>
 
 :: Jocelaine_cheese_3 [nobr]
 
@@ -356,7 +356,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Paper doesn't grow on tree, you know?">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "//I'm pretty sure paper is made from trees, though...//">>
+<<AddParagraph "//I'm pretty sure paper is made from trees, though…//">>
 
 
 
@@ -364,27 +364,27 @@ J: Not sure you can't snoop around there, but *points*
 <<set $jocelaine_wife to true>>
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "Your name is ''Jo''celaine and your wife's is ''Jo''séphine.">>
-<<AddParagraph "That's..." >>
+<<AddParagraph "That's…" >>
 
 <<BlankSpeaker>>
 <<AddParagraph "Jocelaine draws a big smile.">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "...amusing." >>
+<<AddParagraph "…amusing." >>
 
 <<SetSpeaker `"Jocelaine"`>>
 <<AddParagraph `"Right?! I'm so glad you noticed."` >>
-<<AddParagraph `"We've been married for quite some time now, and one thing I've learned is that..."` >>
+<<AddParagraph `"We've been married for quite some time now, and one thing I've learned is that…"` >>
 
 <<BlankSpeaker>>
 <<AddParagraph "Jocelaine leans on the counter, about to confide." >>
 
 
 <<SetSpeaker `"Jocelaine"`>>
-<<AddParagraph `"...matching names make happy, lasting relationships."` >>
+<<AddParagraph `"…matching names make happy, lasting relationships."` >>
 
 <<AddParagraph "And not only for romance!">>
-<<AddParagraph "Even food pairings taste better when their ingredients start with the same sounds. Like..." >>
+<<AddParagraph "Even food pairings taste better when their ingredients start with the same sounds. Like…" >>
 
 
 <<BlankSpeaker>>
@@ -392,7 +392,7 @@ J: Not sure you can't snoop around there, but *points*
 
 <<if $jocelaine_cheese is true>>
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "''... *nom*''... ''*nom*''...">>
+<<AddParagraph "''… *nom*''… ''*nom*''…">>
 
 <<AddOption "''Coco''nut and ''Coco''a?" "Jocelaine_wife_2">>
 <<AddOption "''Ch''erries and ''Ch''ocolate?" "Jocelaine_wife_2">>
@@ -402,7 +402,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph "Good one! I was thinking of ''Br''ead and ''Br''oth.">>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "You're right. There's also...">>
+<<AddParagraph "You're right. There's also…">>
 <<AddOption "''To''fu & ''To''ast" "Jocelaine_wife_3">>
 <<AddOption "''Mu''shroom and ''Mu''stard" "Jocelaine_wife_3">>
 
@@ -425,7 +425,8 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph `"Both Jocelaine and "+$client_name+" look at Nomnom, in disgust."`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "What? Yoghurt and yolk are both liquid, and full of protein.">>
+<<AddParagraph "What? Yoghurt and yolk are both liquid.">>
+<<AddParagraph "And full of protein.">>
 <<AddParagraph "Pretty good pairing to me.">>
 
 <<SetSpeaker `$client_name`>>
@@ -441,7 +442,7 @@ J: Not sure you can't snoop around there, but *points*
 <<AddParagraph  "« //Matching names make happy relationships.// »" >>
 
 <<SetSpeaker `$client_name`>>
-<<AddParagraph "...">>
+<<AddParagraph "…">>
 <<AddParagraph "You know what Madame Jocelaine? You are right.">>
 <<AddParagraph "Frighteningly right.">>
 

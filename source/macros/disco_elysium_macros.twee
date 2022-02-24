@@ -3,21 +3,22 @@
 :: PassageHeader {"position":"407,27","size":"100,100"}
 <<set $paragraphs to []>>
 <<if $lastoption>>
-@@.speaker.pastchoice;>>>@@ @@.pastchoice; $lastoption@@
-
+@@.pastchoice;➣ $lastoption@@
+<br/>
+<br/>
 <</if>>
 
 
-:: PassageFooter {"position":"547,28","size":"100,100"}
-<<DisplayParagraphs>>\
+:: PassageFooter [nobr] {"position":"547,28","size":"100,100"}
+<<DisplayParagraphs>>
 
 
 :: DisplayOptions [nobr] {"position":"546,144","size":"100,100"}
-<ol id="OptionList">
+<ul id="OptionList">
 <<for _optiontext, _optiondata range $optionmap>>
   <<capture _optiondata, _optiontext>>
-    <li>
-    <<link _optiontext _optiondata["passageName"]>>
+    <li class="OptionChoice">
+    <<link `"➣ "+_optiontext` _optiondata["passageName"]>>
       <<set $lastoption to _optiontext>>
 
       <<for _variableName, _value range _optiondata["variables"]>>
@@ -30,7 +31,7 @@
     </li>
   <</capture>>
 <</for>>
-</ol>
+</ul>
 <<set $optionmap to new Map()>>
 
 :: PassiveSkill [Widget widget] {"position":"403,146","size":"100,100"}
@@ -99,10 +100,10 @@ $args[0] -
 
 
 :: AddOption [widget] {"position":"273,265","size":"100,100"}
-\<<widget "AddOption">>\<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{}})>>\<</widget>>\
+<<widget "AddOption">><<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{}})>><</widget>>
 
 :: AddOptionVariables [widget] {"position":"573,265","size":"100,100"}
-\<<widget "AddOptionVariables">>\<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2]})>>\<</widget>>\
+<<widget "AddOptionVariables">><<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2]})>><</widget>>
 
 /*
   do a check on content of paragraph (or even next paragraph)
@@ -110,19 +111,40 @@ $args[0] -
 */
 
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
-<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>\
-<<run $paragraphs.deleteAt(0)>>\
+<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>
+<<run $paragraphs.deleteAt(0)>>
 <span class="paragraph"><<print _paragraph>></span>
-<<if $paragraphs.length > 0>>\
-  <<if $paragraphs[0].indexOf("$DisableContinueButton$") != -1>>\
+<br/>
+<br/>
+
+<<if $paragraphs.length > 0>>
+
+  <<if ( ($paragraphs[0].indexOf("$DisableContinueButton$") != -1)
+  or
+  ($paragraphs[0].indexOf("$DisableContinueButtonTutorial$") != -1) and window.pullcord.completed_tutorial == false )>>
+
   <<run $paragraphs.deleteAt(0)>>
-    <<link "@@#FakeContinueBtn;CONTINUE ➤@@">><</link>>\
-    <<linkreplace "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+
+    <<link "@@#FakeContinueBtn;CONTINUE ➤@@">><</link>>
+    <<linkreplace "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" t8n>>
+      <<DisplayParagraphs>>
+      <<run window.scrollSmoothToBottom()>>
+    <</linkreplace>>
+
   <<else>>
-    <<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
+
+    <<if $paragraphs[0].indexOf("$DisableContinueButtonTutorial$") != -1>>
+      <<run $paragraphs.deleteAt(0)>>
+    <</if>>
+
+    <<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>>
+      <<DisplayParagraphs>>
+      <<run window.scrollSmoothToBottom()>>
+    <</linkreplace>>
+
   <</if>>
 
-<<else>>\
+<<else>>
   <<include DisplayOptions>>
 <</if>>
 <<timed 0.5s>>
@@ -132,7 +154,7 @@ $args[0] -
     	displayed_paragraphs[displayed_paragraphs.length-2].classList.add("dim");
     }
   <</script>>
-<</timed>>\
+<</timed>>
 <</widget>>
 
 
@@ -160,6 +182,13 @@ $args[0] -
 <<nobr>>
 <<widget "DisableContinueButton">>
   <<AddParagraph "$DisableContinueButton$">>
+<</widget>>
+<</nobr>>
+
+:: DisableContinueButtonTutorial [widget] {"position":"546,368","size":"100,100"}
+<<nobr>>
+<<widget "DisableContinueButtonTutorial">>
+  <<AddParagraph "$DisableContinueButtonTutorial$">>
 <</widget>>
 <</nobr>>
 

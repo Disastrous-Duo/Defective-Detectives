@@ -59,7 +59,7 @@
 <<AddParagraph "//The figure is walking at a rapid pace.//">>
 <<AddParagraph "//They're stumbling and stopping often, as if lost in the chaos of alleys.//">>
 
-<<AddOption "The drop keeps up; left, right, left again... before crashing onto somethig... paper?" "Falaisant1_8">>
+<<AddOption "The drop keeps up; left, right, left again… before crashing onto somethig… paper?" "Falaisant1_8">>
 
 
 :: Falaisant1_7_2 [nobr]
@@ -83,7 +83,7 @@
 <<AddParagraph "//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//">>
 <<AddParagraph "//Only the curious personnage is walking, cutting through the misty veil with hesitant steps.//">>
 <<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
-<<AddParagraph "//The atmosphere is heavy...//">>
+<<AddParagraph "//The atmosphere is heavy…//">>
 <<AddParagraph "//Disquieting.//">>
 
 <<AddOption "The drop runs down darker and darker paths, following the silhouette." "Falaisant2_9">>
@@ -116,7 +116,7 @@
 <<AddParagraph "//Plic.//">>
 <<AddParagraph "//Ploc.//">>
 
-<<AddOption "Lower, Lower..." "Falaisant2_7">>
+<<AddOption "Lower, Lower…" "Falaisant2_7">>
 
 
 :: Falaisant2_7 [nobr]
@@ -130,7 +130,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//">>
 <<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
-<<AddParagraph "//The atmosphere is heavy...//">>
+<<AddParagraph "//The atmosphere is heavy…//">>
 <<AddParagraph "//Disquieting.//">>
 
 <<AddOption "The drop runs down darker and darker paths." "Falaisant2_9">>
@@ -273,7 +273,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor.//">>
 <<AddParagraph "//There's an uncomfortable pause as everyone stares in a surprised silence.//">>
-<<AddParagraph "...">>
+<<AddParagraph "…">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The girl smiles widely as the man stands up and dusts their clothes.">>
@@ -288,7 +288,7 @@
 <<AddParagraph "//The two individuals glare at each other: they're about to start arguing again.//">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "That's...">>
-<<AddParagraph "... An excellent question.">>
+<<AddParagraph "That's…">>
+<<AddParagraph "… An excellent question.">>
 
-<<AddOption "..." "newOffice">>
+<<AddOption "…" "newOffice">>
