@@ -14,3 +14,7 @@ preload_list.map(function (url) {
 	image.src = media_prefix+url;
 	window._MediaCache[url] = image;
 });
+
+console.log(Config);
+// remove all default line breaks
+Config.passages.nobr = true;
