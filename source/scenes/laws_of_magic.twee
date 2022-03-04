@@ -387,7 +387,7 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `
-note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a Fleur d'Âme.", type:"hint", fontSize:14,
+note("Law #1",{txt:"LAW #1: Magic is a universal gift that can be activated after eating a Fleur d'Âme.", type:"hint", fontSize:14,
 onclick:
 function()
 {
@@ -403,7 +403,7 @@ function()
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `
-note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.", type:"hint", fontSize:14,
+note("Law #2",{txt:"LAW #2: Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.", type:"hint", fontSize:12,
 onclick:
 function()
 {
@@ -416,7 +416,7 @@ function()
 })+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `note("Law #3",{txt:"Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.", type:"hint", fontSize:14,
+<<AddParagraph `note("Law #3",{txt:"LAW #3: Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.", type:"hint", fontSize:13,
 onclick:
 function()
 {

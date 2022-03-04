@@ -336,10 +336,10 @@
 <<set $interview_cannele to true>>
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.">>
-<<AddParagraph "Their skin is deep brown and their round face is framed by a tangle of soft, black curls that reach the middle of their back.">>
+<<AddParagraph "Their skin is deep brown and their round face is framed by a tangle of soft, black curls that turn a deep red as they reach the middle of their back.">>
 <<AddParagraph "Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.">>
 
-<<AddParagraph "Black ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
+<<AddParagraph "Bright ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
 <<AddParagraph "However, what truly stands out is Cannelé’s clothing.">>
 <<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end…">>
 <<AddParagraph "It creates a //stark// contrast with the pitiful state of the cramped office.">>
@@ -360,6 +360,15 @@
 <<SetSpeaker "???">>
 <<AddParagraph "Fallen //nobility…//">>
 
+<<BlankSpeaker>>
+<<AddParagraph "Your eyes go back to the golden tattoo running up their wrists.">>
+<<AddParagraph "The design looks like a maze, pieces of an intricate puzzle that have been taken apart.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Hmmm...">>
+<<AddParagraph "Deliquent //nobility//??">>
+
+
 
 <<AddOption "Look at Cannelé again." "interviewCannelé">>
 
@@ -373,13 +382,16 @@
 
 
 :: canneleClothes [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The clothes Cannelé wears resembles like those worn by models and very rich people.">>
+<<AddParagraph "The fabric looks soft and thick, and the cut of the outfit as if it had been tailored to fit them.">>
+
 <<SetSpeaker "???">>
 <<AddParagraph "//These clothes…//">>
 <<AddParagraph "//Look more expensive than the whole building.//">>
 <<AddParagraph "//Do I really want to trust someone who seems to put more money in clothes than actual vital needs like a proper office?//">>
 <<AddParagraph "//Do I even *have* a choice…//">>
 
-/* Note suggestion: on "more money". Why does Cannelé wear expensive clothes vs living in such poor conditions*/
 
 <<AddOption "Look at Cannelé again." "interviewCannelé">>
 
@@ -444,12 +456,6 @@
 
 
 :: nomnomHair [nobr]
-/* <<SetSpeaker "???">>
-<<AddParagraph "//Nomnom's hair is kind of impressive…//">>
-<<AddParagraph "//At first, I thought it looked like a bird’s nest//">>
-<<AddParagraph "//But it’s more of an artistic chaos, I guess…//">>
-<<AddParagraph "//Can he actually hide things in it?//">>
-<<AddParagraph "//Note to self: investigate the dimensional power of Nomnom's hair.//">> */
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's hair gather in a fluffy jet black cloud, making their head look like it's about to float away and join its white cousins in the sky.">>
