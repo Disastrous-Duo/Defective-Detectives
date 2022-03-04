@@ -62,11 +62,11 @@ tw-hook
 }
 
 .red_speaker {
-  color: #c6496b;
+  color: #D61516;
 }
 
 .blue_speaker {
-  color: #6cc6ce;
+  color: #1BDBFF;
 }
 
 .yellow_speaker {
