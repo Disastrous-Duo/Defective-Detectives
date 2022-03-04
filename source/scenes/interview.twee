@@ -344,9 +344,20 @@
 <<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end…">>
 <<AddParagraph "It creates a //stark// contrast with the pitiful state of the cramped office.">>
 
+
 <<AddOption "//Their attitude…//" "canneleAttitude">>
 <<AddOption "//Their clothes…//" "canneleClothes">>
 <<AddOption "//Why are they standing on the couch…//" "canneleCouch">>
+
+:: choicesCannelé [nobr]
+<<AddOption "Look at Cannelé again." "choicesCannelé2">>
+<<AddOption "Turn to Nomnom." "interviewNomnom">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
+
+:: choicesCannelé2 [nobr]
+<<AddOption "//Cannelé's attitude…//" "canneleAttitude">>
+<<AddOption "//Cannelé's clothes…//" "canneleClothes">>
+<<AddOption "//Why is Cannelé standing on the couch…//" "canneleCouch">>
 
 
 :: canneleAttitude [nobr]
@@ -361,24 +372,13 @@
 <<AddParagraph "Fallen //nobility…//">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Your eyes go back to the golden tattoo running up their wrists.">>
+<<AddParagraph `"Your eyes go back to the "+ note("golden tattoo",{txt:"Intricate puzzle-like golden ink is painting both of Cannelé's foreams.",type:'hint', fontSize:15})+" running up their wrists."`>>
 <<AddParagraph "The design looks like a maze, pieces of an intricate puzzle that have been taken apart.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Hmmm...">>
-<<AddParagraph "Deliquent //nobility//??">>
+<<AddParagraph "//Deliquent// nobility//??//">>
 
-
-
-<<AddOption "Look at Cannelé again." "interviewCannelé">>
-
-<<if $interview_nomnom is false>>
-<<AddOption "Turn to Nomnom." "interviewNomnom">>
-<</if>>
-
-<<if $interview_speak is false>>
-<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
-<</if>>
+<<include choicesCannelé>>
 
 
 :: canneleClothes [nobr]
@@ -390,19 +390,10 @@
 <<AddParagraph "//These clothes…//">>
 <<AddParagraph "//Look more expensive than the whole building.//">>
 <<AddParagraph "//Do I really want to trust someone who seems to put more money in clothes than actual vital needs like a proper office?//">>
-<<AddParagraph "//Do I even *have* a choice…//">>
+<<AddParagraph "//…//">>
+<<AddParagraph "//Do I even //have// a choice?//">>
 
-
-<<AddOption "Look at Cannelé again." "interviewCannelé">>
-
-<<if $interview_nomnom is false>>
-<<AddOption "Turn to Nomnom." "interviewNomnom">>
-<</if>>
-
-<<if $interview_speak is false>>
-<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
-<</if>>
-
+<<include choicesCannelé>>
 
 :: canneleCouch [nobr]
 <<BlankSpeaker>>
@@ -412,23 +403,13 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I think I get what's happening here.//">>
-<<AddParagraph "//Both of them have this constant petty rivalry-siblings fight going on…//">>
+<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"ARE CANNELE & NOMNOM SIBLINGS?",type:'question'})+" going on…//"`>>
 <<AddParagraph "//And Cannelé is //rather small// compared to Nomnom, who is// rather tall.">>
 <<AddParagraph "//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//">>
 <<AddParagraph "//It's suprisingly…//">>
 <<AddParagraph "//Ineffective.//">>
 
-
-<<AddOption "Look at Cannelé again." "interviewCannelé">>
-
-<<if $interview_nomnom is false>>
-<<AddOption "Turn to Nomnom." "interviewNomnom">>
-<</if>>
-
-<<if $interview_speak is false>>
-  <<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
-<</if>>
-
+<<include choicesCannelé>>
 
 :: interviewNomnom [nobr]
 <<set $interview_nomnom to true>>
@@ -454,6 +435,15 @@
 <<AddOption "//Their coat…//" "nomnomCoat">>
 <<AddOption "//I can’t help it, but this left shoe really intrigues me…//" "nomnomLeftShoe">>
 
+:: choicesNomnom [nobr]
+<<AddOption "Look at Nomnom again." "choicesNomnom2">>
+<<AddOption "Turn to Cannelé." "interviewCannelé">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
+
+:: choicesNomnom2 [nobr]
+<<AddOption "//Nomnom's hair…//" "nomnomHair">>
+<<AddOption "//Nomnom's coat…//" "nomnomCoat">>
+<<AddOption "//I can’t help it, but Nomnom's left shoe really intrigues me…//" "nomnomLeftShoe">>
 
 :: nomnomHair [nobr]
 
@@ -468,20 +458,10 @@
 <<AddParagraph "//Usually this happens when people don't know how to take care of their specific hair type.//">>
 <<AddParagraph `"//I wonder how they could have grown up having that "+note("knowledge",{txt:"Nomnom does not know how to care for their hair",type:'hint'})+".//"`>>
 
-
-<<AddOption "Look at Nomnom again." "interviewNomnom">>
-
-<<if $interview_cannele is false>>
-<<AddOption "Turn to Cannelé." "interviewCannelé">>
-<</if>>
-
-<<if $interview_speak is false>>
-<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
-<</if>>
-
-
+<<include choicesNomnom>>
 
 :: nomnomCoat [nobr]
+
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's coat is old and patched up at unusual places.">>
@@ -524,10 +504,8 @@
 <</if>>
 
 
+
 :: nomnomLeftShoe [nobr]
-/* <<SetSpeaker "???">>
-<<AddParagraph "//This shoe…//">>
-<<AddParagraph `"//I can't help but have a //bad feeling// about this  //"+note("//shoe//",{txt:"Aerodynamic left shoe", type:"hint"})+"//.//"`>>*/
 
 
 <<SetSpeaker "???">>
@@ -543,16 +521,7 @@
 <<SetSpeaker "???">>
 <<AddParagraph `"//I can't help but have a bad feeling about this "+note("shoe",{txt:"Nomnom's aerodynamic left shoe", type:"hint"})+".//"`>>
 
-<<AddOption "Look at Nomnom again." "interviewNomnom">>
-
-<<if $interview_cannele is false>>
-<<AddOption "Turn to Cannelé." "interviewCannelé">>
-<</if>>
-
-<<if $interview_speak is false>>
-<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
-<</if>>
-
+<<include choicesNomnom>>
 
 :: interviewSpeak [nobr]
 <<set $interview_speak to true>>
@@ -987,49 +956,9 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "No reply comes.">>
-<<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
-<<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
-<<AddParagraph "Inspiration?">>
 
-<<AddParagraph "<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<include noName>>
 
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "A name…">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "A chair?">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "An alias !">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "The sink…">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Ali ?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Oh no ew, dirty">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Iasias…">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "The couch…">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Ee-yas?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Wait, what's that…">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Yas ! Yas?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "It's a muff-">>
-
-<<AddOption "//I am getting concerned …//" "interviewA-HA">>
 
 
 :: ifNoName [nobr]
@@ -1048,51 +977,7 @@
 <<AddParagraph "That's not what I meant but okay…">>
 <<AddParagraph "The answer is no, I do not have a name.">>
 
-/* continue scene to interviewDeepThought instead of copy paste*/
-<<BlankSpeaker>>
-<<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
-<<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
-<<AddParagraph "Inspiration?">>
-
-<<AddParagraph "<h2 class='duel_title duel_left'>Designation</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "A name…">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "A chair?">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "An alias !">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "The sink…">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Ali ?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Oh no ew, dirty">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Iasias…">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "The couch…">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Ee-yas?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Wait, what's that…">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Yas ! Yas?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "It's a muff-">>
-
-<<AddOption "//I am getting concerned …//" "interviewA-HA">>
+<<include noName>>
 
 
 :: noName [nobr]
