@@ -800,7 +800,7 @@ They must really like bread and pastries.
 <<AddParagraph "Can I offer you a pastry to go with this //delicious// cup of coffee? They're fresh from yesterday.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Oh! Is Yesterday a bakery?">>
+<<AddParagraph "Oh! Is «//Yesterday//» a bakery?">>
 
 <<BlankSpeaker>>
 <<AddParagraph "A heavy silence greets the question.">>
