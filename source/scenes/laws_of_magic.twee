@@ -12,6 +12,7 @@
 <<AddParagraph "//I just have to think.//">>
 <<BlankSpeaker>>
 <<AddParagraph "//''First, where does this Magic comes from?''//">>
+<<AddParagraph "">>
 
 
 <<AddOptionVariables "//The river is super important… There are Spirits that dwell here, Spirits with Magic… Maybe they can lend their ''Gifts'' to us?//" "theory2" `{"rule1":"river_spirits","said_gift1":1}`>>
@@ -32,7 +33,7 @@
 <<AddParagraph "//I just need to stay coherent. If Magic comes from there…//">>
 <<BlankSpeaker>>
 <<AddParagraph "//''How can humans use it?''//">>
-
+<<AddParagraph "">>
 
 <<AddOptionVariables "//If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?//" "theory3" `{"rule2":"physics"}`>>
 <<AddOptionVariables `"//River Spirits must have their own agency and values and personality… if it resonates with someone then they can become pals? Friends? //"+tooltip("//Partners…//","Lovers? Soulmates?? More???")` "theory3" `{"rule2":"river_spirits"}`>>
@@ -48,7 +49,7 @@
 <<AddParagraph "//They're called //Laws//, so there must be some kind of restrictions…//">>
 <<BlankSpeaker>>
 <<AddParagraph "//''To do Magic, which rules must humans follow?''//">>
-
+<<AddParagraph "">>
 
 <<AddOptionVariables "//Someone famous said it before right? “Nothing is created, nothing is destroyed, everything is transformed.”//" "restitution" `{"rule3":"physics"}`>>
 <<AddOptionVariables "//Symbiotes must eat to use their ''Gift'', right?? And if its magic it probably won't be happy with old pastries and diluted coffee, maybe some special food?//" "restitution" `{"rule3":"symbiotic","said_gift3":1}`>>
@@ -95,14 +96,17 @@
 <<else>>
   <<set $rules_result to "Results_Bullshit">>
 <</if>>
+<<BlankSpeaker>>
 
+<<AddParagraph "">>
 <<AddOption "//Hum, maybe I should think about this again.// (Retry.)" "theory1">>
 <<AddOption "//Ok, this is looking good!// (Confirm.)" "stateRules">>
 
 
 :: stateRules [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "You enunciate the rules you came up with clearly, with made up confidence but now it feels real.">>
+<<AddParagraph "You enunciate the rules you just pieced together with made up confidence that now almost feels...">>
+<<AddParagraph "Real.">>
 <<AddParagraph "You got this.">>
 
 <<SetSpeaker "???">>
@@ -141,7 +145,8 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//…//">>
 
-
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOption "//I thought it was pretty good?//" $rules_result>>
 <<AddOption "//Am I that far off??//" $rules_result>>
 <<AddOption "//I hate them so much…//" $rules_result>>
@@ -187,6 +192,8 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling…//">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
 <<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
@@ -236,6 +243,8 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling…//">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
@@ -261,7 +270,7 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "">>
-<<AddParagraph `tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
+<<AddParagraph `tooltip("Fleur d’Âme","Literally: “Flower from the Soul”")+"."`>>
 <<AddParagraph "Very rare, very expensive, very hard to come across.">>
 
 <<SetSpeaker "Nomnom">>
@@ -286,6 +295,8 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling…//">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
@@ -303,7 +314,7 @@
 <<AddParagraph "This was terrible, like…">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Literally //nothing// you've said makes sense?">>
+<<AddParagraph "Literally //nothing// you've said makes any sense?">>
 
 <<SetSpeaker "Nomnom">>
 <<if $total_said_gift == 2>>
@@ -330,12 +341,14 @@
 <<AddParagraph "Just use this as advice.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "But hey, thanks for the entertainment!">>
+<<AddParagraph "But hey, thanks for the free entertainment!">>
 
 
 <<SetSpeaker "???">>
 <<AddParagraph "//What is this feeling…//">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
 <<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
 <<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
@@ -387,7 +400,7 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `
-note("Law #1",{txt:"LAW #1: Magic is a universal gift that can be activated after eating a Fleur d'Âme.", type:"hint", fontSize:14,
+note("Law #1",{txt:"LAW #1: Magic is a universal gift that can be activated after eating a Fleur d’Âme.", type:"hint", fontSize:14,
 onclick:
 function()
 {
@@ -399,7 +412,7 @@ function()
 }
 })
 +
-" : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
+" : Magic is a universal gift that can be activated @@.github; after eating a Fleur d’Âme.@@"`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `
@@ -450,7 +463,8 @@ function()
 <<AddParagraph "//I feel like it's going to keep happening with those two.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Listen. I get that you don't remember much, but there are some things you can't just do.">>
+<<AddParagraph "Listen.">>
+<<AddParagraph "I get that you don't remember much, but there are some things you can't just do.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Yeah, what's //wrong// with you?">>
@@ -472,7 +486,7 @@ function()
 <<SetSpeaker "???">>
 <<AddParagraph "…">>
 
-<<AddOption "«Nevermind, then… I have some questions about the Laws, though.»" "questionsLaws">>
+<<AddOption "«Nevermind, then… I have some questions about the Laws, though.» (Learn more.)" "questionsLaws">>
 
 <<if $interview_event is false>>
 <<AddOption "«About what happened to me…»" "Event">>
@@ -519,7 +533,7 @@ function()
 <<AddParagraph "Everyone has the //potential// to do Magic.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "But not everyone has access to Fleur d’Âme.">>
+<<AddParagraph `"But not everyone has access to "+tooltip("Fleur d’Âme","Literally: “Flower from the Soul”")+"."`>>
 <<AddParagraph "Imagine what life would be like if absolutely every citizen could become huge like a giant or turn everyone into spaghetti.">>
 
 <<SetSpeaker "Nomnom">>
@@ -537,6 +551,8 @@ function()
 <<SetSpeaker "???">>
 <<AddParagraph "I see.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $secondlaw is false>>
   <<AddOption "«About that second Law…»" "law2">>
@@ -584,6 +600,8 @@ function()
 <<SetSpeaker "???">>
 <<AddParagraph "R-Right. Sounds like it is.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $firstlaw is false>>
   <<AddOption "«About that first Law…»" "law1">>
@@ -632,13 +650,13 @@ function()
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "You can't just activate magic through sheer will.">>
 <<AddParagraph "It needs to be carried via something material.">>
-<<AddParagraph "A power could, for instance, turn someone into bees whenever they eat honey; honey being the ''medium''.">>
+<<AddParagraph "A power could, for instance, turn someone into bees whenever they eat honey; ''honey'' being the ''medium''.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Or… memorize an entire book, just by touching it.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Or… bring wooden toys to life - in which case wood being the acting ''medium''.">>
+<<AddParagraph "Ooooor… bring wooden toys to life - in which case ''wood'' being the acting ''medium''.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Thing is, there always need to be something material about your magic.">>
@@ -647,6 +665,8 @@ function()
 <<SetSpeaker "???">>
 <<AddParagraph "Alright, I think I understand.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $firstlaw is false>>
   <<AddOption "«About that first Law…»" "law1">>

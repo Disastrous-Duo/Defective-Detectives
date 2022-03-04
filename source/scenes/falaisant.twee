@@ -26,8 +26,8 @@
 <<AddParagraph "//Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//">>
 <<AddParagraph "//Two of them stretch out behind the tower; the three others unfold in the distance.//">>
 
-<<AddOption "A faint pull takes the drop down the first boulevard." "Falaisantfirstblvd">>
-<<AddOption "The drop continues its course down the second boulevard." "Falaisantsecondblvd">>
+<<AddOption "A faint pull takes the drop down the first boulevard." "Falaisantsecondblvd">>
+<<AddOption "The drop continues its course down the second boulevard." "Falaisantfirstblvd">>
 <<AddOption "The drop rolls, slowly making its way down the third boulevard." "Falaisantthirdblvd">>
 
 
@@ -96,7 +96,7 @@
 <<AddParagraph "//In the darkest corner of the decrepit block, the dark figure stops in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
 
-<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure." "Falaisant10">>
+<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure's nose." "Falaisant10">>
 
 
 /* SECOND PATH */
@@ -143,7 +143,7 @@
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
 
-<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure." "Falaisant10">>
+<<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure's nose." "Falaisant10">>
 
 
 /* THIRD PATH */
@@ -196,14 +196,14 @@
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "''*YELP*''">>
+<<AddParagraph "ACHOO!">>
 
 <<BlankSpeaker>>
 <<AddParagraph "@@.typewriter;8:37am - 288 Harmony Street, Falaisant@@">>
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
-<<AddParagraph "Something has happened behind that door.">>
+<<AddParagraph "Something happened behind that door.">>
 
 
 <<AddOption "Knock" "Expo">>
@@ -266,15 +266,15 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BAM*''">>
-<<AddParagraph "//The door violently slams open//">>
+<<AddParagraph "The door violently slams open.">>
 
 <<AddOption "''*OUCH*''" "Expo_Meeting1">>
 
 
 :: Expo_Meeting1 [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "//It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor.//">>
-<<AddParagraph "//There's an uncomfortable pause as everyone stares in a surprised silence.//">>
+<<AddParagraph "It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor, in pain.">>
+<<AddParagraph "There's an uncomfortable pause as everyone stares in a surprised silence.">>
 <<AddParagraph "…">>
 
 <<BlankSpeaker>>
@@ -287,10 +287,10 @@
 <<AddParagraph "Welcome to MY agency, who is this?">>
 
 <<BlankSpeaker>>
-<<AddParagraph "//The two individuals glare at each other: they're about to start arguing again.//">>
+<<AddParagraph "The two individuals glare at each other: they're about to start arguing again.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's…">>
 <<AddParagraph "… An excellent question.">>
 
-<<AddOption "…" "newOffice">>
+<<AddOption "CONTINUE" "newOffice">>
