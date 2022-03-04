@@ -462,7 +462,6 @@
 
 :: nomnomCoat [nobr]
 
-
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's coat is old and patched up at unusual places.">>
 <<AddParagraph "On the armpits, traces of flour and breadcrumbs remain.">>
@@ -490,19 +489,10 @@
 <<AddParagraph "On the same wrist.">>
 <<AddParagraph "And none of them are on time.">>
 
-<<AddOption "Look at Nomnom again." "interviewNomnom">>
-
 <<SetSpeaker "???">>
 <<AddParagraph "...I'm consufed and weirded out again.">>
 
-<<if $interview_cannele is false>>
-<<AddOption "Turn to Cannelé." "interviewCannelé">>
-<</if>>
-
-<<if $interview_speak is false>>
-<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
-<</if>>
-
+<<include choicesNomnom>>
 
 
 :: nomnomLeftShoe [nobr]
@@ -522,6 +512,7 @@
 <<AddParagraph `"//I can't help but have a bad feeling about this "+note("shoe",{txt:"Nomnom's aerodynamic left shoe", type:"hint"})+".//"`>>
 
 <<include choicesNomnom>>
+
 
 :: interviewSpeak [nobr]
 <<set $interview_speak to true>>
