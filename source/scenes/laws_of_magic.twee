@@ -387,19 +387,53 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `
-note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a Fleur d'Âme.", type:"hint", fontSize:15})
+note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a Fleur d'Âme.", type:"hint",
+onclick:
+function()
+{
+  window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+  if(window.real_laws_taken == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})
 +
 " : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `
-note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.", type:"hint", fontSize:13})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
+note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.", type:"hint",
+onclick:
+function()
+{
+  window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+  if(window.real_laws_taken == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `note("Law #3",{txt:"Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.", type:"hint", fontSize:15})+" : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."`>>
+<<AddParagraph `note("Law #3",{txt:"Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.", type:"hint",
+onclick:
+function()
+{
+  window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+  if(window.real_laws_taken == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})+" : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."`>>
+
+
 
 <<SetSpeaker "???">>
 <<AddParagraph "//Hmmm… Better note those down.//">>
+
+<<DisableContinueButton "window.real_laws_taken == 3" >>
 
 <<AddOption "«Can I ask you about your gifts?»" "cnGifts">>
 <<AddOption "«Before we continue, I have some questions about those Laws…»" "questionsLaws">>
