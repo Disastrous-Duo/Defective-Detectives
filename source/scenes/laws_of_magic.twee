@@ -382,17 +382,21 @@
 <<AddParagraph "OK then.">>
 <<AddParagraph "What ARE the Three Laws of Magic?">>
 
-<<BlankSpeaker>> */
+<<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom exchange a glance.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme.","Literally: “Flower from the Soul”"), type:"hint"})+" : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
+<<AddParagraph `
+note("Law #1",{txt:"Magic is a universal gift that can be activated after eating a Fleur d'Âme.", type:"hint"})
++
+" : Magic is a universal gift that can be activated after eating a "+tooltip("Fleur d'Âme","Literally: “Flower from the Soul”")+"."`>>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."), type:"hint"})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
+<<AddParagraph `
+note("Law #2",{txt:"Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.", type:"hint"})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `note("Law #3",{txt:"Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."), type:"hint"})+" : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."`>>
+<<AddParagraph `note("Law #3",{txt:"Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.", type:"hint"})+" : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."`>>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//Hmmm… Better note those down.//">>
