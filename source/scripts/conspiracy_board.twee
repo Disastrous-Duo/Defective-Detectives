@@ -647,7 +647,7 @@ var h = Math.round(parent.offsetHeight/2);
       for(var j in window[this_board].created_notes)
       {
         var note = window[this_board].created_notes[j];
-        if(note.note_type.indexOf("front") != -1)
+        if(note.type.indexOf("front") != -1)
         {
           canvas.bringToFront(note);
           canvas.bringToFront(note.pin);
