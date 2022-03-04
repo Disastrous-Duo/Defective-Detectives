@@ -2,8 +2,8 @@
 
 /* Custom to C&N */
 :root {
-  --foresight-color: #6cc6ce;
-  --precog-color: #c6496b;
+  --foresight-color: #1BDBFF;
+  --precog-color: #FF1F30;
   --client-color:gold;
   --text-color:#d2d3cd;
   --github-color:#6A2D95;
