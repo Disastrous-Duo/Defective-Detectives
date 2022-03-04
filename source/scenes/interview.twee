@@ -453,14 +453,14 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's hair gather in a fluffy jet black cloud, making their head look like it's about to float away and join its white cousins in the sky.">>
-<<AddParagraph "Despite its imposing mass, they managed to make them stand in a perhaps unstable, but surpringly perduring equilibirum.">>
+<<AddParagraph "Despite its imposing mass, they managed to make it stand in a perhaps unstable, but surpringly perduring equilibirum.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I can see that Nomnom puts a lot of care in their hair. They look proud of it!//">>
 <<AddParagraph "//Something strikes me as strange, though. I hope I'm not being too judgemental, but it seems a bit…//">>
 <<AddParagraph "//…dehydrated?//">>
 <<AddParagraph "//Usually this happens when people don't know how to take care of their specific hair type.//">>
-<<AddParagraph `"//I wonder how they could have grown up having that "+note("knowledge",{txt:"Nomnom not knowing how to care for their hair",type:'hint'})+".//"`>>
+<<AddParagraph `"//I wonder how they could have grown up having that "+note("knowledge",{txt:"Nomnom does not know how to care for their hair",type:'hint'})+".//"`>>
 
 
 <<AddOption "Look at Nomnom again." "interviewNomnom">>
@@ -476,24 +476,38 @@
 
 
 :: nomnomCoat [nobr]
-/* <<SetSpeaker "???">>
-<<AddParagraph "//I am trying to guess something about this person’s investigation skills but nothing comes to mind…//">>
-<<AddParagraph "//The one thing that catches my attention is this coat.//">>
-<<AddParagraph "//It's kind of…//">>
-<<AddParagraph "//Nice?//">>
-<<AddParagraph "//Compared to the rest of their clothes.//">>
-<<AddParagraph "//It looks warm and cozy too…//">>
-<<AddParagraph "//Maybe I can ask them what brand this is.//">>
-<<AddParagraph "//Later.//">>
-<<AddParagraph "//For now, let's try and get some more answers.//">> */
 
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom's coat is old and patched up at unusual places.">>
+<<AddParagraph "On the armpits, traces of flour and breadcrumbs remain.">>
 
-Traces of flour under the left arm.
-An old croissant is peeking from the pocket.
-Pocket full of it.
-They must really like bread and pastries.
+<<SetSpeaker "???">>
+<<AddParagraph "These happens when you buy bread on tuck it on under your arm.">>
+<<AddParagraph `"So Nomnom must be the one who buys the daily "+tooltip("baguette","You don't know what a baguette is?")+"."`>>
+<<AddParagraph "That's surprisingly responsible!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The left pocket seems to be full.">>
+<<AddParagraph "It has been hastily sewn back together, indicating it must //often// be full.">>
+<<AddParagraph "A dry croissant peeks out of it.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "And they also buy pastries, hm.">>
+<<AddParagraph "They have great taste.">>
+<<AddParagraph "I can work with that!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom's arm shifts, and something shiny catches your eyes.">>
+<<AddParagraph "The light bounces off from a reflective surface on their wrists.">>
+<<AddParagraph "Reflective //surfaces//, plural.">>
+<<AddParagraph "Nomnom is wearing two watches.">>
+<<AddParagraph "On the same wrist.">>
+<<AddParagraph "And none of them are on time.">>
 
 <<AddOption "Look at Nomnom again." "interviewNomnom">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "...I'm consufed and weirded out again.">>
 
 <<if $interview_cannele is false>>
 <<AddOption "Turn to Cannelé." "interviewCannelé">>
