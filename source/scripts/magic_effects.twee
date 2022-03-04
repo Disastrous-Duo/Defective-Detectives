@@ -216,6 +216,11 @@ window.clickOnNote = function(e,link)
 
   window['conspiracy_board'].add_note(note_data);
 
+  if(note_data.onclick)
+  {
+    note_data.onclick()
+  }
+
 
 }
 
