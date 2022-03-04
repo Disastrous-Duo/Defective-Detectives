@@ -209,8 +209,8 @@ span.continueblock {
 
 /*  CUSTOMISED */
 :root {
-  --cannelé-color: #c6496b;
-  --nomnom-color: #6cc6ce;
+  --cannelé-color: #FF1F30;
+  --nomnom-color: #1BDBFF;
 }
 
 

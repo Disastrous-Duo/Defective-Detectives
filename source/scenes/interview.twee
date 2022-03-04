@@ -738,7 +738,7 @@ They must really like bread and pastries.
 
 <<BlankSpeaker>>
 <<if $firstgiftcannele is false>>
-  <<AddParagraph  "From the corner of your eyes, you see @@precog;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "From the corner of your eyes, you see @@.precog;something@@ moving on Cannelé's arm." >>
   <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
   <<set $firstgiftcannele to true>>
 <</if>>
