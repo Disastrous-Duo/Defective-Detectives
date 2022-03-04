@@ -310,7 +310,7 @@
 <<AddParagraph "And stick it right back on the board by tugging the handle right on top of the screen.">>
 
 /*TODO: Disable only if when it is called, the variable asociated with the tutorial being completed is not true. because you can complete it before it being called, if you do it when you click the post-it.*/
-<<DisableContinueButtonTutorial>>
+<<DisableContinueButton "window.pullcord.completed_tutorial" "You should really take this post-it, you know.">>
 
 
 <<SetSpeaker "???">>
