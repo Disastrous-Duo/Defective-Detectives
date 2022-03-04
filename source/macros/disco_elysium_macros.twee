@@ -128,7 +128,7 @@ $args[0] -
   <<if _blockCheck and not eval(_blockCondition) >>
     <<run $paragraphs.deleteAt(0)>>
 
-    <<if _tooltipMessage>>
+    <<if _tooltipMessage != "undefined">>
       <<link `"@@#FakeContinueBtn;"+tooltip("CONTINUE ➤",_tooltipMessage)+"@@"`>><</link>>
     <<else>>
       <<link "@@#FakeContinueBtn;CONTINUE ➤@@">><</link>>
