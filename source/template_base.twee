@@ -22,6 +22,8 @@ body, tw-story
   color: #d2d3cd;
   height: 100%;
   overflow-x:hidden; /*Added for C&N -- remove if it breaks things too much*/
+  overflow-y:hidden; /*Added for C&N -- remove if it breaks things too much*/
+  /*Prevent unwanted scrollbars*/
 
   /*Added so you can't select text in an ugly way*/
   user-select: none;
@@ -31,17 +33,20 @@ body, tw-story
 
 }
 
+#ui-bar-body
+{
+  /*Prevent scroll bar in UI bar*/
+  overflow:hidden;
+}
+
 tw-hook
 {
   margin-left: -25px;
 }
 
 #story {
-  height: 100%;
+  height: 90%; /*Prevent sticking to the top or bottom of the webpage*/
   overflow-y: auto;
-
-  margin-top: 0em;
-  margin-bottom: 0em;
 }
 
 .passage {
@@ -50,22 +55,7 @@ tw-hook
   margin-left: 1.5em;
 }
 
-a {
-  color: #b6523a;
-  text-decoration: none;
-}
 
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-a:active {
-  color: white;
-}
-
-.passage ol {
-  margin-left: -1em;
-}
 
 .purple_speaker {
   color: #705cbb;
@@ -109,6 +99,7 @@ a:active {
 
 .pastchoice {
   color: #737c87;
+  font-style: italic;
 }
 
 .option {
@@ -118,17 +109,6 @@ a:active {
 span.continueblock {
   display: none;
 }
-
-/* a.macro-linkreplace {
-  background-color: #90280f;
-  color: white;
-  padding: 15px;
-  padding-bottom: 5px;
-  padding-top: 10px;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin-left: -1.5em;
-  display: block;
-} */
 
 /*TEESSST*/
 #ContinueBtn {
@@ -267,4 +247,48 @@ span.continueblock {
 #story-author
 {
   margin-bottom:25px;
+}
+
+
+#OptionList
+{
+  list-style: none;
+}
+
+/*Option links*/
+
+li a {
+  display:inline-block;
+  color: #b6523a;
+  text-decoration: none;
+  width:100%;
+  padding:4px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+  background-color:#90280f;
+  /* background-color:#b6523a; */
+}
+
+li a:active {
+  color: white;
+}
+
+.passage ul {
+  margin-left: -2em;
+}
+
+a .OptionChoice
+{
+  color:red;
 }
