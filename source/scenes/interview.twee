@@ -541,14 +541,14 @@ They must really like bread and pastries.
 <<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"It's pronounced //non-non//, "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like “non” which means “no”"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name”…", type:"hint"})+ "?"`>>
+<<AddParagraph `"It's pronounced //non-non//, "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like “non” which means “no”"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name”…", type:"hint", fontSize:16})+ "?"`>>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "What are you grumbling for?">>
-<<AddParagraph `note("Cannelé",{txt:"Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"hint"})+"'s a great name!"`>>
+<<AddParagraph `note("Cannelé",{txt:"Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"hint", fontSize:13})+"'s a great name!"`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "It's literally shit and I hate you, //''Nomnom''//">>
@@ -879,9 +879,9 @@ They must really like bread and pastries.
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"Who are //you//?", type:"question"})`>>
-<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"What is your //Gift//?", type:"question"})`>>
-<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"What //happened// to you?", type:"question"})`>>
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question"})`>>
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question"})`>>
+<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question"})`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
@@ -1145,8 +1145,8 @@ They must really like bread and pastries.
 <<AddParagraph "//This…//">>
 <<AddParagraph "//This ridiculous situation has happened before…//">>
 <<AddParagraph `"//Cannelé…….. "+note("Muffin (??)",{txt:"Muffin… This isn't a name, it's a pastry…", type:"hint"})+" ………….//"`>>
-<<AddParagraph `"//Nomnom………………. "+ note("Yasyas (???)",{txt:"This is nothing at all not even a word? This comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…", type:"hint"})+" ………..//"`>>
-<<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"Terrifying naming conventions… History repeats itself?", type:"question"})`>>
+<<AddParagraph `"//Nomnom………………. "+ note("Yasyas (This isn't even a word???)",{txt:"Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…", type:"hint", fontSize:13})+" ………..//"`>>
+<<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"TERRIFYING NAMING CONVENTIONS", type:"question"})`>>
 <<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
 <<AddParagraph "//Perhaps even more terrifying than the memory loss itself…//">>
 
