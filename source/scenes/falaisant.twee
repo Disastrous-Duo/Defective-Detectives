@@ -9,7 +9,7 @@
 /* Falaisant : Introduction of the city */
 :: Falaisant [nobr]
 <<run UIBar.unstow()>>
-<<audio "intro"  volume 0 fadein>>
+<<audio "intro"  volume 0 fadeto 0.5>>
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
@@ -295,4 +295,4 @@
 <<AddParagraph "That's…">>
 <<AddParagraph "… An excellent question.">>
 
-<<AddOption "CONTINUE" "newOffice">>
+<<GotoContinueButton "newOffice">>
