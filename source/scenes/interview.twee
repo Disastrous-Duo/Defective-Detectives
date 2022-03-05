@@ -1204,3 +1204,9 @@
 
 :: finDemo [nobr]
 <h2 class="typewriter" >Chapter 2 - The Hoboolean Coin</h2><br/>
+
+<<BlankSpeaker>>
+<<AddParagraph "//Hey!//">>
+<<AddParagraph "//You've reached the end of this demo. Thank you so much for playing! Now...//">>
+<<AddParagraph "//We'd like to ask you if you could help us with something.//">>
+<<AddParagraph "We would love to hear your feedback on our demo, please fill this form : https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!">>

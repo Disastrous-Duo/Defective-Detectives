@@ -3,10 +3,12 @@
 <<BlankSpeaker>>
 
 <img src="./source/media/title_screen.png" style="max-width: 65%;"/>
+
 <<AddOption "START GAME" "Falaisant">>
 
 /* Falaisant : Introduction of the city */
 :: Falaisant [nobr]
+<<run UIBar.unstow()>>
 <<audio "intro"  volume 0 fadein>>
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>

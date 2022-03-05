@@ -114,8 +114,10 @@ $args[0] -
 <<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>
 <<run $paragraphs.deleteAt(0)>>
 <span class="paragraph"><<print _paragraph>></span>
-<br/>
-<br/>
+<<if _paragraph != undefined and _paragraph.length > 0>> /*Avoid empty spaces before options*/
+  <br/>
+  <br/>
+<</if>>
 
 <<if $paragraphs.length > 0>>
   <<if ($paragraphs[0].indexOf("!DisableContinueButton") != -1) >>

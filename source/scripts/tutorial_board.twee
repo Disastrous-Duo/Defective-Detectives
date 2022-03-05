@@ -98,6 +98,7 @@ var h = Math.round(parent.offsetHeight/2);
 
   var settings = {};
   settings.maxDezoom = 0.5;
+  settings.maxZoom = 2;
   settings.noteWidth = 120;
   settings.noteHeight = 120;
   settings.notePadding = 10;
@@ -676,7 +677,7 @@ var h = Math.round(parent.offsetHeight/2);
       var delta = opt.e.deltaY;
       var zoom = canvas.getZoom();
       zoom *= 0.999 ** delta;
-      if (zoom > 1) zoom = 1;
+      if (zoom > settings.maxZoom) zoom = settings.maxZoom;
       if (zoom < settings.maxDezoom) zoom = settings.maxDezoom;
       canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
       opt.e.preventDefault();

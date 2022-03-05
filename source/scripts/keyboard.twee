@@ -39,7 +39,7 @@ $(document).on("keyup", function (e) {
   }
 
 	// G -- DEBUG SHORTCUT  TODO: comment before any public release, will fuck with keyboard inputs
-	if(e.keyCode == 71)
+	if(window.debug_mode && e.keyCode == 71)
 	{
 		let passageTitle = prompt("Go to which passage title? (case sensitive)");
 		Engine.play(passageTitle);

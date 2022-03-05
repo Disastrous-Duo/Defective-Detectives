@@ -47,8 +47,11 @@ window.updateForesightTimer = function() // Update a timer countdown, mainly use
 	 for(var i = 0; i < all_ftimers.length; i++)
 	 {
 		 var ftimer = all_ftimers[i];
-		 var millis = new Date().getMilliseconds();
-		 ftimer.innerHTML = window.forceDigits(millis,3);
+     if(!ftimer.parentNode.classList.contains("dim")) // Don't update timers that were read
+     {
+       var millis = new Date().getMilliseconds();
+       ftimer.innerHTML = window.forceDigits(millis,3);
+     }
 	 }
 }
 

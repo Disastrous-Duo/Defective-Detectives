@@ -412,7 +412,7 @@ function()
 }
 })
 +
-" : Magic is a universal gift that can be activated @@.github; after eating a Fleur d’Âme.@@"`>>
+" : Magic is a universal gift that can be activated <span style='display: inline-block'>@@.github;after eating a Fleur d'Âme.@@</span>"`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `

@@ -15,6 +15,21 @@ preload_list.map(function (url) {
 	window._MediaCache[url] = image;
 });
 
-console.log(Config);
+
 // remove all default line breaks
 Config.passages.nobr = true;
+
+// debug mode, used during dev
+window.debug_mode = false;
+
+// disables options not available to the player
+if(!window.debug_mode)
+{
+  Config.history.controls = false;
+  UIBar.stow();
+
+}
+else
+{
+  pullcord.quickstart();
+}
