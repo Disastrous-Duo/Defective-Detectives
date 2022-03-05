@@ -77,9 +77,9 @@
 <<AddParagraph "The two detectives walk in circles around the coffee table, thinking out loud.">>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Let's recap.">>
-<<AddParagraph `"Our client's wallet was "+note("stolen",{txt:"Wallet stolen by a cat", type:"hint"})+" by a cat."`>>
+<<AddParagraph `"Our client's wallet was "+note("stolen",{txt:"Wallet stolen by a cat", type:"clue"})+" by a cat."`>>
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"Yep. Then, we followed a "+note("cat",{txt:"Cats bring items to Katty", type:"hint"})+" who brought my shoe to Katty."`>>
+<<AddParagraph `"Yep. Then, we followed a "+note("cat",{txt:"Cats bring items to Katty", type:"clue"})+" who brought my shoe to Katty."`>>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `"Katty said she didn't ask him to, but the cat did it by himself."`>>
 <<SetSpeaker "Nomnom">>

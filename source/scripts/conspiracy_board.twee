@@ -100,7 +100,7 @@ var h = Math.round(parent.offsetHeight/2);
   settings.gridspacing = 150;
   settings.gridOffset = 30;
   settings.noteColors = {
-    "hint":"#FEFF9C",
+    "clue":"#FEFF9C",
     "question":"#6DCFF6",
     "picture":"white",
     "instruction":"white",

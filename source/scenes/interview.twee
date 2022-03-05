@@ -379,7 +379,7 @@
 <<AddParagraph "Fallen //nobility…//">>
 
 <<BlankSpeaker>>
-<<AddParagraph `"Your eyes go back to the "+ note("golden tattoo",{txt:"Intricate puzzle-like golden ink is painting both of Cannelé's foreams.",type:'hint', fontSize:15})+" running up their wrists."`>>
+<<AddParagraph `"Your eyes go back to the "+ note("golden tattoo",{txt:"Intricate puzzle-like golden ink is painting both of Cannelé's foreams.",type:'clue', fontSize:15})+" running up their wrists."`>>
 <<AddParagraph "The design looks like a maze, pieces of an intricate puzzle that have been taken apart.">>
 
 <<SetSpeaker "???">>
@@ -465,7 +465,7 @@
 <<AddParagraph "//Something strikes me as strange, though. I hope I'm not being too judgemental, but it seems a bit…//">>
 <<AddParagraph "//…dehydrated?//">>
 <<AddParagraph "//Usually this happens when people don't know how to take care of their specific hair type.//">>
-<<AddParagraph `"//I wonder how they could have grown up without having that "+note("knowledge",{txt:"Nomnom does not know how to care for their hair",type:'hint'})+".//"`>>
+<<AddParagraph `"//I wonder how they could have grown up without having that "+note("knowledge",{txt:"Nomnom does not know how to care for their hair",type:'clue'})+".//"`>>
 
 <<include choicesNomnom>>
 
@@ -518,7 +518,7 @@
 <<AddParagraph "It might be correlated with the reason why Nomnom currently has mismatching footwear.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph `"//I can't help but have a bad feeling about this "+note("shoe",{txt:"Nomnom's aerodynamic left shoe", type:"hint"})+".//"`>>
+<<AddParagraph `"//I can't help but have a bad feeling about this "+note("shoe",{txt:"Nomnom's aerodynamic left shoe", type:"clue"})+".//"`>>
 
 <<include choicesNomnom>>
 
@@ -530,14 +530,14 @@
 <<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph `"It's pronounced //non-non//, "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like “non” which means “no”"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name”…", type:"hint", fontSize:16})+ "?"`>>
+<<AddParagraph `"It's pronounced //non-non//, "+note(tooltip("Nomnom","Nom means name in french, and it's pronounced like “non” which means “no”"),{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name”…", type:"clue", fontSize:16})+ "?"`>>
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé just grumbles in response.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "What are you grumbling for?">>
-<<AddParagraph `note("Cannelé",{txt:"Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"hint", fontSize:13})+"'s a great name!"`>>
+<<AddParagraph `note("Cannelé",{txt:"Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"clue", fontSize:13})+"'s a great name!"`>>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "It's literally shit and I hate you, //''Nomnom''//">>
@@ -657,7 +657,7 @@
 <<AddParagraph "This is really not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Do not worry, you are "+note("//not//",{txt:"Other cases of amnesia",type:"hint"})+" our first case of amnesia, we //absolutely// know what we are doing."`>>
+<<AddParagraph `"Do not worry, you are "+note("//not//",{txt:"Other cases of amnesia",type:"clue"})+" our first case of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -688,7 +688,7 @@
 <<AddParagraph "This is //really// not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Do not worry, you are "+note("//not//  our first case",{txt:"Other cases of amnesia",type:"hint"})+" of amnesia, we //absolutely// know what we are doing."`>>
+<<AddParagraph `"Do not worry, you are "+note("//not//  our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -759,7 +759,7 @@
 <<AddParagraph "Nothing. I looked into all my pockets, but I have nothing…">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"So, a "+ note("cat", {"txt": "All ID was stolen by a cat", type:"hint"}) +" stole the only lead you had about your identity. I see."`>>
+<<AddParagraph `"So, a "+ note("cat", {"txt": "All ID was stolen by a cat", type:"clue"}) +" stole the only lead you had about your identity. I see."`>>
 
 <<if $interview_identity is false>>
 <<AddOption "«Who am I?»" "Identity">>
@@ -1062,8 +1062,8 @@
 <<AddParagraph "//I can feel it.//">>
 <<AddParagraph "//This…//">>
 <<AddParagraph "//This ridiculous situation has happened before…//">>
-<<AddParagraph `"//Cannelé…….. "+note("Muffin (??)",{txt:"Muffin… This isn't a name, it's a pastry…", type:"hint"})+" ………….//"`>>
-<<AddParagraph `"//Nomnom………………. "+ note("Yasyas (This isn't even a word???)",{txt:"Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…", type:"hint", fontSize:13})+" ………..//"`>>
+<<AddParagraph `"//Cannelé…….. "+note("Muffin (??)",{txt:"Muffin… This isn't a name, it's a pastry…", type:"clue"})+" ………….//"`>>
+<<AddParagraph `"//Nomnom………………. "+ note("Yasyas (This isn't even a word???)",{txt:"Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…", type:"clue", fontSize:13})+" ………..//"`>>
 <<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"TERRIFYING NAMING CONVENTIONS", type:"question"})`>>
 <<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
 <<AddParagraph "//Perhaps even more terrifying than the memory loss itself…//">>
