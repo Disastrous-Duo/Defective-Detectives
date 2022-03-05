@@ -882,6 +882,11 @@
 <<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question"})`>>
 <<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question"})`>>
 
+<<GotoContinueButton "Contract2_1">>
+
+
+:: Contract2_1
+
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
 <<AddParagraph "Clause 1: I do not take any responsability on whatever this maniac right here might do.">>
@@ -889,9 +894,6 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
 
-<<GotoContinueButton "Contract2_1">>
-
-:: Contract2_1
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé pauses.">>
 <<BlankSpeaker>>
@@ -1195,7 +1197,7 @@
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
 
-<<AddOption "«I-I didn't even sign the contract…»" "Investigation1">>
+<<AddOption "«I-I didn't even sign the contract…»" "finDemo">>
 
 
 :: Yasyas [nobr]
