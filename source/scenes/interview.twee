@@ -161,6 +161,7 @@
 <<AddParagraph "On the other side, a sink and some cups. ">>
 <<AddParagraph "In front of you, the wall is scattered with papers.">>
 <<AddParagraph `"A small door on the side reads : "+tooltip("//Petit Coin//","The washroom, the toilet, the WC, the loo; you get it.")+". It must be the toilet : you are not sure you want to explore this particular area of the run-down office."`>>
+<<AddParagraph "">>
 
 <<set $interview_left to false>>
 <<set $interview_right to false>>
