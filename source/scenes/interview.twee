@@ -847,7 +847,9 @@
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
 
 <<AddOptionVariables "//Am I really… leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
-<<AddOptionVariables "//But somehow… I feel like they might be trustworthy…//" "Contract2" `{"trust":true}`>>
+/* <<AddOptionVariables "//But somehow… I feel like they might be trustworthy…//" "Contract2" `{"trust":true}`>> */
+/* SUGGESTION : */
+<<AddOptionVariables "//But somehow… I feel like I can count on them…//" "Contract2" `{"trust":true}`>>
 
 :: Contract2 [nobr]
 
@@ -855,7 +857,9 @@
   <<SetSpeaker "???">>
   <<AddParagraph "//They still look a little suspicious to me…//">>
   <<AddParagraph "//And annoying.//">>
-  <<AddParagraph "//But at this point, I have no other choice but to rely on them.//">>
+  /* <<AddParagraph "//But at this point, I have no other choice but to rely on them.//">> */
+  /* SUGGESTION : */
+  <<AddParagraph "//But at this point, I have no one else I can rely on.//">>
   <<AddParagraph "//So I'll just bear with it for now.//">>
 <</if>>
 
@@ -884,6 +888,9 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I sincerely despise you so much.">>
 
+<<GotoContinueButton "Contract2_1">>
+
+:: Contract2_1
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé pauses.">>
 <<BlankSpeaker>>
@@ -924,16 +931,16 @@
 <<SetSpeaker "???">>
 <<AddParagraph "???">>
 
-/*TODO: Add "Mr." */
 <<BlankSpeaker>>
-<<AddParagraph  `"@@.precog;On his coat are embroidered the initials "+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
+<<AddParagraph  `"@@.precog;On his coat are embroidered the initials “"+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+"”"`>>
+<<AddParagraph `slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
 
 <<AddOption "«Not really?»" "noName">>
 <<AddOption "«I can come up with one!»" "enterName">>
-<<AddOption "«If I say no, what's gonna happen?»" "ifNoName">>
+<<AddOption "«If I say “No”, what's gonna happen?»" "ifNoName">>
 
 
 :: enterName[nobr]
