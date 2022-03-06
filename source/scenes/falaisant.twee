@@ -193,7 +193,7 @@
 
 
 :: Falaisant10 [nobr]
-<<audio "intro"  volume 1 fadeout>>
+<<audio "intro" fadeout>>
 <<BlankSpeaker>>
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
 

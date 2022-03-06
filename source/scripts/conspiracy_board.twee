@@ -104,11 +104,15 @@ var h = Math.round(parent.offsetHeight/2);
     "question":"#6DCFF6",
     "picture":"white",
     "instruction":"white",
-    "front-hint":"#FEFF9C",
+    "front-clue":"#FEFF9C",
   };
 
   settings.lineColor = "red";
   settings.gridColor = "#281918";
+  settings.newNoteBorderColor = "red";
+  settings.newNoteStrokeWidth = 3;
+  settings.normalNoteBorderColor = "black";
+  settings.normalStrokeWidth = 1;
 
 
   /*
@@ -127,8 +131,8 @@ var h = Math.round(parent.offsetHeight/2);
       height:settings.noteHeight,
       fill: settings.noteColors[type],
       angle:6,
-      stroke:"black",
-      strokeWidth: 1,
+      stroke:settings.newNoteBorderColor,
+      strokeWidth: settings.newNoteStrokeWidth,
     });
 
     var textObject = new fabric.Textbox(text, {
@@ -152,6 +156,8 @@ var h = Math.round(parent.offsetHeight/2);
       width:settings.noteWidth,
       height:settings.noteHeight,
       pin:pin,
+      rect:rect,
+      textObject:textObject
 
     });
 
@@ -168,6 +174,8 @@ var h = Math.round(parent.offsetHeight/2);
       width:settings.noteWidth,
       height:settings.noteHeight,
       fill: settings.noteColors["picture"],
+      stroke:settings.newNoteBorderColor,
+      strokeWidth: settings.newNoteStrokeWidth,
     });
 
     var textObject = new fabric.Textbox(text, {
@@ -353,6 +361,13 @@ var h = Math.round(parent.offsetHeight/2);
 
     canvas.add(note);
     canvas.add(pin);
+
+    // If the instructions are still there, remove them
+    if(instructions)
+    {
+      canvas.remove(instructions);
+      instructions = false;
+    }
   }
 
   function makeReticule()
@@ -496,6 +511,11 @@ var h = Math.round(parent.offsetHeight/2);
 
     if(p && p.object_type == 'note')
     {
+
+      //Set bordercolor to default -- effect where new post-its will be highlighted
+      p.rect.set({stroke:settings.normalNoteBorderColor,strokeWidth:settings.normalStrokeWidth })
+
+      //Move associated pin too
       p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
       // Updates data external strucure about post-its
       // Coordinates change
@@ -738,11 +758,30 @@ var h = Math.round(parent.offsetHeight/2);
     });
 
 
-  function madeLineEvent(start, end)
-  {
-    // Empty event for now
+    function madeLineEvent(start, end)
+    {
+      // Empty event for now
 
-  }
+    }
+
+
+
+    // Initialise the board with an event
+    var instructions_txt = "Here's the CONSPIRACY BOARD.\n This is where all the clues and mysteries you have collected will go!";
+    var instructions = new fabric.Textbox(instructions_txt, {
+      left: canvas.getWidth()/2,
+      top: canvas.getHeight()/2,
+     width:canvas.getWidth()*0.9,
+     fontFamily:"Caveat-Regular",
+     fontSize: 24,
+     textAlign:"center",
+     angle:0,
+     fill: '#FFFFFF'
+    });
+
+    instructions.hasControls = instructions.hasBorders = false;
+
+    canvas.add(instructions);
 
   };
 

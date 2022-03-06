@@ -90,8 +90,9 @@ var h = Math.round(parent.offsetHeight/2);
     html_canvas.width = parent.offsetWidth;
     html_canvas.height = parent.offsetHeight;
 
-  var canvas = this.canvas = new fabric.Canvas(`${this_board+"_cvs"}`, { selection: false,
-  preserveObjectStacking: true // important to prevent object from changing layers when selected or moved
+  var canvas = this.canvas = new fabric.Canvas(`${this_board+"_cvs"}`, {
+  selection: false,
+  preserveObjectStacking: true, // important to prevent object from changing layers when selected or moved
   });
 
   fabric.Object.prototype.originX = fabric.Object.prototype.originY = 'center';
@@ -362,6 +363,9 @@ var h = Math.round(parent.offsetHeight/2);
 
     canvas.add(note);
     canvas.add(pin);
+
+
+
   }
 
   function makeReticule()
@@ -511,7 +515,7 @@ var h = Math.round(parent.offsetHeight/2);
       window[this_board].notesList[p.external_id].x = p.left;
       window[this_board].notesList[p.external_id].y = p.top;
 
-      canvas.renderAll();
+      canvas.requestRenderAll();
     }
 
 
@@ -530,7 +534,7 @@ var h = Math.round(parent.offsetHeight/2);
     {
       var pointer = canvas.getPointer(e);
       window[this_board].reticule.moveVisor(window[this_board].reticule, pointer.x, pointer.y);
-      canvas.renderAll();
+      canvas.requestRenderAll();
     }
 
   });
@@ -627,7 +631,7 @@ var h = Math.round(parent.offsetHeight/2);
     if(p && p.object_type == "line")
     {
       p.set({stroke:p.darkColor});
-      canvas.renderAll();
+      canvas.requestRenderAll();
     }
   })
 
@@ -637,7 +641,7 @@ var h = Math.round(parent.offsetHeight/2);
     if(p && p.object_type == "line")
     {
       p.set({stroke:p.normalColor});
-      canvas.renderAll();
+      canvas.requestRenderAll();
     }
   })
 
@@ -668,7 +672,7 @@ var h = Math.round(parent.offsetHeight/2);
       canvas.bringToFront(window[this_board].reticule.visor);
 
   }
-    canvas.renderAll();
+    canvas.requestRenderAll();
 
 
 
@@ -698,6 +702,9 @@ var h = Math.round(parent.offsetHeight/2);
           vpt[5] = canvas.getHeight() - settings.maxPanY * zoom;
         }
       //}
+
+      canvas.requestRenderAll();
+
     });
 
     canvas.on('mouse:down', function(opt) {
@@ -734,9 +741,11 @@ var h = Math.round(parent.offsetHeight/2);
             vpt[5] = canvas.getHeight() - settings.maxPanY * zoom;
           }
         //}
-        this.requestRenderAll();
+
         this.lastPosX = e.clientX;
         this.lastPosY = e.clientY;
+
+        canvas.requestRenderAll();
       }
     });
     canvas.on('mouse:up', function(opt) {
@@ -744,6 +753,7 @@ var h = Math.round(parent.offsetHeight/2);
       // for all objects, so we call setViewportTransform
       this.setViewportTransform(this.viewportTransform);
       this.isDragging = false;
+      canvas.requestRenderAll();
     });
 
 
@@ -759,9 +769,66 @@ var h = Math.round(parent.offsetHeight/2);
       // all hints are connected!
 
       instructions.text = "WELL DONE!\nNow you know how to use the conspiracy board. Use it to gather clues and mysteries!\n(Close the board by tugging the handle again.)";
+      window[this_board].clearZoomPan();
       window.pullcord.setTutorialPhase(2);
     }
 
+  }
+
+
+  window[this_board].clearZoomPan = function()
+  {
+
+    const animation_duration = 1800;
+
+    // Easing function
+    function easeInOut(t) {return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1};
+
+    // Interpolation between those two transforms, easing it for each value
+    // Target Transform = canvas.viewportTransform = [1, 0, 0, 1, 0, 0];
+    var initial_transform = canvas.viewportTransform;
+    var target_transform = [1, 0, 0, 1, 0, 0];
+
+    function animationCall(normalised_time)
+    {
+      var current_transform = [];
+      for(var i in target_transform)
+      {
+        var initial = initial_transform[i]
+        var target = target_transform[i];
+        var current = initial + (target - initial) * easeInOut(normalised_time); // time must be normalised between 0 and 1;
+        current_transform[i] = current;
+      }
+
+      // Set transform, render
+      canvas.viewportTransform = current_transform;
+      canvas.renderAll();
+    }
+
+
+    // ANimation using requestAnimationFrame instead of setInterval
+    let start = null, previousTimeStamp;
+    let done = false;
+    function stepAnimation(timestamp)
+    {
+      if(start === null)
+      {
+        start = timestamp;
+      }
+      const elapsed = timestamp - start;
+
+      if(previousTimeStamp !== timestamp)
+      {
+        animationCall(elapsed/animation_duration);
+      }
+
+      if(elapsed < animation_duration)
+      {
+        window.requestAnimationFrame(stepAnimation);
+      }
+    }
+
+    window.requestAnimationFrame(stepAnimation);
   }
 
   /* Run at init*/
@@ -779,9 +846,7 @@ var h = Math.round(parent.offsetHeight/2);
    fill: '#FFFFFF'
   });
 
-
   instructions.hasControls = instructions.hasBorders = false;
-
   canvas.add(instructions);
 
 

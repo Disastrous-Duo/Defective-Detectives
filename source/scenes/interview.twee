@@ -999,7 +999,7 @@
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
 <<AddParagraph "Inspiration?">>
 
-<<AddParagraph "<h2 class='duel_title duel_left'>Designation</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<AddParagraph "<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A name…">>

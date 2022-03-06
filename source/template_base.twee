@@ -45,7 +45,7 @@ tw-hook
 }
 
 #story {
-  height: 90%; /*Prevent sticking to the top or bottom of the webpage*/
+  height: 75%; /*Prevent sticking to the top or bottom of the webpage*/
   overflow-y: auto;
 }
 
