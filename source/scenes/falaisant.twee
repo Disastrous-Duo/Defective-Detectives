@@ -56,14 +56,14 @@
 <<AddParagraph "//On the other side of the place, a mysterious figure in a long, dark coat is making their way out of the market.//">>
 
 <<AddOption "The drop glides, chasing after the curious individual." "Falaisant1_7_1">>
-<<AddOption "The drop takes another turn, rolling past the suspicious silhouette." "Falaisant1_7_2">>
+<<AddOption "The drop takes another turn, rolling away from the suspicious silhouette." "Falaisant1_7_2">>
 
 :: Falaisant1_7_1 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The figure is walking at a rapid pace.//">>
 <<AddParagraph "//They're stumbling and stopping often, as if lost in the chaos of alleys.//">>
 
-<<AddOption "The drop keeps up; left, right, left again… before crashing onto somethig… paper?" "Falaisant1_8">>
+<<AddOption "The drop keeps up; left, right, left again… before crashing onto something… paper?" "Falaisant1_8">>
 
 
 :: Falaisant1_7_2 [nobr]
@@ -79,7 +79,7 @@
 <<AddParagraph "//The individual crouches to pick it up.//">>
 <<AddParagraph "//They shake the paper slightly, to get rid of the humidity that was clinging to it.//">>
 
-<<AddOption "The drop is sent flying, high, high." "Falaisant1_9">>
+<<AddOption "The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City." "Falaisant1_9">>
 
 :: Falaisant1_9 [nobr]
 <<BlankSpeaker>>
@@ -189,7 +189,7 @@
 <<AddParagraph "//They crouch to pick up the flyer.//">>
 <<AddParagraph "//They shake the paper slightly, to get rid of the humidity that was clinging to it.//">>
 
-<<AddOption "The drop is sent flying, high, high." "Falaisant1_9">>
+<<AddOption "The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City." "Falaisant1_9">>
 
 
 :: Falaisant10 [nobr]
@@ -197,7 +197,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
 
-<<SetSpeaker "???">>
+<<SetSpeaker "YOU (???)">>
 <<AddParagraph "ACHOO!">>
 
 <<BlankSpeaker>>
@@ -205,7 +205,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
-<<AddParagraph "Something happened behind that door.">>
+<<AddParagraph "Something just happened behind that door.">>
 
 
 <<AddOption "Knock" "Expo">>
@@ -225,9 +225,6 @@
 
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "I said it first, YOU SHUT UP, shut up">>
-
-<<SetSpeaker "Leathery Voice">>
-<<AddParagraph "//What a beautiful morning//">>
 
 <<AddOption "Knock" "Expo_Knock">>
 <<AddOption "Wait" "Expo_Wait1">>
