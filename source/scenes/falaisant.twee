@@ -197,7 +197,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
 
-<<SetSpeaker "???">>
+<<SetSpeaker "YOU (???)">>
 <<AddParagraph "ACHOO!">>
 
 <<BlankSpeaker>>
@@ -225,9 +225,6 @@
 
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "I said it first, YOU SHUT UP, shut up">>
-
-<<SetSpeaker "Leathery Voice">>
-<<AddParagraph "//What a beautiful morning//">>
 
 <<AddOption "Knock" "Expo_Knock">>
 <<AddOption "Wait" "Expo_Wait1">>

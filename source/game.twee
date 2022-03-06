@@ -25,7 +25,7 @@
 
 :: StoryInit {"position":"268,25","size":"100,100"}
 <<set $optionmap to new Map()>>
-<<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???", "law #1", "law #2", "law #3"]>>
+<<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???", "law #1", "law #2", "law #3", "you (???)"]>>
 <<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
 <<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
 <<set $purple_speaker to ["voice", "joséphine"]>>
