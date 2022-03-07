@@ -76,7 +76,7 @@
 
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "A minute, please!">> 
+<<AddParagraph "A minute, please!">>
 
 <<BlankSpeaker>>
 <<AddParagraph "And then they're running around, like two ouragans in a bottle, as they try to clean the office up.">>
@@ -1095,6 +1095,7 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph  "@@.shake;''*COUGH*''@@" >>
+<<PlaySound "drink_mug">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The now empty cup on the table shakes as Cannelé violently slams their fist on the table.">>

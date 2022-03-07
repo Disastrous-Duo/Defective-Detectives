@@ -38,7 +38,13 @@
 <<set $client_name to "Yasyas">> /*TODO: Remove this line before release*/
 
 // Music must be added here
-<<cacheaudio "intro" "source/media/a_place_of_mystery.mp3">>
+<<cacheaudio "intro_bgm" "source/media/music/a_place_of_mystery.mp3">>
+
+<<set $sfx_list to ["drink_mug","found_note"]>>
+<<for _i = 0; _i < $sfx_list.length; _i++>>
+
+	<<cacheaudio `"sfx_"+$sfx_list[_i]` `"source/media/sfx/"+$sfx_list[_i]+".wav"` >>
+<</for>>
 
 ::@include template_base.twee
 ::@include styles/magic_choices.twee
