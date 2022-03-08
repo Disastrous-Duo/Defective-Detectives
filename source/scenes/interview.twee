@@ -3,6 +3,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "">>
+<<audio "bard_bgm"  volume 0 fadeto 0.5>>
 <<AddParagraph "Once inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
 <<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
@@ -199,7 +200,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
-<<PlaySound "impact1">>
+<<PlaySound "small_bang">>
 
 
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
@@ -218,7 +219,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Wow…" "endCleaning">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 
@@ -234,16 +235,13 @@
 <<AddParagraph "Behind the stool, the sink is filled with three cups. Next to it, a water boiler sits on an open cupboard that's almost empty.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//This kitchen is almost //desolate//… somehow this is not very re-//">>
+<<AddParagraph "//This kitchen is almost ''desolate''… somehow this is not very re-//">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Why do you HAVE to be a pain in my-">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//-assuring.//">>
-
-<<BlankSpeaker>>
-<<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
 <<if $interview_left is false>>
   <<AddOption "Inspect couch on the left." "Left">>
@@ -253,7 +251,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Wow…" "endCleaning">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 :: Wall [nobr]
@@ -269,13 +267,15 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.">>
+<<PlaySound "light_flicker" "1s">>
 
 <<BlankSpeaker>>
 <<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
+<<PlaySound "impact">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "OUCH!">>
-<<PlaySound "impact2">>
+
 
 
 
@@ -287,7 +287,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Wow…" "endCleaning">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 
@@ -311,6 +311,7 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I warned you it was @@.foresight;unstable@@…">>
+<<PlaySound "light_flicker" "1s">>
 
 <<BlankSpeaker>>
 <<AddParagraph "They both sigh and start to crouch and pick up the scattered documents.">>
@@ -625,6 +626,7 @@
 
 
 :: Identity [nobr]
+<<audio "bard_bgm" fadeto 0>>
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>

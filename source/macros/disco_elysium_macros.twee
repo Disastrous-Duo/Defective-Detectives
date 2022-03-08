@@ -27,6 +27,10 @@
       <</capture>>
       <</for>>
 
+      <<if _optiondata["soundTransition"]>>
+        <<audio `"sfx_"+_optiondata["soundTransition"]` volume 0.6 play>>
+      <</if>>
+
     <</link>>
     </li>
   <</capture>>
@@ -100,15 +104,20 @@ $args[0] -
 
 
 :: AddOption [widget] {"position":"273,265","size":"100,100"}
-<<widget "AddOption">><<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{}})>><</widget>>
+<<widget "AddOption">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":false})>>
+<</widget>>
 
 :: AddOptionVariables [widget] {"position":"573,265","size":"100,100"}
-<<widget "AddOptionVariables">><<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2]})>><</widget>>
+<<widget "AddOptionVariables">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2],"soundTransition":false})>>
+<</widget>>
 
-/*
-  do a check on content of paragraph (or even next paragraph)
-  if matches the special disable command => disable the continue button
-*/
+:: AddOptionSound [widget] {"position":"573,265","size":"100,100"}
+<<widget "AddOptionSound">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":$args[2]})>>
+<</widget>>
+
 
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
 <<widget "DisplayParagraphs">>

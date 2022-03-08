@@ -118,7 +118,9 @@
 :: Falaisant2_6 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Plic.//">>
+<<PlaySound "plic">>
 <<AddParagraph "//Ploc.//">>
+<<PlaySound "ploc">>
 
 <<AddOption "Lower, Lower…" "Falaisant2_7">>
 
@@ -193,9 +195,10 @@
 
 
 :: Falaisant10 [nobr]
-<<audio "intro_bgm" fadeout>>
+<<audio "intro_bgm" fadeto 0>>
 <<BlankSpeaker>>
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
+<<PlaySound "plic">>
 
 <<SetSpeaker "YOU (???)">>
 <<AddParagraph "ACHOO!">>
@@ -205,10 +208,11 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
+<<PlaySound "small_bang">>
 <<AddParagraph "Something just happened behind that door.">>
 
 
-<<AddOption "Knock" "ExpoKnock">>
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo">>
 
 :: ExpoKnock
@@ -228,7 +232,7 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "I said it first, YOU SHUT UP, shut up">>
 
-<<AddOption "Knock" "Expo_Knock">>
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo_Wait1">>
 
 :: Expo_Wait1 [nobr]
@@ -241,7 +245,7 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "NO, NO, you shut up.">>
 
-<<AddOption "Knock" "Expo_Knock">>
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo_Wait2">>
 
 :: Expo_Wait2 [nobr]
@@ -254,7 +258,7 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "ILL SHUT UP WHEN YOU STOP BEING ANNOYING.">>
 
-<<AddOption "Knock" "Expo_Knock">>
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo_Knock">>
 
 
@@ -267,8 +271,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BAM*''">>
-<<PlaySound "dooropens">>
-<<PlaySound "loud_bang">>
+<<PlaySound "door_open">>
 <<BlankSpeaker>>
 <<AddParagraph "The door violently slams open.">>
 
