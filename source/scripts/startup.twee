@@ -5,7 +5,7 @@
 document.title = "CANNELÉ & NOMNOM - DEFECTIVE AGENCY";
 
 // Preload images
-  var media_prefix = "./source/media/art/";
+  var media_prefix = "./source/media/";
 	var preload_list = ["note_cat.png","note_can.png","note_nom.png"];
 
 window._MediaCache = {};
