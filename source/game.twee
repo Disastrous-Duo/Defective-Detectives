@@ -40,7 +40,7 @@
 // Music must be added here
 <<cacheaudio "intro_bgm" "source/media/music/a_place_of_mystery.mp3">>
 
-<<set $sfx_list to ["drink_mug","found_note"]>>
+<<set $sfx_list to ["drink_mug","found_note","door_knock","light_flicker","meow","whack","desk_slam","tickdown"]>>
 <<for _i = 0; _i < $sfx_list.length; _i++>>
 
 	<<cacheaudio `"sfx_"+$sfx_list[_i]` `"source/media/sfx/"+$sfx_list[_i]+".wav"` >>
