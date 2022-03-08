@@ -265,6 +265,9 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BAM*''">>
+<<PlaySound "dooropens">>
+<<PlaySound "loud_bang">>
+<<BlankSpeaker>>
 <<AddParagraph "The door violently slams open.">>
 
 <<AddOption "''*OUCH*''" "Expo_Meeting1">>

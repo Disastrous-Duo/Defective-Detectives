@@ -199,6 +199,8 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
+<<PlaySound "impact1">>
+
 
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
 
@@ -269,10 +271,12 @@
 <<AddParagraph "Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.">>
 
 <<BlankSpeaker>>
-
 <<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
+
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "OUCH!">>
+<<PlaySound "impact2">>
+
 
 
 <<if $interview_left is false>>
@@ -300,6 +304,7 @@
 :: conspiracyBoard [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The conspiracy board has fallen over in a huge commotion.">>
+<<PlaySound "loud_bang">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "AGAIN?!">>
@@ -1094,7 +1099,7 @@
 <<AddParagraph "By reflex, you reach for the cup of coffee and take a sip.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph  "@@.shake;''*COUGH*''@@" >>
+<<AddParagraph  "@@.shake;''*GLUPS*''@@" >>
 <<PlaySound "drink_mug">>
 
 <<BlankSpeaker>>
