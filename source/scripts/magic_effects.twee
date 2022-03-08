@@ -166,7 +166,13 @@ window.note = function(displayed_text, note_data)
 window.clickOnNote = function(e,link)
 {
 
-  $(link).removeClass("clickable_note");
+  var $link = $(link);
+  if(!$link.hasClass("clickable_note")) return false;
+
+
+  window.PlaySound("found_note");
+  $link.removeClass("clickable_note");
+
   var note = $("<span class='sticky_note_effect'>!</span>")[0];
 
   // Settings
@@ -207,10 +213,10 @@ window.clickOnNote = function(e,link)
 
   },interval);
 
-  $(link).append(note);
+  $link.append(note);
+
 
   var note_data = JSON.parse(decodeURI(link.dataset.note));
-
   if(note_data.type == "tuto-board-trigger")
   {
     window.pullcord.setTutorialPhase(0);
@@ -253,4 +259,17 @@ window.scrollSmoothToBottom = function () {
       behavior: 'smooth',
    }, 400);
  // },);
+}
+
+window.PlaySound = function(sfx_name, delay)
+{
+  if(delay)
+  {
+    setTimeout(window.PlaySound(sfx_name, false), delay)
+  }
+  else
+  {
+    new SugarCube.Wikifier(null, `<<audio "sfx_${sfx_name}" volume 0.6 play>>`);
+  }
+
 }

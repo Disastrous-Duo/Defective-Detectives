@@ -208,8 +208,10 @@
 <<AddParagraph "Something just happened behind that door.">>
 
 
-<<AddOption "Knock" "Expo">>
+<<AddOption "Knock" "ExpoKnock">>
 <<AddOption "Wait" "Expo">>
+
+:: ExpoKnock
 
 
 /* Meeting */

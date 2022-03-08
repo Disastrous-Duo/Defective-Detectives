@@ -6,7 +6,6 @@
 @@.pastchoice;➣ $lastoption@@
 <br/>
 <br/>
-<<run console.log($lastoption)>>
 <</if>>
 
 
@@ -128,6 +127,10 @@ $args[0] -
 
 <<if $paragraphs.length > 0>>
 
+<<set _blockCheck to false >>
+<<set _gotoCheck to false >>
+<<set _soundCheck to false >>
+
   <<if ($paragraphs[0].indexOf("!DisableContinueButton") != -1) >>
     <<set _blockCheck to true >>
     <<set _mustDeletePassage to true >>
@@ -137,12 +140,16 @@ $args[0] -
 
   <<elseif ($paragraphs[0].indexOf("!GotoContinueButton") != -1) >>
   <<set _gotoArguments to $paragraphs[0].split(";;;") >>
+    <<set _gotoCheck to true>>
     <<set _gotoSceneName to _gotoArguments[1]>>
     <<set _mustDeletePassage to true >>
 
   <<elseif ($paragraphs[0].indexOf("!PlaySound") != -1) >>
   <<set _playSoundArguments to $paragraphs[0].split(";;;") >>
+    <<set _soundCheck to true >>
     <<set _sfx_name to _playSoundArguments[1]>>
+    <<set _delay to _playSoundArguments[2]>>
+    <<set _volume to _playSoundArguments[3]*1>>
     <<set _mustDeletePassage to true >>
   <</if>>
 
@@ -161,14 +168,19 @@ $args[0] -
       <<run window.scrollSmoothToBottom()>>
     <</linkreplace>>
 
-    <<set _blockCheck to false>>
-
   <<else>>
 
     /*In case of sfx play*/
-    <<if _sfx_name >>
-      <<audio `"sfx_"+_sfx_name` volume 0.6 play>>
-      <<set _sfx_name to false>>
+    <<if _soundCheck >>
+        <<if _delay == "0">>
+          <<audio `"sfx_"+_sfx_name` volume _volume play>>
+        <<else>>
+          <<capture _sfx_name>>
+            <<timed _delay>> /*  If delay, time to to later */
+              <<audio `"sfx_"+_sfx_name` volume _volume play>>
+            <</timed>>
+          <</capture>>
+        <</if>>
     <</if>>
 
     <<if _mustDeletePassage>>
@@ -237,7 +249,10 @@ $args[0] -
 :: PlaySound [widget] {"position":"546,368","size":"100,100"}
 
 <<widget "PlaySound">>
-  <<AddParagraph `"!PlaySound;;;"+$args[0]`>>
+  <<set _sfx_name to $args[0] || 0>>
+  <<set _delay to $args[1] == undefined ? "0" : $args[1]>>
+  <<set _volume to $args[2] == undefined ? "0.6" : $args[2]>>
+    <<AddParagraph `"!PlaySound;;;"+_sfx_name+";;;"+_delay+";;;"+_volume`>>
 <</widget>>
 
 
