@@ -212,7 +212,7 @@
 <<AddParagraph "Something just happened behind that door.">>
 
 
-<<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
+<<AddOptionSound "Knock" "Expo" "door_knock">>
 <<AddOption "Wait" "Expo">>
 
 :: ExpoKnock

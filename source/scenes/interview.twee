@@ -62,7 +62,7 @@
 :: lookAround [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "As you decide to look around, you see the detectives start moving unnaturally.">>
-<<AddParagraph "They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity..">>
+<<AddParagraph "They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity.">>
 
 
 <<SetSpeaker "?">>
@@ -73,7 +73,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They are fidgeting as they glance at each other, before seemingly reaching an agreement.">>
-<<AddParagraph "Somehow, even their unspoken communication is //loud//..">>
+<<AddParagraph "Somehow, even their unspoken communication is //loud//…">>
 
 
 <<SetSpeaker "Cannelé">>
@@ -433,7 +433,7 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I think I get what's happening here.//">>
-<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"CANNELÉ & NOMNOM?",type:'question'})+" going on…//"`>>
+<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"CANNELÉ & NOMNOM'S RELATIONSHIP?",type:'question'})+" going on…//"`>>
 <<AddParagraph "//And Cannelé is //rather small// compared to Nomnom, who is// rather tall.">>
 <<AddParagraph "//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//">>
 <<AddParagraph "//It's suprisingly…//">>
@@ -779,7 +779,7 @@
 <<AddParagraph "Nothing. I looked into all my pockets, but I have nothing…">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"So, a "+ note("cat", {"txt": "All ID was stolen by a cat", type:"clue"}) +" stole the only lead you had about your identity. I see."`>>
+<<AddParagraph `"So, a "+ note("cat", {"txt": "WANTED", type:"picture", src:"note_cat.png"}) +" stole the only lead you had about your identity. I see."`>>
 
 <<if $interview_identity is false>>
 <<AddOption "«Who am I?»" "Identity">>
@@ -1177,8 +1177,8 @@
 <<AddParagraph "And you feel rage boiling in the pit of your stomach…">>
 <<AddParagraph "That soon transforms into weariness.">>
 
-<<AddOption "«I am so done with this.»" "Naming2" >>
 <<AddOption "«Let's get this over with.»" "Naming2" >>
+<<AddOption "//Can I just leave?//" "Naming2" `{"leave":"true"}` >>
 
 
 
@@ -1186,6 +1186,9 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom have stopped bickering now.">>
 <<AddParagraph "They're staring straight at you.">>
+<<if $leave is "true">>
+<<AddParagraph "You are trapped.">>
+<</if>>
 
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "You must pick one.">>
