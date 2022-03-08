@@ -132,8 +132,8 @@ span.continueblock {
   font-family: 'PT Sans Narrow', sans-serif;
   margin-left: -1.5em;
   display: block;
-  opacity:0.2;
-  filter:grayscale(70%);
+  opacity:1;
+  filter:grayscale(100%);
   cursor:auto;
 }
 

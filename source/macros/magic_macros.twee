@@ -3,11 +3,13 @@
 <<widget "Foresight">>
 <<set _scene_text to ("@@.foresight;"+$args[2]+"@@")>>
 <<AddParagraph _scene_text >>
+<<PlaySound "light_flicker" "1s">>
 <<set _countdown to ("@@.foresight;Time before impact: "+$args[0]+"@@")>>
 <<set _countdown to _countdown+("@@.Tickdown.foresight;@@")>>
 <<set _countdown to _countdown+("@@.foresight;"+$args[1]+"@@")>>
 <<BlankSpeaker>>
 <<AddParagraph _countdown >>
+<<PlaySound "tickdown">>
 <</widget>>
 <</nobr>>
 
@@ -16,6 +18,7 @@
 <<widget "Tickdown">>
 <<set _scene_text to ('@@.Tickdown;@@')>>
 <<AddParagraph _scene_text>>
+<<PlaySound "tickdown">>
 <</widget>>
 <</nobr>>
 
@@ -237,6 +240,8 @@
 
     target_slot_y[id] = target_slot_y[id] - firstClick;
     updateWordValue();
+
+    window.PlaySound("pullcord"); // temporary
   };
 
   window.word_input_down_click = function(id)
@@ -244,6 +249,8 @@
     if(!firstClick)firstClick = true;
     target_slot_y[id] = target_slot_y[id] + 1;
     updateWordValue();
+
+    window.PlaySound("pullcord"); // temporary
   };
 
   window.word_input_validate = function()

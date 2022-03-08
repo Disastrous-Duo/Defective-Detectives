@@ -3,6 +3,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "">>
+<<audio "bard_bgm"  volume 0 fadeto 0.5>>
 <<AddParagraph "Once inside, one thing becomes glaringly obvious.">>
 <<AddParagraph "The room is small.">>
 <<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
@@ -76,7 +77,7 @@
 
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "A minute, please!">> 
+<<AddParagraph "A minute, please!">>
 
 <<BlankSpeaker>>
 <<AddParagraph "And then they're running around, like two ouragans in a bottle, as they try to clean the office up.">>
@@ -199,6 +200,8 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
+<<PlaySound "small_bang">>
+
 
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
 
@@ -216,7 +219,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Wow…" "endCleaning">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 
@@ -232,16 +235,13 @@
 <<AddParagraph "Behind the stool, the sink is filled with three cups. Next to it, a water boiler sits on an open cupboard that's almost empty.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//This kitchen is almost //desolate//… somehow this is not very re-//">>
+<<AddParagraph "//This kitchen is almost ''desolate''… somehow this is not very re-//">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Why do you HAVE to be a pain in my-">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//-assuring.//">>
-
-<<BlankSpeaker>>
-<<AddParagraph "This semblant of a kitchen is really intriguing.">>
 
 <<if $interview_left is false>>
   <<AddOption "Inspect couch on the left." "Left">>
@@ -251,7 +251,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Wow…" "endCleaning">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 :: Wall [nobr]
@@ -267,12 +267,16 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.">>
+<<PlaySound "light_flicker" "1s">>
 
 <<BlankSpeaker>>
-
 <<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
+<<PlaySound "impact">>
+
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "OUCH!">>
+
+
 
 
 <<if $interview_left is false>>
@@ -283,7 +287,7 @@
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Wow…" "endCleaning">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 
@@ -300,12 +304,14 @@
 :: conspiracyBoard [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The conspiracy board has fallen over in a huge commotion.">>
+<<PlaySound "loud_bang">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "AGAIN?!">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "I warned you it was @@.foresight;unstable@@…">>
+<<PlaySound "light_flicker" "1s">>
 
 <<BlankSpeaker>>
 <<AddParagraph "They both sigh and start to crouch and pick up the scattered documents.">>
@@ -614,12 +620,13 @@
 <<set $interview_coffee to false>>
 <<set $firstgiftcannele to false>>
 
-<<AddOption "«Who am I?»" "Identity">>
-<<AddOption "«What happened?»" "Event">>
-<<AddOption "«What's wrong with this coffee?»" "Coffee">>
+<<AddOption "Who am I?" "Identity">>
+<<AddOption "What happened to me?»" "Event">>
+<<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
 :: Identity [nobr]
+<<audio "bard_bgm" fadeto 0>>
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
@@ -629,6 +636,7 @@
   <<set $firstgiftcannele to true>>
 <</if>>
 <<AddParagraph  `"@@.precog;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
+<<PlaySound "slot">>
 
 
 <<SetSpeaker "Cannelé">>
@@ -753,6 +761,7 @@
   <<set $firstgiftcannele to true>>
 <</if>>
 <<AddParagraph  `"@@.precog;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
+<<PlaySound "slot">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing…">>
@@ -909,7 +918,9 @@
 <<BlankSpeaker>>
 <<AddParagraph  `"@@.precog;His clothes seem to be good quality and he is clean shaven.@@"`>>
 <<AddParagraph `"@@.precog;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
+<<PlaySound "slot">>
 <<AddParagraph `"@@.precog;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
+<<PlaySound "slot">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
@@ -947,6 +958,7 @@
 <<BlankSpeaker>>
 <<AddParagraph  `"@@.precog;On his coat are embroidered the initials “"+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+"”"`>>
 <<AddParagraph `slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
+<<PlaySound "slot">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
@@ -1094,13 +1106,16 @@
 <<AddParagraph "By reflex, you reach for the cup of coffee and take a sip.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph  "@@.shake;''*COUGH*''@@" >>
+<<AddParagraph  "@@.shake;''*GLUPS*''@@" >>
+<<PlaySound "drink_mug">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The now empty cup on the table shakes as Cannelé violently slams their fist on the table.">>
 
+
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SHUT UP! It has to be Yasyas">>
+<<PlaySound "desk_slam">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "WHAT THE FUCK IS EVEN YASYAS???? MUFFIN IS A WAY SWEETER CHOICE">>

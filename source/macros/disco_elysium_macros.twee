@@ -6,7 +6,6 @@
 @@.pastchoice;➣ $lastoption@@
 <br/>
 <br/>
-<<run console.log($lastoption)>>
 <</if>>
 
 
@@ -28,6 +27,10 @@
       <</capture>>
       <</for>>
 
+      <<if _optiondata["soundTransition"]>>
+        <<audio `"sfx_"+_optiondata["soundTransition"]` volume 0.6 play>>
+      <</if>>
+
     <</link>>
     </li>
   <</capture>>
@@ -36,7 +39,7 @@
 <<set $optionmap to new Map()>>
 
 :: PassiveSkill [Widget widget] {"position":"403,146","size":"100,100"}
-<<nobr>>
+
 <<widget "PassiveSkill">>
 <<set _speakername to ($args[0].toLowerCase())>>
 <<if $yellow_speaker.includes(_speakername)>>
@@ -62,20 +65,20 @@ _speakername +
 <</if>>
 <<set $currentspeaker += " - ">>
 <</widget>>
-<</nobr>>
+
 
 :: Speaker [widget] {"position":"272,152","size":"100,100"}
-<<nobr>>
+
 <<widget "speaker">>
 @@.speaker;
 $args[0] -
 @@
 <</widget>>
-<</nobr>>
+
 
 
 :: SetSpeaker [widget] {"position":"272,152","size":"100,100"}
-<<nobr>>
+
 <<widget "SetSpeaker">>
 <<set _speaker_name to ($args[0].toLowerCase())>>
   <<if _speaker_name == "cannelé & nomnom">>
@@ -97,22 +100,29 @@ $args[0] -
 <</if>>
 <<set $currentspeaker += " - ">>
 <</widget>>
-<</nobr>>
+
 
 
 :: AddOption [widget] {"position":"273,265","size":"100,100"}
-<<widget "AddOption">><<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{}})>><</widget>>
+<<widget "AddOption">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":false})>>
+<</widget>>
 
 :: AddOptionVariables [widget] {"position":"573,265","size":"100,100"}
-<<widget "AddOptionVariables">><<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2]})>><</widget>>
+<<widget "AddOptionVariables">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2],"soundTransition":false})>>
+<</widget>>
 
-/*
-  do a check on content of paragraph (or even next paragraph)
-  if matches the special disable command => disable the continue button
-*/
+:: AddOptionSound [widget] {"position":"573,265","size":"100,100"}
+<<widget "AddOptionSound">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":$args[2]})>>
+<</widget>>
+
 
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
-<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>
+<<widget "DisplayParagraphs">>
+
+<<set _paragraph to $paragraphs[0]>>
 <<run $paragraphs.deleteAt(0)>>
 <span class="paragraph"><<print _paragraph>></span>
 <<if _paragraph != undefined and _paragraph.length > 0>> /*Avoid empty spaces before options*/
@@ -120,7 +130,16 @@ $args[0] -
   <br/>
 <</if>>
 
+/*Done before loading the next paragraph*/
+
+<<set _mustDeletePassage to false >>
+
 <<if $paragraphs.length > 0>>
+
+<<set _blockCheck to false >>
+<<set _gotoCheck to false >>
+<<set _soundCheck to false >>
+
   <<if ($paragraphs[0].indexOf("!DisableContinueButton") != -1) >>
     <<set _blockCheck to true >>
     <<set _mustDeletePassage to true >>
@@ -130,10 +149,20 @@ $args[0] -
 
   <<elseif ($paragraphs[0].indexOf("!GotoContinueButton") != -1) >>
   <<set _gotoArguments to $paragraphs[0].split(";;;") >>
+    <<set _gotoCheck to true>>
     <<set _gotoSceneName to _gotoArguments[1]>>
+    <<set _mustDeletePassage to true >>
+
+  <<elseif ($paragraphs[0].indexOf("!PlaySound") != -1) >>
+  <<set _playSoundArguments to $paragraphs[0].split(";;;") >>
+    <<set _soundCheck to true >>
+    <<set _sfx_name to _playSoundArguments[1]>>
+    <<set _delay to _playSoundArguments[2]>>
+    <<set _volume to _playSoundArguments[3]*1>>
     <<set _mustDeletePassage to true >>
   <</if>>
 
+  /* In case of blocked Continue*/
   <<if _blockCheck and not eval(_blockCondition) >> /*Blocked with a Fake Continue that might have a tooltip, and a hidden Continue button*/
     <<run $paragraphs.deleteAt(0)>>
 
@@ -149,6 +178,19 @@ $args[0] -
     <</linkreplace>>
 
   <<else>>
+
+    /*In case of sfx play*/
+    <<if _soundCheck >>
+        <<if _delay == "0">>
+          <<audio `"sfx_"+_sfx_name` volume _volume play>>
+        <<else>>
+          <<capture _sfx_name>>
+            <<timed _delay>> /*  If delay, time to to later */
+              <<audio `"sfx_"+_sfx_name` volume _volume play>>
+            <</timed>>
+          <</capture>>
+        <</if>>
+    <</if>>
 
     <<if _mustDeletePassage>>
       <<run $paragraphs.deleteAt(0)>> /*Still need to delete the block command*/
@@ -186,40 +228,47 @@ $args[0] -
 
 
 :: AddParagraph [widget] {"position":"546,268","size":"100,100"}
-<<nobr>>
 <<widget "AddParagraph">>
 <<set _para to "">>
 <<if $paraAppendMode is true>>
-<<for _text range $greentext>>
-<<set _para to (_para + _text + "<br /><br />")>>
-<</for>>
-<<set $greentext to []>>
-<<set $paraAppendMode to false>>
+  <<for _text range $greentext>>
+  <<set _para to (_para + _text + "<br /><br />")>>
+  <</for>>
+  <<set $greentext to []>>
+  <<set $paraAppendMode to false>>
 <</if>>
 <<set _para to (_para + $currentspeaker + $args[0])>>
 <<run $paragraphs.push(_para)>>
 <</widget>>
-<</nobr>>
 
 :: DisableContinueButton [widget] {"position":"546,368","size":"100,100"}
-<<nobr>>
+
 <<widget "DisableContinueButton">>
   <<AddParagraph `"!DisableContinueButton;;;"+$args[0]+";;;"+$args[1]`>>
 <</widget>>
-<</nobr>>
+
 
 :: GotoContinueButton [widget] {"position":"546,368","size":"100,100"}
-<<nobr>>
+
 <<widget "GotoContinueButton">>
   <<AddParagraph `"!GotoContinueButton;;;"+$args[0]`>>
 <</widget>>
-<</nobr>>
+
+
+:: PlaySound [widget] {"position":"546,368","size":"100,100"}
+
+<<widget "PlaySound">>
+  <<set _sfx_name to $args[0] || 0>>
+  <<set _delay to $args[1] == undefined ? "0" : $args[1]>>
+  <<set _volume to $args[2] == undefined ? "0.6" : $args[2]>>
+    <<AddParagraph `"!PlaySound;;;"+_sfx_name+";;;"+_delay+";;;"+_volume`>>
+<</widget>>
+
 
 
 :: GreenTextWidgets [widget] {"position":"400,600","size":"100,100"}
-<<nobr>>
+
 <<widget "GenericNote">>
 <<run $greentext.push("@@.green;" + $args[0] + "@@")>>
 <<set $paraAppendMode to true>>
 <</widget>>
-<</nobr>>

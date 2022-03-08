@@ -771,6 +771,7 @@ var h = Math.round(parent.offsetHeight/2);
       instructions.text = "WELL DONE!\nNow you know how to use the conspiracy board. Use it to gather clues and mysteries!\n(Close the board by tugging the handle again.)";
       window[this_board].clearZoomPan();
       window.pullcord.setTutorialPhase(2);
+      window.PlaySound("jingle");
     }
 
   }
