@@ -27,6 +27,8 @@ if(!window.debug_mode)
 {
   Config.history.controls = false;
   UIBar.stow();
+  Config.saves.autoload = () => false; // Doesn't work;
+  Config.saves.autosave = false;
 
 }
 else
