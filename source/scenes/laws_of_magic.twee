@@ -455,7 +455,7 @@ function()
 
 <<AddOption "«Can I ask you about your gifts?»" "cnGifts">>
 <<AddOption "«Before we continue, I have some questions about those Laws…»" "questionsLaws">>
-<<AddOption "«Got it» (Continue.)" "backToInterview">>
+<<AddOption "«Got it» (Continue.)" "lawsDone">>
 
 
 
@@ -573,7 +573,7 @@ function()
 <<AddOption "«About that third Law…»" "law3">>
 <</if>>
 
-<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
+<<AddOption "«That's it» (Change Topic.)" "backToInterview">>
 
 
 :: law2 [nobr]
@@ -621,7 +621,7 @@ function()
 <<if $thirdlaw is false>>
 <<AddOption "«About that third Law…»" "law3">>
 <</if>>
-<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
+<<AddOption "«That's it» (Change Topic.)" "backToInterview">>
 
 
 :: law3 [nobr]
@@ -687,7 +687,7 @@ function()
   <<AddOption "«About that second Law…»" "law2">>
 <</if>>
 
-<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
+<<AddOption "«That's it» (Change Topic.)" "backToInterview">>
 
 
 :: lawsDone [nobr]
