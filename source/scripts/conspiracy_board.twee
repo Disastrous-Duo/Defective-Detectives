@@ -84,7 +84,7 @@ window[this_board].toggle_board = function()
     // html_canvas.height = parent.offsetHeight;
 
     var calc_width =  $("#story").width()-$("#ui-bar-body").width();
-    var calc_height = $("#story").height();
+    var calc_height = $("#body").height()*0.9;
     parent.width(calc_width);
     parent.height(calc_height);
     html_canvas.width = calc_width;

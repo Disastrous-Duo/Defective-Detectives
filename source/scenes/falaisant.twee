@@ -3,6 +3,9 @@
 <<BlankSpeaker>>
 
 <<script>>
+window.story.style["overflow-y"] = "visible";
+UIBar.stow();
+
 $("#story").prepend('<img id="title_screen_image" src="./source/media/art/title_screen.png"/><br/>');
 $("#title_screen_image").height($("#story").height());
   console.log($("#story"));
