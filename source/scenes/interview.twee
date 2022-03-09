@@ -695,7 +695,7 @@
 <<AddParagraph "This is really not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Do not worry, you are "+note("//not//",{txt:"Other cases of amnesia",type:"clue"})+" our first case of amnesia, we //absolutely// know what we are doing."`>>
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -725,7 +725,7 @@
 <<AddParagraph "This is //really// not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Do not worry, you are "+note("//not//  our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -1308,6 +1308,7 @@ function()
 <h2 class="typewriter" >Chapter 2 - The Hoboolean Coin</h2><br/>
 
 <<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddParagraph "//Hey!//">>
 <<AddParagraph "//You've reached the end of this demo. Thank you so much for playing! Now...//">>
 <<AddParagraph "//We'd like to ask you if you could help us with something.//">>
