@@ -972,6 +972,10 @@ function()
 
 <<DisableContinueButton "window.mysteries == 3" >>
 
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<GotoContinueButton "Contract2_1">>
 
 
