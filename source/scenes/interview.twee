@@ -1180,7 +1180,7 @@
 <<AddParagraph "That soon transforms into weariness.">>
 
 <<AddOption "«Let's get this over with.»" "Naming2" >>
-<<AddOption "//Can I just leave?//" "Naming2" `{"leave":"true"}` >>
+<<AddOption "//If I run for it, maybe...//" "Naming2" `{"leave":"yes"}` >>
 
 
 
@@ -1188,8 +1188,8 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom have stopped bickering now.">>
 <<AddParagraph "They're staring straight at you.">>
-<<if $leave is "true">>
-<<AddParagraph "You are trapped.">>
+<<if $leave is "yes">>
+  <<AddParagraph "You are trapped.">>
 <</if>>
 
 <<SetSpeaker "Cannelé & Nomnom">>
@@ -1249,5 +1249,7 @@
 <<AddParagraph "//Hey!//">>
 <<AddParagraph "//You've reached the end of this demo. Thank you so much for playing! Now...//">>
 <<AddParagraph "//We'd like to ask you if you could help us with something.//">>
-<<AddParagraph 'We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!'>>
-<<AddParagraph "It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab. Thanks <3"">>
+<<AddParagraph "We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!">>
+<<AddParagraph "It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab.">>
+<<AddParagraph "Feel free to open the conspiracy board and play around with the clues you've collected during this demo!(but let us warn you, they will be lost if you refresh the page)">>
+<<AddParagraph "Thank you for playing <3">>
