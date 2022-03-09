@@ -57,7 +57,6 @@
 <<AddParagraph "The detectives have started cleaning up…">>
 <<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.">>
 <<AddParagraph "You are unable to sit or even move one inch without stumbling on a random item.">>
-<<AddParagraph "">>
 
 <<AddOption "Observe the scene." "interviewInspect">>
 
@@ -174,7 +173,6 @@
 <<AddParagraph "The detectives have started cleaning up…">>
 <<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.">>
 <<AddParagraph "You are unable to sit or even move one inch without stumbling on a random item.">>
-<<AddParagraph "">>
 
 <<AddOption "Observe the scene." "interviewInspect">>
 
@@ -350,9 +348,6 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I got it!//">>
-
-<<BlankSpeaker>>
-<<AddParagraph "">>
 
 
 <<AddOption "Turn back to the two detectives." "interviewTwoDetectives">>
@@ -585,9 +580,6 @@
 <<AddParagraph "//They remind me of siblings…//">>
 <<AddParagraph "//A pair of //extremely annoying// siblings.//">>
 
-<<BlankSpeaker>>
-<<AddParagraph "">>
-
 <<AddOption "Bring the topic back to what matters to you : your amnesia." "Interview">>
 
 
@@ -708,9 +700,6 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
 
-<<BlankSpeaker>>
-<<AddParagraph "">>
-
 <<AddOption "«If you insist…»" "theory1">>
 
 
@@ -743,9 +732,6 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I missed the timing to back out and come clean…//">>
-
-<<BlankSpeaker>>
-<<AddParagraph "">>
 
 <<AddOption "«Erm…»" "theory1">>
 
@@ -881,9 +867,6 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph `"Of course! We are "+tooltip("professionals","In the broader sense of the definition.")+"."`>>
 <<AddParagraph "Now let us discuss the terms of the contract.">>
-
-<<BlankSpeaker>>
-<<AddParagraph "">>
 
 <<AddOption "The contract?" "Contract1">>
 
@@ -1141,9 +1124,6 @@ function()
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "It's a muff-">>
 
-<<BlankSpeaker>>
-<<AddParagraph "">>
-
 <<AddOption "//I am getting concerned …//" "interviewA-HA">>
 
 
@@ -1312,9 +1292,6 @@ function()
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
 
-<<BlankSpeaker>>
-<<AddParagraph "">>
-
 <<AddOption "«I-I didn't even sign the contract…»" "finDemo">>
 
 
@@ -1327,9 +1304,6 @@ function()
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "HAHAHAHAHA! FUCKING KNEW YOU WERE A REAL ONE!">>
 <<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
-
-<<BlankSpeaker>>
-<<AddParagraph "">>
 
 <<AddOption "«I-I didn't even sign the contract…»" "finDemo">>
 
