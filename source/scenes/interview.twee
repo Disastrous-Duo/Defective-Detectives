@@ -953,7 +953,9 @@ function()
 }
 })`>>
 
-<<DisableContinueButton "window.mysteries == 3" "Maybe those questions will be useful later..." "Contract2_1">>
+<<SetSpeaker "???">>
+<<AddParagraph "Maybe those questions will be useful later…">>
+<<DisableContinueButton "window.mysteries == 3" "Yes. Yes, they will. Trust me. Just take them." "Contract2_1">>
 
 
 
