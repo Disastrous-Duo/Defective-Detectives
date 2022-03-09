@@ -934,7 +934,7 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question"},
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question",
 onclick:
 function()
 {
@@ -946,7 +946,7 @@ function()
 }
 })`>>
 
-<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question"},
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question",
 onclick:
 function()
 {
@@ -958,7 +958,7 @@ function()
 }
 })`>>
 
-<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question"},
+<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question",
 onclick:
 function()
 {
