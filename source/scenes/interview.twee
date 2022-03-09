@@ -970,13 +970,8 @@ function()
 }
 })`>>
 
-<<DisableContinueButton "window.mysteries == 3" >>
+<<DisableContinueButton "window.mysteries == 3" "Maybe those questions will be useful later..." "Contract2_1">>
 
-
-<<BlankSpeaker>>
-<<AddParagraph "">>
-
-<<GotoContinueButton "Contract2_1">>
 
 
 :: Contract2_1
@@ -1262,7 +1257,7 @@ function()
 <<AddParagraph "">>
 
 <<AddOption "«Let's get this over with.»" "Naming2" >>
-<<AddOption "//If I run for it, maybe...//" "Naming2" `{"leave":"yes"}` >>
+<<AddOptionVariables "//If I run for it, maybe...//" "Naming2" `{"leave":"yes"}` >>
 
 
 

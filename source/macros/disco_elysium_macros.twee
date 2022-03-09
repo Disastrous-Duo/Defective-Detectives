@@ -154,6 +154,8 @@ $args[0] -
     <<set _disableArguments to $paragraphs[0].split(";;;") >>
     <<set _blockCondition to _disableArguments[1] >>
     <<set _tooltipMessage to _disableArguments[2] >>
+    <<set _gotoSceneName to _disableArguments[3] >>
+    <<set _gotoCheck to (_gotoSceneName != "undefined") >>
 
   <<elseif ($paragraphs[0].indexOf("!GotoContinueButton") != -1) >>
   <<set _gotoArguments to $paragraphs[0].split(";;;") >>
@@ -180,11 +182,16 @@ $args[0] -
       <<link "@@#FakeContinueBtn;CONTINUE ➤@@">><</link>>
     <</if>>
 
-    <<linkreplace "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" t8n>>
-      <<DisplayParagraphs>>
-      <<run window.scrollSmoothToBottom()>>
-    <</linkreplace>>
-
+    <<if _gotoCheck>>
+      <<link "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" _gotoSceneName>>
+        <<set $lastoption to "!EmptyLastOption">>
+      <</link>>
+    <<else>>
+      <<linkreplace "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" t8n>>
+        <<DisplayParagraphs>>
+        <<run window.scrollSmoothToBottom()>>
+      <</linkreplace>>
+    <</if>>
   <<else>>
 
     /*In case of sfx play*/
@@ -204,7 +211,7 @@ $args[0] -
       <<run $paragraphs.deleteAt(0)>> /*Still need to delete the block command*/
     <</if>>
 
-    <<if _gotoSceneName>>
+    <<if _gotoCheck>>
       <<link "@@#ContinueBtn;CONTINUE ➤@@" _gotoSceneName>>
         <<set $lastoption to "!EmptyLastOption">>
       <</link>>
@@ -252,7 +259,7 @@ $args[0] -
 :: DisableContinueButton [widget] {"position":"546,368","size":"100,100"}
 
 <<widget "DisableContinueButton">>
-  <<AddParagraph `"!DisableContinueButton;;;"+$args[0]+";;;"+$args[1]`>>
+  <<AddParagraph `"!DisableContinueButton;;;"+$args[0]+";;;"+$args[1]+";;;"+$args[2]`>>
 <</widget>>
 
 
