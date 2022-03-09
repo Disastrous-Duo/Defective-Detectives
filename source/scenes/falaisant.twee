@@ -52,7 +52,6 @@ $("#title_screen_image").height($("#story").height());
 :: Falaisantfirstblvd [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
-<<AddParagraph "">>
 
 <<AddOption "//The drop bounces off the slightly uneven pavement.//" "Falaisant1_5">>
 
@@ -80,7 +79,6 @@ $("#title_screen_image").height($("#story").height());
 <<BlankSpeaker>>
 <<AddParagraph "//The figure is walking at a rapid pace.//">>
 <<AddParagraph "//They're stumbling and stopping often, as if lost in the chaos of alleys.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop keeps up; left, right, left again… before crashing onto something… paper?" "Falaisant1_8">>
 
@@ -88,7 +86,6 @@ $("#title_screen_image").height($("#story").height());
 :: Falaisant1_7_2 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//At the west exit stands a big metallic bridge, with ornate handrails and details.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop falls from a hole in the hedge." "Falaisant2_6">>
 
@@ -98,7 +95,6 @@ $("#title_screen_image").height($("#story").height());
 <<AddParagraph "//It's a flyer.//">>
 <<AddParagraph "//The individual crouches to pick it up.//">>
 <<AddParagraph "//They shake the paper slightly, to get rid of the humidity that was clinging to it.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City." "Falaisant1_9">>
 
@@ -110,7 +106,6 @@ $("#title_screen_image").height($("#story").height());
 <<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
 <<AddParagraph "//The atmosphere is heavy…//">>
 <<AddParagraph "//Disquieting.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop runs down darker and darker paths, following the silhouette." "Falaisant2_9">>
 
@@ -119,7 +114,6 @@ $("#title_screen_image").height($("#story").height());
 <<BlankSpeaker>>
 <<AddParagraph "//In the darkest corner of the decrepit block, the dark figure stops in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure's nose." "Falaisant10">>
 
@@ -128,14 +122,12 @@ $("#title_screen_image").height($("#story").height());
 :: Falaisantsecondblvd [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop bounces off the slightly uneven pavement." "Falaisant2_5">>
 
 :: Falaisant2_5 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges : they jump over streams of water as they connect multiple layers of passageways, roads and gates.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop falls from a hole in the metallic hedge of a bridge." "Falaisant2_6">>
 
@@ -147,7 +139,6 @@ $("#title_screen_image").height($("#story").height());
 <<AddParagraph "//Ploc.//">>
 <<PlaySound "ploc">>
 <<BlankSpeaker>>
-<<AddParagraph "">>
 
 <<AddOption "Lower, Lower…" "Falaisant2_7">>
 
@@ -155,7 +146,6 @@ $("#title_screen_image").height($("#story").height());
 :: Falaisant2_7 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop errs, losing itself in the ominous veil." "Falaisant2_8">>
 
@@ -166,7 +156,6 @@ $("#title_screen_image").height($("#story").height());
 <<AddParagraph "//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//">>
 <<AddParagraph "//The atmosphere is heavy…//">>
 <<AddParagraph "//Disquieting.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop runs down darker and darker paths." "Falaisant2_9">>
 
@@ -175,7 +164,6 @@ $("#title_screen_image").height($("#story").height());
 <<BlankSpeaker>>
 <<AddParagraph "//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//">>
 <<AddParagraph "//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop looms over the edge of the roof before falling on the shadowed figure's nose." "Falaisant10">>
 
@@ -184,7 +172,6 @@ $("#title_screen_image").height($("#story").height());
 :: Falaisantthirdblvd [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "//The boulevard spreads far, far until it breaks into smaller streets.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop bounces off the slightly uneven pavement." "Falaisant3_5">>
 
@@ -204,7 +191,6 @@ $("#title_screen_image").height($("#story").height());
 <<AddParagraph "//Marble chiseled with care, it looks timeless.//">>
 <<AddParagraph "//A small path leads away, near a bridge that joins the other part of the park.//">>
 <<AddParagraph "//Under the bridge, the city is organized in layers, each one deeper than the other.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop crosses the bridge and falls through the hedge." "Falaisant2_6">>
 
@@ -212,7 +198,6 @@ $("#title_screen_image").height($("#story").height());
 <<BlankSpeaker>>
 <<AddParagraph "//The trees show the way out of the wide park.//">>
 <<AddParagraph "//On the other side of gilded gates, a slope plunges down into the depths of the city.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop glides drifts down the avenue." "Falaisant3_8">>
 
@@ -224,7 +209,6 @@ $("#title_screen_image").height($("#story").height());
 <<AddParagraph "//Their pace is hurried and shaky - indecisive.//">>
 <<AddParagraph "//They crouch to pick up the flyer.//">>
 <<AddParagraph "//They shake the paper slightly, to get rid of the humidity that was clinging to it.//">>
-<<AddParagraph "">>
 
 <<AddOption "The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City." "Falaisant1_9">>
 
@@ -250,8 +234,6 @@ $("#title_screen_image").height($("#story").height());
 
 <<AddOptionSound "Knock" "Expo" "door_knock">>
 <<AddOption "Wait" "Expo">>
-
-:: ExpoKnock
 
 
 /* Meeting */
