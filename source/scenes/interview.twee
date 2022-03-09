@@ -260,7 +260,7 @@
 <<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please refrain from touching the board, it's quite-">>
+<<AddParagraph "Please refrain from touching the conspiracy board, it's quite-">>
 
 <<BlankSpeaker>>
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.">>
@@ -271,7 +271,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
-<<PlaySound "impact">>
+<<PlaySound "whip">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "OUCH!">>
@@ -550,7 +550,8 @@
 <<set $interview_speak to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
+<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right?"`>>
+<<AddParagraph `"Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `"It's pronounced //non-non//, "+note("Nomnom",{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name” in French…", type:"clue", fontSize:16})+ "?"`>>
@@ -626,7 +627,7 @@
 
 
 :: Identity [nobr]
-<<audio "bard_bgm" fadeto 0>>
+<<audio ":playing" fadeout>>
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
@@ -735,7 +736,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "The flyer on the table reads:">>
-<<AddParagraph "''AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//. __Will Help__ you find anything you ==misplaced== lost. Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__">>
+<<AddParagraph "@@.flyer;AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//.<br/> __Will Help__ you find anything you ==misplaced== lost.<br/>Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__@@">>
 <<AddParagraph "It's barely legible and mostly just confusing.">>
 
 <<SetSpeaker "???">>
@@ -1025,6 +1026,7 @@
 <<AddParagraph "Inspiration?">>
 
 <<AddParagraph "<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<PlaySound "title_show" "0.5s">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A name…">>
@@ -1247,4 +1249,5 @@
 <<AddParagraph "//Hey!//">>
 <<AddParagraph "//You've reached the end of this demo. Thank you so much for playing! Now...//">>
 <<AddParagraph "//We'd like to ask you if you could help us with something.//">>
-<<AddParagraph "We would love to hear your feedback on our demo, please fill this form : https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!">>
+<<AddParagraph 'We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!'>>
+<<AddParagraph "It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab. Thanks <3"">>

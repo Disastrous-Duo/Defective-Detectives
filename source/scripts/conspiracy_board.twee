@@ -56,9 +56,9 @@ window[this_board].toggle_board = function()
 // Temporary data for debug purposes
 
 // sizes for the canvas that is about to be resized
-var parent = document.getElementById(`${this_board+"_overlay"}`);
-var w = Math.round(parent.offsetWidth/2);
-var h = Math.round(parent.offsetHeight/2);
+// var parent = document.getElementById(`${this_board+"_overlay"}`);
+// var w = Math.round(parent.offsetWidth/2);
+// var h = Math.round(parent.offsetHeight/2);
 
   window[this_board].notesList = [
   ];
@@ -77,9 +77,19 @@ var h = Math.round(parent.offsetHeight/2);
   {
     // Sets canvas to fill all the overlay
     var html_canvas = document.getElementById(`${this_board+"_cvs"}`);
-    var parent = document.getElementById(`${this_board+"_overlay"}`);
-    html_canvas.width = parent.offsetWidth;
-    html_canvas.height = parent.offsetHeight;
+    var parent = $(`#${this_board+"_overlay"}`);
+
+
+    // html_canvas.width = parent.offsetWidth;
+    // html_canvas.height = parent.offsetHeight;
+
+    var calc_width =  $("#story").width()-$("#ui-bar-body").width();
+    var calc_height = $("#story").height();
+    parent.width(calc_width);
+    parent.height(calc_height);
+    html_canvas.width = calc_width;
+    html_canvas.height = calc_height;
+
 
   var canvas = this.canvas = new fabric.Canvas(`${this_board+"_cvs"}`, { selection: false,
   preserveObjectStacking: true // important to prevent object from changing layers when selected or moved
@@ -205,6 +215,7 @@ var h = Math.round(parent.offsetHeight/2);
       top: top,
       width:settings.noteWidth,
       height:settings.noteHeight,
+      rect:rect,
       pin:pin,
       angle:3
     });

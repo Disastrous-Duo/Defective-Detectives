@@ -18,7 +18,14 @@
 <<for _optiontext, _optiondata range $optionmap>>
   <<capture _optiondata, _optiontext>>
     <li class="OptionChoice">
-    <<link `"➣ "+_optiontext` _optiondata["passageName"]>>
+
+    <<if _optiondata["variables"]["customPuce"]>>
+      <<set _puce to _optiondata["variables"]["customPuce"]>>
+    <<else>>
+      <<set _puce to "➣">>
+    <</if>>
+
+    <<link `_puce+" "+_optiontext` _optiondata["passageName"]>>
       <<set $lastoption to _optiontext>>
 
       <<for _variableName, _value range _optiondata["variables"]>>
@@ -117,6 +124,7 @@ $args[0] -
 <<widget "AddOptionSound">>
 <<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":$args[2]})>>
 <</widget>>
+
 
 
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}

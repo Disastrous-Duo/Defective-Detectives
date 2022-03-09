@@ -46,8 +46,18 @@ tw-hook
 
 #story {
   height: 75%; /*Prevent sticking to the top or bottom of the webpage*/
-  overflow-y: auto;
+  overflow-y: visible; /*Allow to have a bigger title screen*/
 }
+
+.story_game_started { /*STrangely, doesn't work unless enforced in JS*/
+  overflow-y: scroll;
+}
+
+#title_screen_image{
+  display:block;
+  margin:auto;
+}
+
 
 .passage {
   line-height: 1.25;

@@ -2,14 +2,26 @@
 :: Start
 <<BlankSpeaker>>
 
-<img src="./source/media/art/title_screen.png" style="max-width: 60%;"/>
+<<script>>
+$("#story").prepend('<img id="title_screen_image" src="./source/media/art/title_screen.png"/><br/>');
+$("#title_screen_image").height($("#story").height());
+  console.log($("#story"));
+<</script>>
 
 <<AddOption "START GAME" "Falaisant">>
 
 /* Falaisant : Introduction of the city */
 :: Falaisant [nobr]
-<<run UIBar.unstow()>>
+
+<<script>>
+  UIBar.unstow();
+  window.story.style["overflow-y"] = "scroll";
+  if(window.title_screen_image) window.title_screen_image.style.display = "none"; /*Relaod shenanigans*/
+<</script>>
+
 <<audio "intro_bgm"  volume 0 fadeto 0.5>>
+
+
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
@@ -195,7 +207,7 @@
 
 
 :: Falaisant10 [nobr]
-<<audio "intro_bgm" fadeto 0>>
+<<audio ":playing" fadeout>>
 <<BlankSpeaker>>
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
 <<PlaySound "plic">>

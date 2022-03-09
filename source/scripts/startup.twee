@@ -20,7 +20,7 @@ preload_list.map(function (url) {
 Config.passages.nobr = true;
 
 // debug mode, used during dev
-window.debug_mode = true;
+window.debug_mode = false;
 
 // disables options not available to the player
 if(!window.debug_mode)
