@@ -98,8 +98,9 @@
   <<set $rules_result to "Results_Bullshit">>
 <</if>>
 <<BlankSpeaker>>
-
 <<AddParagraph "">>
+
+
 <<AddOption "//Hum, maybe I should think about this again.// (Retry.)" "theory1">>
 <<AddOption "//Ok, this is looking good!// (Confirm.)" "stateRules">>
 
@@ -132,7 +133,6 @@
 
 
 <<BlankSpeaker>>
-
 <<AddParagraph "Cannelé and Nomnom look at each other.">>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "…">>
@@ -149,6 +149,8 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "">>
+
+
 <<AddOption "//I thought it was pretty good?//" $rules_result>>
 <<AddOption "//Am I that far off??//" $rules_result>>
 <<AddOption "//I hate them so much…//" $rules_result>>
@@ -489,6 +491,9 @@ function()
 <<SetSpeaker "???">>
 <<AddParagraph "…">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<AddOption "«Nevermind, then… I have some questions about the Laws, though.» (Learn more.)" "questionsLaws">>
 
 <<if $interview_event is false>>
@@ -510,6 +515,9 @@ function()
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "We shall indulge you.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<set $firstlaw to false>>
 <<set $secondlaw to false>>
@@ -687,6 +695,9 @@ function()
 <<AddParagraph "Thank you, I think I'm good.">>
 <<AddParagraph "Now…">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 
 <<if $interview_event is false>>
 <<AddOption "«About what happened to me…»" "Event">>
@@ -703,8 +714,11 @@ function()
 
 :: backToInterview [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph "Ok, all the magic thing looks clearer now, thanks.">>
+<<AddParagraph "Ok, all the magic thing makes a little more sense to me now, thanks.">>
 <<AddParagraph "Now…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $interview_event is false>>
 <<AddOption "«About what happened to me…»" "Event">>
