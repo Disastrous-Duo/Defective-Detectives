@@ -714,7 +714,7 @@ function()
 
 :: backToInterview [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph "Ok, all the magic thing makes a little more sense to me now, thanks.">>
+<<AddParagraph "Ok, all the magic stuff makes a little more sense to me now, thanks.">>
 <<AddParagraph "Now…">>
 
 <<BlankSpeaker>>

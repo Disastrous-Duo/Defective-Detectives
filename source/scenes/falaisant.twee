@@ -299,8 +299,6 @@ $("#title_screen_image").height($("#story").height());
 <<PlaySound "door_open">>
 <<BlankSpeaker>>
 <<AddParagraph "The door violently slams open.">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
 
 <<AddOption "''*OUCH*''" "Expo_Meeting1">>
 
