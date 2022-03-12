@@ -53,6 +53,7 @@ tw-hook
   overflow-y: scroll;
 }
 
+
 #title_screen_image{
   display:block;
   margin:auto;
@@ -157,18 +158,7 @@ span.continueblock {
   margin-left: -1.5em;
 }
 
-.CheckOverlay {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  opacity: 0;
-  animation-name: Flash;
-  animation-duration: 2s;
-}
+
 
 #SuccessImg {
   background: url(SuccessOverlay.png) no-repeat center;
@@ -178,44 +168,6 @@ span.continueblock {
   background: url(FailureOverlay.png) no-repeat center;
 }
 
-@keyframes Flash {
-  0%  {opacity: 0}
-  20% {opacity: 1}
-  50% {opacity: 1}
-  100% {opacity: 0}
-}
-
-.CheckText {
-  color: white;
-  font-family: 'PT Sans Narrow', sans-serif;
-  position: absolute;
-  bottom: 25%;
-  left: 50%;
-  opacity: 0;
-  padding: 0.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  animation-name: SlideAndFade;
-  animation-duration: 2.5s;
-  animation-delay: 1s;
-}
-
-#CheckSuccess {
-  background-color: #40ce68;
-  box-shadow: 0em 0em 0.2em 0.3em #40ce68;
-}
-
-#CheckFailure {
-  background-color: #90280f;
-  box-shadow: 0em 0em 0.2em 0.3em #90280f;
-}
-
-@keyframes SlideAndFade {
-  0% {opacity: 0.75; left: 45%}
-  10% {opacity: 1; left: 50%}
-  60% {opacity: 1; left: 50%}
-  100% {opacity: 0; left: 80%}
-}
 
 /*  CUSTOMISED */
 :root {

@@ -68,7 +68,7 @@ requestScriptLoad({
 
 requestScriptLoad({
 	id     : 'fabric-js',
-	src    : './source/scripts/fabric.js.txt',
+	src    : './source/libs/fabric.js.txt',
 	onload : function (evt) {
 
 		// Load the handwritten font on notes before laoding boards
