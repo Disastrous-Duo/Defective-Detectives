@@ -100,9 +100,12 @@ tw-hook
 
 
 .dim {
-  transition: opacity 0.5s;
-  opacity: 0.5;
+  transition: filter 0.5s, color 0.5s;
+  filter: grayscale(40%);
+  color:#777777;
 }
+
+
 
 .macro-timed-insert {
 	transition-duration: 2s;

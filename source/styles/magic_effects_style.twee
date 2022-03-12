@@ -270,7 +270,7 @@ h2 /*For chapter titles and Duels*/
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
+  border-bottom: 1px dashed white; /* If you want dots under the hoverable text */
   cursor:help;
   opacity:1 !important ;
 }
