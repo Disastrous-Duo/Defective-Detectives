@@ -82,7 +82,7 @@
 <<AddParagraph "A minute, please!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "And then they're running around, like two ouragans in a bottle, as they try to clean the office up.">>
+<<AddParagraph "And then they're running around, like two hurricanes in a bottle, as they try to clean the office up.">>
 <<AddParagraph "Their collaboration skills are so bad and the room so tiny, that they do nothing but get in each other's way.">>
 
 <<SetSpeaker "???">>
@@ -588,7 +588,7 @@
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please, have a sit. Would you like a drink?">>
+<<AddParagraph "Please, have a seat. Would you like a drink?">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh, uh, gladly. I would love a cup of-">>
