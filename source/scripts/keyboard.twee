@@ -42,6 +42,7 @@ $(document).on("keyup", function (e) {
 	if(window.debug_mode && e.keyCode == 71)
 	{
 		let passageTitle = prompt("Go to which passage title? (case sensitive)");
+		State.variables["$optionmap"] = [] 
 		Engine.play(passageTitle);
 	}
 

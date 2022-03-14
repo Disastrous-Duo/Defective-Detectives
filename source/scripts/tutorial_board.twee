@@ -54,23 +54,8 @@
 
 
 
-// sizes for the canvas that is about to be resized
-var parent = document.getElementById(`${this_board+"_overlay"}`);
-var w = Math.round(parent.offsetWidth/2);
-var h = Math.round(parent.offsetHeight/2);
+// Recalculated after, could be optimize
 
-  window[this_board].notesList = [
-    {txt:"**MYSTERY**\nHow to use the conspiracy board?", x:w, y:h, type:"question"},
-    {txt:"CLUE 1/5\n\n\n", x:w/2-10, y:h*2/3+10, type:"clue"},
-    {txt:"CLUE 2/5\nClick a pin, then click another to connect them", x:w*3/2, y:h*2/3, type:"clue"},
-
-    {txt:"CLUE 3/5\nMove notes by dragging them", x:  w/2+10 , y: h*6/4-10   +10, type:"front-hint"},
-    {txt:"CLUE 4/5\nScroll to dezoom. Drag to move on the board", x:w/2+10  +40, y:h*6/4-10  +30, type:"clue"},
-
-    {txt:"CLUE 5/5\n Oh no, you found me!", x:w*7/3, y:h*7/3, type:"clue"},
-
-    /*{txt:"INSTRUCTIONS\nConnect all 5 hints to the mystery!", x:w, y:h*1/3-10, type:"instruction"}*/
-  ];
 
   window[this_board].linesList = [
     {start:0,end:1}
@@ -86,9 +71,21 @@ var h = Math.round(parent.offsetHeight/2);
   {
     // Sets canvas to fill all the overlay
     var html_canvas = document.getElementById(`${this_board+"_cvs"}`);
-    var parent = document.getElementById(`${this_board+"_overlay"}`);
-    html_canvas.width = parent.offsetWidth;
-    html_canvas.height = parent.offsetHeight;
+    var parent = $(`#${this_board+"_overlay"}`);
+
+
+    // html_canvas.width = parent.offsetWidth;
+    // html_canvas.height = parent.offsetHeight;
+
+    var calc_width =  $("#story").width()-$("#ui-bar-body").width();
+    var calc_height = $("body").height()*0.9;
+
+
+
+    parent.width(calc_width);
+    parent.height(calc_height);
+    html_canvas.width = calc_width;
+    html_canvas.height = calc_height;
 
   var canvas = this.canvas = new fabric.Canvas(`${this_board+"_cvs"}`, {
   selection: false,
@@ -120,6 +117,24 @@ var h = Math.round(parent.offsetHeight/2);
   settings.lineColor = "red";
   settings.gridColor = "#281918";
 
+
+
+    var w = canvas.getWidth()/2;
+    var h = canvas.getHeight()/2;
+
+    /*Initialize notes here, simpler for centering post its*/
+    window[this_board].notesList = [
+      {txt:"**MYSTERY**\nHow to use the conspiracy board?", x:w, y:h, type:"question"},
+      {txt:"CLUE 1/5\n\n\n", x:w/2-10, y:h*2/3+10, type:"clue"},
+      {txt:"CLUE 2/5\nClick a pin, then click another to connect them", x:w*3/2, y:h*2/3, type:"clue"},
+
+      {txt:"CLUE 3/5\nMove notes by dragging them", x:  w/2+10 , y: h*6/4-10   +10, type:"front-hint"},
+      {txt:"CLUE 4/5\nScroll to dezoom. Drag to move on the board", x:w/2+10  +40, y:h*6/4-10  +30, type:"clue"},
+
+      {txt:"CLUE 5/5\n Oh no, you found me!", x:w*7/3, y:h*7/3, type:"clue"},
+
+      /*{txt:"INSTRUCTIONS\nConnect all 5 hints to the mystery!", x:w, y:h*1/3-10, type:"instruction"}*/
+    ];
 
   /*
     lines are directed: they begin at a specific note, and enf at another

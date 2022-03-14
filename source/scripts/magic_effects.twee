@@ -269,6 +269,8 @@ window.PlaySound = function(sfx_name, delay)
   }
   else
   {
+     /* when you refresh a page and start with PlaySound, it might not exist yet */
+    if(SugarCube && SugarCube.Wikifier)
     new SugarCube.Wikifier(null, `<<audio "sfx_${sfx_name}" volume 0.6 play>>`);
   }
 

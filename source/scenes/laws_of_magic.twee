@@ -16,9 +16,9 @@
 <<AddParagraph "">>
 
 
-<<AddOptionVariables "//The river is super important… There are Spirits that dwell here, Spirits with Magic…\n Maybe they can lend their ''Gifts'' to us?//" "theory2" `{"rule1":"river_spirits","said_gift1":1}`>>
-<<AddOptionVariables "//Magic is probably based on physical phenomena and logical equations…\n This means that knowledge must be the key to Magic!//" "theory2" `{"rule1":"physics"}`>>
-<<AddOptionVariables "//Humans probably can't do magic…\n What if a symbiotic being lived inside us and gave us their powers?//" "theory2" `{"rule1":"symbiotic"}`>>
+<<AddOptionVariables "//The river is super important… There are Spirits that dwell here, Spirits with Magic…\n Maybe they can lend their ''Gifts'' to us?//" "theory2" `{"rule1":"river_spirits","said_gift1":1,"customPuce":"❶"}`>>
+<<AddOptionVariables "//Magic is probably based on physical phenomena and logical equations…\n This means that knowledge must be the key to Magic!//" "theory2" `{"rule1":"physics","customPuce":"❷"}`>>
+<<AddOptionVariables "//Humans probably can't do magic…\n What if a symbiotic being lived inside us and gave us their powers?//" "theory2" `{"rule1":"symbiotic","customPuce":"❸"}`>>
 
 <<set $said_gift1 = 0>>
 <<set $said_gift2 = 0>>
@@ -36,9 +36,9 @@
 <<AddParagraph "<br/>//''2. How can humans use it?''//">>
 <<AddParagraph "">>
 
-<<AddOptionVariables "//If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?//" "theory3" `{"rule2":"physics"}`>>
-<<AddOptionVariables `"//River Spirits must have their own agency and values and personality…\nif it resonates with someone then they can become pals? Friends? //"+tooltip("//Partners…//","Lovers? Soulmates?? More???")` "theory3" `{"rule2":"river_spirits"}`>>
-<<AddOptionVariables "//Let's stay down to earth… what about biological evolution?\n''Gifts'' like magical organs to manipulate the Laws of physics, maybe?//" "theory3" `{"rule2":"physics","said_gift2":1}`>>
+<<AddOptionVariables "//If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?//" "theory3" `{"rule2":"physics","customPuce":"❶"}`>>
+<<AddOptionVariables `"//River Spirits must have their own agency and values and personality…\nif it resonates with someone then they can become pals? Friends? //"+tooltip("//Partners…//","Lovers? Soulmates?? More???")` "theory3" `{"rule2":"river_spirits","customPuce":"❷"}`>>
+<<AddOptionVariables "//Let's stay down to earth… what about biological evolution?\n''Gifts'' like magical organs to manipulate the Laws of physics, maybe?//" "theory3" `{"rule2":"physics","said_gift2":1,"customPuce":"❸"}`>>
 
 
 :: theory3 [nobr]
@@ -52,9 +52,9 @@
 <<AddParagraph "<br/>//''3. To do Magic, which rules must humans follow?''//">>
 <<AddParagraph "">>
 
-<<AddOptionVariables "//Someone famous said it before right? “Nothing is created, nothing is destroyed, everything is transformed.”//" "restitution" `{"rule3":"physics"}`>>
-<<AddOptionVariables "//Symbiotes must eat to use their ''Gift'', right?? And if its magic, it probably won't be happy with old pastries and diluted coffee. Maybe some special food?//" "restitution" `{"rule3":"symbiotic","said_gift3":1}`>>
-<<AddOptionVariables "//If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?//" "restitution" `{"rule3":"river_spirits"}`>>
+<<AddOptionVariables "//Someone famous said it before right? “Nothing is created, nothing is destroyed, everything is transformed.”//" "restitution" `{"rule3":"physics","customPuce":"❶"}`>>
+<<AddOptionVariables "//Symbiotes must eat to use their ''Gift'', right?? And if its magic, it probably won't be happy with old pastries and diluted coffee. Maybe some special food?//" "restitution" `{"rule3":"symbiotic","said_gift3":1,"customPuce":"❷"}`>>
+<<AddOptionVariables "//If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?//" "restitution" `{"rule3":"river_spirits","customPuce":"❸"}`>>
 
 :: restitution [nobr]
 
@@ -98,14 +98,15 @@
   <<set $rules_result to "Results_Bullshit">>
 <</if>>
 <<BlankSpeaker>>
-
 <<AddParagraph "">>
+
+
 <<AddOption "//Hum, maybe I should think about this again.// (Retry.)" "theory1">>
 <<AddOption "//Ok, this is looking good!// (Confirm.)" "stateRules">>
 
 
 :: stateRules [nobr]
-<<audio "flicker_bgm" fadeto 0>>
+<<audio ":playing" fadeout>>
 <<BlankSpeaker>>
 <<AddParagraph "You enunciate the rules you just pieced together with made up confidence that now almost feels...">>
 <<AddParagraph "Real.">>
@@ -132,7 +133,6 @@
 
 
 <<BlankSpeaker>>
-
 <<AddParagraph "Cannelé and Nomnom look at each other.">>
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "…">>
@@ -149,6 +149,8 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "">>
+
+
 <<AddOption "//I thought it was pretty good?//" $rules_result>>
 <<AddOption "//Am I that far off??//" $rules_result>>
 <<AddOption "//I hate them so much…//" $rules_result>>
@@ -453,7 +455,7 @@ function()
 
 <<AddOption "«Can I ask you about your gifts?»" "cnGifts">>
 <<AddOption "«Before we continue, I have some questions about those Laws…»" "questionsLaws">>
-<<AddOption "«Got it» (Continue.)" "backToInterview">>
+<<AddOption "«Got it» (Continue.)" "lawsDone">>
 
 
 
@@ -489,6 +491,9 @@ function()
 <<SetSpeaker "???">>
 <<AddParagraph "…">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<AddOption "«Nevermind, then… I have some questions about the Laws, though.» (Learn more.)" "questionsLaws">>
 
 <<if $interview_event is false>>
@@ -510,6 +515,9 @@ function()
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "We shall indulge you.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<set $firstlaw to false>>
 <<set $secondlaw to false>>
@@ -565,7 +573,7 @@ function()
 <<AddOption "«About that third Law…»" "law3">>
 <</if>>
 
-<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
+<<AddOption "«That's it» (Change Topic.)" "backToInterview">>
 
 
 :: law2 [nobr]
@@ -613,7 +621,7 @@ function()
 <<if $thirdlaw is false>>
 <<AddOption "«About that third Law…»" "law3">>
 <</if>>
-<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
+<<AddOption "«That's it» (Change Topic.)" "backToInterview">>
 
 
 :: law3 [nobr]
@@ -679,13 +687,16 @@ function()
   <<AddOption "«About that second Law…»" "law2">>
 <</if>>
 
-<<AddOption "«That's it» (Change Topic.)" "lawsDone">>
+<<AddOption "«That's it» (Change Topic.)" "backToInterview">>
 
 
 :: lawsDone [nobr]
 <<SetSpeaker "???">>
 <<AddParagraph "Thank you, I think I'm good.">>
 <<AddParagraph "Now…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 
 <<if $interview_event is false>>
@@ -703,8 +714,11 @@ function()
 
 :: backToInterview [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph "Ok, all the magic thing looks clearer now, thanks.">>
+<<AddParagraph "Ok, all the magic stuff makes a little more sense to me now, thanks.">>
 <<AddParagraph "Now…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $interview_event is false>>
 <<AddOption "«About what happened to me…»" "Event">>

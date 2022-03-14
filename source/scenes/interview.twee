@@ -8,6 +8,8 @@
 <<AddParagraph "The room is small.">>
 <<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<AddOption "Talk to the detectives." "talkDetective">>
 <<AddOption "Look around." "lookAround">>
@@ -62,7 +64,7 @@
 :: lookAround [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "As you decide to look around, you see the detectives start moving unnaturally.">>
-<<AddParagraph "They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity..">>
+<<AddParagraph "They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity.">>
 
 
 <<SetSpeaker "?">>
@@ -73,14 +75,14 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They are fidgeting as they glance at each other, before seemingly reaching an agreement.">>
-<<AddParagraph "Somehow, even their unspoken communication is //loud//..">>
+<<AddParagraph "Somehow, even their unspoken communication is //loud//…">>
 
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A minute, please!">>
 
 <<BlankSpeaker>>
-<<AddParagraph "And then they're running around, like two ouragans in a bottle, as they try to clean the office up.">>
+<<AddParagraph "And then they're running around, like two hurricanes in a bottle, as they try to clean the office up.">>
 <<AddParagraph "Their collaboration skills are so bad and the room so tiny, that they do nothing but get in each other's way.">>
 
 <<SetSpeaker "???">>
@@ -202,7 +204,6 @@
 <<AddParagraph "''*BANG*''">>
 <<PlaySound "small_bang">>
 
-
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
 
 <<SetSpeaker "Nomnom">>
@@ -210,6 +211,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "From the rubbish cluttering it, emerge a couple blankets, newspapers and a half-eaten croissant.">>
+<<AddParagraph "">>
 
 <<if $interview_right is false>>
   <<AddOption "Inspect sink on the right." "Right">>
@@ -243,6 +245,9 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//-assuring.//">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<if $interview_left is false>>
   <<AddOption "Inspect couch on the left." "Left">>
 <</if>>
@@ -260,7 +265,7 @@
 <<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please refrain from touching the board, it's quite-">>
+<<AddParagraph "Please refrain from touching the conspiracy board, it's quite-">>
 
 <<BlankSpeaker>>
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.">>
@@ -271,12 +276,13 @@
 
 <<BlankSpeaker>>
 <<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
-<<PlaySound "impact">>
+<<PlaySound "whip">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "OUCH!">>
 
-
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 
 <<if $interview_left is false>>
@@ -298,6 +304,7 @@
 <<AddParagraph "The rubbish had mysteriously disappeared, hidden in a dark corner.">>
 <<AddParagraph "The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.">>
 <<AddParagraph "Your need to flee the place is still there but it has slightly decreased.">>
+<<AddParagraph "">>
 
 <<AddOption "''*BANG*''" "conspiracyBoard">>
 
@@ -326,7 +333,6 @@
 <<AddParagraph "They continue rummaging through the mess of documents.">>
 <<AddParagraph "You see a colored paper sticking out from under the coffee table.">>
 
-
 <<SetSpeaker "???">>
 <<AddParagraph `"Are you looking for this "+note("post-it",{type:"tuto-board-trigger"})+"?"`>>
 
@@ -340,9 +346,9 @@
 /*TODO: Disable only if when it is called, the variable asociated with the tutorial being completed is not true. because you can complete it before it being called, if you do it when you click the post-it.*/
 <<DisableContinueButton "window.pullcord.completed_tutorial" "You should really take this post-it, you know.">>
 
-
 <<SetSpeaker "???">>
 <<AddParagraph "//I got it!//">>
+
 
 <<AddOption "Turn back to the two detectives." "interviewTwoDetectives">>
 
@@ -350,6 +356,7 @@
 :: interviewTwoDetectives [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The two detectives are staring back, blankly.">>
+<<AddParagraph "">>
 
 <<set $interview_nomnom to false>>
 <<set $interview_cannele to false>>
@@ -433,7 +440,7 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//I think I get what's happening here.//">>
-<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"CANNELÉ & NOMNOM?",type:'question'})+" going on…//"`>>
+<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"CANNELÉ & NOMNOM'S RELATIONSHIP?",type:'question'})+" going on…//"`>>
 <<AddParagraph "//And Cannelé is //rather small// compared to Nomnom, who is// rather tall.">>
 <<AddParagraph "//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//">>
 <<AddParagraph "//It's suprisingly…//">>
@@ -499,7 +506,7 @@
 <<AddParagraph "On the armpits, traces of flour and breadcrumbs remain.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "These happens when you buy bread on tuck it on under your arm.">>
+<<AddParagraph "This happens when you buy bread and tuck it on under your arm.">>
 <<AddParagraph `"So Nomnom must be the one who buys the daily "+tooltip("baguette","You don't know what a baguette is?")+"."`>>
 <<AddParagraph "That's surprisingly responsible!">>
 
@@ -529,7 +536,6 @@
 
 :: nomnomLeftShoe [nobr]
 
-
 <<SetSpeaker "???">>
 <<AddParagraph "//Now that I'm looking more closely, these shoes aren't from the same pair at all.//">>
 
@@ -550,7 +556,8 @@
 <<set $interview_speak to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right? Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
+<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right?"`>>
+<<AddParagraph `"Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph `"It's pronounced //non-non//, "+note("Nomnom",{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name” in French…", type:"clue", fontSize:16})+ "?"`>>
@@ -581,7 +588,7 @@
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please, have a sit. Would you like a drink?">>
+<<AddParagraph "Please, have a seat. Would you like a drink?">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh, uh, gladly. I would love a cup of-">>
@@ -615,6 +622,9 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Amnesia. Can you tell us everything you remember?">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<set $interview_identity to false>>
 <<set $interview_event to false>>
 <<set $interview_coffee to false>>
@@ -626,7 +636,7 @@
 
 
 :: Identity [nobr]
-<<audio "bard_bgm" fadeto 0>>
+<<audio ":playing" fadeout>>
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
@@ -651,6 +661,9 @@
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Do you even remember what a gift is?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<AddOption "«Of course, I do» (Bluff.)" "giftYes">>
 <<AddOption "«A what now?»" "giftNo">>
@@ -682,12 +695,11 @@
 <<AddParagraph "This is really not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Do not worry, you are "+note("//not//",{txt:"Other cases of amnesia",type:"clue"})+" our first case of amnesia, we //absolutely// know what we are doing."`>>
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
 
-<<SetSpeaker "???">>
 <<AddOption "«If you insist…»" "theory1">>
 
 
@@ -713,7 +725,7 @@
 <<AddParagraph "This is //really// not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"Do not worry, you are "+note("//not//  our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
@@ -721,7 +733,6 @@
 <<SetSpeaker "???">>
 <<AddParagraph "//I missed the timing to back out and come clean…//">>
 
-<<SetSpeaker "???">>
 <<AddOption "«Erm…»" "theory1">>
 
 
@@ -735,7 +746,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "The flyer on the table reads:">>
-<<AddParagraph "''AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//. __Will Help__ you find anything you ==misplaced== lost. Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__">>
+<<AddParagraph "@@.flyer;AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//.<br/> __Will Help__ you find anything you ==misplaced== lost.<br/>Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__@@">>
 <<AddParagraph "It's barely legible and mostly just confusing.">>
 
 <<SetSpeaker "???">>
@@ -779,7 +790,10 @@
 <<AddParagraph "Nothing. I looked into all my pockets, but I have nothing…">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph `"So, a "+ note("cat", {"txt": "All ID was stolen by a cat", type:"clue"}) +" stole the only lead you had about your identity. I see."`>>
+<<AddParagraph `"So, a "+ note("cat", {"txt": "WANTED", type:"picture", src:"note_cat.png"}) +" stole the only lead you had about your identity. I see."`>>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $interview_identity is false>>
 <<AddOption "«Who am I?»" "Identity">>
@@ -826,6 +840,9 @@
 <<AddParagraph "Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin.">>
 <<AddParagraph "The dectective looks at it longingly before handing it over.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<if $interview_identity is false>>
 <<AddOption "«Who am I?»" "Event">>
 <</if>>
@@ -866,6 +883,9 @@
 <<BlankSpeaker>>
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<AddOptionVariables "//Am I really… leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
 /* <<AddOptionVariables "//But somehow… I feel like they might be trustworthy…//" "Contract2" `{"trust":true}`>> */
 /* SUGGESTION : */
@@ -897,11 +917,46 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question"})`>>
-<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question"})`>>
-<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question"})`>>
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
 
-<<GotoContinueButton "Contract2_1">>
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Maybe those questions will be useful later…">>
+<<DisableContinueButton "window.mysteries == 3" "Yes. Yes, they will. Trust me. Just take them." "Contract2_1">>
+
 
 
 :: Contract2_1
@@ -962,6 +1017,9 @@
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<AddOption "«Not really?»" "noName">>
 <<AddOption "«I can come up with one!»" "enterName">>
@@ -1025,6 +1083,7 @@
 <<AddParagraph "Inspiration?">>
 
 <<AddParagraph "<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<PlaySound "title_show" "0.5s">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "A name…">>
@@ -1095,6 +1154,7 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "">>
+
 <<AddOption "//I can't believe this is happening to me.//" "Naming1">>
 <<AddOption "//Is it too late to leave?//" "Naming1">>
 <<AddOption "//I don't even know what to say to that.//" "Naming1">>
@@ -1176,9 +1236,10 @@
 <<AddParagraph "Then think about the names THEY had come up with, 'Yasyas' and 'Muffin'.">>
 <<AddParagraph "And you feel rage boiling in the pit of your stomach…">>
 <<AddParagraph "That soon transforms into weariness.">>
+<<AddParagraph "">>
 
-<<AddOption "«I am so done with this.»" "Naming2" >>
 <<AddOption "«Let's get this over with.»" "Naming2" >>
+<<AddOptionVariables "//If I run for it, maybe...//" "Naming2" `{"leave":"yes"}` >>
 
 
 
@@ -1186,6 +1247,9 @@
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom have stopped bickering now.">>
 <<AddParagraph "They're staring straight at you.">>
+<<if $leave is "yes">>
+  <<AddParagraph "You are trapped.">>
+<</if>>
 
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "You must pick one.">>
@@ -1207,6 +1271,9 @@
 
 <<SetSpeaker "???">>
 <<AddParagraph "//A situation I can't escape.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<AddOption "«Muffin it is, I guess…»" "Muffin">>
 <<AddOption "«I'll just go with Yasyas»" "Yasyas">>
@@ -1241,7 +1308,11 @@
 <h2 class="typewriter" >Chapter 2 - The Hoboolean Coin</h2><br/>
 
 <<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddParagraph "//Hey!//">>
 <<AddParagraph "//You've reached the end of this demo. Thank you so much for playing! Now...//">>
 <<AddParagraph "//We'd like to ask you if you could help us with something.//">>
-<<AddParagraph "We would love to hear your feedback on our demo, please fill this form : https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!">>
+<<AddParagraph "We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!">>
+<<AddParagraph "It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab.">>
+<<AddParagraph "Feel free to open the conspiracy board and play around with the clues you've collected during this demo!(but let us warn you, they will be lost if you refresh the page)">>
+<<AddParagraph "Thank you for playing <3">>

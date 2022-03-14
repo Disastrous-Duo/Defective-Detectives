@@ -107,6 +107,7 @@
 <<script>>
 
 
+  window.PlaySound("slot");
 
   var letters_length = word_input_length;
   var alphabet = "-ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -241,7 +242,7 @@
     target_slot_y[id] = target_slot_y[id] - firstClick;
     updateWordValue();
 
-    window.PlaySound("pullcord"); // temporary
+    window.PlaySound("pullcord"); /* temporary */
   };
 
   window.word_input_down_click = function(id)
@@ -250,7 +251,7 @@
     target_slot_y[id] = target_slot_y[id] + 1;
     updateWordValue();
 
-    window.PlaySound("pullcord"); // temporary
+    window.PlaySound("pullcord"); /* temporary */
   };
 
   window.word_input_validate = function()

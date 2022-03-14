@@ -2,14 +2,29 @@
 :: Start
 <<BlankSpeaker>>
 
-<img src="./source/media/art/title_screen.png" style="max-width: 60%;"/>
+<<script>>
+window.story.style["overflow-y"] = "visible";
+UIBar.stow();
+
+$("#story").prepend('<img id="title_screen_image" src="./source/media/art/title_screen.png"/><br/>');
+$("#title_screen_image").height($("#story").height());
+  console.log($("#story"));
+<</script>>
 
 <<AddOption "START GAME" "Falaisant">>
 
 /* Falaisant : Introduction of the city */
 :: Falaisant [nobr]
-<<run UIBar.unstow()>>
+
+<<script>>
+  UIBar.unstow();
+  window.story.style["overflow-y"] = "scroll";
+  if(window.title_screen_image) window.title_screen_image.style.display = "none"; /*Relaod shenanigans*/
+<</script>>
+
 <<audio "intro_bgm"  volume 0 fadeto 0.5>>
+
+
 <<BlankSpeaker>>
 <<AddParagraph "//A majestic waterfall looms over the blue City of Falaisant.//">>
 
@@ -45,6 +60,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//Soon, big boats appear, moored to a wharf.//">>
 <<AddParagraph "//Containers are stacked on the side as the sunlight casts its early light on busy dockhands.//">>
+<<AddParagraph "">>
 
 <<AddOption "The drop follows the movement of the merchandise." "Falaisant1_6">>
 <<AddOption "The drop takes a sharp turn in a dark alley." "Falaisant2_7">>
@@ -54,6 +70,7 @@
 <<AddParagraph "//Boxes are carried to an empty marketplace.//">>
 <<AddParagraph "//All the workers stop before a group of officers; they seem stuck.//">>
 <<AddParagraph "//On the other side of the place, a mysterious figure in a long, dark coat is making their way out of the market.//">>
+<<AddParagraph "">>
 
 <<AddOption "The drop glides, chasing after the curious individual." "Falaisant1_7_1">>
 <<AddOption "The drop takes another turn, rolling away from the suspicious silhouette." "Falaisant1_7_2">>
@@ -121,6 +138,7 @@
 <<PlaySound "plic">>
 <<AddParagraph "//Ploc.//">>
 <<PlaySound "ploc">>
+<<BlankSpeaker>>
 
 <<AddOption "Lower, Lower…" "Falaisant2_7">>
 
@@ -162,6 +180,7 @@
 <<BlankSpeaker>>
 <<AddParagraph "//The paved streets lead to a big park.//">>
 <<AddParagraph "//Trees line up, dividing green grass fields, trodden paths and sculpted fountains.//">>
+<<AddParagraph "">>
 
 <<AddOption "The drop is drawn to the biggest fountain." "Falaisant3_6_1">>
 <<AddOption "The drop rolls past the rows of trees." "Falaisant3_6_2">>
@@ -195,7 +214,7 @@
 
 
 :: Falaisant10 [nobr]
-<<audio "intro_bgm" fadeto 0>>
+<<audio ":playing" fadeout>>
 <<BlankSpeaker>>
 <<AddParagraph "In this instant, something has just shifted in your universe.">>
 <<PlaySound "plic">>
@@ -210,12 +229,11 @@
 <<AddParagraph "''*BANG*''">>
 <<PlaySound "small_bang">>
 <<AddParagraph "Something just happened behind that door.">>
+<<AddParagraph "">>
 
 
-<<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
+<<AddOptionSound "Knock" "Expo" "door_knock">>
 <<AddOption "Wait" "Expo">>
-
-:: ExpoKnock
 
 
 /* Meeting */
@@ -232,6 +250,9 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "I said it first, YOU SHUT UP, shut up">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo_Wait1">>
 
@@ -245,6 +266,8 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "NO, NO, you shut up.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo_Wait2">>
 
@@ -258,6 +281,8 @@
 <<SetSpeaker "Somehow Shriller Voice">>
 <<AddParagraph "ILL SHUT UP WHEN YOU STOP BEING ANNOYING.">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 <<AddOptionSound "Knock" "Expo_Knock" "door_knock">>
 <<AddOption "Wait" "Expo_Knock">>
 
