@@ -506,7 +506,7 @@
 <<AddParagraph "On the armpits, traces of flour and breadcrumbs remain.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "These happens when you buy bread on tuck it on under your arm.">>
+<<AddParagraph "This happens when you buy bread and tuck it on under your arm.">>
 <<AddParagraph `"So Nomnom must be the one who buys the daily "+tooltip("baguette","You don't know what a baguette is?")+"."`>>
 <<AddParagraph "That's surprisingly responsible!">>
 
