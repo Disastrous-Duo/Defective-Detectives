@@ -112,7 +112,7 @@ tw-hook
 }
 
 .pastchoice {
-  color: #737c87;
+  color: #8c3f2c;
   font-style: italic;
 }
 
