@@ -1,0 +1,1229 @@
+:: market_Tails_0 [nobr]
+<<set $market_path to "right">>
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Five points for Nomnom//">>
+<<AddScore "Nomnom" 5>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "TRUTH IS ON MY SIDE!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "THIS IS A SCAM??? THIS IS NOT MAGIC THIS IS A HATE CRIME AGAINST ME??">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The Detectives are back to arguing as they head toward the path on the right.">>
+<<AddParagraph "The Hobo is smiling, a bit dumbfounded at the chaotic pair.">>
+
+<<AddOption "Is this really mag-" "market_Hobo">>
+
+
+:: market_Faces_0 [nobr]
+<<set $market_path to "left">>
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Five points for Cannelé//">>
+<<AddScore "Cannelé" 5>>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "THE VENERATED HOBOOLEAN COIN HAS SPOKEN, WE ARE GOING LEFT!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "??? I WANT TO A REFUND THIS IS OBVIOUSLY A CONSPIRACY!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The Detectives are back to arguing as they head toward the path on the left.">>
+<<AddParagraph "The Hobo is smiling, a bit dumbfounded at the chaotic pair.">>
+
+<<AddOption "Is this really mag-" "market_Hobo">>
+
+:: market_Hobo [nobr]
+<<SetSpeaker "Hobo">>
+<<AddParagraph "//*wink*//">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "And is this really the right way to the market?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "At that, Cannelé and Nomnom turn around but the Hobo is nowhere to be seen.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "??">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "???">>
+<<AddParagraph "What just happened?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Philibert the Cat draws a wide, troubling smile, turns around and disappears.">>
+
+<<AddOption "Did I just dream this whole thing?" "market_WTF">>
+
+
+:: market_WTF [nobr]
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "But the Hoboolean Coin…">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "… Is right here?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "WAIT A MINUTE!">>
+<<AddParagraph "WHY WOULD ''YOU'' GET TO KEEP THE MAGIC COIN?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "BECAUSE?? I CAN'T ENTRUST IT TO A COMPLETE IMBECILE??">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "DID YOU LOOK INTO A MIRROR RECENTLY?">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I…">>
+
+<<AddOption "Take a deep breath." "market_CoinGuardian">>
+
+
+:: market_CoinGuardian [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I will keep the coin.">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "…">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "This sounds almost… reasonable.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé shudders.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Let's…">>
+<<AddParagraph "Let's do this, Truth Keeper.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//This is probably a mistake//">>
+<<AddParagraph "//But if this can buy me precious seconds of quiet…//">>
+
+<<AddOption "I'll do it!!!" "market_Gasp">>
+
+
+:: market_Gasp [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom are surprised by this sudden burst of energy.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Hey! That's the spirit!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Now, let's go!">>
+
+<<if $market_path === "left">>
+<<AddOption "Take the left path" "market_LeftPath">>
+<</if>>
+
+<<if $market_path === "right">>
+<<AddOption "Take the right path" "market_RightPath">>
+<</if>>
+
+:: market_LeftPath [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "The path on the left takes a sharp turn.">>
+<<AddParagraph "The street is indeed narrow, but it is well-lit and the pavement is even.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I can just //feel// it: this is the wrong way.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "you can't feel ''shit'', if we had followed the other road we would have ''NEVER'' made it to the market.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "This just doesn't feel right…">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Yeah, no kidding, we are on the LEFT PATH?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "One day, murder will be legal and-">>
+
+<<BlankSpeaker>>
+<<AddParagraph "After a couple more turns, a sign says:">>
+<<BlankSpeaker>>
+<<AddParagraph "''This way to the market''">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "''*COUGH*''">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Well, I guess at least //something// has to be going well.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé's face morphed into a smug grin.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//I kinda wanna punch Cannelé's face right now…//">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "If you keep that smile up I'll punch it right out of your face.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//… Agreeing with Nomnom also feels terrible//">>
+<<AddParagraph "//I think I'm going to faint.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé keeps silent-bragging as the others ignore them.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Finally, the group arrives close to a big, open market.">>
+<<AddParagraph "Right at the entrance, a man is fumbling around.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "That guy…">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "… Is suspicious.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Maybe he is a criminal, lurking in broad daylight!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The man wears an unmistakable uniform.">>
+<<AddParagraph "He probably… isn't a criminal.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "A ''dangerous'' criminal…">>
+
+<<AddOption "Wait… I recognize that man!!!" "market_PoliceOfficer">>
+
+
+
+:: market_RightPath [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "The group takes the path on the right.">>
+<<AddParagraph "Nomnom is humming enthusiastically while Cannelé sulks.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//At least, they're not arguing anymore//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The road connects to a big, open plaza.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "This just //feels// like the right path.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé rolls their eyes.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "The Hoboolean Coin is a sham!!">>
+<<AddParagraph "This entire world is against me.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Quit your whining and just enjoy the walk">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Yeah, I'll enjoy ''RUINING YOUR GODDAMN LIFE''">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//I jinxed it.//">>
+<<AddParagraph "//I fucking jinxed it.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom keep arguing until they reach the extremity of the plaza.">>
+<<AddParagraph "In the centre of the area, a big fountain is adorned with statues">>
+<<AddParagraph "A marble plate states the name of the place">>
+<<AddParagraph "''Harry Youlost Plaza''">>
+<<AddParagraph "Two streets emerge from the plaza: one going straight ahead and the other veering left.">>
+
+<<AddParagraph "The two detectives turn around, expectantly.">>
+
+
+<<AddOption "Take the Hoboolean Coin out." "market_Crossroads">>
+
+
+:: market_Crossroads [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "//I am terrified of the fact that I can communicate with them now.//">>
+<<AddParagraph "So? Who is Faces, who is Tails?">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "I PICK TAILS!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom glare at each other.">>
+<<AddParagraph "None of them is budging.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//This can't be happening to me.//">>
+<<AddParagraph "//My karma truly is fucked..//">>
+
+<<AddOption "Sigh" "market_Crossroads2">>
+
+
+
+:: market_Crossroads2 [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "Should we just…">>
+<<AddParagraph "Flip a coin to decide who gets Tails?">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "THEN I PICK FACES!">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "BITCH???">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They seem like they're about to start fighting.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Ok, I will just flip this one myself or this is never going to end.">>
+<<AddParagraph "Both of you, tell me a number.">>
+<<AddParagraph "//The lowest number gets Faces.//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "753">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "42">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Nomnom picked the smaller number so they get to pick Faces for the throw that will decide who will get to pick Tails.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Then 4!!!!!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "This…">>
+<<AddParagraph "This isn't how this works, I'm sorry.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "AH!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Whatever, just throw it.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin is thrown in the air.">>
+<<AddParagraph "It danses around, flicking between the fancy T and F before falling down.">>
+
+
+<<AddOption "Faces" "market_Faces">>
+<<AddOption "Tails" "market_Tails">>
+
+
+:: market_Faces [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin lands on Faces.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Nomnom//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom lets escape a shout of victory.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "THIS COIN HATES ME??? LET'S HAVE A REMATCH">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "YOU SORE LOSER!! I WAS CHOSEN BY THE HOBOOLEAN!!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "This means that Nomnom picks Tails in the next throw.">>
+<<AddParagraph "Here goes…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin is thrown in the air.">>
+<<AddParagraph "It danses around, flicking between the fancy T and F before falling down.">>
+
+<<AddOption "Faces" "market_CrossC1">>
+<<AddOption "Tails" "market_CrossN1">>
+
+
+:: market_Tails [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin lands on Tails.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Cannelé//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé starts dancing, victorious.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "VICTORY AT LAST!!!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "THIS ISN'T OVER YET">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "This means that Cannelé picks Tails in the next throw.">>
+<<AddParagraph "Here goes…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin is thrown in the air.">>
+<<AddParagraph "It danses around, flicking between the fancy T and F before falling down.">>
+
+<<AddOption "Faces" "market_CrossN2">>
+<<AddOption "Tails" "market_CrossC2">>
+
+
+:: market_CrossC1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin lands on Faces.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Cannelé//">>
+
+<<AddOption "…" "market_CrossLeft">>
+
+:: market_CrossC2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin lands on Tails.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Cannelé//">>
+
+<<AddOption "…" "market_CrossLeft">>
+
+
+:: market_CrossN1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin lands on Tails.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Nomnom//">>
+
+<<AddOption "…" "market_CrossAhead">>
+
+
+:: market_CrossN2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The Hoboolean coin lands on Faces.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Nomnom//">>
+
+<<AddOption "…" "market_CrossAhead">>
+
+:: market_CrossLeft [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The path takes you on the left, and merge with another road.">>
+<<AddParagraph "After a couple more turns, a sign says:">>
+<<BlankSpeaker>>
+<<AddParagraph "''This way to the market''">>
+
+<<BlankSpeaker>>
+<<AddParagraph "By then, everyone has realized that they had found their way to the road Cannelé had originally wanted to take after the meeting with the Hobo.">>
+<<AddParagraph "Cannelé is grinning obnoxiously.">>
+<<AddParagraph "The other two decide to ignore them.">>
+
+<<AddOption "//I hope we will get there soon…//" "market_CrossMarket">>
+
+
+:: market_CrossAhead [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The group continues straight ahead.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "It soon becomes obvious that this street is leading nowhere.">>
+<<AddParagraph "Nomnom, in denial keeps grumbling.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It MUST be around here">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//SIGH//">>
+
+
+<<AddOption "//I hope we will get there soon…//" "market_CrossLost1">>
+
+:: market_CrossLost1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The road turns right">>
+<<AddParagraph "Then left.">>
+<<AddParagraph "It loops.">>
+<<AddParagraph "Then turns again.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I can't take this anymore">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I KNOW WHERE THIS LEADS OK?">>
+
+
+<<AddOption "How long… Have you guys been in this city?" "market_CrossLost2">>
+
+:: market_CrossLost2 [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "How do we keep getting lost??">>
+<<AddParagraph "In the CITY CENTRE???">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom have the decence to look sheepish, apologetic.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "That's kinda this dumbass' fault we're lost here…">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "THIS IS THE RIGHT PATH!!!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom confidently takes a turn.">>
+
+<<AddOption "This can't be…" "market_CrossLost3">>
+
+:: market_CrossLost3 [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "This…">>
+<<AddParagraph "This is the Harry Youlost Plaza…">>
+<<AddParagraph "Again.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The marble nameplate and the fountain are still there.">>
+<<AddParagraph "Exactly the same as they were 15 minutes ago.">>
+<<AddParagraph "And 40 minutes before.">>
+<<AddParagraph "And 1h15 even before.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "That's it! This is going nowhere.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "My time to shine!">>
+
+<<AddOption "Follow Cannelé on the path veering left" "market_CrossLeft">>
+
+:: market_CrossMarket [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "After what seems like forever, the group eventually arrives close to a big, open market.">>
+<<AddParagraph "Right at the entrance, a man is fumbling around.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "That guy…">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "… Is suspicious.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Maybe he is a criminal, lurking in broad daylight!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The man wears an unmistakable uniform.">>
+<<AddParagraph "He probably… isn't a criminal.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "A ''dangerous'' criminal…">>
+
+<<AddOption "Wait… I recognize that man!!!" "market_PoliceOfficer">>
+
+
+:: market_PoliceOfficer [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "That's the police officer! The one I talked to this morning!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Ugh, a police officer.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Well that explains the bad vibes…">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "HEY! YOU!! WE HAVE QUESTIONS TO ASK!!!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The police officer turns around and his eyes widen.">>
+
+
+/* His entire behavior changed, he is on his guard. He recognized $client_name and doesn't want to engage conversation. */
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Have you ever seen this guy right here?">>
+
+<<SetSpeaker "Police Officer">>
+<<AddParagraph "Um, no I don't think I've had the pleasure.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Sir??">>
+<<AddParagraph "We met this morning!">>
+<<AddParagraph "You told me your grandma was sick and you had to go when I came to you for help!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Oh no! Officer, is your grandma feeling better now?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The tag on his uniform states: Pöl aufHißer">>
+
+<<SetSpeaker "Pöl aufHißer">>
+<<AddParagraph "Yes? Yes! Granny Michelle is doing uh, amazing!">>
+<<AddParagraph "Thank you for your concern.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé pats his shoulder.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Then, all is good, all is good.">>
+<<AddParagraph "Now, are you sure you've never seen-">>
+
+<<SetSpeaker "Pöl aufHißer">>
+<<AddParagraph "UH!">>
+<<AddParagraph "AH!!">>
+<<AddParagraph "OH!!!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Officer aufHißer turns around. There is nothing, but an empty street.">>
+
+<<SetSpeaker "Pöl aufHißer">>
+<<AddParagraph "My superior! My boss is calling for me!! Apologies gentlefolks, duty calls!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The street is still empty, no boss to be seen, but Officer aufHißer runs as if his landlord was at his heels.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Well that was…">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Not very police-y of him">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "AGAB, guys. AGAB.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom sighs and roll their eyes, exasperated.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "All Guards Are a Bit useless.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "For once, Cannelé nods in agreement.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Truly. A bunch of incompetent boars.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//So… they CAN agree… on anti-governmental claims? An alliance against a common enemy?//">>
+<<AddParagraph "//That's… a good start.//">>
+<<AddParagraph "//I guess?//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Following the running officer, the group reaches a marketplace.">>
+<<AddParagraph "It's crowded, the vendors are busy with their stands.">>
+<<AddParagraph "Under a tent on the left, a group of people seem to be playing a card game.">>
+<<AddParagraph "A group of policemen is gathered on the other side of the market. They seem a tad anxious.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I'll start asking the people over there.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Then, in order to stay as humanely far away from you as possible, I'll go ask that bunch there.">>
+<<AddParagraph "Let's meet here in an hour.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom looks over to the card players, and sighs.">>
+/* #NOMNOM */
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Don't, just… Don't do this.">>
+
+<<BlankSpeaker>>
+<<AddParagraph `"Nomnom turns away from Cannelé and whispers to "+$client_name+"."`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "If you go with that idiot, just… be careful, ok?">>
+<<AddParagraph "Ugh, this is a recipe for disaster.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom mumbles as they leave. Cannelé is already on their way to the table.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Does this mean… Detective Nomnom //knows// something bad is going to happen…//">>
+<<AddParagraph "//But they won't do… anything… to prevent it?//">>
+<<AddParagraph "//I might not remember you yet but…//">>
+<<AddParagraph "//''Mommy, help me.''//">>
+
+
+<<set $market_vendors to false>>
+<<set $market_gamblers to false>>
+<<set $market_police to false>>
+
+<<AddOption "Follow Nomnom" "market_Vendors">>
+<<AddOption "Run after Cannelé" "market_Gamblers">>
+<<AddOption "Snoop around the police officers" "market_Police">>
+
+
+
+
+
+
+
+
+:: market_Gamblers [nobr]
+<<set $market_gamblers to true>>
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé strolls over the table where four people are sitting.">>
+<<AddParagraph "There is money on the table.">>
+<<AddParagraph "Cannelé's eyes glint dangerously.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Good day everyone, what's on the table today?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé takes a seat. The gesture is natural, practiced.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Hmmm… Money? And cards too, I guess?">>
+<<AddParagraph "//Am I more observant than the detective I hired?//">>
+<<AddParagraph "//I will never regain my memory, will I…//">>
+
+<<SetSpeaker "Gambler A">>
+<<AddParagraph "Detective! Haven't seen you in a while!">>
+
+<<SetSpeaker "Gambler B">>
+<<AddParagraph "At least a good three days, it's been! You even came here with a friend.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé looks over anxiously.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Hahaha, what are you all talking about, I have never been here in my ''life''.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The entire table laughs as the sense of malaise deepens.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Detective? What are you doing?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Oh nothing, just a good old game of Hanged Poker-faced Maid!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "One of the ladies at the table hand over the worn out deck of cards to Cannelé, who starts shuffling.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Wanna try your hand? Be careful, I'm really good at this, I might ruin you.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "No, I'm, uh, good but? Detective?">>
+<<AddParagraph "What happened to the investigation?">>
+
+<<SetSpeaker "Gambler C">>
+<<AddParagraph "PLACE YOUR BETS!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "FEELING LUCKY TODAY, I'M BETTING IT ALL!">>
+
+<<SetSpeaker $client_name>>
+<<SetSpeaker $client_name>>
+<<AddParagraph "//''This'' was what Detective Nomnom had warned me about…//">>
+<<AddParagraph "//And they let me get stuck into this hellish situation??//">>
+<<AddParagraph "//This can't get any worse.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Everyone cheers as Cannelé reaches into their coat.">>
+<<AddParagraph "Cannelé keeps rummaging through their pockets.">>
+<<AddParagraph "…">>
+<<AddParagraph "… …">>
+<<AddParagraph "Cannelé turns around.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I have a teeny ''tiny'' favor to ask you.">>
+<<AddParagraph "Could you lend me the Hoboolean Coin?">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Fuck. It just got worse.//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I promise I'll give it back soon, with interest!!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "DETECTIVE??">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Please, please, please, I'll give you 1% of my winnings.">>
+<<AddParagraph "Pretty please?">>
+
+<<AddOption "Reluctanly hand over the coin" "market_GamblingCoin">>
+<<AddOption "Vigorously refuse" "market_NoCoin">>
+
+
+:: market_GamblingCoin [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I know I am going to regret this…">>
+<<AddParagraph "//… but I am also morbidly curious about this Hanged Poker-faced Maid game.//">>
+
+<<AddOption "…" "market_Gambling">>
+
+
+:: market_NoCoin [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "DETECTIVE!! I can't give you the coin??">>
+<<AddParagraph "//It's the only thing protecting my peace of mind when you are with Nomnom!!//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannele's expression turns extremely serious. Their voice is now but a whisper.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I swear, this is for the investigation.">>
+<<AddParagraph "I have a great feeling about this.">>
+<<AddParagraph "So… Please?">>
+
+<<AddOption "Very, ''extremely'', __absolutely__ relunctanctly hand over the coin." "market_Gambling">>
+
+
+
+:: market_Gambling [nobr]
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "This might look like a simple 50cts coins…">>
+<<AddParagraph "But it was actually enchanted by a very powerful magic-user from the Towers who gave it to me as a reward for my absolutely ''brilliant'' investigation skills.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé greedily grabs the coin and place it on the table.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I can guarantee, trust me!">>
+<<AddParagraph "Have I ever mislead any of you?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Everyone decides to ignore this last quip.">>
+
+<<SetSpeaker "Gambler A">>
+<<AddParagraph "Right! Whose turn is it? Who won the last game?">>
+
+<<SetSpeaker "Gambler B">>
+<<AddParagraph "Wasn't it you?">>
+
+<<SetSpeaker "Gambler C">>
+<<AddParagraph "Naaah, I'm pretty sure it was-">>
+<<AddParagraph "Wait.">>
+<<AddParagraph "Who won yesterday's game?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé snatches the coin back.">>
+
+<<SetSpeaker "Gambler A">>
+<<AddParagraph "Yesterday's game…">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Don't leave me hanging like this, who was it?">>
+
+<<SetSpeaker "Gambler B">>
+<<AddParagraph "Maybe we didn't play yesterday?">>
+
+<<SetSpeaker "Gambler C">>
+<<AddParagraph "Must be it.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They all shrug it off, laughing about old age and the likes.">>
+<<AddParagraph "Then, they turn to Cannelé expectantly.">>
+
+<<SetSpeaker "Gambler D">>
+<<AddParagraph "Then let's have the Detective start today, it's been a while since we've seen them.">>
+
+<<SetSpeaker "Gambler B">>
+<<AddParagraph "Sounds fair!">>
+
+<<SetSpeaker "Gambler A">>
+<<AddParagraph "Bet your fancy coin, Detective!">>
+
+<<SetSpeaker "Gambler C">>
+<<AddParagraph "I do need some truth in my life, a truth coin is exactly what I need!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé suddenly stands up.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I just remembered!">>
+<<AddParagraph "I am in the middle of work">>
+<<AddParagraph "With my //client.//">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Oh, NOW they remember me…//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Gotta bail, I'll be back tomorrow!">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One point for Cannelé//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé drags you far from the gambling tables.">>
+
+<<AddOption "Well that was close…" "market_GamblingEnd">>
+
+
+:: market_GamblingEnd [nobr]
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I know right?">>
+<<AddParagraph "Those geezers, they think I'm not used to their tactics by now…">>
+<<AddParagraph "But I'm detective! I won't fall for their schemes!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "What do you mean…">>
+<<AddParagraph "Schemes?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "When they start bringing up their old age and acting forgetful…">>
+<<AddParagraph "I know they're out to scam me!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé shakes their head, confidence overflowing">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Tut tut, tut! I won't fall for their trap!">>
+<<AddParagraph "The coin is mine.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Well, technically-">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé has already stalked off.">>
+
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Minus one point for Cannelé//">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Conversation with this person is absolutely impossible.//">>
+<<AddParagraph "//I think I'm having a headache.//">>
+<<AddParagraph "//For now, let's just get away from this gambling freak.//">>
+
+
+<<if $market_vendors is false>>
+<<AddOption "Find Nomnom" "market_Vendors">>
+<</if>>
+
+<<if $market_police is false>>
+<<AddOption "Sneak close to the group of officers" "market_Police">>
+<</if>>
+
+<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
+  <<AddOption "Regroup" "market_Addict">>
+<</if>>
+
+
+:: market_Police [nobr]
+<<set $market_police to true>>
+
+<<BlankSpeaker>>
+<<AddParagraph "On the opposite side of the market, policemen are huddled together.">>
+<<AddParagraph "They're are talking in a low voice, as if they didn't want to be heard">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Let's try to get closer//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Some words can be heard from their conversation, but it's very hushed.">>
+
+<<SetSpeaker "Police Officers">>
+<<AddParagraph "… Fleurs d'Ame… Marché…">>
+
+<<AddOption "Go closer" "market_Police1">>
+
+
+:: market_Police1 [nobr]
+<<set $market_police to true>>
+
+<<BlankSpeaker>>
+<<AddParagraph "The conversation can be heard more clearly.">>
+
+
+<<SetSpeaker "Police Officer A">>
+<<AddParagraph "The whole district's been in havoc since yesterday.">>
+
+<<SetSpeaker "Police Officer B">>
+<<AddParagraph "There's been a problem with the doses, why does it keep happening…">>
+
+<<SetSpeaker "Police Officer C">>
+<<AddParagraph "The investigation is almost over, soon we can go back up and forget about this incident.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "During the entire exchange, a familiar officer has been looking around. His gaze stop suddenly.">>
+
+<<SetSpeaker "Pöl aufHißer">>
+<<AddParagraph "YOU! WHAT DO YOU THINK YOU'RE DOING?">>
+<<AddParagraph "I BETTER NOT SEE YOU AROUND ANYMORE!!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Time to scram!//">>
+
+<<if $market_vendors is false>>
+<<AddOption "Find Nomnom" "market_Vendors">>
+<</if>>
+
+<<if $market_gamblers is false>>
+<<AddOption "Find Cannelé" "market_Gamblers">>
+<</if>>
+
+<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
+  <<AddOption "Regroup" "market_Addict">>
+<</if>>
+
+
+:: market_Addict [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "An hour after splitting up, everyone meets at the entrance of the market.">>
+<<AddParagraph "The three of them are sitting at a wobbling table, outside a small bistrot.">>
+
+<<SetSpeaker "Waiter">>
+<<AddParagraph "What can I get you?">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I'll have a cup of t-">>
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "3 cups of Spicy Cocoa.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//What does everyone have against tea??//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "And a plate of biscuits, please.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "No, make that one croissant">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "BITCH?">>
+
+<<SetSpeaker "Waiter">>
+<<AddParagraph "Should I bring 3 cups of Spicy Cocoa, a plate of biscuits and a croissant?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "This would've been the best solution but…">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "As if we could afford that??">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Do we look like royalty to you maybe, Sir??">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "We will only have 3 cups of cocoa, please">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The waiter nods with a relieved smile and hurries back inside.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "As they prepare to go over what they discovered at the market, they hear a sound.">>
+
+<<SetSpeaker "????">>
+<<AddParagraph "Hey!">>
+<<AddParagraph "Hey! You!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "No one pays attention to the yells.">>
+
+<<SetSpeaker "????">>
+<<AddParagraph "The group of three weird people at the table!">>
+<<AddParagraph "I'm talking to you">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Suddenly, a person appears in front of the table.">>
+<<AddParagraph "The stranger is tall, very tall and wearing clothes too slightly too small for them.">>
+<<AddParagraph "Their smile is sheepish and their eyes are red and puffy.">>
+
+<<SetSpeaker "????">>
+<<AddParagraph "Hi, my name is Richie and-">>
+
+<<BlankSpeaker>>
+<<AddParagraph  "@@.precog;The man's clothes are tattered, <span class='Precog' data-speed='1' data-random='0' data-value='as if he had been wearing the same outfit for a long time :'> </span> this Richie probably <span class='Precog' data-speed='4' data-random='1' data-value='rich.'></span>@@">>
+
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie bends down and lowers their voice.">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "It might sound weird but I saw y'all go around the market asking questions.">>
+<<AddParagraph "Very brave of you to do that right under the nose of those cops.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie's looks around once, twice and bends down again.">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "So?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "So ?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "What are you on, man?">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I am so confused right now.">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "Did you find any info on the Fleurries?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "FURRIES ?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Oh, not again…">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "No? I mean the Fleurries!">>
+<<AddParagraph "The Âmoc-Havoc, the gifty-pennies, the shickshacks, the florus-pocus?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "??">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "???">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie seems exasperated but to his credit, he doesn't give up.">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "THE FLEURS D'AME! I MEAN THE FLEURS D'AME!">>
+<<AddParagraph "The market's been in shambles since yesterday. Me and my friends are getting desperate there…">>
+<<AddParagraph "So? Did you manage to get any? Care to share with a new pal?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom look at each other, then at the strange individual.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "What the fuck is this?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie is surprised.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I think he is a complete nutcase?">>
+<<AddParagraph "Why would we have any Fleur d'Ame?? That shit's rare.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie starts sweating.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "And expensive as fuck.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie starts to panic.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "And government controlled??">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie can't contain a scream.">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "FORGET IT! MY MISTAKE">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie takes a step back">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "Just…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie takes another step back">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "You've never seen me, OK?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie stops, for a moment.">>
+
+<<SetSpeaker "Richie">>
+<<AddParagraph "We're pals right?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Richie doesn't wait for an answer and runs away.">>
+
+/* cannelé */
+
+<<AddOption "Did this person just mistake us for illegal Fleur dealers?" "market_Debrief">>
+
+
+:: market_Debrief [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I mean…">>
+<<AddParagraph "You two might look shady enough…">>
+<<AddParagraph "But me???">>
+
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom are appalled.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Anyway, ''jokes'' aside.">>
+<<AddParagraph "Let's summarize what we learnt at the market.">>
+
+
+<<BlankSpeaker>>
+<<AddParagraph "They are briefly interrupted by the waiter, who is holding a tray with three tall cups.">>
+
+
+<<SetSpeaker "Waiter">>
+<<AddParagraph "Here are your three Spicy Cocoa.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The pair of detectives jump on their drink and start gulping loudly.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "''*GULP*''">>
+<<AddParagraph " ">>
+
+/* complete when market is entirely finished */
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "''*GULP*''">>
+<<AddParagraph " ">>
+
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The cup is filled with a steaming drink that looks almost orange in the sunlight.">>
+
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "This is hot cocoa, right?">>
+<<AddParagraph "The Spicy in the name is just there to make it look fancy, right?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's not spicy, just a dash of cinammon, to make it taste incredible.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Ok, good. I am terribly weak to spices">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Nothing to worry about!">>
+
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Well, it can't hurt to try//">>
+<<AddParagraph "''…gulp?''">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "If we make the best coffee in town, then this has to be the best cup of cocoa you can get around!">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "''*COUGH COUGH COUGH*''">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "So? Where were we?">>
+<<AddParagraph "Ah, right …">>
+
+/* cannelé */
+
+
+/* #NOMNOM */
+/* GIFT + ESCAPE */

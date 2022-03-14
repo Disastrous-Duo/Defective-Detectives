@@ -1,0 +1,277 @@
+:: Magic Visual Effects [script]
+// Custom for C&N
+
+const foresight_timer_freq = 20;
+const precog_timer_freq = 5;
+const precog_tries = 8; // number of tries before getting a right letter
+const precog_random_tries = 4; // it's faster, because you can't read it as well
+
+
+window.randint  = function(min, max)
+{
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+window.forceDigits = function(number, digits)
+{
+	var base = number+"";
+	for(var i = base.length; i < digits; i++)
+	{
+		base = "0"+base;
+	}
+	return base;
+}
+
+window.randomStr = function(length, alphabet)
+{
+	var alphabet = alphabet || "abcdefghijklmnopqrstuvwxyz";
+	//var alphabet = "█░▒▓╬▄▀¶abcdexyzopqrstuv";
+  for(var s=''; s.length < length;)
+	{
+		//s += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ__╔*'.charAt(Math.random()*62|0);
+		s += alphabet.charAt(Math.random()*alphabet.length|0);
+
+	}
+  return s;
+}
+
+
+// Could be replaced by an interval linked to each displayed text, and destroyed
+// when the text disappears -- but ti's pretty okay for now
+
+window.updateForesightTimer = function() // Update a timer countdown, mainly used in foresight
+{
+	 var all_ftimers = document.getElementsByClassName("Tickdown");
+	 for(var i = 0; i < all_ftimers.length; i++)
+	 {
+		 var ftimer = all_ftimers[i];
+     if(!ftimer.parentNode.classList.contains("dim")) // Don't update timers that were read
+     {
+       var millis = new Date().getMilliseconds();
+       ftimer.innerHTML = window.forceDigits(millis,3);
+     }
+	 }
+}
+
+window.replaceAt = function(str, index, replacement) {
+    return str.substr(0, index) + replacement + str.substr(index + replacement.length);
+}
+
+// Unused effect
+window.updatePrecogTimer = function()
+{
+	 var all_decoders = document.getElementsByClassName("Precog");
+	 for(var i = 0; i < all_decoders.length; i++)
+	 {
+
+
+		 var decoder = all_decoders[i];
+		 var true_value = decoder.dataset.value;
+
+		 var slot = decoder.dataset.slot*1 || 0;
+		 var tries = decoder.dataset.tries*1 || 0;
+		 var speed = decoder.dataset.speed*1 || precog_timer_freq;
+		 var type = decoder.dataset.random*1;
+
+		 if(true_value == decoder.innerHTML)continue;
+
+		 if(slot  == 0 && tries == 0) // first step, randomize the content, but with the same size
+		 {
+			 decoder.innerHTML = randomStr(true_value.length);
+		 }
+
+		 var actual_value = decoder.innerHTML;
+
+		 // Another try
+		 tries +=1;
+		 if(tries%speed == 0)
+		 {
+			 tries = 0;
+			 actual_value = window.replaceAt(actual_value, slot, true_value[slot]);
+			 if(!type)
+			 {
+			 	slot = slot+1 //in case of emergency, break the comment
+				}
+				else
+				{
+					slot = (slot+1009)%actual_value.length;
+					// // Trick with a prime number, that makes the slot tick in a semi random order
+					// Doesn't work for texts bigger than 1009 characters, but that won't happen, right ;)
+				}
+		 }
+		 else
+		 {
+			 actual_value = window.replaceAt(actual_value,slot,randomStr(1));
+		 }
+
+		 decoder.innerHTML = actual_value;
+		 decoder.dataset.slot = slot;
+		 decoder.dataset.tries = tries;
+	 }
+}
+
+window.setInterval(window.updateForesightTimer, foresight_timer_freq);
+
+//Not used anymore
+// window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+
+
+window.tooltip = function(displayed_text, tooltip)
+{
+	return `<span class="tooltip">${displayed_text}<span class='tooltiptext'>${tooltip}</span></span>`;
+}
+
+window.slot = function(right_answer, duration)
+{
+	var duration = duration*1 || 1; // Max 5 !
+	var options = [right_answer];
+
+	for(var i=0; i < 3;i++) // 3 other options, as defined in the css animation frames
+	{
+		// *0.7 because for a non monospace font, random strings have a chance to be longer than the first one
+		options.push(window.randomStr(right_answer.length*0.7));
+	}
+
+	return `<span class='slotmachine'>@@.slot${duration};${options.join("<br/>")}@@</span>`;
+
+
+}
+
+
+window.note = function(displayed_text, note_data)
+{
+
+  var serialized_note_data = encodeURI(JSON.stringify(note_data));
+
+  if(note_data.type == "tuto-board-trigger") // special note for the tuto trigger
+  {
+    return `<span class="clickable_note tuto_clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
+  }
+  else
+  {
+    // checking if the note is already in the board
+    var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
+
+    if(notes_txt.indexOf(note_data.txt) > -1)
+    {
+      return displayed_text;
+    }
+
+    return `<span class="clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+  }
+}
+
+window.clickOnNote = function(e,link)
+{
+
+  var $link = $(link);
+  if(!$link.hasClass("clickable_note")) return false;
+
+
+  window.PlaySound("found_note");
+  $link.removeClass("clickable_note");
+
+  var note = $("<span class='sticky_note_effect'>!</span>")[0];
+
+  // Settings
+  var postit_size = 30;
+  var duration = 1000;
+  var interval = 10;
+
+  var startX = e.clientX-postit_size/2;
+  var startY = e.clientY-postit_size/2;
+  var endY = -postit_size;
+  var delta_y = endY - startY;
+
+  if(Math.abs(delta_y) <= 200) // Speed correction, so it's not too long when the note is close to the top border of the screen
+  {
+    duration = 750;
+  }
+
+
+  note.style.top = startY+"px";
+  note.style.left = startX+"px";
+
+  var t = 0;
+  var position_interval = setInterval(function()
+  {
+
+    t += interval/duration;
+    var scaled_delta_y = window.easeInBack(t)*delta_y;
+    note.style.top = (startY+scaled_delta_y)+"px";
+
+    //Self-destructs when outside
+
+    if(parseInt(note.style.top) < -100)
+    {
+      clearInterval(position_interval);
+      $(note).remove(); // Not sure it's actually removed but the important part is to clear the timer interval
+    }
+
+
+  },interval);
+
+  $link.append(note);
+
+
+  var note_data = JSON.parse(decodeURI(link.dataset.note));
+  if(note_data.type == "tuto-board-trigger")
+  {
+    window.pullcord.setTutorialPhase(0);
+    return true;  // Do not add a post-it for the tuto
+  }
+
+  window['conspiracy_board'].add_note(note_data);
+
+  if(note_data.onclick)
+  {
+    note_data.onclick()
+  }
+
+
+}
+
+window.easeInBack = function(t) // t from 0 to 1
+  {
+    const c1 = 1.70158;
+    const c3 = c1 + 1;
+    return c3 * t * t * t - c1 * t * t;
+  }
+
+// When the Continue button has been disabled via a scene
+// using the DisableContinueButton macro
+// can be re-enabled, through external JS
+window.renableContinueButton = function()
+{
+  $("#FakeContinueBtn").remove();
+  $("#ContinueBtn").removeClass("hideContinueBtn");
+}
+
+window.scrollSmoothToBottom = function () {
+
+  // setTimeout(function()
+  // {
+   var div = document.getElementById("story");
+   $('#story').animate({
+      scrollTop: div.scrollHeight, /*- div.clientHeight*/
+      behavior: 'smooth',
+   }, 400);
+ // },);
+}
+
+window.PlaySound = function(sfx_name, delay)
+{
+  if(delay)
+  {
+    setTimeout(window.PlaySound(sfx_name, false), delay)
+  }
+  else
+  {
+     /* when you refresh a page and start with PlaySound, it might not exist yet */
+    if(SugarCube && SugarCube.Wikifier)
+    new SugarCube.Wikifier(null, `<<audio "sfx_${sfx_name}" volume 0.6 play>>`);
+  }
+
+}

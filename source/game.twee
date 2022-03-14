@@ -1,0 +1,82 @@
+:: StoryTitle
+&
+
+:: StoryAuthor {"position":"268,439","size":"100,100"}
+[Alpha Demo V0.1]
+
+
+:: StorySubtitle {"position":"392,432","size":"100,100"}
+~ DEFECTIVE AGENCY ~
+
+
+:: StoryData
+{
+	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
+	"format": "SugarCube",
+	"format-version": "2.30.0",
+	"start": "Start",
+	"zoom": 0.6
+}
+
+
+:: StoryShare {"position":"526,432","size":"100,100"}
+[["text"|links]]
+[["not"|yet!]]
+
+:: StoryInit {"position":"268,25","size":"100,100"}
+<<set $optionmap to new Map()>>
+<<set $yellow_speaker to ["mysterious individual", "client", "yasyas", "muffin", "yassine maestro", "???", "law #1", "law #2", "law #3", "you (???)"]>>
+<<set $blue_speaker to ["nomnom", "shrill voice", "??"]>>
+<<set $red_speaker to ["cannelé", "somehow shriller voice", "?"]>>
+<<set $purple_speaker to ["voice", "joséphine"]>>
+<<set $leather_speaker to ["leathery voice", "couch"]>>
+<<set $fushia_speaker to ["target","jocelaine"]>>
+<<set $greentext to [""]>>
+<<set $paraAppendMode to false>>
+
+<<set $scoreboard to {"Cannelé":0,"Nomnom":0}>>
+<<set $client_name to "Yasyas">> /*TODO: Remove this line before release*/
+
+// Music must be added here
+<<cacheaudio "intro_bgm" "source/media/music/a_place_of_mystery.mp3">>
+<<cacheaudio "bard_bgm" "source/media/music/a_bards_tale.mp3">>
+<<cacheaudio "flicker_bgm" "source/media/music/flicker_by_sheddy.mp3">>
+
+<<set $sfx_list to ["plic","ploc","drink_mug","found_note","door_knock","light_flicker","meow","whack","desk_slam","tickdown","pullcord","slot","door_open","small_bang","impact","loud_bang","scribble","scoreboard","navbar","jingle","whip","title_show"]>>
+<<for _i = 0; _i < $sfx_list.length; _i++>>
+
+	<<cacheaudio `"sfx_"+$sfx_list[_i]` `"source/media/sfx/"+$sfx_list[_i]+".wav"` >>
+<</for>>
+
+/* Needs to be in root, because of font src issues */
+::@include base_style.twee
+::@include styles/magic_effects_styles.twee
+
+/* Libs and libs loader */
+::@include libs/font_face_observer.twee
+::@include scripts/script_loader.twee
+::@include libs/shortcut.min.twee
+::@include libs/keyboard.twee
+
+/* Scripts */
+::@include scripts/magic_effects.twee
+::@include scripts/scoreboard.twee
+::@include scripts/conspiracy_board.twee
+::@include scripts/tutorial_board.twee
+::@include scripts/pull_cord.twee
+
+::@include scripts/startup.twee
+
+/* Macros */
+::@include macros/disco_elysium_macros.twee
+::@include macros/magic_macros.twee
+
+/* Scenes */
+::@include scenes/falaisant.twee
+::@include scenes/interview.twee
+::@include scenes/laws_of_magic.twee
+::@include scenes/direction_duel.twee
+::@include scenes/market.twee
+::@include scenes/cheese_stand.twee
+
+::@include scenes/test_effects.twee

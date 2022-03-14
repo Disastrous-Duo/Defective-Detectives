@@ -1,0 +1,272 @@
+:: Story Stylesheet [stylesheet]
+
+@font-face {
+  font-family: "David Libre";
+  src: url("./fonts/DavidLibre-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url("./fonts/PTSansNarrow-Regular.ttf") format("truetype");
+}
+
+
+html {
+  height: 100%;
+}
+
+body, tw-story
+{
+  font-family: 'David Libre', serif;
+  margin-left: 2em;
+  color: #d2d3cd;
+  height: 100%;
+  overflow-x:hidden; /*Added for C&N -- remove if it breaks things too much*/
+  overflow-y:hidden; /*Added for C&N -- remove if it breaks things too much*/
+  /*Prevent unwanted scrollbars*/
+
+  /*Added so you can't select text in an ugly way*/
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+
+}
+
+#ui-bar-body
+{
+  /*Prevent scroll bar in UI bar*/
+  overflow:hidden;
+}
+
+tw-hook
+{
+  margin-left: -25px;
+}
+
+#story {
+  height: 75%; /*Prevent sticking to the top or bottom of the webpage*/
+  overflow-y: scroll; /*set to visible to Allow to have a bigger title screen*/
+}
+
+.story_game_started { /*STrangely, doesn't work unless enforced in JS*/
+  overflow-y: scroll;
+}
+
+
+#title_screen_image{
+  display:block;
+  margin:auto;
+}
+
+
+.passage {
+  line-height: 1.25;
+  font-size: large;
+  margin-left: 1.5em;
+}
+
+
+
+.purple_speaker {
+  color: #705cbb;
+}
+
+.red_speaker {
+  color: #D61516;
+}
+
+.blue_speaker {
+  color: #1BDBFF;
+}
+
+.yellow_speaker {
+  color: #e4b934;
+}
+
+.fushia_speaker
+{
+  color: #FF0080;
+}
+
+.leather_speaker {
+  color: #6e5334;
+}
+
+.speaker {
+  text-transform: uppercase;
+  margin-left: -1.5em;
+}
+
+
+.dim {
+  transition: filter 0.5s, color 0.5s;
+  filter: grayscale(40%);
+  color:#777777;
+}
+
+
+
+.macro-timed-insert {
+	transition-duration: 2s;
+}
+
+.pastchoice {
+  color: #8c3f2c;
+  font-style: italic;
+}
+
+.option {
+  font-weight: bold;
+}
+
+/*Continue buttons*/
+#ContinueBtn {
+  background-color: #90280f;
+  color: white;
+  padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: -1.5em;
+  display: block;
+}
+
+
+#FakeContinueBtn {
+  background-color: #90280f;
+  color: white;
+  padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-left: -1.5em;
+  display: block;
+  opacity:1;
+  filter:grayscale(100%);
+  cursor:auto;
+}
+
+#ContinueBtn.hideContinueBtn
+{
+  display:none;
+}
+
+.green {
+  color: #98b48b;
+  margin-left: -1.5em;
+}
+
+
+/*  CUSTOMISED */
+:root {
+  --cannelé-color: #FF1F30;
+  --nomnom-color: #1BDBFF;
+}
+
+
+/*Story title, in the nav bar*/
+
+
+#story-title
+{
+  font-size:2em;
+}
+
+#story-title::before
+{
+  content: "CANNELÉ";
+  font-size:0.8em;
+  display:block;
+  color: var(--cannelé-color);
+}
+
+#story-title::after
+{
+  content: "NOMNOM";
+  font-size:0.8em;
+  display:block;
+  color: var(--nomnom-color);
+}
+
+#story-subtitle
+{
+  margin-top:10px;
+  font-size:1.2em;
+}
+
+#story-author
+{
+  margin-bottom:25px;
+}
+
+
+/* Menu buttons  */
+
+
+/*Fixes default template*/
+#menu ul
+{
+  border:none;
+}
+
+/*Fixes default template*/
+#menu li:not(:first-child)
+{
+  border-top:none;
+}
+
+/* Menu "buttons" */
+#menu-core li a {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border: 1px solid red;
+  text-transform: uppercase;
+  border:solid 1px #444;
+  margin-top:10px;
+  width:80%;
+}
+
+
+#OptionList
+{
+  list-style: none;
+}
+
+/*Option links*/
+
+li a {
+  display:inline-block;
+  color: #b6523a;
+  text-decoration: none;
+  width:100%;
+  padding:4px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+li a:hover {
+  color: white;
+  background-color:#90280f;
+  /* background-color:#b6523a; */
+}
+
+li a:active {
+  color: white;
+}
+
+.passage ul {
+  margin-left: -2em;
+}
+
+a .OptionChoice
+{
+  color:red;
+}

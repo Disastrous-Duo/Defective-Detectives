@@ -1,0 +1,70 @@
+:: Word Input Style [stylesheet]
+
+:root {
+  --word_input_arrow:#e6c300;
+  --word_input_hover:hsl(51, 100%, 30%);
+
+}
+
+.word_input_case
+{
+  width:96px;
+  height:96px;
+  text-align:center;
+  /* border: solid 1px white; */
+  vertical-align: middle;
+}
+
+.word_input_letter
+{
+  display:inline-block;
+  /* border: solid 1px red; */
+}
+
+.word_input_arrow
+{
+  text-align:center;
+  color: var(--word_input_arrow);
+  font-size:60px;
+  transition:transform 0.3s;
+}
+
+.word_input_arrow:hover
+{
+
+}
+
+
+.word_input_arrow:hover
+{
+  transform: scale(1.3);
+  /* color: var(--word_input_hover); */
+  cursor:pointer;
+  opacity:0.95;
+}
+
+
+.word_input_up
+{
+  vertical-align: bottom;
+}
+
+.word_input_down
+{
+  vertical-align: top;
+}
+
+.word_input_button_enabled
+{
+  color: var(--word_input_arrow);
+  border-color: white;
+}
+
+.word_input_button_disabled
+{
+  color:grey;
+  border-color:grey;
+  cursor:not-allowed;
+  opacity:0.5;
+  pointer-events: none;
+}
