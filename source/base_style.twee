@@ -120,11 +120,7 @@ tw-hook
   font-weight: bold;
 }
 
-span.continueblock {
-  display: none;
-}
-
-/*TEESSST*/
+/*Continue buttons*/
 #ContinueBtn {
   background-color: #90280f;
   color: white;
@@ -159,16 +155,6 @@ span.continueblock {
 .green {
   color: #98b48b;
   margin-left: -1.5em;
-}
-
-
-
-#SuccessImg {
-  background: url(SuccessOverlay.png) no-repeat center;
-}
-
-#FailureImg {
-  background: url(FailureOverlay.png) no-repeat center;
 }
 
 
@@ -212,6 +198,33 @@ span.continueblock {
 #story-author
 {
   margin-bottom:25px;
+}
+
+
+/* Menu buttons  */
+
+
+/*Fixes default template*/
+#menu ul
+{
+  border:none;
+}
+
+/*Fixes default template*/
+#menu li:not(:first-child)
+{
+  border-top:none;
+}
+
+/* Menu "buttons" */
+#menu-core li a {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border: 1px solid red;
+  text-transform: uppercase;
+  border:solid 1px #444;
+  margin-top:10px;
+  width:80%;
 }
 
 
