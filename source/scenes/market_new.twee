@@ -130,7 +130,7 @@
 <</if>>
 
 :: market_LeftPath [nobr]
-
+/*
 <<BlankSpeaker>>
 <<AddParagraph "The path on the left takes a sharp turn.">>
 <<AddParagraph "The street is indeed narrow, but it is well-lit and the pavement is even.">>
@@ -199,7 +199,7 @@
 
 <<AddOption "Wait… I recognize that man!!!" "market_PoliceOfficer">>
 
-
+*/
 
 :: market_RightPath [nobr]
 
@@ -243,7 +243,7 @@
 <<AddParagraph "The two detectives turn around, expectantly.">>
 
 
-<<AddOption "Take the Hoboolean Coin out." "market_Crossroads">>
+<<AddOption "Take out the Hoboolean Coin." "market_Crossroads">>
 
 
 :: market_Crossroads [nobr]
