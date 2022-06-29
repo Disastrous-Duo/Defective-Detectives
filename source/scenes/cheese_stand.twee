@@ -232,7 +232,7 @@ J: Not sure you can't snoop around there, but *points*
 <<BlankSpeaker>>
 <<AddParagraph `"Jocelaine is still laughing.">>
 <<AddParagraph "Nomnom seems busy removing unwanted mental pictures from their head.">>
-<<AddParagraph "This leaves only "+$client_name+" to do the talking."`>>
+<<AddParagraph "Leaving only "+$client_name+" to do the talking."`>>
 
 <<SetSpeaker `$client_name`>>
 <<AddParagraph "Uhm. S-so…" >>

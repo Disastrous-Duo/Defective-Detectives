@@ -461,5 +461,7 @@ window.pullcord.setTutorialPhase = function(phase)
 window.pullcord.quickstart = function()
 {
   pullcord.setTutorialPhase(0);
+  pullcord.setTutorialPhase(1);
+  pullcord.setTutorialPhase(2);
   pullcord.setTutorialPhase(3);
 }

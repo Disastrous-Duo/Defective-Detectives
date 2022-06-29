@@ -1,0 +1,4518 @@
+
+<<BlankSpeaker>>
+<<AddParagraph //A majestic waterfall looms over the blue City of Falaisant.//
+
+<<AddOption A drop of water freefalls, breaking off; wandering." "Falaisant2
+
+
+<<BlankSpeaker>>
+<<AddParagraph //At the heart of the city, high towers dominate the skyline. White rock and marble glint under the first rays of the sun, reflecting the water flowing underneath.//
+
+<<AddOption The drop rolls down the tower." "Falaisant3
+
+
+<<BlankSpeaker>>
+<<AddParagraph //Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//
+<<AddParagraph //Two of them stretch out behind the tower; the three others unfold in the distance.//
+
+<<AddOption A faint pull takes the drop down the first boulevard." "Falaisantsecondblvd
+<<AddOption The drop continues its course down the second boulevard." "Falaisantfirstblvd
+<<AddOption The drop rolls, slowly making its way down the third boulevard." "Falaisantthirdblvd
+
+
+<<BlankSpeaker>>
+<<AddParagraph //The boulevard spreads far, far until it breaks into smaller streets.//
+
+<<AddOption //The drop bounces off the slightly uneven pavement.//" "Falaisant1_5
+
+
+<<BlankSpeaker>>
+<<AddParagraph //Soon, big boats appear, moored to a wharf.//
+<<AddParagraph //Containers are stacked on the side as the sunlight casts its early light on busy dockhands.//
+<<AddParagraph
+
+<<AddOption The drop follows the movement of the merchandise." "Falaisant1_6
+<<AddOption The drop takes a sharp turn in a dark alley." "Falaisant2_7
+
+
+<<BlankSpeaker>>
+<<AddParagraph //Boxes are carried to an empty marketplace.//
+<<AddParagraph //All the workers stop before a group of officers; they seem stuck.//
+<<AddParagraph //On the other side of the place, a mysterious figure in a long, dark coat is making their way out of the market.//
+<<AddParagraph
+
+<<AddOption The drop glides, chasing after the curious individual." "Falaisant1_7_1
+<<AddOption The drop takes another turn, rolling away from the suspicious silhouette." "Falaisant1_7_2
+
+<<BlankSpeaker>>
+<<AddParagraph //The figure is walking at a rapid pace.//
+<<AddParagraph //They're stumbling and stopping often, as if lost in the chaos of alleys.//
+
+<<AddOption The drop keeps up; left, right, left again… before crashing onto something… paper?" "Falaisant1_8
+
+
+<<BlankSpeaker>>
+<<AddParagraph //At the west exit stands a big metallic bridge, with ornate handrails and details.//
+
+<<AddOption The drop falls from a hole in the hedge." "Falaisant2_6
+
+
+<<BlankSpeaker>>
+<<AddParagraph //It's a flyer.//
+<<AddParagraph //The individual crouches to pick it up.//
+<<AddParagraph //They shake the paper slightly, to get rid of the humidity that was clinging to it.//
+
+<<AddOption The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City." "Falaisant1_9
+
+<<BlankSpeaker>>
+<<AddParagraph //Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//
+<<AddParagraph //No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//
+<<AddParagraph //Only the curious personnage is walking, cutting through the misty veil with hesitant steps.//
+<<AddParagraph //Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//
+<<AddParagraph //The atmosphere is heavy…//
+<<AddParagraph //Disquieting.//
+
+<<AddOption The drop runs down darker and darker paths, following the silhouette." "Falaisant2_9
+
+
+<<BlankSpeaker>>
+<<AddParagraph //In the darkest corner of the decrepit block, the dark figure stops in front of a locked door.//
+<<AddParagraph //The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//
+
+<<AddOption The drop looms over the edge of the roof before falling on the shadowed figure's nose." "Falaisant10
+
+
+
+<<BlankSpeaker>>
+<<AddParagraph //The boulevard spreads far, far until it breaks into smaller streets.//
+
+<<AddOption The drop bounces off the slightly uneven pavement." "Falaisant2_5
+
+<<BlankSpeaker>>
+<<AddParagraph //Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges : they jump over streams of water as they connect multiple layers of passageways, roads and gates.//
+
+<<AddOption The drop falls from a hole in the metallic hedge of a bridge." "Falaisant2_6
+
+
+<<BlankSpeaker>>
+<<AddParagraph //Plic.//
+<<PlaySound "plic
+<<AddParagraph //Ploc.//
+<<PlaySound "ploc
+<<BlankSpeaker>>
+
+<<AddOption Lower, Lower…" "Falaisant2_7
+
+
+<<BlankSpeaker>>
+<<AddParagraph //Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//
+
+<<AddOption The drop errs, losing itself in the ominous veil." "Falaisant2_8
+
+
+<<BlankSpeaker>>
+<<AddParagraph //No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//
+<<AddParagraph //Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//
+<<AddParagraph //The atmosphere is heavy…//
+<<AddParagraph //Disquieting.//
+
+<<AddOption The drop runs down darker and darker paths." "Falaisant2_9
+
+
+<<BlankSpeaker>>
+<<AddParagraph //In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//
+<<AddParagraph //The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//
+
+<<AddOption The drop looms over the edge of the roof before falling on the shadowed figure's nose." "Falaisant10
+
+
+<<BlankSpeaker>>
+<<AddParagraph //The boulevard spreads far, far until it breaks into smaller streets.//
+
+<<AddOption The drop bounces off the slightly uneven pavement." "Falaisant3_5
+
+
+<<BlankSpeaker>>
+<<AddParagraph //The paved streets lead to a big park.//
+<<AddParagraph //Trees line up, dividing green grass fields, trodden paths and sculpted fountains.//
+<<AddParagraph
+
+<<AddOption The drop is drawn to the biggest fountain." "Falaisant3_6_1
+<<AddOption The drop rolls past the rows of trees." "Falaisant3_6_2
+
+<<BlankSpeaker>>
+<<AddParagraph //The fountain is magnificient.//
+<<AddParagraph //Marble chiseled with care, it looks timeless.//
+<<AddParagraph //A small path leads away, near a bridge that joins the other part of the park.//
+<<AddParagraph //Under the bridge, the city is organized in layers, each one deeper than the other.//
+
+<<AddOption The drop crosses the bridge and falls through the hedge." "Falaisant2_6
+
+<<BlankSpeaker>>
+<<AddParagraph //The trees show the way out of the wide park.//
+<<AddParagraph //On the other side of gilded gates, a slope plunges down into the depths of the city.//
+
+<<AddOption The drop glides drifts down the avenue." "Falaisant3_8
+
+
+<<BlankSpeaker>>
+<<AddParagraph //Its course is halted when it drifts on a piece of paper.//
+<<AddParagraph //A few moments later, a dark figure appears from a corner.//
+<<AddParagraph //Their pace is hurried and shaky - indecisive.//
+<<AddParagraph //They crouch to pick up the flyer.//
+<<AddParagraph //They shake the paper slightly, to get rid of the humidity that was clinging to it.//
+
+<<AddOption The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City." "Falaisant1_9
+
+
+<<BlankSpeaker>>
+<<AddParagraph In this instant, something has just shifted in your universe.
+<<PlaySound "plic
+
+<<SetSpeaker "YOU (???)
+<<AddParagraph ACHOO!
+
+<<BlankSpeaker>>
+<<AddParagraph @@.typewriter;8:37am - 288 Harmony Street, Falaisant@@
+
+<<BlankSpeaker>>
+<<AddParagraph ''*BANG*''
+<<PlaySound "small_bang
+<<AddParagraph Something just happened behind that door.
+<<AddParagraph
+
+
+<<AddOptionSound "Knock" "Expo" "door_knock
+<<AddOption Wait" "Expo
+
+
+<<SetSpeaker "Shrill Voice
+<<AddParagraph I heard something, it might be-
+
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph Oh, shut up
+
+<<SetSpeaker "Shrill Voice
+<<AddParagraph No, YOU shut up
+
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph I said it first, YOU SHUT UP, shut up
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock
+<<AddOption Wait" "Expo_Wait1
+
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph Shut up!!!!
+
+<<SetSpeaker "Shrill Voice
+<<AddParagraph UGH, Shut UP
+
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph NO, NO, you shut up.
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock
+<<AddOption Wait" "Expo_Wait2
+
+:: Expo_Wait2 [nobr]
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph HAHAHAHAHAHAHA I CAN'T HEAR YOU
+
+<<SetSpeaker "Shrill Voice
+<<AddParagraph WILL YOU EVER SHUT. UP.
+
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph ILL SHUT UP WHEN YOU STOP BEING ANNOYING.
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddOptionSound "Knock" "Expo_Knock" "door_knock
+<<AddOption Wait" "Expo_Knock
+
+
+:: Expo_Knock [nobr]
+<<SetSpeaker "Shrill Voice
+<<AddParagraph SHUT UP SHUT UP SHUT UP
+
+<<SetSpeaker "Somehow Shriller Voice
+<<AddParagraph AAAAAAAGH ! SHUT UP OR I SWEAR I WILL MURDER-
+
+<<BlankSpeaker>>
+<<AddParagraph ''*BAM*''
+<<PlaySound "door_open
+<<BlankSpeaker>>
+<<AddParagraph The door violently slams open.
+
+<<AddOption ''*OUCH*''" "Expo_Meeting1
+
+
+:: Expo_Meeting1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor, in pain.
+<<AddParagraph There's an uncomfortable pause as everyone stares in a surprised silence.
+<<AddParagraph …
+
+<<BlankSpeaker>>
+<<AddParagraph The girl smiles widely as the man stands up and dusts their clothes.
+
+<<SetSpeaker "?
+<<AddParagraph Welcome to my detective agency, how can I help?
+
+<<SetSpeaker "??
+<<AddParagraph Welcome to MY agency, who is this?
+
+<<BlankSpeaker>>
+<<AddParagraph The two individuals glare at each other: they're about to start arguing again.
+
+<<SetSpeaker "???
+<<AddParagraph That's…
+<<AddParagraph … An excellent question.
+
+<<GotoContinueButton "newOffice
+
+:: newOffice [nobr]
+<h2 class="typewriter">Chapter 1 - Who Am I?</h2><br/>
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<audio "bard_bgm"  volume 0 fadeto 0.5>>
+<<AddParagraph Once inside, one thing becomes glaringly obvious.
+<<AddParagraph The room is small.
+<<AddParagraph After consideration, small is too nice a way to describe the //tiny// cubicle.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption Talk to the detectives." "talkDetective
+<<AddOption Look around." "lookAround
+<<AddOption Wait for the detectives' directions." "waitDetectives
+
+:: talkDetective [nobr]
+<<SetSpeaker "???
+<<AddParagraph Hum, yeah… About this agency…
+
+<<SetSpeaker "?
+<<AddParagraph Oh, right!
+<<AddParagraph I am Cannelé and this is-
+
+<<SetSpeaker "??
+<<AddParagraph Nomnom. The only real detective here.
+
+<<BlankSpeaker>>
+<<AddParagraph The girl - Cannelé, ignores the jab, which seems to take a lot out of their self control.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I am very sorry, could you please wait a moment for us to take care of…
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom makes a broad gesture towards the pitiful state of the office.
+<<AddParagraph Cannelé's smile is a bit appologetic.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph We were not really expecting anyone so we didn't bother cleaning up…
+<<AddParagraph But don't worry, it'll only take a minute.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph The process is absolutely painless!
+<<AddParagraph ^^Unlike my knee right now^^
+
+<<BlankSpeaker>>
+<<AddParagraph A second later, they're moving. Fast.
+<<AddParagraph Faster than anything your empty memory has ever seen before.
+
+<<SetSpeaker "???
+<<AddParagraph //I'm kinda relieved because it's really disgusting…//
+
+<<BlankSpeaker>>
+<<AddParagraph The room is in such a messy and pitiful state that there is nowhere to sit.
+<<AddParagraph All the space is engulfed under various objects, papers and rubbish.
+<<AddParagraph The detectives have started cleaning up…
+<<AddParagraph But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.
+<<AddParagraph You are unable to sit or even move one inch without stumbling on a random item.
+
+<<AddOption Observe the scene." "interviewInspect
+
+
+:: lookAround [nobr]
+<<BlankSpeaker>>
+<<AddParagraph As you decide to look around, you see the detectives start moving unnaturally.
+<<AddParagraph They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity.
+
+
+<<SetSpeaker "?
+<<AddParagraph H-hi I'm Cannelé, a great detective.
+
+<<SetSpeaker "??
+<<AddParagraph And I'm Nomnom. The greatest detective.
+
+<<BlankSpeaker>>
+<<AddParagraph They are fidgeting as they glance at each other, before seemingly reaching an agreement.
+<<AddParagraph Somehow, even their unspoken communication is //loud//…
+
+
+<<SetSpeaker "Cannelé
+<<AddParagraph A minute, please!
+
+<<BlankSpeaker>>
+<<AddParagraph And then they're running around, like two ouragans in a bottle, as they try to clean the office up.
+<<AddParagraph Their collaboration skills are so bad and the room so tiny, that they do nothing but get in each other's way.
+
+<<SetSpeaker "???
+<<AddParagraph //I'm kinda relieved because it's really disgusting…//
+<<AddParagraph //There's nowhere to sit, everything is overtaken under layers and layers of rubbish.//
+
+<<include "interviewInspect
+
+
+
+:: waitDetectives [nobr]
+<<BlankSpeaker>>
+<<AddParagraph You are standing in the entrance of the shoebox sized office.
+<<AddParagraph No one is talking.
+<<AddParagraph You are waiting for the detectives to do something.
+<<AddParagraph Anything.
+<<AddParagraph But they're just staring back.
+<<AddParagraph They look…
+<<AddParagraph Lost.
+<<AddParagraph Utterly so.
+<<AddParagraph As if they were expecting //the client// to know what to do.
+<<AddParagraph Ah.
+<<AddParagraph They're looking slightly desperate now.
+<<AddParagraph The atmosphere is awkward.
+<<AddParagraph //Terribly// awkward.
+<<AddParagraph Another moment passes in silence.
+<<AddParagraph It's endless.
+<<AddParagraph Each second…
+<<AddParagraph Feels like an hour.
+<<AddParagraph You are looking at them;
+<<AddParagraph They're looking at you.
+<<AddParagraph The silence stretches…
+<<AddParagraph Until you can't take it anymore.
+<<AddParagraph
+
+
+<<AddOption «Hum…»" "nextWaitDetectives
+<<AddOption «Excuse me??»" "nextWaitDetectives
+<<AddOption «What are you waiting for…»" "nextWaitDetectives
+
+
+:: nextWaitDetectives [nobr]
+<<BlankSpeaker>>
+<<AddParagraph At this, the two detectives seem to snap out of a daze.
+
+<<SetSpeaker "?
+<<AddParagraph Oh! Right! Hum, welcome to my-
+
+<<SetSpeaker "??
+<<AddParagraph You said this already, stop being useless.
+<<AddParagraph Welcome to MY agency.
+
+<<SetSpeaker "?
+<<AddParagraph Ugh.
+<<AddParagraph Anyway, I am Cannelé and this is-
+
+<<SetSpeaker "??
+<<AddParagraph Nomnom. The only real detective here.
+
+<<BlankSpeaker>>
+<<AddParagraph The girl - Cannelé, ignores the jab.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I am very sorry, could you please wait a moment for us to take care of…
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom makes a broad gesture towards the pitiful state of the office.
+<<AddParagraph Cannelé's smile is a bit appologetic.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph We were not really expecting anyone so we didn't bother cleaning up…
+<<AddParagraph But don't worry, it'll only take a minute.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph The process is absolutely painless!
+<<AddParagraph ^^Unlike my knee right now^^
+
+<<BlankSpeaker>>
+<<AddParagraph A second later, they're moving. Fast.
+<<AddParagraph Faster than anything your empty memory has ever seen before.
+
+<<SetSpeaker "???
+<<AddParagraph //I'm kinda relieved because it's really disgusting…//
+
+<<BlankSpeaker>>
+<<AddParagraph The room is in such a messy and pitiful state that there is nowhere to sit.
+<<AddParagraph All the space is engulfed under various objects, papers and rubbish.
+<<AddParagraph The detectives have started cleaning up…
+<<AddParagraph But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.
+<<AddParagraph You are unable to sit or even move one inch without stumbling on a random item.
+
+<<AddOption Observe the scene." "interviewInspect
+
+
+:: interviewInspect [nobr]
+<<BlankSpeaker>>
+<<AddParagraph To the left, an old couch is crumbling under a pile of mess.
+<<AddParagraph On the other side, a sink and some cups.
+<<AddParagraph In front of you, the wall is scattered with papers.
+<<AddParagraph `"A small door on the side reads : "+tooltip("//Petit Coin//","The washroom, the toilet, the WC, the loo; you get it.")+". It must be the toilet : you are not sure you want to explore this particular area of the run-down office."`>>
+<<AddParagraph
+
+<<set $interview_left to false>>
+<<set $interview_right to false>>
+<<set $interview_wall to false>>
+
+
+<<AddOption Inspect couch on the left." "Left
+<<AddOption Inspect sink on the right." "Right
+<<AddOption Inspect the wall." "Wall
+
+
+:: Left [nobr]
+<<set $interview_left to true>>
+<<BlankSpeaker>>
+<<AddParagraph The beat-up couch thrones in the room : it must take half the space of the booth.
+
+<<BlankSpeaker>>
+<<AddParagraph ''*BANG*''
+<<PlaySound "small_bang
+
+<<AddParagraph It looks a little ridiculous but oddly fitting in the strange office.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph MY TOE!
+
+<<BlankSpeaker>>
+<<AddParagraph From the rubbish cluttering it, emerge a couple blankets, newspapers and a half-eaten croissant.
+<<AddParagraph
+
+<<if $interview_right is false>>
+  <<AddOption Inspect sink on the right." "Right
+<</if>>
+<<if $interview_wall is false>>
+  <<AddOption Inspect the wall." "Wall
+<</if>>
+
+<<if $interview_right is true && $interview_left is true && $interview_wall is true>>
+    <<AddOption «Wow…»" "endCleaning
+<</if>>
+
+
+:: Right [nobr]
+<<set $interview_right to true>>
+<<BlankSpeaker>>
+<<AddParagraph The duo is elbowing their way around the room. They eventually manage to place a stool on the other side of the table facing the couch.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Will you stop getting in my way??
+
+<<BlankSpeaker>>
+<<AddParagraph Behind the stool, the sink is filled with three cups. Next to it, a water boiler sits on an open cupboard that's almost empty.
+
+<<SetSpeaker "???
+<<AddParagraph //This kitchen is almost ''desolate''… somehow this is not very re-//
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Why do you HAVE to be a pain in my-
+
+<<SetSpeaker "???
+<<AddParagraph //-assuring.//
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $interview_left is false>>
+  <<AddOption Inspect couch on the left." "Left
+<</if>>
+<<if $interview_wall is false>>
+  <<AddOption Inspect the wall." "Wall
+<</if>>
+
+<<if $interview_right is true && $interview_left is true && $interview_wall is true>>
+    <<AddOption «Wow…»" "endCleaning
+<</if>>
+
+:: Wall [nobr]
+<<set $interview_wall to true>>
+<<BlankSpeaker>>
+<<AddParagraph A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Please refrain from touching the conspiracy board, it's quite-
+
+<<BlankSpeaker>>
+<<AddParagraph A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.
+<<PlaySound "light_flicker" "1s
+
+<<BlankSpeaker>>
+<<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
+<<PlaySound "whip
+
+<<SetSpeaker "Nomnom
+<<AddParagraph OUCH!
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+
+<<if $interview_left is false>>
+  <<AddOption Inspect couch on the left." "Left
+<</if>>
+<<if $interview_right is false>>
+  <<AddOption Inspect sink on the right." "Right
+<</if>>
+
+<<if $interview_right is true && $interview_left is true && $interview_wall is true>>
+    <<AddOption «Wow…»" "endCleaning
+<</if>>
+
+
+:: endCleaning [nobr]
+<<BlankSpeaker>>
+<<AddParagraph `"Before your eyes, the dump had slowly transformed into an "+tooltip("actual, proper office.","As actual and proper as it can be…")`>>
+<<AddParagraph You barely even recognize the place.
+<<AddParagraph The rubbish had mysteriously disappeared, hidden in a dark corner.
+<<AddParagraph The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.
+<<AddParagraph Your need to flee the place is still there but it has slightly decreased.
+<<AddParagraph
+
+<<AddOption ''*BANG*''" "conspiracyBoard
+
+:: conspiracyBoard [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The conspiracy board has fallen over in a huge commotion.
+<<PlaySound "loud_bang
+
+<<SetSpeaker "Cannelé
+<<AddParagraph AGAIN?!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I warned you it was @@.foresight;unstable@@…
+<<PlaySound "light_flicker" "1s
+
+<<BlankSpeaker>>
+<<AddParagraph They both sigh and start to crouch and pick up the scattered documents.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph There is one piece missing…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I think I saw it under the table?
+
+<<BlankSpeaker>>
+<<AddParagraph They continue rummaging through the mess of documents.
+<<AddParagraph You see a colored paper sticking out from under the coffee table.
+
+<<SetSpeaker "???
+<<AddParagraph `"Are you looking for this "+note("post-it",{type:"tuto-board-trigger"})+"?"`>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Perfect! That's the one!
+<<AddParagraph You can just click on it!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph And stick it right back on the board by tugging the handle right on top of the screen.
+
+/*TODO: Disable only if when it is called, the variable asociated with the tutorial being completed is not true. because you can complete it before it being called, if you do it when you click the post-it.*/
+<<DisableContinueButton "window.pullcord.completed_tutorial" "You should really take this post-it, you know.
+
+<<SetSpeaker "???
+<<AddParagraph //I got it!//
+
+
+<<AddOption Turn back to the two detectives." "interviewTwoDetectives
+
+
+:: interviewTwoDetectives [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The two detectives are staring back, blankly.
+<<AddParagraph
+
+<<set $interview_nomnom to false>>
+<<set $interview_cannele to false>>
+<<set $interview_speak to false>>
+
+<<AddOption Observe Nomnom." "interviewNomnom
+<<AddOption Study Cannelé." "interviewCannelé
+<<AddOption Attempt communication (Skip.)" "interviewSpeak
+
+
+:: interviewCannelé [nobr]
+<<set $interview_cannele to true>>
+<<BlankSpeaker>>
+<<AddParagraph Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.
+<<AddParagraph Their skin is deep brown and their round face is framed by a tangle of soft, black curls that turn a deep red as they reach the middle of their back.
+<<AddParagraph Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.
+
+<<AddParagraph Bright ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.
+<<AddParagraph However, what truly stands out is Cannelé’s clothing.
+<<AddParagraph The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end…
+<<AddParagraph It creates a //stark// contrast with the pitiful state of the cramped office.
+<<AddParagraph
+
+<<AddOption //Their attitude…//" "canneleAttitude
+<<AddOption //Their clothes…//" "canneleClothes
+<<AddOption //Why are they standing on the couch…//" "canneleCouch
+
+:: choicesCannelé [nobr]
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddOption Look at Cannelé again." "choicesCannelé2
+<<AddOption Turn to Nomnom." "interviewNomnom
+<<AddOption Attempt communication (Skip.)" "interviewSpeak
+
+:: choicesCannelé2 [nobr]
+<<AddOption //Cannelé's attitude…//" "canneleAttitude
+<<AddOption //Cannelé's clothes…//" "canneleClothes
+<<AddOption //Why is Cannelé standing on the couch…//" "canneleCouch
+
+
+:: canneleAttitude [nobr]
+<<SetSpeaker "???
+<<AddParagraph //There is something about them…//
+<<AddParagraph //Somehow, they look like they’re coming from nobility.//
+
+<<BlankSpeaker>>
+<<AddParagraph You contemplate the expensive clothes, the smug grin and the total lack of common sense.
+
+<<SetSpeaker "???
+<<AddParagraph Fallen //nobility…//
+
+<<BlankSpeaker>>
+<<AddParagraph `"Your eyes go back to the "+ note("golden tattoo",{txt:"Intricate puzzle-like golden ink is painting both of Cannelé's foreams.",type:'clue', fontSize:15})+" running up their wrists."`>>
+<<AddParagraph The design looks like a maze, pieces of an intricate puzzle that have been taken apart.
+
+<<SetSpeaker "???
+<<AddParagraph //Delinquent// nobility//??//
+
+<<include choicesCannelé>>
+
+
+:: canneleClothes [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The clothes Cannelé wears resembles like those worn by models and very rich people.
+<<AddParagraph The fabric looks soft and thick, and the cut of the outfit as if it had been tailored to fit them.
+
+<<SetSpeaker "???
+<<AddParagraph //These clothes…//
+<<AddParagraph //Look more expensive than the whole building.//
+<<AddParagraph //Do I really want to trust someone who seems to put more money in clothes than actual vital needs like a proper office?//
+<<AddParagraph //…//
+<<AddParagraph //Do I even //have// a choice?//
+
+<<include choicesCannelé>>
+
+:: canneleCouch [nobr]
+<<BlankSpeaker>>
+<<AddParagraph Cannelé is standing proudly on the sofa.
+<<AddParagraph They are resting their elbow on the top of Nomnom's head as the latter tries to swat the arm away.
+<<AddParagraph When they catch your confused expression, Cannelé smiles and hops once on the couch.
+
+<<SetSpeaker "???
+<<AddParagraph //I think I get what's happening here.//
+<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"CANNELÉ & NOMNOM'S RELATIONSHIP?",type:'question'})+" going on…//"`>>
+<<AddParagraph //And Cannelé is //rather small// compared to Nomnom, who is// rather tall.
+<<AddParagraph //Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//
+<<AddParagraph //It's suprisingly…//
+<<AddParagraph //Ineffective.//
+
+<<include choicesCannelé>>
+
+:: interviewNomnom [nobr]
+<<set $interview_nomnom to true>>
+<<BlankSpeaker>>
+<<if $interview_cannele is true>>
+  <<AddParagraph Nomnom seems significantly taller than Cannelé (not counting the couch).
+
+  <<else>>
+    <<AddParagraph Nomnom seems significantly taller than Cannelé.
+<</if>>
+
+<<AddParagraph It might be just an impression given by their hair, though.
+
+<<AddParagraph `"Reminiscent of a black cloud rising towards the sky, Nomnom’s hair sculpt their head into a roughly "+tooltip("pineconed shape","Have you ever seen a pinecone? Close your eyes. Picture a tree ready to fight against the scorch of the sun. This is what pinecones want to be when they grow up.")+ "."`>>
+
+<<AddParagraph Their navy blue trench coat contrasts their warm tan skin nicely. Even though their shoes are of rather good quality, they also seem to be worn-out in unusual places.
+
+<<AddParagraph If one had to guess, they’d probably say that the left shoe is slightly more //aerodynamic// than the other.
+<<AddParagraph But why…?
+<<AddParagraph
+
+<<AddOption //Their hair…//" "nomnomHair
+<<AddOption //Their coat…//" "nomnomCoat
+<<AddOption //I can’t help it, but this left shoe really intrigues me…//" "nomnomLeftShoe
+
+:: choicesNomnom [nobr]
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddOption Look at Nomnom again." "choicesNomnom2
+<<AddOption Turn to Cannelé." "interviewCannelé
+<<AddOption Attempt communication (Skip.)" "interviewSpeak
+
+:: choicesNomnom2 [nobr]
+<<AddOption //Nomnom's hair…//" "nomnomHair
+<<AddOption //Nomnom's coat…//" "nomnomCoat
+<<AddOption //I can’t help it, but Nomnom's left shoe really intrigues me…//" "nomnomLeftShoe
+
+:: nomnomHair [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom's hair gather in a fluffy jet black cloud, making their head look like it's about to float away and join its white cousins in the sky.
+<<AddParagraph Despite its imposing mass, they managed to make it stand in a perhaps unstable, but surpringly perduring equilibirum.
+
+<<SetSpeaker "???
+<<AddParagraph //I can see that Nomnom puts a lot of care in their hair. They look proud of it!//
+<<AddParagraph //Something strikes me as strange, though. I hope I'm not being too judgemental, but it seems a bit…//
+<<AddParagraph //…dehydrated?//
+<<AddParagraph //Usually this happens when people don't know how to take care of their specific hair type.//
+<<AddParagraph `"//I wonder how they could have grown up without having that "+note("knowledge",{txt:"Nomnom does not know how to care for their hair",type:'clue'})+".//"`>>
+
+<<include choicesNomnom>>
+
+:: nomnomCoat [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom's coat is old and patched up at unusual places.
+<<AddParagraph On the armpits, traces of flour and breadcrumbs remain.
+
+<<SetSpeaker "???
+<<AddParagraph These happens when you buy bread on tuck it on under your arm.
+<<AddParagraph `"So Nomnom must be the one who buys the daily "+tooltip("baguette","You don't know what a baguette is?")+"."`>>
+<<AddParagraph That's surprisingly responsible!
+
+<<BlankSpeaker>>
+<<AddParagraph The left pocket of the coat seems to be full.
+<<AddParagraph It has been hastily sewn back together, indicating it must //often// be full.
+<<AddParagraph A dry croissant peeks out of it.
+
+<<SetSpeaker "???
+<<AddParagraph And they also buy pastries, hm.
+<<AddParagraph They have great taste.
+<<AddParagraph I can work with that!
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom's arm shifts, and something shiny catches your eyes.
+<<AddParagraph The light bounces off from a reflective surface on their wrists.
+<<AddParagraph Reflective //surfaces//, plural.
+<<AddParagraph Nomnom is wearing two watches.
+<<AddParagraph On the same wrist.
+<<AddParagraph And none of them are on time.
+
+<<SetSpeaker "???
+<<AddParagraph ...I'm confused and weirded out again.
+
+<<include choicesNomnom>>
+
+
+:: nomnomLeftShoe [nobr]
+
+<<SetSpeaker "???
+<<AddParagraph //Now that I'm looking more closely, these shoes aren't from the same pair at all.//
+
+<<AddParagraph //The right one has a square toe and a whoolly texture, while the left one is made of leather and shaped like an almond.//
+
+<<BlankSpeaker>>
+<<AddParagraph Instinctively, you understand that if you had to throw one of the shoes very far, the left one would probably fly better than the right.
+
+<<AddParagraph It might be correlated with the reason why Nomnom currently has mismatching footwear.
+
+<<SetSpeaker "???
+<<AddParagraph `"//I can't help but have a bad feeling about this "+note("shoe",{txt:"Nomnom's aerodynamic left shoe", type:"clue"})+".//"`>>
+
+<<include choicesNomnom>>
+
+
+:: interviewSpeak [nobr]
+<<set $interview_speak to true>>
+
+<<SetSpeaker "???
+<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right?"`>>
+<<AddParagraph `"Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph `"It's pronounced //non-non//, "+note("Nomnom",{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name” in French…", type:"clue", fontSize:16})+ "?"`>>
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé just grumbles in response.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph What are you grumbling for?
+<<AddParagraph `note("Cannelé",{txt:"Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"clue", fontSize:13})+"'s a great name!"`>>
+
+<<SetSpeaker "Cannelé
+<<AddParagraph It's literally shit and I hate you, //''Nomnom''//
+
+<<BlankSpeaker>>
+<<AddParagraph The argument seems inconsequential and terribly pointless.
+
+<<SetSpeaker "???
+<<AddParagraph A-ah, I see.
+<<AddParagraph //They remind me of siblings…//
+<<AddParagraph //A pair of //extremely annoying// siblings.//
+
+<<AddOption Bring the topic back to what matters to you : your amnesia." "Interview
+
+
+:: Interview [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Please, have a sit. Would you like a drink?
+
+<<SetSpeaker "???
+<<AddParagraph Oh, uh, gladly. I would love a cup of-
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Excellent! I make the best coffee around the block.
+
+<<SetSpeaker "???
+<<AddParagraph tea. But coffee would be great too, I guess.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom stands up and make their way to the sink. They hum as they prepare two cups of coffee.
+<<AddParagraph They bring the cups over, ignoring Cannelé, and place one on the table.
+<<AddParagraph A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.
+<<AddParagraph After inspection, it looks like water that smells of coffee.
+<<AddParagraph You think you see the surface of the liquid @@.foresight;glow@@ blue for a second.
+<<AddParagraph Then; it's gone.
+
+
+/*appear once fast then disappear and normal effect*/
+<<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is shouting in pain, a huge stain on his pants." >>
+
+<<AddParagraph Nomnom quickly picks up the coffee cup again, and puts it slightly farther on the table.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph You should wait a bit before drinking it. It's still a //tad bit// hot.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph So you have-
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Amnesia. Can you tell us everything you remember?
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<set $interview_identity to false>>
+<<set $interview_event to false>>
+<<set $interview_coffee to false>>
+<<set $firstgiftcannele to false>>
+
+<<AddOption Who am I?" "Identity
+<<AddOption What happened to me?»" "Event
+<<AddOption What's wrong with this coffee?" "Coffee
+
+
+:: Identity [nobr]
+<<audio ":playing" fadeout>>
+<<set $interview_identity to true>>
+
+<<BlankSpeaker>>
+<<if $firstgiftcannele is false>>
+  <<AddParagraph  "From the corner of your eyes, you see @@.precog;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
+  <<set $firstgiftcannele to true>>
+<</if>>
+<<AddParagraph  `"@@.precog;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
+<<PlaySound "slot
+
+
+<<SetSpeaker "Cannelé
+<<AddParagraph What's your name? Occupation? Monthly salary?
+
+<<SetSpeaker "???
+<<AddParagraph I can't remember anything. It's all… foggy in my mind. Like it's all there but I can't //remember//.
+<<AddParagraph I have no idea where I am or where I live, I am completely lost.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph What about your magical Gift?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Do you even remember what a gift is?
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption «Of course, I do» (Bluff.)" "giftYes
+<<AddOption «A what now?»" "giftNo
+
+
+:: giftYes [nobr]
+<<SetSpeaker "???
+<<AddParagraph I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what //real// coffee looks like.
+
+<<BlankSpeaker>>
+<<AddParagraph //Nomnom squints, unconvinced.//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Yeah ? Give me the Laws of Magic then.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ^^Yeah ? Give me the first 5 multiplication tables then.^^
+
+<<BlankSpeaker>>
+<<AddParagraph They look at each other in confusion.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I meant the Laws of Magic.
+
+<<SetSpeaker "???
+<<AddParagraph //Wait, what// were //the Laws of magic again?//
+<<AddParagraph //The name is so familiar but it's like looking into an empty drawer, I can't remember them.//
+<<AddParagraph //This looks super important too…//
+<<AddParagraph This is really not necessary.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.
+
+<<AddOption «If you insist…»" "theory1
+
+
+:: giftNo [nobr]
+<<SetSpeaker "Cannelé
+<<AddParagraph Okay so basically, a ''Gift'' is what we call a person's magical ability.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph They are ruled by Three Laws.
+
+<<SetSpeaker "???
+<<AddParagraph //Wait, the Three Laws of Magic… this kind of rings a bell.//
+<<AddParagraph //This looks super important too…//
+<<AddParagraph Y-yeah, I think I remember something like that.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Let's check what you remember then!
+
+<<BlankSpeaker>>
+<<AddParagraph You start sweating now: this is not going to end well for you.
+
+<<SetSpeaker "???
+<<AddParagraph This is //really// not necessary.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.
+
+<<SetSpeaker "???
+<<AddParagraph //I missed the timing to back out and come clean…//
+
+<<AddOption «Erm…»" "theory1
+
+
+:: Event [nobr]
+<<set $interview_event to true>>
+<<SetSpeaker "Nomnom
+<<AddParagraph How did you find this place?
+
+<<SetSpeaker "???
+<<AddParagraph I tried to go to the police but they couldn't help… That's when I found the flyer.
+
+<<BlankSpeaker>>
+<<AddParagraph The flyer on the table reads:
+<<AddParagraph @@.flyer;AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//.<br/> __Will Help__ you find anything you ==misplaced== lost.<br/>Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__@@
+<<AddParagraph It's barely legible and mostly just confusing.
+
+<<SetSpeaker "???
+<<AddParagraph I was quite desperate you see…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph SEE! I KNEW HANDING OUT FLYERS WOULD BE A GREAT IDEA!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Whatever, pretty sure it was my idea.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph You're such a loser.
+<<AddParagraph So you are looking for help to regain memory, is that right?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé's gaze sweeps over you, as they inspect your appearance.
+
+<<BlankSpeaker>>
+<<if $firstgiftcannele is false>>
+  <<AddParagraph  "From the corner of your eyes, you see @@.precog;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
+  <<set $firstgiftcannele to true>>
+<</if>>
+<<AddParagraph  `"@@.precog;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
+<<PlaySound "slot
+
+<<SetSpeaker "???
+<<AddParagraph That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Yes? What happened to your wallet?
+
+<<SetSpeaker "???
+<<AddParagraph A cat stole it… and sneaked away.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Do you have any other personal item that might help identify you?
+
+<<SetSpeaker "???
+<<AddParagraph Nothing. I looked into all my pockets, but I have nothing…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `"So, a "+ note("cat", {"txt": "WANTED", type:"picture", src:"note_cat.png"}) +" stole the only lead you had about your identity. I see."`>>
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $interview_identity is false>>
+<<AddOption «Who am I?»" "Identity
+<</if>>
+
+<<if $interview_coffee is false>>
+<<AddOption «What's wrong with this coffee?»" "Coffee
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption Take a deep breath (Continue.)" "Contract
+<</if>>
+
+
+:: Coffee [nobr]
+<<set $interview_coffee to true>>
+
+<<SetSpeaker "???
+<<AddParagraph The coffee… is very special here.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom's expression freezes as they try to maintain a polite smile.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Is there any issue with the way I make coffee ?
+
+<<SetSpeaker "???
+<<AddParagraph ''*gulps*''
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Can I offer you a pastry to go with this //delicious// cup of coffee? They're fresh from yesterday.
+
+<<SetSpeaker "???
+<<AddParagraph Oh! Is «//Yesterday//» a bakery?
+
+<<BlankSpeaker>>
+<<AddParagraph A heavy silence greets the question.
+<<AddParagraph This is not a safe topic.
+
+<<SetSpeaker "???
+<<AddParagraph Y-yes please.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin.
+<<AddParagraph The dectective looks at it longingly before handing it over.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $interview_identity is false>>
+<<AddOption «Who am I?»" "Event
+<</if>>
+
+<<if $interview_event is false>>
+<<AddOption «What happened?»" "Event
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption Take a deep breath (Continue.)" "Contract
+<</if>>
+
+
+:: Contract [nobr]
+
+<<SetSpeaker "???
+<<AddParagraph Do you think you can help me?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé's smile widens.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `"Of course! We are "+tooltip("professionals","In the broader sense of the definition.")+"."`>>
+<<AddParagraph Now let us discuss the terms of the contract.
+
+<<AddOption The contract?" "Contract1
+
+
+:: Contract1 [nobr]
+<<SetSpeaker "Cannelé
+<<AddParagraph If you become our client, we need to draw an official contract.
+<<AddParagraph After all, I am not a swindler-
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ''*COUGH*''
+<<AddParagraph //WE// are proper detectives.
+
+<<BlankSpeaker>>
+<<AddParagraph This statement, that should be reassuring, sounds like a threat.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOptionVariables "//Am I really… leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
+/* <<AddOptionVariables "//But somehow… I feel like they might be trustworthy…//" "Contract2" `{"trust":true}`>> */
+/* SUGGESTION : */
+<<AddOptionVariables "//But somehow… I feel like I can count on them…//" "Contract2" `{"trust":true}`>>
+
+:: Contract2 [nobr]
+
+<<if $trust is false>>
+  <<SetSpeaker "???
+  <<AddParagraph //They still look a little suspicious to me…//
+  <<AddParagraph //And annoying.//
+  /* <<AddParagraph //But at this point, I have no other choice but to rely on them.// */
+  /* SUGGESTION : */
+  <<AddParagraph //But at this point, I have no one else I can rely on.//
+  <<AddParagraph //So I'll just bear with it for now.//
+<</if>>
+
+<<if $trust is true>>
+  <<SetSpeaker "???
+  <<AddParagraph //I don't know exactly what it is…//
+  <<AddParagraph //But //something// tells me I can trust them.//
+  <<AddParagraph //These people… they'll help me.//
+
+  <<BlankSpeaker>>
+  <<AddParagraph You feel it, faintly.
+  <<AddParagraph The weight that had been carrying the whole morning - ever since you woke up with no recollections of your own identity - has lightened, a little.
+  <<AddParagraph What you are feeling right now, is hope; and it's all thanks to the two detectives sat in front of you.
+<</if>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph We hereby commit to finding out the answer to three questions for you:
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<SetSpeaker "???
+<<AddParagraph Maybe those questions will be useful later…
+<<DisableContinueButton "window.mysteries == 3" "Yes. Yes, they will. Trust me. Just take them." "Contract2_1
+
+
+
+:: Contract2_1
+
+<<SetSpeaker "Cannelé
+<<AddParagraph In exchange, the client - you - will have to respect three conditions:
+<<AddParagraph Clause 1: I do not take any responsability on whatever this maniac right here might do.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I sincerely despise you so much.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé pauses.
+<<BlankSpeaker>>
+<<AddParagraph  `"@@.precog;His clothes seem to be good quality and he is clean shaven.@@"`>>
+<<AddParagraph `"@@.precog;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
+<<PlaySound "slot
+<<AddParagraph `"@@.precog;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
+<<PlaySound "slot
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.
+
+<<SetSpeaker "???
+<<AddParagraph WHAT?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Clause 3: In addition to the payment, you will treat us to a meal once the case is closed.
+<<AddParagraph Any questions?
+<<AddParagraph No?
+<<AddParagraph Perfect!
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé signs the contract.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Seems fair to me.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom shrugs and signs the contract.
+
+<<if $trust is true>>
+  <<SetSpeaker "???
+  <<AddParagraph //Scratch that monologue about trust and hope and worries being lifted.//
+  <<AddParagraph //They're out to scam me!!!//
+<</if>>
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Hmmm… Those «@@color:gold;???@@» are kind of annoying me.
+
+<<SetSpeaker "???
+<<AddParagraph ???
+
+<<BlankSpeaker>>
+<<AddParagraph  `"@@.precog;On his coat are embroidered the initials “"+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+"”"`>>
+<<AddParagraph `slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
+<<PlaySound "slot
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Any name? Or an alias?
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption «Not really?»" "noName
+<<AddOption «I can come up with one!»" "enterName
+<<AddOption «If I say “No”, what's gonna happen?»" "ifNoName
+
+
+:: enterName[nobr]
+<<SetSpeaker "Cannelé
+<<AddParagraph Please. We're professionals.
+<<AddParagraph Let us do our job.
+
+<<SetSpeaker "???
+<<AddParagraph //So I have no say in…//
+<<AddParagraph //Choosing my own name.//
+<<AddParagraph //Why did they even ask me then…//
+
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom stretches their neck and cracks their knuckles.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Ok, time for me to shine!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I think NOT, you SUCK at namegiving.
+<<AddParagraph I'm going to take care of this
+
+<<SetSpeaker "???
+<<AddParagraph I have a terrible feeling about this.
+
+<<BlankSpeaker>>
+<<AddParagraph No reply comes.
+
+<<include noName>>
+
+
+
+:: ifNoName [nobr]
+<<BlankSpeaker>>
+<<AddParagraph They both smile at you, an almost business-like smile.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph We wouldn't call you “No”, it's a terrible name.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Plus, it's already taken.
+<<AddParagraph You can take “Yes”, though.
+
+
+<<SetSpeaker "???
+<<AddParagraph That's not what I meant but okay…
+<<AddParagraph The answer is no, I do not have a name.
+
+<<include noName>>
+
+
+:: noName [nobr]
+<<BlankSpeaker>>
+<<AddParagraph Both detectives are suddenly quiet, lost in deep thoughts.
+<<AddParagraph Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…
+<<AddParagraph Inspiration?
+
+<<AddParagraph <h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<PlaySound "title_show" "0.5s
+
+<<SetSpeaker "Cannelé
+<<AddParagraph A name…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph A chair?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph An alias !
+
+<<SetSpeaker "Nomnom
+<<AddParagraph The sink…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Ali ?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Oh no ew, dirty
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Iasias…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph The couch…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Ee-yas?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Wait, what's that…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Yas ! Yas?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph It's a muff-
+
+<<AddOption //I am getting concerned …//" "interviewA-HA
+
+
+:: interviewA-HA [nobr]
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph ''//A-HA!//''
+
+<<AddOption VERY //concerned…//" "Naming
+
+
+:: Naming [nobr]
+<<SetSpeaker "Cannelé
+<<AddParagraph YASYAS, I CHOOSE YOU!!!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph YOUR NAME SHALL BE MUFFIN!!!
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom look at each other, outraged.
+<<AddParagraph The silence between them tells an entire story on its own.
+
+<<SetSpeaker "???
+<<AddParagraph //I can feel it.//
+<<AddParagraph //This…//
+<<AddParagraph //This ridiculous situation has happened before…//
+<<AddParagraph `"//Cannelé…….. "+note("Muffin (??)",{txt:"Muffin… This isn't a name, it's a pastry…", type:"clue"})+" ………….//"`>>
+<<AddParagraph `"//Nomnom………………. "+ note("Yasyas (This isn't even a word???)",{txt:"Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…", type:"clue", fontSize:13})+" ………..//"`>>
+<<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"TERRIFYING NAMING CONVENTIONS", type:"question"})`>>
+<<AddParagraph //More terrifying than the dark alleys, more terrifying than the tiny, messy office.//
+<<AddParagraph //Perhaps even more terrifying than the memory loss itself…//
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption //I can't believe this is happening to me.//" "Naming1
+<<AddOption //Is it too late to leave?//" "Naming1
+<<AddOption //I don't even know what to say to that.//" "Naming1
+
+
+:: Naming1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph You need to take your mind away from the madness unfolding before you.
+<<AddParagraph By reflex, you reach for the cup of coffee and take a sip.
+
+<<SetSpeaker "???
+<<AddParagraph  "@@.shake;''*GLUPS*''@@" >>
+<<PlaySound "drink_mug
+
+<<BlankSpeaker>>
+<<AddParagraph The now empty cup on the table shakes as Cannelé violently slams their fist on the table.
+
+
+<<SetSpeaker "Cannelé
+<<AddParagraph SHUT UP! It has to be Yasyas
+<<PlaySound "desk_slam
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WHAT THE FUCK IS EVEN YASYAS???? MUFFIN IS A WAY SWEETER CHOICE
+
+<<SetSpeaker "Cannelé
+<<AddParagraph LOOK AT YASYAS HE OBVIOUSLY LIKES MY PICK BETTER?? NO ONE WANTS TO BE CALLED MUFFIN
+<<AddParagraph I HEARD IT MEANS COOCHIE IN SOME STREET SLANG TOO!!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph W-WHAT? AT LEAST IT //MEANS// SOMETHING, NOT LIKE… YASYAS???
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph ANYWAY
+<<AddParagraph WHICH ONE DO YOU PREFER ?
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption «Really… Then uh, Yasyas?»" "Yasyas
+<<AddOption «Errr if I really don't have a choice I'll just choose Muffin»" "Muffin
+<<AddOption «I could pick anything, literally anything but those two… words» (Choose a custom name.)" "CustomName
+
+
+
+:: CustomName [nobr]
+<<SetSpeaker "???
+<<AddParagraph //Finally!//
+<<AddOption //How about…//" "customcustomName
+
+:: customcustomName
+<<WordInput 5 "custom_name"  "CustomName2
+
+
+:: CustomName2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The detectives fall silent.
+<<AddParagraph You catch yourself holding your breath, waiting for their reaction.
+<<AddParagraph You don't know what to expect…
+<<AddParagraph But certainly not seeing them explode into loud, obnoxious laughter in your face.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé regains their composure first, muffling one last giggle.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Did you really come up with…
+<<AddParagraph `$custom_name + "??"`>>
+<<AddParagraph Haven't seen a name as bad since 'Cannelé', dude what the HECK.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph This is like…
+<<BlankSpeaker>>
+<<AddParagraph A chuckle escapes from their mouth.
+<<SetSpeaker "Nomnom
+<<AddParagraph Really, //really// bad.
+
+<<BlankSpeaker>>
+<<AddParagraph You consider the name you had picked, " + `'$custom_name'`>>
+<<AddParagraph Then think about the names THEY had come up with, 'Yasyas' and 'Muffin'.
+<<AddParagraph And you feel rage boiling in the pit of your stomach…
+<<AddParagraph That soon transforms into weariness.
+<<AddParagraph
+
+<<AddOption «Let's get this over with.»" "Naming2" >>
+<<AddOptionVariables "//If I run for it, maybe...//" "Naming2" `{"leave":"yes"}` >>
+
+
+
+:: Naming2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom have stopped bickering now.
+<<AddParagraph They're staring straight at you.
+<<if $leave is "yes
+  <<AddParagraph You are trapped.
+<</if>>
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph You must pick one.
+
+<<SetSpeaker "???
+<<AddParagraph //sigh//
+
+<<BlankSpeaker>>
+<<AddParagraph Their tone lightens, going back to the uncomfortable commercial tone they had used when they'd first greeted you.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Muffin is a cool sounding name right! It suits you very much.
+
+<<SetSpeaker "???
+<<AddParagraph //This is probably…//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph No matter how I look at it, you look like a Yasyas.
+
+<<SetSpeaker "???
+<<AddParagraph //A situation I can't escape.//
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption «Muffin it is, I guess…»" "Muffin
+<<AddOption «I'll just go with Yasyas»" "Yasyas
+
+
+:: Muffin [nobr]
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //Three points for Nomnom//
+<<AddScore "Nomnom" 3>>
+<<set $client_name to "Muffin
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I think you're neat, Muffin. You're a great person.
+<<AddParagraph Now let's go! It's time to retrace your steps and go find your memories.
+
+<<AddOption «I-I didn't even sign the contract…»" "finDemo
+
+
+:: Yasyas [nobr]
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //Three points for Cannelé//
+<<AddScore "Cannelé" 3>>
+<<set $client_name to "Yasyas
+
+<<SetSpeaker "Cannelé
+<<AddParagraph HAHAHAHAHA! FUCKING KNEW YOU WERE A REAL ONE!
+<<AddParagraph Let's go Yasyas, time to retrace your steps and go find your memories!
+
+<<AddOption «I-I didn't even sign the contract…»" "finDemo
+
+:: finDemo [nobr]
+<h2 class="typewriter" >Chapter 2 - The Hoboolean Coin</h2><br/>
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddParagraph //Hey!//
+<<AddParagraph //You've reached the end of this demo. Thank you so much for playing! Now...//
+<<AddParagraph //We'd like to ask you if you could help us with something.//
+<<AddParagraph We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!
+<<AddParagraph It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab.
+<<AddParagraph Feel free to open the conspiracy board and play around with the clues you've collected during this demo!(but let us warn you, they will be lost if you refresh the page)
+<<AddParagraph Thank you for playing <3
+
+
+
+:: theory1 [nobr]
+<<audio "flicker_bgm" volume 0 fadeto 0.5>>
+<<SetSpeaker "???
+<<AddParagraph //Okay, me//
+<<AddParagraph //I gotta do this, I have to find these Laws and show them!//
+<<AddParagraph //I am pretty sure they are called the //Three// Laws of Magic.//
+<<AddParagraph //I'll just try and remember something…//
+<<AddParagraph //I have a feeling that this is very important.//
+<<AddParagraph //If I can crack this, it might help me remember who I am!//
+
+
+<<AddParagraph //I just have to think.//
+<<BlankSpeaker>>
+<<AddParagraph <br/>//''1. First, where does this Magic comes from?''//
+<<AddParagraph
+
+
+<<AddOptionVariables "//The river is super important… There are Spirits that dwell here, Spirits with Magic…\n Maybe they can lend their ''Gifts'' to us?//" "theory2" `{"rule1":"river_spirits","said_gift1":1,"customPuce":"❶"}`>>
+<<AddOptionVariables "//Magic is probably based on physical phenomena and logical equations…\n This means that knowledge must be the key to Magic!//" "theory2" `{"rule1":"physics","customPuce":"❷"}`>>
+<<AddOptionVariables "//Humans probably can't do magic…\n What if a symbiotic being lived inside us and gave us their powers?//" "theory2" `{"rule1":"symbiotic","customPuce":"❸"}`>>
+
+<<set $said_gift1 = 0>>
+<<set $said_gift2 = 0>>
+<<set $said_gift3 = 0>>
+
+:: theory2 [nobr]
+<<SetSpeaker "???
+<<AddParagraph //That sounds plausible, maybe!//
+<<AddParagraph //Let's keep going.//
+
+
+
+<<AddParagraph //I just need to stay coherent. If Magic comes from there…//
+<<BlankSpeaker>>
+<<AddParagraph <br/>//''2. How can humans use it?''//
+<<AddParagraph
+
+<<AddOptionVariables "//If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?//" "theory3" `{"rule2":"physics","customPuce":"❶"}`>>
+<<AddOptionVariables `"//River Spirits must have their own agency and values and personality…\nif it resonates with someone then they can become pals? Friends? //"+tooltip("//Partners…//","Lovers? Soulmates?? More???")` "theory3" `{"rule2":"river_spirits","customPuce":"❷"}`>>
+<<AddOptionVariables "//Let's stay down to earth… what about biological evolution?\n''Gifts'' like magical organs to manipulate the Laws of physics, maybe?//" "theory3" `{"rule2":"physics","said_gift2":1,"customPuce":"❸"}`>>
+
+
+:: theory3 [nobr]
+<<SetSpeaker "???
+<<AddParagraph //I might actually be onto something?//
+
+<<AddParagraph //Just one more detail…//
+<<AddParagraph //And I will have crafted a complete and logical reasoning!//
+<<AddParagraph //They're called ''Laws'', so there must be some kind of restrictions…//
+<<BlankSpeaker>>
+<<AddParagraph <br/>//''3. To do Magic, which rules must humans follow?''//
+<<AddParagraph
+
+<<AddOptionVariables "//Someone famous said it before right? “Nothing is created, nothing is destroyed, everything is transformed.”//" "restitution" `{"rule3":"physics","customPuce":"❶"}`>>
+<<AddOptionVariables "//Symbiotes must eat to use their ''Gift'', right?? And if its magic, it probably won't be happy with old pastries and diluted coffee. Maybe some special food?//" "restitution" `{"rule3":"symbiotic","said_gift3":1,"customPuce":"❷"}`>>
+<<AddOptionVariables "//If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?//" "restitution" `{"rule3":"river_spirits","customPuce":"❸"}`>>
+
+:: restitution [nobr]
+
+<<SetSpeaker "???
+<<AddParagraph Alright, let's recap what I got.
+
+<<SetSpeaker "Law #1
+<<if $rule1 == "river_spirits
+  <<AddParagraph Magic comes from the River Spirits who lend their Gifts to humans.
+<<elseif $rule1 == "physics
+  <<AddParagraph Magic is a type of energy ruled by physical equations that humans can understand and manipulate.
+<<else>>
+  <<AddParagraph Magic is a symbiote organism living inside humans.
+<</if>>
+
+<<SetSpeaker "Law #2
+<<if $rule2 == "river_spirits
+  <<AddParagraph When a human comes of age, they form an exclusive pact with their own Spirit.
+<<elseif $rule2 == "physics
+  <<AddParagraph To harness this Magic, humans have developped specific organs - ''Gifts'' - that process the energy.
+<<else>>
+  <<AddParagraph Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abilities.
+<</if>>
+
+<<SetSpeaker "Law #3
+<<if $rule3 == "river_spirits
+  <<AddParagraph The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.
+<<elseif $rule3 == "physics
+  <<AddParagraph Nothing is created, nothing is destroyed, everything is transformed.
+<<else>>
+  <<AddParagraph To use the symbiote's Gift, you have to feed it special nutrients.
+<</if>>
+
+<<if ("river_spirits" == $rule1) && ($rule1 == $rule2) && ($rule2 == $rule3)>>
+  <<set $rules_result to "Results_RiverSpirits
+<<elseif ("physics" == $rule1) && ($rule1 == $rule2) && ($rule2 == $rule3)>>
+  <<set $rules_result to "Results_Physics
+<<elseif ("symbiotic" == $rule1) && ($rule1 == $rule2) && ($rule2 == $rule3)>>
+  <<set $rules_result to "Results_Symbiotic
+<<else>>
+  <<set $rules_result to "Results_Bullshit
+<</if>>
+<<BlankSpeaker>>
+<<AddParagraph
+
+
+<<AddOption //Hum, maybe I should think about this again.// (Retry.)" "theory1
+<<AddOption //Ok, this is looking good!// (Confirm.)" "stateRules
+
+
+:: stateRules [nobr]
+<<audio ":playing" fadeout>>
+<<BlankSpeaker>>
+<<AddParagraph You enunciate the rules you just pieced together with made up confidence that now almost feels...
+<<AddParagraph Real.
+<<AddParagraph You got this.
+
+<<SetSpeaker "???
+<<AddParagraph //This makes sense!//
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom don't say anything.
+<<AddParagraph Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.
+
+
+<<AddParagraph Cannelé hasn't moved: they're nodding as you finish stating the third rule.
+
+<<SetSpeaker "???
+<<if $rule3 == "river_spirits
+  <<AddParagraph …and finally, the relationship you have with a Spirit influences the quality of your Magic.
+<<elseif $rule3 == "physics
+  <<AddParagraph …and finally, nothing is created, nothing is destroyed, everything is transformed.
+<<else>>
+  <<AddParagraph …and finally, to use the symbiote's Magic, you have to feed it special nutrients.
+<</if>>
+
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom look at each other.
+<<SetSpeaker "Cannelé
+<<AddParagraph …
+<<SetSpeaker "Nomnom
+<<AddParagraph …
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph … …
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph BWAHAHAHAHAHAHA!
+
+<<SetSpeaker "???
+<<AddParagraph //…//
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+
+<<AddOption //I thought it was pretty good?//" $rules_result>>
+<<AddOption //Am I that far off??//" $rules_result>>
+<<AddOption //I hate them so much…//" $rules_result>>
+
+
+:: Results_RiverSpirits [nobr]
+<<BlankSpeaker>>
+<<AddParagraph They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph This was terrible but like…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph In a good, terrible way?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph What was this all even about?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Well, it's not like you're //entirely// wrong…
+<<AddParagraph River Spirits lending their powers to human is the First Myth that the first settlers who discovered the continent came up with.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph And it is true that personality, mind and spirit do influence the way your Gift is shaped…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph But the rest? Complete bullshit.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Some people out there can throw fireballs at your ass, so it's really not that tied to water and the River.
+<<AddParagraph And we don't date magical spirits in exchange of Magic, no.
+<<AddParagraph That's kinda…
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé's mind wander for a bit.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph …//REALLY// creepy.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph …uh, yeah. Right.
+
+<<SetSpeaker "???
+<<AddParagraph //What is this feeling…//
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+
+
+
+
+:: Results_Physics [nobr]
+<<BlankSpeaker>>
+<<AddParagraph They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph This was terrible but like…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph In a good, terrible way?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph What was this all even about?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Well, it's not like you're //entirely// wrong…
+<<AddParagraph Magic is a form of energy all around us and we humans tap into it to manifest our ''Gift''…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `"…but we act more like a "+tooltip("prism","A shape that can separate a pure light into multiple <span class='rainbow'>colors</span>.")+" and we sure as hell don't have freaky magical organs."`>>
+<<AddParagraph I mean, what the fuck was that even??
+
+<<SetSpeaker "Nomnom
+<<AddParagraph You have a very… fertile imagination.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Someone read my mind once and that's just not explainable by your Laws of Physics…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph At least, nothing was said about Equivalent Exchange.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph That would've been so lame…
+<<AddParagraph This is real life not some sort of fictional universe??
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Youngsters this day, they've lost all sense of reality…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Ok, stop here grandpa, your 27 years old bones are creaking.
+
+<<SetSpeaker "???
+<<AddParagraph //What is this feeling…//
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+
+
+:: Results_Symbiotic [nobr]
+<<BlankSpeaker>>
+<<AddParagraph They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph This was terrible but like…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph In a good, terrible way?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph What was this all even about?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Well, it's not like you're //entirely// wrong…
+<<AddParagraph We do need to consume some special ingredient to use our Gifts…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph
+<<AddParagraph `tooltip("Fleur d’Âme","Literally: “Flower from the Soul”")+"."`>>
+<<AddParagraph Very rare, very expensive, very hard to come across.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Its distribution is tightly reguled by the Governement.
+<<AddParagraph Still! It was a good guess… I guess?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph The rest of your theory?
+<<AddParagraph I diagnose it with bullshit.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I don't have any hidden parasite living in my body.
+<<AddParagraph //unless I'M the parasite??//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph It's true there has been cases of people communicating with their Gifts, though.
+<<AddParagraph But it's rare and certainly not a rule.
+<<AddParagraph You really came up with some crazy shit, uh?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I wouldn't say crazy shit, more like… crazy… crazy.
+
+<<SetSpeaker "???
+<<AddParagraph //What is this feeling…//
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+
+
+:: Results_Bullshit [nobr]
+
+<<set $total_said_gift = $said_gift1+$said_gift2+$said_gift3>>
+
+<<BlankSpeaker>>
+<<AddParagraph They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph This was terrible, like…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Literally //nothing// you've said makes any sense?
+
+<<SetSpeaker "Nomnom
+<<if $total_said_gift == 2>>
+  <<AddParagraph You gave //two// totally different definitions for what a ''Gift'' is.
+<<elseif $total_said_gift == 3>>
+  <<AddParagraph You gave //three// completely different definitions for what a ''Gift'' is.
+  <<AddParagraph Three!
+<</if>>
+
+<<SetSpeaker "Cannelé
+<<AddParagraph A piece of advice;
+<<AddParagraph Amnesia 101: if you're not sure, just don't say it.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Because when you say it, you end up in this situation.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Sounding like the perfect mix between ridiculous, unhinged and a little pathetic.
+
+<<SetSpeaker "Nomnom
+
+<<AddParagraph Kind of like a conspiracy theorist!
+<<AddParagraph It's fine, it happens to all of us.
+<<AddParagraph Just use this as advice.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph But hey, thanks for the free entertainment!
+
+
+<<SetSpeaker "???
+<<AddParagraph //What is this feeling…//
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddOptionVariables "//Annoyance?//" "realLaws" `{"feelingYasMuff":"annoyance"}`>>
+<<AddOptionVariables "//Amusement?//" "realLaws" `{"feelingYasMuff":"amusement"}`>>
+<<AddOptionVariables "//Indifference.//" "realLaws" `{"feelingYasMuff":"indifference"}`>>
+
+
+:: realLaws [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The two detectives are still smiling, after laughing at you for a good five minutes.
+
+<<if $feelingYasMuff is "annoyance
+  <<BlankSpeaker>>
+  <<AddParagraph Part of you is relieved they're not arguing with each other, but…
+
+  <<SetSpeaker "???
+  <<AddParagraph //Why do //I// have to go through this?//
+
+  <<BlankSpeaker>>
+  <<AddParagraph You clench your teeth, trying to rein back the irritation.
+  <<AddParagraph For now, //they're// the ones who have the information you need.
+  <<AddParagraph You can curse them out later.
+  <<AddParagraph This thought comforts you a little.
+<</if>>
+
+<<if $feelingYasMuff is "amusement
+  <<BlankSpeaker>>
+  <<AddParagraph It makes you smile in turn.
+
+  <<SetSpeaker "???
+  <<AddParagraph //They're not entirely wrong…//
+  <<AddParagraph //It //was// a bit ridiculous!//
+  <<AddParagraph //I didn't think I'd be able to laugh in this situation.//
+  <<AddParagraph //I think I feel a little… lighter.//
+<</if>>
+
+<<if $feelingYasMuff is "indifference
+  <<BlankSpeaker>>
+  <<AddParagraph You want them to stop and tell you what's going on.
+  <<AddParagraph You don't want to play games and entertain strangers with your memory loss.
+  <<AddParagraph You want answers.
+<</if>>
+
+<<SetSpeaker "???
+<<AddParagraph //Now, what I want to know is…//
+<<AddParagraph OK then.
+<<AddParagraph What ARE the Three Laws of Magic?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom exchange a glance.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph `
+note("Law #1",{txt:"LAW #1: Magic is a universal gift that can be activated after eating a Fleur d’Âme.", type:"clue", fontSize:14,
+onclick:
+function()
+{
+  window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+  if(window.real_laws_taken == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})
++
+" : Magic is a universal gift that can be activated <span style='display: inline-block'>@@.github;after eating a Fleur d'Âme.@@</span>"`>>
+<<PlaySound "scribble
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `
+note("Law #2",{txt:"LAW #2: Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.", type:"clue", fontSize:12,
+onclick:
+function()
+{
+  window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+  if(window.real_laws_taken == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})+" : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity."`>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph `note("Law #3",{txt:"LAW #3: Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.", type:"clue", fontSize:13,
+onclick:
+function()
+{
+  window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+  if(window.real_laws_taken == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})+" : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums."`>>
+
+
+
+<<SetSpeaker "???
+<<AddParagraph //Hmmm… Better note those down.//
+
+<<DisableContinueButton "window.real_laws_taken == 3" >>
+
+<<AddOption «Can I ask you about your gifts?»" "cnGifts
+<<AddOption «Before we continue, I have some questions about those Laws…»" "questionsLaws
+<<AddOption «Got it» (Continue.)" "lawsDone
+
+
+
+:: cnGifts [nobr]
+<<BlankSpeaker>>
+<<AddParagraph A silence greets the question.
+
+<<SetSpeaker "???
+<<AddParagraph //I guess awkward silences are something I must get used to…
+<<AddParagraph //I feel like it's going to keep happening with those two.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Listen.
+<<AddParagraph I get that you don't remember much, but there are some things you can't just do.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Yeah, what's //wrong// with you?
+<<AddParagraph A Gift is personal, intimate - you can't just ask strangers.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph We might tell you if we grow closer but now is a little… embarrassing.
+
+<<SetSpeaker "???
+<<AddParagraph Oh, sorry?
+<<AddParagraph You asked about mine before so I figured it was ok…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph It's not the same! We were trying to help you.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph It was definitely not out of any form of misplaced curiosity.
+
+<<SetSpeaker "???
+<<AddParagraph …
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<AddOption «Nevermind, then… I have some questions about the Laws, though.» (Learn more.)" "questionsLaws
+
+<<if $interview_event is false>>
+<<AddOption «About what happened to me…»" "Event
+<</if>>
+
+<<if $interview_coffee is false>>
+<<AddOption «What's wrong with this coffee?»" "Coffee
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption Take a deep breath (Continue.)" "Contract
+<</if>>
+
+
+:: questionsLaws [nobr]
+<<SetSpeaker "Nomnom
+<<AddParagraph Go ahead!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph We shall indulge you.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<set $firstlaw to false>>
+<<set $secondlaw to false>>
+<<set $thirdlaw to false>>
+
+<<AddOption «About that first Law…»" "law1
+<<AddOption «About that second Law…»" "law2
+<<AddOption «About that third Law…»" "law3
+
+:: law1 [nobr]
+<<set $firstlaw to true>>
+
+<<SetSpeaker "???
+<<AddParagraph So, does that mean that everyone can do Magic?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Hmmm…
+<<AddParagraph Yes.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph …And no.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Everyone has the //potential// to do Magic.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph `"But not everyone has access to "+tooltip("Fleur d’Âme","Literally: “Flower from the Soul”")+"."`>>
+<<AddParagraph Imagine what life would be like if absolutely every citizen could become huge like a giant or turn everyone into spaghetti.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ^^Yeah like, every restaurant would go bankrupt.^^
+
+<<SetSpeaker "Cannelé
+<<AddParagraph To prevent that, the Government only gives Fleur d’Âme to people that…
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé pauses to do air quotes with their hands.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph //'Put their Magic at the service of the City'//
+
+<<SetSpeaker "???
+<<AddParagraph I see.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $secondlaw is false>>
+  <<AddOption «About that second Law…»" "law2
+<</if>>
+
+<<if $thirdlaw is false>>
+<<AddOption «About that third Law…»" "law3
+<</if>>
+
+<<AddOption «That's it» (Change Topic.)" "backToInterview
+
+
+:: law2 [nobr]
+<<set $secondlaw to true>>
+
+<<SetSpeaker "???
+<<AddParagraph You said that magic reflects your personality – what do you mean by that?
+<<AddParagraph If you like bread, would you be able to make pastries appear?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ^^I wish.^^
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé grins.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph The second one is less like a law and more like a rule of thumb.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Nobody knows exactly how it works, but some people draw a parallel between what your magic can do and the way you think, or the kind of tasks you’d be good at.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph There’s even a test going around that can tell you what your ideal job would be, based on your magical abilities.
+
+<<SetSpeaker "???
+<<AddParagraph Oh. What did it tell you?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé's grin fades.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph ''Tax Collector.''
+<<AddParagraph The test is a sham.
+
+<<SetSpeaker "???
+<<AddParagraph R-Right. Sounds like it is.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $firstlaw is false>>
+  <<AddOption «About that first Law…»" "law1
+<</if>>
+
+<<if $thirdlaw is false>>
+<<AddOption «About that third Law…»" "law3
+<</if>>
+<<AddOption «That's it» (Change Topic.)" "backToInterview
+
+
+:: law3 [nobr]
+<<set $thirdlaw to true>>
+
+<<SetSpeaker "???
+<<AddParagraph What counts as a “physical medium” exactly?
+<<AddParagraph If magic can’t be channelled through living beings, does it mean we are immune to magic?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Not really.
+<<AddParagraph It’s more like… How to say it…
+
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Hmmm… We can take a concrete example.
+<<AddParagraph Let's say you have the power to turn people into small insects.
+
+<<SetSpeaker "???
+<<AddParagraph That's not very nice!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph //If// you have the power to turn people into insects.
+<<AddParagraph How would you activate your power?
+
+
+<<SetSpeaker "???
+<<AddParagraph Hypothetically speaking…
+<<AddParagraph Couldn't I just wish for it in my head?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Wrong!
+
+<<SetSpeaker "???
+<<AddParagraph But why?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph You can't just activate magic through sheer will.
+<<AddParagraph It needs to be carried via something material.
+<<AddParagraph A power could, for instance, turn someone into bees whenever they eat honey; ''honey'' being the ''medium''.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Or… memorize an entire book, just by touching it.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Ooooor… bring wooden toys to life - in which case ''wood'' being the acting ''medium''.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Thing is, there always need to be something material about your magic.
+<<AddParagraph And that thing, can be anything //but// a living being.
+
+<<SetSpeaker "???
+<<AddParagraph Alright, I think I understand.
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $firstlaw is false>>
+  <<AddOption «About that first Law…»" "law1
+<</if>>
+
+<<if $secondlaw is false>>
+  <<AddOption «About that second Law…»" "law2
+<</if>>
+
+<<AddOption «That's it» (Change Topic.)" "backToInterview
+
+
+:: lawsDone [nobr]
+<<SetSpeaker "???
+<<AddParagraph Thank you, I think I'm good.
+<<AddParagraph Now…
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+
+<<if $interview_event is false>>
+<<AddOption «About what happened to me…»" "Event
+<</if>>
+
+<<if $interview_coffee is false>>
+<<AddOption «What's wrong with this coffee?»" "Coffee
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption Take a deep breath (Continue.)" "Contract
+<</if>>
+
+
+:: backToInterview [nobr]
+<<SetSpeaker "???
+<<AddParagraph Ok, all the magic stuff makes a little more sense to me now, thanks.
+<<AddParagraph Now…
+
+<<BlankSpeaker>>
+<<AddParagraph
+
+<<if $interview_event is false>>
+<<AddOption «About what happened to me…»" "Event
+<</if>>
+
+<<if $interview_coffee is false>>
+<<AddOption «What's wrong with this coffee?»" "Coffee
+<</if>>
+
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption Take a deep breath» (Continue.)" "Contract
+<</if>>
+
+:: market_Tails_0 [nobr]
+<<set $market_path to "right
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //Five points for Nomnom//
+<<AddScore "Nomnom" 5>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph TRUTH IS ON MY SIDE!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph THIS IS A SCAM??? THIS IS NOT MAGIC THIS IS A HATE CRIME AGAINST ME??
+
+<<BlankSpeaker>>
+<<AddParagraph The Detectives are back to arguing as they head toward the path on the right.
+<<AddParagraph The Hobo is smiling, a bit dumbfounded at the chaotic pair.
+
+<<AddOption Is this really mag-" "market_Hobo
+
+
+:: market_Faces_0 [nobr]
+<<set $market_path to "left
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //Five points for Cannelé//
+<<AddScore "Cannelé" 5>>
+
+<<SetSpeaker "Cannelé
+<<AddParagraph THE VENERATED HOBOOLEAN COIN HAS SPOKEN, WE ARE GOING LEFT!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ??? I WANT TO A REFUND THIS IS OBVIOUSLY A CONSPIRACY!
+
+<<BlankSpeaker>>
+<<AddParagraph The Detectives are back to arguing as they head toward the path on the left.
+<<AddParagraph The Hobo is smiling, a bit dumbfounded at the chaotic pair.
+
+<<AddOption Is this really mag-" "market_Hobo
+
+:: market_Hobo [nobr]
+<<SetSpeaker "Hobo
+<<AddParagraph //*wink*//
+
+<<SetSpeaker $client_name>>
+<<AddParagraph And is this really the right way to the market?
+
+<<BlankSpeaker>>
+<<AddParagraph At that, Cannelé and Nomnom turn around but the Hobo is nowhere to be seen.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph ?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ??
+
+<<SetSpeaker $client_name>>
+<<AddParagraph ???
+<<AddParagraph What just happened?
+
+<<BlankSpeaker>>
+<<AddParagraph Philibert the Cat draws a wide, troubling smile, turns around and disappears.
+
+<<AddOption Did I just dream this whole thing?" "market_WTF
+
+
+:: market_WTF [nobr]
+
+<<SetSpeaker "Nomnom
+<<AddParagraph But the Hoboolean Coin…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph … Is right here?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WAIT A MINUTE!
+<<AddParagraph WHY WOULD ''YOU'' GET TO KEEP THE MAGIC COIN?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph BECAUSE?? I CAN'T ENTRUST IT TO A COMPLETE IMBECILE??
+
+<<SetSpeaker "Nomnom
+<<AddParagraph DID YOU LOOK INTO A MIRROR RECENTLY?
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I…
+
+<<AddOption Take a deep breath." "market_CoinGuardian
+
+
+:: market_CoinGuardian [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I will keep the coin.
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph …
+
+<<SetSpeaker "Nomnom
+<<AddParagraph This sounds almost… reasonable.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé shudders.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Let's…
+<<AddParagraph Let's do this, Truth Keeper.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //This is probably a mistake//
+<<AddParagraph //But if this can buy me precious seconds of quiet…//
+
+<<AddOption I'll do it!!!" "market_Gasp
+
+
+:: market_Gasp [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom are surprised by this sudden burst of energy.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Hey! That's the spirit!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Now, let's go!
+
+<<if $market_path === "left
+<<AddOption Take the left path" "market_LeftPath
+<</if>>
+
+<<if $market_path === "right
+<<AddOption Take the right path" "market_RightPath
+<</if>>
+
+:: market_LeftPath [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph The path on the left takes a sharp turn.
+<<AddParagraph The street is indeed narrow, but it is well-lit and the pavement is even.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I can just //feel// it: this is the wrong way.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph you can't feel ''shit'', if we had followed the other road we would have ''NEVER'' made it to the market.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph This just doesn't feel right…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Yeah, no kidding, we are on the LEFT PATH?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph One day, murder will be legal and-
+
+<<BlankSpeaker>>
+<<AddParagraph After a couple more turns, a sign says:
+<<BlankSpeaker>>
+<<AddParagraph ''This way to the market''
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ''*COUGH*''
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Well, I guess at least //something// has to be going well.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé's face morphed into a smug grin.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //I kinda wanna punch Cannelé's face right now…//
+
+<<SetSpeaker "Nomnom
+<<AddParagraph If you keep that smile up I'll punch it right out of your face.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //… Agreeing with Nomnom also feels terrible//
+<<AddParagraph //I think I'm going to faint.//
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé keeps silent-bragging as the others ignore them.
+
+<<BlankSpeaker>>
+<<AddParagraph Finally, the group arrives close to a big, open market.
+<<AddParagraph Right at the entrance, a man is fumbling around.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph That guy…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph … Is suspicious.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Maybe he is a criminal, lurking in broad daylight!
+
+<<BlankSpeaker>>
+<<AddParagraph The man wears an unmistakable uniform.
+<<AddParagraph He probably… isn't a criminal.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph A ''dangerous'' criminal…
+
+<<AddOption Wait… I recognize that man!!!" "market_PoliceOfficer
+
+
+
+:: market_RightPath [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph The group takes the path on the right.
+<<AddParagraph Nomnom is humming enthusiastically while Cannelé sulks.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //At least, they're not arguing anymore//
+
+<<BlankSpeaker>>
+<<AddParagraph The road connects to a big, open plaza.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph This just //feels// like the right path.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé rolls their eyes.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph The Hoboolean Coin is a sham!!
+<<AddParagraph This entire world is against me.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Quit your whining and just enjoy the walk
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Yeah, I'll enjoy ''RUINING YOUR GODDAMN LIFE''
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //I jinxed it.//
+<<AddParagraph //I fucking jinxed it.//
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom keep arguing until they reach the extremity of the plaza.
+<<AddParagraph In the centre of the area, a big fountain is adorned with statues
+<<AddParagraph A marble plate states the name of the place
+<<AddParagraph ''Harry Youlost Plaza''
+<<AddParagraph Two streets emerge from the plaza: one going straight ahead and the other veering left.
+
+<<AddParagraph The two detectives turn around, expectantly.
+
+
+<<AddOption Take the Hoboolean Coin out." "market_Crossroads
+
+
+:: market_Crossroads [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph //I am terrified of the fact that I can communicate with them now.//
+<<AddParagraph So? Who is Faces, who is Tails?
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph I PICK TAILS!
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom glare at each other.
+<<AddParagraph None of them is budging.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //This can't be happening to me.//
+<<AddParagraph //My karma truly is fucked..//
+
+<<AddOption Sigh" "market_Crossroads2
+
+
+
+:: market_Crossroads2 [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph Should we just…
+<<AddParagraph Flip a coin to decide who gets Tails?
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph THEN I PICK FACES!
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph BITCH???
+
+<<BlankSpeaker>>
+<<AddParagraph They seem like they're about to start fighting.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Ok, I will just flip this one myself or this is never going to end.
+<<AddParagraph Both of you, tell me a number.
+<<AddParagraph //The lowest number gets Faces.//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph 753
+
+<<SetSpeaker "Nomnom
+<<AddParagraph 42
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Nomnom picked the smaller number so they get to pick Faces for the throw that will decide who will get to pick Tails.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Then 4!!!!!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph This…
+<<AddParagraph This isn't how this works, I'm sorry.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph AH!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Whatever, just throw it.
+
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin is thrown in the air.
+<<AddParagraph It danses around, flicking between the fancy T and F before falling down.
+
+
+<<AddOption Faces" "market_Faces
+<<AddOption Tails" "market_Tails
+
+
+:: market_Faces [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin lands on Faces.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Nomnom//
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom lets escape a shout of victory.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph THIS COIN HATES ME??? LET'S HAVE A REMATCH
+
+<<SetSpeaker "Nomnom
+<<AddParagraph YOU SORE LOSER!! I WAS CHOSEN BY THE HOBOOLEAN!!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph This means that Nomnom picks Tails in the next throw.
+<<AddParagraph Here goes…
+
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin is thrown in the air.
+<<AddParagraph It danses around, flicking between the fancy T and F before falling down.
+
+<<AddOption Faces" "market_CrossC1
+<<AddOption Tails" "market_CrossN1
+
+
+:: market_Tails [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin lands on Tails.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Cannelé//
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé starts dancing, victorious.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph VICTORY AT LAST!!!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph THIS ISN'T OVER YET
+
+<<SetSpeaker $client_name>>
+<<AddParagraph This means that Cannelé picks Tails in the next throw.
+<<AddParagraph Here goes…
+
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin is thrown in the air.
+<<AddParagraph It danses around, flicking between the fancy T and F before falling down.
+
+<<AddOption Faces" "market_CrossN2
+<<AddOption Tails" "market_CrossC2
+
+
+:: market_CrossC1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin lands on Faces.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Cannelé//
+
+<<AddOption …" "market_CrossLeft
+
+:: market_CrossC2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin lands on Tails.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Cannelé//
+
+<<AddOption …" "market_CrossLeft
+
+
+:: market_CrossN1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin lands on Tails.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Nomnom//
+
+<<AddOption …" "market_CrossAhead
+
+
+:: market_CrossN2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The Hoboolean coin lands on Faces.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Nomnom//
+
+<<AddOption …" "market_CrossAhead
+
+:: market_CrossLeft [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The path takes you on the left, and merge with another road.
+<<AddParagraph After a couple more turns, a sign says:
+<<BlankSpeaker>>
+<<AddParagraph ''This way to the market''
+
+<<BlankSpeaker>>
+<<AddParagraph By then, everyone has realized that they had found their way to the road Cannelé had originally wanted to take after the meeting with the Hobo.
+<<AddParagraph Cannelé is grinning obnoxiously.
+<<AddParagraph The other two decide to ignore them.
+
+<<AddOption //I hope we will get there soon…//" "market_CrossMarket
+
+
+:: market_CrossAhead [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The group continues straight ahead.
+
+<<BlankSpeaker>>
+<<AddParagraph It soon becomes obvious that this street is leading nowhere.
+<<AddParagraph Nomnom, in denial keeps grumbling.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph It MUST be around here
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //SIGH//
+
+
+<<AddOption //I hope we will get there soon…//" "market_CrossLost1
+
+:: market_CrossLost1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The road turns right
+<<AddParagraph Then left.
+<<AddParagraph It loops.
+<<AddParagraph Then turns again.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I can't take this anymore
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I KNOW WHERE THIS LEADS OK?
+
+
+<<AddOption How long… Have you guys been in this city?" "market_CrossLost2
+
+:: market_CrossLost2 [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph How do we keep getting lost??
+<<AddParagraph In the CITY CENTRE???
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom have the decence to look sheepish, apologetic.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph That's kinda this dumbass' fault we're lost here…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph THIS IS THE RIGHT PATH!!!
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom confidently takes a turn.
+
+<<AddOption This can't be…" "market_CrossLost3
+
+:: market_CrossLost3 [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph This…
+<<AddParagraph This is the Harry Youlost Plaza…
+<<AddParagraph Again.
+
+<<BlankSpeaker>>
+<<AddParagraph The marble nameplate and the fountain are still there.
+<<AddParagraph Exactly the same as they were 15 minutes ago.
+<<AddParagraph And 40 minutes before.
+<<AddParagraph And 1h15 even before.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph That's it! This is going nowhere.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph My time to shine!
+
+<<AddOption Follow Cannelé on the path veering left" "market_CrossLeft
+
+:: market_CrossMarket [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph After what seems like forever, the group eventually arrives close to a big, open market.
+<<AddParagraph Right at the entrance, a man is fumbling around.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph That guy…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph … Is suspicious.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Maybe he is a criminal, lurking in broad daylight!
+
+<<BlankSpeaker>>
+<<AddParagraph The man wears an unmistakable uniform.
+<<AddParagraph He probably… isn't a criminal.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph A ''dangerous'' criminal…
+
+<<AddOption Wait… I recognize that man!!!" "market_PoliceOfficer
+
+
+:: market_PoliceOfficer [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph That's the police officer! The one I talked to this morning!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Ugh, a police officer.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Well that explains the bad vibes…
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph HEY! YOU!! WE HAVE QUESTIONS TO ASK!!!
+
+<<BlankSpeaker>>
+<<AddParagraph The police officer turns around and his eyes widen.
+
+
+/* His entire behavior changed, he is on his guard. He recognized $client_name and doesn't want to engage conversation. */
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Have you ever seen this guy right here?
+
+<<SetSpeaker "Police Officer
+<<AddParagraph Um, no I don't think I've had the pleasure.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Sir??
+<<AddParagraph We met this morning!
+<<AddParagraph You told me your grandma was sick and you had to go when I came to you for help!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Oh no! Officer, is your grandma feeling better now?
+
+<<BlankSpeaker>>
+<<AddParagraph The tag on his uniform states: Pöl aufHißer
+
+<<SetSpeaker "Pöl aufHißer
+<<AddParagraph Yes? Yes! Granny Michelle is doing uh, amazing!
+<<AddParagraph Thank you for your concern.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé pats his shoulder.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Then, all is good, all is good.
+<<AddParagraph Now, are you sure you've never seen-
+
+<<SetSpeaker "Pöl aufHißer
+<<AddParagraph UH!
+<<AddParagraph AH!!
+<<AddParagraph OH!!!
+
+<<BlankSpeaker>>
+<<AddParagraph Officer aufHißer turns around. There is nothing, but an empty street.
+
+<<SetSpeaker "Pöl aufHißer
+<<AddParagraph My superior! My boss is calling for me!! Apologies gentlefolks, duty calls!
+
+<<BlankSpeaker>>
+<<AddParagraph The street is still empty, no boss to be seen, but Officer aufHißer runs as if his landlord was at his heels.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Well that was…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Not very police-y of him
+
+<<SetSpeaker "Nomnom
+<<AddParagraph AGAB, guys. AGAB.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph ?
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom sighs and roll their eyes, exasperated.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph All Guards Are a Bit useless.
+
+<<BlankSpeaker>>
+<<AddParagraph For once, Cannelé nods in agreement.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Truly. A bunch of incompetent boars.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //So… they CAN agree… on anti-governmental claims? An alliance against a common enemy?//
+<<AddParagraph //That's… a good start.//
+<<AddParagraph //I guess?//
+
+<<BlankSpeaker>>
+<<AddParagraph Following the running officer, the group reaches a marketplace.
+<<AddParagraph It's crowded, the vendors are busy with their stands.
+<<AddParagraph Under a tent on the left, a group of people seem to be playing a card game.
+<<AddParagraph A group of policemen is gathered on the other side of the market. They seem a tad anxious.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I'll start asking the people over there.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Then, in order to stay as humanely far away from you as possible, I'll go ask that bunch there.
+<<AddParagraph Let's meet here in an hour.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom looks over to the card players, and sighs.
+/* #NOMNOM */
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Don't, just… Don't do this.
+
+<<BlankSpeaker>>
+<<AddParagraph `"Nomnom turns away from Cannelé and whispers to "+$client_name+"."`>>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph If you go with that idiot, just… be careful, ok?
+<<AddParagraph Ugh, this is a recipe for disaster.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom mumbles as they leave. Cannelé is already on their way to the table.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Does this mean… Detective Nomnom //knows// something bad is going to happen…//
+<<AddParagraph //But they won't do… anything… to prevent it?//
+<<AddParagraph //I might not remember you yet but…//
+<<AddParagraph //''Mommy, help me.''//
+
+
+<<set $market_vendors to false>>
+<<set $market_gamblers to false>>
+<<set $market_police to false>>
+
+<<AddOption Follow Nomnom" "market_Vendors
+<<AddOption Run after Cannelé" "market_Gamblers
+<<AddOption Snoop around the police officers" "market_Police
+
+
+
+
+
+
+
+
+:: market_Gamblers [nobr]
+<<set $market_gamblers to true>>
+<<BlankSpeaker>>
+<<AddParagraph Cannelé strolls over the table where four people are sitting.
+<<AddParagraph There is money on the table.
+<<AddParagraph Cannelé's eyes glint dangerously.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Good day everyone, what's on the table today?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé takes a seat. The gesture is natural, practiced.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Hmmm… Money? And cards too, I guess?
+<<AddParagraph //Am I more observant than the detective I hired?//
+<<AddParagraph //I will never regain my memory, will I…//
+
+<<SetSpeaker "Gambler A
+<<AddParagraph Detective! Haven't seen you in a while!
+
+<<SetSpeaker "Gambler B
+<<AddParagraph At least a good three days, it's been! You even came here with a friend.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé looks over anxiously.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Hahaha, what are you all talking about, I have never been here in my ''life''.
+
+<<BlankSpeaker>>
+<<AddParagraph The entire table laughs as the sense of malaise deepens.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Detective? What are you doing?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Oh nothing, just a good old game of Hanged Poker-faced Maid!
+
+<<BlankSpeaker>>
+<<AddParagraph One of the ladies at the table hand over the worn out deck of cards to Cannelé, who starts shuffling.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Wanna try your hand? Be careful, I'm really good at this, I might ruin you.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph No, I'm, uh, good but? Detective?
+<<AddParagraph What happened to the investigation?
+
+<<SetSpeaker "Gambler C
+<<AddParagraph PLACE YOUR BETS!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph FEELING LUCKY TODAY, I'M BETTING IT ALL!
+
+<<SetSpeaker $client_name>>
+<<SetSpeaker $client_name>>
+<<AddParagraph //''This'' was what Detective Nomnom had warned me about…//
+<<AddParagraph //And they let me get stuck into this hellish situation??//
+<<AddParagraph //This can't get any worse.//
+
+<<BlankSpeaker>>
+<<AddParagraph Everyone cheers as Cannelé reaches into their coat.
+<<AddParagraph Cannelé keeps rummaging through their pockets.
+<<AddParagraph …
+<<AddParagraph … …
+<<AddParagraph Cannelé turns around.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I have a teeny ''tiny'' favor to ask you.
+<<AddParagraph Could you lend me the Hoboolean Coin?
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Fuck. It just got worse.//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I promise I'll give it back soon, with interest!!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph DETECTIVE??
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Please, please, please, I'll give you 1% of my winnings.
+<<AddParagraph Pretty please?
+
+<<AddOption Reluctanly hand over the coin" "market_GamblingCoin
+<<AddOption Vigorously refuse" "market_NoCoin
+
+
+:: market_GamblingCoin [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I know I am going to regret this…
+<<AddParagraph //… but I am also morbidly curious about this Hanged Poker-faced Maid game.//
+
+<<AddOption …" "market_Gambling
+
+
+:: market_NoCoin [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph DETECTIVE!! I can't give you the coin??
+<<AddParagraph //It's the only thing protecting my peace of mind when you are with Nomnom!!//
+
+<<BlankSpeaker>>
+<<AddParagraph Cannele's expression turns extremely serious. Their voice is now but a whisper.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I swear, this is for the investigation.
+<<AddParagraph I have a great feeling about this.
+<<AddParagraph So… Please?
+
+<<AddOption Very, ''extremely'', __absolutely__ relunctanctly hand over the coin." "market_Gambling
+
+
+
+:: market_Gambling [nobr]
+
+<<SetSpeaker "Cannelé
+<<AddParagraph This might look like a simple 50cts coins…
+<<AddParagraph But it was actually enchanted by a very powerful magic-user from the Towers who gave it to me as a reward for my absolutely ''brilliant'' investigation skills.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé greedily grabs the coin and place it on the table.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I can guarantee, trust me!
+<<AddParagraph Have I ever mislead any of you?
+
+<<BlankSpeaker>>
+<<AddParagraph Everyone decides to ignore this last quip.
+
+<<SetSpeaker "Gambler A
+<<AddParagraph Right! Whose turn is it? Who won the last game?
+
+<<SetSpeaker "Gambler B
+<<AddParagraph Wasn't it you?
+
+<<SetSpeaker "Gambler C
+<<AddParagraph Naaah, I'm pretty sure it was-
+<<AddParagraph Wait.
+<<AddParagraph Who won yesterday's game?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé snatches the coin back.
+
+<<SetSpeaker "Gambler A
+<<AddParagraph Yesterday's game…
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Don't leave me hanging like this, who was it?
+
+<<SetSpeaker "Gambler B
+<<AddParagraph Maybe we didn't play yesterday?
+
+<<SetSpeaker "Gambler C
+<<AddParagraph Must be it.
+
+<<BlankSpeaker>>
+<<AddParagraph They all shrug it off, laughing about old age and the likes.
+<<AddParagraph Then, they turn to Cannelé expectantly.
+
+<<SetSpeaker "Gambler D
+<<AddParagraph Then let's have the Detective start today, it's been a while since we've seen them.
+
+<<SetSpeaker "Gambler B
+<<AddParagraph Sounds fair!
+
+<<SetSpeaker "Gambler A
+<<AddParagraph Bet your fancy coin, Detective!
+
+<<SetSpeaker "Gambler C
+<<AddParagraph I do need some truth in my life, a truth coin is exactly what I need!
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé suddenly stands up.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I just remembered!
+<<AddParagraph I am in the middle of work
+<<AddParagraph With my //client.//
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Oh, NOW they remember me…//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Gotta bail, I'll be back tomorrow!
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Cannelé//
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé drags you far from the gambling tables.
+
+<<AddOption Well that was close…" "market_GamblingEnd
+
+
+:: market_GamblingEnd [nobr]
+
+<<SetSpeaker "Cannelé
+<<AddParagraph I know right?
+<<AddParagraph Those geezers, they think I'm not used to their tactics by now…
+<<AddParagraph But I'm detective! I won't fall for their schemes!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph What do you mean…
+<<AddParagraph Schemes?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph When they start bringing up their old age and acting forgetful…
+<<AddParagraph I know they're out to scam me!
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé shakes their head, confidence overflowing
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Tut tut, tut! I won't fall for their trap!
+<<AddParagraph The coin is mine.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Well, technically-
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé has already stalked off.
+
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //Minus one point for Cannelé//
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Conversation with this person is absolutely impossible.//
+<<AddParagraph //I think I'm having a headache.//
+<<AddParagraph //For now, let's just get away from this gambling freak.//
+
+
+<<if $market_vendors is false>>
+<<AddOption Find Nomnom" "market_Vendors
+<</if>>
+
+<<if $market_police is false>>
+<<AddOption Sneak close to the group of officers" "market_Police
+<</if>>
+
+<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
+  <<AddOption Regroup" "market_Addict
+<</if>>
+
+
+:: market_Police [nobr]
+<<set $market_police to true>>
+
+<<BlankSpeaker>>
+<<AddParagraph On the opposite side of the market, policemen are huddled together.
+<<AddParagraph They're are talking in a low voice, as if they didn't want to be heard
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Let's try to get closer//
+
+<<BlankSpeaker>>
+<<AddParagraph Some words can be heard from their conversation, but it's very hushed.
+
+<<SetSpeaker "Police Officers
+<<AddParagraph … Fleurs d'Ame… Marché…
+
+<<AddOption Go closer" "market_Police1
+
+
+:: market_Police1 [nobr]
+<<set $market_police to true>>
+
+<<BlankSpeaker>>
+<<AddParagraph The conversation can be heard more clearly.
+
+
+<<SetSpeaker "Police Officer A
+<<AddParagraph The whole district's been in havoc since yesterday.
+
+<<SetSpeaker "Police Officer B
+<<AddParagraph There's been a problem with the doses, why does it keep happening…
+
+<<SetSpeaker "Police Officer C
+<<AddParagraph The investigation is almost over, soon we can go back up and forget about this incident.
+
+<<BlankSpeaker>>
+<<AddParagraph During the entire exchange, a familiar officer has been looking around. His gaze stop suddenly.
+
+<<SetSpeaker "Pöl aufHißer
+<<AddParagraph YOU! WHAT DO YOU THINK YOU'RE DOING?
+<<AddParagraph I BETTER NOT SEE YOU AROUND ANYMORE!!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Time to scram!//
+
+<<if $market_vendors is false>>
+<<AddOption Find Nomnom" "market_Vendors
+<</if>>
+
+<<if $market_gamblers is false>>
+<<AddOption Find Cannelé" "market_Gamblers
+<</if>>
+
+<<if $market_vendors is true && $market_gamblers is true && $market_police is true>>
+  <<AddOption Regroup" "market_Addict
+<</if>>
+
+
+:: market_Addict [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph An hour after splitting up, everyone meets at the entrance of the market.
+<<AddParagraph The three of them are sitting at a wobbling table, outside a small bistrot.
+
+<<SetSpeaker "Waiter
+<<AddParagraph What can I get you?
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I'll have a cup of t-
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph 3 cups of Spicy Cocoa.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //What does everyone have against tea??//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph And a plate of biscuits, please.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph No, make that one croissant
+
+<<SetSpeaker "Cannelé
+<<AddParagraph BITCH?
+
+<<SetSpeaker "Waiter
+<<AddParagraph Should I bring 3 cups of Spicy Cocoa, a plate of biscuits and a croissant?
+
+<<BlankSpeaker>>
+<<AddParagraph This would've been the best solution but…
+
+<<SetSpeaker "Nomnom
+<<AddParagraph As if we could afford that??
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Do we look like royalty to you maybe, Sir??
+
+<<SetSpeaker $client_name>>
+<<AddParagraph We will only have 3 cups of cocoa, please
+
+<<BlankSpeaker>>
+<<AddParagraph The waiter nods with a relieved smile and hurries back inside.
+
+<<BlankSpeaker>>
+<<AddParagraph As they prepare to go over what they discovered at the market, they hear a sound.
+
+<<SetSpeaker "????
+<<AddParagraph Hey!
+<<AddParagraph Hey! You!
+
+<<BlankSpeaker>>
+<<AddParagraph No one pays attention to the yells.
+
+<<SetSpeaker "????
+<<AddParagraph The group of three weird people at the table!
+<<AddParagraph I'm talking to you
+
+<<BlankSpeaker>>
+<<AddParagraph Suddenly, a person appears in front of the table.
+<<AddParagraph The stranger is tall, very tall and wearing clothes too slightly too small for them.
+<<AddParagraph Their smile is sheepish and their eyes are red and puffy.
+
+<<SetSpeaker "????
+<<AddParagraph Hi, my name is Richie and-
+
+<<BlankSpeaker>>
+<<AddParagraph  "@@.precog;The man's clothes are tattered, <span class='Precog' data-speed='1' data-random='0' data-value='as if he had been wearing the same outfit for a long time :'> </span> this Richie probably <span class='Precog' data-speed='4' data-random='1' data-value='rich.'></span>@@
+
+
+<<BlankSpeaker>>
+<<AddParagraph Richie bends down and lowers their voice.
+
+<<SetSpeaker "Richie
+<<AddParagraph It might sound weird but I saw y'all go around the market asking questions.
+<<AddParagraph Very brave of you to do that right under the nose of those cops.
+
+<<BlankSpeaker>>
+<<AddParagraph Richie's looks around once, twice and bends down again.
+
+<<SetSpeaker "Richie
+<<AddParagraph So?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph So ?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph What are you on, man?
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I am so confused right now.
+
+<<SetSpeaker "Richie
+<<AddParagraph Did you find any info on the Fleurries?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph FURRIES ?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Oh, not again…
+
+<<SetSpeaker "Richie
+<<AddParagraph No? I mean the Fleurries!
+<<AddParagraph The Âmoc-Havoc, the gifty-pennies, the shickshacks, the florus-pocus?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph ?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ??
+
+<<SetSpeaker $client_name>>
+<<AddParagraph ???
+
+<<BlankSpeaker>>
+<<AddParagraph Richie seems exasperated but to his credit, he doesn't give up.
+
+<<SetSpeaker "Richie
+<<AddParagraph THE FLEURS D'AME! I MEAN THE FLEURS D'AME!
+<<AddParagraph The market's been in shambles since yesterday. Me and my friends are getting desperate there…
+<<AddParagraph So? Did you manage to get any? Care to share with a new pal?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom look at each other, then at the strange individual.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph What the fuck is this?
+
+<<BlankSpeaker>>
+<<AddParagraph Richie is surprised.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I think he is a complete nutcase?
+<<AddParagraph Why would we have any Fleur d'Ame?? That shit's rare.
+
+<<BlankSpeaker>>
+<<AddParagraph Richie starts sweating.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph And expensive as fuck.
+
+<<BlankSpeaker>>
+<<AddParagraph Richie starts to panic.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph And government controlled??
+
+<<BlankSpeaker>>
+<<AddParagraph Richie can't contain a scream.
+
+<<SetSpeaker "Richie
+<<AddParagraph FORGET IT! MY MISTAKE
+
+<<BlankSpeaker>>
+<<AddParagraph Richie takes a step back
+
+<<SetSpeaker "Richie
+<<AddParagraph Just…
+
+<<BlankSpeaker>>
+<<AddParagraph Richie takes another step back
+
+<<SetSpeaker "Richie
+<<AddParagraph You've never seen me, OK?
+
+<<BlankSpeaker>>
+<<AddParagraph Richie stops, for a moment.
+
+<<SetSpeaker "Richie
+<<AddParagraph We're pals right?
+
+<<BlankSpeaker>>
+<<AddParagraph Richie doesn't wait for an answer and runs away.
+
+/* cannelé */
+
+<<AddOption Did this person just mistake us for illegal Fleur dealers?" "market_Debrief
+
+
+:: market_Debrief [nobr]
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I mean…
+<<AddParagraph You two might look shady enough…
+<<AddParagraph But me???
+
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom are appalled.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Anyway, ''jokes'' aside.
+<<AddParagraph Let's summarize what we learnt at the market.
+
+
+<<BlankSpeaker>>
+<<AddParagraph They are briefly interrupted by the waiter, who is holding a tray with three tall cups.
+
+
+<<SetSpeaker "Waiter
+<<AddParagraph Here are your three Spicy Cocoa.
+
+<<BlankSpeaker>>
+<<AddParagraph The pair of detectives jump on their drink and start gulping loudly.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph ''*GULP*''
+<<AddParagraph
+
+/* complete when market is entirely finished */
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ''*GULP*''
+<<AddParagraph
+
+
+<<SetSpeaker $client_name>>
+<<AddParagraph …
+
+<<BlankSpeaker>>
+<<AddParagraph The cup is filled with a steaming drink that looks almost orange in the sunlight.
+
+
+<<SetSpeaker $client_name>>
+<<AddParagraph This is hot cocoa, right?
+<<AddParagraph The Spicy in the name is just there to make it look fancy, right?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph It's not spicy, just a dash of cinammon, to make it taste incredible.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Ok, good. I am terribly weak to spices
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Nothing to worry about!
+
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Well, it can't hurt to try//
+<<AddParagraph ''…gulp?''
+
+<<SetSpeaker "Cannelé
+<<AddParagraph If we make the best coffee in town, then this has to be the best cup of cocoa you can get around!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph ''*COUGH COUGH COUGH*''
+
+<<SetSpeaker "Nomnom
+<<AddParagraph So? Where were we?
+<<AddParagraph Ah, right …
+
+/* cannelé */
+
+
+/* #NOMNOM */
+/* GIFT + ESCAPE */
+
+
+:: docks [nobr]
+<<BlankSpeaker>>
+<<AddParagraph When the group eventually stops running, they are panting, out of breath.
+<<AddParagraph They also quickly come to realize that they're absolutely lost.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph We are absolutely lost.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //It wouldn't be the first time today...//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph More importantly.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I LOST MY SHOE?!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph No, WE HAVE A GUN!
+
+<<AddOption This situation... scares me" "aGunAndNoShoe
+
+
+:: aGunAndNoShoe [nobr]
+<<BlankSpeaker>>
+<<AddParagraph They all stare at each other, then at the gun in Cannelé's hand and finally at Nomnom's bare left foot.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph How is it that things just keep getting worse?
+<<AddParagraph //And I keep regretting hiring these... detectives...//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph To be fair, it is entirely Nomnom's fault.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WHAT ? YOU WERE GOING TO GET SHOT BY A POLICE OFFICER I SAVED YOUR ASS AND THAT'S WHAT I GET?
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Well, maybe you're lying who knows...
+
+<<BlankSpeaker>>
+<<AddParagraph This is going to escalate.
+<<AddParagraph A loud cough interrupts the arguing pair.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I would like to remind you two that :
+<<AddParagraph 1. We are lost
+<<AddParagraph ''Because of you.''
+<<AddParagraph 2. Cannelé, give me the gun.
+
+<<BlankSpeaker>>
+<<AddParagraph Surprised by the suddenly commanding tone, Cannelé hands over the weapon to the probably only sensible person in the group.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph 3. WE. ARE. LOST.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom look down, chastised.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //This feels... nice//
+
+<<AddOption What should we do, now?" "docksWhatNext
+
+
+:: docksWhatNext [nobr]
+
+<<SetSpeaker "Cannelé
+<<AddParagraph We should find our way back
+<<AddParagraph But let's avoid the marketplace, shall we?
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom mutters, mimicking Cannelé.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Gneugneugneu let's avoid the marketplace, what are you a //genius//?
+
+<<BlankSpeaker>>
+<<AddParagraph The group pauses and take a look around them.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Isn't this Falaisant's harbor?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I mean...
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Probably?
+
+<<BlankSpeaker>>
+<<AddParagraph They're right by the city's docks.
+<<AddParagraph Moored to the quay, a ship seems to take all the space in the marina.
+<<AddParagraph On the wharf, a crowd is lined up, waiting. Some angry shouts resound. They have probably been standing there for a while.
+<<AddParagraph Half hidden behind a dark corner of the pier, wooden creates are piled up in a messy jumble. They feel somehow... familiar.
+
+
+<<set $docksShip to false>>
+<<set $docksLine to false>>
+<<set $docksCrates to false>>
+
+<<AddOption Observe the ship" "docksShip
+<<AddOption Go see what's happening on the quay" "docksLine
+<<AddOption Check out the crates" "docksCrates
+
+
+:: docksShip [nobr]
+<<set $docksShip to true>>
+<<BlankSpeaker>>
+<<AddParagraph The vessel was imposing, 300 people could line up and barely meet both ends.
+<<AddParagraph The reddish hull, the wide decks and the three masts paint a striking picture in the busy pier.
+<<AddParagraph Delicate letters, carved in the wood, read //The Barking Glass//.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Okay, it's just a boat. Next.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom dismisses the sight and turns around as Cannelé's gaze lingers.
+
+<<AddOption It's really just a ship, uh" "docksShoo
+<<AddOption Stay a moment with Cannelé" "docksCannelé
+
+
+:: docksCannelé [nobr]
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //Three points for Cannelé//
+<<AddScore "Cannelé" 3>>
+
+<<SetSpeaker "Cannelé
+<<AddParagraph She is beautiful...
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé's voice is full of something... Almost longing.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Do y-
+
+<<AddOption Before you can finish your sentence-" "docksShoo
+
+:: docksShoo [nobr]
+<<BlankSpeaker>>
+<<AddParagraph ''*WHAM*''
+
+<<BlankSpeaker>>
+<<AddParagraph A woman dressed in a sailor's uniform runs into Cannelé.
+
+<<SetSpeaker "Sailor
+<<AddParagraph Don't stay here! We're busy as it is, no need for pesky tourists to gawk at the boat.
+
+<<BlankSpeaker>>
+<<AddParagraph The sailor shoos you away from the ship.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Well... something is definitely weird around here...
+
+
+<<if $docksLine is false>>
+<<AddOption Go see what's happening on the quay" "docksLine
+<</if>>
+
+<<if $docksCrates is false>>
+<<AddOption Check the crates out" "docksCrates
+<</if>>
+
+<<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+  <<AddOption Regroup" "docksRegroup
+<</if>>
+
+
+:: docksLine [nobr]
+<<set $docksLine to true>>
+
+<<BlankSpeaker>>
+<<AddParagraph The group reaches the crowd.
+<<AddParagraph There must be a couple hundreds on people waiting.
+<<AddParagraph They're of all genders and of all ages.
+<<AddParagraph As if to profit from the never ending queue, street merchants try to sell food and beverages, as performers try to impress kids with tricks.
+
+<<set $lineCrowd to false>>
+<<set $lineMerchant to false>>
+<<set $lineEntertainer to false>>
+
+<<AddOption Talk with the people in the queue" "docksCrowd
+<<AddOption Buy something from the merchant" "docksMerchant
+<<AddOption Watch the performers" "docksEntertainer
+
+:: docksCrowd [nobr]
+<<set $lineCrowd to true>>
+<<BlankSpeaker>>
+<<AddParagraph Cannelé wears their prettiest smile when they stop asking various people what is going on.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I can smile too???
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Please don't.
+
+<<BlankSpeaker>>
+<<AddParagraph Too late.
+<<AddParagraph A kid has already started crying.
+<<AddParagraph Cannelé snorts as Nomnom sheepishly regains their composure.
+<<AddParagraph Cannelé approaches the mother of the crying child.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Ma'am, may I ask, what is it everyone here is waiting for?
+
+<<SetSpeaker "Distressed Lady
+<<AddParagraph Oh, the boat has been stuck since yesterday night.
+<<AddParagraph We were supposed to leave port this morning, but something happened and it froze the entire traffic.
+
+<<BlankSpeaker>>
+<<AddParagraph A man behind them turns around and joins in on the conversation.
+
+<<SetSpeaker "Impatient Man
+<<AddParagraph Heard it had something to do with the police too. I really need to go back.
+<<AddParagraph They better let us leave soon.
+
+<<set $crowdPolice to false>>
+<<set $crowdWhereTo to false>>
+<<set $crowdStuck to false>>
+
+<<AddOption What do you mean... stuck?" "crowdStuck
+<<AddOption Where is this ship going?" "crowdWhereTo
+<<AddOption The police?" "crowdPolice
+
+
+:: crowdStuck [nobr]
+<<set $crowdStuck to true>>
+<<SetSpeaker "Distressed Lady
+<<AddParagraph It means, it's uh... stuck?
+
+<<SetSpeaker "Impatient Man
+<<AddParagraph No boat coming in or out of this damn harbor, you get me?
+
+
+<<if $crowdStuck is false>>
+<<AddOption What do you mean... stuck?" "crowdStuck
+<</if>>
+
+<<if $crowdWhereTo is false>>
+    <<AddOption Where is this ship going?" "crowdWhereTo
+<</if>>
+
+<<if $crowdPolice is false>>
+    <<AddOption The police?" "crowdPolice
+<</if>>
+
+<<if $crowdPolice is true && $crowdWhereTo is true && $crowdStuck is true>>
+    <<if $lineCrowd is false>>
+    <<AddOption Talk with the people in the queue" "docksCrowd
+    <</if>>
+
+    <<if $lineMerchant is false>>
+    <<AddOption Buy something from the merchant" "docksMerchant
+    <</if>>
+
+    <<if $lineEntertainer is false>>
+    <<AddOption Watch the performers" "docksEntertainer
+    <</if>>
+
+    <<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
+        <<if $docksShip is false>>
+        <<AddOption Observe the ship" "docksShip
+        <</if>>
+
+        <<if $docksCrates is false>>
+        <<AddOption Check the crates out" "docksCrates
+        <</if>>
+
+        <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+        <<AddOption Regroup" "docksRegroup
+        <</if>>
+    <</if>>
+<</if>>
+
+:: crowdWhereTo [nobr]
+<<set $crowdWhereTo to true>>
+<<SetSpeaker "Distressed Lady
+<<AddParagraph We are going back to Nephelen.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Uhm, yes?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Nephelen, you say?
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom look at you.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I can't help y'all on this one.
+
+<<SetSpeaker "Impatient Man
+<<AddParagraph What?? You've never heard of Nephelen?? How is that even possible?
+
+<<BlankSpeaker>>
+<<AddParagraph The lady nods, just as appalled as he is.
+
+<<SetSpeaker "Impatient Man
+<<AddParagraph Nephelen is the city that's closest to Falaisant on this continent.
+<<AddParagraph //I really don't like those Falaisant kids.//
+
+<<BlankSpeaker>>
+<<AddParagraph A silence.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Shouldn't you two... know this... at the very least...
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph No comment.
+
+
+<<if $crowdStuck is false>>
+    <<AddOption What do you mean... stuck?" "crowdStuck
+<</if>>
+
+<<if $crowdWhereTo is false>>
+    <<AddOption Where is this ship going?" "crowdWhereTo
+<</if>>
+
+<<if $crowdPolice is false>>
+    <<AddOption The police?" "crowdPolice
+<</if>>
+
+<<if $crowdPolice is true && $crowdWhereTo is true && $crowdStuck is true>>
+    <<if $lineCrowd is false>>
+    <<AddOption Talk with the people in the queue" "docksCrowd
+    <</if>>
+
+    <<if $lineMerchant is false>>
+    <<AddOption Buy something from the merchant" "docksMerchant
+    <</if>>
+
+    <<if $lineEntertainer is false>>
+    <<AddOption Watch the performers" "docksEntertainer
+    <</if>>
+
+    <<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
+        <<if $docksShip is false>>
+        <<AddOption Observe the ship" "docksShip
+        <</if>>
+
+        <<if $docksCrates is false>>
+        <<AddOption Check the crates out" "docksCrates
+        <</if>>
+
+        <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+        <<AddOption Regroup" "docksRegroup
+        <</if>>
+    <</if>>
+<</if>>
+
+:: crowdPolice [nobr]
+<<set $crowdPolice to true>>
+<<SetSpeaker "Impatient Man
+<<AddParagraph Yes, the police.
+<<AddParagraph They've been all around, from here right to the market, I've heard.
+
+<<SetSpeaker "Distressed Lady
+<<AddParagraph They were here interrogating all of us this morning... how frightful.
+
+<<SetSpeaker "Impatient Man
+<<AddParagraph They brought in some people too.
+<<AddParagraph What a freaky city.
+
+<<SetSpeaker "Distressed Lady
+<<AddParagraph I just wished they'd let us go back...
+
+<<BlankSpeaker>>
+<<AddParagraph She pats her son's head, lost in thoughts.
+
+<<if $crowdStuck is false>>
+    <<AddOption What do you mean... stuck?" "crowdStuck
+<</if>>
+
+<<if $crowdWhereTo is false>>
+    <<AddOption Where is this ship going?" "crowdWhereTo
+<</if>>
+
+<<if $crowdPolice is false>>
+    <<AddOption The police?" "crowdPolice
+<</if>>
+
+<<if $crowdPolice is true && $crowdWhereTo is true && $crowdStuck is true>>
+    <<if $lineCrowd is false>>
+    <<AddOption Talk with the people in the queue" "docksCrowd
+    <</if>>
+
+    <<if $lineMerchant is false>>
+    <<AddOption Buy something from the merchant" "docksMerchant
+    <</if>>
+
+    <<if $lineEntertainer is false>>
+    <<AddOption Watch the performers" "docksEntertainer
+    <</if>>
+
+    <<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
+        <<if $docksShip is false>>
+        <<AddOption Observe the ship" "docksShip
+        <</if>>
+
+        <<if $docksCrates is false>>
+        <<AddOption Check the crates out" "docksCrates
+        <</if>>
+
+        <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+        <<AddOption Regroup" "docksRegroup
+        <</if>>
+    <</if>>
+<</if>>
+
+
+
+:: docksMerchant [nobr]
+<<set $lineMerchant to true>>
+<<BlankSpeaker>>
+<<AddParagraph Nomnom confidently strides to one of the many merchants.
+
+<<SetSpeaker "Street Vendor
+<<AddParagraph Hello, how can I help you?
+<<AddParagraph I have some sweet delicacies from Falaisant and hot wine to make your wait easier.
+
+<<BlankSpeaker>>
+<<AddParagraph In the vendor's cart, small cakes are lined up next to small, fuming cups.
+<<AddParagraph An affronted gasp escapes Cannelé's mouth.
+<<AddParagraph Nomnom is smiling smugly.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph 3 Cannelés, please.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph HOW DARE YOU??
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Cannelé? Uhm, they're right here and why would you want 3 of them, one is already such a hassle-
+
+<<SetSpeaker "Cannelé
+<<AddParagraph SILENCE!
+
+<<BlankSpeaker>>
+<<AddParagraph The merchant wears an awkward but amused expression as their attention jumps between the three unusual customers.
+
+<<SetSpeaker "Street Vendor
+<<AddParagraph Three Cannelés, is it? Be careful, this is the original recipe, it was cooked with a little bit of rum.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Excellent!
+
+<<SetSpeaker "Cannelé
+<<AddParagraph MURDERER
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //I'm probably... an adult, right?//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph AH! We don't have money! WE CAN'T BUY THEM!
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom's smile gets wider.
+<<AddParagraph They take off their remaining shoe, shake them areound and a single coin falls in their palm.
+<<AddParagraph Nomnom hands it over to the merchant.
+
+
+<<SetSpeaker "Street Vendor
+<<AddParagraph Thank you! Till next time young'uns!
+
+<<BlankSpeaker>>
+<<AddParagraph The seller leaves, happy about this deal.
+<<AddParagraph Nomnom distributes the cakes, not ignoring their fellow detective ''for once''.
+<<AddParagraph By then, Cannelé is positively seething.
+
+<<AddParagraph They kick Nomnom's shins and turn away.
+
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Go ahead, taste it
+<<AddParagraph This is what victory truly tastes like.
+
+<<AddOption Well, it does look good" "eatCannelé
+
+
+:: eatCannelé [nobr]
+<<BlankSpeaker>>
+<<AddParagraph They both take a bite in the cannelés.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph This is... really good.
+<<AddParagraph The sweetness blends very well with the bitter taste of the rum.
+<<AddParagraph The crispy caramelized shell contrasts nicely with the chewy inside.
+<<AddParagraph The alcohol is a bit unexpected but it's subtle and luscious...
+<<AddParagraph This..
+<<AddParagraph Is delicious...
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Told you it was good...
+
+<<BlankSpeaker>>
+<<AddParagraph Suddenly a wooden plate hit the back of Nomnom's head.
+<<AddParagraph They curse and turn around ready to yell at whoever attacked him.
+
+<<AddParagraph Cannelé stares back, sticks out their tongue.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph DIE, YOU OLD LOSER.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph HUDEHOIFHOIQDHOZIMDJ
+
+<<BlankSpeaker>>
+<<AddParagraph The sound is inhuman and frankly quite scary.
+
+<<if $lineCrowd is false>>
+<<AddOption Talk with the people in the queue" "docksCrowd
+<</if>>
+
+<<if $lineMerchant is false>>
+<<AddOption Buy something from the merchant" "docksMerchant
+<</if>>
+
+<<if $lineEntertainer is false>>
+<<AddOption Watch the performers" "docksEntertainer
+<</if>>
+
+<<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
+    <<if $docksShip is false>>
+    <<AddOption Observe the ship" "docksShip
+    <</if>>
+
+    <<if $docksCrates is false>>
+    <<AddOption Check the crates out" "docksCrates
+    <</if>>
+
+    <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+    <<AddOption Regroup" "docksRegroup
+    <</if>>
+<</if>>
+
+
+
+:: docksEntertainer [nobr]
+<<set $lineEntertainer to true>>
+<<BlankSpeaker>>
+<<AddParagraph Colorful juggling balls, silks and coins fly in the air.
+<<AddParagraph Laughter and amazed cheers greet every trick.
+<<AddParagraph All the children are enthralled by the performance.
+
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph W O W
+
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé and Nomnom are //fascinated// by the basic show of the street performers.
+<<AddParagraph Mesmerized.
+<<AddParagraph Absolutely captivated.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph If I don't drag them away, we are going to stay here the whole day...
+
+
+<<if $lineCrowd is false>>
+<<AddOption Talk with the people in the queue" "docksCrowd
+<</if>>
+
+<<if $lineMerchant is false>>
+<<AddOption Buy something from the merchant" "docksMerchant
+<</if>>
+
+<<if $lineEntertainer is false>>
+<<AddOption Watch the performers" "docksEntertainer
+<</if>>
+
+<<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
+    <<if $docksShip is false>>
+    <<AddOption Observe the ship" "docksShip
+    <</if>>
+
+    <<if $docksCrates is false>>
+    <<AddOption Check the crates out" "docksCrates
+    <</if>>
+
+    <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+    <<AddOption Regroup" "docksRegroup
+    <</if>>
+<</if>>
+
+
+:: docksCrates [nobr]
+<<set $docksCrates to true>>
+<<SetSpeaker "Cannelé
+<<AddParagraph OH NO, no way am I going there, it SMELLS like DEATH.
+
+<<BlankSpeaker>>
+<<AddParagraph Cannelé is right.
+<<AddParagraph A putrid scent of piss, beer, vomit and many more unindentifiable odors fills the air.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph AH! You are WEAK Cannelé! THIS IS WHY YOU MAKE SUCH A POOR DETECTIVE!
+<<AddParagraph Something is in there, I can feel it in my bones.
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom turns around
+<<AddParagraph `"What about you, " + $client_name + "? Are you as //delicate// as the spoiled princess over there?"`>>
+
+<<AddOption Bear with the smell and follow Nomnom" "docksCratesNomnom
+<<AddOption Give up and stick with Cannelé" "docksNoCrates
+
+
+:: docksCratesNomnom [nobr]
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Nomnom//
+
+<<BlankSpeaker>>
+<<AddParagraph A creepy giggle escapes Nomnom's lips
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I've pieced it all together... I CAN READ THE SIGNS OF THE UNIVERSE!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Oh, so I ''am'' going to regret this.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Don't those crates remind you of something...
+<<AddParagraph Or
+<<AddParagraph Someone ?!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph AH!!
+
+<<AddOption It does!" "docksCratesYes
+<<AddOption You really ARE crazy!" "docksCratesNo
+
+:: docksCratesYes [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph The Whispering Hobo!!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ABSOLUTELY, dear client!
+<<AddParagraph I knew you had a brain between those two layers of bread!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Do you think... he is around?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Has to be!
+<<AddParagraph Any great detective does ''not'' believe in coincidences.
+
+<<AddOption Nothing has made sense so far, so this could actually... work?" "docksCratesSummon1
+<<AddOption I'm just going to... leave you alone now, ok?" "docksNoCrates
+
+:: docksCratesNo [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph What are you talking about?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph THE WHISPERING HOBO OF COURSE!!
+
+<<BlankSpeaker>>
+<<AddParagraph The name alone conjures an image of a weird looking man, smelly but nice.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Oh, the weird guy that gave us the magic coin
+
+<<SetSpeaker "Nomnom
+<<AddParagraph THE HOBOOLEAN MASTER!
+<<AddParagraph He must be there...
+
+<<AddOption Nothing has made sense so far, so this could actually... work?" "docksCratesSummon1
+<<AddOption I'm just going to... leave you alone now, ok?" "docksNoCrates
+
+
+:: docksNoCrates [nobr]
+<<SetSpeaker "Faraway Voice
+<<AddParagraph //One point for Cannelé//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph He is so ridiculous, I hate their guts.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph I have to agree... I can't imagine what could be hidden in these dirty, smelly crates...
+
+<<BlankSpeaker>>
+<<AddParagraph In the distance, Nomnom's voice can be heard.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WHISPERING HOBO, I SUMMON THEE.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Nothing, is what's hidden. Nomnom is just a third rate detective diagnosed with first rate delusion.
+
+<<AddOption It's... hard to disagree..." "docksCratesEnd
+
+
+
+:: docksCratesSummon1 [nobr]
+<<SetSpeaker "Nomnom
+<<AddParagraph Now, follow me and I will show you...
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom stops before the crates.
+<<AddParagraph The familiar smell is... overpowering.
+<<AddParagraph Nomnom takes a deep breath.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WHISPERING HOBO, I SUMMON THEE.
+<<AddParagraph SHOW YOURSELF!
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom then stops shouting, leans forward and whispers.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Now, say it with me.
+
+<<AddOption This is crazy, but I am starting to think that maybe so am I" "docksCratesSummon2
+<<AddOption I would ''really'' rather not" "docksNoCrates
+
+
+:: docksCratesSummon2 [nobr]
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WHISPERING HOBO, I SUMMON THEE.
+<<AddParagraph SHOW YOURSELF!
+
+<<SetSpeaker $client_name>>
+<<AddParagraph WHISPERING uhhh HOBO! PLEASE APPEAR...?
+<<AddParagraph //Or I'll faint because of this smell...//
+
+<<SetSpeaker "Nomnom
+<<AddParagraph MY BELOVED MASTER OF AME AND HARMONIE!!!
+
+<<AddOption This... is fun!!" "docksCratesSummon3
+<<AddOption I can't do this anymore" "docksNoCrates
+
+
+:: docksCratesSummon3 [nobr]
+
+<<SetSpeaker "Nomnom
+<<AddParagraph WHISPERING HOBO, ANSWER YOUR LOYAL DISCIPLE.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph PLEASE DO!!
+
+<<SetSpeaker "Nomnom
+<<AddParagraph I BESTOW THIS HALF EATEN MOZARELLA SANDWICH AS AN OFFERING.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Oh, ew.
+
+<<AddOption I feel it... we are close!" "docksCratesSummon4
+<<AddOption Nope, no, nein, non-non" "docksNoCrates
+
+
+:: docksCratesSummon4 [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph Nomnom searches their pockets and somehow fishes out a candle and a match.
+<<AddParagraph They light the candle and start muttering some obscure psalms
+
+<<AddOption Wait what ?" "docksCratesSummon5
+<<AddOption I have to leave. Now." "docksNoCrates
+
+
+:: docksCratesSummon5 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph Nomnom suddenly trips and loses their balance as they fall over.
+<<AddParagraph A disgusting sound can be heard and the disgusting smell gets impossibly more intense.
+
+<<AddOption Ok, I am done here." "docksCratesEnd
+
+
+:: docksCratesEnd [nobr]
+<<BlankSpeaker>>
+<<AddParagraph A high pitched scream echoes in the alley.
+<<AddParagraph A few moments later, Nomnom emerges from the darkness, looking pale.
+<<AddParagraph A very suspicious stain now adorns his coat.
+
+<<SetSpeaker "Cannelé
+<<AddParagraph Great, now you're dumb AND you smell.
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Oh SHUT UP.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //I want to end it all.//
+<<AddParagraph Are we done here?
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph Y-yes.
+
+<<if $docksShip is false>>
+<<AddOption Observe the ship" "docksShip
+<</if>>
+
+<<if $docksLine is false>>
+<<AddOption Go see what's happening on the quay" "docksLine
+<</if>>
+
+<<if $docksShip is true && $docksLine is true && $docksCrates is true>>
+  <<AddOption Regroup" "docksRegroup
+<</if>>
+
+
+:: docksRegroup [nobr]
+<<SetSpeaker "Cannelé
+<<AddParagraph So what do we do now?
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Uh?? maybe write the rest of the story? duh.
+<<SetSpeaker $client_name>>
+<<AddParagraph Oh no, I'm drunk.
+
+::Investigation1 [nobr]
+<h2 class="typewriter" >Chapter 2 - The Hoboolean Coin</h2><br/>
+
+<<BlankSpeaker>>
+<<AddParagraph
+<<AddParagraph The door closes behind the two detectives and their slightly reluctant client.
+<<AddParagraph The group leaves Harmony Street, and makes its way into the fog-clenched neighbourhood.
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph Alright then. The game is afoot, as they say!
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph ...Uh? Why would they say that?
+
+<<BlankSpeaker>>
+<<AddParagraph //The young lady chooses to conveniently ignore that question, and turn their attention to the third party member.//
+<<SetSpeaker "Cannelé
+<<AddParagraph The first step, dear client, is to retrace yours.
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph ~~Is it because you can //''step''// it up?~~
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph We're going to follow your trail, up to where you lost your memories.
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph ^^So the game is //''a foot''// but you can also be //''ahead''// of it?^^
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph And we'll do it in no time! -- All because you were lucky enough to hire the //best// detective agency in this side of the city.
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph I got it! The game is a foot because you can //boot// it!
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph ...Please ignore them." >>
+
+<<AddOption Ignore Nomnom." "Investigation1_ignore
+<<AddOption Flash them a furtive smile" "Investigation1_smile
+
+
+::Investigation1_ignore [nobr]
+<<SetSpeaker "Far away voice
+<<AddParagraph One point for Cannelé.
+<<AddScore "Cannelé" 1>>
+<<AddOption Focus on the road " "Investigation1_2
+
+::Investigation1_smile [nobr]
+<<SetSpeaker "Far away voice
+<<AddParagraph One point for Nomnom.
+<<AddScore "Nomnom" 1>>
+<<AddOption Turn your head again" "Investigation1_2
+
+::Investigation1_2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph The trio arrives at the corner of an empty crossroad." >>
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph So. We simply have to take the path you most likely took when you came to us." >>
+<<BlankSpeaker>>
+<<AddParagraph //Cannelé pause to study each alley, then pick the one to their right.//" >>
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph Let's go this way." >>
+
+<<SetSpeaker $client_name >>
+<<AddParagraph Well... Actually I..." >>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph Wait a sec. Why would he have come this way?" >>
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph Why //wouldn't// he?" >>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph This path is not lit at all at night.
+<<AddParagraph Nobody walks there, unless they want to collide with a broken street light." >>
+<<AddParagraph I would say he came from the left." >>
+
+<<SetSpeaker $client_name >>
+<<AddParagraph Hmm... Excuse me but..." >>
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph This is dumb."
+<<AddParagraph The left alley is the one used by the couriers who deliver late-night food to the dock workers." >>
+<<AddParagraph Nobody walks there unless they want to get run over by a person travelling at the //speed of three horses//." >>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph Yeah, but-" >>
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph Unless you're saying that this lane was empty the whole night?
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph I'm just saying that-" >>
+
+<<BlankSpeaker>>
+<<AddParagraph //Cannelé grins.//
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph You're just saying that something happened at the docks that would make the //entire// port come to a halt...
+<<AddParagraph ...preventing dock workers to unload the ships late at night..."
+<<AddParagraph ...putting every meal deliverers out of job..."
+<<AddParagraph `"...and make this street safe to travel for "+$client_name+" here?"`>>
+
+<<SetSpeaker "Nomnom" >>
+<<AddParagraph Hey, drop the sassy smartass act!" >>
+
+<<SetSpeaker "Cannelé" >>
+<<AddParagraph Or what? You're going to use your tiny grey cells against me?" >>
+
+<<AddOption I know which way I came f..." "Investigation1_3" >>
+
+::Investigation1_3 [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph To their client's demise, the two detectives are arguing so loud that they can't hear him.
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //This is exhausting.//
+
+<<SetSpeaker "Nomnom
+<<AddParagraph Alright -- You know what, let's settle this." >>
+
+<<BlankSpeaker>>
+<<set _temp_text to ("Cannelé and Nomnom turn to "+$client_name+".") >>
+<<AddParagraph _temp_text>>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph //Ah, they're finally going to listen to m-//
+
+<<SetSpeaker "Cannelé
+<<AddParagraph The rules are simple. We're each going to take our own path..." >>
+
+<<SetSpeaker "Nomnom
+<<AddParagraph ...and the first of us who retraces your steps wins this round." >>
+
+<<SetSpeaker "Cannelé
+<<set _temp_text to ($client_name+", you need to follow us closely, okay?") >>
+<<AddParagraph _temp_text>>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph Wouldn't it be simpler if we-" >>
+
+<<SetSpeaker "Cannelé & Nomnom
+<<AddParagraph GO!" >>
+
+<<AddOption Please wait for m-" "DirectionDuel_1
