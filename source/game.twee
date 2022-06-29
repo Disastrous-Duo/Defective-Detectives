@@ -14,7 +14,7 @@
 	"ifid": "B1E46906-738D-4617-BD15-CEF422C96FD8",
 	"format": "SugarCube",
 	"format-version": "2.30.0",
-	"start": "Start",
+	"start": "conspiracyBoard",
 	"zoom": 0.6
 }
 
@@ -58,6 +58,7 @@
 ::@include scripts/keyboard.twee
 ::@include scripts/magic_effects.twee
 ::@include scripts/scoreboard.twee
+::@include scripts/board_notes.twee
 ::@include scripts/conspiracy_board.twee
 ::@include scripts/tutorial_board.twee
 ::@include scripts/pull_cord.twee

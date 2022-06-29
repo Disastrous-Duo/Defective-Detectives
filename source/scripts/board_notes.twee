@@ -1,0 +1,134 @@
+:: Post-Its [script]
+
+// SCROLL DOWN TO ADD NEW NOTES
+
+window.board_notes = {};
+
+function createNote(note)
+{
+  window.board_notes[note.id] = note;
+}
+
+class Clue
+{
+  constructor(id, txt, fontSize)
+  {
+    this.id = id;
+    this.txt = txt;
+    this.type = "clue";
+    this.fontSize = fontSize;
+  }
+}
+
+class ObligatoryClue extends Clue // see ObligatoryMystery
+{
+  constructor(id, txt, fontSize)
+  {
+    super(id, txt, fontSize);
+  }
+
+  onclick()
+  {
+    window.real_laws_taken = window.real_laws_taken ? window.real_laws_taken+1  : 1;
+      if(window.real_laws_taken == 3)
+      {
+        window.renableContinueButton();
+      }
+    }
+}
+
+class Picture
+{
+  constructor(id, txt, src)
+  {
+    this.id = id;
+    this.txt = txt;
+    this.type = "picture";
+    this.src = src;
+  }
+}
+
+class Mystery
+{
+  constructor(id, txt, solutions, core, success_sene, abort_scene, fail_scene, folder_id)
+  {
+    this.id = id;
+    this.txt = txt;
+    this.type = "question";
+    this.solutions = solutions;
+    this.core = core;
+    this.success_sene = success_sene;
+    this.fail_scene = fail_scene;
+    this.abort_scene = abort_scene;
+    this.folder_id = folder_id;
+  }
+}
+
+
+
+class ObligatoryMystery extends Mystery
+{
+  constructor(id, txt, solutions, core, success_sene, abort_scene, fail_scene, folder_id)
+  {
+    super(id, txt, solutions, core, success_sene, abort_scene, fail_scene, folder_id);
+  }
+    // Refactorable for a "current obligatory" notes to take
+    // makeObligatory()
+  onclick()
+  {
+    window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+    if(window.mysteries == 3)
+    {
+      window.renableContinueButton();
+    }
+  }
+}
+
+class Folder
+{
+  constructor(id, txt, post_its)
+  {
+    this.id = id;
+    this.txt = txt;
+    this.type = "folder";
+    this.post_its = post_its;;
+  }
+}
+
+class Special
+{
+  constructor(id, txt, type)
+  {
+    this.id = id;
+    this.txt = txt;
+    this.type = type;
+  }
+}
+
+// ADD NEW NOTES HERE
+
+createNote(new Special("Special_Tuto_Trigger", "tuto-board-trigger", "tuto-board-trigger"));
+
+createNote(new Clue("Clue_Tattoo", "Intricate puzzle-like golden ink is painting both of Cannelé's foreams.", 15));
+createNote(new Clue("Clue_Nomnom_Hair", "Nomnom does not know how to care for their hair"));
+createNote(new Clue("Clue_Nomnom_Shoe", "Nomnom's aerodynamic left shoe"));
+createNote(new Clue("Clue_Nomnom_Name", "Nomnom is pronounced as non-non (no-no) and literally means “name-name”", 16));
+createNote(new Clue("Clue_Cannelé_Name", "Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name."));
+createNote(new Clue("Clue_Cases_Amnesia", "Other cases of amnesia"));
+createNote(new Clue("Clue_Muffin_Name", "Muffin… This isn't a name, it's a pastry…"));
+createNote(new Clue("Clue_Yasyas_Name", "Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…"));
+
+createNote(new ObligatoryClue("Clue_Law_1", "LAW #1: Magic is a universal gift that can be activated after eating a Fleur d’Âme.",14));
+createNote(new ObligatoryClue("Clue_Law_2", "LAW #2: Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.",12));
+createNote(new ObligatoryClue("Clue_Law_3", "LAW #3: Magic can only be channelled through a physical medium. Living beings cannot serve as mediums.",13));
+// createNote(new Clue("", ""));
+
+createNote(new Picture("Picture_Nomnom", "", "note_nom.png"));
+createNote(new Picture("Picture_Cannele", "", "note_can.png"));
+createNote(new Picture("Picture_Cat", "", "note_cat.png"));
+
+createNote(new Mystery("Mystery_Relationship", "CANNELÉ & NOMNOM'S RELATIONSHIP?"));
+createNote(new Mystery("Mystery_Naming_Conventions", "TERRIFYING NAMING CONVENTIONS"));
+createNote(new ObligatoryMystery("Mystery_Your_Identity", "WHO ARE YOU?"));
+createNote(new ObligatoryMystery("Mystery_Your_Gift", "WHAT IS YOUR GIFT?"));
+createNote(new ObligatoryMystery("Mystery_What_Happened", "WHAT HAPPENED TO YOU?"));

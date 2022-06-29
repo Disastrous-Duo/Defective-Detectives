@@ -129,7 +129,7 @@ window[this_board].toggle_board = function()
 
 
   /*
-    lines are directed: they begin at a specific note, and enf at another
+    lines are directed: they begin at a specific note, and end at another
     when moving a note, they must update the lines if they're at the end of a line
     or a at their start
 
@@ -335,8 +335,8 @@ window[this_board].toggle_board = function()
   {
 
     // Do not add a note with the exact same text
-    var notes_txt = window[this_board].notesList.map(note => note.txt);
-    if(notes_txt.indexOf(note_data.txt) > -1)
+    var notes_id = window[this_board].notesList.map(note => note.id);
+    if(notes_id.indexOf(note_data.id) > -1)
     {
 
       return false;

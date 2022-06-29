@@ -1,0 +1,52 @@
+with open('c_and_n.txt', encoding='utf8') as f:
+    pure_lines = [line for line in f] # remove line breaks
+
+print("Number of pures lines", len(pure_lines))
+
+
+def filter_line(line):
+
+    start_str = '<<AddParagraph "'
+    if line.find(start_str) >= 0:
+        # return line
+        end_str = '">>"'
+        inside =  line[line.find(start_str)+len(start_str):line.find(end_str)-len(end_str)+1]
+        return inside
+
+    if line.find("<<BlankSpeaker") >= 0:
+        return ""
+
+    start_str = '<<SetSpeaker "'
+    if line.find(start_str) >= 0:
+        # return line
+        end_str = '">>"'
+        inside =  line[line.find(start_str)+len(start_str):line.find(end_str)-len(end_str)+1]
+        return inside.upper()+":"
+
+    detect_str = 'AddOption'
+    if line.find(detect_str) >= 0:
+        # return line
+        start_str = ' "'
+        end_str = '" '
+        inside =  line[line.find(start_str)+len(start_str):line.find(end_str)]
+        print(inside)
+        return ">>> "+inside
+
+    return ""
+
+
+filtered_lines = []
+for line in pure_lines:
+
+    filtered = filter_line(line)
+    if filtered != "":
+        filtered_lines.append(filtered)
+
+print("Number of filtered lines", len(filtered_lines))
+
+
+f=open('c_and_n_filtered.txt','w+', encoding='utf8')
+# s1='\n'.join(filtered_lines)
+s1="\n".join(filtered_lines)
+f.write(s1)
+f.close()
