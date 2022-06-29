@@ -68,7 +68,7 @@ window[this_board].toggle_board = function()
   ];
 
   // Will be filled with created elements, useful for visually sorting them
-  window[this_board].created_pins = [];
+  window[this_board].created_pins = {};
   window[this_board].created_notes = [];
   window[this_board].created_lines = [];
   window[this_board].reticule = {};
@@ -114,7 +114,7 @@ window[this_board].toggle_board = function()
   settings.gridOffset = 30;
   settings.noteColors = {
     "clue":"#FEFF9C",
-    "question":"#6DCFF6",
+    "mystery":"#6DCFF6",
     "picture":"white",
     "instruction":"white",
     "front-clue":"#FEFF9C",
@@ -135,7 +135,7 @@ window[this_board].toggle_board = function()
 
   */
 
-  function makeNote(external_id, text, left, top, pin, type, fontSize)
+  function makeNote(external_id, text, left, top, pins, type, fontSize)
   {
     var rect = new fabric.Rect({
       left: left,
@@ -168,7 +168,7 @@ window[this_board].toggle_board = function()
       top: top,
       width:settings.noteWidth,
       height:settings.noteHeight,
-      pin:pin,
+      pins:pins,
       rect:rect,
       textObject:textObject
 
@@ -179,7 +179,86 @@ window[this_board].toggle_board = function()
     return group;
   }
 
-  function makePicture(external_id, text, left, top, pin, src, fontSize)
+  function makeMystery(external_id, text, left, top, pins, locks, fontSize)
+  {
+    var rect = new fabric.Rect({
+      left: left,
+      top: top,
+      width:settings.noteWidth,
+      height:settings.noteHeight,
+      fill: settings.noteColors["mystery"],
+      angle:0,
+      stroke:settings.newNoteBorderColor,
+      strokeWidth: settings.newNoteStrokeWidth,
+    });
+
+    var textObject = new fabric.Textbox(text, {
+      left: left,
+      top: top,
+     width:settings.noteWidth-settings.notePadding/2,
+     fontFamily:"Caveat-Regular",
+     fontSize: fontSize,
+     textAlign:"center",
+     angle:0,
+     fill: '#000000'
+    });
+
+
+    var curve = new fabric.Path('M 50 0 Q 100, 100, 200, 0',
+    {
+    fill: '',
+    stroke: settings.noteColors["mystery"],
+    // stroke: "red",
+    strokeWidth:14,
+    objectCaching: true,
+    left:left,
+    top:top});
+
+
+    // Starting point
+
+    // Not sure coordinates work exactly this way but rn it works
+    var curve_middle_x = settings.noteWidth*(1+0.05);
+    var curve_middle_y = -20;
+    var curve_width = 35;
+    var curve_height = 80;
+
+    curve.path[0][1] = curve_middle_x-curve_width;
+    curve.path[0][2] = curve_middle_y;
+
+    // Middle
+    curve.path[1][1] = curve_middle_x;
+    curve.path[1][2] = curve_middle_y-curve_height;
+
+    // End point
+    curve.path[1][3] = curve_middle_x+curve_width;
+    curve.path[1][4] = curve_middle_y;
+
+    curve.selectable = false;
+
+
+  var group = new fabric.Group([curve, rect, textObject],
+    {
+      external_id:external_id,
+      object_type:"note",
+      note_type:"mystery",
+      left: left,
+      top: top,
+      width:settings.noteWidth*1,
+      height:settings.noteHeight+curve_height+20,
+      pins:pins,
+      rect:rect,
+      textObject:textObject,
+      curve:curve
+
+    });
+
+    group.hasControls = group.hasBorders = false;
+
+    return group;
+  }
+
+  function makePicture(external_id, text, left, top, pins, src, fontSize)
   {
     var rect = new fabric.Rect({
       left: left,
@@ -219,7 +298,7 @@ window[this_board].toggle_board = function()
       width:settings.noteWidth,
       height:settings.noteHeight,
       rect:rect,
-      pin:pin,
+      pins:pins,
       angle:3
     });
 
@@ -231,6 +310,7 @@ window[this_board].toggle_board = function()
   function makeLine(start_pin_id, end_pin_id)
   {
 
+    console.log(start_pin_id, end_pin_id);
     var start_pin = window[this_board].created_pins[start_pin_id];
     var end_pin = window[this_board].created_pins[end_pin_id];
 
@@ -259,7 +339,7 @@ window[this_board].toggle_board = function()
       return line;
   }
 
-  function makePin(external_id, x, y)
+  function makePin(external_id, x, y, x_delta = 0)
   {
     var pin = new fabric.Circle({
       external_id:external_id,
@@ -268,6 +348,7 @@ window[this_board].toggle_board = function()
         object_type:'pin',
         strokeWidth: 5,
         radius: settings.pinRadius,
+        x_delta:x_delta,
         fill: '#fff',
         stroke: '#666',
         lines_start:[],
@@ -310,6 +391,12 @@ window[this_board].toggle_board = function()
 
       pin.hasControls = pin.hasBorders = false;
     return pin;
+  }
+
+  function makeLock()
+  {
+    var lock = makePin(...arguments);
+    return lock;
   }
 
   function makeGridline(start_X, start_Y, end_X, end_Y)
@@ -356,25 +443,62 @@ window[this_board].toggle_board = function()
   }
 
 
-  function createNote(i, note_data, canvas) // Create notes of all types and add tthem to the board
+  function createNote(note_id, note_data, canvas) // Create notes of all types and add tthem to the board
   {
-    var pin = makePin(i, note_data.x, note_data.y-settings.noteHeight/2);
+
+    var pins = {};
 
     if(note_data.type == "picture")
     {
-      var note = makePicture(i, note_data.txt, note_data.x, note_data.y, pin, note_data.src, note_data.fontSize);
+      var pin_id = "pin_"+note_id;
+      var pin = makePin(pin_id, note_data.x, note_data.y-settings.noteHeight/2);
+      pins[pin_id] = pin;
+      var note = makePicture(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.src, note_data.fontSize);
+
+
+    }
+    else if(note_data.type == "mystery")
+    {
+
+      // Generate the right number of locks
+      var total_locks = note_data.locks;
+      var spacing = settings.pinRadius*3;
+
+      for(var j = 0; j < total_locks; j++)
+      {
+        var pin_id = "pin_"+note_id+"_"+j;
+        var x_delta = (j - (total_locks-1)/2)*spacing;
+        var lock = makeLock(pin_id, note_data.x + x_delta, note_data.y-settings.noteHeight/2, x_delta);
+        pins[pin_id] = lock;
+      }
+
+      var note = makeMystery(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.locks, note_data.fontSize);
+
     }
     else
     {
-      var note = makeNote(i, note_data.txt, note_data.x, note_data.y, pin, note_data.type, note_data.fontSize);
+      var pin_id = "pin_"+note_id;
+      var pin = makePin(pin_id, note_data.x, note_data.y-settings.noteHeight/2);
+      pins[pin_id] = pin;
+      var note = makeNote(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.type, note_data.fontSize);
     }
 
     window[this_board].created_notes.push(note);
-    window[this_board].created_pins.push(pin);
+    for(let id in pins)
+    {
+      window[this_board].created_pins[id] = pins[id];
+    }
+
+    console.log(pins)
+
 
 
     canvas.add(note);
-    canvas.add(pin);
+    for(let id in pins)
+    {
+      canvas.add(pins[id])
+    }
+
 
     // If the instructions are still there, remove them
     if(instructions)
@@ -529,8 +653,8 @@ window[this_board].toggle_board = function()
       //Set bordercolor to default -- effect where new post-its will be highlighted
       p.rect.set({stroke:settings.normalNoteBorderColor,strokeWidth:settings.normalStrokeWidth })
 
-      //Move associated pin too
-      p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
+      //Move associated pins too
+      p.pins.map(pin => pin.movePin(pin, p.left - pin.x_delta, p.top-settings.noteHeight/2))
       // Updates data external strucure about post-its
       // Coordinates change
       window[this_board].notesList[p.external_id].x = p.left;
@@ -577,6 +701,9 @@ window[this_board].toggle_board = function()
       {
         var start_pin_id = window[this_board].reticule.start_pin.external_id;
         var end_pin_id = p.external_id;
+
+        console.log("shlanerek",p);
+        console.log("shrek",start_pin_id,end_pin_id);
 
         // Checks: do not add a line that already exists
         // start and end should be different
@@ -685,7 +812,7 @@ window[this_board].toggle_board = function()
         if(note.type.indexOf("front") != -1)
         {
           canvas.bringToFront(note);
-          canvas.bringToFront(note.pin);
+          note.pins.map(pin => canvas.bringToFront(note.pin));
         }
       }
 

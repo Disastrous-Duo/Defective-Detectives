@@ -50,14 +50,22 @@ class Picture
 
 class Mystery
 {
-  constructor(id, txt, solutions, core, success_sene, abort_scene, fail_scene, folder_id)
+  constructor(id, txt, solutions, core, success_scene, abort_scene, fail_scene, folder_id)
   {
     this.id = id;
     this.txt = txt;
-    this.type = "question";
+    this.type = "mystery";
+
+    // Detect if single solution or list of multiple possibilities
+    if(typeof solutions[0] != 'object')
+    {
+      solutions = [solutions];
+    }
+
     this.solutions = solutions;
+    this.locks = solutions[0].length;
     this.core = core;
-    this.success_sene = success_sene;
+    this.success_scene = success_scene;
     this.fail_scene = fail_scene;
     this.abort_scene = abort_scene;
     this.folder_id = folder_id;
@@ -68,9 +76,9 @@ class Mystery
 
 class ObligatoryMystery extends Mystery
 {
-  constructor(id, txt, solutions, core, success_sene, abort_scene, fail_scene, folder_id)
+  constructor(id, txt, solutions, core, success_scene, abort_scene, fail_scene, folder_id)
   {
-    super(id, txt, solutions, core, success_sene, abort_scene, fail_scene, folder_id);
+    super(id, txt, solutions, core, success_scene, abort_scene, fail_scene, folder_id);
   }
     // Refactorable for a "current obligatory" notes to take
     // makeObligatory()
@@ -116,7 +124,7 @@ createNote(new Clue("Clue_Nomnom_Name", "Nomnom is pronounced as non-non (no-no)
 createNote(new Clue("Clue_Cannelé_Name", "Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name."));
 createNote(new Clue("Clue_Cases_Amnesia", "Other cases of amnesia"));
 createNote(new Clue("Clue_Muffin_Name", "Muffin… This isn't a name, it's a pastry…"));
-createNote(new Clue("Clue_Yasyas_Name", "Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…"));
+createNote(new Clue("Clue_Yasyas_Name", "Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…"),10);
 
 createNote(new ObligatoryClue("Clue_Law_1", "LAW #1: Magic is a universal gift that can be activated after eating a Fleur d’Âme.",14));
 createNote(new ObligatoryClue("Clue_Law_2", "LAW #2: Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.",12));
@@ -127,8 +135,8 @@ createNote(new Picture("Picture_Nomnom", "", "note_nom.png"));
 createNote(new Picture("Picture_Cannele", "", "note_can.png"));
 createNote(new Picture("Picture_Cat", "", "note_cat.png"));
 
-createNote(new Mystery("Mystery_Relationship", "CANNELÉ & NOMNOM'S RELATIONSHIP?"));
-createNote(new Mystery("Mystery_Naming_Conventions", "TERRIFYING NAMING CONVENTIONS"));
-createNote(new ObligatoryMystery("Mystery_Your_Identity", "WHO ARE YOU?"));
-createNote(new ObligatoryMystery("Mystery_Your_Gift", "WHAT IS YOUR GIFT?"));
-createNote(new ObligatoryMystery("Mystery_What_Happened", "WHAT HAPPENED TO YOU?"));
+createNote(new Mystery("Mystery_Relationship", "CANNELÉ & NOMNOM'S RELATIONSHIP?",[""]));
+createNote(new Mystery("Mystery_Naming_Conventions", "TERRIFYING NAMING CONVENTIONS",["clue_1","clue_2","clue_3"]));
+createNote(new ObligatoryMystery("Mystery_Your_Identity", "WHO ARE YOU?",[""]));
+createNote(new ObligatoryMystery("Mystery_Your_Gift", "WHAT IS YOUR GIFT?",[""]));
+createNote(new ObligatoryMystery("Mystery_What_Happened", "WHAT HAPPENED TO YOU?",[""]));
