@@ -18,22 +18,24 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "No, WE HAVE A GUN!">>
 
-<<AddOption "This situation... scares me" "aGunAndNoShoe">>
-
-
-:: aGunAndNoShoe [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "They all stare at each other, then at the gun in Cannelé's hand and finally at Nomnom's bare left foot.">>
 
+<<AddOption "I absolutely cannot leave this gun into Cannelé's hands.'" "giveMeTheGun">>
+<<AddOption "Nomnom's only shoe is messing with my need for absolute symmetry..." "onlyOneShoe">>
+<<AddOption "This situation... scares me." "aGunAndNoShoe">>
+
+
+:: giveMeTheGun [nobr]
 <<SetSpeaker $client_name>>
 <<AddParagraph "How is it that things just keep getting worse?">>
 <<AddParagraph "//And I keep regretting hiring these... detectives...//">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "To be fair, it is entirely Nomnom's fault.">>
+<<AddParagraph "To be fair, it's entirely Nomnom's fault.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "WHAT ? YOU WERE GOING TO GET SHOT BY A POLICE OFFICER I SAVED YOUR ASS AND THAT'S WHAT I GET?">>
+<<AddParagraph "WHAT ? You were going to get SHOT by a police officer! I SAVED YOUR ASS AND THAT'S WHAT I GET?">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Well, maybe you're lying who knows...">>
@@ -49,7 +51,8 @@
 <<AddParagraph "2. Cannelé, give me the gun.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Surprised by the suddenly commanding tone, Cannelé hands over the weapon to the probably only sensible person in the group.">>
+<<AddParagraph "*GULP*">>
+<<AddParagraph "Shocked into silence by the calm yet commanding tone, Cannelé hands over the weapon to the probably only sensible person in the group.">>
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "3. WE. ARE. LOST.">>
@@ -60,23 +63,202 @@
 <<SetSpeaker $client_name>>
 <<AddParagraph "//This feels... nice//">>
 
-<<AddOption "What should we do, now?" "docksWhatNext">>
+<<AddOption "Now, I am taking the lead on this, is this clear?" "dockPlayerKing">>
+<<AddOption "Maybe I should just go and investigate on my own." "docOnMyOwn">>
+<<AddOption "Ugh, whatever. Stop with the puppy eyes and let's go." "docksWhatNext">>
+
+
+:: onlyOneShoe [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "This one shoe, on Nomnom's right foot, is obsessing.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "To be fair, it's entirely Nomnom's fault.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Somehow, it focuses all the attention on itself.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "WHAT ? You were going to get SHOT by a police officer! I SAVED YOUR ASS AND THAT'S WHAT I GET?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "It's so...">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Well, maybe you're lying who knows...">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "...Disruptive.">>
+<<AddParagraph "Nomnom.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "At the sudden interruption, Cannelé and Nomnom's arguing stops.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Take off this shoe.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "W-what?">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I can't focus with your one shoe in the way.">>
+<<AddParagraph "So take it off.">>
+<<AddParagraph "Now.">>
+
+<<AddOption "//Wait. What am I even doing?//" "docRemoveShoe">>
+<<AddOption "Your answer is?" "dockPlayerKing_Shoe">>
+
+:: docRemoveShoe [nobr]
+
+:: dockPlayerKing_Shoe [nobr]
+<<set $removeshoe to true>>
+<<BlankSpeaker>>
+<<AddParagraph "The detectives are dazed, and are looking absolutely confused.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//But I'm not joking. I really need this shoe to disappear from my sight.//">>
+<<AddParagraph "//Else, I will never know peace.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The two are looking at each other, trying to figure out what happened to their companion who is smiling, menacing.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "Cannelé? Nomnom?">>
+
+<<include dockPlayerKing>>
+
+:: aGunAndNoShoe [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "How is it that things just keep getting worse?">>
+<<AddParagraph "//And I keep regretting hiring these... detectives...//">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "To be fair, it's entirely Nomnom's fault.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "WHAT ? You were going to get SHOT by a police officer! I SAVED YOUR ASS AND THAT'S WHAT I GET?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Well, maybe you're lying who knows...">>
+
+<<BlankSpeaker>>
+<<AddParagraph "This is going to escalate.">>
+<<AddParagraph "A loud cough interrupts the arguing pair.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I am going to ask you two to stop arguing.">>
+<<AddParagraph "Right. Now.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "*GULP*">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "We are lost, ^^again^^, and I would like it very much if we could find our way back to the case.">>
+<<AddParagraph "So, finding out about what happened to me.">>
+<<AddParagraph "Which is coincidentally the reason I //hired// you.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The almost disturbingly calm tone, paired with an almost menacing smile, renders the arguing detectives absolutely silent.">>
+<<AddParagraph "They look down, chastised.">>
+
+<<AddOption "Am I clear?" "dockPlayerKing">>
+<<AddOption "Maybe I should just investigate on my own." "docOnMyOwn">>
+<<AddOption "Ugh, whatever. Stop with the puppy eyes and let's go." "docksWhatNext">>
+
+:: dockPlayerKing [nobr]
+<<set $king to true>>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom scramble, trying to muster their courage to reply.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Y-yes, of course!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom vigourously nods in agreement.">>
+<<AddParagraph `$client_name+" smiles at them, sweetly."`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I mean, uh, yes...">>
+<<AddParagraph "Sir?">>
+
+<<if $removeshoe is true>>
+  <<BlankSpeaker>>
+  <<AddParagraph `"Nomnom jumps and quickly takes off his shoe, deposing it into "+$client_name+"'s expecting hands."`>>
+  <<AddParagraph `"As soon as the shoe is tucked out of sight and that Nomnom is standing in socks, in the middle of the street, the hard glint in "+$client_name+"'s eyes softens and the fog in their brain seems to dissipate."`>>
+  <<set $king to false>>
+<</if>>
+
+<<AddOption "Better. Now, let's go." "docksWhatNext">>
+<<AddOption "//I hope that this means that now things are going to go smoothly...//" "docksWhatNext">>
+
+
+:: docOnMyOwn [nobr]
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "No no no no no!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Dear customer, we are doing our very best to help you find out about:">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "ONE!">>
+<<AddParagraph "WHO YOU ARE!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "TWO:">>
+<<AddParagraph "WHAT'S YOUR GI-">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "I remember what I hired you for.">>
+<<AddParagraph "I signed the contract this morning.">>
+<<AddParagraph "But I'm not sure about progress tho.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "P-please don't leave us.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The pair of detective's stomach's growls.">>
+<<AddParagraph "Despair is overflowing from their expression.">>
+
+
+<<AddOption "If we are doing this, I'm the one in charge. Yes or Yes." "dockPlayerKing">>
+<<AddOption "... I'm giving you two ONE more chance." "docksTY">>
+<<AddOption "//They're so exhausting, I just don't wanna argue anymore.// Let's just go." "docksWhatNext">>
+
+:: docksTY [nobr]
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "THANK YOU.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Now...">>
+
+<<include "docksWhatNext">>
 
 
 :: docksWhatNext [nobr]
-
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "We should find our way back">>
-<<AddParagraph "But let's avoid the marketplace, shall we?">>
+<<AddParagraph "But let's avoid the marketplace.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom mutters, mimicking Cannelé.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Gneugneugneu let's avoid the marketplace, what are you a //genius//?">>
+<<AddParagraph "Gneugneugneu let's avoid the marketplace!">>
+<<AddParagraph "What are you a //genius//?">>
+
+<<if $king is true>>
+  <<SetSpeaker $client_name>>
+  <<AddParagraph "What did I say about acting like children?">>
+  <<AddParagraph "Focus!">>
+  <<SetSpeaker "Cannelé & Nomnom">>
+  <<AddParagraph "Y-yessir.">>
+  <<SetSpeaker $client_name>>
+  <<AddParagraph "Isn't this Falaisant's harbor?">>
+<</if>>
 
 <<BlankSpeaker>>
-<<AddParagraph "The group pauses and take a look around them.">>
+<<AddParagraph "The group pauses to take a look around them.">>
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "Isn't this Falaisant's harbor?">>
@@ -89,26 +271,58 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They're right by the city's docks.">>
-<<AddParagraph "Moored to the quay, a ship seems to take all the space in the marina.">>
+<<AddParagraph "Moored to the quay, a ship seems to take all the space in the marina, dwarfing its surroundings.">>
 <<AddParagraph "On the wharf, a crowd is lined up, waiting. Some angry shouts resound. They have probably been standing there for a while.">>
 <<AddParagraph "Half hidden behind a dark corner of the pier, wooden creates are piled up in a messy jumble. They feel somehow... familiar.">>
 
 
 <<set $docksShip to false>>
+
 <<set $docksLine to false>>
+<<set $lineCrowd to false>>
+<<set $lineMerchant to false>>
+<<set $lineEntertainer to false>>
+
 <<set $docksCrates to false>>
 
 <<AddOption "Observe the ship" "docksShip">>
 <<AddOption "Go see what's happening on the quay" "docksLine">>
 <<AddOption "Check out the crates" "docksCrates">>
 
+:: conditions
+<<if $docksShip is false>>
+  <<AddOption "Observe the ship" "docksShip">>
+<</if>>
+
+<<if $docksLine is false>>
+  <<AddOption "Go see what's happening on the quay" "docksLine">>
+<</if>>
+
+<<if $docksCrates is false>>
+  <<AddOption "Check the crates out" "docksCrates">>
+<</if>>
+
+<<if $revisit is true && $lineMerchant is false>>
+  <<AddOption "I'm good." "docksMerchant">>
+<</if>>
+
+<<if $revisit is true>>
+  <<AddOption "I'm good." "docksRegroup">>
+<</if>>
+
+<<if $docksShip is true && $docksLine is true && $docksCrates is true && $revisit is false>>
+  <<AddOption "Regroup" "docksRegroup">>
+  <<else>>
+  <<AddOption "Regroup" "docksRevisit">>
+<</if>>
+
 
 :: docksShip [nobr]
 <<set $docksShip to true>>
 <<BlankSpeaker>>
-<<AddParagraph "The vessel was imposing, 300 people could line up and barely meet both ends.">>
+<<AddParagraph "The vessel is imposing, a couple hundred people could line up and barely meet both ends.">>
 <<AddParagraph "The reddish hull, the wide decks and the three masts paint a striking picture in the busy pier.">>
-<<AddParagraph "Delicate letters, carved in the wood, read //The Barking Glass//.">>
+<<AddParagraph "Delicate letters, carved into the wood, read //The Barking Glass//.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Okay, it's just a boat. Next.">>
@@ -116,8 +330,8 @@
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom dismisses the sight and turns around as Cannelé's gaze lingers.">>
 
-<<AddOption "It's really just a ship, uh" "docksShoo">>
-<<AddOption "Stay a moment with Cannelé" "docksCannelé">>
+<<AddOption "It's really just a ship, uh. (Leave.)" "docksShoo">>
+<<AddOption "Stay a moment with Cannelé." "docksCannelé">>
 
 
 :: docksCannelé [nobr]
@@ -144,26 +358,15 @@
 <<AddParagraph "A woman dressed in a sailor's uniform runs into Cannelé.">>
 
 <<SetSpeaker "Sailor">>
-<<AddParagraph "Don't stay here! We're busy as it is, no need for pesky tourists to gawk at the boat.">>
+<<AddParagraph "Don't stay here! We're busy as it is, no need for any more pesky tourists to gawk.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The sailor shoos you away from the ship.">>
 
-<<SetSpeaker $client_name>>
-<<AddParagraph "Well... something is definitely weird around here...">>
+/*<<SetSpeaker $client_name>>
+<<AddParagraph "Well... something is definitely weird around here...">>*/
 
-
-<<if $docksLine is false>>
-<<AddOption "Go see what's happening on the quay" "docksLine">>
-<</if>>
-
-<<if $docksCrates is false>>
-<<AddOption "Check the crates out" "docksCrates">>
-<</if>>
-
-<<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-  <<AddOption "Regroup" "docksRegroup">>
-<</if>>
+<<include "conditions">>
 
 
 :: docksLine [nobr]
@@ -171,13 +374,9 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "The group reaches the crowd.">>
-<<AddParagraph "There must be a couple hundreds on people waiting.">>
+<<AddParagraph "There must be a good hundred people waiting.">>
 <<AddParagraph "They're of all genders and of all ages.">>
 <<AddParagraph "As if to profit from the never ending queue, street merchants try to sell food and beverages, as performers try to impress kids with tricks.">>
-
-<<set $lineCrowd to false>>
-<<set $lineMerchant to false>>
-<<set $lineEntertainer to false>>
 
 <<AddOption "Talk with the people in the queue" "docksCrowd">>
 <<AddOption "Buy something from the merchant" "docksMerchant">>
@@ -244,33 +443,8 @@
     <<AddOption "The police?" "crowdPolice">>
 <</if>>
 
-<<if $crowdPolice is true && $crowdWhereTo is true && $crowdStuck is true>>
-    <<if $lineCrowd is false>>
-    <<AddOption "Talk with the people in the queue" "docksCrowd">>
-    <</if>>
+<<AddOption "I'm done here" "temp">>
 
-    <<if $lineMerchant is false>>
-    <<AddOption "Buy something from the merchant" "docksMerchant">>
-    <</if>>
-
-    <<if $lineEntertainer is false>>
-    <<AddOption "Watch the performers" "docksEntertainer">>
-    <</if>>
-
-    <<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
-        <<if $docksShip is false>>
-        <<AddOption "Observe the ship" "docksShip">>
-        <</if>>
-
-        <<if $docksCrates is false>>
-        <<AddOption "Check the crates out" "docksCrates">>
-        <</if>>
-
-        <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-        <<AddOption "Regroup" "docksRegroup">>
-        <</if>>
-    <</if>>
-<</if>>
 
 :: crowdWhereTo [nobr]
 <<set $crowdWhereTo to true>>
@@ -290,14 +464,16 @@
 <<AddParagraph "I can't help y'all on this one.">>
 
 <<SetSpeaker "Impatient Man">>
-<<AddParagraph "What?? You've never heard of Nephelen?? How is that even possible?">>
+<<AddParagraph "What do you mean you don't know where Nephelen is?">>
+<<AddParagraph "^^Classic Falaisant, so darn uneducated.^^">>
+
 
 <<BlankSpeaker>>
 <<AddParagraph "The lady nods, just as appalled as he is.">>
 
 <<SetSpeaker "Impatient Man">>
 <<AddParagraph "Nephelen is the city that's closest to Falaisant on this continent.">>
-<<AddParagraph "//I really don't like those Falaisant kids.//">>
+<<AddParagraph "^^You kids shouldn't be roaming the docks, you should be in school.^^">>
 
 <<BlankSpeaker>>
 <<AddParagraph "A silence.">>
@@ -321,33 +497,7 @@
     <<AddOption "The police?" "crowdPolice">>
 <</if>>
 
-<<if $crowdPolice is true && $crowdWhereTo is true && $crowdStuck is true>>
-    <<if $lineCrowd is false>>
-    <<AddOption "Talk with the people in the queue" "docksCrowd">>
-    <</if>>
-
-    <<if $lineMerchant is false>>
-    <<AddOption "Buy something from the merchant" "docksMerchant">>
-    <</if>>
-
-    <<if $lineEntertainer is false>>
-    <<AddOption "Watch the performers" "docksEntertainer">>
-    <</if>>
-
-    <<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
-        <<if $docksShip is false>>
-        <<AddOption "Observe the ship" "docksShip">>
-        <</if>>
-
-        <<if $docksCrates is false>>
-        <<AddOption "Check the crates out" "docksCrates">>
-        <</if>>
-
-        <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-        <<AddOption "Regroup" "docksRegroup">>
-        <</if>>
-    <</if>>
-<</if>>
+<<AddOption "I'm done here" "temp">>
 
 :: crowdPolice [nobr]
 <<set $crowdPolice to true>>
@@ -356,14 +506,14 @@
 <<AddParagraph "They've been all around, from here right to the market, I've heard.">>
 
 <<SetSpeaker "Distressed Lady">>
-<<AddParagraph "They were here interrogating all of us this morning... how frightful.">>
+<<AddParagraph "They were here interrogating all of us this morning... how very frightful.">>
 
 <<SetSpeaker "Impatient Man">>
-<<AddParagraph "They brought in some people too.">>
+<<AddParagraph "They brought in some people too.">> */ je sais pas ce que ça veut dire */
 <<AddParagraph "What a freaky city.">>
 
 <<SetSpeaker "Distressed Lady">>
-<<AddParagraph "I just wished they'd let us go back...">>
+<<AddParagraph "I just wish they'd let us go back...">>
 
 <<BlankSpeaker>>
 <<AddParagraph "She pats her son's head, lost in thoughts.">>
@@ -380,35 +530,7 @@
     <<AddOption "The police?" "crowdPolice">>
 <</if>>
 
-<<if $crowdPolice is true && $crowdWhereTo is true && $crowdStuck is true>>
-    <<if $lineCrowd is false>>
-    <<AddOption "Talk with the people in the queue" "docksCrowd">>
-    <</if>>
-
-    <<if $lineMerchant is false>>
-    <<AddOption "Buy something from the merchant" "docksMerchant">>
-    <</if>>
-
-    <<if $lineEntertainer is false>>
-    <<AddOption "Watch the performers" "docksEntertainer">>
-    <</if>>
-
-    <<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
-        <<if $docksShip is false>>
-        <<AddOption "Observe the ship" "docksShip">>
-        <</if>>
-
-        <<if $docksCrates is false>>
-        <<AddOption "Check the crates out" "docksCrates">>
-        <</if>>
-
-        <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-        <<AddOption "Regroup" "docksRegroup">>
-        <</if>>
-    <</if>>
-<</if>>
-
-
+<<AddOption "I'm done here" "temp">>
 
 :: docksMerchant [nobr]
 <<set $lineMerchant to true>>
@@ -459,7 +581,6 @@
 <<AddParagraph "They take off their remaining shoe, shake them areound and a single coin falls in their palm.">>
 <<AddParagraph "Nomnom hands it over to the merchant.">>
 
-
 <<SetSpeaker "Street Vendor">>
 <<AddParagraph "Thank you! Till next time young'uns!">>
 
@@ -470,18 +591,25 @@
 
 <<AddParagraph "They kick Nomnom's shins and turn away.">>
 
-
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Go ahead, taste it">>
 <<AddParagraph "This is what victory truly tastes like.">>
 
-<<AddOption "Well, it does look good" "eatCannelé">>
+<<AddOption "Well, it does look good" "eatCannelé_N">>
+<<AddOption "I would really rather not..." "noEatCannelé">>
 
 
-:: eatCannelé [nobr]
+:: eatCannelé_N [nobr]
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One points for Nomnom//">>
+<<AddScore "Nomnom" 1>>
+
 <<BlankSpeaker>>
 <<AddParagraph "They both take a bite in the cannelés.">>
 
+<<include "eatCannelé">>
+
+:: eatCannelé [nobr]
 <<SetSpeaker $client_name>>
 <<AddParagraph "This is... really good.">>
 <<AddParagraph "The sweetness blends very well with the bitter taste of the rum.">>
@@ -508,33 +636,75 @@
 <<BlankSpeaker>>
 <<AddParagraph "The sound is inhuman and frankly quite scary.">>
 
-<<if $lineCrowd is false>>
-<<AddOption "Talk with the people in the queue" "docksCrowd">>
+<<if $revisit is true>>
+  <<if $king is true>>
+    <<AddOption "We are done here." "docksRegroup">>
+    <<else>>
+      <<AddOption "Are we done here?" "docksRegroup">>
+      <</if>>
+  <<else>>
+    <<include "temp">>
 <</if>>
 
-<<if $lineMerchant is false>>
-<<AddOption "Buy something from the merchant" "docksMerchant">>
-<</if>>
+:: noEatCannelé [nobr]
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//One points for Cannelé//">>
+<<AddScore "Cannelé" 1>>
 
-<<if $lineEntertainer is false>>
-<<AddOption "Watch the performers" "docksEntertainer">>
-<</if>>
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé sighs in relief.">>
 
-<<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
-    <<if $docksShip is false>>
-    <<AddOption "Observe the ship" "docksShip">>
-    <</if>>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I knew you were a great person.">>
+<<AddParagraph "Unlike this criminal right HERE.">>
 
-    <<if $docksCrates is false>>
-    <<AddOption "Check the crates out" "docksCrates">>
-    <</if>>
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom shrugged and took a bite into the soft pastry.">>
 
-    <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-    <<AddOption "Regroup" "docksRegroup">>
-    <</if>>
-<</if>>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "It's your loss!">>
+<<AddParagraph "Yum, there is truly nothing better than this.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Are they talking about the pastry?//">>
+<<AddParagraph "//Or the affronted look on their Cannelé's face?//">>
+
+<<AddOption "Wait, I'd kinda like to try now, I'm intrigued." "eatCannelé_2">>
+<<AddOption "Uh yeah, no. I think I'm good." "docksNoConsent.">>
+
+:: eatCannelé_2 [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "HA HA!">>
+<<AddParagraph "Excellent choice, my friend">>
+
+<<BlankSpeaker>>
+<<AddParagraph "*MONCH*">>
+
+<<include "eatCannelé">>
 
 
+:: docksNoConsent [nobr]
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Aww don't be like that.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom must have changed their mind on the idea of eating the three cakes.">>
+<<AddParagraph `"They are now waving the cannelé in front of" + $client_name + "'s face."`>>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "The smell is very strong. Vanilla and...?">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "STOP THIS!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They push Nomnom in an attempt to get them away but it makes the taller detective fall.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "*MONCH*">>
+<<AddParagraph "???">>
+
+<<include "eatCannelé">>
 
 :: docksEntertainer [nobr]
 <<set $lineEntertainer to true>>
@@ -545,18 +715,29 @@
 
 
 <<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "W">>
+<<AddParagraph "O">>
+<<AddParagraph "W">>
 <<AddParagraph "W O W">>
-
 
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom are //fascinated// by the basic show of the street performers.">>
 <<AddParagraph "Mesmerized.">>
 <<AddParagraph "Absolutely captivated.">>
 
-<<SetSpeaker $client_name>>
-<<AddParagraph "If I don't drag them away, we are going to stay here the whole day...">>
+
+<<AddOption "W O W" "morePerf">>
+<<AddOption "If I don't drag them away, we are going to stay here the whole day..." "temp">>
 
 
+:: morePerf [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "TODO">>
+
+<<include "temp">>
+
+
+:: temp [nobr]
 <<if $lineCrowd is false>>
 <<AddOption "Talk with the people in the queue" "docksCrowd">>
 <</if>>
@@ -569,19 +750,7 @@
 <<AddOption "Watch the performers" "docksEntertainer">>
 <</if>>
 
-<<if $lineMerchant is true && $lineCrowd is true && $lineEntertainer is true>>
-    <<if $docksShip is false>>
-    <<AddOption "Observe the ship" "docksShip">>
-    <</if>>
-
-    <<if $docksCrates is false>>
-    <<AddOption "Check the crates out" "docksCrates">>
-    <</if>>
-
-    <<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-    <<AddOption "Regroup" "docksRegroup">>
-    <</if>>
-<</if>>
+<<AddOption "Go back. (Leave)" "conditions">>
 
 
 :: docksCrates [nobr]
@@ -601,8 +770,17 @@
 <<AddParagraph "Nomnom turns around">>
 <<AddParagraph `"What about you, " + $client_name + "? Are you as //delicate// as the spoiled princess over there?"`>>
 
-<<AddOption "Bear with the smell and follow Nomnom" "docksCratesNomnom">>
-<<AddOption "Give up and stick with Cannelé" "docksNoCrates">>
+<<AddOption "Bear with the smell and follow Nomnom." "docksCratesNomnom">>
+<<AddOption "Give up and stick with Cannelé." "docksNoCrates">>
+<<AddOption "I'm going to wait... far away from you two, okay?" "docksAway">>
+
+:: docksAway[nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "I just know.">>
+<<AddParagraph "This is not something I want to be involved in.">>
+<<AddParagraph "Like, ever.">>
+
+<<include "conditions">>
 
 
 :: docksCratesNomnom [nobr]
@@ -715,7 +893,6 @@
 
 
 :: docksCratesSummon2 [nobr]
-
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "WHISPERING HOBO, I SUMMON THEE.">>
 <<AddParagraph "SHOW YOURSELF!">>
@@ -732,7 +909,6 @@
 
 
 :: docksCratesSummon3 [nobr]
-
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "WHISPERING HOBO, ANSWER YOUR LOYAL DISCIPLE.">>
 
@@ -750,7 +926,6 @@
 
 
 :: docksCratesSummon4 [nobr]
-
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom searches their pockets and somehow fishes out a candle and a match.">>
 <<AddParagraph "They light the candle and start muttering some obscure psalms">>
@@ -786,24 +961,25 @@
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "Y-yes.">>
 
-<<if $docksShip is false>>
-<<AddOption "Observe the ship" "docksShip">>
-<</if>>
+<<include "conditions">>
 
-<<if $docksLine is false>>
-<<AddOption "Go see what's happening on the quay" "docksLine">>
-<</if>>
 
-<<if $docksShip is true && $docksLine is true && $docksCrates is true>>
-  <<AddOption "Regroup" "docksRegroup">>
-<</if>>
+:: docksRevisit [nobr]
+<<set $revisit to true>>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "You sure you good? no regrets, places you want to revisit?">>
 
+<<include "conditions">>
 
 :: docksRegroup [nobr]
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "So what do we do now?">>
+<<BlankSpeaker>>
+<<AddParagraph "After walking around the pier for some more time, ">>
 
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Uh?? maybe write the rest of the story? duh.">>
 <<SetSpeaker $client_name>>
 <<AddParagraph "Oh no, I'm drunk.">>
+
+/* TODO */
+
+
+
+/* + start of Cathy scene w nomnom's shoe/cats */
