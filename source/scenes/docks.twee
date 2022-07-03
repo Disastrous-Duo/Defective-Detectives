@@ -109,6 +109,45 @@
 <<AddOption "Your answer is?" "dockPlayerKing_Shoe">>
 
 :: docRemoveShoe [nobr]
+<<SetSpeaker $client_name>>
+<<AddParagraph "//It's like... a fog in my brain...//">>
+<<AddParagraph "//I feel like I was just possessed by something?//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "No one is moving.">>
+<<AddParagraph "There is a heavy tension in the air.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "//Get a grip on yourself, me!!//">>
+
+<<BlankSpeaker>>
+<<AddParagraph `$client_name+" shakes his head, as if he was trying to dispell the strange voice in his head."`>>
+<<AddParagraph "Nomnom jumps at the getsure and suddenly goes to grab their remaining shoe, ready to hand it over.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "No!">>
+<<AddParagraph "Hum...">>
+<<AddParagraph "I'm good.">>
+<<AddParagraph "You can keep the shoe.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé remains silent, but Nomnom is visibly relieved as they straighten up.">>
+<<AddParagraph "Tension has morphed into a quiet confusion as the detectives stare at their customers, a bit bewildered.">>
+
+
+<<AddOption "We are never talking of this incident again. Let's go." "docksNextShoe">>
+<<AddOption "I am sorry, I have ni idea what came over me." "docksNextShoe">>
+
+:: docksNextShoe [nobr]
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Y-yes?">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Yes!">>
+<<AddParagraph "Anyway, hum...">>
+
+<<include "docksWhatNext">>
+
 
 :: dockPlayerKing_Shoe [nobr]
 <<set $removeshoe to true>>
@@ -244,7 +283,7 @@
 <<AddParagraph "Nomnom mutters, mimicking Cannelé.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Gneugneugneu let's avoid the marketplace!">>
+<<AddParagraph "^^Let's avoid the marketplace.^^">>
 <<AddParagraph "What are you a //genius//?">>
 
 <<if $king is true>>
