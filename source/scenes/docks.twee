@@ -617,11 +617,11 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's smile gets wider.">>
-<<AddParagraph "They take off their remaining shoe, shake them areound and a single coin falls in their palm.">>
+<<AddParagraph "They take off their remaining shoe, shakes them around and a single coin falls into their palm.">>
 <<AddParagraph "Nomnom hands it over to the merchant.">>
 
 <<SetSpeaker "Street Vendor">>
-<<AddParagraph "Thank you! Till next time young'uns!">>
+<<AddParagraph "Thank you! Till next time, young'uns!">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The seller leaves, happy about this deal.">>
@@ -771,7 +771,59 @@
 
 :: morePerf [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "TODO">>
+<<AddParagraph "The performers continued their tricks under the undivided attention of the trio.">>
+<<AddParagraph "Colorful dices and cards, jumping acts and impressive stunts.">>
+<<AddParagraph "The children gasped in awe, and the three new members of the audience followed.">>
+<<AddParagraph "The magicians kept going, always finding new ways to amaze their public.">>
+<<AddParagraph "Every second is like a new adventure.">>
+<<AddParagraph "Time itself seems to disappear under mayers of joyous music and excited cheers.">>
+
+
+<<AddOption "Ok, now is really time to go." "temp">>
+<<AddOption "O-one more..." "oneMorePerf">>
+
+
+
+:: morePerf [nobr]
+<<SetSpeaker "Performer">>
+<<AddParagraph "For this next trick, I will need an assistant from the audience!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "All the children start yelling, raising their fingers and hopping around.">>
+<<AddParagraph "Among the voices, two particularly stand out.">>
+
+
+<<SetSpeaker "Cannelé & Nomnom">>
+<<AddParagraph "ME!">>
+<<AddParagraph "ME, ME, ME!!!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The look they exchange is scathing, their rivalry reaching its peak in this instant.">>
+<<AddParagraph "If no one intervenes, it //will// turn into a bloodbath.">>
+
+<<SetSpeaker $client_name>>
+<<AddParagraph "...">>
+
+
+<<AddOption "Children, we are leaving!" "temp">>
+<<AddOption "I am kind of curious who would win, but we are running out of time..." "temp">>
+<<AddOption "I don't want anything to do with this, I don't know them and I'm off!" "leave">>
+
+:: leave [nobr]
+<<BlankSpeaker>>
+<<AddParagraph `"The moment " + $client_name + " turns his back, the pair stops quibbling and joined him in a scurry."`>>
+
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "W-wait! I am coming too!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Yes, we got too focused on the investigation for a moment, yes.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "A loud sigh echoes.">>
+<<AddParagraph "One could almost hear the eyeroll, too.">>
+
 
 <<include "temp">>
 
@@ -807,6 +859,8 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom turns around">>
+
+<<SetSpeaker "Nomnom">>
 <<AddParagraph `"What about you, " + $client_name + "? Are you as //delicate// as the spoiled princess over there?"`>>
 
 <<AddOption "Bear with the smell and follow Nomnom." "docksCratesNomnom">>
@@ -824,7 +878,9 @@
 
 :: docksCratesNomnom [nobr]
 <<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//One point for Nomnom//">>
+<<AddParagraph "//Two points for Nomnom//">>
+<<AddScore "Nomnom" 2>>
+
 
 <<BlankSpeaker>>
 <<AddParagraph "A creepy giggle escapes Nomnom's lips">>
@@ -838,10 +894,10 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Don't those crates remind you of something...">>
 <<AddParagraph "Or">>
-<<AddParagraph "Someone ?!">>
+<<AddParagraph "Someone?!">>
 
 <<SetSpeaker $client_name>>
-<<AddParagraph "AH!!">>
+<<AddParagraph "AH!">>
 
 <<AddOption "It does!" "docksCratesYes">>
 <<AddOption "You really ARE crazy!" "docksCratesNo">>
@@ -888,6 +944,8 @@
 :: docksNoCrates [nobr]
 <<SetSpeaker "Faraway Voice">>
 <<AddParagraph "//One point for Cannelé//">>
+<<AddScore "Cannelé" 1>>
+
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "He is so ridiculous, I hate their guts.">>

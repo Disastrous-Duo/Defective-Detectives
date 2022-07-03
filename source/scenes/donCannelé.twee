@@ -1,48 +1,177 @@
-1 : IT'S NOT YOUR WALLET
-a. why would you sell your own wallet
-    > 
+<<set $correct = 0>>
 
-b. so everything on this stand is yours ?
-       > 
+:: _startDonC [nobr]
+//TODO
 
+/* 1 / 6 QUESTION */
+:: C_1 [nobr]
+<<SetSpeaker "Cathy">>
+<<AddParagraph "''It's my wallet''">>
 
-2 : IT'S YASSINE'S WALLET
-a. the initials on the wallet !
-    player
-    whispering Hobo
-    Pol aufhisser
-    Nomnom
-    The cat Lady
-    Jocelaine & Joséphine
-    Cannelé
+<<AddOptionVariables "//Let's check ''i''nside then?//" "R_1" `{"c1":"?","customPuce":"I - "}`>>
+<<AddOptionVariables "//How can it be your wallet, when it's //''m''y// wallet?//" "R_1" `{"c1":"?","customPuce":"M - "}`>>
+<<AddOptionVariables "//Why would you ''s''ell your own wallet?//" "R_1" `{"c1":"?","correct": $correct + 1,"customPuce":"S - "}`>>
 
-
-b. let's check inside !
+:: R_1 [nobr]
+<<if $c1 == "?">>
+  <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
 
 
-3 : HOW DID IT GET THERE
-a. your cats 
-    > i don't control cats
-        a.
-        b.
+
+<<elseif $c1 == "?">>
+  <<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
 
 
-b. your physical prowesses
-    > do i look like I can jump around
-        a. your gift allows you to communicate with cats
-        b. your gift gives you the power to borrow cats' abilities
+
+<<else>>
+  <<AddParagraph "Magic is a symbiote organism living inside humans.">>
+<</if>>
 
 
-later :
-            > i have no fleurries
-            a. Someone I know had been using their gift without the use of fleur d'âme:
-                muffin
-                Cannelé
-                Nomnom
-                richie
-                Hobo
-                pol 
-                jocelaine
 
-if player loses : C gets attacked by furious cats as predicted by N
-drunk!player can give 3 hints before game over.
+/* 2 / 6 QUESTION */
+:: C_2 [nobr]
+<<SetSpeaker "Cathy">>
+<<AddParagraph "''Everything I sell here is mine.''">>
+
+<<AddOptionVariables "//??//" "R_2" `{"c2":"?","customPuce":"❶"}`>>
+<<AddOptionVariables "//??//" "R_2" `{"c2":"?","customPuce":"❷"}`>>
+<<AddOptionVariables "//??//" "R_2" `{"c2":"?","correct": $correct + 1,"customPuce":"❸"}`>>
+
+:: R_2 [nobr]
+
+<<if $c2 == "?">>
+  <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
+
+
+
+<<elseif $c2 == "?">>
+  <<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+
+
+<<else>>
+  <<AddParagraph "Magic is a symbiote organism living inside humans.">>
+<</if>>
+
+
+
+
+
+/* 3 / 6 QUESTION */
+:: C_3 [nobr]
+<<SetSpeaker "Cathy">>
+<<AddParagraph "''What are you trying to imply about my occupation, you rascal!''">>
+
+<<AddOptionVariables "//You sell stolen ''o''bjects.//" "R_3" `{"c3":"?","customPuce":"O"}`>>
+<<AddOptionVariables "//You curate a collection of ''l''eather items.//" "R_3" `{"c3":"?","customPuce":"L"}`>>
+<<AddOptionVariables "//You sell souvenirs to ''t''ourists.//" "R_3" `{"c3":"?","correct": $correct + 1,"customPuce":"T"}`>>
+
+:: R_3 [nobr]
+
+<<if $c3 == "?">>
+  <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
+
+
+
+<<elseif $c3 == "?">>
+  <<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+
+
+<<else>>
+  <<AddParagraph "Magic is a symbiote organism living inside humans.">>
+<</if>>
+
+
+
+
+
+/* 4 / 6 QUESTION */
+:: C_4 [nobr]
+<<SetSpeaker "Cathy">>
+<<AddParagraph "''It's my wallet''">>
+
+<<AddOptionVariables "//??//" "R_4" `{"c4":"?","customPuce":"❶"}`>>
+<<AddOptionVariables "//??//" "R_4" `{"c4":"?","customPuce":"❷"}`>>
+<<AddOptionVariables "//??//" "R_4" `{"c4":"?","correct": $correct + 1,"customPuce":"❸"}`>>
+
+:: R_4 [nobr]
+
+<<if $c4 == "?">>
+  <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
+
+
+
+<<elseif $c4 == "?">>
+  <<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+
+
+<<else>>
+  <<AddParagraph "Magic is a symbiote organism living inside humans.">>
+<</if>>
+
+
+
+
+
+/* 5 / 6 QUESTION */
+:: C_5 [nobr]
+<<SetSpeaker "Cathy">>
+<<AddParagraph "''It's my wallet''">>
+
+<<AddOptionVariables "//??//" "R_5" `{"c5":"?","customPuce":"❶"}`>>
+<<AddOptionVariables "//??//" "R_5" `{"c5":"?","customPuce":"❷"}`>>
+<<AddOptionVariables "//??//" "R_5" `{"c5":"?","correct": $correct + 1,"customPuce":"❸"}`>>
+
+:: R_5 [nobr]
+
+<<if $c5 == "?">>
+  <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
+
+
+
+<<elseif $c5 == "?">>
+  <<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+
+
+<<else>>
+  <<AddParagraph "Magic is a symbiote organism living inside humans.">>
+<</if>>
+
+
+
+
+
+/* 6 / 6 QUESTION */
+:: C_6 [nobr]
+<<SetSpeaker "Cathy">>
+<<AddParagraph "''It's my wallet''">>
+
+<<AddOptionVariables "//??//" "R_6" `{"c6":"?","customPuce":"❶"}`>>
+<<AddOptionVariables "//??//" "R_6" `{"c6":"?","customPuce":"❷"}`>>
+<<AddOptionVariables "//??//" "R_6" `{"c6":"?","correct": $correct + 1,"customPuce":"❸"}`>>
+
+:: R_6 [nobr]
+
+<<if $c6 == "?">>
+  <<AddParagraph "Magic comes from the River Spirits who lend their Gifts to humans.">>
+
+
+
+<<elseif $c6 == "?">>
+  <<AddParagraph "Magic is a type of energy ruled by physical equations that humans can understand and manipulate.">>
+
+
+
+<<else>>
+  <<AddParagraph "Magic is a symbiote organism living inside humans.">>
+<</if>>
+
+
+
+
+:: Cathy_Reply [nobr]
+
