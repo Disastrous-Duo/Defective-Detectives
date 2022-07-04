@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: Use Go 1.13
         uses: actions/setup-go@v1
@@ -28,7 +30,6 @@ jobs:
           # Optional. Commit message for the created commit.
           # Defaults to "Apply automatic changes"
           commit_message: Automated Push
-          token: ${{ secrets.GH_PAT }}
           # Optional. Local and remote branch name where commit is going to be pushed
           #  to. Defaults to the current branch.
           #  You might need to set `create_branch: true` if the branch does not exist.
