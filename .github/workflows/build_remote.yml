@@ -20,7 +20,7 @@ jobs:
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
-          tweego source -o ./remote.html
+          tweego source -o ./dist/remote.html
 
 
       # - name: Deploy
