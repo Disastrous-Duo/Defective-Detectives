@@ -188,7 +188,7 @@
 <<AddParagraph "I am going to ask you two to stop arguing.">>
 <<AddParagraph "Right. Now.">>
 
-<<BlankSpeaker>>
+<<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "*GULP*">>
 
 <<SetSpeaker $client_name>>
@@ -523,6 +523,7 @@
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "No comment.">>
 
+// Suggestion: mettre un indice "C&N don't know basic geography" pour la deduction plus tard, qu'ils ont perdu la mémoire
 
 <<if $crowdStuck is false>>
     <<AddOption "What do you mean... stuck?" "crowdStuck">>
@@ -669,6 +670,10 @@
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "DIE, YOU OLD LOSER.">>
 
+<!--
+  Suggestion: spécifier que c'ets le son de Nomnom qui s'étouffe sur le cannelé
+ -->
+
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "HUDEHOIFHOIQDHOZIMDJ">>
 
@@ -709,7 +714,7 @@
 <<AddParagraph "//Or the affronted look on their Cannelé's face?//">>
 
 <<AddOption "Wait, I'd kinda like to try now, I'm intrigued." "eatCannelé_2">>
-<<AddOption "Uh yeah, no. I think I'm good." "docksNoConsent.">>
+<<AddOption "Uh yeah, no. I think I'm good." "docksNoConsent">>
 
 :: eatCannelé_2 [nobr]
 <<SetSpeaker "Nomnom">>
@@ -738,6 +743,18 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "They push Nomnom in an attempt to get them away but it makes the taller detective fall.">>
+
+<!--
+
+Suggestion: préciser le lien entre le MONCH et la chute, comme ça:
+
+...the taller detective fall.
+
+On your face.
+
+*MONCH*
+
+-->
 
 <<SetSpeaker $client_name>>
 <<AddParagraph "*MONCH*">>
