@@ -20,12 +20,16 @@ jobs:
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
-          tweego source -o ./dist/remote.html
+          tweego source -o remote.html
 
+      - name: push to branch 'remote'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Automated Push
 
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v2
-      #   env:
-      #     PERSONAL_TOKEN: ${{ secrets.GH_PAT }}
-      #     PUBLISH_BRANCH: gh-pages
-      #     PUBLISH_DIR: ./dist
+          # Optional. Local and remote branch name where commit is going to be pushed
+          #  to. Defaults to the current branch.
+          #  You might need to set `create_branch: true` if the branch does not exist.
+          branch: remote
