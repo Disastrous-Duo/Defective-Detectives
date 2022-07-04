@@ -1,9 +1,9 @@
-name: Build
+name: Build - Master
 
 on:
   push:
     branches:
-      - master
+      - remote
 
 jobs:
   build:
@@ -16,11 +16,11 @@ jobs:
         with:
           go-version: 1.13.x
 
-      - name: build game
+      - name: build game (remote)
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
-          tweego source -o dist/index.html
+          tweego source -o dist/remote.html
 
 
       - name: Deploy
