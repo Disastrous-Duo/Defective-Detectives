@@ -28,8 +28,15 @@ jobs:
           # Optional. Commit message for the created commit.
           # Defaults to "Apply automatic changes"
           commit_message: Automated Push
-
+          token: ${{ secrets.GH_PAT }}
           # Optional. Local and remote branch name where commit is going to be pushed
           #  to. Defaults to the current branch.
           #  You might need to set `create_branch: true` if the branch does not exist.
           branch: remote
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v2
+      #   env:
+      #     PERSONAL_TOKEN: ${{ secrets.GH_PAT }}
+      #     PUBLISH_BRANCH: gh-pages
+      #     PUBLISH_DIR: ./dist
