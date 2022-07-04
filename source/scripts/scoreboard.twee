@@ -22,12 +22,25 @@ let genFlipper = (id,value) => `<div class="flipper" id="${id}">${genInnerFlippe
 // Creates the two flippers for Cannelé and Nomnom
 $(`<div class="clock">${genFlipper("scoreboard-Cannelé")} ${genFlipper("scoreboard-Nomnom")}</div>`).insertAfter("#story-author");
 
-
-
+// Add sound effect to UI bar Toggle. Didn't really know where to put it.
+document.getElementById("ui-bar-toggle").addEventListener("click",function()
+{
+  window.PlaySound("navbar");
+})
 
 // Flips a given flipper to a specific value (/!\ will be ugly if more than 1 character)
 window.flipNumber = function(el, newnumber) {
 
+var id = el[0].id;
+var colorClassName = false;
+if(id.indexOf("Nomnom") > -1)
+{
+  colorClassName = "scoreboard-Nomnom-color";
+}
+else if (id.indexOf("Cannelé") > -1)
+{
+  colorClassName = "scoreboard-Cannelé-color";
+}
 
   el.removeClass("flipping");
   $(".flipper .new").remove();
@@ -36,13 +49,28 @@ window.flipNumber = function(el, newnumber) {
 var thisbottom = el.find(".bottom").clone();
 thistop.addClass("new");
 thisbottom.addClass("new");
+
+// thisbottom.find(".flipper_text").text(newnumber);
 thisbottom.find(".flipper_text").text(newnumber);
+thisbottom.find(".flipper_text").addClass(colorClassName);
+
+// => Not flipped yet
+
 el.find(".top").after(thistop);
 el.find(".top.new").append(thisbottom);
 el.addClass("flipping");
+
 el.find(".top:not(.new)").find(".flipper_text").text(newnumber);
+el.find(".top:not(.new)").find(".flipper_text").addClass(colorClassName);
+// => Has been flipped
+
+window.PlaySound("scoreboard");
+
 setTimeout(function ()
 {
   el.find(".bottom:not(.new)").find(".flipper_text").text(newnumber);
+  el.find(".bottom:not(.new)").find(".flipper_text").addClass(colorClassName);
 }, 500);
-}
+
+
+};

@@ -19,10 +19,17 @@ $(document).on("keyup", function (e) {
 
 	// SPACE
   if ((e.keyCode == 32) && ($("#ContinueBtn"))) {
-    $("#ContinueBtn").click();
+
+		// Prevent from clicking the continue button if its currently disabled
+		if(!$("#ContinueBtn").hasClass("hideContinueBtn"))
+		{
+			  $("#ContinueBtn").click();
+		}
+
+
   }
 
-	// NUMBERS 
+	// NUMBERS
   if ((e.keyCode >= 49 && e.keyCode <= 57) && (document.getElementById("OptionList"))) {
     var list = document.getElementById("OptionList");
     var childIndex = e.keyCode - 49; // 0 for '1', 1 for '2', etc
@@ -31,10 +38,11 @@ $(document).on("keyup", function (e) {
     }
   }
 
-	// G
-	if(e.keyCode == 71)
+	// G -- DEBUG SHORTCUT  TODO: comment before any public release, will fuck with keyboard inputs
+	if(window.debug_mode && e.keyCode == 71)
 	{
 		let passageTitle = prompt("Go to which passage title? (case sensitive)");
+		State.variables["$optionmap"] = [] 
 		Engine.play(passageTitle);
 	}
 

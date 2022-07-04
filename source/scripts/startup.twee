@@ -2,4 +2,34 @@
 
 // /!\ will be executed before the template fully loads
 
-document.title = "CANNELÉ & NOMNOM - DEFECTIVE DETECTIVES";
+document.title = "CANNELÉ & NOMNOM - DEFECTIVE AGENCY";
+
+// Preload images
+  var media_prefix = "./source/media/art/";
+	var preload_list = ["note_cat.png","note_can.png","note_nom.png"];
+
+window._MediaCache = {};
+preload_list.map(function (url) {
+	var image = document.createElement('img');
+	image.src = media_prefix+url;
+	window._MediaCache[url] = image;
+});
+
+
+// remove all default line breaks
+Config.passages.nobr = true;
+
+// debug mode, used during dev
+window.debug_mode = true;
+
+// disables options not available to the player
+if(!window.debug_mode)
+{
+  Config.history.controls = false;
+  UIBar.stow();
+
+}
+else
+{
+  pullcord.quickstart();
+}

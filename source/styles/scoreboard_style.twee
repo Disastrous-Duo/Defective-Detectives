@@ -184,3 +184,13 @@
 {
   margin-left:66px;
 }
+
+.scoreboard-Nomnom-color
+{
+  color:var(--foresight-color);
+}
+
+.scoreboard-Cannelé-color
+{
+  color:var(--precog-color);
+}

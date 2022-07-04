@@ -1,74 +1,208 @@
-/* Interview : Exposition of the situation, meeting c&n, meeting the client, getting the first details and impressions*/
+:: newOffice [nobr]
+<h2 class="typewriter">Chapter 1 - Who Am I?</h2><br/>
 
-:: Office [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "The girl nods as the man stands up and dust their clothes.">>
+<<AddParagraph "">>
+<<audio "bard_bgm"  volume 0 fadeto 0.5>>
+<<AddParagraph "Once inside, one thing becomes glaringly obvious.">>
+<<AddParagraph "The room is small.">>
+<<AddParagraph "After consideration, small is too nice a way to describe the //tiny// cubicle.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
+<<AddOption "Talk to the detectives." "talkDetective">>
+<<AddOption "Look around." "lookAround">>
+<<AddOption "Wait for the detectives' directions." "waitDetectives">>
+
+:: talkDetective [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "Hum, yeah… About this agency…">>
 
 <<SetSpeaker "?">>
-<<AddParagraph "Please, come in. I am Cannelé and this is-">>
+<<AddParagraph "Oh, right!">>
+<<AddParagraph "I am Cannelé and this is-">>
 
 <<SetSpeaker "??">>
 <<AddParagraph "Nomnom. The only real detective here.">>
 
-<<AddOption "Enter" "interviewInside">>
-<<AddOption "Take a step back" "interviewOutside">>
-
-
-:: interviewOutside [nobr]
 <<BlankSpeaker>>
-<<AddParagraph "The girl's smile widens as they grab your arm.">>
+<<AddParagraph "The girl - Cannelé, ignores the jab, which seems to take a lot out of their self control.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I am very sorry, could you please wait a moment for us to take care of…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom makes a broad gesture towards the pitiful state of the office.">>
+<<AddParagraph "Cannelé's smile is a bit appologetic.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please, come in.">>
+<<AddParagraph "We were not really expecting anyone so we didn't bother cleaning up…">>
+<<AddParagraph "But don't worry, it'll only take a minute.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The process is absolutely painless!">>
+<<AddParagraph "^^Unlike my knee right now^^">>
 
 <<BlankSpeaker>>
-<<AddParagraph "You don't have a choice : their grip is strong and maybe a little desperate">>
-<<AddParagraph "A terrifying growling suddenly resounds.">>
-
-<<AddParagraph "It sounds hellish and you realize that it's Cannelé's stomach.">>
-<<AddParagraph "Probably Nomnom's as well.">>
+<<AddParagraph "A second later, they're moving. Fast.">>
+<<AddParagraph "Faster than anything your empty memory has ever seen before.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "...">>
-
-<<AddOption "Enter" "interviewInside">>
-
-:: interviewInside [nobr]
+<<AddParagraph "//I'm kinda relieved because it's really disgusting…//">>
 
 <<BlankSpeaker>>
-<<AddParagraph "After stepping inside, one thing becomes glaringly obvious.">>
-<<AddParagraph "The room is small.">>
-<<AddParagraph "After consideration, small is a nice way to describe the //tiny// cubicle.">>
+<<AddParagraph "The room is in such a messy and pitiful state that there is nowhere to sit.">>
+<<AddParagraph "All the space is engulfed under various objects, papers and rubbish.">>
+<<AddParagraph "The detectives have started cleaning up…">>
+<<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.">>
+<<AddParagraph "You are unable to sit or even move one inch without stumbling on a random item.">>
 
-<<AddOption "Look around" "interviewInspect">>
+<<AddOption "Observe the scene." "interviewInspect">>
+
+
+:: lookAround [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "As you decide to look around, you see the detectives start moving unnaturally.">>
+<<AddParagraph "They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity.">>
+
+
+<<SetSpeaker "?">>
+<<AddParagraph "H-hi I'm Cannelé, a great detective.">>
+
+<<SetSpeaker "??">>
+<<AddParagraph "And I'm Nomnom. The greatest detective.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They are fidgeting as they glance at each other, before seemingly reaching an agreement.">>
+<<AddParagraph "Somehow, even their unspoken communication is //loud//…">>
+
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "A minute, please!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "And then they're running around, like two hurricanes in a bottle, as they try to clean the office up.">>
+<<AddParagraph "Their collaboration skills are so bad and the room so tiny, that they do nothing but get in each other's way.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I'm kinda relieved because it's really disgusting…//">>
+<<AddParagraph "//There's nowhere to sit, everything is overtaken under layers and layers of rubbish.//">>
+
+<<include "interviewInspect">>
+
+
+
+:: waitDetectives [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "You are standing in the entrance of the shoebox sized office.">>
+<<AddParagraph "No one is talking.">>
+<<AddParagraph "You are waiting for the detectives to do something.">>
+<<AddParagraph "Anything.">>
+<<AddParagraph "But they're just staring back.">>
+<<AddParagraph "They look…">>
+<<AddParagraph "Lost.">>
+<<AddParagraph "Utterly so.">>
+<<AddParagraph "As if they were expecting //the client// to know what to do.">>
+<<AddParagraph "Ah.">>
+<<AddParagraph "They're looking slightly desperate now.">>
+<<AddParagraph "The atmosphere is awkward.">>
+<<AddParagraph "//Terribly// awkward.">>
+<<AddParagraph "Another moment passes in silence.">>
+<<AddParagraph "It's endless.">>
+<<AddParagraph "Each second…">>
+<<AddParagraph "Feels like an hour.">>
+<<AddParagraph "You are looking at them;">>
+<<AddParagraph "They're looking at you.">>
+<<AddParagraph "The silence stretches…">>
+<<AddParagraph "Until you can't take it anymore.">>
+<<AddParagraph "">>
+
+
+<<AddOption "«Hum…»" "nextWaitDetectives">>
+<<AddOption "«Excuse me??»" "nextWaitDetectives">>
+<<AddOption "«What are you waiting for…»" "nextWaitDetectives">>
+
+
+:: nextWaitDetectives [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "At this, the two detectives seem to snap out of a daze.">>
+
+<<SetSpeaker "?">>
+<<AddParagraph "Oh! Right! Hum, welcome to my-">>
+
+<<SetSpeaker "??">>
+<<AddParagraph "You said this already, stop being useless.">>
+<<AddParagraph "Welcome to MY agency.">>
+
+<<SetSpeaker "?">>
+<<AddParagraph "Ugh.">>
+<<AddParagraph "Anyway, I am Cannelé and this is-">>
+
+<<SetSpeaker "??">>
+<<AddParagraph "Nomnom. The only real detective here.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The girl - Cannelé, ignores the jab.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I am very sorry, could you please wait a moment for us to take care of…">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom makes a broad gesture towards the pitiful state of the office.">>
+<<AddParagraph "Cannelé's smile is a bit appologetic.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "We were not really expecting anyone so we didn't bother cleaning up…">>
+<<AddParagraph "But don't worry, it'll only take a minute.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "The process is absolutely painless!">>
+<<AddParagraph "^^Unlike my knee right now^^">>
+
+<<BlankSpeaker>>
+<<AddParagraph "A second later, they're moving. Fast.">>
+<<AddParagraph "Faster than anything your empty memory has ever seen before.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I'm kinda relieved because it's really disgusting…//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The room is in such a messy and pitiful state that there is nowhere to sit.">>
+<<AddParagraph "All the space is engulfed under various objects, papers and rubbish.">>
+<<AddParagraph "The detectives have started cleaning up…">>
+<<AddParagraph "But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.">>
+<<AddParagraph "You are unable to sit or even move one inch without stumbling on a random item.">>
+
+<<AddOption "Observe the scene." "interviewInspect">>
+
 
 :: interviewInspect [nobr]
+<<BlankSpeaker>>
 <<AddParagraph "To the left, an old couch is crumbling under a pile of mess.">>
 <<AddParagraph "On the other side, a sink and some cups. ">>
 <<AddParagraph "In front of you, the wall is scattered with papers.">>
-<<AddParagraph "A small door on the side reads : //Petit Coin//. It must be the toilet : you are not sure you want to explore this particular area of the run-down office.">>
+<<AddParagraph `"A small door on the side reads : "+tooltip("//Petit Coin//","The washroom, the toilet, the WC, the loo; you get it.")+". It must be the toilet : you are not sure you want to explore this particular area of the run-down office."`>>
+<<AddParagraph "">>
 
 <<set $interview_left to false>>
 <<set $interview_right to false>>
 <<set $interview_wall to false>>
 
 
-<<AddOption "Inspect couch on the left" "Left">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
-<<AddOption "Inspect sink on the right" "Right">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
-<<AddOption "Inspect the wall" "Wall">>
+<<AddOption "Inspect couch on the left." "Left">>
+<<AddOption "Inspect sink on the right." "Right">>
+<<AddOption "Inspect the wall." "Wall">>
 
 
 :: Left [nobr]
 <<set $interview_left to true>>
 <<BlankSpeaker>>
-<<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth">>
+<<AddParagraph "The beat-up couch thrones in the room : it must take half the space of the booth.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "''*BANG*''">>
+<<PlaySound "small_bang">>
 
 <<AddParagraph "It looks a little ridiculous but oddly fitting in the strange office.">>
 
@@ -77,19 +211,17 @@
 
 <<BlankSpeaker>>
 <<AddParagraph "From the rubbish cluttering it, emerge a couple blankets, newspapers and a half-eaten croissant.">>
-
-<<SetSpeaker "Leathery Voice">>
-<<AddParagraph "//It hurts..//">>
+<<AddParagraph "">>
 
 <<if $interview_right is false>>
-  <<AddOption "Inspect sink on the right" "Right">>
+  <<AddOption "Inspect sink on the right." "Right">>
 <</if>>
 <<if $interview_wall is false>>
-  <<AddOption "Inspect the wall" "Wall">>
+  <<AddOption "Inspect the wall." "Wall">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-  <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 
@@ -104,21 +236,27 @@
 <<BlankSpeaker>>
 <<AddParagraph "Behind the stool, the sink is filled with three cups. Next to it, a water boiler sits on an open cupboard that's almost empty.">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "//This kitchen is almost ''desolate''… somehow this is not very re-//">>
+
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Why do you HAVE to be a pain in my-">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "//-assuring.//">>
+
 <<BlankSpeaker>>
-<<AddParagraph "This semblant of a kitchen is really intriguing.">>
+<<AddParagraph "">>
 
 <<if $interview_left is false>>
-  <<AddOption "Inspect couch on the left" "Left">>
+  <<AddOption "Inspect couch on the left." "Left">>
 <</if>>
 <<if $interview_wall is false>>
-  <<AddOption "Inspect the wall" "Wall">>
+  <<AddOption "Inspect the wall." "Wall">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-  <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
 :: Wall [nobr]
@@ -127,127 +265,322 @@
 <<AddParagraph "A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please refrain from touching the board, it's quite-">>
+<<AddParagraph "Please refrain from touching the conspiracy board, it's quite-">>
 
 <<BlankSpeaker>>
 <<AddParagraph "A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Unstable. That board is unstable. So is Cannelé, beware.">>
+<<AddParagraph "Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.">>
+<<PlaySound "light_flicker" "1s">>
 
 <<BlankSpeaker>>
-<<AddParagraph "''*WHAM*''">>
+<<AddParagraph `tooltip("''*WHAM*''","The Sound of Divine Retribution")`>>
+<<PlaySound "whip">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "OUCH!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 
 <<if $interview_left is false>>
-  <<AddOption "Inspect couch on the left" "Left">>
+  <<AddOption "Inspect couch on the left." "Left">>
 <</if>>
 <<if $interview_right is false>>
-  <<AddOption "Inspect sink on the right" "Right">>
+  <<AddOption "Inspect sink on the right." "Right">>
 <</if>>
 
 <<if $interview_right is true && $interview_left is true && $interview_wall is true>>
-    <<AddOption "Turn back to the two detectives" "interviewTwoDetectives">>
+    <<AddOption "«Wow…»" "endCleaning">>
 <</if>>
 
+
+:: endCleaning [nobr]
+<<BlankSpeaker>>
+<<AddParagraph `"Before your eyes, the dump had slowly transformed into an "+tooltip("actual, proper office.","As actual and proper as it can be…")`>>
+<<AddParagraph "You barely even recognize the place.">>
+<<AddParagraph "The rubbish had mysteriously disappeared, hidden in a dark corner.">>
+<<AddParagraph "The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.">>
+<<AddParagraph "Your need to flee the place is still there but it has slightly decreased.">>
+<<AddParagraph "">>
+
+<<AddOption "''*BANG*''" "conspiracyBoard">>
+
+:: conspiracyBoard [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The conspiracy board has fallen over in a huge commotion.">>
+<<PlaySound "loud_bang">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "AGAIN?!">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I warned you it was @@.foresight;unstable@@…">>
+<<PlaySound "light_flicker" "1s">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They both sigh and start to crouch and pick up the scattered documents.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "There is one piece missing…">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "I think I saw it under the table?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "They continue rummaging through the mess of documents.">>
+<<AddParagraph "You see a colored paper sticking out from under the coffee table.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph `"Are you looking for this "+note("post-it",{type:"tuto-board-trigger"})+"?"`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Perfect! That's the one!">>
+<<AddParagraph "You can just click on it!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "And stick it right back on the board by tugging the handle right on top of the screen.">>
+
+/*TODO: Disable only if when it is called, the variable asociated with the tutorial being completed is not true. because you can complete it before it being called, if you do it when you click the post-it.*/
+<<DisableContinueButton "window.pullcord.completed_tutorial" "You should really take this post-it, you know.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I got it!//">>
+
+
+<<AddOption "Turn back to the two detectives." "interviewTwoDetectives">>
 
 
 :: interviewTwoDetectives [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "The two detectives are staring back, blankly.">>
-<<AddParagraph "Almost... expecting.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "So uhm, Nomme Nomme and? Cannelé? Cannelé like the mini cake?">>
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "It's pronounced ''non-non'', Nomnom.">>
-
-<<BlankSpeaker>>
-<<AddParagraph "Cannelé just grumbles in response.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "A-ah, I see.">>
+<<AddParagraph "">>
 
 <<set $interview_nomnom to false>>
 <<set $interview_cannele to false>>
+<<set $interview_speak to false>>
 
-
-<<AddOption "Observe Nomnom" "interviewNomnom">>
-<<AddOption "Study Cannelé" "interviewCannelé">>
+<<AddOption "Observe Nomnom." "interviewNomnom">>
+<<AddOption "Study Cannelé." "interviewCannelé">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
 
 
 :: interviewCannelé [nobr]
 <<set $interview_cannele to true>>
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.">>
-<<AddParagraph "Their skin is deep brown and their round face is framed by a tangle of soft, black curls that reach the middle of their back.">>
+<<AddParagraph "Their skin is deep brown and their round face is framed by a tangle of soft, black curls that turn a deep red as they reach the middle of their back.">>
 <<AddParagraph "Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.">>
 
-<<AddParagraph "Black ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
+<<AddParagraph "Bright ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.">>
 <<AddParagraph "However, what truly stands out is Cannelé’s clothing.">>
-<<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end...">>
-<<AddParagraph "It creates a ''stark'' contrast with the pitiful state of the cramped office.">>
+<<AddParagraph "The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end…">>
+<<AddParagraph "It creates a //stark// contrast with the pitiful state of the cramped office.">>
+<<AddParagraph "">>
+
+<<AddOption "//Their attitude…//" "canneleAttitude">>
+<<AddOption "//Their clothes…//" "canneleClothes">>
+<<AddOption "//Why are they standing on the couch…//" "canneleCouch">>
+
+:: choicesCannelé [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "">>
+<<AddOption "Look at Cannelé again." "choicesCannelé2">>
+<<AddOption "Turn to Nomnom." "interviewNomnom">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
+
+:: choicesCannelé2 [nobr]
+<<AddOption "//Cannelé's attitude…//" "canneleAttitude">>
+<<AddOption "//Cannelé's clothes…//" "canneleClothes">>
+<<AddOption "//Why is Cannelé standing on the couch…//" "canneleCouch">>
 
 
-<<if $interview_nomnom is true>>
-  <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "Interview">>
-  <<BlankSpeaker>>
-  <<AddParagraph "">>
-  <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "Interview">>
-  <<BlankSpeaker>>
-  <<AddParagraph "">>
-  <<AddOption "Why... are they standing on the couch..." "Interview">>
+:: canneleAttitude [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//There is something about them…//">>
+<<AddParagraph "//Somehow, they look like they’re coming from nobility.//">>
 
-  <<else>>
-    <<AddOption "Somehow, they look like they’re coming from nobility. *Fallen* nobility..." "interviewNomnom">>
-    <<BlankSpeaker>>
-    <<AddParagraph "">>
-    <<AddOption "Do I want to trust someone who seems to put more money in clothes than actual vital needs like a proper office? Do I even *have* a choice..." "interviewNomnom">>
-    <<BlankSpeaker>>
-    <<AddParagraph "">>
-    <<AddOption "Why... are they standing on the couch..." "interviewNomnom">>
-<</if>>
+<<BlankSpeaker>>
+<<AddParagraph "You contemplate the expensive clothes, the smug grin and the total lack of common sense.">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "Fallen //nobility…//">>
+
+<<BlankSpeaker>>
+<<AddParagraph `"Your eyes go back to the "+ note("golden tattoo",{txt:"Intricate puzzle-like golden ink is painting both of Cannelé's foreams.",type:'clue', fontSize:15})+" running up their wrists."`>>
+<<AddParagraph "The design looks like a maze, pieces of an intricate puzzle that have been taken apart.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//Delinquent// nobility//??//">>
+
+<<include choicesCannelé>>
+
+
+:: canneleClothes [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The clothes Cannelé wears resembles like those worn by models and very rich people.">>
+<<AddParagraph "The fabric looks soft and thick, and the cut of the outfit as if it had been tailored to fit them.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//These clothes…//">>
+<<AddParagraph "//Look more expensive than the whole building.//">>
+<<AddParagraph "//Do I really want to trust someone who seems to put more money in clothes than actual vital needs like a proper office?//">>
+<<AddParagraph "//…//">>
+<<AddParagraph "//Do I even //have// a choice?//">>
+
+<<include choicesCannelé>>
+
+:: canneleCouch [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé is standing proudly on the sofa.">>
+<<AddParagraph "They are resting their elbow on the top of Nomnom's head as the latter tries to swat the arm away.">>
+<<AddParagraph "When they catch your confused expression, Cannelé smiles and hops once on the couch.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I think I get what's happening here.//">>
+<<AddParagraph `"//Both of them have this constant "+ note("petty rivalry-siblings fight",{txt:"CANNELÉ & NOMNOM'S RELATIONSHIP?",type:'question'})+" going on…//"`>>
+<<AddParagraph "//And Cannelé is //rather small// compared to Nomnom, who is// rather tall.">>
+<<AddParagraph "//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//">>
+<<AddParagraph "//It's suprisingly…//">>
+<<AddParagraph "//Ineffective.//">>
+
+<<include choicesCannelé>>
 
 :: interviewNomnom [nobr]
 <<set $interview_nomnom to true>>
 <<BlankSpeaker>>
 <<if $interview_cannele is true>>
-  <<AddParagraph "Nomnom seems significantly taller than Cannelé (Nonobstant the couch).">>
+  <<AddParagraph "Nomnom seems significantly taller than Cannelé (not counting the couch).">>
 
   <<else>>
-      <<AddParagraph "Nomnom seems significantly taller than Cannelé.">>
+    <<AddParagraph "Nomnom seems significantly taller than Cannelé.">>
 <</if>>
 
 <<AddParagraph "It might be just an impression given by their hair, though.">>
 
-<<AddParagraph "Reminiscent of a black cloud rising towards the sky, Nomnom’s hair sculpt their head into a roughly pineconed shape.">>
+<<AddParagraph `"Reminiscent of a black cloud rising towards the sky, Nomnom’s hair sculpt their head into a roughly "+tooltip("pineconed shape","Have you ever seen a pinecone? Close your eyes. Picture a tree ready to fight against the scorch of the sun. This is what pinecones want to be when they grow up.")+ "."`>>
 
 <<AddParagraph "Their navy blue trench coat contrasts their warm tan skin nicely. Even though their shoes are of rather good quality, they also seem to be worn-out in unusual places.">>
 
-<<AddParagraph "If one had to guess, they’d probably say that the left one is a bit more //aerodynamic// than the other.">>
+<<AddParagraph "If one had to guess, they’d probably say that the left shoe is slightly more //aerodynamic// than the other.">>
 <<AddParagraph "But why…?">>
+<<AddParagraph "">>
+
+<<AddOption "//Their hair…//" "nomnomHair">>
+<<AddOption "//Their coat…//" "nomnomCoat">>
+<<AddOption "//I can’t help it, but this left shoe really intrigues me…//" "nomnomLeftShoe">>
+
+:: choicesNomnom [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "">>
+<<AddOption "Look at Nomnom again." "choicesNomnom2">>
+<<AddOption "Turn to Cannelé." "interviewCannelé">>
+<<AddOption "Attempt communication (Skip.)" "interviewSpeak">>
+
+:: choicesNomnom2 [nobr]
+<<AddOption "//Nomnom's hair…//" "nomnomHair">>
+<<AddOption "//Nomnom's coat…//" "nomnomCoat">>
+<<AddOption "//I can’t help it, but Nomnom's left shoe really intrigues me…//" "nomnomLeftShoe">>
+
+:: nomnomHair [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom's hair gather in a fluffy jet black cloud, making their head look like it's about to float away and join its white cousins in the sky.">>
+<<AddParagraph "Despite its imposing mass, they managed to make it stand in a perhaps unstable, but surpringly perduring equilibirum.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I can see that Nomnom puts a lot of care in their hair. They look proud of it!//">>
+<<AddParagraph "//Something strikes me as strange, though. I hope I'm not being too judgemental, but it seems a bit…//">>
+<<AddParagraph "//…dehydrated?//">>
+<<AddParagraph "//Usually this happens when people don't know how to take care of their specific hair type.//">>
+<<AddParagraph `"//I wonder how they could have grown up without having that "+note("knowledge",{txt:"Nomnom does not know how to care for their hair",type:'clue'})+".//"`>>
+
+<<include choicesNomnom>>
+
+:: nomnomCoat [nobr]
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom's coat is old and patched up at unusual places.">>
+<<AddParagraph "On the armpits, traces of flour and breadcrumbs remain.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "This happens when you buy bread and tuck it on under your arm.">>
+<<AddParagraph `"So Nomnom must be the one who buys the daily "+tooltip("baguette","You don't know what a baguette is?")+"."`>>
+<<AddParagraph "That's surprisingly responsible!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The left pocket of the coat seems to be full.">>
+<<AddParagraph "It has been hastily sewn back together, indicating it must //often// be full.">>
+<<AddParagraph "A dry croissant peeks out of it.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "And they also buy pastries, hm.">>
+<<AddParagraph "They have great taste.">>
+<<AddParagraph "I can work with that!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom's arm shifts, and something shiny catches your eyes.">>
+<<AddParagraph "The light bounces off from a reflective surface on their wrists.">>
+<<AddParagraph "Reflective //surfaces//, plural.">>
+<<AddParagraph "Nomnom is wearing two watches.">>
+<<AddParagraph "On the same wrist.">>
+<<AddParagraph "And none of them are on time.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "...I'm confused and weirded out again.">>
+
+<<include choicesNomnom>>
 
 
-<<if $interview_cannele is true>>
-  <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "Interview">>
-  <<BlankSpeaker>>
-  <<AddParagraph "">>
-  <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "Interview">>
-  <<BlankSpeaker>>
-  <<AddParagraph "">>
-  <<AddOption "I can’t help it, but this left shoe really intrigues me..." "Interview">>
+:: nomnomLeftShoe [nobr]
 
-  <<else>>
-    <<AddOption "I thought their hair was a bird’s nest but it’s more of an artistic chaos, I guess…" "interviewCannelé">>
-    <<BlankSpeaker>>
-  <<AddParagraph "">>
-    <<AddOption "I am trying to guess something about this person’s investigation skills but nothing comes to mind… " "interviewCannelé">>
-    <<BlankSpeaker>>
-  <<AddParagraph "">>
-    <<AddOption "I can’t help it, but this left shoe really intrigues me..." "interviewCannelé">>
-<</if>>
+<<SetSpeaker "???">>
+<<AddParagraph "//Now that I'm looking more closely, these shoes aren't from the same pair at all.//">>
+
+<<AddParagraph "//The right one has a square toe and a whoolly texture, while the left one is made of leather and shaped like an almond.//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Instinctively, you understand that if you had to throw one of the shoes very far, the left one would probably fly better than the right.">>
+
+<<AddParagraph "It might be correlated with the reason why Nomnom currently has mismatching footwear.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph `"//I can't help but have a bad feeling about this "+note("shoe",{txt:"Nomnom's aerodynamic left shoe", type:"clue"})+".//"`>>
+
+<<include choicesNomnom>>
+
+
+:: interviewSpeak [nobr]
+<<set $interview_speak to true>>
+
+<<SetSpeaker "???">>
+<<AddParagraph `"So uhm, "+note("Nomme Nomme",{txt:"Nomnom", type:"picture", src:"note_nom.png"})+" and… "+note("Cannelé",{txt:"Cannelé", type:"picture", src:"note_can.png"})+", right?"`>>
+<<AddParagraph `"Cannelé like the "+tooltip("mini cake","A Cannelé is a small pastry, it tastes like vanilla!")+ "?"`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph `"It's pronounced //non-non//, "+note("Nomnom",{txt:"Nomnom is pronounced as non-non (no-no) and means literally “name-name” in French…", type:"clue", fontSize:16})+ "?"`>>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé just grumbles in response.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "What are you grumbling for?">>
+<<AddParagraph `note("Cannelé",{txt:"Cannelé… the name seems to come from a Falaisant pastry? And Cannelé definitely seem to be unhappy with that name.", type:"clue", fontSize:13})+"'s a great name!"`>>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "It's literally shit and I hate you, //''Nomnom''//">>
+
+<<BlankSpeaker>>
+<<AddParagraph "The argument seems inconsequential and terribly pointless.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "A-ah, I see.">>
+<<AddParagraph "//They remind me of siblings…//">>
+<<AddParagraph "//A pair of //extremely annoying// siblings.//">>
+
+<<AddOption "Bring the topic back to what matters to you : your amnesia." "Interview">>
 
 
 :: Interview [nobr]
@@ -255,7 +588,7 @@
 <<AddParagraph "The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Please, have a sit. Would you like a drink?">>
+<<AddParagraph "Please, have a seat. Would you like a drink?">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "Oh, uh, gladly. I would love a cup of-">>
@@ -271,13 +604,17 @@
 <<AddParagraph "They bring the cups over, ignoring Cannelé, and place one on the table.">>
 <<AddParagraph "A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.">>
 <<AddParagraph "After inspection, it looks like water that smells of coffee.">>
+<<AddParagraph "You think you see the surface of the liquid @@.foresight;glow@@ blue for a second.">>
+<<AddParagraph "Then; it's gone.">>
 
-<<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is leaving through the door, a huge stain on his coat. He looks angry." >>
 
-<<AddParagraph "Nomnom picks up the coffee cup again, and puts it slightly farther on the table.">>
+/*appear once fast then disappear and normal effect*/
+<<Foresight "19.3" "seconds" "Pieces of a broken cup, lying on the ground. The client is shouting in pain, a huge stain on his pants." >>
+
+<<AddParagraph "Nomnom quickly picks up the coffee cup again, and puts it slightly farther on the table.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "It's still a //tad bit// hot.">>
+<<AddParagraph "You should wait a bit before drinking it. It's still a //tad bit// hot.">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "So you have-">>
@@ -285,46 +622,56 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Amnesia. Can you tell us everything you remember?">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
 <<set $interview_identity to false>>
 <<set $interview_event to false>>
 <<set $interview_coffee to false>>
+<<set $firstgiftcannele to false>>
 
 <<AddOption "Who am I?" "Identity">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
-<<AddOption "What happened?" "Event">>
-<<BlankSpeaker>>
-<<AddParagraph "">>
+<<AddOption "What happened to me?»" "Event">>
 <<AddOption "What's wrong with this coffee?" "Coffee">>
 
 
 :: Identity [nobr]
+<<audio ":playing" fadeout>>
 <<set $interview_identity to true>>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"The client looks terribly old, "+slot("around 25 years old", 1)+"."` >>
+<<if $firstgiftcannele is false>>
+  <<AddParagraph  "From the corner of your eyes, you see @@.precog;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
+  <<set $firstgiftcannele to true>>
+<</if>>
+<<AddParagraph  `"@@.precog;The client looks terribly old, "+slot("around 25 years old", 1)+".@@"` >>
+<<PlaySound "slot">>
 
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "What's your name? Occupation? Monthly salary?">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "I can't remember anything. It's all... foggy in my mind. Like it's all there but I can't //remember//.">>
+<<AddParagraph "I can't remember anything. It's all… foggy in my mind. Like it's all there but I can't //remember//.">>
 <<AddParagraph "I have no idea where I am or where I live, I am completely lost.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "What about your gift?">>
+<<AddParagraph "What about your magical Gift?">>
 
-<<AddOption "What about my gift ?" "Gift">>
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Do you even remember what a gift is?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
+<<AddOption "«Of course, I do» (Bluff.)" "giftYes">>
+<<AddOption "«A what now?»" "giftNo">>
 
 
-:: Gift [nobr]
-
-<<SetSpeaker "Nomnom">>
-<<AddParagraph "Do you know what a gift is ?">>
-
+:: giftYes [nobr]
 <<SetSpeaker "???">>
-<<AddParagraph "Yes, I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what ''real'' coffee looks like.">>
+<<AddParagraph "I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what //real// coffee looks like.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "//Nomnom squints, unconvinced.//">>
@@ -333,7 +680,7 @@
 <<AddParagraph "Yeah ? Give me the Laws of Magic then.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Yeah ? Give me the first 5 multiplication tables then.">>
+<<AddParagraph "^^Yeah ? Give me the first 5 multiplication tables then.^^">>
 
 <<BlankSpeaker>>
 <<AddParagraph "They look at each other in confusion.">>
@@ -342,54 +689,51 @@
 <<AddParagraph "I meant the Laws of Magic.">>
 
 <<SetSpeaker "???">>
+<<AddParagraph "//Wait, what// were //the Laws of magic again?//">>
+<<AddParagraph "//The name is so familiar but it's like looking into an empty drawer, I can't remember them.//">>
+<<AddParagraph "//This looks super important too…//">>
 <<AddParagraph "This is really not necessary.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Do not worry, you are ''not'' our first case of amnesia, we ''absolutely'' know what we are doing.">>
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
 
-<<AddOption "If you insist..." "laws">>
+<<AddOption "«If you insist…»" "theory1">>
 
 
-:: laws [nobr]
-<<SetSpeaker "???">>
-<<AddParagraph "Rule #1 : Magic is a universal gift, that can be activated after eating a Fleur d'Ame.">>
-<<AddParagraph "Rule #2 : Magic manifests itself in a way that is unique to each individuals, as a reflection of their innermost identity.">>
-
-<<BlankSpeaker>>
-<<AddParagraph "Cannelé and Nomnom nod enthusiastically.">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "Rule #3 : Magic can only be channeled through a physical medium. Living beings cannot serve as mediums.">>
+:: giftNo [nobr]
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Okay so basically, a ''Gift'' is what we call a person's magical ability.">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "AH! See, I was rig-">>
-
-<<BlankSpeaker>>
-<<AddParagraph "Cannelé suddenly elbows Nomnom in the stomach and they keel over in pain. Cannelé's smile is so stiff it looks menacing.">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "Excellent! And do you know what your own gift is- ''yelp''">>
-
-<<BlankSpeaker>>
-<<AddParagraph "The detectives glare at each other. This is going to be long.">>
+<<AddParagraph "They are ruled by Three Laws.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "No, I have no idea...">>
+<<AddParagraph "//Wait, the Three Laws of Magic… this kind of rings a bell.//">>
+<<AddParagraph "//This looks super important too…//">>
+<<AddParagraph "Y-yeah, I think I remember something like that.">>
 
-<<if $interview_event is false>>
-<<AddOption "What happened ?" "Event">>
-<</if>>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Let's check what you remember then!">>
 
-<<if $interview_coffee is false>>
-<<AddOption "What's wrong with this coffee ?" "Coffee">>
-<</if>>
+<<BlankSpeaker>>
+<<AddParagraph "You start sweating now: this is not going to end well for you.">>
 
-<<if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
-  <<AddOption "Take a deep breath" "Contract">>
-<</if>>
+<<SetSpeaker "???">>
+<<AddParagraph "This is //really// not necessary.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph `"Do not worry, you are "+note("//not// our first case",{txt:"Other cases of amnesia",type:"clue"})+" of amnesia, we //absolutely// know what we are doing."`>>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I missed the timing to back out and come clean…//">>
+
+<<AddOption "«Erm…»" "theory1">>
 
 
 :: Event [nobr]
@@ -397,17 +741,16 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "How did you find this place?">>
 
-
 <<SetSpeaker "???">>
-<<AddParagraph "I tried to go to the police but they couldn't help... That's when I found the flyer.">>
+<<AddParagraph "I tried to go to the police but they couldn't help… That's when I found the flyer.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "The flyer on the table reads: ''AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//. __Will Help__ you find anything you ==misplaced== lost. Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__">>
+<<AddParagraph "The flyer on the table reads:">>
+<<AddParagraph "@@.flyer;AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//.<br/> __Will Help__ you find anything you ==misplaced== lost.<br/>Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__@@">>
 <<AddParagraph "It's barely legible and mostly just confusing.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "I was quite desperate you see...">>
-
+<<AddParagraph "I was quite desperate you see…">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SEE! I KNEW HANDING OUT FLYERS WOULD BE A GREAT IDEA!">>
@@ -420,42 +763,48 @@
 <<AddParagraph "So you are looking for help to regain memory, is that right?">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"There are suspicious stains on his coat. "+slot("Is it food", 1)+"?"` >>
+<<AddParagraph "Cannelé's gaze sweeps over you, as they inspect your appearance.">>
+
+<<BlankSpeaker>>
+<<if $firstgiftcannele is false>>
+  <<AddParagraph  "From the corner of your eyes, you see @@.precog;something@@ moving on Cannelé's arm." >>
+  <<AddParagraph  "It's too fast and when you look again, you don't see anything." >>
+  <<set $firstgiftcannele to true>>
+<</if>>
+<<AddParagraph  `"@@.precog;There are suspicious stains on his coat. "+slot("Is it food", 1)+"?@@"` >>
+<<PlaySound "slot">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing...">>
+<<AddParagraph "That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing…">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Yes? What happened to your wallet?">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "A cat stole it... and sneaked away.">>
-
-<<SetSpeaker "Leathery Voice">>
-<<AddParagraph "//giggle//">>
-
-<<SetSpeaker "???">>
-<<AddParagraph "???">>
+<<AddParagraph "A cat stole it… and sneaked away.">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Do you have any other personal item that might help identify you?">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Nothing. I looked into all my pockets, but I have nothing...">>
+<<AddParagraph "Nothing. I looked into all my pockets, but I have nothing…">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "So, a cat stole the only lead you had about your identity. I see.">>
+<<AddParagraph `"So, a "+ note("cat", {"txt": "WANTED", type:"picture", src:"note_cat.png"}) +" stole the only lead you had about your identity. I see."`>>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $interview_identity is false>>
-<<AddOption "Who am I ?" "Identity">>
+<<AddOption "«Who am I?»" "Identity">>
 <</if>>
 
 <<if $interview_coffee is false>>
-<<AddOption "What's wrong with this coffee ?" "Coffee">>
+<<AddOption "«What's wrong with this coffee?»" "Coffee">>
 <</if>>
 
-<<if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
-  <<AddOption "Take a deep breath" "Contract">>
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
 
 
@@ -463,7 +812,7 @@
 <<set $interview_coffee to true>>
 
 <<SetSpeaker "???">>
-<<AddParagraph "The coffee... is very special here.">>
+<<AddParagraph "The coffee… is very special here.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom's expression freezes as they try to maintain a polite smile.">>
@@ -475,10 +824,10 @@
 <<AddParagraph "''*gulps*''">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Can I offer you a pastry to go with this ''delicious'' cup of coffee? They're fresh from yesterday.">>
+<<AddParagraph "Can I offer you a pastry to go with this //delicious// cup of coffee? They're fresh from yesterday.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "Oh! Is Yesterday a bakery-">>
+<<AddParagraph "Oh! Is «//Yesterday//» a bakery?">>
 
 <<BlankSpeaker>>
 <<AddParagraph "A heavy silence greets the question.">>
@@ -488,20 +837,23 @@
 <<AddParagraph "Y-yes please.">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin. The Dectective looks at it longingly before handing it over.">>
+<<AddParagraph "Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin.">>
+<<AddParagraph "The dectective looks at it longingly before handing it over.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
 <<if $interview_identity is false>>
-<<AddOption "Who am I ?" "Event">>
+<<AddOption "«Who am I?»" "Event">>
 <</if>>
 
 <<if $interview_event is false>>
-<<AddOption "What happened ?" "Event">>
+<<AddOption "«What happened?»" "Event">>
 <</if>>
 
-<<if $interview_identity is true && $interview_event is true && $interview_coffee is true>>
-  <<AddOption "Take a deep breath" "Contract">>
+<<if $interview_identity is true && $interview_event is true>>
+  <<AddOption "Take a deep breath (Continue.)" "Contract">>
 <</if>>
-
 
 
 :: Contract [nobr]
@@ -513,37 +865,101 @@
 <<AddParagraph "Cannelé's smile widens.">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Of course! We are professionals.">>
-<<AddParagraph "Now let us discuss the terms of the contract">>
+<<AddParagraph `"Of course! We are "+tooltip("professionals","In the broader sense of the definition.")+"."`>>
+<<AddParagraph "Now let us discuss the terms of the contract.">>
 
-<<AddOption "The contract ?" "Contract1">>
+<<AddOption "The contract?" "Contract1">>
 
 
 :: Contract1 [nobr]
-
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "If you become our client, we need to draw an official contract.">>
 <<AddParagraph "After all, I am not a swindler-">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "''COUGH''">>
-<<AddParagraph "''WE'' are proper detectives.">>
+<<AddParagraph "''*COUGH*''">>
+<<AddParagraph "//WE// are proper detectives.">>
 
 <<BlankSpeaker>>
 <<AddParagraph "This statement, that should be reassuring, sounds like a threat.">>
 
-<<AddOption "//Am I really... leaving my fate in the hands of those two??//" "Contract2">>
-<<AddOption "//But somehow... I feel like they might be trustworthy...//" "Contract2">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
-
+<<AddOptionVariables "//Am I really… leaving my fate in the hands of those two??//" "Contract2" `{"trust":false}`>>
+/* <<AddOptionVariables "//But somehow… I feel like they might be trustworthy…//" "Contract2" `{"trust":true}`>> */
+/* SUGGESTION : */
+<<AddOptionVariables "//But somehow… I feel like I can count on them…//" "Contract2" `{"trust":true}`>>
 
 :: Contract2 [nobr]
 
+<<if $trust is false>>
+  <<SetSpeaker "???">>
+  <<AddParagraph "//They still look a little suspicious to me…//">>
+  <<AddParagraph "//And annoying.//">>
+  /* <<AddParagraph "//But at this point, I have no other choice but to rely on them.//">> */
+  /* SUGGESTION : */
+  <<AddParagraph "//But at this point, I have no one else I can rely on.//">>
+  <<AddParagraph "//So I'll just bear with it for now.//">>
+<</if>>
+
+<<if $trust is true>>
+  <<SetSpeaker "???">>
+  <<AddParagraph "//I don't know exactly what it is…//">>
+  <<AddParagraph "//But //something// tells me I can trust them.//">>
+  <<AddParagraph "//These people… they'll help me.//">>
+
+  <<BlankSpeaker>>
+  <<AddParagraph "You feel it, faintly.">>
+  <<AddParagraph "The weight that had been carrying the whole morning - ever since you woke up with no recollections of your own identity - has lightened, a little.">>
+  <<AddParagraph "What you are feeling right now, is hope; and it's all thanks to the two detectives sat in front of you.">>
+<</if>>
+
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "We hereby commit to finding out the answer to three questions for you:">>
-<<AddParagraph "Who are you?">>
-<<AddParagraph "What's your gift?">>
-<<AddParagraph "And what happened to you?">>
+<<AddParagraph `"Mystery 1: "+note("//Who are you?//",{txt:"WHO ARE YOU?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<AddParagraph `"Mystery 2: "+note("//What's your Gift?//",{txt:"WHAT IS YOUR GIFT?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<AddParagraph `"Mystery 3: And "+note("//What happened to you?//",{txt:"WHAT HAPPENED TO YOU?", type:"question",
+onclick:
+function()
+{
+  window.mysteries = window.mysteries ? window.mysteries+1  : 1;
+  if(window.mysteries == 3)
+  {
+    window.renableContinueButton();
+  }
+}
+})`>>
+
+<<SetSpeaker "???">>
+<<AddParagraph "Maybe those questions will be useful later…">>
+<<DisableContinueButton "window.mysteries == 3" "Yes. Yes, they will. Trust me. Just take them." "Contract2_1">>
+
+
+
+:: Contract2_1
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "In exchange, the client - you - will have to respect three conditions:">>
@@ -553,9 +969,13 @@
 <<AddParagraph "I sincerely despise you so much.">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"His clothes seem to be good quality and he he is clean shaven."`>>
-<<AddParagraph `"He looks like he has the means "+slot("to take care of his appearance",1)+"."`>>
-<<AddParagraph `"This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+"."` >>
+<<AddParagraph "Cannelé pauses.">>
+<<BlankSpeaker>>
+<<AddParagraph  `"@@.precog;His clothes seem to be good quality and he is clean shaven.@@"`>>
+<<AddParagraph `"@@.precog;He looks like he has the means "+slot("to take care of his appearance",1)+".@@"`>>
+<<PlaySound "slot">>
+<<AddParagraph `"@@.precog;This means it is highly likely that "+slot("he has a job,",2)+" or at least a "+slot("stable source of income",3)+".@@"` >>
+<<PlaySound "slot">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.">>
@@ -578,31 +998,95 @@
 <<BlankSpeaker>>
 <<AddParagraph "Nomnom shrugs and signs the contract.">>
 
+<<if $trust is true>>
+  <<SetSpeaker "???">>
+  <<AddParagraph "//Scratch that monologue about trust and hope and worries being lifted.//">>
+  <<AddParagraph "//They're out to scam me!!!//">>
+<</if>>
+
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Hmmm... Those @@color:gold;???@@ are kind of annoying me.">>
+<<AddParagraph "Hmmm… Those «@@color:gold;???@@» are kind of annoying me.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "???">>
 
 <<BlankSpeaker>>
-<<AddParagraph  `"On his coat are embroidered the initials Y. M. "+slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+"."` >>
+<<AddParagraph  `"@@.precog;On his coat are embroidered the initials “"+tooltip("Mr. Y. M. ","In Falaisant, people are attached to their titles. It becomes part of their name.")+"”"`>>
+<<AddParagraph `slot("They were sewn by hand", 2)+ ", " + slot("must be his own",3)+".@@"` >>
+<<PlaySound "slot">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "Any name? Or an alias?">>
 
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
-<<AddOption "//A heavy tension suddenly fills the room//" "interviewDeepThought">>
+<<AddOption "«Not really?»" "noName">>
+<<AddOption "«I can come up with one!»" "enterName">>
+<<AddOption "«If I say “No”, what's gonna happen?»" "ifNoName">>
 
 
-:: interviewDeepThought [nobr]
+:: enterName[nobr]
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Please. We're professionals.">>
+<<AddParagraph "Let us do our job.">>
 
+<<SetSpeaker "???">>
+<<AddParagraph "//So I have no say in…//">>
+<<AddParagraph "//Choosing my own name.//">>
+<<AddParagraph "//Why did they even ask me then…//">>
+
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom stretches their neck and cracks their knuckles.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Ok, time for me to shine!">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "I think NOT, you SUCK at namegiving.">>
+<<AddParagraph "I'm going to take care of this">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "I have a terrible feeling about this.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "No reply comes.">>
+
+<<include noName>>
+
+
+
+:: ifNoName [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "They both smile at you, an almost business-like smile.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "We wouldn't call you “No”, it's a terrible name.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Plus, it's already taken.">>
+<<AddParagraph "You can take “Yes”, though.">>
+
+
+<<SetSpeaker "???">>
+<<AddParagraph "That's not what I meant but okay…">>
+<<AddParagraph "The answer is no, I do not have a name.">>
+
+<<include noName>>
+
+
+:: noName [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Both detectives are suddenly quiet, lost in deep thoughts.">>
 <<AddParagraph "Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…">>
 <<AddParagraph "Inspiration?">>
 
+<<AddParagraph "<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>" >>
+<<PlaySound "title_show" "0.5s">>
+
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "A name...">>
+<<AddParagraph "A name…">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "A chair?">>
@@ -611,7 +1095,7 @@
 <<AddParagraph "An alias !">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "The sink...">>
+<<AddParagraph "The sink…">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Ali ?">>
@@ -620,16 +1104,16 @@
 <<AddParagraph "Oh no ew, dirty">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "Iasias...">>
+<<AddParagraph "Iasias…">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "The couch...">>
+<<AddParagraph "The couch…">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Ee-yas?">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Wait, what's that...">>
+<<AddParagraph "Wait, what's that…">>
 
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "Yas ! Yas?">>
@@ -637,16 +1121,14 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "It's a muff-">>
 
-<<AddOption "//I am getting concerned ...//" "interviewA-HA">>
+<<AddOption "//I am getting concerned …//" "interviewA-HA">>
 
 
 :: interviewA-HA [nobr]
-
 <<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "''A-HA!''">>
+<<AddParagraph "''//A-HA!//''">>
 
-<<AddOption "//''VERY'' concerned...''//" "Naming">>
-
+<<AddOption "VERY //concerned…//" "Naming">>
 
 
 :: Naming [nobr]
@@ -656,39 +1138,44 @@
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "YOUR NAME SHALL BE MUFFIN!!!">>
 
-
-<<AddOption "..." "Naming0">>
-
-
-:: Naming0 [nobr]
 <<BlankSpeaker>>
 <<AddParagraph "Cannelé and Nomnom look at each other, outraged.">>
 <<AddParagraph "The silence between them tells an entire story on its own.">>
-<<AddParagraph "You can feel it.">>
-<<AddParagraph "This...">>
-<<AddParagraph "This ridiculous situation has happened before...">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "//I can feel it.//">>
+<<AddParagraph "//This…//">>
+<<AddParagraph "//This ridiculous situation has happened before…//">>
+<<AddParagraph `"//Cannelé…….. "+note("Muffin (??)",{txt:"Muffin… This isn't a name, it's a pastry…", type:"clue"})+" ………….//"`>>
+<<AddParagraph `"//Nomnom………………. "+ note("Yasyas (This isn't even a word???)",{txt:"Does it comes from Alias?? Did Cannelé just throw the first word that came to their mind? It even sounds like Yes-yes…", type:"clue", fontSize:13})+" ………..//"`>>
+<<AddParagraph `note("//This piece of knowledge is terrifying.//",{txt:"TERRIFYING NAMING CONVENTIONS", type:"question"})`>>
+<<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
+<<AddParagraph "//Perhaps even more terrifying than the memory loss itself…//">>
 
 <<BlankSpeaker>>
-<<AddParagraph "Cannelé........ Muffin (?) .............">>
-<<AddParagraph "Nomnom................... Yasyas (???) ...........">>
+<<AddParagraph "">>
 
-<<BlankSpeaker>>
-<<AddParagraph "This piece of knowledge is terrifying.">>
-<<AddParagraph "More terrifying than the dark alleys, more terrifying than the tiny, messy office.">>
-<<AddParagraph "Perhaps even more terrifying than the memory loss itself...">>
-
-<<AddOption "You feel an urge to drink coffee" "Naming1">>
+<<AddOption "//I can't believe this is happening to me.//" "Naming1">>
+<<AddOption "//Is it too late to leave?//" "Naming1">>
+<<AddOption "//I don't even know what to say to that.//" "Naming1">>
 
 
 :: Naming1 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "You need to take your mind away from the madness unfolding before you.">>
+<<AddParagraph "By reflex, you reach for the cup of coffee and take a sip.">>
+
 <<SetSpeaker "???">>
-<<AddParagraph  "@@.shake;''*COUGH*''@@" >>
+<<AddParagraph  "@@.shake;''*GLUPS*''@@" >>
+<<PlaySound "drink_mug">>
 
 <<BlankSpeaker>>
 <<AddParagraph "The now empty cup on the table shakes as Cannelé violently slams their fist on the table.">>
 
+
 <<SetSpeaker "Cannelé">>
 <<AddParagraph "SHUT UP! It has to be Yasyas">>
+<<PlaySound "desk_slam">>
 
 <<SetSpeaker "Nomnom">>
 <<AddParagraph "WHAT THE FUCK IS EVEN YASYAS???? MUFFIN IS A WAY SWEETER CHOICE">>
@@ -698,49 +1185,98 @@
 <<AddParagraph "I HEARD IT MEANS COOCHIE IN SOME STREET SLANG TOO!!">>
 
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "W-WHAT? AT LEAST IT //MEANS// SOMETHING, NOT LIKE... YASYAS???">>
+<<AddParagraph "W-WHAT? AT LEAST IT //MEANS// SOMETHING, NOT LIKE… YASYAS???">>
 
 <<SetSpeaker "Cannelé & Nomnom">>
 <<AddParagraph "ANYWAY">>
 <<AddParagraph "WHICH ONE DO YOU PREFER ?">>
 
-<<AddOption "I could pick anything, literally anything but those two... words" "Naming2">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
+
+<<AddOption "«Really… Then uh, Yasyas?»" "Yasyas">>
+<<AddOption "«Errr if I really don't have a choice I'll just choose Muffin»" "Muffin">>
+<<AddOption "«I could pick anything, literally anything but those two… words» (Choose a custom name.)" "CustomName">>
+
+
+
+:: CustomName [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//Finally!//">>
+<<AddOption "//How about…//" "customcustomName">>
+
+:: customcustomName
+<<WordInput 5 "custom_name"  "CustomName2">>
+
+
+:: CustomName2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "The detectives fall silent.">>
+<<AddParagraph "You catch yourself holding your breath, waiting for their reaction.">>
+<<AddParagraph "You don't know what to expect…">>
+<<AddParagraph "But certainly not seeing them explode into loud, obnoxious laughter in your face.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé regains their composure first, muffling one last giggle.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "Did you really come up with…">>
+<<AddParagraph `$custom_name + "??"`>>
+<<AddParagraph "Haven't seen a name as bad since 'Cannelé', dude what the HECK.">>
+
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "This is like…">>
+<<BlankSpeaker>>
+<<AddParagraph "A chuckle escapes from their mouth.">>
+<<SetSpeaker "Nomnom">>
+<<AddParagraph "Really, //really// bad.">>
+
+<<BlankSpeaker>>
+<<AddParagraph "You consider the name you had picked, " + `'$custom_name'`>>
+<<AddParagraph "Then think about the names THEY had come up with, 'Yasyas' and 'Muffin'.">>
+<<AddParagraph "And you feel rage boiling in the pit of your stomach…">>
+<<AddParagraph "That soon transforms into weariness.">>
+<<AddParagraph "">>
+
+<<AddOption "«Let's get this over with.»" "Naming2" >>
+<<AddOptionVariables "//If I run for it, maybe...//" "Naming2" `{"leave":"yes"}` >>
+
 
 
 :: Naming2 [nobr]
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom have stopped bickering now.">>
+<<AddParagraph "They're staring straight at you.">>
+<<if $leave is "yes">>
+  <<AddParagraph "You are trapped.">>
+<</if>>
+
 <<SetSpeaker "Cannelé & Nomnom">>
-<<AddParagraph "PICK ONE">>
+<<AddParagraph "You must pick one.">>
 
 <<SetSpeaker "???">>
 <<AddParagraph "//sigh//">>
 
+<<BlankSpeaker>>
+<<AddParagraph "Their tone lightens, going back to the uncomfortable commercial tone they had used when they'd first greeted you.">>
+
 <<SetSpeaker "Nomnom">>
-<<AddParagraph "Muffin is a cool sounding name right! It suits you very much">>
+<<AddParagraph "Muffin is a cool sounding name right! It suits you very much.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//This is probably...//">>
+<<AddParagraph "//This is probably…//">>
 
 <<SetSpeaker "Cannelé">>
-<<AddParagraph "No matter how I look at it, you look like a Yasyas">>
+<<AddParagraph "No matter how I look at it, you look like a Yasyas.">>
 
 <<SetSpeaker "???">>
-<<AddParagraph "//A situation I can't escape//">>
+<<AddParagraph "//A situation I can't escape.//">>
 
-<<AddOption "I'll go with Yasyas" "Yasyas">>
-<<AddOption "I'll go with Muffin" "Muffin">>
+<<BlankSpeaker>>
+<<AddParagraph "">>
 
-
-:: Yasyas [nobr]
-<<SetSpeaker "Faraway Voice">>
-<<AddParagraph "//Three points for Cannelé//">>
-<<AddScore "Cannelé" 3>>
-<<set $client_name to "Yasyas">>
-
-<<SetSpeaker "Cannelé">>
-<<AddParagraph "HAHAHAHAHAH FUCKING KNEW YOU WERE A REAL ONE">>
-<<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
-
-<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
+<<AddOption "«Muffin it is, I guess…»" "Muffin">>
+<<AddOption "«I'll just go with Yasyas»" "Yasyas">>
 
 
 :: Muffin [nobr]
@@ -753,4 +1289,30 @@
 <<AddParagraph "I think you're neat, Muffin. You're a great person.">>
 <<AddParagraph "Now let's go! It's time to retrace your steps and go find your memories.">>
 
-<<AddOption "I-I didn't even sign the contract..." "Investigation1">>
+<<AddOption "«I-I didn't even sign the contract…»" "finDemo">>
+
+
+:: Yasyas [nobr]
+<<SetSpeaker "Faraway Voice">>
+<<AddParagraph "//Three points for Cannelé//">>
+<<AddScore "Cannelé" 3>>
+<<set $client_name to "Yasyas">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "HAHAHAHAHA! FUCKING KNEW YOU WERE A REAL ONE!">>
+<<AddParagraph "Let's go Yasyas, time to retrace your steps and go find your memories!">>
+
+<<AddOption "«I-I didn't even sign the contract…»" "finDemo">>
+
+:: finDemo [nobr]
+<h2 class="typewriter" >Chapter 2 - The Hoboolean Coin</h2><br/>
+
+<<BlankSpeaker>>
+<<AddParagraph "">>
+<<AddParagraph "//Hey!//">>
+<<AddParagraph "//You've reached the end of this demo. Thank you so much for playing! Now...//">>
+<<AddParagraph "//We'd like to ask you if you could help us with something.//">>
+<<AddParagraph "We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!">>
+<<AddParagraph "It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab.">>
+<<AddParagraph "Feel free to open the conspiracy board and play around with the clues you've collected during this demo!(but let us warn you, they will be lost if you refresh the page)">>
+<<AddParagraph "Thank you for playing <3">>

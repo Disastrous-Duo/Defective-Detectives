@@ -2,96 +2,90 @@
 
 :: PassageHeader {"position":"407,27","size":"100,100"}
 <<set $paragraphs to []>>
-<<if $lastoption>>
-@@.speaker.pastchoice;>>>@@ @@.pastchoice; $lastoption@@
-
+<<if $lastoption and $lastoption != "!EmptyLastOption">> /*Avoid a fake last option being seen when clicking on a */
+@@.pastchoice;➣ $lastoption@@
+<br/>
+<br/>
 <</if>>
 
 
-:: PassageFooter {"position":"547,28","size":"100,100"}
-<<DisplayParagraphs>>\
+:: PassageFooter [nobr] {"position":"547,28","size":"100,100"}
+<<DisplayParagraphs>>
 
 
 :: DisplayOptions [nobr] {"position":"546,144","size":"100,100"}
-<ol id="OptionList">
-<<for _optiontext, _optionpassage range $optionmap>>
-  <<capture _optionpassage, _optiontext>>
-    <li>
-      <<link _optiontext _optionpassage>><<set $lastoption to _optiontext>><</link>>
+<ul id="OptionList">
+<<for _optiontext, _optiondata range $optionmap>>
+  <<capture _optiondata, _optiontext>>
+    <li class="OptionChoice">
+
+    <<if _optiondata["variables"]["customPuce"]>>
+      <<set _puce to _optiondata["variables"]["customPuce"]>>
+    <<else>>
+      <<set _puce to "➣">>
+    <</if>>
+
+    <<link `_puce+" "+_optiontext` _optiondata["passageName"]>>
+      <<set $lastoption to _optiontext>>
+
+      <<for _variableName, _value range _optiondata["variables"]>>
+      <<capture _optiondata, _optiontext>>
+        <<set State.variables[_variableName] = _value>>
+      <</capture>>
+      <</for>>
+
+      <<if _optiondata["soundTransition"]>>
+        <<audio `"sfx_"+_optiondata["soundTransition"]` volume 0.6 play>>
+      <</if>>
+
+    <</link>>
     </li>
   <</capture>>
 <</for>>
-</ol>
+</ul>
 <<set $optionmap to new Map()>>
 
-:: SkillSuccess [Widget widget]
-<<nobr>>
-<<widget "SkillSuccess">>
-<div id="SuccessImg" class="CheckOverlay"></div>
-<div id="CheckSuccess" class="CheckText">CHECK SUCCESS</div>
-<<SetSpeaker "">>
-<<AddParagraph "//Green flashes at the edges of your vision - a success.//">>
-<</widget>>
-<</nobr>>
-
-:: SkillFailure [Widget widget]
-<<nobr>>
-<<widget "SkillFailure">>
-<div id="FailureImg" class="CheckOverlay"></div>
-<div id="CheckFailure" class="CheckText">CHECK FAILURE</div>
-<<SetSpeaker "">>
-<<AddParagraph "//Red flashes at the edges of your vision - a failure.//">>
-<</widget>>
-<</nobr>>
-
 :: PassiveSkill [Widget widget] {"position":"403,146","size":"100,100"}
-<<nobr>>
+
 <<widget "PassiveSkill">>
-<<set _skillname to ($args[0].toLowerCase())>>
-<<set _skillresult to "">>
-<<if $args[1]>>
-<<set _skillresult to ("[" + $args[1] + ": " + $args[2] + "]")>>
-<</if>>
-<<if $yellow_speaker.includes(_skillname)>>
+<<set _speakername to ($args[0].toLowerCase())>>
+<<if $yellow_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.yellow_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $blue_speaker.includes(_skillname)>>
+<<elseif $blue_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.blue_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $red_speaker.includes(_skillname)>>
+<<elseif $red_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.red_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $purple_speaker.includes(_skillname)>>
+<<elseif $purple_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.purple_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<<elseif $leather_speaker.includes(_skillname)>>
+<<elseif $leather_speaker.includes(_speakername)>>
 <<set $currentspeaker to ("@@.leather_speaker.speaker;" +
-_skillname +
+_speakername +
 "@@")>>
-<</if>>
-<<if _skillresult>>
-<<set $currentspeaker += _skillresult>>
 <</if>>
 <<set $currentspeaker += " - ">>
 <</widget>>
-<</nobr>>
+
 
 :: Speaker [widget] {"position":"272,152","size":"100,100"}
-<<nobr>>
+
 <<widget "speaker">>
 @@.speaker;
 $args[0] -
 @@
 <</widget>>
-<</nobr>>
+
 
 
 :: SetSpeaker [widget] {"position":"272,152","size":"100,100"}
-<<nobr>>
+
 <<widget "SetSpeaker">>
 <<set _speaker_name to ($args[0].toLowerCase())>>
   <<if _speaker_name == "cannelé & nomnom">>
@@ -113,28 +107,134 @@ $args[0] -
 <</if>>
 <<set $currentspeaker += " - ">>
 <</widget>>
-<</nobr>>
+
 
 
 :: AddOption [widget] {"position":"273,265","size":"100,100"}
-\<<widget "AddOption">>\<<run $optionmap.set($args[0], $args[1])>>\<</widget>>\
+<<widget "AddOption">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":false})>>
+<</widget>>
+
+:: AddOptionVariables [widget] {"position":"573,265","size":"100,100"}
+<<widget "AddOptionVariables">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":$args[2],"soundTransition":false})>>
+<</widget>>
+
+:: AddOptionSound [widget] {"position":"573,265","size":"100,100"}
+<<widget "AddOptionSound">>
+<<run $optionmap.set($args[0], {"passageName":$args[1],"variables":{},"soundTransition":$args[2]})>>
+<</widget>>
+
 
 
 :: DisplayParagraphs [widget] {"position":"401,262","size":"100,100"}
-<<widget "DisplayParagraphs">><<set _paragraph to $paragraphs[0]>>\
-<<run $paragraphs.deleteAt(0)>>\
+<<widget "DisplayParagraphs">>
+
+<<set _paragraph to $paragraphs[0]>>
+<<run $paragraphs.deleteAt(0)>>
 <span class="paragraph"><<print _paragraph>></span>
-<<if $paragraphs.length > 0>>
-<<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>\
-<<else>>\
-<<include DisplayOptions>>
+<<if _paragraph != undefined and _paragraph.length > 0>> /*Avoid empty spaces before options*/
+  <br/>
+  <br/>
 <</if>>
-<<timed 0.5s>><<script>>
-var paragraphs = document.getElementsByClassName('paragraph');
-if (paragraphs.length > 1) {
-	paragraphs[paragraphs.length-2].classList.add("dim");
-}
-<</script>><</timed>>\
+
+/*Done before loading the next paragraph*/
+
+<<set _mustDeletePassage to false >>
+
+<<if $paragraphs.length > 0>>
+
+<<set _blockCheck to false >>
+<<set _gotoCheck to false >>
+<<set _soundCheck to false >>
+
+  <<if ($paragraphs[0].indexOf("!DisableContinueButton") != -1) >>
+    <<set _blockCheck to true >>
+    <<set _mustDeletePassage to true >>
+    <<set _disableArguments to $paragraphs[0].split(";;;") >>
+    <<set _blockCondition to _disableArguments[1] >>
+    <<set _tooltipMessage to _disableArguments[2] >>
+    <<set _gotoSceneName to _disableArguments[3] >>
+    <<set _gotoCheck to (_gotoSceneName != "undefined") >>
+
+  <<elseif ($paragraphs[0].indexOf("!GotoContinueButton") != -1) >>
+  <<set _gotoArguments to $paragraphs[0].split(";;;") >>
+    <<set _gotoCheck to true>>
+    <<set _gotoSceneName to _gotoArguments[1]>>
+    <<set _mustDeletePassage to true >>
+
+  <<elseif ($paragraphs[0].indexOf("!PlaySound") != -1) >>
+  <<set _playSoundArguments to $paragraphs[0].split(";;;") >>
+    <<set _soundCheck to true >>
+    <<set _sfx_name to _playSoundArguments[1]>>
+    <<set _delay to _playSoundArguments[2]>>
+    <<set _volume to _playSoundArguments[3]*1>>
+    <<set _mustDeletePassage to true >>
+  <</if>>
+
+  /* In case of blocked Continue*/
+  <<if _blockCheck and not eval(_blockCondition) >> /*Blocked with a Fake Continue that might have a tooltip, and a hidden Continue button*/
+    <<run $paragraphs.deleteAt(0)>>
+
+    <<if _tooltipMessage != "undefined" and _tooltipMessage != "">>
+      <<link `"@@#FakeContinueBtn;"+tooltip("CONTINUE ➤",_tooltipMessage)+"@@"`>><</link>>
+    <<else>>
+      <<link "@@#FakeContinueBtn;CONTINUE ➤@@">><</link>>
+    <</if>>
+
+    <<if _gotoCheck>>
+      <<link "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" _gotoSceneName>>
+        <<set $lastoption to "!EmptyLastOption">>
+      <</link>>
+    <<else>>
+      <<linkreplace "@@#ContinueBtn;.hideContinueBtn;CONTINUE ➤@@" t8n>>
+        <<DisplayParagraphs>>
+        <<run window.scrollSmoothToBottom()>>
+      <</linkreplace>>
+    <</if>>
+  <<else>>
+
+    /*In case of sfx play*/
+    <<if _soundCheck >>
+        <<if _delay == "0">>
+          <<audio `"sfx_"+_sfx_name` volume _volume play>>
+        <<else>>
+          <<capture _sfx_name>>
+            <<timed _delay>> /*  If delay, time to to later */
+              <<audio `"sfx_"+_sfx_name` volume _volume play>>
+            <</timed>>
+          <</capture>>
+        <</if>>
+    <</if>>
+
+    <<if _mustDeletePassage>>
+      <<run $paragraphs.deleteAt(0)>> /*Still need to delete the block command*/
+    <</if>>
+
+    <<if _gotoCheck>>
+      <<link "@@#ContinueBtn;CONTINUE ➤@@" _gotoSceneName>>
+        <<set $lastoption to "!EmptyLastOption">>
+      <</link>>
+    <<else>>
+      <<linkreplace "@@#ContinueBtn;CONTINUE ➤@@" t8n>>
+        <<DisplayParagraphs>>
+        <<run window.scrollSmoothToBottom()>>
+      <</linkreplace>>
+    <</if>>
+
+  <</if>>
+
+<<else>>
+  <<include DisplayOptions>>
+<</if>>
+<<timed 0.5s>>
+  <<script>>
+    var displayed_paragraphs = document.getElementsByClassName('paragraph');
+    if (displayed_paragraphs.length > 1) {
+    	displayed_paragraphs[displayed_paragraphs.length-2].classList.add("dim");
+    }
+  <</script>>
+<</timed>>
 <</widget>>
 
 
@@ -143,25 +243,47 @@ if (paragraphs.length > 1) {
 
 
 :: AddParagraph [widget] {"position":"546,268","size":"100,100"}
-<<nobr>>
 <<widget "AddParagraph">>
 <<set _para to "">>
 <<if $paraAppendMode is true>>
-<<for _text range $greentext>>
-<<set _para to (_para + _text + "<br /><br />")>>
-<</for>>
-<<set $greentext to []>>
-<<set $paraAppendMode to false>>
+  <<for _text range $greentext>>
+  <<set _para to (_para + _text + "<br /><br />")>>
+  <</for>>
+  <<set $greentext to []>>
+  <<set $paraAppendMode to false>>
 <</if>>
 <<set _para to (_para + $currentspeaker + $args[0])>>
 <<run $paragraphs.push(_para)>>
 <</widget>>
-<</nobr>>
+
+:: DisableContinueButton [widget] {"position":"546,368","size":"100,100"}
+
+<<widget "DisableContinueButton">>
+  <<AddParagraph `"!DisableContinueButton;;;"+$args[0]+";;;"+$args[1]+";;;"+$args[2]`>>
+<</widget>>
+
+
+:: GotoContinueButton [widget] {"position":"546,368","size":"100,100"}
+
+<<widget "GotoContinueButton">>
+  <<AddParagraph `"!GotoContinueButton;;;"+$args[0]`>>
+<</widget>>
+
+
+:: PlaySound [widget] {"position":"546,368","size":"100,100"}
+
+<<widget "PlaySound">>
+  <<set _sfx_name to $args[0] || 0>>
+  <<set _delay to $args[1] == undefined ? "0" : $args[1]>>
+  <<set _volume to $args[2] == undefined ? "0.6" : $args[2]>>
+    <<AddParagraph `"!PlaySound;;;"+_sfx_name+";;;"+_delay+";;;"+_volume`>>
+<</widget>>
+
+
 
 :: GreenTextWidgets [widget] {"position":"400,600","size":"100,100"}
-<<nobr>>
+
 <<widget "GenericNote">>
 <<run $greentext.push("@@.green;" + $args[0] + "@@")>>
 <<set $paraAppendMode to true>>
 <</widget>>
-<</nobr>>

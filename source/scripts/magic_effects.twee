@@ -38,14 +38,20 @@ window.randomStr = function(length, alphabet)
 }
 
 
+// Could be replaced by an interval linked to each displayed text, and destroyed
+// when the text disappears -- but ti's pretty okay for now
+
 window.updateForesightTimer = function() // Update a timer countdown, mainly used in foresight
 {
 	 var all_ftimers = document.getElementsByClassName("Tickdown");
 	 for(var i = 0; i < all_ftimers.length; i++)
 	 {
 		 var ftimer = all_ftimers[i];
-		 var millis = new Date().getMilliseconds();
-		 ftimer.innerHTML = window.forceDigits(millis,3);
+     if(!ftimer.parentNode.classList.contains("dim")) // Don't update timers that were read
+     {
+       var millis = new Date().getMilliseconds();
+       ftimer.innerHTML = window.forceDigits(millis,3);
+     }
 	 }
 }
 
@@ -53,6 +59,7 @@ window.replaceAt = function(str, index, replacement) {
     return str.substr(0, index) + replacement + str.substr(index + replacement.length);
 }
 
+// Unused effect
 window.updatePrecogTimer = function()
 {
 	 var all_decoders = document.getElementsByClassName("Precog");
@@ -106,7 +113,9 @@ window.updatePrecogTimer = function()
 }
 
 window.setInterval(window.updateForesightTimer, foresight_timer_freq);
-window.setInterval(window.updatePrecogTimer, precog_timer_freq);
+
+//Not used anymore
+// window.setInterval(window.updatePrecogTimer, precog_timer_freq);
 
 
 window.tooltip = function(displayed_text, tooltip)
@@ -127,5 +136,142 @@ window.slot = function(right_answer, duration)
 
 	return `<span class='slotmachine'>@@.slot${duration};${options.join("<br/>")}@@</span>`;
 
+
+}
+
+
+window.note = function(displayed_text, note_data)
+{
+
+  var serialized_note_data = encodeURI(JSON.stringify(note_data));
+
+  if(note_data.type == "tuto-board-trigger") // special note for the tuto trigger
+  {
+    return `<span class="clickable_note tuto_clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
+  }
+  else
+  {
+    // checking if the note is already in the board
+    var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
+
+    if(notes_txt.indexOf(note_data.txt) > -1)
+    {
+      return displayed_text;
+    }
+
+    return `<span class="clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+  }
+}
+
+window.clickOnNote = function(e,link)
+{
+
+  var $link = $(link);
+  if(!$link.hasClass("clickable_note")) return false;
+
+
+  window.PlaySound("found_note");
+  $link.removeClass("clickable_note");
+
+  var note = $("<span class='sticky_note_effect'>!</span>")[0];
+
+  // Settings
+  var postit_size = 30;
+  var duration = 1000;
+  var interval = 10;
+
+  var startX = e.clientX-postit_size/2;
+  var startY = e.clientY-postit_size/2;
+  var endY = -postit_size;
+  var delta_y = endY - startY;
+
+  if(Math.abs(delta_y) <= 200) // Speed correction, so it's not too long when the note is close to the top border of the screen
+  {
+    duration = 750;
+  }
+
+
+  note.style.top = startY+"px";
+  note.style.left = startX+"px";
+
+  var t = 0;
+  var position_interval = setInterval(function()
+  {
+
+    t += interval/duration;
+    var scaled_delta_y = window.easeInBack(t)*delta_y;
+    note.style.top = (startY+scaled_delta_y)+"px";
+
+    //Self-destructs when outside
+
+    if(parseInt(note.style.top) < -100)
+    {
+      clearInterval(position_interval);
+      $(note).remove(); // Not sure it's actually removed but the important part is to clear the timer interval
+    }
+
+
+  },interval);
+
+  $link.append(note);
+
+
+  var note_data = JSON.parse(decodeURI(link.dataset.note));
+  if(note_data.type == "tuto-board-trigger")
+  {
+    window.pullcord.setTutorialPhase(0);
+    return true;  // Do not add a post-it for the tuto
+  }
+
+  window['conspiracy_board'].add_note(note_data);
+
+  if(note_data.onclick)
+  {
+    note_data.onclick()
+  }
+
+
+}
+
+window.easeInBack = function(t) // t from 0 to 1
+  {
+    const c1 = 1.70158;
+    const c3 = c1 + 1;
+    return c3 * t * t * t - c1 * t * t;
+  }
+
+// When the Continue button has been disabled via a scene
+// using the DisableContinueButton macro
+// can be re-enabled, through external JS
+window.renableContinueButton = function()
+{
+  $("#FakeContinueBtn").remove();
+  $("#ContinueBtn").removeClass("hideContinueBtn");
+}
+
+window.scrollSmoothToBottom = function () {
+
+  // setTimeout(function()
+  // {
+   var div = document.getElementById("story");
+   $('#story').animate({
+      scrollTop: div.scrollHeight, /*- div.clientHeight*/
+      behavior: 'smooth',
+   }, 400);
+ // },);
+}
+
+window.PlaySound = function(sfx_name, delay)
+{
+  if(delay)
+  {
+    setTimeout(window.PlaySound(sfx_name, false), delay)
+  }
+  else
+  {
+     /* when you refresh a page and start with PlaySound, it might not exist yet */
+    if(SugarCube && SugarCube.Wikifier)
+    new SugarCube.Wikifier(null, `<<audio "sfx_${sfx_name}" volume 0.6 play>>`);
+  }
 
 }
