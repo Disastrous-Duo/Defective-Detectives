@@ -137,13 +137,14 @@ window[this_board].toggle_board = function()
 
   function makeNote(external_id, text, left, top, pins, type, fontSize)
   {
+
+
     var rect = new fabric.Rect({
       left: left,
       top: top,
       width:settings.noteWidth,
       height:settings.noteHeight,
       fill: settings.noteColors[type],
-      angle:6,
       stroke:settings.newNoteBorderColor,
       strokeWidth: settings.newNoteStrokeWidth,
     });
@@ -155,7 +156,6 @@ window[this_board].toggle_board = function()
      fontFamily:"Caveat-Regular",
      fontSize: fontSize,
      textAlign:"center",
-     angle:3,
      fill: '#000000'
     });
 
@@ -170,8 +170,8 @@ window[this_board].toggle_board = function()
       height:settings.noteHeight,
       pins:pins,
       rect:rect,
-      textObject:textObject
-
+      textObject:textObject,
+      angle:-window.randint(-5,5),
     });
 
     group.hasControls = group.hasBorders = false;
