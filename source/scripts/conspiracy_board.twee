@@ -69,7 +69,7 @@ window[this_board].toggle_board = function()
 
   // Will be filled with created elements, useful for visually sorting them
   window[this_board].created_pins = {};
-  window[this_board].created_notes = [];
+  window[this_board].created_notes = {};
   window[this_board].created_lines = [];
   window[this_board].reticule = {};
 
@@ -339,10 +339,11 @@ window[this_board].toggle_board = function()
       return line;
   }
 
-  function makePin(external_id, x, y, x_delta = 0)
+  function makePin(external_id, note_id, x, y, x_delta = 0)
   {
     var pin = new fabric.Circle({
       external_id:external_id,
+      note_id:note_id,
         left: x,
         top: y,
         object_type:'pin',
@@ -421,23 +422,20 @@ window[this_board].toggle_board = function()
   window[this_board].add_note = function(note_data)
   {
 
-    // Do not add a note with the exact same text
-    var notes_id = window[this_board].notesList.map(note => note.id);
-    if(notes_id.indexOf(note_data.id) > -1)
+    // Do not add a note with an id that is already used
+    if(window[this_board].notesList[note_data.id])
     {
-
       return false;
     }
 
     // randomzie position if doesn't have one or find empty space?
     note_data.x = note_data.x || window.randint(settings.noteWidth, canvas.width-settings.noteWidth);
     note_data.y = note_data.y || window.randint(settings.noteHeight, canvas.height-settings.noteHeight);
-    note_data.fontSize = note_data.fontSize || settings.fontSize
+    note_data.fontSize = note_data.fontSize || settings.fontSize;
 
-    var id = window[this_board].notesList.length;
       // id should be the current length of notesList, to add at the end
-    createNote(id, note_data, canvas);
-    window[this_board].notesList.push(note_data);
+    createNote(note_data.id, note_data, canvas);
+    window[this_board].notesList[note_data.id] = note_data;
     // add note to note list
     resortAllElements(canvas);
   }
@@ -451,7 +449,7 @@ window[this_board].toggle_board = function()
     if(note_data.type == "picture")
     {
       var pin_id = "pin_"+note_id;
-      var pin = makePin(pin_id, note_data.x, note_data.y-settings.noteHeight/2);
+      var pin = makePin(pin_id, note_id, note_data.x, note_data.y-settings.noteHeight/2);
       pins[pin_id] = pin;
       var note = makePicture(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.src, note_data.fontSize);
 
@@ -468,7 +466,7 @@ window[this_board].toggle_board = function()
       {
         var pin_id = "pin_"+note_id+"_"+j;
         var x_delta = (j - (total_locks-1)/2)*spacing;
-        var lock = makeLock(pin_id, note_data.x + x_delta, note_data.y-settings.noteHeight/2, x_delta);
+        var lock = makeLock(pin_id, note_data.id, note_data.x + x_delta, note_data.y-settings.noteHeight/2, x_delta);
         pins[pin_id] = lock;
       }
 
@@ -478,18 +476,19 @@ window[this_board].toggle_board = function()
     else
     {
       var pin_id = "pin_"+note_id;
-      var pin = makePin(pin_id, note_data.x, note_data.y-settings.noteHeight/2);
+      var pin = makePin(pin_id, note_id, note_data.x, note_data.y-settings.noteHeight/2);
       pins[pin_id] = pin;
       var note = makeNote(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.type, note_data.fontSize);
     }
 
-    window[this_board].created_notes.push(note);
+    window[this_board].created_notes[note_id] = note;
     for(let id in pins)
     {
       window[this_board].created_pins[id] = pins[id];
     }
 
-    console.log(pins)
+    console.log(window[this_board].created_notes);
+    console.log(window[this_board].created_pins);
 
 
 
@@ -598,16 +597,16 @@ window[this_board].toggle_board = function()
     }
 
     // Create notes, remember their pins, add them
-    for(var i = 0; i < window[this_board].notesList.length; i++)
+    for(var i in window[this_board].notesList)
     {
       var note_data = window[this_board].notesList[i];
 
       note_data.x = note_data.x || window.randint(settings.noteWidth, canvas.width-settings.noteWidth);
       note_data.y = note_data.y || window.randint(settings.noteHeight, canvas.height-settings.noteHeight);
-      note_data.fontSize = note_data.fontSize || settings.fontSize
+      note_data.fontSize = note_data.fontSize || settings.fontSize;
 
 
-      createNote(i, note_data, canvas)
+      createNote(note_data.id, note_data, canvas);
 
     }
 
@@ -655,6 +654,7 @@ window[this_board].toggle_board = function()
 
       //Move associated pins too
       p.pins.map(pin => pin.movePin(pin, p.left - pin.x_delta, p.top-settings.noteHeight/2))
+
       // Updates data external strucure about post-its
       // Coordinates change
       window[this_board].notesList[p.external_id].x = p.left;
