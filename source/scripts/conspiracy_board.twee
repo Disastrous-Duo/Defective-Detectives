@@ -120,13 +120,23 @@ window[this_board].toggle_board = function()
     "front-clue":"#FEFF9C",
   };
 
-  settings.lineColor = "red";
+  settings.lineColors = {
+    "lightColor":"red",
+    "darkColor":'#680000'
+  };
+
   settings.gridColor = "#281918";
   settings.newNoteBorderColor = "red";
   settings.newNoteStrokeWidth = 3;
   settings.normalNoteBorderColor = "black";
   settings.normalStrokeWidth = 1;
 
+  settings.pinColors = {
+    "baseFill": '#fff',
+    "baseStroke": '#666',
+    "mysteryStroke": "red",
+    "mysteryFill": '#fff', // 999
+  }
 
   /*
     lines are directed: they begin at a specific note, and end at another
@@ -287,7 +297,7 @@ window[this_board].toggle_board = function()
     strokeWidth:2,
     });
 
-    console.log(image,window._MediaCache[src])
+    console.log("Loading Image", window._MediaCache[src]);
 
   var group = new fabric.Group([rect, image, textObject],
     {
@@ -310,7 +320,7 @@ window[this_board].toggle_board = function()
   function makeLine(start_pin_id, end_pin_id)
   {
 
-    console.log(start_pin_id, end_pin_id);
+    console.log("Make line", start_pin_id, end_pin_id);
     var start_pin = window[this_board].created_pins[start_pin_id];
     var end_pin = window[this_board].created_pins[end_pin_id];
 
@@ -318,11 +328,11 @@ window[this_board].toggle_board = function()
       start_pin_id:start_pin_id,
       end_pin_id:end_pin_id,
       object_type:'line',
-      fill: settings.lineColor,
-      stroke: settings.lineColor,
+      fill: settings.lineColors.lightColor,
+      stroke: settings.lineColors.lightColor,
       strokeWidth: 4,
-      normalColor:settings.lineColor,
-      darkColor:'#680000',
+      normalColor:settings.lineColors.lightColor,
+      darkColor:settings.lineColors.darkColor,
       perPixelTargetFind:true,
       targetFindTolerance:10,
       selectable: false,
@@ -350,8 +360,8 @@ window[this_board].toggle_board = function()
         strokeWidth: 5,
         radius: settings.pinRadius,
         x_delta:x_delta,
-        fill: '#fff',
-        stroke: '#666',
+        fill: settings.pinColors.baseFill,
+        stroke: settings.pinColors.baseStroke,
         lines_start:[],
         lines_end:[],
         hoverCursor:'pointer',
@@ -377,18 +387,49 @@ window[this_board].toggle_board = function()
         pin.setCoords();
       }
 
-      pin.addLine = function(pin, line, edge_type)
+
+      // Pin remember which lines it is connected to, for both edges: start, and end
+      pin.addLine = function(pin, line_element, edge_type)
       {
         if(edge_type == "start")
         {
-          pin.lines_start.push(line);
+          pin.lines_start.push(line_element);
         }else if(edge_type == "end")
         {
-          pin.lines_end.push(line);
+          pin.lines_end.push(line_element);
         }
+
+        // For locks:
+        // If lock is connected, it changes color
+        if(pin.is_lock)
+        {
+          pin.set({stroke:settings.pinColors.mysteryStroke, fill:settings.pinColors.mysteryFill});
+        }
+
 
       }
 
+      // Pin remember which ones it is connected to
+      pin.removeLine = function(pin, other_pin_id, edge_type)
+      {
+
+        if(edge_type == "start")
+        {
+          pin.lines_start = pin.lines_start.filter(line => line.end_pin_id != other_pin_id);
+        }
+        else if(edge_type == "end")
+        {
+          pin.lines_end = pin.lines_end.filter(line => line.start_pin_id != other_pin_id);
+        }
+
+        // For locks:
+        // Unconnected locks get base color
+        if(pin.is_lock && pin.lines_end.length+pin.lines_start.length == 0)
+        {
+          pin.set({stroke:settings.pinColors.baseStroke,fill:settings.pinColors.baseFill});
+        }
+
+      }
 
       pin.hasControls = pin.hasBorders = false;
     return pin;
@@ -397,6 +438,7 @@ window[this_board].toggle_board = function()
   function makeLock()
   {
     var lock = makePin(...arguments);
+    lock.is_lock = true;
     return lock;
   }
 
@@ -487,8 +529,8 @@ window[this_board].toggle_board = function()
       window[this_board].created_pins[id] = pins[id];
     }
 
-    console.log(window[this_board].created_notes);
-    console.log(window[this_board].created_pins);
+    // console.log(window[this_board].created_notes);
+    // console.log(window[this_board].created_pins);
 
 
 
@@ -512,7 +554,7 @@ window[this_board].toggle_board = function()
 
       var line = new fabric.Line([0,0,0,0], {
         object_type:'line',
-        stroke: settings.lineColor,
+        stroke: settings.lineColors.lightColor,
         strokeDashArray: [5, 5],
         strokeWidth: 5,
         selectable: false,
@@ -526,7 +568,7 @@ window[this_board].toggle_board = function()
           object_type:'visor',
           strokeWidth: 5,
           radius: 12,
-          stroke: settings.lineColor,
+          stroke: settings.lineColors.lightColor,
           fill:'transparent',
           selectable: false,
           evented:false,
@@ -653,7 +695,7 @@ window[this_board].toggle_board = function()
       p.rect.set({stroke:settings.normalNoteBorderColor,strokeWidth:settings.normalStrokeWidth })
 
       //Move associated pins too
-      p.pins.map(pin => pin.movePin(pin, p.left - pin.x_delta, p.top-settings.noteHeight/2))
+      p.pins.map(pin => pin.movePin(pin, p.left + pin.x_delta, p.top-settings.noteHeight/2))
 
       // Updates data external strucure about post-its
       // Coordinates change
@@ -694,6 +736,45 @@ window[this_board].toggle_board = function()
       // Start reticule line if not already active
       if(!window[this_board].reticule.active)
       {
+
+        // Locks can have only one link.
+        // If reticule is created from a lock, we remove the previous line
+        if(p.is_lock && p.lines_start.length+p.lines_end.length > 0)
+        {
+          // Check datastructure to see if this pin is connected to another
+         var remove_index = null;
+         for(var i in window[this_board].linesList)
+         {
+           let line = window[this_board].linesList[i];
+           if(line.start == p.external_id || line.end == p.external_id)
+           {
+             remove_index = i;
+             //Delete line in data structure
+             window[this_board].linesList.splice(remove_index, 1);
+
+             // Remove data in connected pins
+
+             var start_pin = window[this_board].created_pins[line.start];
+             var end_pin = window[this_board].created_pins[line.end];
+
+             start_pin.removeLine(start_pin, end_pin.external_id, "start");
+             end_pin.removeLine(end_pin, start_pin.external_id, "end");
+
+             break;
+           }
+         }
+
+         //Find the corresponding line element in canvas and remove it
+         for(var i in window[this_board].created_lines)
+         {
+             let line = window[this_board].created_lines[i];
+             if(line.start_pin_id == p.external_id || line.end_pin_id == p.external_id)
+             {
+               canvas.remove(line);
+             }
+         }
+        }
+
         window[this_board].reticule.startFromPin(window[this_board].reticule, p);
         window[this_board].reticule.show(window[this_board].reticule);
       }
@@ -702,12 +783,24 @@ window[this_board].toggle_board = function()
         var start_pin_id = window[this_board].reticule.start_pin.external_id;
         var end_pin_id = p.external_id;
 
-        console.log("shlanerek",p);
-        console.log("shrek",start_pin_id,end_pin_id);
+
+        // Do not link pins from the same mystery/note
+        var start_pin = window[this_board].reticule.start_pin;
+        var end_pin = window[this_board].created_pins[end_pin_id];
+
+        if(start_pin.note_id == end_pin.note_id)
+        {
+          return false;
+        }
+
+        // A pin from a mystery (a lock) can have only 1 note
+        if(p.is_lock && p.lines_start.length+p.lines_end.length > 0)
+        {
+          return false;
+        }
 
         // Checks: do not add a line that already exists
         // start and end should be different
-
         var existence_check = true;
         for(var i in window[this_board].linesList)
         {
@@ -721,6 +814,8 @@ window[this_board].toggle_board = function()
 
         if(existence_check && start_pin_id != end_pin_id)
         {
+
+          // Actually make the line
           window[this_board].linesList.push({start:start_pin_id, end:end_pin_id});
 
           var line = makeLine(start_pin_id, end_pin_id);
@@ -732,7 +827,6 @@ window[this_board].toggle_board = function()
           madeLineEvent(start_pin_id, end_pin_id);
 
         }
-
       }
     }
     else if (p && p.object_type == "line")
@@ -740,6 +834,10 @@ window[this_board].toggle_board = function()
         // Remove line from data structure and canvas
 
       var remove_index = null;
+
+      var start_pin = window[this_board].created_pins[p.start_pin_id];
+      var end_pin = window[this_board].created_pins[p.end_pin_id];
+
       for(var i =0; i < window[this_board].linesList.length; i++)
       {
         var a = window[this_board].linesList[i].start;
@@ -749,16 +847,25 @@ window[this_board].toggle_board = function()
           remove_index = i;
         }
       }
+
       if(remove_index !== null)
       {
+
+        // Remove the line in  data structure and canvas
         window[this_board].linesList.splice(remove_index, 1);
+
+        // Remove data about connected pins
+        start_pin.removeLine(start_pin, p.end_pin_id, "start");
+        end_pin.removeLine(end_pin, p.start_pin_id, "end");
+
+        canvas.remove(p);
       }
       else
       {
         console.log("line_error", p.start_pin_id, p.end_pin_id)
       }
 
-      canvas.remove(p);
+
 
     }
 
@@ -766,6 +873,7 @@ window[this_board].toggle_board = function()
     else if(!p && window[this_board].reticule.active)
     {
       window[this_board].reticule.hide(reticule);
+
       resortAllElements(canvas);
     }
 
