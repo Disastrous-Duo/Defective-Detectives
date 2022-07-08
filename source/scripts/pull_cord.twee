@@ -367,7 +367,7 @@ window.pullcord.init =  function()
     running = true;
   });
 
-  canvas.addEventListener('click', function (e) {
+  window.pullcord.click = function (e) {
 
     if(!window.pullcord.enabled)return false;
 
@@ -389,8 +389,9 @@ window.pullcord.init =  function()
       break;
     }
 
-  });
+  }
 
+  canvas.addEventListener('click', window.pullcord.click);
 
   window.pullcord.enable(window.pullcord.enabled);
 

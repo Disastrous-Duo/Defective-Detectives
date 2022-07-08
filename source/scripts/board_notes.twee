@@ -140,3 +140,11 @@ createNote(new Mystery("Mystery_Naming_Conventions", "TERRIFYING NAMING CONVENTI
 createNote(new ObligatoryMystery("Mystery_Your_Identity", "WHO ARE YOU?",[""]));
 createNote(new ObligatoryMystery("Mystery_Your_Gift", "WHAT IS YOUR GIFT?",[""]));
 createNote(new ObligatoryMystery("Mystery_What_Happened", "WHAT HAPPENED TO YOU?",[""]));
+
+
+/////////////////
+
+createNote(new Clue("Clue_Test_1", "First clue"));
+createNote(new Clue("Clue_Test_2", "Second clue"));
+createNote(new Clue("Clue_Test_3", "Third clue"));
+createNote(new Mystery("Mystery_Test_1", "HOW TO SOLVE THIS MYSTERY?",["Clue_Test_1", "Clue_Test_2", "Clue_Test_3"]));

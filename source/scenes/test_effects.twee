@@ -103,3 +103,19 @@
 
 ::Test_AddOptionVariables_Resultat [nobr]
 <<AddParagraph "Hmm... Donc $couleur1 et $couleur2.">>
+
+
+::Test_SolveMystery [nobr]
+
+<script>
+  pullcord.quickstart();
+  var notes = ["Mystery_Test_1", "Clue_Test_1", "Clue_Test_2", "Clue_Test_3"];
+
+  setTimeout(() => (notes.map( note_name => window.conspiracy_board.add_note(board_notes[note_name]))), 1200);
+
+</script>
+
+<<SetSpeaker "Yasyas">>
+<<AddParagraph "Alright, time to solve this mystery.">>
+<<AddOptionMystery "Attempt to solve the mystery." "Mystery_Test_1" >>
+<<AddOption "You know what? I dont't think I can right now." "Test_SolveMystery">>

@@ -29,13 +29,13 @@
   // Add board to HTML
   $(html_conspiracy_board).insertBefore("#passages");
 
-  window[this_board].conspiracy_board_toggled = false;
+  window[this_board].board_toggled = false;
 
 
   window[this_board].toggle_board = function()
   {
-    window[this_board].conspiracy_board_toggled = !window[this_board].conspiracy_board_toggled;
-    if(window[this_board].conspiracy_board_toggled)
+    window[this_board].board_toggled = !window[this_board].board_toggled;
+    if(window[this_board].board_toggled)
     {
       $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_up");
       $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_down");

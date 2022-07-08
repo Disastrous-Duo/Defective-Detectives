@@ -38,6 +38,10 @@
         <<audio `"sfx_"+_optiondata["soundTransition"]` volume 0.6 play>>
       <</if>>
 
+      <<if _optiondata["onclick"]>>
+        <<run _optiondata["onclick"](_optiondata)>>
+      <</if>>
+
     <</link>>
     </li>
   <</capture>>
@@ -287,3 +291,35 @@ $args[0] -
 <<run $greentext.push("@@.green;" + $args[0] + "@@")>>
 <<set $paraAppendMode to true>>
 <</widget>>
+
+
+
+
+:: AddOptionMystery [widget]
+<<widget "AddOptionMystery">>
+<<run window.current_mystery_solving = $args[1]>>
+<<run $optionmap.set($args[0], {"passageName":"Empty_Mystery_Scene","variables":{"customPuce":"🔒"}, "onclick":function()
+  {
+    var comment = "For now is equivalent to window.pullcord.click()";
+    window.PlaySound("pullcord");
+    window.conspiracy_board.interactable = false;
+    window.conspiracy_board.toggle_board();
+    var resultSuccess = true;
+    window.conspiracy_board.check_mystery(window.current_mystery_solving, resultSuccess, function(success)
+    {
+      window.conspiracy_board.interactable = true;
+      if(success)
+      {
+        alert("Success!");
+      }
+      else
+      {
+        alert("Failure.");
+      }
+
+    });
+  }
+},)>>
+<</widget>>
+
+:: Empty_Mystery_Scene

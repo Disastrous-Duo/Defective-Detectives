@@ -277,3 +277,38 @@ window.PlaySound = function(sfx_name, delay)
   }
 
 }
+
+// Utilitary function for animations
+window.startAnimation = function(duration, step_func, callback)
+{
+  // Reset Animation parameters
+  var start = null, previousTimeStamp;
+  var done = false;
+  var animation_duration = duration;
+
+  function stepAnimation(timestamp)
+  {
+    if(start === null)
+    {
+      start = timestamp;
+    }
+    const elapsed = timestamp - start;
+
+    if(previousTimeStamp !== timestamp)
+    {
+      step_func(elapsed/animation_duration);
+    }
+
+    if(elapsed < animation_duration)
+    {
+      window.requestAnimationFrame(stepAnimation);
+    }
+    else
+    {
+      done = true;
+      if(callback)callback();
+    }
+  }
+
+  window.requestAnimationFrame(stepAnimation);
+};
