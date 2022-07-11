@@ -50,7 +50,7 @@ class Picture
 
 class Mystery
 {
-  constructor(id, txt, solutions, core, success_scene, abort_scene, fail_scene, folder_id)
+  constructor(id, txt, solutions)
   {
     this.id = id;
     this.txt = txt;
@@ -64,11 +64,8 @@ class Mystery
 
     this.solutions = solutions;
     this.locks = solutions[0].length;
-    this.core = core;
-    this.success_scene = success_scene;
-    this.fail_scene = fail_scene;
-    this.abort_scene = abort_scene;
-    this.folder_id = folder_id;
+    this.core = false;
+    this.solved = false;
   }
 }
 
@@ -78,7 +75,8 @@ class ObligatoryMystery extends Mystery
 {
   constructor(id, txt, solutions, core, success_scene, abort_scene, fail_scene, folder_id)
   {
-    super(id, txt, solutions, core, success_scene, abort_scene, fail_scene, folder_id);
+    super(id, txt, solutions);
+    this.core = true;
   }
     // Refactorable for a "current obligatory" notes to take
     // makeObligatory()
@@ -143,8 +141,10 @@ createNote(new ObligatoryMystery("Mystery_What_Happened", "WHAT HAPPENED TO YOU?
 
 
 /////////////////
-
+// These notes exist only for the testing scenes
 createNote(new Clue("Clue_Test_1", "First clue"));
 createNote(new Clue("Clue_Test_2", "Second clue"));
 createNote(new Clue("Clue_Test_3", "Third clue"));
+createNote(new Clue("Clue_Test_4", "Fake clue"));
+createNote(new Clue("Clue_Test_5", "Fake clue"));
 createNote(new Mystery("Mystery_Test_1", "HOW TO SOLVE THIS MYSTERY?",["Clue_Test_1", "Clue_Test_2", "Clue_Test_3"]));

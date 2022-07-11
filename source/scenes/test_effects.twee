@@ -108,8 +108,10 @@
 ::Test_SolveMystery [nobr]
 
 <script>
+  /* This script is only here to add some post-its to the test scene
+  To use a mystery, you only need the AddOptionMystery macro*/
   pullcord.quickstart();
-  var notes = ["Mystery_Test_1", "Clue_Test_1", "Clue_Test_2", "Clue_Test_3"];
+  var notes = ["Mystery_Test_1", "Clue_Test_1", "Clue_Test_2", "Clue_Test_3", "Clue_Test_4","Clue_Test_5"];
 
   setTimeout(() => (notes.map( note_name => window.conspiracy_board.add_note(board_notes[note_name]))), 1200);
 
@@ -117,5 +119,17 @@
 
 <<SetSpeaker "Yasyas">>
 <<AddParagraph "Alright, time to solve this mystery.">>
-<<AddOptionMystery "Attempt to solve the mystery." "Mystery_Test_1" >>
+<<AddOptionMystery "Attempt to solve the mystery." "Mystery_Test_1" "Test_Success_Mystery" "Test_Fail_Mystery">>
 <<AddOption "You know what? I dont't think I can right now." "Test_SolveMystery">>
+
+::Test_Success_Mystery [nobr]
+<<SetSpeaker "Yasyas">>
+<<AddParagraph "Wow!">>
+<<AddParagraph "I just solved a mystery!">>
+
+::Test_Fail_Mystery [nobr]
+<<SetSpeaker "Yasyas">>
+<<AddParagraph "Hmm..">>
+<<AddParagraph "Looks like I didn't solve the mystery.">>
+<<AddParagraph "I should open the board and organize my thought before tryng again.">>
+<<AddOptionMystery "Try to solve the mystery again." "Mystery_Test_1" "Test_Success_Mystery" "Test_Fail_Mystery">>

@@ -367,25 +367,27 @@ window.pullcord.init =  function()
     running = true;
   });
 
+  window.pullcord.click_again = true;
   window.pullcord.click = function (e) {
 
-    if(!window.pullcord.enabled)return false;
+    if(!window.pullcord.enabled ||!window.pullcord.click_again)return false;
 
+    window.pullcord.click_again = false;
 
     window.PlaySound("pullcord");
     switch(window.pullcord.tutorial_phase)
     {
       case 0:
-        window["tutorial_board"].toggle_board();
+        window["tutorial_board"].toggle_board(() => window.pullcord.click_again = true);
         window.pullcord.setTutorialPhase(1);
       break;
       case 2:
-        window["tutorial_board"].toggle_board();
+        window["tutorial_board"].toggle_board(() => window.pullcord.click_again = true);
         window.pullcord.setTutorialPhase(3);
       break;
 
       case 3:
-        window["conspiracy_board"].toggle_board();
+        window["conspiracy_board"].toggle_board(() => window.pullcord.click_again = true);
       break;
     }
 
@@ -414,6 +416,7 @@ window.pullcord.enable = function(enabled)
 
   if(enabled)
   {
+
     $("#pullcord_canvas").addClass("pullcord_enabled");
     $("#pullcord_canvas").removeClass("pullcord_disabled");
   }

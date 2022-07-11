@@ -32,18 +32,25 @@ $(html_conspiracy_board).insertBefore("#passages");
 window[this_board].board_toggled = false;
 window[this_board].interactable = true;
 
-window[this_board].toggle_board = function()
+window[this_board].toggle_board = function(callback)
 {
   window[this_board].board_toggled = !window[this_board].board_toggled;
   if(window[this_board].board_toggled)
   {
-    $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_up");
-    $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_down");
+    var board = $(`${"#"+this_board+"_overlay"}`)[0];
+    var animation = board.animate({
+        top:["5%"]
+      }, {duration:1000, easing:"ease-out",fill:"both"});
+    animation.addEventListener('finish', event => callback?callback():false);
   }
   else
   {
-    $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_down");
-    $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_up");
+
+    var board = $(`${"#"+this_board+"_overlay"}`)[0];
+    var animation = board.animate({
+        top:["-100%"]
+      }, {duration:1000, easing:"ease-out",fill:"both"});
+      animation.addEventListener('finish', event => callback?callback():false);
   }
 };
 
@@ -59,12 +66,53 @@ window[this_board].check_mystery = function(mystery_id, success, callback)
   var zoom = window[this_board].settings.zoomOnMysterySolve;
   var canvas =  window[this_board].canvas;
 
-  // Resets visual: vring to front, make sure it doesn't have the "untouched" border
+  // Create fake clue behind lock
+
+  var fake_clue_rect = new fabric.Rect({
+    left: mystery_note.left,
+    top: mystery_note.top - (settings.mysteryHeight - settings.noteHeight)/2,
+    width:settings.noteWidth,
+    height:settings.noteHeight,
+    fill: settings.noteColors["clue"],
+    stroke:settings.border.borderColor,
+    strokeWidth: settings.border.borderWidth,
+  });
+
+  var fake_clue_text = new fabric.Textbox(
+    "MYSTERY SOLVED!", {
+      left: fake_clue_rect.left,
+      top: fake_clue_rect.top,
+   width:settings.noteWidth-settings.notePadding/2,
+   fontFamily:"Caveat-Regular",
+   fontWeight: 'bold',
+   fontSize: 26,
+   textAlign:"center",
+   fill: '#990000',
+  });
+
+var fake_clue = new fabric.Group([fake_clue_rect, fake_clue_text],
+  {
+    external_id:"fake_clue",
+    object_type:"note",
+    note_type:"fake_clue",
+    left: fake_clue_rect.left,
+    top: fake_clue_rect.top,
+    width:fake_clue_rect.width,
+    height:fake_clue_rect.height,
+    rect:fake_clue_rect,
+    pins:[],
+    angle:0,
+  });
+
+  fake_clue.hasControls = fake_clue.hasBorders = false;
+  window[this_board].created_notes["fake_clue"] = fake_clue;
+  canvas.add(fake_clue);
+
+  // Resets visual: bring to front, make sure it doesn't have the "untouched" border
   mystery_note.rect.set({stroke:settings.border.borderColor, strokeWidth:settings.border.borderWidth});
   canvas.bringToFront(mystery_note);
 
   mystery_note.pins.map(pin => canvas.bringToFront(pin));
-  // canvas.renderAll();
 
   window[this_board].zoomOnObject(mystery_note, zoom, function()
   {
@@ -74,9 +122,11 @@ window[this_board].check_mystery = function(mystery_id, success, callback)
     const vibration_duration = 2000;
     const before_flash_delay = 1000;
     const flash_duration = 1100;
-    const before_end_delay = 200;
     const before_unlock_delay = 1500;
-    const unlock_duration = 1000;
+    const unlock_duration = 500;
+    const fall_duration = 3000;
+    const before_end_delay_success = 1000;
+    const before_end_delay_fail = 500;
 
     var animationCall; // Will change depend on the animation step;
     var animation_duration;
@@ -120,6 +170,10 @@ window[this_board].check_mystery = function(mystery_id, success, callback)
       window.PlaySound("lock_1");
       console.log("lock_"+(1));
 
+
+
+
+
       window.startAnimation(vibration_duration, function(normalised_time)
       {
 
@@ -133,20 +187,12 @@ window[this_board].check_mystery = function(mystery_id, success, callback)
 
         var subtime = (normalised_time*max_step)%1;
         var current_angle = initial_angles[step] + (target_angles[step]-initial_angles[step])*easeOutQuart(subtime);
-        mystery_note.fake_clue.set({angle: 20*easeOutQuart(subtime) });
         mystery_note.set({"angle":current_angle});
-
+        fake_clue.set({"angle": current_angle});
         canvas.renderAll();
       },
       function(){
 
-        // Make sure the last frame is done, on the audio visua lfront
-        mystery_note.fake_clue.set({angle:0});
-        mystery_note.set({"angle":0});
-
-
-        canvas.renderAll();
-        // window.PlaySound("lock_3");
         setTimeout(success ? unlock :colorResult , success ? before_unlock_delay : before_flash_delay);
 
       });
@@ -200,18 +246,7 @@ window[this_board].check_mystery = function(mystery_id, success, callback)
           }
           canvas.renderAll();
 
-        }, () =>
-        {
-          if(!success)
-          {
-            setTimeout(callback, before_end_delay);
-          }
-          else
-          {
-            mystery_note.curve.set({angle:10});
-            canvas.renderAll();
-          }
-        });
+        }, endSolveAnimation);
 
         if(!success)window.PlaySound("lock_fail");
 
@@ -219,22 +254,59 @@ window[this_board].check_mystery = function(mystery_id, success, callback)
 
         function unlock()
         {
-          var initial_width = mystery_note.curve.width;
-          var target_width = -20;
 
-            function easeOutQuart(t) {return 1 - Math.pow(1 - t, 4);}
+          function easeOutQuart(t) {return 1 - Math.pow(1 - t, 4);}
+
+          var initial_width = mystery_note.curve.width;
+          var initial_left = mystery_note.left;
+          var initial_top = mystery_note.top;
+
+          var target_width = -20;
+          var delta_left   =  10;
+          var delta_top    =  10;
+          var target_angle = -20;
+
+          var oscillation_amplitude = 5;
+          var oscillation_function = (t) => Math.sin(4*Math.PI*t)/(2*t+1);
+
+          window.PlaySound("lock_open");
 
           window.startAnimation(unlock_duration, function(normalised_time)
           {
             mystery_note.curve.width = initial_width + (target_width-initial_width) * easeOutQuart(normalised_time);
             mystery_note.curve.updatePos();
 
-            mystery_note.set({angle:-45 * easeOutQuart(normalised_time)});
-            mystery_note.fake_clue.set({angle:45 * easeOutQuart(normalised_time)});
+            mystery_note.set({
+              "angle":target_angle * easeOutQuart(normalised_time) + oscillation_amplitude * oscillation_function(normalised_time),
+              "top": initial_top + delta_top* easeOutQuart(normalised_time),
+              "left": initial_left + delta_left* easeOutQuart(normalised_time)
+            });
+
             canvas.renderAll();
           }
-          ,callback);
+          ,function() // Second part, lock fall
+          {
+            var initial_top = mystery_note.top;
+            var delta_top = 300;
+            var rotations = 1.5;
 
+            window.PlaySound("lock_win");
+            window.startAnimation(unlock_duration, function(normalised_time)
+            {
+              mystery_note.set({
+                "angle": 360 * rotations * normalised_time,
+                "top": initial_top + delta_top* easeOutQuart(normalised_time),
+              });
+              canvas.renderAll();
+            },endSolveAnimation);
+          });
+
+        };
+
+        function endSolveAnimation()
+        {
+          // setTimeout(alert, before_end_delay);
+          setTimeout(callback, success ? before_end_delay_success : before_end_delay_fail);
         }
 
       // Start with coloring pins, then will launch the rest
@@ -402,8 +474,8 @@ window[this_board].zoomPan = function(target_transform, callback)
   settings.maxZoom = 2;
   settings.noteWidth = 120;
   settings.noteHeight = 120;
-  settings.mysteryHeight = settings.noteHeight*1.2;
-  settings.mysteryWidth = settings.noteWidth*1.2;
+  settings.mysteryHeight = settings.noteHeight*1.1;
+  settings.mysteryWidth = settings.noteWidth*1.1;
 
   settings.notePadding = 12;
   settings.pinRadius = 12;
@@ -493,7 +565,7 @@ window[this_board].settings = settings;
       pins:pins,
       rect:rect,
       textObject:textObject,
-      angle:-window.randint(-5,5),
+      angle:window.randint(-5,5),
     });
 
     group.hasControls = group.hasBorders = false;
@@ -512,17 +584,6 @@ window[this_board].settings = settings;
       angle:0,
       stroke:settings.border.newBorderColor,
       strokeWidth: settings.border.newBorderWidth,
-    });
-
-    var fake_clue = new fabric.Rect({
-      left: left,
-      top: top - (settings.mysteryHeight - settings.noteHeight)/2,
-      width:settings.noteWidth,
-      height:settings.noteHeight,
-      fill: settings.noteColors["clue"],
-      angle:0,
-      stroke:settings.border.borderColor,
-      strokeWidth: settings.border.borderWidth,
     });
 
     var textObject = new fabric.Textbox(text, {
@@ -580,7 +641,7 @@ window[this_board].settings = settings;
     curve.selectable = false;
 
 
-  var group = new fabric.Group([fake_clue,  curve, rect, textObject],
+  var group = new fabric.Group([curve, rect, textObject],
     {
       external_id:external_id,
       object_type:"note",
@@ -591,13 +652,29 @@ window[this_board].settings = settings;
       height:settings.mysteryWidth+curve.height+20,
       pins:pins,
       rect:rect,
-      fake_clue:fake_clue,
       textObject:textObject,
       curve:curve
 
     });
 
     group.hasControls = group.hasBorders = false;
+
+    group.reset = function()
+    {
+      group.pins.map(pin => pin.set({
+        fill:settings.pinColors.baseFill,
+        stroke:settings.pinColors.baseStroke,
+      }));
+
+      resortAllElements(canvas);
+    }
+
+    group.remove = function()
+    {
+      group.pins.map(pin => pin.remove());
+      delete window[this_board].created_notes[group.external_id];
+      canvas.remove(group);
+    }
 
     return group;
   }
@@ -679,6 +756,38 @@ window[this_board].settings = settings;
 
       start_pin.addLine(start_pin, line, "start");
       end_pin.addLine(end_pin, line, "end");
+
+      line.remove = function()
+      {
+        // Remove line from data structure and canvas
+        var remove_index = null;
+        var start_pin = window[this_board].created_pins[line.start_pin_id];
+        var end_pin = window[this_board].created_pins[line.end_pin_id];
+
+        for(var i =0; i < window[this_board].linesList.length; i++)
+        {
+          var a = window[this_board].linesList[i].start;
+          var b = window[this_board].linesList[i].end;
+          if( (a == line.start_pin_id && b == line.end_pin_id) || ((b == line.start_pin_id && a == line.end_pin_id)) )
+          {
+            remove_index = i;
+          }
+        }
+
+        if(remove_index !== null)
+        {
+
+          // Remove the line in  data structure and canvas
+          window[this_board].linesList.splice(remove_index, 1);
+
+          // Remove data about connected pins
+          start_pin.removeLine(start_pin, line.end_pin_id, "start");
+          end_pin.removeLine(end_pin, line.start_pin_id, "end");
+
+          window[this_board].created_lines.splice(remove_index, 1);
+          canvas.remove(line);
+        }
+      }
 
       return line;
   }
@@ -763,6 +872,28 @@ window[this_board].settings = settings;
         {
           pin.set({stroke:settings.pinColors.baseStroke,fill:settings.pinColors.baseFill});
         }
+
+      }
+
+      pin.remove_all_lines = function() // Removes all lines connected to this pin, both in canvas and data structure
+      {
+        // Check datastructure to see if this pin is connected to another
+
+        for(var i in window[this_board].created_lines)
+        {
+          var line = window[this_board].created_lines[i];
+          if(line.start_pin_id == pin.external_id || line.end_pin_id == pin.external_id)
+          {
+            line.remove();
+          }
+        }
+      }
+
+      pin.remove = function()
+      {
+        pin.remove_all_lines();
+        delete window[this_board].created_pins[pin.external_id];
+        canvas.remove(pin);
 
       }
 
@@ -1080,45 +1211,9 @@ window[this_board].settings = settings;
         // If reticule is created from a lock, we remove the previous line
         if(p.is_lock && p.lines_start.length+p.lines_end.length > 0)
         {
-          // Check datastructure to see if this pin is connected to another
-         var remove_index = null;
-         for(var i in window[this_board].linesList)
-         {
-           let line = window[this_board].linesList[i];
-           if(line.start == p.external_id || line.end == p.external_id)
-           {
-             remove_index = i;
-             //Delete line in data structure
-             window[this_board].linesList.splice(remove_index, 1);
 
-             // Remove data in connected pins
+          p.remove_all_lines();
 
-             var start_pin = window[this_board].created_pins[line.start];
-             var end_pin = window[this_board].created_pins[line.end];
-
-             start_pin.removeLine(start_pin, end_pin.external_id, "start");
-             end_pin.removeLine(end_pin, start_pin.external_id, "end");
-
-             //Remove visual information
-             line = window[this_board].created_lines[remove_index]
-             canvas.remove(line);
-             window[this_board].created_lines.splice(remove_index,1);
-             break;
-           }
-         }
-
-         // //Find the corresponding line element in canvas and remove it
-         // for(var i in window[this_board].created_lines)
-         // {
-         //     let line = window[this_board].created_lines[i];
-         //     if(line.start_pin_id == p.external_id || line.end_pin_id == p.external_id)
-         //     {
-         //       canvas.remove(line);
-         //       window[this_board].created_lines.splice(i,1);
-         //       window.PlaySound("lock_open");
-         //       break;
-         //     }
-         // }
         }
 
         window[this_board].reticule.startFromPin(window[this_board].reticule, p);
@@ -1178,43 +1273,8 @@ window[this_board].settings = settings;
     else if (p && p.object_type == "line")
     {
         // Remove line from data structure and canvas
-
-      var remove_index = null;
-
-      var start_pin = window[this_board].created_pins[p.start_pin_id];
-      var end_pin = window[this_board].created_pins[p.end_pin_id];
-
-      for(var i =0; i < window[this_board].linesList.length; i++)
-      {
-        var a = window[this_board].linesList[i].start;
-        var b = window[this_board].linesList[i].end;
-        if( (a == p.start_pin_id && b == p.end_pin_id) || ((b == p.start_pin_id && a == p.end_pin_id)) )
-        {
-          remove_index = i;
-        }
-      }
-
-      if(remove_index !== null)
-      {
-
-        // Remove the line in  data structure and canvas
-        window[this_board].linesList.splice(remove_index, 1);
-
-        // Remove data about connected pins
-        start_pin.removeLine(start_pin, p.end_pin_id, "start");
-        end_pin.removeLine(end_pin, p.start_pin_id, "end");
-
-        window[this_board].created_lines.splice(remove_index, 1);
-        canvas.remove(p);
+        p.remove();
         window.PlaySound("cut_cord");
-      }
-      else
-      {
-        console.log("line_error", p.start_pin_id, p.end_pin_id)
-      }
-
-
-
     }
 
     // Cancel reticule if click in empty space

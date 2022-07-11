@@ -42,7 +42,7 @@
 <<cacheaudio "bard_bgm" "source/media/music/a_bards_tale.mp3">>
 <<cacheaudio "flicker_bgm" "source/media/music/flicker_by_sheddy.mp3">>
 
-<<set $sfx_list to ["plic","ploc","drink_mug","found_note","door_knock","light_flicker","meow","whack","desk_slam","tickdown","pullcord","slot","door_open","small_bang","impact","loud_bang","scribble","scoreboard","navbar","jingle","whip","title_show","cut_cord","pin_pop","pin_tap","lock_1","lock_2","lock_3","lock_open","lock_fail"]>>
+<<set $sfx_list to ["plic","ploc","drink_mug","found_note","door_knock","light_flicker","meow","whack","desk_slam","tickdown","pullcord","slot","door_open","small_bang","impact","loud_bang","scribble","scoreboard","navbar","jingle","whip","title_show","cut_cord","pin_pop","pin_tap","lock_1","lock_2","lock_3","lock_open","lock_fail","lock_win","wink"]>>
 <<for _i = 0; _i < $sfx_list.length; _i++>>
 
 	<<cacheaudio `"sfx_"+$sfx_list[_i]` `"source/media/sfx/"+$sfx_list[_i]+".wav"` >>

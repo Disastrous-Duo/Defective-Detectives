@@ -297,29 +297,81 @@ $args[0] -
 
 :: AddOptionMystery [widget]
 <<widget "AddOptionMystery">>
-<<run window.current_mystery_solving = $args[1]>>
+<<set window.current_mystery to $args>>
 <<run $optionmap.set($args[0], {"passageName":"Empty_Mystery_Scene","variables":{"customPuce":"🔒"}, "onclick":function()
   {
-    var comment = "For now is equivalent to window.pullcord.click()";
+    var board =  window.conspiracy_board;
+    var mystery_id = window.current_mystery[1];
+    var success_scene = window.current_mystery[2];
+    var fail_scene = window.current_mystery[3];
+
+
+    /*"Brings the board"*/
     window.PlaySound("pullcord");
-    window.conspiracy_board.interactable = false;
-    window.conspiracy_board.toggle_board();
-    var resultSuccess = true;
-    window.conspiracy_board.check_mystery(window.current_mystery_solving, resultSuccess, function(success)
+    window.pullcord.enable(false);
+    board.interactable = false;
+    board.toggle_board();
+
+    /*"Check if the mystery is solved"*/
+    var connected_clues = [];
+    var lock_pins_id = board.created_notes[mystery_id].pins.map(pin => pin.external_id);
+    for(var i in board.linesList)
     {
-      window.conspiracy_board.interactable = true;
-      if(success)
+      var line = board.linesList[i];
+      var other = false;;
+      if(lock_pins_id.indexOf(line.start) != -1)
       {
-        alert("Success!");
+        other = board.created_pins[line.end].note_id;
+      }
+      else if(lock_pins_id.indexOf(line.end) != -1)
+      {
+        other = board.created_pins[line.start].note_id;
+      }
+
+      if(other)connected_clues.push(other);
+    }
+
+    var try_solution = connected_clues.sort().join(";");
+    var possible_solutions = board_notes[mystery_id].solutions.map(solution_array => solution_array.sort().join(";"));
+    var resultSuccess = possible_solutions.indexOf(try_solution) != -1;
+
+    /*"Trigger animation depending on success"*/
+    board.check_mystery(mystery_id, resultSuccess, function()
+    {
+
+      /*"Clear the board post-animation and teleport to the right scene"*/
+      board.toggle_board(function()
+      {
+        window.pullcord.enable(true);
+        board.interactable = true;
+        board.canvas.remove(board.created_notes.fake_clue);
+        board.canvas.setZoom(1.2);
+        if(resultSuccess)
+        {
+          board.created_notes[mystery_id].remove();
+        }
+        else
+        {
+          board.created_notes[mystery_id].reset();
+        }
+
+        board.canvas.renderAll();
+      });
+
+      console.log(resultSuccess,window.current_mystery);
+
+      if(resultSuccess)
+      {
+        Engine.play(success_scene);
       }
       else
       {
-        alert("Failure.");
+        Engine.play(fail_scene);
       }
 
     });
   }
-},)>>
+})>>
 <</widget>>
 
 :: Empty_Mystery_Scene
