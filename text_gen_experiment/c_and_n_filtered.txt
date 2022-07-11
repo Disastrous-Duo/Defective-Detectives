@@ -1,0 +1,2309 @@
+>>> START GAME
+//A majestic waterfall looms over the blue City of Falaisant.//
+>>> A drop of water freefalls, breaking off; wandering.
+//At the heart of the city, high towers dominate the skyline. White rock and marble glint under the first rays of the sun, reflecting the water flowing underneath.//
+>>> The drop rolls down the tower.
+//Wide boulevards lined with various trees and colourful bouquets shoot out from the central plaza, drawing a huge star on the city’s layout.//
+//Two of them stretch out behind the tower; the three others unfold in the distance.//
+>>> A faint pull takes the drop down the first boulevard.
+>>> The drop continues its course down the second boulevard.
+>>> The drop rolls, slowly making its way down the third boulevard.
+//The boulevard spreads far, far until it breaks into smaller streets.//
+>>> //The drop bounces off the slightly uneven pavement.//
+//Soon, big boats appear, moored to a wharf.//
+//Containers are stacked on the side as the sunlight casts its early light on busy dockhands.//
+>>> The drop follows the movement of the merchandise.
+>>> The drop takes a sharp turn in a dark alley.
+//Boxes are carried to an empty marketplace.//
+//All the workers stop before a group of officers; they seem stuck.//
+//On the other side of the place, a mysterious figure in a long, dark coat is making their way out of the market.//
+>>> The drop glides, chasing after the curious individual.
+>>> The drop takes another turn, rolling away from the suspicious silhouette.
+//The figure is walking at a rapid pace.//
+//They're stumbling and stopping often, as if lost in the chaos of alleys.//
+>>> The drop keeps up; left, right, left again… before crashing onto something… paper?
+//At the west exit stands a big metallic bridge, with ornate handrails and details.//
+>>> The drop falls from a hole in the hedge.
+//It's a flyer.//
+//The individual crouches to pick it up.//
+//They shake the paper slightly, to get rid of the humidity that was clinging to it.//
+>>> The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City.
+//Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//
+//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//
+//Only the curious personnage is walking, cutting through the misty veil with hesitant steps.//
+//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//
+//The atmosphere is heavy…//
+//Disquieting.//
+>>> The drop runs down darker and darker paths, following the silhouette.
+//In the darkest corner of the decrepit block, the dark figure stops in front of a locked door.//
+//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//
+>>> The drop looms over the edge of the roof before falling on the shadowed figure's nose.
+//The boulevard spreads far, far until it breaks into smaller streets.//
+>>> The drop bounces off the slightly uneven pavement.
+//Open places and parks give way to residential quarters that are overshadowed by an intricate network of criss-crossing bridges : they jump over streams of water as they connect multiple layers of passageways, roads and gates.//
+>>> The drop falls from a hole in the metallic hedge of a bridge.
+//Plic.//
+//Ploc.//
+>>> Lower, Lower…
+//Fog - thick and permanent - haunts streets that have gotten so cramped they are suffocating.//
+>>> The drop errs, losing itself in the ominous veil.
+//No light nor sound seem to reach this place. Everything is frozen into an eerie silence.//
+//Unpaved alleys twist and turn into a tortuous, unwelcoming maze.//
+//The atmosphere is heavy…//
+//Disquieting.//
+>>> The drop runs down darker and darker paths.
+//In the darkest corner of a decrepit block, a silhouette stands in front of a locked door.//
+//The shabby sign on the shabbier building reads: “Agence Cannelé & Nomnom, Detectives”.//
+>>> The drop looms over the edge of the roof before falling on the shadowed figure's nose.
+//The boulevard spreads far, far until it breaks into smaller streets.//
+>>> The drop bounces off the slightly uneven pavement.
+//The paved streets lead to a big park.//
+//Trees line up, dividing green grass fields, trodden paths and sculpted fountains.//
+>>> The drop is drawn to the biggest fountain.
+>>> The drop rolls past the rows of trees.
+//The fountain is magnificient.//
+//Marble chiseled with care, it looks timeless.//
+//A small path leads away, near a bridge that joins the other part of the park.//
+//Under the bridge, the city is organized in layers, each one deeper than the other.//
+>>> The drop crosses the bridge and falls through the hedge.
+//The trees show the way out of the wide park.//
+//On the other side of gilded gates, a slope plunges down into the depths of the city.//
+>>> The drop glides drifts down the avenue.
+//Its course is halted when it drifts on a piece of paper.//
+//A few moments later, a dark figure appears from a corner.//
+//Their pace is hurried and shaky - indecisive.//
+//They crouch to pick up the flyer.//
+//They shake the paper slightly, to get rid of the humidity that was clinging to it.//
+>>> The drop is sent flying, high, high; before falling fast, dropping to a deeper part of the City.
+In this instant, something has just shifted in your universe.
+YOU (???):
+ACHOO!
+@@.typewriter;8:37am - 288 Harmony Street, Falaisant@@
+''*BANG*''
+Something just happened behind that door.
+>>> Knock
+>>> Wait
+SHRILL VOICE:
+I heard something, it might be-
+SOMEHOW SHRILLER VOICE:
+Oh, shut up
+SHRILL VOICE:
+No, YOU shut up
+SOMEHOW SHRILLER VOICE:
+I said it first, YOU SHUT UP, shut up
+>>> Knock
+>>> Wait
+SOMEHOW SHRILLER VOICE:
+Shut up!!!!
+SHRILL VOICE:
+UGH, Shut UP
+SOMEHOW SHRILLER VOICE:
+NO, NO, you shut up.
+>>> Knock
+>>> Wait
+SOMEHOW SHRILLER VOICE:
+HAHAHAHAHAHAHA I CAN'T HEAR YOU
+SHRILL VOICE:
+WILL YOU EVER SHUT. UP.
+SOMEHOW SHRILLER VOICE:
+ILL SHUT UP WHEN YOU STOP BEING ANNOYING.
+>>> Knock
+>>> Wait
+SHRILL VOICE:
+SHUT UP SHUT UP SHUT UP
+SOMEHOW SHRILLER VOICE:
+AAAAAAAGH ! SHUT UP OR I SWEAR I WILL MURDER-
+''*BAM*''
+The door violently slams open.
+>>> ''*OUCH*''
+It's a young lady who has opened the door. Behind them, a curious man is sprawled on the floor, in pain.
+There's an uncomfortable pause as everyone stares in a surprised silence.
+…
+The girl smiles widely as the man stands up and dusts their clothes.
+?:
+Welcome to my detective agency, how can I help?
+??:
+Welcome to MY agency, who is this?
+The two individuals glare at each other: they're about to start arguing again.
+???:
+That's…
+… An excellent question.
+Once inside, one thing becomes glaringly obvious.
+The room is small.
+After consideration, small is too nice a way to describe the //tiny// cubicle.
+>>> Talk to the detectives.
+>>> Look around.
+>>> Wait for the detectives' directions.
+???:
+Hum, yeah… About this agency…
+?:
+Oh, right!
+I am Cannelé and this is-
+??:
+Nomnom. The only real detective here.
+The girl - Cannelé, ignores the jab, which seems to take a lot out of their self control.
+NOMNOM:
+I am very sorry, could you please wait a moment for us to take care of…
+Nomnom makes a broad gesture towards the pitiful state of the office.
+Cannelé's smile is a bit appologetic.
+CANNELÉ:
+We were not really expecting anyone so we didn't bother cleaning up…
+But don't worry, it'll only take a minute.
+NOMNOM:
+The process is absolutely painless!
+^^Unlike my knee right now^^
+A second later, they're moving. Fast.
+Faster than anything your empty memory has ever seen before.
+???:
+//I'm kinda relieved because it's really disgusting…//
+The room is in such a messy and pitiful state that there is nowhere to sit.
+All the space is engulfed under various objects, papers and rubbish.
+The detectives have started cleaning up…
+But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.
+You are unable to sit or even move one inch without stumbling on a random item.
+>>> Observe the scene.
+As you decide to look around, you see the detectives start moving unnaturally.
+They stop right in front of you, as if they tried to hide the sight of the messy office in one last attempt at dignity.
+?:
+H-hi I'm Cannelé, a great detective.
+??:
+And I'm Nomnom. The greatest detective.
+They are fidgeting as they glance at each other, before seemingly reaching an agreement.
+Somehow, even their unspoken communication is //loud//…
+CANNELÉ:
+A minute, please!
+And then they're running around, like two ouragans in a bottle, as they try to clean the office up.
+Their collaboration skills are so bad and the room so tiny, that they do nothing but get in each other's way.
+???:
+//I'm kinda relieved because it's really disgusting…//
+//There's nowhere to sit, everything is overtaken under layers and layers of rubbish.//
+You are standing in the entrance of the shoebox sized office.
+No one is talking.
+You are waiting for the detectives to do something.
+Anything.
+But they're just staring back.
+They look…
+Lost.
+Utterly so.
+As if they were expecting //the client// to know what to do.
+Ah.
+They're looking slightly desperate now.
+The atmosphere is awkward.
+//Terribly// awkward.
+Another moment passes in silence.
+It's endless.
+Each second…
+Feels like an hour.
+You are looking at them;
+They're looking at you.
+The silence stretches…
+Until you can't take it anymore.
+>>> «Hum…»
+>>> «Excuse me??»
+>>> «What are you waiting for…»
+At this, the two detectives seem to snap out of a daze.
+?:
+Oh! Right! Hum, welcome to my-
+??:
+You said this already, stop being useless.
+Welcome to MY agency.
+?:
+Ugh.
+Anyway, I am Cannelé and this is-
+??:
+Nomnom. The only real detective here.
+The girl - Cannelé, ignores the jab.
+NOMNOM:
+I am very sorry, could you please wait a moment for us to take care of…
+Nomnom makes a broad gesture towards the pitiful state of the office.
+Cannelé's smile is a bit appologetic.
+CANNELÉ:
+We were not really expecting anyone so we didn't bother cleaning up…
+But don't worry, it'll only take a minute.
+NOMNOM:
+The process is absolutely painless!
+^^Unlike my knee right now^^
+A second later, they're moving. Fast.
+Faster than anything your empty memory has ever seen before.
+???:
+//I'm kinda relieved because it's really disgusting…//
+The room is in such a messy and pitiful state that there is nowhere to sit.
+All the space is engulfed under various objects, papers and rubbish.
+The detectives have started cleaning up…
+But their collaboration skills are so bad and the room so tiny that they do nothing but get in each other's way.
+You are unable to sit or even move one inch without stumbling on a random item.
+>>> Observe the scene.
+To the left, an old couch is crumbling under a pile of mess.
+On the other side, a sink and some cups. 
+In front of you, the wall is scattered with papers.
+>>> Inspect couch on the left.
+>>> Inspect sink on the right.
+>>> Inspect the wall.
+The beat-up couch thrones in the room : it must take half the space of the booth.
+''*BANG*''
+It looks a little ridiculous but oddly fitting in the strange office.
+NOMNOM:
+MY TOE!
+From the rubbish cluttering it, emerge a couple blankets, newspapers and a half-eaten croissant.
+>>> Inspect sink on the right.
+>>> Inspect the wall.
+>>> «Wow…»
+The duo is elbowing their way around the room. They eventually manage to place a stool on the other side of the table facing the couch.
+CANNELÉ:
+Will you stop getting in my way??
+Behind the stool, the sink is filled with three cups. Next to it, a water boiler sits on an open cupboard that's almost empty.
+???:
+//This kitchen is almost ''desolate''… somehow this is not very re-//
+NOMNOM:
+Why do you HAVE to be a pain in my-
+???:
+//-assuring.//
+>>> Inspect couch on the left.
+>>> Inspect the wall.
+>>> «Wow…»
+A strange board, piled with documents, newspapers articles, files and pictures linked with red thread and ponctuated with notes, hangs on the wall.
+CANNELÉ:
+Please refrain from touching the conspiracy board, it's quite-
+A portion of the board is hidden under a dirty, white sheet. It looks ready to fall apart any moment now.
+NOMNOM:
+Unstable. That board is @@.foresight;unstable@@. So is Cannelé, beware.
+NOMNOM:
+OUCH!
+>>> Inspect couch on the left.
+>>> Inspect sink on the right.
+>>> «Wow…»
+You barely even recognize the place.
+The rubbish had mysteriously disappeared, hidden in a dark corner.
+The couch had been - partly - excavated and you look at the uncomfortable looking stool that has been placed before you.
+Your need to flee the place is still there but it has slightly decreased.
+>>> ''*BANG*''
+The conspiracy board has fallen over in a huge commotion.
+CANNELÉ:
+AGAIN?!
+NOMNOM:
+I warned you it was @@.foresight;unstable@@…
+They both sigh and start to crouch and pick up the scattered documents.
+CANNELÉ:
+There is one piece missing…
+NOMNOM:
+I think I saw it under the table?
+They continue rummaging through the mess of documents.
+You see a colored paper sticking out from under the coffee table.
+???:
+NOMNOM:
+Perfect! That's the one!
+You can just click on it!
+CANNELÉ:
+And stick it right back on the board by tugging the handle right on top of the screen.
+???:
+//I got it!//
+>>> Turn back to the two detectives.
+The two detectives are staring back, blankly.
+>>> Observe Nomnom.
+>>> Study Cannelé.
+>>> Attempt communication (Skip.)
+Cannelé is rather short but as they are standing on the couch, they’re currently a few heads taller than Nomnom.
+Their skin is deep brown and their round face is framed by a tangle of soft, black curls that turn a deep red as they reach the middle of their back.
+Their almond-shaped eyes are hazel, with a strikingly purple outer ring. Thick eyelashes cast a shadow over a full nose and smiling lips.
+Bright ink swirls on their hands, drawing complex patterns on the skin before disappearing behind dark fabric.
+However, what truly stands out is Cannelé’s clothing.
+The puffy shirt held by suspenders, the sleek black pants as well as the long coat seem brand new and high end…
+It creates a //stark// contrast with the pitiful state of the cramped office.
+>>> //Their attitude…//
+>>> //Their clothes…//
+>>> //Why are they standing on the couch…//
+>>> Look at Cannelé again.
+>>> Turn to Nomnom.
+>>> Attempt communication (Skip.)
+>>> //Cannelé's attitude…//
+>>> //Cannelé's clothes…//
+>>> //Why is Cannelé standing on the couch…//
+???:
+//There is something about them…//
+//Somehow, they look like they’re coming from nobility.//
+You contemplate the expensive clothes, the smug grin and the total lack of common sense.
+???:
+Fallen //nobility…//
+The design looks like a maze, pieces of an intricate puzzle that have been taken apart.
+???:
+//Delinquent// nobility//??//
+The clothes Cannelé wears resembles like those worn by models and very rich people.
+The fabric looks soft and thick, and the cut of the outfit as if it had been tailored to fit them.
+???:
+//These clothes…//
+//Look more expensive than the whole building.//
+//Do I really want to trust someone who seems to put more money in clothes than actual vital needs like a proper office?//
+//…//
+//Do I even //have// a choice?//
+Cannelé is standing proudly on the sofa.
+They are resting their elbow on the top of Nomnom's head as the latter tries to swat the arm away.
+When they catch your confused expression, Cannelé smiles and hops once on the couch.
+???:
+//I think I get what's happening here.//
+//And Cannelé is //rather small// compared to Nomnom, who is// rather tall.
+//Cannelé standing on the sofa is probably a way for them to try and hide this height complex.//
+//It's suprisingly…//
+//Ineffective.//
+Nomnom seems significantly taller than Cannelé (not counting the couch).
+Nomnom seems significantly taller than Cannelé.
+It might be just an impression given by their hair, though.
+Their navy blue trench coat contrasts their warm tan skin nicely. Even though their shoes are of rather good quality, they also seem to be worn-out in unusual places.
+If one had to guess, they’d probably say that the left shoe is slightly more //aerodynamic// than the other.
+But why…?
+>>> //Their hair…//
+>>> //Their coat…//
+>>> //I can’t help it, but this left shoe really intrigues me…//
+>>> Look at Nomnom again.
+>>> Turn to Cannelé.
+>>> Attempt communication (Skip.)
+>>> //Nomnom's hair…//
+>>> //Nomnom's coat…//
+>>> //I can’t help it, but Nomnom's left shoe really intrigues me…//
+Nomnom's hair gather in a fluffy jet black cloud, making their head look like it's about to float away and join its white cousins in the sky.
+Despite its imposing mass, they managed to make it stand in a perhaps unstable, but surpringly perduring equilibirum.
+???:
+//I can see that Nomnom puts a lot of care in their hair. They look proud of it!//
+//Something strikes me as strange, though. I hope I'm not being too judgemental, but it seems a bit…//
+//…dehydrated?//
+//Usually this happens when people don't know how to take care of their specific hair type.//
+Nomnom's coat is old and patched up at unusual places.
+On the armpits, traces of flour and breadcrumbs remain.
+???:
+These happens when you buy bread on tuck it on under your arm.
+That's surprisingly responsible!
+The left pocket of the coat seems to be full.
+It has been hastily sewn back together, indicating it must //often// be full.
+A dry croissant peeks out of it.
+???:
+And they also buy pastries, hm.
+They have great taste.
+I can work with that!
+Nomnom's arm shifts, and something shiny catches your eyes.
+The light bounces off from a reflective surface on their wrists.
+Reflective //surfaces//, plural.
+Nomnom is wearing two watches.
+On the same wrist.
+And none of them are on time.
+???:
+...I'm confused and weirded out again.
+???:
+//Now that I'm looking more closely, these shoes aren't from the same pair at all.//
+//The right one has a square toe and a whoolly texture, while the left one is made of leather and shaped like an almond.//
+Instinctively, you understand that if you had to throw one of the shoes very far, the left one would probably fly better than the right.
+It might be correlated with the reason why Nomnom currently has mismatching footwear.
+???:
+???:
+NOMNOM:
+Cannelé just grumbles in response.
+NOMNOM:
+What are you grumbling for?
+CANNELÉ:
+It's literally shit and I hate you, //''Nomnom''//
+The argument seems inconsequential and terribly pointless.
+???:
+A-ah, I see.
+//They remind me of siblings…//
+//A pair of //extremely annoying// siblings.//
+>>> Bring the topic back to what matters to you : your amnesia.
+The two detectives (?) eventually sit on the couch. The girl - Cannelé, gestures towards the stool.
+CANNELÉ:
+Please, have a sit. Would you like a drink?
+???:
+Oh, uh, gladly. I would love a cup of-
+NOMNOM:
+Excellent! I make the best coffee around the block.
+???:
+tea. But coffee would be great too, I guess.
+Nomnom stands up and make their way to the sink. They hum as they prepare two cups of coffee.
+They bring the cups over, ignoring Cannelé, and place one on the table.
+A faint smell of coffee comes from the cup but the liquid inside it is clear. Too clear for it to be coffee.
+After inspection, it looks like water that smells of coffee.
+You think you see the surface of the liquid @@.foresight;glow@@ blue for a second.
+Then; it's gone.
+Nomnom quickly picks up the coffee cup again, and puts it slightly farther on the table.
+NOMNOM:
+You should wait a bit before drinking it. It's still a //tad bit// hot.
+CANNELÉ:
+So you have-
+NOMNOM:
+Amnesia. Can you tell us everything you remember?
+>>> Who am I?
+>>> What happened to me?»
+>>> What's wrong with this coffee?
+CANNELÉ:
+What's your name? Occupation? Monthly salary?
+???:
+I can't remember anything. It's all… foggy in my mind. Like it's all there but I can't //remember//.
+I have no idea where I am or where I live, I am completely lost.
+NOMNOM:
+What about your magical Gift?
+CANNELÉ:
+Do you even remember what a gift is?
+>>> «Of course, I do» (Bluff.)
+>>> «A what now?»
+???:
+I lost my memories but I am not //that// confused. I know my multiplication tables, the Three Laws of Magic and also what //real// coffee looks like.
+//Nomnom squints, unconvinced.//
+CANNELÉ:
+Yeah ? Give me the Laws of Magic then.
+NOMNOM:
+^^Yeah ? Give me the first 5 multiplication tables then.^^
+They look at each other in confusion.
+NOMNOM:
+I meant the Laws of Magic.
+???:
+//Wait, what// were //the Laws of magic again?//
+//The name is so familiar but it's like looking into an empty drawer, I can't remember them.//
+//This looks super important too…//
+This is really not necessary.
+CANNELÉ:
+NOMNOM:
+We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.
+>>> «If you insist…»
+CANNELÉ:
+Okay so basically, a ''Gift'' is what we call a person's magical ability.
+NOMNOM:
+They are ruled by Three Laws.
+???:
+//Wait, the Three Laws of Magic… this kind of rings a bell.//
+//This looks super important too…//
+Y-yeah, I think I remember something like that.
+NOMNOM:
+Let's check what you remember then!
+You start sweating now: this is not going to end well for you.
+???:
+This is //really// not necessary.
+CANNELÉ:
+NOMNOM:
+We are somewhat experts on the matter. Just consider this a test for us to better comprehend the situation you are in.
+???:
+//I missed the timing to back out and come clean…//
+>>> «Erm…»
+NOMNOM:
+How did you find this place?
+???:
+I tried to go to the police but they couldn't help… That's when I found the flyer.
+The flyer on the table reads:
+@@.flyer;AGENCE ==CANNELE== __NOMNOM__ - //DETECTIVE//.<br/> __Will Help__ you find anything you ==misplaced== lost.<br/>Visit ==me== no, me! to my office, __228 HARMOnY StrEeT__@@
+It's barely legible and mostly just confusing.
+???:
+I was quite desperate you see…
+CANNELÉ:
+SEE! I KNEW HANDING OUT FLYERS WOULD BE A GREAT IDEA!
+NOMNOM:
+Whatever, pretty sure it was my idea.
+CANNELÉ:
+You're such a loser.
+So you are looking for help to regain memory, is that right?
+Cannelé's gaze sweeps over you, as they inspect your appearance.
+???:
+That's right! When I came to, I couldn't remember anything. The only clue I had was my wallet, but a- it's a bit embarassing…
+NOMNOM:
+Yes? What happened to your wallet?
+???:
+A cat stole it… and sneaked away.
+NOMNOM:
+Do you have any other personal item that might help identify you?
+???:
+Nothing. I looked into all my pockets, but I have nothing…
+CANNELÉ:
+>>> «Who am I?»
+>>> «What's wrong with this coffee?»
+>>> Take a deep breath (Continue.)
+???:
+The coffee… is very special here.
+Nomnom's expression freezes as they try to maintain a polite smile.
+NOMNOM:
+Is there any issue with the way I make coffee ?
+???:
+''*gulps*''
+NOMNOM:
+Can I offer you a pastry to go with this //delicious// cup of coffee? They're fresh from yesterday.
+???:
+Oh! Is «//Yesterday//» a bakery?
+A heavy silence greets the question.
+This is not a safe topic.
+???:
+Y-yes please.
+Nomnom tentatively reaches in the mess on the couch and fishes a miraculously untouched muffin.
+The dectective looks at it longingly before handing it over.
+>>> «Who am I?»
+>>> «What happened?»
+>>> Take a deep breath (Continue.)
+???:
+Do you think you can help me?
+Cannelé's smile widens.
+CANNELÉ:
+Now let us discuss the terms of the contract.
+>>> The contract?
+CANNELÉ:
+If you become our client, we need to draw an official contract.
+After all, I am not a swindler-
+NOMNOM:
+''*COUGH*''
+//WE// are proper detectives.
+This statement, that should be reassuring, sounds like a threat.
+>>> //Am I really… leaving my fate in the hands of those two??//
+>>> //But somehow… I feel like they might be trustworthy…//
+>>> //But somehow… I feel like I can count on them…//
+???:
+//They still look a little suspicious to me…//
+//And annoying.//
+//But at this point, I have no other choice but to rely on them.//">>
+//But at this point, I have no one else I can rely on.//
+//So I'll just bear with it for now.//
+???:
+//I don't know exactly what it is…//
+//But //something// tells me I can trust them.//
+//These people… they'll help me.//
+You feel it, faintly.
+The weight that had been carrying the whole morning - ever since you woke up with no recollections of your own identity - has lightened, a little.
+What you are feeling right now, is hope; and it's all thanks to the two detectives sat in front of you.
+NOMNOM:
+We hereby commit to finding out the answer to three questions for you:
+???:
+Maybe those questions will be useful later…
+CANNELÉ:
+In exchange, the client - you - will have to respect three conditions:
+Clause 1: I do not take any responsability on whatever this maniac right here might do.
+NOMNOM:
+I sincerely despise you so much.
+Cannelé pauses.
+CANNELÉ:
+Clause 2: Payment will proceed thus: when you regain your memory, we will deduct 10% of your monthly wage for the next 5 months.
+???:
+WHAT?
+CANNELÉ:
+Clause 3: In addition to the payment, you will treat us to a meal once the case is closed.
+Any questions?
+No?
+Perfect!
+Cannelé signs the contract.
+NOMNOM:
+Seems fair to me.
+Nomnom shrugs and signs the contract.
+???:
+//Scratch that monologue about trust and hope and worries being lifted.//
+//They're out to scam me!!!//
+CANNELÉ:
+Hmmm… Those «@@color:gold;???@@» are kind of annoying me.
+???:
+???
+NOMNOM:
+Any name? Or an alias?
+>>> «Not really?»
+>>> «I can come up with one!»
+>>> «If I say “No”, what's gonna happen?»
+CANNELÉ:
+Please. We're professionals.
+Let us do our job.
+???:
+//So I have no say in…//
+//Choosing my own name.//
+//Why did they even ask me then…//
+Nomnom stretches their neck and cracks their knuckles.
+NOMNOM:
+Ok, time for me to shine!
+CANNELÉ:
+I think NOT, you SUCK at namegiving.
+I'm going to take care of this
+???:
+I have a terrible feeling about this.
+No reply comes.
+They both smile at you, an almost business-like smile.
+NOMNOM:
+We wouldn't call you “No”, it's a terrible name.
+CANNELÉ:
+Plus, it's already taken.
+You can take “Yes”, though.
+???:
+That's not what I meant but okay…
+The answer is no, I do not have a name.
+Both detectives are suddenly quiet, lost in deep thoughts.
+Cannelé is muttering to themselves as Nomnom seems to be scanning the room for…
+Inspiration?
+<h2 class='duel_title duel_left'>DESIGNATION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>"
+CANNELÉ:
+A name…
+NOMNOM:
+A chair?
+CANNELÉ:
+An alias !
+NOMNOM:
+The sink…
+CANNELÉ:
+Ali ?
+NOMNOM:
+Oh no ew, dirty
+CANNELÉ:
+Iasias…
+NOMNOM:
+The couch…
+CANNELÉ:
+Ee-yas?
+NOMNOM:
+Wait, what's that…
+CANNELÉ:
+Yas ! Yas?
+NOMNOM:
+It's a muff-
+>>> //I am getting concerned …//
+CANNELÉ & NOMNOM:
+''//A-HA!//''
+>>> VERY //concerned…//
+CANNELÉ:
+YASYAS, I CHOOSE YOU!!!
+NOMNOM:
+YOUR NAME SHALL BE MUFFIN!!!
+Cannelé and Nomnom look at each other, outraged.
+The silence between them tells an entire story on its own.
+???:
+//I can feel it.//
+//This…//
+//This ridiculous situation has happened before…//
+//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//
+//Perhaps even more terrifying than the memory loss itself…//
+>>> //I can't believe this is happening to me.//
+>>> //Is it too late to leave?//
+>>> //I don't even know what to say to that.//
+You need to take your mind away from the madness unfolding before you.
+By reflex, you reach for the cup of coffee and take a sip.
+???:
+The now empty cup on the table shakes as Cannelé violently slams their fist on the table.
+CANNELÉ:
+SHUT UP! It has to be Yasyas
+NOMNOM:
+WHAT THE FUCK IS EVEN YASYAS???? MUFFIN IS A WAY SWEETER CHOICE
+CANNELÉ:
+LOOK AT YASYAS HE OBVIOUSLY LIKES MY PICK BETTER?? NO ONE WANTS TO BE CALLED MUFFIN
+I HEARD IT MEANS COOCHIE IN SOME STREET SLANG TOO!!
+NOMNOM:
+W-WHAT? AT LEAST IT //MEANS// SOMETHING, NOT LIKE… YASYAS???
+CANNELÉ & NOMNOM:
+ANYWAY
+WHICH ONE DO YOU PREFER ?
+>>> «Really… Then uh, Yasyas?»
+>>> «Errr if I really don't have a choice I'll just choose Muffin»
+>>> «I could pick anything, literally anything but those two… words» (Choose a custom name.)
+???:
+//Finally!//
+>>> //How about…//
+The detectives fall silent.
+You catch yourself holding your breath, waiting for their reaction.
+You don't know what to expect…
+But certainly not seeing them explode into loud, obnoxious laughter in your face.
+Cannelé regains their composure first, muffling one last giggle.
+CANNELÉ:
+Did you really come up with…
+Haven't seen a name as bad since 'Cannelé', dude what the HECK.
+NOMNOM:
+This is like…
+A chuckle escapes from their mouth.
+NOMNOM:
+Really, //really// bad.
+You consider the name you had picked, " + `'$custom_name'
+Then think about the names THEY had come up with, 'Yasyas' and 'Muffin'.
+And you feel rage boiling in the pit of your stomach…
+That soon transforms into weariness.
+>>> «Let's get this over with.»
+>>> //If I run for it, maybe...//
+Cannelé and Nomnom have stopped bickering now.
+They're staring straight at you.
+You are trapped.
+CANNELÉ & NOMNOM:
+You must pick one.
+???:
+//sigh//
+Their tone lightens, going back to the uncomfortable commercial tone they had used when they'd first greeted you.
+NOMNOM:
+Muffin is a cool sounding name right! It suits you very much.
+???:
+//This is probably…//
+CANNELÉ:
+No matter how I look at it, you look like a Yasyas.
+???:
+//A situation I can't escape.//
+>>> «Muffin it is, I guess…»
+>>> «I'll just go with Yasyas»
+FARAWAY VOICE:
+//Three points for Nomnom//
+NOMNOM:
+I think you're neat, Muffin. You're a great person.
+Now let's go! It's time to retrace your steps and go find your memories.
+>>> «I-I didn't even sign the contract…»
+FARAWAY VOICE:
+//Three points for Cannelé//
+CANNELÉ:
+HAHAHAHAHA! FUCKING KNEW YOU WERE A REAL ONE!
+Let's go Yasyas, time to retrace your steps and go find your memories!
+>>> «I-I didn't even sign the contract…»
+//Hey!//
+//You've reached the end of this demo. Thank you so much for playing! Now...//
+//We'd like to ask you if you could help us with something.//
+We would love to hear your feedback on our demo, https://forms.gle/DxR3q4QQ5mZwtZEg8 to help us make this game better!
+It is very //likely// that you can't click on it directly, so do Right Click > Open in a new Tab.
+Feel free to open the conspiracy board and play around with the clues you've collected during this demo!(but let us warn you, they will be lost if you refresh the page)
+Thank you for playing <3
+???:
+//Okay, me//
+//I gotta do this, I have to find these Laws and show them!//
+//I am pretty sure they are called the //Three// Laws of Magic.//
+//I'll just try and remember something…//
+//I have a feeling that this is very important.//
+//If I can crack this, it might help me remember who I am!//
+//I just have to think.//
+<br/>//''1. First, where does this Magic comes from?''//
+>>> //The river is super important… There are Spirits that dwell here, Spirits with Magic…\n Maybe they can lend their ''Gifts'' to us?//
+>>> //Magic is probably based on physical phenomena and logical equations…\n This means that knowledge must be the key to Magic!//
+>>> //Humans probably can't do magic…\n What if a symbiotic being lived inside us and gave us their powers?//
+???:
+//That sounds plausible, maybe!//
+//Let's keep going.//
+//I just need to stay coherent. If Magic comes from there…//
+<br/>//''2. How can humans use it?''//
+>>> //If humans can't do Magic, it must mean that they're letting this other thing - this symbiote - inside them take over?//
+>>> theory3
+>>> //Let's stay down to earth… what about biological evolution?\n''Gifts'' like magical organs to manipulate the Laws of physics, maybe?//
+???:
+//I might actually be onto something?//
+//Just one more detail…//
+//And I will have crafted a complete and logical reasoning!//
+//They're called ''Laws'', so there must be some kind of restrictions…//
+<br/>//''3. To do Magic, which rules must humans follow?''//
+>>> //Someone famous said it before right? “Nothing is created, nothing is destroyed, everything is transformed.”//
+>>> //Symbiotes must eat to use their ''Gift'', right?? And if its magic, it probably won't be happy with old pastries and diluted coffee. Maybe some special food?//
+>>> //If we're talking about a relationship between someone and some magical Spirit, it means that we must be nice to them, right?//
+???:
+Alright, let's recap what I got.
+LAW #1:
+Magic comes from the River Spirits who lend their Gifts to humans.
+Magic is a type of energy ruled by physical equations that humans can understand and manipulate.
+Magic is a symbiote organism living inside humans.
+LAW #2:
+When a human comes of age, they form an exclusive pact with their own Spirit.
+To harness this Magic, humans have developped specific organs - ''Gifts'' - that process the energy.
+Humans themselves can't do Magic but can give some control over their conscience to the symbiote who will use their abilities.
+LAW #3:
+The quality of the relationship between a contractor and their Spirit influences the quality of their Magic.
+Nothing is created, nothing is destroyed, everything is transformed.
+To use the symbiote's Gift, you have to feed it special nutrients.
+>>> //Hum, maybe I should think about this again.// (Retry.)
+>>> //Ok, this is looking good!// (Confirm.)
+You enunciate the rules you just pieced together with made up confidence that now almost feels...
+Real.
+You got this.
+???:
+//This makes sense!//
+Cannelé and Nomnom don't say anything.
+Nomnom has taken a little blue notebook out of their pocket and is scribbling things - notes, maybe.
+Cannelé hasn't moved: they're nodding as you finish stating the third rule.
+???:
+…and finally, the relationship you have with a Spirit influences the quality of your Magic.
+…and finally, nothing is created, nothing is destroyed, everything is transformed.
+…and finally, to use the symbiote's Magic, you have to feed it special nutrients.
+Cannelé and Nomnom look at each other.
+CANNELÉ:
+…
+NOMNOM:
+…
+CANNELÉ & NOMNOM:
+… …
+CANNELÉ & NOMNOM:
+BWAHAHAHAHAHAHA!
+???:
+//…//
+>>> //I thought it was pretty good?//
+>>> //Am I that far off??//
+>>> //I hate them so much…//
+They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+CANNELÉ:
+This was terrible but like…
+NOMNOM:
+In a good, terrible way?
+CANNELÉ:
+What was this all even about?
+NOMNOM:
+Well, it's not like you're //entirely// wrong…
+River Spirits lending their powers to human is the First Myth that the first settlers who discovered the continent came up with.
+CANNELÉ:
+And it is true that personality, mind and spirit do influence the way your Gift is shaped…
+NOMNOM:
+But the rest? Complete bullshit.
+CANNELÉ:
+Some people out there can throw fireballs at your ass, so it's really not that tied to water and the River.
+And we don't date magical spirits in exchange of Magic, no.
+That's kinda…
+Cannelé's mind wander for a bit.
+NOMNOM:
+…//REALLY// creepy.
+CANNELÉ:
+…uh, yeah. Right.
+???:
+//What is this feeling…//
+>>> //Annoyance?//
+>>> //Amusement?//
+>>> //Indifference.//
+They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+CANNELÉ:
+This was terrible but like…
+NOMNOM:
+In a good, terrible way?
+CANNELÉ:
+What was this all even about?
+NOMNOM:
+Well, it's not like you're //entirely// wrong…
+Magic is a form of energy all around us and we humans tap into it to manifest our ''Gift''…
+CANNELÉ:
+I mean, what the fuck was that even??
+NOMNOM:
+You have a very… fertile imagination.
+CANNELÉ:
+Someone read my mind once and that's just not explainable by your Laws of Physics…
+NOMNOM:
+At least, nothing was said about Equivalent Exchange.
+CANNELÉ:
+That would've been so lame…
+This is real life not some sort of fictional universe??
+NOMNOM:
+Youngsters this day, they've lost all sense of reality…
+CANNELÉ:
+Ok, stop here grandpa, your 27 years old bones are creaking.
+???:
+//What is this feeling…//
+>>> //Annoyance?//
+>>> //Amusement?//
+>>> //Indifference.//
+They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+CANNELÉ:
+This was terrible but like…
+NOMNOM:
+In a good, terrible way?
+CANNELÉ:
+What was this all even about?
+NOMNOM:
+Well, it's not like you're //entirely// wrong…
+We do need to consume some special ingredient to use our Gifts…
+CANNELÉ:
+Very rare, very expensive, very hard to come across.
+NOMNOM:
+Its distribution is tightly reguled by the Governement.
+Still! It was a good guess… I guess?
+CANNELÉ:
+The rest of your theory?
+I diagnose it with bullshit.
+NOMNOM:
+I don't have any hidden parasite living in my body.
+//unless I'M the parasite??//
+CANNELÉ:
+It's true there has been cases of people communicating with their Gifts, though.
+But it's rare and certainly not a rule.
+You really came up with some crazy shit, uh?
+NOMNOM:
+I wouldn't say crazy shit, more like… crazy… crazy.
+???:
+//What is this feeling…//
+>>> //Annoyance?//
+>>> //Amusement?//
+>>> //Indifference.//
+They're laughing hard but after a few minutes, they manage to calm down and catch their breaths.
+CANNELÉ:
+This was terrible, like…
+NOMNOM:
+Literally //nothing// you've said makes any sense?
+NOMNOM:
+You gave //two// totally different definitions for what a ''Gift'' is.
+You gave //three// completely different definitions for what a ''Gift'' is.
+Three!
+CANNELÉ:
+A piece of advice;
+Amnesia 101: if you're not sure, just don't say it.
+NOMNOM:
+Because when you say it, you end up in this situation.
+CANNELÉ:
+Sounding like the perfect mix between ridiculous, unhinged and a little pathetic.
+NOMNOM:
+Kind of like a conspiracy theorist!
+It's fine, it happens to all of us.
+Just use this as advice.
+CANNELÉ:
+But hey, thanks for the free entertainment!
+???:
+//What is this feeling…//
+>>> //Annoyance?//
+>>> //Amusement?//
+>>> //Indifference.//
+The two detectives are still smiling, after laughing at you for a good five minutes.
+Part of you is relieved they're not arguing with each other, but…
+???:
+//Why do //I// have to go through this?//
+You clench your teeth, trying to rein back the irritation.
+For now, //they're// the ones who have the information you need.
+You can curse them out later.
+This thought comforts you a little.
+It makes you smile in turn.
+???:
+//They're not entirely wrong…//
+//It //was// a bit ridiculous!//
+//I didn't think I'd be able to laugh in this situation.//
+//I think I feel a little… lighter.//
+You want them to stop and tell you what's going on.
+You don't want to play games and entertain strangers with your memory loss.
+You want answers.
+???:
+//Now, what I want to know is…//
+OK then.
+What ARE the Three Laws of Magic?
+Cannelé and Nomnom exchange a glance.
+NOMNOM:
+CANNELÉ:
+NOMNOM:
+???:
+//Hmmm… Better note those down.//
+>>> «Can I ask you about your gifts?»
+>>> «Before we continue, I have some questions about those Laws…»
+>>> «Got it» (Continue.)
+A silence greets the question.
+???:
+//I guess awkward silences are something I must get used to…
+//I feel like it's going to keep happening with those two.
+NOMNOM:
+Listen.
+I get that you don't remember much, but there are some things you can't just do.
+CANNELÉ:
+Yeah, what's //wrong// with you?
+A Gift is personal, intimate - you can't just ask strangers.
+NOMNOM:
+We might tell you if we grow closer but now is a little… embarrassing.
+???:
+Oh, sorry?
+You asked about mine before so I figured it was ok…
+CANNELÉ:
+It's not the same! We were trying to help you.
+NOMNOM:
+It was definitely not out of any form of misplaced curiosity.
+???:
+…
+>>> «Nevermind, then… I have some questions about the Laws, though.» (Learn more.)
+>>> «About what happened to me…»
+>>> «What's wrong with this coffee?»
+>>> Take a deep breath (Continue.)
+NOMNOM:
+Go ahead!
+CANNELÉ:
+We shall indulge you.
+>>> «About that first Law…»
+>>> «About that second Law…»
+>>> «About that third Law…»
+???:
+So, does that mean that everyone can do Magic?
+NOMNOM:
+Hmmm…
+Yes.
+CANNELÉ:
+…And no.
+NOMNOM:
+Everyone has the //potential// to do Magic.
+CANNELÉ:
+Imagine what life would be like if absolutely every citizen could become huge like a giant or turn everyone into spaghetti.
+NOMNOM:
+^^Yeah like, every restaurant would go bankrupt.^^
+CANNELÉ:
+To prevent that, the Government only gives Fleur d’Âme to people that…
+Cannelé pauses to do air quotes with their hands.
+CANNELÉ:
+//'Put their Magic at the service of the City'//
+???:
+I see.
+>>> «About that second Law…»
+>>> «About that third Law…»
+>>> «That's it» (Change Topic.)
+???:
+You said that magic reflects your personality – what do you mean by that?
+If you like bread, would you be able to make pastries appear?
+NOMNOM:
+^^I wish.^^
+Cannelé grins.
+CANNELÉ:
+The second one is less like a law and more like a rule of thumb.
+NOMNOM:
+Nobody knows exactly how it works, but some people draw a parallel between what your magic can do and the way you think, or the kind of tasks you’d be good at.
+CANNELÉ:
+There’s even a test going around that can tell you what your ideal job would be, based on your magical abilities.
+???:
+Oh. What did it tell you?
+Cannelé's grin fades.
+CANNELÉ:
+''Tax Collector.''
+The test is a sham.
+???:
+R-Right. Sounds like it is.
+>>> «About that first Law…»
+>>> «About that third Law…»
+>>> «That's it» (Change Topic.)
+???:
+What counts as a “physical medium” exactly?
+If magic can’t be channelled through living beings, does it mean we are immune to magic?
+CANNELÉ:
+Not really.
+It’s more like… How to say it…
+NOMNOM:
+Hmmm… We can take a concrete example.
+Let's say you have the power to turn people into small insects.
+???:
+That's not very nice!
+NOMNOM:
+//If// you have the power to turn people into insects.
+How would you activate your power?
+???:
+Hypothetically speaking…
+Couldn't I just wish for it in my head?
+NOMNOM:
+Wrong!
+???:
+But why?
+CANNELÉ:
+You can't just activate magic through sheer will.
+It needs to be carried via something material.
+A power could, for instance, turn someone into bees whenever they eat honey; ''honey'' being the ''medium''.
+NOMNOM:
+Or… memorize an entire book, just by touching it.
+CANNELÉ:
+Ooooor… bring wooden toys to life - in which case ''wood'' being the acting ''medium''.
+NOMNOM:
+Thing is, there always need to be something material about your magic.
+And that thing, can be anything //but// a living being.
+???:
+Alright, I think I understand.
+>>> «About that first Law…»
+>>> «About that second Law…»
+>>> «That's it» (Change Topic.)
+???:
+Thank you, I think I'm good.
+Now…
+>>> «About what happened to me…»
+>>> «What's wrong with this coffee?»
+>>> Take a deep breath (Continue.)
+???:
+Ok, all the magic stuff makes a little more sense to me now, thanks.
+Now…
+>>> «About what happened to me…»
+>>> «What's wrong with this coffee?»
+>>> Take a deep breath» (Continue.)
+FARAWAY VOICE:
+//Five points for Nomnom//
+NOMNOM:
+TRUTH IS ON MY SIDE!
+CANNELÉ:
+THIS IS A SCAM??? THIS IS NOT MAGIC THIS IS A HATE CRIME AGAINST ME??
+The Detectives are back to arguing as they head toward the path on the right.
+The Hobo is smiling, a bit dumbfounded at the chaotic pair.
+>>> Is this really mag-
+FARAWAY VOICE:
+//Five points for Cannelé//
+CANNELÉ:
+THE VENERATED HOBOOLEAN COIN HAS SPOKEN, WE ARE GOING LEFT!
+NOMNOM:
+??? I WANT TO A REFUND THIS IS OBVIOUSLY A CONSPIRACY!
+The Detectives are back to arguing as they head toward the path on the left.
+The Hobo is smiling, a bit dumbfounded at the chaotic pair.
+>>> Is this really mag-
+HOBO:
+//*wink*//
+And is this really the right way to the market?
+At that, Cannelé and Nomnom turn around but the Hobo is nowhere to be seen.
+CANNELÉ:
+?
+NOMNOM:
+??
+???
+What just happened?
+Philibert the Cat draws a wide, troubling smile, turns around and disappears.
+>>> Did I just dream this whole thing?
+NOMNOM:
+But the Hoboolean Coin…
+CANNELÉ:
+… Is right here?
+NOMNOM:
+WAIT A MINUTE!
+WHY WOULD ''YOU'' GET TO KEEP THE MAGIC COIN?
+CANNELÉ:
+BECAUSE?? I CAN'T ENTRUST IT TO A COMPLETE IMBECILE??
+NOMNOM:
+DID YOU LOOK INTO A MIRROR RECENTLY?
+I…
+>>> Take a deep breath.
+I will keep the coin.
+CANNELÉ & NOMNOM:
+…
+NOMNOM:
+This sounds almost… reasonable.
+Cannelé shudders.
+CANNELÉ:
+Let's…
+Let's do this, Truth Keeper.
+//This is probably a mistake//
+//But if this can buy me precious seconds of quiet…//
+>>> I'll do it!!!
+Cannelé and Nomnom are surprised by this sudden burst of energy.
+NOMNOM:
+Hey! That's the spirit!
+Now, let's go!
+>>> Take the left path
+>>> Take the right path
+The path on the left takes a sharp turn.
+The street is indeed narrow, but it is well-lit and the pavement is even.
+NOMNOM:
+I can just //feel// it: this is the wrong way.
+CANNELÉ:
+you can't feel ''shit'', if we had followed the other road we would have ''NEVER'' made it to the market.
+NOMNOM:
+This just doesn't feel right…
+CANNELÉ:
+Yeah, no kidding, we are on the LEFT PATH?
+NOMNOM:
+One day, murder will be legal and-
+After a couple more turns, a sign says:
+''This way to the market''
+NOMNOM:
+''*COUGH*''
+Well, I guess at least //something// has to be going well.
+Cannelé's face morphed into a smug grin.
+//I kinda wanna punch Cannelé's face right now…//
+NOMNOM:
+If you keep that smile up I'll punch it right out of your face.
+//… Agreeing with Nomnom also feels terrible//
+//I think I'm going to faint.//
+Cannelé keeps silent-bragging as the others ignore them.
+Finally, the group arrives close to a big, open market.
+Right at the entrance, a man is fumbling around.
+NOMNOM:
+That guy…
+CANNELÉ:
+… Is suspicious.
+NOMNOM:
+Maybe he is a criminal, lurking in broad daylight!
+The man wears an unmistakable uniform.
+He probably… isn't a criminal.
+CANNELÉ:
+A ''dangerous'' criminal…
+>>> Wait… I recognize that man!!!
+The group takes the path on the right.
+Nomnom is humming enthusiastically while Cannelé sulks.
+//At least, they're not arguing anymore//
+The road connects to a big, open plaza.
+NOMNOM:
+This just //feels// like the right path.
+Cannelé rolls their eyes.
+CANNELÉ:
+The Hoboolean Coin is a sham!!
+This entire world is against me.
+NOMNOM:
+Quit your whining and just enjoy the walk
+CANNELÉ:
+Yeah, I'll enjoy ''RUINING YOUR GODDAMN LIFE''
+//I jinxed it.//
+//I fucking jinxed it.//
+Cannelé and Nomnom keep arguing until they reach the extremity of the plaza.
+In the centre of the area, a big fountain is adorned with statues
+A marble plate states the name of the place
+''Harry Youlost Plaza''
+Two streets emerge from the plaza: one going straight ahead and the other veering left.
+The two detectives turn around, expectantly.
+>>> Take the Hoboolean Coin out.
+//I am terrified of the fact that I can communicate with them now.//
+So? Who is Faces, who is Tails?
+CANNELÉ & NOMNOM:
+I PICK TAILS!
+Cannelé and Nomnom glare at each other.
+None of them is budging.
+//This can't be happening to me.//
+//My karma truly is fucked..//
+>>> Sigh
+Should we just…
+Flip a coin to decide who gets Tails?
+CANNELÉ & NOMNOM:
+THEN I PICK FACES!
+CANNELÉ & NOMNOM:
+BITCH???
+They seem like they're about to start fighting.
+Ok, I will just flip this one myself or this is never going to end.
+Both of you, tell me a number.
+//The lowest number gets Faces.//
+CANNELÉ:
+753
+NOMNOM:
+42
+Nomnom picked the smaller number so they get to pick Faces for the throw that will decide who will get to pick Tails.
+CANNELÉ:
+Then 4!!!!!
+This…
+This isn't how this works, I'm sorry.
+NOMNOM:
+AH!
+CANNELÉ:
+Whatever, just throw it.
+The Hoboolean coin is thrown in the air.
+It danses around, flicking between the fancy T and F before falling down.
+>>> Faces
+>>> Tails
+The Hoboolean coin lands on Faces.
+FARAWAY VOICE:
+//One point for Nomnom//
+Nomnom lets escape a shout of victory.
+CANNELÉ:
+THIS COIN HATES ME??? LET'S HAVE A REMATCH
+NOMNOM:
+YOU SORE LOSER!! I WAS CHOSEN BY THE HOBOOLEAN!!
+This means that Nomnom picks Tails in the next throw.
+Here goes…
+The Hoboolean coin is thrown in the air.
+It danses around, flicking between the fancy T and F before falling down.
+>>> Faces
+>>> Tails
+The Hoboolean coin lands on Tails.
+FARAWAY VOICE:
+//One point for Cannelé//
+Cannelé starts dancing, victorious.
+CANNELÉ:
+VICTORY AT LAST!!!
+NOMNOM:
+THIS ISN'T OVER YET
+This means that Cannelé picks Tails in the next throw.
+Here goes…
+The Hoboolean coin is thrown in the air.
+It danses around, flicking between the fancy T and F before falling down.
+>>> Faces
+>>> Tails
+The Hoboolean coin lands on Faces.
+FARAWAY VOICE:
+//One point for Cannelé//
+>>> …
+The Hoboolean coin lands on Tails.
+FARAWAY VOICE:
+//One point for Cannelé//
+>>> …
+The Hoboolean coin lands on Tails.
+FARAWAY VOICE:
+//One point for Nomnom//
+>>> …
+The Hoboolean coin lands on Faces.
+FARAWAY VOICE:
+//One point for Nomnom//
+>>> …
+The path takes you on the left, and merge with another road.
+After a couple more turns, a sign says:
+''This way to the market''
+By then, everyone has realized that they had found their way to the road Cannelé had originally wanted to take after the meeting with the Hobo.
+Cannelé is grinning obnoxiously.
+The other two decide to ignore them.
+>>> //I hope we will get there soon…//
+The group continues straight ahead.
+It soon becomes obvious that this street is leading nowhere.
+Nomnom, in denial keeps grumbling.
+NOMNOM:
+It MUST be around here
+//SIGH//
+>>> //I hope we will get there soon…//
+The road turns right
+Then left.
+It loops.
+Then turns again.
+CANNELÉ:
+I can't take this anymore
+NOMNOM:
+I KNOW WHERE THIS LEADS OK?
+>>> How long… Have you guys been in this city?
+How do we keep getting lost??
+In the CITY CENTRE???
+Cannelé and Nomnom have the decence to look sheepish, apologetic.
+CANNELÉ:
+That's kinda this dumbass' fault we're lost here…
+NOMNOM:
+THIS IS THE RIGHT PATH!!!
+Nomnom confidently takes a turn.
+>>> This can't be…
+This…
+This is the Harry Youlost Plaza…
+Again.
+The marble nameplate and the fountain are still there.
+Exactly the same as they were 15 minutes ago.
+And 40 minutes before.
+And 1h15 even before.
+That's it! This is going nowhere.
+CANNELÉ:
+My time to shine!
+>>> Follow Cannelé on the path veering left
+After what seems like forever, the group eventually arrives close to a big, open market.
+Right at the entrance, a man is fumbling around.
+NOMNOM:
+That guy…
+CANNELÉ:
+… Is suspicious.
+NOMNOM:
+Maybe he is a criminal, lurking in broad daylight!
+The man wears an unmistakable uniform.
+He probably… isn't a criminal.
+CANNELÉ:
+A ''dangerous'' criminal…
+>>> Wait… I recognize that man!!!
+That's the police officer! The one I talked to this morning!
+CANNELÉ:
+Ugh, a police officer.
+NOMNOM:
+Well that explains the bad vibes…
+CANNELÉ & NOMNOM:
+HEY! YOU!! WE HAVE QUESTIONS TO ASK!!!
+The police officer turns around and his eyes widen.
+CANNELÉ:
+Have you ever seen this guy right here?
+POLICE OFFICER:
+Um, no I don't think I've had the pleasure.
+Sir??
+We met this morning!
+You told me your grandma was sick and you had to go when I came to you for help!
+NOMNOM:
+Oh no! Officer, is your grandma feeling better now?
+The tag on his uniform states: Pöl aufHißer
+PÖL AUFHISSER:
+Yes? Yes! Granny Michelle is doing uh, amazing!
+Thank you for your concern.
+Cannelé pats his shoulder.
+CANNELÉ:
+Then, all is good, all is good.
+Now, are you sure you've never seen-
+PÖL AUFHISSER:
+UH!
+AH!!
+OH!!!
+Officer aufHißer turns around. There is nothing, but an empty street.
+PÖL AUFHISSER:
+My superior! My boss is calling for me!! Apologies gentlefolks, duty calls!
+The street is still empty, no boss to be seen, but Officer aufHißer runs as if his landlord was at his heels.
+Well that was…
+CANNELÉ:
+Not very police-y of him
+NOMNOM:
+AGAB, guys. AGAB.
+?
+Nomnom sighs and roll their eyes, exasperated.
+NOMNOM:
+All Guards Are a Bit useless.
+For once, Cannelé nods in agreement.
+CANNELÉ:
+Truly. A bunch of incompetent boars.
+//So… they CAN agree… on anti-governmental claims? An alliance against a common enemy?//
+//That's… a good start.//
+//I guess?//
+Following the running officer, the group reaches a marketplace.
+It's crowded, the vendors are busy with their stands.
+Under a tent on the left, a group of people seem to be playing a card game.
+A group of policemen is gathered on the other side of the market. They seem a tad anxious.
+NOMNOM:
+I'll start asking the people over there.
+CANNELÉ:
+Then, in order to stay as humanely far away from you as possible, I'll go ask that bunch there.
+Let's meet here in an hour.
+Nomnom looks over to the card players, and sighs.
+NOMNOM:
+Don't, just… Don't do this.
+NOMNOM:
+If you go with that idiot, just… be careful, ok?
+Ugh, this is a recipe for disaster.
+Nomnom mumbles as they leave. Cannelé is already on their way to the table.
+//Does this mean… Detective Nomnom //knows// something bad is going to happen…//
+//But they won't do… anything… to prevent it?//
+//I might not remember you yet but…//
+//''Mommy, help me.''//
+>>> Follow Nomnom
+>>> Run after Cannelé
+>>> Snoop around the police officers
+Cannelé strolls over the table where four people are sitting.
+There is money on the table.
+Cannelé's eyes glint dangerously.
+CANNELÉ:
+Good day everyone, what's on the table today?
+Cannelé takes a seat. The gesture is natural, practiced.
+Hmmm… Money? And cards too, I guess?
+//Am I more observant than the detective I hired?//
+//I will never regain my memory, will I…//
+GAMBLER A:
+Detective! Haven't seen you in a while!
+GAMBLER B:
+At least a good three days, it's been! You even came here with a friend.
+Cannelé looks over anxiously.
+CANNELÉ:
+Hahaha, what are you all talking about, I have never been here in my ''life''.
+The entire table laughs as the sense of malaise deepens.
+Detective? What are you doing?
+CANNELÉ:
+Oh nothing, just a good old game of Hanged Poker-faced Maid!
+One of the ladies at the table hand over the worn out deck of cards to Cannelé, who starts shuffling.
+CANNELÉ:
+Wanna try your hand? Be careful, I'm really good at this, I might ruin you.
+No, I'm, uh, good but? Detective?
+What happened to the investigation?
+GAMBLER C:
+PLACE YOUR BETS!
+CANNELÉ:
+FEELING LUCKY TODAY, I'M BETTING IT ALL!
+//''This'' was what Detective Nomnom had warned me about…//
+//And they let me get stuck into this hellish situation??//
+//This can't get any worse.//
+Everyone cheers as Cannelé reaches into their coat.
+Cannelé keeps rummaging through their pockets.
+…
+… …
+Cannelé turns around.
+CANNELÉ:
+I have a teeny ''tiny'' favor to ask you.
+Could you lend me the Hoboolean Coin?
+//Fuck. It just got worse.//
+CANNELÉ:
+I promise I'll give it back soon, with interest!!
+DETECTIVE??
+CANNELÉ:
+Please, please, please, I'll give you 1% of my winnings.
+Pretty please?
+>>> Reluctanly hand over the coin
+>>> Vigorously refuse
+I know I am going to regret this…
+//… but I am also morbidly curious about this Hanged Poker-faced Maid game.//
+>>> …
+DETECTIVE!! I can't give you the coin??
+//It's the only thing protecting my peace of mind when you are with Nomnom!!//
+Cannele's expression turns extremely serious. Their voice is now but a whisper.
+CANNELÉ:
+I swear, this is for the investigation.
+I have a great feeling about this.
+So… Please?
+>>> Very, ''extremely'', __absolutely__ relunctanctly hand over the coin.
+CANNELÉ:
+This might look like a simple 50cts coins…
+But it was actually enchanted by a very powerful magic-user from the Towers who gave it to me as a reward for my absolutely ''brilliant'' investigation skills.
+Cannelé greedily grabs the coin and place it on the table.
+CANNELÉ:
+I can guarantee, trust me!
+Have I ever mislead any of you?
+Everyone decides to ignore this last quip.
+GAMBLER A:
+Right! Whose turn is it? Who won the last game?
+GAMBLER B:
+Wasn't it you?
+GAMBLER C:
+Naaah, I'm pretty sure it was-
+Wait.
+Who won yesterday's game?
+Cannelé snatches the coin back.
+GAMBLER A:
+Yesterday's game…
+CANNELÉ:
+Don't leave me hanging like this, who was it?
+GAMBLER B:
+Maybe we didn't play yesterday?
+GAMBLER C:
+Must be it.
+They all shrug it off, laughing about old age and the likes.
+Then, they turn to Cannelé expectantly.
+GAMBLER D:
+Then let's have the Detective start today, it's been a while since we've seen them.
+GAMBLER B:
+Sounds fair!
+GAMBLER A:
+Bet your fancy coin, Detective!
+GAMBLER C:
+I do need some truth in my life, a truth coin is exactly what I need!
+Cannelé suddenly stands up.
+CANNELÉ:
+I just remembered!
+I am in the middle of work
+With my //client.//
+//Oh, NOW they remember me…//
+CANNELÉ:
+Gotta bail, I'll be back tomorrow!
+FARAWAY VOICE:
+//One point for Cannelé//
+Cannelé drags you far from the gambling tables.
+>>> Well that was close…
+CANNELÉ:
+I know right?
+Those geezers, they think I'm not used to their tactics by now…
+But I'm detective! I won't fall for their schemes!
+What do you mean…
+Schemes?
+CANNELÉ:
+When they start bringing up their old age and acting forgetful…
+I know they're out to scam me!
+Cannelé shakes their head, confidence overflowing
+CANNELÉ:
+Tut tut, tut! I won't fall for their trap!
+The coin is mine.
+Well, technically-
+Cannelé has already stalked off.
+FARAWAY VOICE:
+//Minus one point for Cannelé//
+//Conversation with this person is absolutely impossible.//
+//I think I'm having a headache.//
+//For now, let's just get away from this gambling freak.//
+>>> Find Nomnom
+>>> Sneak close to the group of officers
+>>> Regroup
+On the opposite side of the market, policemen are huddled together.
+They're are talking in a low voice, as if they didn't want to be heard
+//Let's try to get closer//
+Some words can be heard from their conversation, but it's very hushed.
+POLICE OFFICERS:
+… Fleurs d'Ame… Marché…
+>>> Go closer
+The conversation can be heard more clearly.
+POLICE OFFICER A:
+The whole district's been in havoc since yesterday.
+POLICE OFFICER B:
+There's been a problem with the doses, why does it keep happening…
+POLICE OFFICER C:
+The investigation is almost over, soon we can go back up and forget about this incident.
+During the entire exchange, a familiar officer has been looking around. His gaze stop suddenly.
+PÖL AUFHISSER:
+YOU! WHAT DO YOU THINK YOU'RE DOING?
+I BETTER NOT SEE YOU AROUND ANYMORE!!
+//Time to scram!//
+>>> Find Nomnom
+>>> Find Cannelé
+>>> Regroup
+An hour after splitting up, everyone meets at the entrance of the market.
+The three of them are sitting at a wobbling table, outside a small bistrot.
+WAITER:
+What can I get you?
+I'll have a cup of t-
+CANNELÉ & NOMNOM:
+3 cups of Spicy Cocoa.
+//What does everyone have against tea??//
+CANNELÉ:
+And a plate of biscuits, please.
+NOMNOM:
+No, make that one croissant
+CANNELÉ:
+BITCH?
+WAITER:
+Should I bring 3 cups of Spicy Cocoa, a plate of biscuits and a croissant?
+This would've been the best solution but…
+NOMNOM:
+As if we could afford that??
+CANNELÉ:
+Do we look like royalty to you maybe, Sir??
+We will only have 3 cups of cocoa, please
+The waiter nods with a relieved smile and hurries back inside.
+As they prepare to go over what they discovered at the market, they hear a sound.
+????:
+Hey!
+Hey! You!
+No one pays attention to the yells.
+????:
+The group of three weird people at the table!
+I'm talking to you
+Suddenly, a person appears in front of the table.
+The stranger is tall, very tall and wearing clothes too slightly too small for them.
+Their smile is sheepish and their eyes are red and puffy.
+????:
+Hi, my name is Richie and-
+Richie bends down and lowers their voice.
+RICHIE:
+It might sound weird but I saw y'all go around the market asking questions.
+Very brave of you to do that right under the nose of those cops.
+Richie's looks around once, twice and bends down again.
+RICHIE:
+So?
+CANNELÉ:
+So ?
+NOMNOM:
+What are you on, man?
+I am so confused right now.
+RICHIE:
+Did you find any info on the Fleurries?
+CANNELÉ:
+FURRIES ?
+NOMNOM:
+Oh, not again…
+RICHIE:
+No? I mean the Fleurries!
+The Âmoc-Havoc, the gifty-pennies, the shickshacks, the florus-pocus?
+CANNELÉ:
+?
+NOMNOM:
+??
+???
+Richie seems exasperated but to his credit, he doesn't give up.
+RICHIE:
+THE FLEURS D'AME! I MEAN THE FLEURS D'AME!
+The market's been in shambles since yesterday. Me and my friends are getting desperate there…
+So? Did you manage to get any? Care to share with a new pal?
+Cannelé and Nomnom look at each other, then at the strange individual.
+CANNELÉ:
+What the fuck is this?
+Richie is surprised.
+NOMNOM:
+I think he is a complete nutcase?
+Why would we have any Fleur d'Ame?? That shit's rare.
+Richie starts sweating.
+CANNELÉ:
+And expensive as fuck.
+Richie starts to panic.
+And government controlled??
+Richie can't contain a scream.
+RICHIE:
+FORGET IT! MY MISTAKE
+Richie takes a step back
+RICHIE:
+Just…
+Richie takes another step back
+RICHIE:
+You've never seen me, OK?
+Richie stops, for a moment.
+RICHIE:
+We're pals right?
+Richie doesn't wait for an answer and runs away.
+>>> Did this person just mistake us for illegal Fleur dealers?
+I mean…
+You two might look shady enough…
+But me???
+Cannelé and Nomnom are appalled.
+CANNELÉ:
+Anyway, ''jokes'' aside.
+Let's summarize what we learnt at the market.
+They are briefly interrupted by the waiter, who is holding a tray with three tall cups.
+WAITER:
+Here are your three Spicy Cocoa.
+The pair of detectives jump on their drink and start gulping loudly.
+CANNELÉ:
+''*GULP*''
+ 
+NOMNOM:
+''*GULP*''
+ 
+…
+The cup is filled with a steaming drink that looks almost orange in the sunlight.
+This is hot cocoa, right?
+The Spicy in the name is just there to make it look fancy, right?
+NOMNOM:
+It's not spicy, just a dash of cinammon, to make it taste incredible.
+Ok, good. I am terribly weak to spices
+CANNELÉ:
+Nothing to worry about!
+//Well, it can't hurt to try//
+''…gulp?''
+CANNELÉ:
+If we make the best coffee in town, then this has to be the best cup of cocoa you can get around!
+''*COUGH COUGH COUGH*''
+NOMNOM:
+So? Where were we?
+Ah, right …
+The door closes behind the two detectives and their slightly reluctant client.
+The group leaves Harmony Street, and makes its way into the fog-clenched neighbourhood.
+CANNELÉ":
+Alright then. The game is afoot, as they say!
+NOMNOM":
+...Uh? Why would they say that?
+//The young lady chooses to conveniently ignore that question, and turn their attention to the third party member.//
+CANNELÉ:
+The first step, dear client, is to retrace yours.
+NOMNOM":
+~~Is it because you can //''step''// it up?~~
+CANNELÉ":
+We're going to follow your trail, up to where you lost your memories.
+NOMNOM":
+^^So the game is //''a foot''// but you can also be //''ahead''// of it?^^
+CANNELÉ":
+And we'll do it in no time! -- All because you were lucky enough to hire the //best// detective agency in this side of the city.
+NOMNOM":
+I got it! The game is a foot because you can //boot// it!
+CANNELÉ":
+...Please ignore them."
+>>> Ignore Nomnom.
+>>> Flash them a furtive smile
+FAR AWAY VOICE:
+One point for Cannelé.
+>>> Focus on the road 
+FAR AWAY VOICE:
+One point for Nomnom.
+>>> Turn your head again
+The trio arrives at the corner of an empty crossroad."
+CANNELÉ":
+So. We simply have to take the path you most likely took when you came to us."
+//Cannelé pause to study each alley, then pick the one to their right.//"
+CANNELÉ":
+Let's go this way."
+Well... Actually I..."
+NOMNOM":
+Wait a sec. Why would he have come this way?"
+CANNELÉ":
+Why //wouldn't// he?"
+NOMNOM":
+This path is not lit at all at night.
+Nobody walks there, unless they want to collide with a broken street light."
+I would say he came from the left."
+Hmm... Excuse me but..."
+CANNELÉ":
+This is du
+The left alley is the one used by the couriers who deliver late-night food to the dock workers."
+Nobody walks there unless they want to get run over by a person travelling at the //speed of three horses//."
+NOMNOM":
+Yeah, but-"
+CANNELÉ":
+Unless you're saying that this lane was empty the whole night?
+NOMNOM":
+I'm just saying that-"
+//Cannelé grins.//
+CANNELÉ":
+You're just saying that something happened at the docks that would make the //entire// port come to a halt...
+...preventing dock workers to unload the ships late at night..."
+...putting every meal deliverers out of job..."
+NOMNOM":
+Hey, drop the sassy smartass act!"
+CANNELÉ":
+Or what? You're going to use your tiny grey cells against me?"
+>>> I know which way I came f...
+To their client's demise, the two detectives are arguing so loud that they can't hear him.
+//This is exhausting.//
+NOMNOM:
+Alright -- You know what, let's settle this."
+//Ah, they're finally going to listen to m-//
+CANNELÉ:
+The rules are simple. We're each going to take our own path..."
+NOMNOM:
+...and the first of us who retraces your steps wins this round."
+CANNELÉ:
+Wouldn't it be simpler if we-"
+CANNELÉ & NOMNOM:
+GO!"
+>>> Please wait for m-
+<h2 class='duel_title duel_left'>DIRECTION</h2><br/><h2 class='duel_title duel_right'>&nbsp;DUEL</h2><br/><br/><br/>"
+If I don't want to loose them, I'll have to run too, I guess."
+>>> Run after Nomnom
+>>> Run after Cannelé
+Nomnom is carefully observing the market's stands. Most of them sell culinary goods, often imported from overseas.
+NOMNOM:
+Oh. I'd love to.
+NOMNOM:
+The first step, my dear fellow, is to observe every person and choose the one that seems the most friendly.
+Right. So we can ask them some questi-
+NOMNOM:
+--so we can snatch free food samples, exactly.
+//I… don't know what I expected//
+Nomnom points to a stand, at the far end of the market.
+Leaning on the counter, a round lady is speaking with a client.
+She seems to be laughing her heart out.
+NOMNOM:
+I've found our target!
+>>> Follow Nomnom, who is already rushing there.
+The detective does not go straight to the lady's stand, but hides behind a nearby empty one.
+Their client hesitates a bit, but finally joins them.
+…Why did we come here?
+NOMNOM:
+It's the only empty stand in the whole market. But we're lucky: we have a great view of our target from here.
+I mean, why are we //hiding//?
+NOMNOM:
+So we can learn more about the target, of course.
+Of course.
+Still hidden, Nomnom slides their head out to take a peak at the vendor.
+NOMNOM:
+The target is a woman keeping a stand. Her age ranges between… I'd say 45 and 110 years old.
+''Stand Name'': « //The World… of Cheese!// »
+That explains the quite strong @@.shake;fragrance@@ emanating from there.
+NOMNOM:
+Uh? You can smell it from there? Your nose is quite-
+>>> They are interrupted by a voice coming from behind the vendor's stand.
+VOICE:
+Jocelaine! Do you have some spare change? 
+TARGET:
+Yes honey, just a sec!
+NOMNOM:
+Héhé. Perfect.
+''Target Name'': « //Jocelaine// »
+Nomnom licks the tip of their hand and quickly readjusts their hair with it.
+(It's not very effective.)
+NOMNOM:
+I have everything I need. Follow my lead.
+And how exactly should I do that, detective?
+>>> Nomnom is already heading to Jocelaine's stand.
+Jocelaine is a round lady, wearing a fushia apron and a big smile on her face.
+JOCELAINE":
+Good morning!
+NOMNOM":
+Good morning, ''Jo''. How are you doing?
+Jocelaine's smile morphes into a confused face."
+JOCELAINE:
+Excuse me, uhm, do I know y…
+Nomnom starts mimicking a sad expression. Her smile instantly resurfaces."
+JOCELAINE:
+I mean… I'm doing fantastic, thank you!!
+FARAWAY VOICE:
+//One point for Nomnom//
+NOMNOM":
+Excellent! Got any new cheese today?
+He-hello!"
+NOMNOM":
+Ri-right. As they say."
+JOCELAINE:
+I'll let you decide how you want to call me. Ha ha ha!"
+NOMNOM:
+^^oh no what have I done^^"
+FARAWAY VOICE:
+//Minus one point for Nomnom//
+VOICE:
+Jocelaine! I hope you're not embarassing the clients with your jokes again?
+Please take care of them. They don't grow on trees, you know."
+JOCELAINE:
+..aaand this voice coming from the stand behind me is my wife, Joséphine."
+Nomnom seems busy removing unwanted mental pictures from their head.
+This leaves only "+$client_name+" to do the talking."
+Uhm. S-so…"
+>>> Ask about Jocelaine & Joséphine
+>>> Ask about the cheese
+So. Nomnom told me that you sell the best cheese this side of Falaisant.
+JOCELAINE:
+Sure I do!
+NOMNOM:
+Can we taste some?
+JOCELAINE:
+Well…
+Jocelaine quickly glances left, then right.
+She leans on the counter, and whispers.
+JOCELAINE:
+Be discreet, okay?
+Jocelaine puts a small plate in front of them.
+She then places small pieces of cheese on it.
+JOCELAINE:
+Quick!
+Nomnom extends their hand to reach the plate.
+Before they do, a voice erupts from behind the stand.
+JOSÉPHINE:
+Jocelaine! I hope you're not giving free samples to customers again.
+Cheese doesn't grow on trees, you know?
+JOCELAINE:
+Just a little, honey! I'm building customer loyalty.
+NOMNOM:
+''… *nom*''… ''*nom*''…
+>>> Nomnom seems pretty loyal already.
+NOMNOM:
+You ''*nom*'' weren't kidding ''*nom*'' this cheese is ''*nom*'' excellent!
+JOCELAINE:
+Of course it is, ha ha ha!
+Let's see.
+Yassine takes a piece of cheese and puts it in his mouth.
+Hmmm. Crumbly, ivory, and a strong salty flavor.
+Is it a Bleu?
+NOMNOM:
+''… *nom*''… ''*nom*''…
+JOCELAINE:
+Ha ha, no!
+Wait. An @@.shake;acidic@@ after-taste, that takes your whole mouth?
+…it's a //Roquefort//!
+JOCELAINE:
+Yes!!
+Well… Thank you.
+Nomnom pats their client's shoulders.
+NOMNOM:
+Yeah, good job!
+Maybe you're a cheesemaker, or something?
+Haha, yeah maybe.
+When Nomnom removes their hand, a visible cheese stain stays on the coat.
+>>> ……Madame Jocelaine, can I borrow a tissue?
+Jocelaine quickly glances left, then right.
+JOCELAINE:
+Quick!
+Before they do, a voice erupts from behind the stand.
+JOSÉPHINE:
+Jocelaine! I hope you're not giving free napkins again!
+Paper doesn't grow on tree, you know?
+//I'm pretty sure paper is made from trees, though…//
+Your name is ''Jo''celaine and your wife's is ''Jo''séphine.
+That's…"
+Jocelaine draws a big smile.
+…amusing."
+Jocelaine leans on the counter, about to confide."
+And not only for romance!
+Even food pairings taste better when their ingredients start with the same sounds. Like…"
+She tries to think of an example."
+NOMNOM:
+''… *nom*''… ''*nom*''…
+>>> ''Coco''nut and ''Coco''a?
+>>> ''Ch''erries and ''Ch''ocolate?
+Good one! I was thinking of ''Br''ead and ''Br''oth.
+You're right. There's also…
+>>> ''To''fu & ''To''ast
+>>> ''Mu''shroom and ''Mu''stard
+Hmm, sounds delicious."
+''O''lives and ''O''melette!
+>>> ''Bee''f & ''Bee''t!
+>>> ''Ra''men & ''Ra''dish!
+JOCELAINE:
+Yes!
+''Chick''en & ''Chick''peas!
+NOMNOM:
+''Yo''ghurt and ''Yo''lk!
+NOMNOM:
+What? Yoghurt and yolk are both liquid.
+And full of protein.
+Pretty good pairing to me.
+//Nomnom scares me sometimes.//
+>>> Suddenly, a realization.
+…
+You know what Madame Jocelaine? You are right.
+Frighteningly right.
+Ha ha ha! Of course I am.
+Now, what can I do for you?
+>>> Ask about the cheese
+NOMNOM:
+They're mostly old ladies.
+My plan is simple
+NOMNOM:
+Trying to appeal to them and get free stuff.
+>>> Find Cannelé
+>>> Sneak close to the group of officers
+>>> Regroup
+When the group eventually stops running, they are panting, out of breath.
+They also quickly come to realize that they're absolutely lost.
+NOMNOM:
+We are absolutely lost.
+//It wouldn't be the first time today...//
+CANNELÉ:
+More importantly.
+NOMNOM:
+I LOST MY SHOE?!
+CANNELÉ:
+No, WE HAVE A GUN!
+>>> This situation... scares me
+They all stare at each other, then at the gun in Cannelé's hand and finally at Nomnom's bare left foot.
+How is it that things just keep getting worse?
+//And I keep regretting hiring these... detectives...//
+CANNELÉ:
+To be fair, it is entirely Nomnom's fault.
+NOMNOM:
+WHAT ? YOU WERE GOING TO GET SHOT BY A POLICE OFFICER I SAVED YOUR ASS AND THAT'S WHAT I GET?
+CANNELÉ:
+Well, maybe you're lying who knows...
+This is going to escalate.
+A loud cough interrupts the arguing pair.
+I would like to remind you two that :
+1. We are lost
+''Because of you.''
+2. Cannelé, give me the gun.
+Surprised by the suddenly commanding tone, Cannelé hands over the weapon to the probably only sensible person in the group.
+3. WE. ARE. LOST.
+Cannelé and Nomnom look down, chastised.
+//This feels... nice//
+>>> What should we do, now?
+CANNELÉ:
+We should find our way back
+But let's avoid the marketplace, shall we?
+Nomnom mutters, mimicking Cannelé.
+NOMNOM:
+Gneugneugneu let's avoid the marketplace, what are you a //genius//?
+The group pauses and take a look around them.
+Isn't this Falaisant's harbor?
+NOMNOM:
+I mean...
+CANNELÉ:
+Probably?
+They're right by the city's docks.
+Moored to the quay, a ship seems to take all the space in the marina.
+On the wharf, a crowd is lined up, waiting. Some angry shouts resound. They have probably been standing there for a while.
+Half hidden behind a dark corner of the pier, wooden creates are piled up in a messy jumble. They feel somehow... familiar.
+>>> Observe the ship
+>>> Go see what's happening on the quay
+>>> Check out the crates
+The vessel was imposing, 300 people could line up and barely meet both ends.
+The reddish hull, the wide decks and the three masts paint a striking picture in the busy pier.
+Delicate letters, carved in the wood, read //The Barking Glass//.
+NOMNOM:
+Okay, it's just a boat. Next.
+Nomnom dismisses the sight and turns around as Cannelé's gaze lingers.
+>>> It's really just a ship, uh
+>>> Stay a moment with Cannelé
+FARAWAY VOICE:
+//Three points for Cannelé//
+CANNELÉ:
+She is beautiful...
+Cannelé's voice is full of something... Almost longing.
+Do y-
+>>> Before you can finish your sentence-
+''*WHAM*''
+A woman dressed in a sailor's uniform runs into Cannelé.
+SAILOR:
+Don't stay here! We're busy as it is, no need for pesky tourists to gawk at the boat.
+The sailor shoos you away from the ship.
+Well... something is definitely weird around here...
+>>> Go see what's happening on the quay
+>>> Check the crates out
+>>> Regroup
+The group reaches the crowd.
+There must be a couple hundreds on people waiting.
+They're of all genders and of all ages.
+As if to profit from the never ending queue, street merchants try to sell food and beverages, as performers try to impress kids with tricks.
+>>> Talk with the people in the queue
+>>> Buy something from the merchant
+>>> Watch the performers
+Cannelé wears their prettiest smile when they stop asking various people what is going on.
+NOMNOM:
+I can smile too???
+Please don't.
+Too late.
+A kid has already started crying.
+Cannelé snorts as Nomnom sheepishly regains their composure.
+Cannelé approaches the mother of the crying child.
+CANNELÉ:
+Ma'am, may I ask, what is it everyone here is waiting for?
+DISTRESSED LADY:
+Oh, the boat has been stuck since yesterday night.
+We were supposed to leave port this morning, but something happened and it froze the entire traffic.
+A man behind them turns around and joins in on the conversation.
+IMPATIENT MAN:
+Heard it had something to do with the police too. I really need to go back.
+They better let us leave soon.
+>>> What do you mean... stuck?
+>>> Where is this ship going?
+>>> The police?
+DISTRESSED LADY:
+It means, it's uh... stuck?
+IMPATIENT MAN:
+No boat coming in or out of this damn harbor, you get me?
+>>> What do you mean... stuck?
+>>> Where is this ship going?
+>>> The police?
+>>> Talk with the people in the queue
+>>> Buy something from the merchant
+>>> Watch the performers
+>>> Observe the ship
+>>> Check the crates out
+>>> Regroup
+DISTRESSED LADY:
+We are going back to Nephelen.
+CANNELÉ:
+Uhm, yes?
+NOMNOM:
+Nephelen, you say?
+Cannelé and Nomnom look at you.
+I can't help y'all on this one.
+IMPATIENT MAN:
+What?? You've never heard of Nephelen?? How is that even possible?
+The lady nods, just as appalled as he is.
+IMPATIENT MAN:
+Nephelen is the city that's closest to Falaisant on this continent.
+//I really don't like those Falaisant kids.//
+A silence.
+Shouldn't you two... know this... at the very least...
+CANNELÉ & NOMNOM:
+No comment.
+>>> What do you mean... stuck?
+>>> Where is this ship going?
+>>> The police?
+>>> Talk with the people in the queue
+>>> Buy something from the merchant
+>>> Watch the performers
+>>> Observe the ship
+>>> Check the crates out
+>>> Regroup
+IMPATIENT MAN:
+Yes, the police.
+They've been all around, from here right to the market, I've heard.
+DISTRESSED LADY:
+They were here interrogating all of us this morning... how frightful.
+IMPATIENT MAN:
+They brought in some people too.
+What a freaky city.
+DISTRESSED LADY:
+I just wished they'd let us go back...
+She pats her son's head, lost in thoughts.
+>>> What do you mean... stuck?
+>>> Where is this ship going?
+>>> The police?
+>>> Talk with the people in the queue
+>>> Buy something from the merchant
+>>> Watch the performers
+>>> Observe the ship
+>>> Check the crates out
+>>> Regroup
+Nomnom confidently strides to one of the many merchants.
+STREET VENDOR:
+Hello, how can I help you?
+I have some sweet delicacies from Falaisant and hot wine to make your wait easier.
+In the vendor's cart, small cakes are lined up next to small, fuming cups.
+An affronted gasp escapes Cannelé's mouth.
+Nomnom is smiling smugly.
+NOMNOM:
+3 Cannelés, please.
+CANNELÉ:
+HOW DARE YOU??
+Cannelé? Uhm, they're right here and why would you want 3 of them, one is already such a hassle-
+CANNELÉ:
+SILENCE!
+The merchant wears an awkward but amused expression as their attention jumps between the three unusual customers.
+STREET VENDOR:
+Three Cannelés, is it? Be careful, this is the original recipe, it was cooked with a little bit of rum.
+NOMNOM:
+Excellent!
+CANNELÉ:
+MURDERER
+//I'm probably... an adult, right?//
+CANNELÉ:
+AH! We don't have money! WE CAN'T BUY THEM!
+Nomnom's smile gets wider.
+They take off their remaining shoe, shake them areound and a single coin falls in their palm.
+Nomnom hands it over to the merchant.
+STREET VENDOR:
+Thank you! Till next time young'uns!
+The seller leaves, happy about this deal.
+Nomnom distributes the cakes, not ignoring their fellow detective ''for once''.
+By then, Cannelé is positively seething.
+They kick Nomnom's shins and turn away.
+NOMNOM:
+Go ahead, taste it
+This is what victory truly tastes like.
+>>> Well, it does look good
+They both take a bite in the cannelés.
+This is... really good.
+The sweetness blends very well with the bitter taste of the rum.
+The crispy caramelized shell contrasts nicely with the chewy inside.
+The alcohol is a bit unexpected but it's subtle and luscious...
+This..
+Is delicious...
+NOMNOM:
+Told you it was good...
+Suddenly a wooden plate hit the back of Nomnom's head.
+They curse and turn around ready to yell at whoever attacked him.
+Cannelé stares back, sticks out their tongue.
+CANNELÉ:
+DIE, YOU OLD LOSER.
+NOMNOM:
+HUDEHOIFHOIQDHOZIMDJ
+The sound is inhuman and frankly quite scary.
+>>> Talk with the people in the queue
+>>> Buy something from the merchant
+>>> Watch the performers
+>>> Observe the ship
+>>> Check the crates out
+>>> Regroup
+Colorful juggling balls, silks and coins fly in the air.
+Laughter and amazed cheers greet every trick.
+All the children are enthralled by the performance.
+CANNELÉ & NOMNOM:
+W O W
+Cannelé and Nomnom are //fascinated// by the basic show of the street performers.
+Mesmerized.
+Absolutely captivated.
+If I don't drag them away, we are going to stay here the whole day...
+>>> Talk with the people in the queue
+>>> Buy something from the merchant
+>>> Watch the performers
+>>> Observe the ship
+>>> Check the crates out
+>>> Regroup
+CANNELÉ:
+OH NO, no way am I going there, it SMELLS like DEATH.
+Cannelé is right.
+A putrid scent of piss, beer, vomit and many more unindentifiable odors fills the air.
+NOMNOM:
+AH! You are WEAK Cannelé! THIS IS WHY YOU MAKE SUCH A POOR DETECTIVE!
+Something is in there, I can feel it in my bones.
+Nomnom turns around
+>>> Bear with the smell and follow Nomnom
+>>> Give up and stick with Cannelé
+FARAWAY VOICE:
+//One point for Nomnom//
+A creepy giggle escapes Nomnom's lips
+NOMNOM:
+I've pieced it all together... I CAN READ THE SIGNS OF THE UNIVERSE!
+Oh, so I ''am'' going to regret this.
+NOMNOM:
+Don't those crates remind you of something...
+Or
+Someone ?!
+AH!!
+>>> It does!
+>>> You really ARE crazy!
+The Whispering Hobo!!
+NOMNOM:
+ABSOLUTELY, dear client!
+I knew you had a brain between those two layers of bread!
+Do you think... he is around?
+NOMNOM:
+Has to be!
+Any great detective does ''not'' believe in coincidences.
+>>> Nothing has made sense so far, so this could actually... work?
+>>> I'm just going to... leave you alone now, ok?
+What are you talking about?
+NOMNOM:
+THE WHISPERING HOBO OF COURSE!!
+The name alone conjures an image of a weird looking man, smelly but nice.
+Oh, the weird guy that gave us the magic coin
+NOMNOM:
+THE HOBOOLEAN MASTER!
+He must be there...
+>>> Nothing has made sense so far, so this could actually... work?
+>>> I'm just going to... leave you alone now, ok?
+FARAWAY VOICE:
+//One point for Cannelé//
+CANNELÉ:
+He is so ridiculous, I hate their guts.
+I have to agree... I can't imagine what could be hidden in these dirty, smelly crates...
+In the distance, Nomnom's voice can be heard.
+NOMNOM:
+WHISPERING HOBO, I SUMMON THEE.
+CANNELÉ:
+Nothing, is what's hidden. Nomnom is just a third rate detective diagnosed with first rate delusion.
+>>> It's... hard to disagree...
+NOMNOM:
+Now, follow me and I will show you...
+Nomnom stops before the crates.
+The familiar smell is... overpowering.
+Nomnom takes a deep breath.
+NOMNOM:
+WHISPERING HOBO, I SUMMON THEE.
+SHOW YOURSELF!
+Nomnom then stops shouting, leans forward and whispers.
+NOMNOM:
+Now, say it with me.
+>>> This is crazy, but I am starting to think that maybe so am I
+>>> I would ''really'' rather not
+NOMNOM:
+WHISPERING HOBO, I SUMMON THEE.
+SHOW YOURSELF!
+WHISPERING uhhh HOBO! PLEASE APPEAR...?
+//Or I'll faint because of this smell...//
+NOMNOM:
+MY BELOVED MASTER OF AME AND HARMONIE!!!
+>>> This... is fun!!
+>>> I can't do this anymore
+NOMNOM:
+WHISPERING HOBO, ANSWER YOUR LOYAL DISCIPLE.
+PLEASE DO!!
+NOMNOM:
+I BESTOW THIS HALF EATEN MOZARELLA SANDWICH AS AN OFFERING.
+Oh, ew.
+>>> I feel it... we are close!
+>>> Nope, no, nein, non-non
+Nomnom searches their pockets and somehow fishes out a candle and a match.
+They light the candle and start muttering some obscure psalms
+>>> Wait what ?
+>>> I have to leave. Now.
+Nomnom suddenly trips and loses their balance as they fall over.
+A disgusting sound can be heard and the disgusting smell gets impossibly more intense.
+>>> Ok, I am done here.
+A high pitched scream echoes in the alley.
+A few moments later, Nomnom emerges from the darkness, looking pale.
+A very suspicious stain now adorns his coat.
+CANNELÉ:
+Great, now you're dumb AND you smell.
+NOMNOM:
+Oh SHUT UP.
+//I want to end it all.//
+Are we done here?
+CANNELÉ & NOMNOM:
+Y-yes.
+>>> Observe the ship
+>>> Go see what's happening on the quay
+>>> Regroup
+CANNELÉ:
+So what do we do now?
+NOMNOM:
+Uh?? maybe write the rest of the story? duh.
+Oh no, I'm drunk.

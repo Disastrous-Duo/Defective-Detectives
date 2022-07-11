@@ -29,25 +29,394 @@ let html_conspiracy_board =
 // Add board to HTML
 $(html_conspiracy_board).insertBefore("#passages");
 
-window[this_board].conspiracy_board_toggled = false;
+window[this_board].board_toggled = false;
+window[this_board].interactable = true;
 
-
-window[this_board].toggle_board = function()
+window[this_board].toggle_board = function(callback)
 {
-  window[this_board].conspiracy_board_toggled = !window[this_board].conspiracy_board_toggled;
-  if(window[this_board].conspiracy_board_toggled)
+  window[this_board].board_toggled = !window[this_board].board_toggled;
+  if(window[this_board].board_toggled)
   {
-    $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_up");
-    $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_down");
+    var board = $(`${"#"+this_board+"_overlay"}`)[0];
+    var animation = board.animate({
+        top:["5%"]
+      }, {duration:1000, easing:"ease-out",fill:"both"});
+    animation.addEventListener('finish', event => callback?callback():false);
   }
   else
   {
-    $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_down");
-    $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_up");
+
+    var board = $(`${"#"+this_board+"_overlay"}`)[0];
+    var animation = board.animate({
+        top:["-100%"]
+      }, {duration:1000, easing:"ease-out",fill:"both"});
+      animation.addEventListener('finish', event => callback?callback():false);
   }
 };
 
 
+// Solve mystery animation + teleport to correct scene afterwards
+// Todo: make board uninteractible during transition
+window[this_board].check_mystery = function(mystery_id, success, callback)
+{
+
+  const settings = window[this_board].settings;
+
+  var mystery_note = window[this_board].created_notes[mystery_id];
+  var zoom = window[this_board].settings.zoomOnMysterySolve;
+  var canvas =  window[this_board].canvas;
+
+  // Create fake clue behind lock
+
+  var fake_clue_rect = new fabric.Rect({
+    left: mystery_note.left,
+    top: mystery_note.top - (settings.mysteryHeight - settings.noteHeight)/2,
+    width:settings.noteWidth,
+    height:settings.noteHeight,
+    fill: settings.noteColors["clue"],
+    stroke:settings.border.borderColor,
+    strokeWidth: settings.border.borderWidth,
+  });
+
+  var fake_clue_text = new fabric.Textbox(
+    "MYSTERY SOLVED!", {
+      left: fake_clue_rect.left,
+      top: fake_clue_rect.top,
+   width:settings.noteWidth-settings.notePadding/2,
+   fontFamily:"Caveat-Regular",
+   fontWeight: 'bold',
+   fontSize: 26,
+   textAlign:"center",
+   fill: '#990000',
+  });
+
+var fake_clue = new fabric.Group([fake_clue_rect, fake_clue_text],
+  {
+    external_id:"fake_clue",
+    object_type:"note",
+    note_type:"fake_clue",
+    left: fake_clue_rect.left,
+    top: fake_clue_rect.top,
+    width:fake_clue_rect.width,
+    height:fake_clue_rect.height,
+    rect:fake_clue_rect,
+    pins:[],
+    angle:0,
+  });
+
+  fake_clue.hasControls = fake_clue.hasBorders = false;
+  window[this_board].created_notes["fake_clue"] = fake_clue;
+  canvas.add(fake_clue);
+
+  // Resets visual: bring to front, make sure it doesn't have the "untouched" border
+  mystery_note.rect.set({stroke:settings.border.borderColor, strokeWidth:settings.border.borderWidth});
+  canvas.bringToFront(mystery_note);
+
+  mystery_note.pins.map(pin => canvas.bringToFront(pin));
+
+  window[this_board].zoomOnObject(mystery_note, zoom, function()
+  {
+    const initial_delay = 400;
+    const between_pins_delay = 400;
+    const before_vibration_delay = 500;
+    const vibration_duration = 2000;
+    const before_flash_delay = 1000;
+    const flash_duration = 1100;
+    const before_unlock_delay = 1500;
+    const unlock_duration = 500;
+    const fall_duration = 3000;
+    const before_end_delay_success = 1000;
+    const before_end_delay_fail = 500;
+
+    var animationCall; // Will change depend on the animation step;
+    var animation_duration;
+
+    // Initial delay after zoom
+    setTimeout(() => {
+      // Loop for every lock: set their stroke
+      var num_locks = mystery_note.pins.length;
+      var current_pin = 0;
+      var current_vibration = 0;
+
+      function colorNextPin(callb)
+      {
+
+        mystery_note.pins[current_pin].set({"stroke":settings.pinColors.mysterySolveStroke});
+        canvas.renderAll();
+        window.PlaySound("pin_tap");
+        current_pin++;
+        if(current_pin >= num_locks)
+        {
+          setTimeout(lockVibration, before_vibration_delay);
+        }
+        else
+        {
+          setTimeout(colorNextPin, between_pins_delay);
+        }
+      }
+
+      function lockVibration(callb)
+      {
+
+      function easeInOut(t) {return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1};
+      function easeOutQuart(t) {return 1 - Math.pow(1 - t, 4);}
+
+      // var thresolds = [1/3, 2/3, 0.9];
+      var initial_angles = [0,15,-15,10];
+      var target_angles = [15,-15,10,0];
+      var previous_step = 0;
+      var max_step = initial_angles.length;
+
+      window.PlaySound("lock_1");
+      console.log("lock_"+(1));
+
+
+
+
+
+      window.startAnimation(vibration_duration, function(normalised_time)
+      {
+
+        var step = Math.floor(normalised_time*max_step);
+        step = step > max_step-1 ? max_step : step;
+        if(previous_step != step && step <= 2 && step >= 1)
+        {
+          window.PlaySound("lock_"+(step+1));
+          previous_step = step;
+        }
+
+        var subtime = (normalised_time*max_step)%1;
+        var current_angle = initial_angles[step] + (target_angles[step]-initial_angles[step])*easeOutQuart(subtime);
+        mystery_note.set({"angle":current_angle});
+        fake_clue.set({"angle": current_angle});
+        canvas.renderAll();
+      },
+      function(){
+
+        setTimeout(success ? unlock :colorResult , success ? before_unlock_delay : before_flash_delay);
+
+      });
+
+
+      }
+
+
+
+      function colorResult()
+      {
+        // Hex to RGB
+        var h2r = function(hex) {
+          var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+          return result ? [
+              parseInt(result[1], 16),
+              parseInt(result[2], 16),
+              parseInt(result[3], 16)
+          ] : null;
+      };
+
+        // Inverse of the above
+        var r2h = function(rgb) {
+            return "#" + ((1 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]).toString(16).slice(1,7);
+        };
+
+        // get the initial color for each pin
+        for(var i in mystery_note.pins)
+        {
+          var pin = mystery_note.pins[i];
+          pin.set({initialFillColor:h2r(pin.fill)});
+        }
+
+        var targetColor = success ? h2r(settings.pinColors.mysterySuccessFill) : h2r(settings.pinColors.mysteryFailFill);
+
+        window.startAnimation(flash_duration, function(normalised_time)
+        {
+
+          for(var i in mystery_note.pins)
+          {
+            var pin = mystery_note.pins[i];
+            var initialColor = pin.initialFillColor;
+            var currentColor = {};
+
+            for(var i in initialColor)
+            {
+              currentColor[i] = initialColor[i] + (targetColor[i] - initialColor[i])  * Math.abs(Math.sin(1.5*Math.PI*normalised_time));
+            }
+
+            pin.set({fill:r2h(currentColor)});
+          }
+          canvas.renderAll();
+
+        }, endSolveAnimation);
+
+        if(!success)window.PlaySound("lock_fail");
+
+        }
+
+        function unlock()
+        {
+
+          function easeOutQuart(t) {return 1 - Math.pow(1 - t, 4);}
+
+          var initial_width = mystery_note.curve.width;
+          var initial_left = mystery_note.left;
+          var initial_top = mystery_note.top;
+
+          var target_width = -20;
+          var delta_left   =  10;
+          var delta_top    =  10;
+          var target_angle = -20;
+
+          var oscillation_amplitude = 5;
+          var oscillation_function = (t) => Math.sin(4*Math.PI*t)/(2*t+1);
+
+          window.PlaySound("lock_open");
+
+          window.startAnimation(unlock_duration, function(normalised_time)
+          {
+            mystery_note.curve.width = initial_width + (target_width-initial_width) * easeOutQuart(normalised_time);
+            mystery_note.curve.updatePos();
+
+            mystery_note.set({
+              "angle":target_angle * easeOutQuart(normalised_time) + oscillation_amplitude * oscillation_function(normalised_time),
+              "top": initial_top + delta_top* easeOutQuart(normalised_time),
+              "left": initial_left + delta_left* easeOutQuart(normalised_time)
+            });
+
+            canvas.renderAll();
+          }
+          ,function() // Second part, lock fall
+          {
+            var initial_top = mystery_note.top;
+            var delta_top = 300;
+            var rotations = 1.5;
+
+            window.PlaySound("lock_win");
+            window.startAnimation(unlock_duration, function(normalised_time)
+            {
+              mystery_note.set({
+                "angle": 360 * rotations * normalised_time,
+                "top": initial_top + delta_top* easeOutQuart(normalised_time),
+              });
+              canvas.renderAll();
+            },endSolveAnimation);
+          });
+
+        };
+
+        function endSolveAnimation()
+        {
+          // setTimeout(alert, before_end_delay);
+          setTimeout(callback, success ? before_end_delay_success : before_end_delay_fail);
+        }
+
+      // Start with coloring pins, then will launch the rest
+      colorNextPin();
+
+    },initial_delay);
+
+
+    // Set all fill colors to the success or fail state
+
+    // Lock beak animation?
+
+    // Teleport to the right scene
+
+  });
+};
+
+
+window[this_board].zoomOnObject = function(object, zoom, callback)
+{
+
+
+    //Remember current viewport
+    var canvas = window[this_board].canvas;
+    var initial_transform = canvas.viewportTransform;
+
+    // Calculate the target viewport transformation;
+
+    // Set zoom to 1, cause calculations assume it
+    canvas.setZoom(1);
+    let vpw = canvas.width / zoom;
+    let vph = canvas.height / zoom;
+    let x = (object.left - vpw / 2);  // x is the location where the top left of the viewport should be
+    let y = (object.top - vph / 2);  // y idem
+
+    canvas.absolutePan({x:x, y:y});
+    canvas.setZoom(zoom);
+    let target_transform = canvas.viewportTransform;
+
+    canvas.viewportTransform = initial_transform;
+
+    // Apply transformation animation
+    window[this_board].zoomPan(target_transform, callback);
+}
+
+window[this_board].clearZoomPan = (callback) => window[this_board].zoomPan([1, 0, 0, 1, 0, 0], callback);
+
+window[this_board].zoomPan = function(target_transform, callback)
+{
+
+  var canvas = window[this_board].canvas;
+  const animation_duration = 1800;
+
+  // Easing function
+  function easeInOut(t) {return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1};
+
+  // Interpolation between those two transforms, easing it for each value
+  // Target Transform = canvas.viewportTransform = [1, 0, 0, 1, 0, 0];
+  var initial_transform = canvas.viewportTransform;
+
+  function animationCall(normalised_time)
+  {
+    var current_transform = [];
+    for(var i in target_transform)
+    {
+      var initial = initial_transform[i]
+      var target = target_transform[i];
+      var current = initial + (target - initial) * easeInOut(normalised_time); // time must be normalised between 0 and 1;
+      current_transform[i] = current;
+    }
+
+    // Set transform, render
+
+    canvas.viewportTransform = current_transform;
+    canvas.renderAll();
+
+  }
+
+
+  // ANimation using requestAnimationFrame instead of setInterval
+  let start = null, previousTimeStamp;
+  let done = false;
+  function stepAnimation(timestamp)
+  {
+    if(start === null)
+    {
+      start = timestamp;
+    }
+    const elapsed = timestamp - start;
+
+    if(previousTimeStamp !== timestamp)
+    {
+      animationCall(elapsed/animation_duration);
+    }
+
+    if(elapsed < animation_duration)
+    {
+      window.requestAnimationFrame(stepAnimation);
+    }
+    else
+    {
+      done = true;
+      if(callback)callback();
+    }
+
+
+  }
+
+  window.requestAnimationFrame(stepAnimation);
+}
 
 
 ////////////////////
@@ -68,8 +437,8 @@ window[this_board].toggle_board = function()
   ];
 
   // Will be filled with created elements, useful for visually sorting them
-  window[this_board].created_pins = [];
-  window[this_board].created_notes = [];
+  window[this_board].created_pins = {};
+  window[this_board].created_notes = {};
   window[this_board].created_lines = [];
   window[this_board].reticule = {};
 
@@ -105,6 +474,9 @@ window[this_board].toggle_board = function()
   settings.maxZoom = 2;
   settings.noteWidth = 120;
   settings.noteHeight = 120;
+  settings.mysteryHeight = settings.noteHeight*1.1;
+  settings.mysteryWidth = settings.noteWidth*1.1;
+
   settings.notePadding = 12;
   settings.pinRadius = 12;
   settings.fontSize = 18;
@@ -114,38 +486,61 @@ window[this_board].toggle_board = function()
   settings.gridOffset = 30;
   settings.noteColors = {
     "clue":"#FEFF9C",
-    "question":"#6DCFF6",
+    "mystery":"#6DCFF6",
     "picture":"white",
     "instruction":"white",
     "front-clue":"#FEFF9C",
   };
 
-  settings.lineColor = "red";
-  settings.gridColor = "#281918";
-  settings.newNoteBorderColor = "red";
-  settings.newNoteStrokeWidth = 3;
-  settings.normalNoteBorderColor = "black";
-  settings.normalStrokeWidth = 1;
+  settings.lineColors = {
+    "lightColor":"red",
+    "darkColor":'#680000'
+  };
 
+  settings.gridColor = "#281918";
+
+settings.border = {
+  "borderWidth":1,
+  "borderColor":"black",
+  "newBorderWidth":3,
+  "newBorderColor":"red",
+}
+
+
+  settings.pinColors = {
+    "baseFill": '#ffffff',
+    "baseStroke": '#666666',
+    "mysteryStroke": "#666666", ///red
+    "mysteryFill": '#bbbbbb', // 999, #cfbeff, fff
+    "mysteryFailFill":"#ff3333",
+    "mysterySuccessFill":"#8cff1a",
+    "mysterySolveStroke":"#e0d0d0",
+  }
+
+  settings.zoomOnMysterySolve = 1.8;
+
+
+window[this_board].settings = settings;
 
   /*
-    lines are directed: they begin at a specific note, and enf at another
+    lines are directed: they begin at a specific note, and end at another
     when moving a note, they must update the lines if they're at the end of a line
     or a at their start
 
   */
 
-  function makeNote(external_id, text, left, top, pin, type, fontSize)
+  function makeNote(external_id, text, left, top, pins, type, fontSize)
   {
+
+
     var rect = new fabric.Rect({
       left: left,
       top: top,
       width:settings.noteWidth,
       height:settings.noteHeight,
       fill: settings.noteColors[type],
-      angle:6,
-      stroke:settings.newNoteBorderColor,
-      strokeWidth: settings.newNoteStrokeWidth,
+      stroke:settings.border.newBorderColor,
+      strokeWidth: settings.border.newBorderWidth,
     });
 
     var textObject = new fabric.Textbox(text, {
@@ -155,7 +550,6 @@ window[this_board].toggle_board = function()
      fontFamily:"Caveat-Regular",
      fontSize: fontSize,
      textAlign:"center",
-     angle:3,
      fill: '#000000'
     });
 
@@ -168,10 +562,10 @@ window[this_board].toggle_board = function()
       top: top,
       width:settings.noteWidth,
       height:settings.noteHeight,
-      pin:pin,
+      pins:pins,
       rect:rect,
-      textObject:textObject
-
+      textObject:textObject,
+      angle:window.randint(-5,5),
     });
 
     group.hasControls = group.hasBorders = false;
@@ -179,7 +573,113 @@ window[this_board].toggle_board = function()
     return group;
   }
 
-  function makePicture(external_id, text, left, top, pin, src, fontSize)
+  function makeMystery(external_id, text, left, top, pins, locks, fontSize)
+  {
+    var rect = new fabric.Rect({
+      left: left,
+      top: top,
+      width:settings.mysteryHeight,
+      height:settings.mysteryWidth,
+      fill: settings.noteColors["mystery"],
+      angle:0,
+      stroke:settings.border.newBorderColor,
+      strokeWidth: settings.border.newBorderWidth,
+    });
+
+    var textObject = new fabric.Textbox(text, {
+      left: left,
+      top: top,
+     width:settings.mysteryHeight-settings.notePadding/2,
+     fontFamily:"Caveat-Regular",
+     fontSize: fontSize,
+     textAlign:"center",
+     angle:0,
+     fill: '#000000'
+    });
+
+
+    var curve = new fabric.Path('M 50 0 Q 100, 100, 200, 0',
+    {
+    fill: '',
+    stroke: settings.noteColors["mystery"],
+    // stroke: "red",
+    strokeWidth:14,
+    objectCaching: true,
+    left:left,
+    top:top});
+
+
+    // Starting point
+
+    // Not sure coordinates work exactly this way but rn it works
+    curve.middle_y = -20;
+    curve.width = 35;
+    curve.height = 80*1.2 + (settings.mysteryHeight - settings.noteHeight)/2;
+    curve.max_x = settings.noteWidth*(1+0.05) + curve.width;
+
+
+    curve.updatePos = function()
+    {
+      var path = [["M",50,0],["Q",100,100,200,0]];
+
+      //Start
+      path[0][1] = curve.max_x - 2*curve.width;;
+      path[0][2] = curve.middle_y;
+
+      // Middle
+      path[1][1] = curve.max_x - curve.width;
+      path[1][2] = curve.middle_y-curve.height;
+
+      // End point
+      path[1][3] = curve.max_x ;
+      path[1][4] = curve.middle_y;
+      curve.set({path:path});
+    }
+
+    curve.updatePos();
+
+    curve.selectable = false;
+
+
+  var group = new fabric.Group([curve, rect, textObject],
+    {
+      external_id:external_id,
+      object_type:"note",
+      note_type:"mystery",
+      left: left,
+      top: top,
+      width:settings.mysteryHeight,
+      height:settings.mysteryWidth+curve.height+20,
+      pins:pins,
+      rect:rect,
+      textObject:textObject,
+      curve:curve
+
+    });
+
+    group.hasControls = group.hasBorders = false;
+
+    group.reset = function()
+    {
+      group.pins.map(pin => pin.set({
+        fill:settings.pinColors.baseFill,
+        stroke:settings.pinColors.baseStroke,
+      }));
+
+      resortAllElements(canvas);
+    }
+
+    group.remove = function()
+    {
+      group.pins.map(pin => pin.remove());
+      delete window[this_board].created_notes[group.external_id];
+      canvas.remove(group);
+    }
+
+    return group;
+  }
+
+  function makePicture(external_id, text, left, top, pins, src, fontSize)
   {
     var rect = new fabric.Rect({
       left: left,
@@ -187,8 +687,8 @@ window[this_board].toggle_board = function()
       width:settings.noteWidth,
       height:settings.noteHeight,
       fill: settings.noteColors["picture"],
-      stroke:settings.newNoteBorderColor,
-      strokeWidth: settings.newNoteStrokeWidth,
+      stroke:settings.border.newBorderColor,
+      strokeWidth: settings.border.newBorderWidth,
     });
 
     var textObject = new fabric.Textbox(text, {
@@ -208,7 +708,7 @@ window[this_board].toggle_board = function()
     strokeWidth:2,
     });
 
-    console.log(image,window._MediaCache[src])
+    console.log("Loading Image", window._MediaCache[src]);
 
   var group = new fabric.Group([rect, image, textObject],
     {
@@ -219,7 +719,7 @@ window[this_board].toggle_board = function()
       width:settings.noteWidth,
       height:settings.noteHeight,
       rect:rect,
-      pin:pin,
+      pins:pins,
       angle:3
     });
 
@@ -231,6 +731,7 @@ window[this_board].toggle_board = function()
   function makeLine(start_pin_id, end_pin_id)
   {
 
+    console.log("Make line", start_pin_id, end_pin_id);
     var start_pin = window[this_board].created_pins[start_pin_id];
     var end_pin = window[this_board].created_pins[end_pin_id];
 
@@ -238,11 +739,11 @@ window[this_board].toggle_board = function()
       start_pin_id:start_pin_id,
       end_pin_id:end_pin_id,
       object_type:'line',
-      fill: settings.lineColor,
-      stroke: settings.lineColor,
+      fill: settings.lineColors.lightColor,
+      stroke: settings.lineColors.lightColor,
       strokeWidth: 4,
-      normalColor:settings.lineColor,
-      darkColor:'#680000',
+      normalColor:settings.lineColors.lightColor,
+      darkColor:settings.lineColors.darkColor,
       perPixelTargetFind:true,
       targetFindTolerance:10,
       selectable: false,
@@ -256,20 +757,55 @@ window[this_board].toggle_board = function()
       start_pin.addLine(start_pin, line, "start");
       end_pin.addLine(end_pin, line, "end");
 
+      line.remove = function()
+      {
+        // Remove line from data structure and canvas
+        var remove_index = null;
+        var start_pin = window[this_board].created_pins[line.start_pin_id];
+        var end_pin = window[this_board].created_pins[line.end_pin_id];
+
+        for(var i =0; i < window[this_board].linesList.length; i++)
+        {
+          var a = window[this_board].linesList[i].start;
+          var b = window[this_board].linesList[i].end;
+          if( (a == line.start_pin_id && b == line.end_pin_id) || ((b == line.start_pin_id && a == line.end_pin_id)) )
+          {
+            remove_index = i;
+          }
+        }
+
+        if(remove_index !== null)
+        {
+
+          // Remove the line in  data structure and canvas
+          window[this_board].linesList.splice(remove_index, 1);
+
+          // Remove data about connected pins
+          start_pin.removeLine(start_pin, line.end_pin_id, "start");
+          end_pin.removeLine(end_pin, line.start_pin_id, "end");
+
+          window[this_board].created_lines.splice(remove_index, 1);
+          canvas.remove(line);
+        }
+      }
+
       return line;
   }
 
-  function makePin(external_id, x, y)
+  function makePin(external_id, note_id, x, y, relative_height, x_delta = 0)
   {
     var pin = new fabric.Circle({
       external_id:external_id,
+      note_id:note_id,
         left: x,
-        top: y,
+        top: y - relative_height,
+        relative_height:relative_height,
         object_type:'pin',
         strokeWidth: 5,
         radius: settings.pinRadius,
-        fill: '#fff',
-        stroke: '#666',
+        x_delta:x_delta,
+        fill: settings.pinColors.baseFill,
+        stroke: settings.pinColors.baseStroke,
         lines_start:[],
         lines_end:[],
         hoverCursor:'pointer',
@@ -295,21 +831,81 @@ window[this_board].toggle_board = function()
         pin.setCoords();
       }
 
-      pin.addLine = function(pin, line, edge_type)
+
+      // Pin remember which lines it is connected to, for both edges: start, and end
+      pin.addLine = function(pin, line_element, edge_type)
       {
         if(edge_type == "start")
         {
-          pin.lines_start.push(line);
+          pin.lines_start.push(line_element);
         }else if(edge_type == "end")
         {
-          pin.lines_end.push(line);
+          pin.lines_end.push(line_element);
+        }
+
+        // For locks:
+        // If lock is connected, it changes color
+        if(pin.is_lock)
+        {
+          pin.set({stroke:settings.pinColors.mysteryStroke, fill:settings.pinColors.mysteryFill});
+        }
+
+
+      }
+
+      // Pin remember which ones it is connected to
+      pin.removeLine = function(pin, other_pin_id, edge_type)
+      {
+
+        if(edge_type == "start")
+        {
+          pin.lines_start = pin.lines_start.filter(line => line.end_pin_id != other_pin_id);
+        }
+        else if(edge_type == "end")
+        {
+          pin.lines_end = pin.lines_end.filter(line => line.start_pin_id != other_pin_id);
+        }
+
+        // For locks:
+        // Unconnected locks get base color
+        if(pin.is_lock && pin.lines_end.length+pin.lines_start.length == 0)
+        {
+          pin.set({stroke:settings.pinColors.baseStroke,fill:settings.pinColors.baseFill});
         }
 
       }
 
+      pin.remove_all_lines = function() // Removes all lines connected to this pin, both in canvas and data structure
+      {
+        // Check datastructure to see if this pin is connected to another
+
+        for(var i in window[this_board].created_lines)
+        {
+          var line = window[this_board].created_lines[i];
+          if(line.start_pin_id == pin.external_id || line.end_pin_id == pin.external_id)
+          {
+            line.remove();
+          }
+        }
+      }
+
+      pin.remove = function()
+      {
+        pin.remove_all_lines();
+        delete window[this_board].created_pins[pin.external_id];
+        canvas.remove(pin);
+
+      }
 
       pin.hasControls = pin.hasBorders = false;
     return pin;
+  }
+
+  function makeLock()
+  {
+    var lock = makePin(...arguments);
+    lock.is_lock = true;
+    return lock;
   }
 
   function makeGridline(start_X, start_Y, end_X, end_Y)
@@ -334,47 +930,82 @@ window[this_board].toggle_board = function()
   window[this_board].add_note = function(note_data)
   {
 
-    // Do not add a note with the exact same text
-    var notes_txt = window[this_board].notesList.map(note => note.txt);
-    if(notes_txt.indexOf(note_data.txt) > -1)
+    // Do not add a note with an id that is already used
+    if(window[this_board].notesList[note_data.id])
     {
-
       return false;
     }
 
     // randomzie position if doesn't have one or find empty space?
     note_data.x = note_data.x || window.randint(settings.noteWidth, canvas.width-settings.noteWidth);
     note_data.y = note_data.y || window.randint(settings.noteHeight, canvas.height-settings.noteHeight);
-    note_data.fontSize = note_data.fontSize || settings.fontSize
+    note_data.fontSize = note_data.fontSize || settings.fontSize;
 
-    var id = window[this_board].notesList.length;
       // id should be the current length of notesList, to add at the end
-    createNote(id, note_data, canvas);
-    window[this_board].notesList.push(note_data);
+    createNote(note_data.id, note_data, canvas);
+    window[this_board].notesList[note_data.id] = note_data;
     // add note to note list
     resortAllElements(canvas);
   }
 
 
-  function createNote(i, note_data, canvas) // Create notes of all types and add tthem to the board
+  function createNote(note_id, note_data, canvas) // Create notes of all types and add tthem to the board
   {
-    var pin = makePin(i, note_data.x, note_data.y-settings.noteHeight/2);
+
+    var pins = {};
 
     if(note_data.type == "picture")
     {
-      var note = makePicture(i, note_data.txt, note_data.x, note_data.y, pin, note_data.src, note_data.fontSize);
+      var pin_id = "pin_"+note_id;
+      var pin = makePin(pin_id, note_id, note_data.x, note_data.y, settings.noteHeight/2);
+      pins[pin_id] = pin;
+      var note = makePicture(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.src, note_data.fontSize);
+
+
+    }
+    else if(note_data.type == "mystery")
+    {
+
+      // Generate the right number of locks
+      var total_locks = note_data.locks;
+      var spacing = settings.pinRadius*3;
+
+      for(var j = 0; j < total_locks; j++)
+      {
+        var pin_id = "pin_"+note_id+"_"+j;
+        var x_delta = (j - (total_locks-1)/2)*spacing;
+        var lock = makeLock(pin_id, note_data.id, note_data.x + x_delta, note_data.y, settings.mysteryHeight/2, x_delta);
+        pins[pin_id] = lock;
+      }
+
+      var note = makeMystery(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.locks, note_data.fontSize);
+
     }
     else
     {
-      var note = makeNote(i, note_data.txt, note_data.x, note_data.y, pin, note_data.type, note_data.fontSize);
+      var pin_id = "pin_"+note_id;
+      var pin = makePin(pin_id, note_id, note_data.x, note_data.y, settings.noteHeight/2);
+      pins[pin_id] = pin;
+      var note = makeNote(note_id, note_data.txt, note_data.x, note_data.y, Object.values(pins), note_data.type, note_data.fontSize);
     }
 
-    window[this_board].created_notes.push(note);
-    window[this_board].created_pins.push(pin);
+    window[this_board].created_notes[note_id] = note;
+    for(let id in pins)
+    {
+      window[this_board].created_pins[id] = pins[id];
+    }
+
+    // console.log(window[this_board].created_notes);
+    // console.log(window[this_board].created_pins);
+
 
 
     canvas.add(note);
-    canvas.add(pin);
+    for(let id in pins)
+    {
+      canvas.add(pins[id])
+    }
+
 
     // If the instructions are still there, remove them
     if(instructions)
@@ -389,7 +1020,7 @@ window[this_board].toggle_board = function()
 
       var line = new fabric.Line([0,0,0,0], {
         object_type:'line',
-        stroke: settings.lineColor,
+        stroke: settings.lineColors.lightColor,
         strokeDashArray: [5, 5],
         strokeWidth: 5,
         selectable: false,
@@ -403,7 +1034,7 @@ window[this_board].toggle_board = function()
           object_type:'visor',
           strokeWidth: 5,
           radius: 12,
-          stroke: settings.lineColor,
+          stroke: settings.lineColors.lightColor,
           fill:'transparent',
           selectable: false,
           evented:false,
@@ -474,16 +1105,16 @@ window[this_board].toggle_board = function()
     }
 
     // Create notes, remember their pins, add them
-    for(var i = 0; i < window[this_board].notesList.length; i++)
+    for(var i in window[this_board].notesList)
     {
       var note_data = window[this_board].notesList[i];
 
       note_data.x = note_data.x || window.randint(settings.noteWidth, canvas.width-settings.noteWidth);
       note_data.y = note_data.y || window.randint(settings.noteHeight, canvas.height-settings.noteHeight);
-      note_data.fontSize = note_data.fontSize || settings.fontSize
+      note_data.fontSize = note_data.fontSize || settings.fontSize;
 
 
-      createNote(i, note_data, canvas)
+      createNote(note_data.id, note_data, canvas);
 
     }
 
@@ -527,10 +1158,11 @@ window[this_board].toggle_board = function()
     {
 
       //Set bordercolor to default -- effect where new post-its will be highlighted
-      p.rect.set({stroke:settings.normalNoteBorderColor,strokeWidth:settings.normalStrokeWidth })
+      p.rect.set({stroke:settings.border.borderColor,strokeWidth:settings.border.borderWidth })
 
-      //Move associated pin too
-      p.pin.movePin(p.pin,p.left, p.top-settings.noteHeight/2)
+      //Move associated pins too
+      p.pins.map(pin => pin.movePin(pin, p.left + pin.x_delta, p.top-pin.relative_height));
+
       // Updates data external strucure about post-its
       // Coordinates change
       window[this_board].notesList[p.external_id].x = p.left;
@@ -551,6 +1183,8 @@ window[this_board].toggle_board = function()
   canvas.on('mouse:move', function(e)
   {
 
+    if(!window[this_board].interactable) return false;
+
     if(window[this_board].reticule.active)
     {
       var pointer = canvas.getPointer(e);
@@ -563,6 +1197,8 @@ window[this_board].toggle_board = function()
 
   canvas.on('mouse:down', function(e)
   {
+    if(!window[this_board].interactable) return false;
+
     var p = e.target;
     if(p && p.object_type == 'pin')
     {
@@ -570,6 +1206,16 @@ window[this_board].toggle_board = function()
       // Start reticule line if not already active
       if(!window[this_board].reticule.active)
       {
+
+        // Locks can have only one link.
+        // If reticule is created from a lock, we remove the previous line
+        if(p.is_lock && p.lines_start.length+p.lines_end.length > 0)
+        {
+
+          p.remove_all_lines();
+
+        }
+
         window[this_board].reticule.startFromPin(window[this_board].reticule, p);
         window[this_board].reticule.show(window[this_board].reticule);
       }
@@ -578,9 +1224,24 @@ window[this_board].toggle_board = function()
         var start_pin_id = window[this_board].reticule.start_pin.external_id;
         var end_pin_id = p.external_id;
 
+
+        // Do not link pins from the same mystery/note
+        var start_pin = window[this_board].reticule.start_pin;
+        var end_pin = window[this_board].created_pins[end_pin_id];
+
+        if(start_pin.note_id == end_pin.note_id)
+        {
+          return false;
+        }
+
+        // A pin from a mystery (a lock) can have only 1 note
+        if(p.is_lock && p.lines_start.length+p.lines_end.length > 0)
+        {
+          return false;
+        }
+
         // Checks: do not add a line that already exists
         // start and end should be different
-
         var existence_check = true;
         for(var i in window[this_board].linesList)
         {
@@ -594,6 +1255,8 @@ window[this_board].toggle_board = function()
 
         if(existence_check && start_pin_id != end_pin_id)
         {
+
+          // Actually make the line
           window[this_board].linesList.push({start:start_pin_id, end:end_pin_id});
 
           var line = makeLine(start_pin_id, end_pin_id);
@@ -605,40 +1268,20 @@ window[this_board].toggle_board = function()
           madeLineEvent(start_pin_id, end_pin_id);
 
         }
-
       }
     }
     else if (p && p.object_type == "line")
     {
         // Remove line from data structure and canvas
-
-      var remove_index = null;
-      for(var i =0; i < window[this_board].linesList.length; i++)
-      {
-        var a = window[this_board].linesList[i].start;
-        var b = window[this_board].linesList[i].end;
-        if( (a == p.start_pin_id && b == p.end_pin_id) || ((b == p.start_pin_id && a == p.end_pin_id)) )
-        {
-          remove_index = i;
-        }
-      }
-      if(remove_index !== null)
-      {
-        window[this_board].linesList.splice(remove_index, 1);
-      }
-      else
-      {
-        console.log("line_error", p.start_pin_id, p.end_pin_id)
-      }
-
-      canvas.remove(p);
-
+        p.remove();
+        window.PlaySound("cut_cord");
     }
 
     // Cancel reticule if click in empty space
     else if(!p && window[this_board].reticule.active)
     {
       window[this_board].reticule.hide(reticule);
+      window.PlaySound("cut_cord");
       resortAllElements(canvas);
     }
 
@@ -648,6 +1291,8 @@ window[this_board].toggle_board = function()
   // Line color hovering
   canvas.on('mouse:over',function(e)
   {
+    if(!window[this_board].interactable) return false;
+
     var p = e.target;
     if(p && p.object_type == "line")
     {
@@ -658,6 +1303,9 @@ window[this_board].toggle_board = function()
 
   canvas.on('mouse:out',function(e)
   {
+
+    if(!window[this_board].interactable) return false;
+
     var p = e.target;
     if(p && p.object_type == "line")
     {
@@ -685,7 +1333,7 @@ window[this_board].toggle_board = function()
         if(note.type.indexOf("front") != -1)
         {
           canvas.bringToFront(note);
-          canvas.bringToFront(note.pin);
+          note.pins.map(pin => canvas.bringToFront(pin));
         }
       }
 
@@ -699,6 +1347,9 @@ window[this_board].toggle_board = function()
 
   // Zoom and pan events
     canvas.on('mouse:wheel', function(opt) {
+
+      if(!window[this_board].interactable) return false;
+
       var delta = opt.e.deltaY;
       var zoom = canvas.getZoom();
       zoom *= 0.999 ** delta;
@@ -726,6 +1377,9 @@ window[this_board].toggle_board = function()
     });
 
     canvas.on('mouse:down', function(opt) {
+
+      if(!window[this_board].interactable) return false;
+
       var evt = opt.e;
 
       if(!opt.target) // Do not dragging if moving an object
@@ -738,6 +1392,9 @@ window[this_board].toggle_board = function()
 
     });
     canvas.on('mouse:move', function(opt) {
+
+      if(!window[this_board].interactable) return false;
+
       if (this.isDragging) {
         var e = opt.e;
         var zoom = canvas.getZoom();
@@ -765,6 +1422,9 @@ window[this_board].toggle_board = function()
       }
     });
     canvas.on('mouse:up', function(opt) {
+
+      if(!window[this_board].interactable) return false;
+
       // on mouse up we want to recalculate new interaction
       // for all objects, so we call setViewportTransform
       this.setViewportTransform(this.viewportTransform);
@@ -775,6 +1435,15 @@ window[this_board].toggle_board = function()
     function madeLineEvent(start, end)
     {
       // Empty event for now
+      var note_types = [start,end].map(pin_id => board_notes[window[this_board].created_pins[pin_id].note_id].type);
+      if(note_types.indexOf("mystery") != -1)
+      {
+        window.PlaySound("pin_pop");
+      }
+      else
+      {
+        window.PlaySound("pin_tap");
+      }
 
     }
 

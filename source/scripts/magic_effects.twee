@@ -140,26 +140,27 @@ window.slot = function(right_answer, duration)
 }
 
 
-window.note = function(displayed_text, note_data)
+window.note = function(displayed_text, note_id)
 {
 
-  var serialized_note_data = encodeURI(JSON.stringify(note_data));
+  var note_data = window.board_notes[note_id];
+  // var serialized_note_data = encodeURI(JSON.stringify(note_data));
 
   if(note_data.type == "tuto-board-trigger") // special note for the tuto trigger
   {
-    return `<span class="clickable_note tuto_clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
+    return `<span class="clickable_note tuto_clickable_note" data-note="${note_id}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`
   }
   else
   {
     // checking if the note is already in the board
-    var notes_txt = window["conspiracy_board"].notesList.map(note => note.txt);
+    var notes_id = window["conspiracy_board"].notesList.map(note => note.id);
 
-    if(notes_txt.indexOf(note_data.txt) > -1)
+    if(notes_id.indexOf(note_id) > -1)
     {
       return displayed_text;
     }
 
-    return `<span class="clickable_note" data-note="${serialized_note_data}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
+    return `<span class="clickable_note" data-note="${note_id}" onclick="clickOnNote(event,this)" >${displayed_text}</span>`;
   }
 }
 
@@ -216,7 +217,8 @@ window.clickOnNote = function(e,link)
   $link.append(note);
 
 
-  var note_data = JSON.parse(decodeURI(link.dataset.note));
+  // var note_data = JSON.parse(decodeURI(link.dataset.note));
+  var note_data = window.board_notes[link.dataset.note];
   if(note_data.type == "tuto-board-trigger")
   {
     window.pullcord.setTutorialPhase(0);
@@ -275,3 +277,38 @@ window.PlaySound = function(sfx_name, delay)
   }
 
 }
+
+// Utilitary function for animations
+window.startAnimation = function(duration, step_func, callback)
+{
+  // Reset Animation parameters
+  var start = null, previousTimeStamp;
+  var done = false;
+  var animation_duration = duration;
+
+  function stepAnimation(timestamp)
+  {
+    if(start === null)
+    {
+      start = timestamp;
+    }
+    const elapsed = timestamp - start;
+
+    if(previousTimeStamp !== timestamp)
+    {
+      step_func(elapsed/animation_duration);
+    }
+
+    if(elapsed < animation_duration)
+    {
+      window.requestAnimationFrame(stepAnimation);
+    }
+    else
+    {
+      done = true;
+      if(callback)callback();
+    }
+  }
+
+  window.requestAnimationFrame(stepAnimation);
+};

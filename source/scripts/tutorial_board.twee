@@ -29,21 +29,28 @@
   // Add board to HTML
   $(html_conspiracy_board).insertBefore("#passages");
 
-  window[this_board].conspiracy_board_toggled = false;
+  window[this_board].board_toggled = false;
 
 
-  window[this_board].toggle_board = function()
+  window[this_board].toggle_board = function(callback)
   {
-    window[this_board].conspiracy_board_toggled = !window[this_board].conspiracy_board_toggled;
-    if(window[this_board].conspiracy_board_toggled)
+    window[this_board].board_toggled = !window[this_board].board_toggled;
+    if(window[this_board].board_toggled)
     {
-      $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_up");
-      $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_down");
+      var board = $(`${"#"+this_board+"_overlay"}`)[0];
+      var animation = board.animate({
+          top:["5%"]
+        }, {duration:1000, easing:"ease-out",fill:"both"});
+      animation.addEventListener('finish', event => callback?callback():false);
     }
     else
     {
-      $(`${"#"+this_board+"_overlay"}`).removeClass("conspiracy_board_down");
-      $(`${"#"+this_board+"_overlay"}`).addClass("conspiracy_board_up");
+
+      var board = $(`${"#"+this_board+"_overlay"}`)[0];
+      var animation = board.animate({
+          top:["-100%"]
+        }, {duration:1000, easing:"ease-out",fill:"both"});
+        animation.addEventListener('finish', event => callback?callback():false);
     }
   };
 
