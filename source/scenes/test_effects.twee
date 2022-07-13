@@ -110,7 +110,7 @@
 <script>
   /* This script is only here to add some post-its to the test scene
   To use a mystery, you only need the AddOptionMystery macro*/
-  pullcord.quickstart();
+  /* pullcord.quickstart()*/
   var notes = ["Mystery_Test_1", "Clue_Test_1", "Clue_Test_2", "Clue_Test_3", "Clue_Test_4","Clue_Test_5"];
 
   setTimeout(() => (notes.map( note_name => window.conspiracy_board.add_note(board_notes[note_name]))), 1200);
