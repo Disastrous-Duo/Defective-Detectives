@@ -311,7 +311,7 @@ $args[0] -
     window.pullcord.enable(false);
     board.interactable = false;
     board.toggle_board();
-
+    console.log(mystery_id,   board.created_notes[mystery_id]);
     /*"Check if the mystery is solved"*/
     var connected_clues = [];
     var lock_pins_id = board.created_notes[mystery_id].pins.map(pin => pin.external_id);
@@ -346,6 +346,7 @@ $args[0] -
         board.interactable = true;
         board.canvas.remove(board.created_notes.fake_clue);
         board.canvas.setZoom(1.2);
+
         if(resultSuccess)
         {
           board.created_notes[mystery_id].remove();
@@ -358,10 +359,10 @@ $args[0] -
         board.canvas.renderAll();
       });
 
-      console.log(resultSuccess,window.current_mystery);
 
       if(resultSuccess)
       {
+        board_notes[mystery_id].solved = true;
         Engine.play(success_scene);
       }
       else
