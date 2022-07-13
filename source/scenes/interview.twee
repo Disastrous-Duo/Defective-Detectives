@@ -1119,7 +1119,6 @@
 <<AddParagraph `"//Cannelé…….. "+note("Muffin (??)","Clue_Muffin_Name")+" ………….//"`>>
 <<AddParagraph `"//Nomnom………………. "+ note("Yasyas (This isn't even a word???)","Clue_Yasyas_Name")+" ………..//"`>>
 
-<<run window.pullcord.quickstart()>>
 <<AddParagraph `note("//This piece of knowledge is terrifying.//","Mystery_Naming_Conventions")`>>
 <<AddParagraph "//More terrifying than the dark alleys, more terrifying than the tiny, messy office.//">>
 <<AddParagraph "//Perhaps even more terrifying than the memory loss itself…//">>
