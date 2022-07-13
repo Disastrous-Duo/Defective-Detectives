@@ -1127,10 +1127,94 @@
 <<BlankSpeaker>>
 <<AddParagraph "">>
 
+<<AddOptionMystery "//I think... that I probably cracked the code.//" "tutorialMysterySolving">>
 <<AddOption "//I can't believe this is happening to me.//" "Naming1">>
 <<AddOption "//Is it too late to leave?//" "Naming1">>
-<<AddOption "//I don't even know what to say to that.//" "Naming1">>
 
+::tutorialMysterySolving [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//Okay, me.//">>
+<<AddParagraph "//Take a deep breath and focus.//">>
+<<AddParagraph "//I might not know who I am, but I think I've pieced it together.//">>
+<<AddParagraph "//The weird naming senses these two detectives seem to have.//">>
+<<AddParagraph "//Maybe I can use the hints I've gathered so far to make sense of all of this.//">>
+<<AddParagraph "//Linking the right clues to the mystery...//">>
+<<AddParagraph "//... Should do the trick!//">>
+
+<<AddOptionMystery "//I think I've got it, let's test out this theory.//" "Mystery_Naming_Conventions" "namingSuccess" "namingFail">>
+<<AddOption "//I am not really interested in this...//" "Naming1">>
+
+::namingSuccess [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "So...">>
+<<AddParagraph "You both... ">>
+<<AddParagraph "Named each other? Is that it?">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Cannelé and Nomnom stop bantering, surprise coloring their expressions.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "WOW, Yasyas, are you maybe a detective too?">>
+<<AddParagraph "How did you figure it out?">>
+<<AddParagraph "Because of that dude's idiotic proposition right!">>
+
+<<BlankSpeaker>>
+<<AddParagraph "Nomnom, who had taken out a small notebook from //somewhere// in their jacket is hurriedly jotting down notes.">>
+
+<<SetSpeaker "Cannelé">>
+<<AddParagraph "^^The individual seems to have a heightened sense of logic and deduction...^^">>
+<<AddParagraph "^^Interesting...^^">>
+<<AddParagraph "^^He probably knows what's best for himself.^^">>
+<<AddParagraph "^^He will be on my side.^^">>
+<<AddParagraph "^^He will be on Muffin's side.^^">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "I- I see.">>
+<<AddParagraph "Can we just maybe...">>
+<<AddParagraph "Avoid repeating this pattern.">>
+<<AddParagraph "Sometimes the past should remain in the past.">>
+<<AddParagraph "What about letting me-">>
+
+<<BlankSpeaker>>
+<<AddParagraph "*CRASH*">>
+<<AddParagraph "They have started arguing again.">>
+
+<<SetSpeaker "???">>
+<<AddParagraph "*sigh*">>
+
+<<include "Naming1">>
+
+::namingFailRecap [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//Wait.//">>
+<<AddParagraph "//I feel like I'm missing something.//">>
+<<AddParagraph "//Let's go over this again.//">>
+<<AddParagraph `"//First, //" + +note("Nomnom","Clue_Nomnom_Name")+"// literally means 'Name Name', and that's strange as hell.//"`>>
+<<AddParagraph `"//Second, //"+note("Cannelé","Clue_Cannelé_Name")+"// has been named after a random pastry...//"`>>
+<<AddParagraph "//And now, those two names they're forcefully trying to push on me...//">>
+<<AddParagraph `note("Muffin","Clue_Muffin_Name")+"//, like the cake Nomnom just engulfed...//"`>>
+<<AddParagraph `"//... And //"+note("Yasyas","Clue_Yasyas_Name")+"//, that means NOTHING but sounds suspiciously as if Cannelé just repeated whatever word they last heard... 'Alias'//"`>>
+<<AddParagraph "//It's... starting to make sense, now...//">>
+<<AddParagraph "//Maybe?//">>
+<<AddParagraph "Time to organize my thoughts on the board, before trying out my theory again!">>
+
+::namingFailMore [nobr]
+<<SetSpeaker "???">>
+<<AddParagraph "//Hmm...//">>
+<<AddParagraph "//I have a feeling that I have all the clues to find the solution...//">>
+<<AddParagraph "//I should reorganize my thoughts, I'm sure I'm close to the truth!// ">>
+<<AddParagraph "//I just need to open the board, make the right connections.// ">>
+<<AddParagraph "//... And when I try again, it should all make sense!// ">>
+
+::namingFail [nobr]
+<<if conspiracy_board.can_solve("Mystery_Naming_Conventions") >>
+  <<include "namingFailRecap">>
+<<else>>
+  <<include "namingFailMore">>
+<</if>>
+
+<<AddOptionMystery "//I think I've got it this time...//" "Mystery_Naming_Conventions" "namingSuccess" "namingFail">>
+<<AddOption "//Ugh... Just thinking of all of this makes my head hurt... Hard pass on that one.//" "Naming1">>
 
 :: Naming1 [nobr]
 <<BlankSpeaker>>
