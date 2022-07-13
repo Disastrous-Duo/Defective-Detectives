@@ -54,6 +54,39 @@ window[this_board].toggle_board = function(callback)
   }
 };
 
+// Functions to check within Twine if player has a post-it, can solve a mystery or has solved a mystery
+
+  window[this_board].has_clue = function(clue_id)
+  {
+      return window[this_board].created_notes[clue_id] ? true : false;
+  }
+
+  window[this_board].can_solve = function(mystery_id)
+  {
+    var mystery = board_notes[mystery_id];
+    if(!mystery) return false;
+    for(var i in mystery.solutions)
+    {
+      var solution = mystery.solutions[i];
+      var can_solve = true;
+      for(var j = 0; j < solution.length; j++)
+      {
+        var clue_id = solution[j];
+        can_solve = can_solve && window[this_board].has_clue(clue_id);
+      }
+
+      if(can_solve) return true;
+    }
+
+    return false;
+  }
+
+  window[this_board].has_solved = function(mystery_id)
+  {
+    var mystery = board_notes[mystery_id];
+    return mystery.solved;
+  }
+
 
 // Solve mystery animation + teleport to correct scene afterwards
 // Todo: make board uninteractible during transition
